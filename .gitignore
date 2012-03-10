@@ -7,3 +7,7 @@ src/config/databases.yml
 # editors
 *.swp
 *~
+
+# symfony
+src/cache/*
+src/log/*
