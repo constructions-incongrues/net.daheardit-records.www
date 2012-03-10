@@ -31,3 +31,12 @@ all:
             url:              post_new
             image:            megaphone.png
 
+      Contenus:
+        items:
+          Lister:
+            url:              content
+            image:            pencil.png
+          Créer:
+            url:              content_new
+            image:            pencil.png
+

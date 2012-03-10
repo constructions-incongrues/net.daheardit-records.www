@@ -7,15 +7,18 @@
  * 
  * @property string $name
  * @property string $url
+ * @property string $image
  * @property string $presentation
  * @property Doctrine_Collection $Release
  * 
  * @method string              getName()         Returns the current record's "name" value
  * @method string              getUrl()          Returns the current record's "url" value
+ * @method string              getImage()        Returns the current record's "image" value
  * @method string              getPresentation() Returns the current record's "presentation" value
  * @method Doctrine_Collection getRelease()      Returns the current record's "Release" collection
  * @method Artist              setName()         Sets the current record's "name" value
  * @method Artist              setUrl()          Sets the current record's "url" value
+ * @method Artist              setImage()        Sets the current record's "image" value
  * @method Artist              setPresentation() Sets the current record's "presentation" value
  * @method Artist              setRelease()      Sets the current record's "Release" collection
  * 
@@ -33,6 +36,9 @@ abstract class BaseArtist extends sfDoctrineRecord
              'type' => 'string',
              ));
         $this->hasColumn('url', 'string', null, array(
+             'type' => 'string',
+             ));
+        $this->hasColumn('image', 'string', null, array(
              'type' => 'string',
              ));
         $this->hasColumn('presentation', 'string', null, array(

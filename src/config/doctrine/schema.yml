@@ -47,5 +47,17 @@ Post:
       fields: [body]
     Timestampable: ~
   columns:
-    title: string
-    body: string
+    title:  string
+    body:   string
+
+Content:
+  actAs:
+    I18n:
+      fields: [informations, credits, greetings]
+    Timestampable: ~
+  columns:
+    informations: string
+    credits:      string
+    greetings:    string
+    video:        string
+    links:        string

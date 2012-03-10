@@ -7,17 +7,23 @@
  * 
  * @property string $title
  * @property string $presentation
+ * @property string $image1
+ * @property string $image2
  * @property integer $artist_id
  * @property Artist $Artist
  * @property Doctrine_Collection $Track
  * 
  * @method string              getTitle()        Returns the current record's "title" value
  * @method string              getPresentation() Returns the current record's "presentation" value
+ * @method string              getImage1()       Returns the current record's "image1" value
+ * @method string              getImage2()       Returns the current record's "image2" value
  * @method integer             getArtistId()     Returns the current record's "artist_id" value
  * @method Artist              getArtist()       Returns the current record's "Artist" value
  * @method Doctrine_Collection getTrack()        Returns the current record's "Track" collection
  * @method Release             setTitle()        Sets the current record's "title" value
  * @method Release             setPresentation() Sets the current record's "presentation" value
+ * @method Release             setImage1()       Sets the current record's "image1" value
+ * @method Release             setImage2()       Sets the current record's "image2" value
  * @method Release             setArtistId()     Sets the current record's "artist_id" value
  * @method Release             setArtist()       Sets the current record's "Artist" value
  * @method Release             setTrack()        Sets the current record's "Track" collection
@@ -36,6 +42,12 @@ abstract class BaseRelease extends sfDoctrineRecord
              'type' => 'string',
              ));
         $this->hasColumn('presentation', 'string', null, array(
+             'type' => 'string',
+             ));
+        $this->hasColumn('image1', 'string', null, array(
+             'type' => 'string',
+             ));
+        $this->hasColumn('image2', 'string', null, array(
              'type' => 'string',
              ));
         $this->hasColumn('artist_id', 'integer', 8, array(

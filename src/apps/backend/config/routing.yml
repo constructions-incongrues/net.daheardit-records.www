@@ -1,3 +1,12 @@
+content:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Content
+    module:               content
+    prefix_path:          /content
+    column:               id
+    with_wildcard_routes: true
+
 post:
   class: sfDoctrineRouteCollection
   options:

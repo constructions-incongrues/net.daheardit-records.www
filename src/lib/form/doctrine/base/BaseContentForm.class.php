@@ -1,44 +1,34 @@
 <?php
 
 /**
- * Artist form base class.
+ * Content form base class.
  *
- * @method Artist getObject() Returns the current form's model object
+ * @method Content getObject() Returns the current form's model object
  *
  * @package    net.daheardit-records.www
  * @subpackage form
  * @author     Constructions Incongrues <contact@constructions-incongrues.net>
  * @version    SVN: $Id: sfDoctrineFormGeneratedTemplate.php 29553 2010-05-20 14:33:00Z Kris.Wallsmith $
  */
-abstract class BaseArtistForm extends BaseFormDoctrine
+abstract class BaseContentForm extends BaseFormDoctrine
 {
   public function setup()
   {
     $this->setWidgets(array(
       'id'         => new sfWidgetFormInputHidden(),
-      'name'       => new sfWidgetFormTextarea(),
-      'url'        => new sfWidgetFormTextarea(),
-      'image'      => new sfWidgetFormTextarea(),
-      'slug'       => new sfWidgetFormInputText(),
+      'links'      => new sfWidgetFormTextarea(),
       'created_at' => new sfWidgetFormDateTime(),
       'updated_at' => new sfWidgetFormDateTime(),
     ));
 
     $this->setValidators(array(
       'id'         => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
-      'name'       => new sfValidatorString(array('required' => false)),
-      'url'        => new sfValidatorString(array('required' => false)),
-      'image'      => new sfValidatorString(array('required' => false)),
-      'slug'       => new sfValidatorString(array('max_length' => 255, 'required' => false)),
+      'links'      => new sfValidatorString(array('required' => false)),
       'created_at' => new sfValidatorDateTime(),
       'updated_at' => new sfValidatorDateTime(),
     ));
 
-    $this->validatorSchema->setPostValidator(
-      new sfValidatorDoctrineUnique(array('model' => 'Artist', 'column' => array('slug')))
-    );
-
-    $this->widgetSchema->setNameFormat('artist[%s]');
+    $this->widgetSchema->setNameFormat('content[%s]');
 
     $this->errorSchema = new sfValidatorErrorSchema($this->validatorSchema);
 
@@ -49,7 +39,7 @@ abstract class BaseArtistForm extends BaseFormDoctrine
 
   public function getModelName()
   {
-    return 'Artist';
+    return 'Content';
   }
 
 }
