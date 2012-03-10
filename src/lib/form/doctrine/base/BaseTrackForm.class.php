@@ -15,14 +15,26 @@ abstract class BaseTrackForm extends BaseFormDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'id'   => new sfWidgetFormInputHidden(),
-      'name' => new sfWidgetFormTextarea(),
+      'id'         => new sfWidgetFormInputHidden(),
+      'name'       => new sfWidgetFormTextarea(),
+      'release_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Release'), 'add_empty' => true)),
+      'slug'       => new sfWidgetFormInputText(),
+      'created_at' => new sfWidgetFormDateTime(),
+      'updated_at' => new sfWidgetFormDateTime(),
     ));
 
     $this->setValidators(array(
-      'id'   => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
-      'name' => new sfValidatorString(array('required' => false)),
+      'id'         => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
+      'name'       => new sfValidatorString(array('required' => false)),
+      'release_id' => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Release'), 'required' => false)),
+      'slug'       => new sfValidatorString(array('max_length' => 255, 'required' => false)),
+      'created_at' => new sfValidatorDateTime(),
+      'updated_at' => new sfValidatorDateTime(),
     ));
+
+    $this->validatorSchema->setPostValidator(
+      new sfValidatorDoctrineUnique(array('model' => 'Track', 'column' => array('slug')))
+    );
 
     $this->widgetSchema->setNameFormat('track[%s]');
 

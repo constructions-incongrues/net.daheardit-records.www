@@ -1,7 +1,10 @@
-CREATE TABLE `artist` (`id` BIGINT AUTO_INCREMENT, `name` TEXT, PRIMARY KEY(`id`)) ENGINE = INNODB;
-CREATE TABLE `post` (`id` BIGINT AUTO_INCREMENT, `title` TEXT, PRIMARY KEY(`id`)) ENGINE = INNODB;
-CREATE TABLE `release` (`id` BIGINT AUTO_INCREMENT, `title` TEXT, PRIMARY KEY(`id`)) ENGINE = INNODB;
-CREATE TABLE `track` (`id` BIGINT AUTO_INCREMENT, `name` TEXT, PRIMARY KEY(`id`)) ENGINE = INNODB;
+CREATE TABLE `artist` (`id` BIGINT AUTO_INCREMENT, `name` TEXT, `url` TEXT, `slug` VARCHAR(255), `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, UNIQUE INDEX `artist_sluggable_idx` (`slug`), PRIMARY KEY(`id`)) ENGINE = INNODB;
+CREATE TABLE `artist_translation` (`id` BIGINT, `presentation` TEXT, `lang` CHAR(2), PRIMARY KEY(`id`, `lang`)) ENGINE = INNODB;
+CREATE TABLE `post` (`id` BIGINT AUTO_INCREMENT, `title` TEXT, `slug` VARCHAR(255), `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, UNIQUE INDEX `post_sluggable_idx` (`slug`), PRIMARY KEY(`id`)) ENGINE = INNODB;
+CREATE TABLE `post_translation` (`id` BIGINT, `body` TEXT, `lang` CHAR(2), PRIMARY KEY(`id`, `lang`)) ENGINE = INNODB;
+CREATE TABLE `release` (`id` BIGINT AUTO_INCREMENT, `title` TEXT, `artist_id` BIGINT, `slug` VARCHAR(255), `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, UNIQUE INDEX `release_sluggable_idx` (`slug`), INDEX `artist_id_idx` (`artist_id`), PRIMARY KEY(`id`)) ENGINE = INNODB;
+CREATE TABLE `release_translation` (`id` BIGINT, `presentation` TEXT, `lang` CHAR(2), PRIMARY KEY(`id`, `lang`)) ENGINE = INNODB;
+CREATE TABLE `track` (`id` BIGINT AUTO_INCREMENT, `name` TEXT, `release_id` BIGINT, `slug` VARCHAR(255), `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, UNIQUE INDEX `track_sluggable_idx` (`slug`), INDEX `release_id_idx` (`release_id`), PRIMARY KEY(`id`)) ENGINE = INNODB;
 CREATE TABLE `sf_guard_forgot_password` (`id` BIGINT AUTO_INCREMENT, `user_id` BIGINT NOT NULL, `unique_key` VARCHAR(255), `expires_at` DATETIME NOT NULL, `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, INDEX `user_id_idx` (`user_id`), PRIMARY KEY(`id`)) ENGINE = INNODB;
 CREATE TABLE `sf_guard_group` (`id` BIGINT AUTO_INCREMENT, `name` VARCHAR(255) UNIQUE, `description` TEXT, `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, PRIMARY KEY(`id`)) ENGINE = INNODB;
 CREATE TABLE `sf_guard_group_permission` (`group_id` BIGINT, `permission_id` BIGINT, `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, PRIMARY KEY(`group_id`, `permission_id`)) ENGINE = INNODB;
@@ -10,6 +13,11 @@ CREATE TABLE `sf_guard_remember_key` (`id` BIGINT AUTO_INCREMENT, `user_id` BIGI
 CREATE TABLE `sf_guard_user` (`id` BIGINT AUTO_INCREMENT, `first_name` VARCHAR(255), `last_name` VARCHAR(255), `email_address` VARCHAR(255) NOT NULL UNIQUE, `username` VARCHAR(128) NOT NULL UNIQUE, `algorithm` VARCHAR(128) DEFAULT 'sha1' NOT NULL, `salt` VARCHAR(128), `password` VARCHAR(128), `is_active` TINYINT(1) DEFAULT '1', `is_super_admin` TINYINT(1) DEFAULT '0', `last_login` DATETIME, `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, INDEX `is_active_idx_idx` (`is_active`), PRIMARY KEY(`id`)) ENGINE = INNODB;
 CREATE TABLE `sf_guard_user_group` (`user_id` BIGINT, `group_id` BIGINT, `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, PRIMARY KEY(`user_id`, `group_id`)) ENGINE = INNODB;
 CREATE TABLE `sf_guard_user_permission` (`user_id` BIGINT, `permission_id` BIGINT, `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, PRIMARY KEY(`user_id`, `permission_id`)) ENGINE = INNODB;
+ALTER TABLE `artist_translation` ADD CONSTRAINT `artist_translation_id_artist_id` FOREIGN KEY (`id`) REFERENCES `artist`(`id`) ON UPDATE CASCADE ON DELETE CASCADE;
+ALTER TABLE `post_translation` ADD CONSTRAINT `post_translation_id_post_id` FOREIGN KEY (`id`) REFERENCES `post`(`id`) ON UPDATE CASCADE ON DELETE CASCADE;
+ALTER TABLE `release` ADD CONSTRAINT `release_artist_id_artist_id` FOREIGN KEY (`artist_id`) REFERENCES `artist`(`id`);
+ALTER TABLE `release_translation` ADD CONSTRAINT `release_translation_id_release_id` FOREIGN KEY (`id`) REFERENCES `release`(`id`) ON UPDATE CASCADE ON DELETE CASCADE;
+ALTER TABLE `track` ADD CONSTRAINT `track_release_id_release_id` FOREIGN KEY (`release_id`) REFERENCES `release`(`id`);
 ALTER TABLE `sf_guard_forgot_password` ADD CONSTRAINT `sf_guard_forgot_password_user_id_sf_guard_user_id` FOREIGN KEY (`user_id`) REFERENCES `sf_guard_user`(`id`) ON DELETE CASCADE;
 ALTER TABLE `sf_guard_group_permission` ADD CONSTRAINT `sf_guard_group_permission_permission_id_sf_guard_permission_id` FOREIGN KEY (`permission_id`) REFERENCES `sf_guard_permission`(`id`) ON DELETE CASCADE;
 ALTER TABLE `sf_guard_group_permission` ADD CONSTRAINT `sf_guard_group_permission_group_id_sf_guard_group_id` FOREIGN KEY (`group_id`) REFERENCES `sf_guard_group`(`id`) ON DELETE CASCADE;

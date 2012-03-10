@@ -10,7 +10,8 @@
  */
 class ArtistForm extends BaseArtistForm
 {
-  public function configure()
-  {
-  }
+	public function configure()
+	{
+		$this->embedI18n(array('fr', 'en'));
+	}
 }

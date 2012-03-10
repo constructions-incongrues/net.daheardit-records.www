@@ -10,7 +10,8 @@
  */
 class ReleaseForm extends BaseReleaseForm
 {
-  public function configure()
-  {
-  }
+	public function configure()
+	{
+		$this->embedI18n(array('fr', 'en'));
+	}
 }

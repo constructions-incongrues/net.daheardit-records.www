@@ -1,15 +1,51 @@
+detect_relations: true
+
 Artist:
+  actAs:
+    Sluggable:
+      fields: [name]
+    I18n:
+      fields: [presentation]
+    Timestampable: ~
   columns:
-    name: string
+    name:         string
+    url:          string
+    image:        string
+    presentation: string
 
 Release:
+  actAs:
+    Sluggable:
+      fields: [title]
+    I18n:
+      fields: [presentation]
+    Timestampable: ~
   columns:
-    title: string
+    title:        string
+    presentation: string
+    image1:       string
+    image2:       string
+    artist_id:    integer
 
 Track:
+  actAs:
+    Sluggable:
+      fields: [name]
+    Timestampable: ~
   columns:
-    name: string
+    name:       string
+    file_mp3:   string
+    file_ogg:   string
+    file_flac:  string
+    release_id: integer
 
 Post:
+  actAs:
+    Sluggable:
+      fields: [title]
+    I18n:
+      fields: [body]
+    Timestampable: ~
   columns:
     title: string
+    body: string
