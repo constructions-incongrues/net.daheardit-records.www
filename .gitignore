@@ -1,1 +1,9 @@
+# configuration profiles
 etc/next
+
+# dist files
+src/config/databases.yml
+
+# editors
+*.swp
+*~
