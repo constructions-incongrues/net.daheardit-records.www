@@ -1,16 +1,55 @@
-# You can find more information about this file on the symfony website:
-# http://www.symfony-project.org/reference/1_4/en/10-Routing
+post:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Post
+    module:               post
+    prefix_path:          /post
+    column:               id
+    with_wildcard_routes: true
+
+release:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Release
+    module:               release
+    prefix_path:          /release
+    column:               id
+    with_wildcard_routes: true
+
+artist:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Artist
+    module:               artist
+    prefix_path:          /artist
+    column:               id
+    with_wildcard_routes: true
+
+sf_guard_signin:
+  url:   /login
+  param: { module: sfGuardAuth, action: signin }
+
+sf_guard_signout:
+  url:   /logout
+  param: { module: sfGuardAuth, action: signout }
+
+sf_guard_register:
+  url:   /register
+  param: { module: sfGuardRegister, action: index }
+
+sf_guard_forgot_password:
+  url:   /forgot_password
+  param: { module: sfGuardForgotPassword, action: index }
+
+sf_guard_forgot_password_change:
+  url:   /forgot_password/:unique_key
+  class: sfDoctrineRoute
+  options: { model: sfGuardForgotPassword, type: object }
+  param: { module: sfGuardForgotPassword, action: change }
+  requirements:
+    sf_method: [get, post]
 
 # default rules
 homepage:
   url:   /
-  param: { module: default, action: index }
-
-# generic rules
-# please, remove them by adding more specific rules
-default_index:
-  url:   /:module
-  param: { action: index }
-
-default:
-  url:   /:module/:action/*
+  param: { module: sfTwitterBootstrap, action: dashboard }

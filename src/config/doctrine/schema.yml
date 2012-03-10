@@ -1,0 +1,15 @@
+Artist:
+  columns:
+    name: string
+
+Release:
+  columns:
+    title: string
+
+Track:
+  columns:
+    name: string
+
+Post:
+  columns:
+    title: string

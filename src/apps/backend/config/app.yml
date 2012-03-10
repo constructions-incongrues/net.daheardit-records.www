@@ -1,5 +1,33 @@
-# You can find more information about this file on the symfony website:
-# http://www.symfony-project.org/reference/1_4/en/11-App
+all:
+  sf_twitter_bootstrap:
+    site:                   "Da ! Heard It Records"
+    top_link_to_fieldset:   true
+    display_top_pagination: true
+    use_icons_in_button:    true
+    with_show:              true
+    categories:
+      Artistes:
+        items:
+          Lister:
+            url:              artist
+            image:            user.png
+          Créer:
+            url:              artist_new
+            image:            user.png
+      Release:
+        items:
+          Lister:
+            url:              release
+            image:            music.png
+          Créer:
+            url:              release_new
+            image:            music.png
+      News:
+        items:
+          Lister:
+            url:              post
+            image:            megaphone.png
+          Créer:
+            url:              post_new
+            image:            megaphone.png
 
-# default values
-#all:
