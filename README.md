@@ -1,5 +1,6 @@
 RELEASE ARCHIVE STRUCTURE
 =========================
+```
 /
 	tracks
 		NUM - TITLE.wav
@@ -11,3 +12,4 @@ RELEASE ARCHIVE STRUCTURE
 		coverN.png
 		other.png
 		foo.png
+```
