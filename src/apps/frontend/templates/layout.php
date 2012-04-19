@@ -135,14 +135,14 @@
     <h3 class="open_releases_album">Album Name</h3>
 
     <ul class="open_releases_playlist">
-      <li><a href="">Title</a></li>
-      <li><a href="">Title</a></li>
-      <li><a href="">Title</a></li>
-      <li><a href="">Title</a></li>
-      <li><a href="">Title</a></li>
-      <li><a href="">Title</a></li>
-      <li><a href="">Title</a></li>
-      <li><a href="">Title</a></li>
+      <li><a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/play.png" alt="play" class="open_releases_playlist_icon_play" />Title</a></li>
+      <li><a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/play.png" alt="play" class="open_releases_playlist_icon_play" />Title</a></li>
+      <li><a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/play.png" alt="play" class="open_releases_playlist_icon_play" />Title</a></li>
+      <li><a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/play.png" alt="play" class="open_releases_playlist_icon_play" />Title</a></li>
+      <li><a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/play.png" alt="play" class="open_releases_playlist_icon_play" />Title</a></li>
+      <li><a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/play.png" alt="play" class="open_releases_playlist_icon_play" />Title</a></li>
+      <li><a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/play.png" alt="play" class="open_releases_playlist_icon_play" />Title</a></li>
+      <li><a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/play.png" alt="play" class="open_releases_playlist_icon_play" />Title</a></li>
     </ul>
 
     <h1 class="open_releases_title">A propos de la sortie</h1>
@@ -221,6 +221,7 @@
           <div class="grid_3 releases_discography_number_default ">
     
           </div><!-- end of grid_3 releases_discography_number -->
+
 
         </div><!-- end of releases_discography -->
       </div><!-- end of discogs -->
