@@ -17,6 +17,7 @@ abstract class BaseReleaseForm extends BaseFormDoctrine
     $this->setWidgets(array(
       'id'         => new sfWidgetFormInputHidden(),
       'title'      => new sfWidgetFormTextarea(),
+      'sku'        => new sfWidgetFormTextarea(),
       'image1'     => new sfWidgetFormTextarea(),
       'image2'     => new sfWidgetFormTextarea(),
       'artist_id'  => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Artist'), 'add_empty' => true)),
@@ -27,7 +28,8 @@ abstract class BaseReleaseForm extends BaseFormDoctrine
 
     $this->setValidators(array(
       'id'         => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
-      'title'      => new sfValidatorString(array('required' => false)),
+      'title'      => new sfValidatorString(),
+      'sku'        => new sfValidatorString(),
       'image1'     => new sfValidatorString(array('required' => false)),
       'image2'     => new sfValidatorString(array('required' => false)),
       'artist_id'  => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Artist'), 'required' => false)),

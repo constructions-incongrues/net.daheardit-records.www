@@ -1,17 +1,268 @@
-# # Populate this file with data to be loaded by your ORM's *:data-load task.
-# # You can create multiple files in this directory (i.e. 010_users.yml,
-# # 020_articles.yml, etc) which will be loaded in alphabetical order.
-# # 
-# # See documentation for your ORM's *:data-load task for more information.
-# 
-# User:
-#   fabien:
-#     username: fabien
-#     password: changeme
-#     name:     Fabien Potencier
-#     email:    fabien.potencier@symfony-project.com
-#   kris:
-#     username: Kris.Wallsmith
-#     password: changeme
-#     name:     Kris Wallsmith
-#     email:    kris.wallsmith@symfony-project.com
+sfGuardUser:
+  bertier:
+    username: bertier
+    password: bertier
+    email_address:  bertier@constructions-incongrues.net
+    is_super_admin: true
+  kris:
+    username: bozoo
+    password: bozoo
+    email_address:  bozoorak@gmail.com
+    is_super_admin: true
+
+Artist:
+  benetbene:
+    id: 1
+    name: Ben et Béné
+    url: http://www.benetbene.net
+    Translation:
+      fr:
+        presentation: |
+          Ben et Béné est un duo 8bit - punk né fin 2003.
+          Ben musicien indie rock a eu de nombreuses expériences de groupe qui l'ont conduit à cette idée: "fais tout toi-même!". Muni d'un laptop, d'une gameboy, d'un micro et d'autres petites choses bricolées, il se lance donc dans la composition de chansons d'ordinateurs furieusement dansante mais décalées : une electropunk au pays des merveilles.
+          Béné, plasticienne, diffuse en live des vidéos réelles et façonne l'aspect graphique du groupe : site web - pochette de disques - stickers etc- Véritable show girl à la voix diabolique, elle est capable d'électriser n'importe quel public.
+          Persuadés que le meilleur moyen de faire de la musique c'est d'aller en jouer n'importe où, le duo écume sans relache les scènes alternatives européennes.
+          Depuis 3 ans, ils organisent en France, Belgique et Pays-Bas les soirées electro-8bit & lo-fi : We Are Not Toys. 2006/2007 est déjà une période charnière dans leur parcours avec l'animation d'une émission bimensuelle sur beradio.net le lundi soir (We are not toys).
+      en:
+        presentation: |
+          Ben et Béné is a French Electro-8bit-Punk duo.
+          In 2003, after singing and playing in a lot of punk and indie rock outfits, Ben decided to play his own music. He began composing with a cheap computer, then Gameboy and Reason.
+          Béné just qualified for art-school, joining Ben in his project. She shows her “Real Video”, a mix of TV movies and domestic video, during their concerts.
+          Their music is the meeting of many influences: punk, 8bit, electro, clubbing… Their shows are always completely crazy ! This is due to to their electric voices which give an amazing high energy to their music.
+          They are on www.beradio.net the first and third Monday of each month.
+  buskerdroid:
+    id: 2
+    name: Buskerdroid
+    url: http://www.buskerdroid.com/
+    Translation:
+      fr:
+        presentation: |
+          En cours de rédaction. Revenez bientôt !
+      en:
+        presentation: |
+          Being edited currently. Come back soon !
+
+  computertruck:
+    id: 3
+    name: Computer Truck
+    url: http://computertruck.parishq.net
+    Translation:
+      fr:
+        presentation: |
+          En cours de rédaction. Revenez bientôt !
+      en:
+        presentation: |
+          French composer, mixing chip-instruments with modern sounds. His music is intense and varied, mostly dance-oriented, hard and melodic.
+          Active members since 2002 of the Paris Hq micromusic he helped to develop the chiptune & low fi electro scene in France by organising concerts and inviting artists who never had the chance to play in Paris. That’s during these shows that he started his first gigs under the pseudo Computer Truck… 
+          During the same period he was introduced to circuit bending and started using bended toys & synth for his music.
+          His influence are varied, from retro electropop to breakcore and harsh noize. He describe his music by “riot toy party music”, a music you can dance on and wich evolve to the 80’s c64 sound to “ultime electrogrind music” (which you can only listen during the gigs because his more violent tracks have not yet been released so don’t search on his myspace or webpage…) with uncomprehensible voice on it thanks to his Halloween special fx voice transformer. A music made to unite retarded nerds and crustyPunx.
+          ps : laptop plus diverse transformed toyz and voice...
+
+  eatrabbit:
+    id: 4
+    name: Eat Rabbit
+    url: http://www.myspace.com/eatrabbit
+    Translation:
+      fr:
+        presentation: |
+          En cours de rédaction. Revenez bientôt !
+      en:
+        presentation: |
+          Being edited currently. Come back soon !
+
+  goto80:
+    id: 5
+    name: Goto80
+    url: http://www.goto80.com/
+    Translation:
+      fr:
+        presentation: |
+          Goto80 est Anders Carlsson, né en Suède. Il a grandi dans la culture underground appelée "demoscene" sur Amiga, C64, Gameboy et PC depuis le début des années 90.Assez vite il développa une relation particulière avec le commodore 64, dans lequel son cerveau et les soundchips eurent des rapports triturés et déstructurés.
+          Déjà, adolescent, il explorait des modèles musicaux s'étendant de la musique ambiante aux gabbers et autres breaks "noisy", en passant par la musique "caoutchouc salé" des années 80.
+          Après son premier album vinyle en 2001, il commence à être connu en dehors de la communauté de "geeks" et à faire des performances live.
+          Il a toujours repoussé les limites de la "chip music", travaillant avec plusieurs styles musicaux anciens et en y ajoutant des voix.
+          En 2007 il a déjà à son actif une centaine de performances live, une quarantaine d'album, la majorité en libre téléchargement.
+          On retrouve sa musique sous d'autres noms , comme le groupe lo-fi c64 guitare "Superdöner" et le duo vocal micropop "HT".
+          Exactement comme dans la "demoscene", il collabore beaucoup avec des artistes visuels, surtout Entter et Jossystem pour des concerts qui jusqu'à maintenant sont loins de la nostalgie des jeux video.
+          Goto80 continue de repousser les limites du son 8-bit et a développé jusquà maintenant une façon unique de maltraiter différents genres musicaux avec sa touche personnelle "chip music".
+      en:
+        presentation: |
+          ﻿Goto80 is Anders Carlsson, born in Sweden. He grew up in the underground computer subculture called the demoscene on the Amiga, C64, Gameboy and PC since the early 1990's. Soon he was developing a relationship especially with the Commodore 64 where his brain and the soundchips would form a buggy and dirty relationship.
+          Already in his early teens he would explore musical styles ranging from ambient through cheesy 1980's music through to gabber and noisy breaks.
+          After his first first vinyl release in 2001 he gained a reputation outside the geek communities, and also started performing live.
+          He kept expanding the boundaries of chip music to work with several retarded musical styles, and added more vocals.
+          His music has also been heard under alot of other names, such as the lo-fi c64 guitar band Superdöner and the vocal micropop duo HT.
+          Just as in the demoscene, he collaborates alot with visual artists, especially Entter and Jossystem to do live shows that at this point are far from silent nerdery and videogame nostalgia.
+          Goto80 still tries to push the boundaries of the 8-bit sound and has by now developed an unmatched skill of abusing different music genres with his personal chip-music touch.
+          In 2007 he's performed about 100 shows and made about 40 releases - most of them for free download.
+
+  guyom:
+    id: 6
+    name: "[guÿôm]"
+    url: http://www.myspace.com/guyoml
+    Translation:
+      fr:
+        presentation: |
+          [Guÿôm] aka Guillaume est avant tout un super héros.
+          Il a découvert ses super pouvoirs il y a une dizaine d'années suite à une exposition accidentelle et mortelle à des discours sur l'économie libérale. Mais grâce à une volonté inébranlable [guÿôm] s'en est sorti et a acquis des super pouvoirs lui permettant de combattre sans relâche les traders et les spéculateurs pour redresser les torts et punir les méchants. Il est équipé d'un masque de super héros fait en vibranium et de pure laine vierge de mérinos (70% minimum) qui lui permet d'avoir une supra vision grâce à un catalyseur en adamantium. Ses vêtements ont été tissés grâce à des anciens numéros de la Pravda, afin de se proteger contre les O.P.A. hostiles. Accessoirement [Guÿôm] relate ses aventures au moyen de la musique.
+          Celle ci est faite en 16 bits (deux fois mieux que le 8 bits!!) Electro barrée, techno parodique, breakcore furieux, idm?
+          Au diable les étiquettes, [Guÿôm] s'affranchit des cases trop restrictives.
+      en:
+        presentation: |
+          [Guÿôm] aka Guillaume is first of all a superhero. He discovered his super powers about ten years ago after accidental and fatal exposure to liberal economy speeches. But thanks to his unstoppable will, [guÿôm] survived and gained super powers allowing him to fight without truce against the traders and speculators to set things right and punish the evil. He is equipped with a superhero mask made of vibranium and pure virgin merinos wool (70% minimum) which grants him supra vision thanks to an adamatium catalyst. His clothes were woven from old Pravda numbers, in order to protect himself from the hostile O.P.A. Also, [Guÿôm] relates his adventures through music. The latter is 16 bits (twice as good as 8 bits!!) electro barred, techno parodic, breakcore furious, idm? Screw the labels, [Guÿôm] goes above and beyond restrictive categories.
+
+  jacquescochise:
+    id: 7
+    name: "Jacques Cochise"
+    url: http://cochise.canalblog.com/
+    Translation:
+      fr:
+        presentation: |
+          En cours de rédaction. Revenez bientôt !
+      en:
+        presentation: |
+          Being edited currently. Come back soon !
+
+  miniroc:
+    id: 8
+    name: "Mini Roc"
+    url: http://www.miniroc.com/
+    Translation:
+      fr:
+        presentation: |
+          Mini Roc, de son vrai nom Jan MichelBack est un musicien allemand faisant de la musique éléctro. 
+          Il a expérimenté différentes sonorités et styles musicaux pendant sept ans avant de découvrir la scène 8bit, en 2003.
+          Très vite, il tombe amoureux des sons lo-fi générés par les jeux vidéos des anciennes consoles, imprésionné par la simplicité technique développée par les morceaux 8bit. 
+          Il commence alors très rapidement à produire son propre panel de sons, provenants de jeux mélangés à des sonoritées modernes de l'électro et des brides de techno.
+          En 2005 , Mini Roc produit des morceaux exclusivement joués sur Gameboy et les à joués en live à travers toute l'Europe.
+      en:
+        presentation: |
+          Mini Roc is electro musician Jan Michelbach from Bochum, Germany. Experementing with electronic sounds and different music styles for about seven years, he got in touch with the 8bit-music scene in 2003.
+          Quickly he became excited by lo-fi sounds generated with classic videogame and computer consoles. Also amazed by the simplicity, nevertheless the range of technology behind 8bit tracks, he soon began producing his own combining typical game sounds with modern electro and techno elements.
+          Since beginning of 2005 Mini Roc has produced his tracks exclusively on a Gameboy and performed them on several live gigs across Europe.
+
+  pocketmaster:
+    id: 10
+    name: "Pocketmaster"
+    url: http://www.pocketmaster.ch/
+    Translation:
+      fr:
+        presentation: |
+          Pocketmaster est un projet de musique lowtech fondé en 2005 à Basel par Cube-C et Emglio Laser.
+          Ils utilisent les cartes son d'une gameboy classique et des ordinateurs 8-bit ou 16-bit, surtout celui de Commodore 64.  Bien sûr, ils utilisent aussi du matériel un peu plus moderne, avec un mélange de samples de diverses sources.  Le résultat: de l'electropop insolite ou du micropunk qui vous fera danser jusqu'à game over.
+          Trop de gribouillis et trop humoristique pour caler dans le minimal mainstream, ils piaillent et ils raillent avec un succés international.  ﻿
+      en:
+        presentation: |
+          Pocketmaster is a lowtech-music-project from Basel founded in 2005 by Cube-C and Emglio Laser.
+          They use the soundchips of classic gameboy and 8-bit or 16-bit homecomputers, especially the one of Commodore 64. Of course also newer hardware is used to some extend, mixed up with samples of various sources. As a result, freaky electropop or micropunk makes you dance until game over.
+          Too squiggly and too humorous to sink into minimal mainstream, they squeak and bleep with international success
+
+  puyopuyo:
+    id: 11
+    name: "Puyo Puyo"
+    url: http://puyopuyo.lautre.net/
+    Translation:
+      fr:
+        presentation: |
+          Après avoir été batteur new-wave dans les eighties, Pascal Lebrain s'est transformé en Puyo Puyo vers 2002.
+          Ce sont l'ordinateur et le logiciel Protools free qui lui ont fourni l'occasion d'élaborer une musique electropop lo-fi un peu déviante et déglinguée, bricolée à la maison avec un matériel minimal et un enthousiasme maximal.
+          Premier bonheur : Felix Kubin le signe sur son label Gagarin Records pour un maxi vinyl "A novel Trick item" (2004). Il enchaîne alors les concerts dans toute l'Europe - et même à Mexico ! - dansant le Puyo Puyo devant des clips qu'il confectionne lui-même toujours dans un esprit ludique et low-budget. Ce karaoke mutant à la fois fragile et énergétique devient sa marque de fabrique, ainsi que son célèbre casque de cosmodroïde.
+          De compilations en maxis il continue ensuite à produire sa musique en dilettante, ce qui ne l'empêche pas de proposer à ses idoles électroniques de remixer un de ses morceaux. C'est ainsi que Felix Kubin, Candie Hank, Brezel Goering (Stereototal), Frederik Schikowski, Groupgris (Kap Bambino) et Gangpol participent au projet : le disque sort en 2009 sous forme de picture disc chez The Brain Records, label créé pour l'occasion. A noter que The Brain est aussi une émission de radio qu'il anime et produit avec sa compagne Eva Lebrain depuis 1999, avec laquelle il organise aussi à Nantes des soirées concerts + party baptisées Superboums.
+      en:
+        presentation: |
+          After being a new wave drummer in the 80s, Pascal Lebrain became Puyo Puyo around 2002. 
+          It was the computer and the program Protools Free that allowed him to create a slightly devious and crazy lo-fi electropop music, home made with little material, but much enthusiasm. 
+          First good news: Feliz Kubin took him on his label Gagarin Records for a maxi vinyl entitled "A novel Trick Item" in 2004.. He then started a series of concerts throughout Europe - and even in Mexico - dancing the Puyo Puyo in video clips he put together himself in the same ludic and low-budjet spirit as always. This mutant karaoke, both fragile and energetic, became is trademark, along with his famous cosmodroid helmet.
+          From compilations to maxis, he went on producing his music, but still asked his electronic idols to remix one of his pieces. This is how Felix Kubin, Candie Hank, Brezel Goering (Stereototal), Frederik Schikowski, Groupgris (Kap Bambino) and Gangpol got started on the project: the album came out in 2009 as a picture disc under Brain Records, a label created for the occasion. The Brain is also a radio show hosted and produced by Lebrain and his partner Eva Lebrain since 1999, with whom he also organizes evening concerts and parties in Nantes called "Superboums".
+
+  sidabitball:
+    id: 12
+    name: "Sidabitball"
+    url: http://www.sidabitball.com/
+    Translation:
+      fr:
+        presentation: |
+          Sidabitball n'est pas un musicien, encore moins une personne.
+          C'est le nom d'un programme de musique que son géniteur, Pierre Boquet, met au point depuis déja 5 ans. Standard de fait dans les industries de la production musicale et de l'agroalimentaire, il a notamment été utilisé par Justin Guetta lors du mastering du dernier album de David Timberlake.
+          À l'heure actuelle, le programme Sidabitball fonctionne exclusivement sur gameboy, mais les rumeurs d'un portage du programme sur d'autres plateformes vont bon train.
+      en:
+        presentation: |
+          Sidabitball is not a musician, let alone a person.
+          It is the name of a music program that his creator, Pierre Boquet, has been working on for 5 years already. A standard in agroalimentary and musical industries, it has notably been used by Justin Guetta during the mastering of David Timberlake's last album.
+          Right now, the Sidabitball program works exclusively on gameboy, but rumors of carrying the program to other platforms are going around.
+
+  sputnikbooster:
+    id: 13
+    name: "Sputnik Booster"
+    url: http://www.myspace.com/sputnikbooster
+    Translation:
+      fr:
+        presentation: |
+          Sputnik Booster and the Future Posers vous offre une musique electrotrash de première classe ; produite grâce aux puces sonores légendaire des Commodore 64, Nintendo Game Boy & Atari ST.
+          Pour ce qui est des visuels, on peut compter sur une meute d'une vingtaine de robots construits de bric et de broc et dansants comme si c'était la dernière fois - probablement l'un des plus spectaculaire show de robots en live, et tout au moins le plus stupide !
+          Leur périple sur la planète terre les a jusqu'à maintenant amené à investir les pistes de danse de nombreuses villes autour du globe, comme Amsterdam, Paris, Berlin, Zurich, Bruxelles, Vienne ou New York.      en:
+        presentation: |
+          Being edited currently. Come back soon !
+
+  tomwoxom:
+    id: 14
+    name: "Tom Woxom"
+    url: http://www.tom-woxom.de
+    Translation:
+      fr:
+        presentation: |
+          Tom Woxom est un artiste electro d'Allemagne de l'Ouest très inspiré par ses expériences avec Protracker sur Amiga 500.
+          Après avoir cherché pendant des années une façon d'obtenir d'autres sonorités dans une qualité supérieure, il réalisa que ses premiers travaux étaient incontestablement plus simples, plus entrainants et nettement plus amusants à composer. Il décida donc de reprendre l'Amiga.
+          En 2008, Tom Woxom crée son propre son en combinant tracker Amiga, claviers, samples à de nouvelles techniques d'enregistrement et d'arrangement.
+          Il espère avoir l'occasion de jouer en live très prochainemment.
+        presentation: |
+          Tom Woxom is a german artist from the Ruhrarea. He plays electro music inspired from his earlier experiences running Protracker on Amiga 500.
+          After having been looking for "better sounds" and "higher fidelity" for years he discovered that his earlier works were definitely more simple and rocking, and that they were funnier to compute. That's why he decided to give the Amiga 500 another go.
+          Tom Woxom built his sound in 2008 running the Amiga combined with playing true waveforms, some little keyboards and modern technologies for arrangement and recording.
+          He's looking forward to performing live soon.
+
+  vicnet:
+    id: 15
+    name: "Vicnet"
+    url: http://www.vic-net.com/
+    Translation:
+      fr:
+        presentation: |
+          Scénographe et designer dans la vraie vie, Vincent Tordjman alias Vicnet est un artiste qualifié par Libération de "Musicien d'aéroport", tant il affectionne de composer ses musiques sur son laptop dans des lieux de passage insolites. Mr. Hadopi est son deuxième album, après un opus aux sonorités 8bit, Vic-CD et Vic-LP sur le label Deco.
+          La musique de Vicnet se caractérise par un trop plein d'influences acquises par la traversée d'univers variés, qu'il assimile et recompose avec une perception unique des sons. Toujours accompagné de ses Roland TB-303 et SH-101, un synthé en plastique à la bandoulière magique, Vicnet compose des mélodies électroniques éclectiques et toniques, hantées par des voix de robots.
+          Il a collaboré entre autres avec Joana Preiss, O.lamm, Lionel Fernandez et Erik Minkinnen de Sister Iodine. Il prépare pour 2010 la musique d'un Opéra chinois.
+        presentation: |
+          Scenographer and designer in real life, Vincent Tordjman aka Vicnet is an artist qualified as "airport musician" by Liberation, because of his habit of composing with his laptop in unusual places. Mr. Hadopi is his second album, following an 8bit filled opus, Vic-CD and Vic-LP on the label Deco.
+          Vicnet's music is characterized by an accumulation of influences acquired from a cross of various universes, which he assimilates and recomposes with a unique perception of sounds. Always with his Roland TB-303 and his SH-101, a plastic keyboard with a magic shoulder belt, Vicnet composes eclectic and tonic electronic melodies, haunted by robot voices.
+          He has collaborated among others with Joana Preiss, O. Lamm, Lionel Fernandez and Erik Minkinnen of Sister Iodine. He is currently working on music for a Chinese opera for 2010.
+
+  xerak:
+    id: 16
+    name: "Xerak"
+    url: http://www.xerak.com/
+    Translation:
+      fr:
+        presentation: |
+          Xerak est un artiste musicien et graphiste, créateur du mouvement electro trash kawaii. 
+          Il puise son inspiration dans l'univers de la bande dessinée americaine et japonaise, du pixel art, du pop art, ainsi que dans l'esthétique des films de science fiction du milieu du siècle.
+          Sa musique c’est un mélange électro acid punk toy kawaii inspiré d’un soupçon de techno japonaise du début des années 90 (Denki groove, Pierre Taki…).
+          Son graphisme est omniprésent dans ses lives et habille ses créations sonores sous forme de vidéo clips en dessins animés ou sous forme de jeux vidéo que l'on peut découvrir sur son site. 
+          Son travail est accompagné de shows musicaux, graphiques et énergiques où il incarne différents personnages plus extravagants les uns que les autres (Le Caniche Punk Rose Delux, le prêcheur du Sexfloor, Le Président Mutant, Le Pâtissier Mutant…).
+        presentation: |
+          XERAK is a designer and a musician creator of the electro trash kawaii mouvement. His universe comes from the Japanese comics the American comics the Pxl Art the Pop art and the science fiction movies of the 50’s.
+          The XERAK music is a melt of electro acid punk toy kawaii with a little bit of Japanese 90’s techno. (Denki Groove, Pierre Taki…).
+          During his lives the sound is followed by his hypnotics designs his energics video creations and his funnies video games. For the shows he plays differents characters like The Delux Punk Pink Poodle the Sexfloor Preacher the Mutant cooker the Mutant Disco Samouraï and the Mutant President.
+
+Release:
+  dhr01:
+    id: 1
+    title: "Rock the Boulevard, Reach the Bourgeois"
+    sku: D!HR-01
+    Artist: computertruck
+    Translation:
+      fr:
+        presentation: |
+          En cours de rédaction. Revenez bientôt !
+      en:
+        presentation: |
+          Under construction. Come back soon !
