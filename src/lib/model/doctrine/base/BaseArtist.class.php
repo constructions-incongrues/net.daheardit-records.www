@@ -34,9 +34,11 @@ abstract class BaseArtist extends sfDoctrineRecord
         $this->setTableName('artist');
         $this->hasColumn('name', 'string', null, array(
              'type' => 'string',
+             'notblank' => true,
              ));
         $this->hasColumn('url', 'string', null, array(
              'type' => 'string',
+             'regexp' => '|^http(s)?://[a-z0-9-]+(.[a-z0-9-]+)*(:[0-9]+)?(/.*)?$|',
              ));
         $this->hasColumn('image', 'string', null, array(
              'type' => 'string',

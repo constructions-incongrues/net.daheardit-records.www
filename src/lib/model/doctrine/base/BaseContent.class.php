@@ -8,15 +8,18 @@
  * @property string $informations
  * @property string $credits
  * @property string $greetings
+ * @property string $video
  * @property string $links
  * 
  * @method string  getInformations() Returns the current record's "informations" value
  * @method string  getCredits()      Returns the current record's "credits" value
  * @method string  getGreetings()    Returns the current record's "greetings" value
+ * @method string  getVideo()        Returns the current record's "video" value
  * @method string  getLinks()        Returns the current record's "links" value
  * @method Content setInformations() Sets the current record's "informations" value
  * @method Content setCredits()      Sets the current record's "credits" value
  * @method Content setGreetings()    Sets the current record's "greetings" value
+ * @method Content setVideo()        Sets the current record's "video" value
  * @method Content setLinks()        Sets the current record's "links" value
  * 
  * @package    net.daheardit-records.www
@@ -36,6 +39,9 @@ abstract class BaseContent extends sfDoctrineRecord
              'type' => 'string',
              ));
         $this->hasColumn('greetings', 'string', null, array(
+             'type' => 'string',
+             ));
+        $this->hasColumn('video', 'string', null, array(
              'type' => 'string',
              ));
         $this->hasColumn('links', 'string', null, array(

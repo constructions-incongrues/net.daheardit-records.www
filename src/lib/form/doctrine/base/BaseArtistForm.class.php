@@ -26,8 +26,8 @@ abstract class BaseArtistForm extends BaseFormDoctrine
 
     $this->setValidators(array(
       'id'         => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
-      'name'       => new sfValidatorString(array('required' => false)),
-      'url'        => new sfValidatorString(array('required' => false)),
+      'name'       => new sfValidatorString(),
+      'url'        => new sfValidatorRegex(array('pattern' => '|^http(s)?://[a-z0-9-]+(.[a-z0-9-]+)*(:[0-9]+)?(/.*)?$|', 'required' => false)),
       'image'      => new sfValidatorString(array('required' => false)),
       'slug'       => new sfValidatorString(array('max_length' => 255, 'required' => false)),
       'created_at' => new sfValidatorDateTime(),
