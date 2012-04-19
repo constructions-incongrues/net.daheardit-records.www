@@ -462,6 +462,11 @@ ul.releases_discography_button
  margin-top:10px;
  }
 
+.artists_pictures img 
+{
+  height:220px;
+  width:220px;
+}
 
 .artists_title a
 {
@@ -794,7 +799,17 @@ h3.open_releases_album
   color:#FFF;
   text-decoration:none;
   background-color:#1a1a1a;
+}
 
+.open_releases_playlist_icon_play 
+{
+  margin-top:-3px;
+  margin-right:5px;
+}
+
+.open_releases_playlist_icon_play:hover 
+{
+  background-image:url("../pics/icon/play-hover.png");
 }
 
 .open_releases_artwork
@@ -830,6 +845,11 @@ ul.open_releases_playlist
   height: 0;
   width: 0;
   left: -1em;
+}
+
+.open_releases_playlist_button:hover 
+{
+  background-image:url("");
 }
 .open_releases_press_text
 {
