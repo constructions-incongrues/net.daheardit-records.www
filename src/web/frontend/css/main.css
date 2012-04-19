@@ -1,0 +1,867 @@
+/* TYPO */
+
+@font-face 
+{
+  font-family: 'Blanch Caps';
+  src: url('../typo/blanch_caps.ttf');
+}
+
+@font-face 
+{
+  font-family: 'Jockey One';
+  src: url('../typo/JockeyOne-Regular.ttf');
+}
+
+
+/* HTML & BODY */
+
+body
+{
+  padding:0px;
+  font-family: "Arial", Helvetica, sans-serif;
+}
+
+html 
+{
+  font-size:62.5%;
+}
+
+/* CENTER CONTENT */
+
+.category_content,
+.releases_discography_listing_all,
+.artists_content,.header_content,
+.header_news_1_content,
+.header_news_2_content,
+.open_releases_content,
+.header_nav_3_content,
+.infos_content,
+.footer_content,
+.release_content,
+.open_release, 
+.open_artists{ 
+  width:960px;
+  margin-left: auto;
+  margin-right: auto;
+} 
+
+/* CALQUES */
+
+.header_calque
+{
+  background-image:url("../pics/pattern/pat-header.png");
+  background-repeat: repeat;
+  width: 100%;
+  height:680px;
+  position:absolute;
+}
+
+
+.calque_releases
+{
+  position:absolute;
+  height:220px;
+  width:220px;
+  background-image:url("../pics/releases/img-release.png");
+}
+
+.calque_releases:hover
+{
+  background-image:url("../pics/releases/img-release-hover.png");
+}
+
+.calque_artists 
+{
+  position:absolute;
+  height:233px;
+  width:220px;
+  margin-top:-3px!important;
+  background-image:url("../pics/artists/img-artist.png");
+}
+
+.calque_artists:hover
+{
+  background-image:url("../pics/artists/img-artist-hover.png");
+}
+
+
+/* HEADER */
+
+ .header 
+ {
+  background-image:url("../pics/bg_header/01.gif");
+  background-position: center center;
+  background-repeat: repeat;
+  width: 100%;
+  height:680px;
+}
+
+
+
+.header_nav_2
+ {
+  margin-top:12px!important;
+}
+
+.header_nav_2_icon li 
+{
+  display:inline;
+  padding:0px;
+  margin:0px;
+  opacity:0.9;
+}
+
+.header_nav_2_icon li:hover 
+{
+  opacity:1;
+}
+
+.header_title_dhr a 
+{
+  color:#FFF;
+  text-decoration:none;
+  margin-bottom:-10px;
+  font-family: 'Blanch Caps', sans-serif;
+  margin-left:20px;
+}
+
+
+.header_nav_2_button_lang 
+{
+ background-color:#000;
+}
+
+.header_nav_2_button_lang a 
+{
+ color: #29ABE2;
+ text-decoration:none;
+ padding:2px;
+font-family: 'Blanch Caps', sans-serif;
+
+}
+
+.header_nav_3 
+{
+ width:100%!important;
+ background-color:#000;
+ height:50px;
+ margin-top:-20px;
+}
+
+.header_nav_3 ul 
+{
+  background-color:#000;
+}
+
+.header_nav_3 li
+{
+  color:#29ABE2;
+  list-style-type:none;
+  display:inline;
+  margin:5px;
+  font-family: 'Jockey One', sans-serif;
+}
+
+.header_nav_3 a 
+{
+  color:#29ABE2;
+  text-decoration:none;
+  text-transform:uppercase;
+  font-size:28px;
+  font-size:2.8rem}
+
+
+
+  .header_nav_3_button_donate a
+  {
+    color:#ea1D78;
+    opacity:0.9;
+  }
+
+  .header_nav_3_button_donate a:hover  {opacity:1;}
+
+ 
+ .header_news_1_content,.header_news_2_content 
+ {
+   font-family: 'Jockey One', sans-serif;
+   text-align:right;
+   margin-top:112px;}
+
+   .header_news_1_content a,.header_news_2_content a  
+   {
+     text-decoration:none;
+   }
+
+   .header_news_1_content h1 
+   {
+    margin-bottom:-20px;
+    margin-right:13px;
+  }
+
+  .header_news_1_content h1 a 
+  {
+   color:#FFF;
+   font-weight:lighter;
+   font-size:60px;
+   font-size:6rem;
+ }
+ 
+ .header_news_1_content h2 a 
+ {
+   color:#fced20;
+   font-weight:lighter;
+   font-size:48px;
+   font-size:4.8rem
+ }
+
+
+  .header_news_2
+  {
+   background-color:#000;
+   opacity:0.95;
+   padding-top:10px;
+   min-height:90px;
+  border-right:2px solid #28abe3; }  
+
+ .header_news_2_nav
+ {
+  padding-bottom:5px;
+  float:right;
+  margin-top:-10px;
+}
+
+.header_news_2_nav a 
+{
+  padding:0px 2px 0px 2px;
+}
+
+.header_news_2_title 
+{    
+  font-family: 'Jockey One', sans-serif;
+  color:#FFF;
+  font-weight:lighter;
+  margin-left:20px;
+  text-transform:uppercase;
+  margin-bottom:5px;
+  font-size:17px;
+  font-size:1.7rem;
+  text-align:left;
+}
+
+.header_news_2_title a
+{
+  color:#FFF;
+}
+
+.header_news_2_pictures
+{
+  padding-bottom:0px;
+  margin-top:-4px;
+}
+
+.header_news_2_pictures img 
+{
+  margin:10px;
+}
+
+.header_news_2_descr p
+{
+  color:#FFF;
+  margin:0px 10px 0px 10px;
+  padding:0px 10px 0px 10px;
+  font-size:13px;
+  font-size:1.3rem;
+  text-align:justify;
+}
+
+/* DISCOGS */
+
+.releases_discography
+ {
+   background-image:url(../pics/pattern/pat-bg.png);
+   background-repeat:repeat;
+   background-color:#000;
+   padding:30px 0px 40px 0px;
+   }
+
+
+ .releases_discography_number_default 
+ {
+  background-image:url(../pics/releases/img-release-default.png);
+  height:290px;
+  width:220px;
+  margin-left:10px;
+  margin-top:10px;
+}
+
+.releases_discography_number
+{
+  background-color:#FFF;
+}
+
+.releases_discography_number_first
+{
+  margin-left:0px!important;
+}
+.releases_discography_number h1 
+{
+  padding:0px;
+  margin:0px 0px -6px -4px;
+}
+
+.releases_discography_last_release 
+{
+  background-repeat:no-repeat;
+  height:16px;
+  width:68px;
+  position: absolute;
+  margin-top:20px;
+}
+
+
+
+.releases_discography_number h1 
+{ 
+ padding:0px 0px 0px 10px;
+ font-size:15px;
+ font-size:1.5rem;
+}
+
+.releases_discography_number h2 
+{
+ padding:0px 0px 0px 10px;  
+ font-size:18px;
+ font-size:1.8rem;
+ margin-left:-4px;
+}
+
+.releases_discography_number h1 a 
+{
+  color:#29ABE2;
+  text-decoration:none;
+  text-transform:uppercase;
+  font-weight:normal;
+  font-family: 'Jockey One', sans-serif;
+}
+
+.releases_discography_number h2 a 
+{
+  color:#000;
+  text-decoration:none;
+  text-transform:uppercase;
+  margin-top:-5px;
+  font-weight:normal;
+  font-family: 'Jockey One', sans-serif;
+}
+
+ul.releases_discography_button 
+{
+  margin-top:-20px;
+  margin-left:3px;
+  padding-bottom:0px;
+  margin-bottom:6px;
+}
+
+.releases_discography_button  li
+{
+ display:inline;
+ padding:2px;
+ margin:0px;
+ font-size:10px;
+ font-size:1rem;
+}
+
+.releases_discography_button li a 
+{
+  background-color:#000;
+  color:#29ABE2;
+  text-decoration:none;
+  padding:5px;
+  font-weight:normal;
+  text-transform:uppercase;
+}
+
+/* Artists */
+
+
+  .artists
+  {
+    background-color:#000;
+    background-image:url(../pics/pattern/pat-bg.png);
+    background-repeat:repeat;
+  }  
+
+.artists_listing_all
+{
+ background-image:url(../pics/pattern/pat-bg.png);
+ background-repeat:repeat;
+ background-color:#fff;
+ padding:30px 0px 100px 0px;
+}
+
+.artists_pictures
+ {
+ border-radius:200px;
+ margin-top:10px;
+ }
+
+
+.artists_title a
+{
+  color:#29ABE2; 
+  text-transform:uppercase;
+  text-decoration:none; 
+}
+
+p.artists_title 
+{
+  position: absolute;
+  font-weight:lighter;
+  font-family: 'Jockey One', sans-serif;
+  margin-top:-75px;
+  margin-left:35px;
+  transform:rotate(-55deg);
+  font-size:19px;
+  font-size:1.9rem;
+}
+
+.artists h1
+{
+ background-color:#FFF;
+ color:#000;
+}
+
+
+
+  .tags h1{
+  line-height:24px;
+  position:relative;
+
+  } 
+
+.tags h1{
+ background-color:#FFF;
+ color:#000;
+  text-decoration:none;
+ 
+  } 
+.tags h1:after{
+  content:"";
+  float:left;
+  position:absolute;
+  top:0;
+  width:0;
+  height:0;
+  border-color: transparent transparent  transparent #FFF ;
+margin-left:5px;
+  border-style:solid;
+  border-width: 40px 40px 0px 40px ;    
+  } 
+  
+
+
+
+/* TEST */
+
+
+.artists_show_default 
+{
+  background-image:url(../pics/artists/img-artist-default.png);
+  height:240px;
+  width:250px;
+  margin-left:10px;
+}
+
+
+/* INFOS */
+
+.infos
+{
+ background-image:url(../pics/pattern/pat-bg.png);
+ background-repeat:repeat;
+ background-color:#000;
+ padding:30px 0px 50px 0px;
+}
+
+.infos_button_top 
+{
+ margin-top:20px!important;
+
+ background-image:url(../pics/pattern/pat-bg.png);
+ background-repeat:repeat;
+ background-color:#000; 
+}
+
+
+.infos_descr h1,
+.infos_descr h2,
+.infos_descr h3,
+.infos_descr h4
+{
+  color:#FFF;
+  font-family: 'Jockey One', sans-serif;
+  font-weight:normal;
+  text-transform:uppercase;
+}
+
+.infos_descr 
+{
+
+  color:#b2b2b2;
+  text-align:left;
+}
+
+.infos_descr li 
+{
+  list-style-type:none;
+  margin-left:0px;
+}
+
+.infos_descr a
+{
+  color:#12546c;
+  text-decoration:none;
+}
+
+.infos_vids
+{
+ margin-left:20px;
+ width:276px;
+ }
+
+
+/* FOOTER */
+
+.footer
+{
+ background-image:url(../pics/pattern/pat-foot.png);
+ background-repeat:repeat;
+ background-color:#000;
+ padding:30px 0px 100px 0px;
+}
+
+.footer_content p  {color:#FFF;}
+ 
+ .footer_content h1, .footer_content h2 
+ {
+  font-weight:normal;
+  text-transform:uppercase;
+  font-family: 'Jockey One', sans-serif;
+} 
+
+  .footer_content h1 
+  {
+   color:#FFF;
+   background-color:#000;
+   background-image:url(../pics/pattern/pat-bg.png);
+   background-repeat:repeat;
+   display:inline;
+   padding:2px 4px 2px 4px;
+   font-size:20px;
+   font-size:2rem;
+ }
+
+  .footer_content h2
+ {
+  color:#FFF;
+  font-size:15px;
+  font-size:1.5rem;
+  opacity:0.7;
+  margin:10px 0px 0px 0px;
+ } 
+
+ .footer_links_1 ul, li, .footer_links_2 ul, li 
+ {
+  list-style-type:none;
+}
+
+.footer_links_1 li, .footer_links_2 li 
+{
+  margin:5px 0px 5px 0px;
+  padding-left:10px;
+}
+.footer_links_1 li a, .footer_links_2 li a 
+{
+  color:#12546C;
+  background-color:#000;
+  padding:2px;
+  text-decoration:none;
+}
+
+.footer p 
+{
+  color:#b2b2b2;
+}
+
+.footer_content p a 
+{
+    color:#12546C;
+    text-decoration:none;
+}
+.footer_links_2
+{
+  margin-top:30px;
+}
+.footer_nav_1 li 
+{
+  display:inline;
+  padding:0px;
+  margin:0px;
+}
+
+.footer_nav_1 li:hover {opacity:1;}
+
+ul.footer_nav_1 
+{
+  margin:-25px 0px 0px 20%;
+  opacity:0.3;
+  padding:2px;
+
+}
+
+
+.footer_button_top
+{
+ margin-top:-50px!important;
+
+ background-image:url(../pics/pattern/pat-foot.png);
+ background-repeat:repeat;
+ background-color:#000;
+}
+
+.footer_content input,.footer_content textarea  
+{
+  border:0px;
+   background-image:url(../pics/pattern/pat-foot.png);
+ background-repeat:repeat;
+ background-color:#0B1D27;
+}
+
+.footer_content input.valid 
+{
+  background-color:#000!important;
+  color:#FFF;
+   background-image:none;
+ background-repeat:repeat;
+ float:right;
+ margin-top:-10px;
+}
+/* OPEN RELEASE */
+
+.open_releases_content,.open_artits_content 
+{
+  padding-top:20px;
+}
+
+h1.open_releases_catalog , h2.open_releases_artist, h3.open_releases_album,h1.open_releases_title, h2.open_releases_title
+ {
+   font-weight:normal;
+   text-transform:uppercase;
+   font-family: 'Jockey One', sans-serif;
+ }
+
+h1.open_releases_catalog
+{
+  color: #29abe2;
+  font-size:20px;
+  font-size:2rem;
+}
+
+h2.open_releases_artist
+{
+  font-size:33px;
+  font-size:3.3rem;
+  color:#b2b2b2;
+  margin-top:-30px;
+}
+
+h2.open_releases_artist a
+{
+  color:#000;
+  text-decoration:none;
+}
+
+h3.open_releases_album
+{
+
+   color:#b2b2b2;
+  font-size:33px;
+  font-size:3.3rem;
+  margin-top:-40px;
+}
+
+
+.open_releases_playlist li a
+{
+  background-color: #e6e6e6;
+  width:440px;
+  display: block;
+  margin:3px 0px 0px -40px;
+  padding:2px;
+}
+
+.open_releases_playlist a:hover 
+{
+  color:#FFF;
+  text-decoration:none;
+  background-color:#1a1a1a;
+
+}
+
+ul.open_releases_playlist
+{
+  margin: 0.75em 0;
+  padding: 0 1em;
+  list-style: none;
+}
+
+
+.open_releases li a 
+{
+  text-decoration:none;
+  color:#000;
+}
+
+.open_releases_playlist_button
+{
+  border-color: transparent #111;
+  border-style: solid;
+  border-width: 0.35em 0 0.35em 0.45em;
+  display: block;
+  height: 0;
+  width: 0;
+  left: -1em;
+}
+.open_releases_press_text
+{
+  color:#666;
+  margin-top:-10px; 
+  padding-bottom:20px;
+}
+
+ul.open_releases_button
+{
+  margin-bottom:10px;
+  text-align:right;
+}
+
+.open_releases_button li 
+{
+
+  background-color:transparent;
+  list-style-type:none;
+  display:inline;
+  padding:0;
+  margin:0;
+}
+
+.button_open_releases_retour:hover
+{
+  background-image:url("../pics/button/releases/retour-hover.png");
+  height:35px;
+  width:35px;
+  z-index:;
+}
+.open_releases_buy 
+{
+  background-color:#1a1a1a;
+  color:#FFF;
+  font-weight:bold;
+  padding:5px;
+  min-height:20px;
+  font-size:12px;
+  font-size:1.2rem;}
+
+  .open_releases_buy img 
+  {
+    padding:0px 2px 0px 2px;
+  }
+
+  .open_releases_price 
+  {
+    float:left;
+  }
+  .open_releases_market 
+  {
+    float:right;
+  }
+
+  .open_releases_buy a 
+  {
+    color:#FFF;
+    text-decoration:none; 
+  }
+
+  ul.open_releases_download
+  {
+    margin:-10px 0px 10px -25px;
+  }
+
+  .open_releases_download li 
+  {
+    display:inline;
+    padding:5px;
+    background-color:#e6e6e6;
+    font-size:12px;
+    font-size:1.2em;
+  }
+
+  .open_releases_share
+  {
+    color:#666;
+    font-size:12px;
+    font-size:1.2rem;
+  }
+
+/* A TRIER */
+
+ .releases,.category_infos  
+  {
+   background-color:transparent;
+   margin-top:-40px!important;
+   margin-top:-10px;
+ }
+
+
+ .artists h1,
+ .releases h1,
+ .category_infos h1
+ {
+   font-family: 'Jockey One', sans-serif;
+   font-weight:lighter;
+   background-image:url(../pics/pattern/pat-bg.png);
+   background-repeat:repeat;
+   display:inline;
+   padding:5px;
+   margin:0px 0px 0px 0px;
+   text-transform:uppercase;
+   font-size:27px;
+   font-size:2.7rem
+ }
+
+ .infos_button_top,.footer_button_top 
+ {
+  float:right;
+  padding:0px;
+  margin:0px 0px 0px 0px;
+  height:20px;
+  width:20px;
+  text-align:center;
+}
+
+.releases h1,
+.category_infos h1
+{
+ background-color:#000;
+ color:#FFF;
+}
+
+.releases_discography_number,.artists_show
+{
+  font-weight:none;
+  margin:10px;
+}
+
+
+
+
