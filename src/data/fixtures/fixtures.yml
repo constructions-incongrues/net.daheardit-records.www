@@ -1,17 +1,571 @@
-# # Populate this file with data to be loaded by your ORM's *:data-load task.
-# # You can create multiple files in this directory (i.e. 010_users.yml,
-# # 020_articles.yml, etc) which will be loaded in alphabetical order.
-# # 
-# # See documentation for your ORM's *:data-load task for more information.
-# 
-# User:
-#   fabien:
-#     username: fabien
-#     password: changeme
-#     name:     Fabien Potencier
-#     email:    fabien.potencier@symfony-project.com
-#   kris:
-#     username: Kris.Wallsmith
-#     password: changeme
-#     name:     Kris Wallsmith
-#     email:    kris.wallsmith@symfony-project.com
+sfGuardUser:
+  bertier:
+    username: bertier
+    password: bertier
+    email_address:  bertier@constructions-incongrues.net
+    is_super_admin: true
+  kris:
+    username: bozoo
+    password: bozoo
+    email_address:  bozoorak@gmail.com
+    is_super_admin: true
+
+Artist:
+  benetbene:
+    id: 1
+    name: Ben et Béné
+    url: http://www.benetbene.net
+    Translation:
+      fr:
+        presentation: |
+          Ben et Béné est un duo 8bit - punk né fin 2003.
+          Ben musicien indie rock a eu de nombreuses expériences de groupe qui l'ont conduit à cette idée: "fais tout toi-même!". Muni d'un laptop, d'une gameboy, d'un micro et d'autres petites choses bricolées, il se lance donc dans la composition de chansons d'ordinateurs furieusement dansante mais décalées : une electropunk au pays des merveilles.
+          Béné, plasticienne, diffuse en live des vidéos réelles et façonne l'aspect graphique du groupe : site web - pochette de disques - stickers etc- Véritable show girl à la voix diabolique, elle est capable d'électriser n'importe quel public.
+          Persuadés que le meilleur moyen de faire de la musique c'est d'aller en jouer n'importe où, le duo écume sans relache les scènes alternatives européennes.
+          Depuis 3 ans, ils organisent en France, Belgique et Pays-Bas les soirées electro-8bit & lo-fi : We Are Not Toys. 2006/2007 est déjà une période charnière dans leur parcours avec l'animation d'une émission bimensuelle sur beradio.net le lundi soir (We are not toys).
+      en:
+        presentation: |
+          Ben et Béné is a French Electro-8bit-Punk duo.
+          In 2003, after singing and playing in a lot of punk and indie rock outfits, Ben decided to play his own music. He began composing with a cheap computer, then Gameboy and Reason.
+          Béné just qualified for art-school, joining Ben in his project. She shows her “Real Video”, a mix of TV movies and domestic video, during their concerts.
+          Their music is the meeting of many influences: punk, 8bit, electro, clubbing… Their shows are always completely crazy ! This is due to to their electric voices which give an amazing high energy to their music.
+          They are on www.beradio.net the first and third Monday of each month.
+  buskerdroid:
+    id: 2
+    name: Buskerdroid
+    url: http://www.buskerdroid.com/
+    Translation:
+      fr:
+        presentation: |
+          En cours de rédaction. Revenez bientôt !
+      en:
+        presentation: |
+          Being edited currently. Come back soon !
+
+  computertruck:
+    id: 3
+    name: Computer Truck
+    url: http://computertruck.parishq.net
+    Translation:
+      fr:
+        presentation: |
+          En cours de rédaction. Revenez bientôt !
+      en:
+        presentation: |
+          French composer, mixing chip-instruments with modern sounds. His music is intense and varied, mostly dance-oriented, hard and melodic.
+          Active members since 2002 of the Paris Hq micromusic he helped to develop the chiptune & low fi electro scene in France by organising concerts and inviting artists who never had the chance to play in Paris. That’s during these shows that he started his first gigs under the pseudo Computer Truck… 
+          During the same period he was introduced to circuit bending and started using bended toys & synth for his music.
+          His influence are varied, from retro electropop to breakcore and harsh noize. He describe his music by “riot toy party music”, a music you can dance on and wich evolve to the 80’s c64 sound to “ultime electrogrind music” (which you can only listen during the gigs because his more violent tracks have not yet been released so don’t search on his myspace or webpage…) with uncomprehensible voice on it thanks to his Halloween special fx voice transformer. A music made to unite retarded nerds and crustyPunx.
+          ps : laptop plus diverse transformed toyz and voice...
+
+  eatrabbit:
+    id: 4
+    name: Eat Rabbit
+    url: http://www.myspace.com/eatrabbit
+    Translation:
+      fr:
+        presentation: |
+          En cours de rédaction. Revenez bientôt !
+      en:
+        presentation: |
+          Being edited currently. Come back soon !
+
+  goto80:
+    id: 5
+    name: Goto80
+    url: http://www.goto80.com/
+    Translation:
+      fr:
+        presentation: |
+          Goto80 est Anders Carlsson, né en Suède. Il a grandi dans la culture underground appelée "demoscene" sur Amiga, C64, Gameboy et PC depuis le début des années 90.Assez vite il développa une relation particulière avec le commodore 64, dans lequel son cerveau et les soundchips eurent des rapports triturés et déstructurés.
+          Déjà, adolescent, il explorait des modèles musicaux s'étendant de la musique ambiante aux gabbers et autres breaks "noisy", en passant par la musique "caoutchouc salé" des années 80.
+          Après son premier album vinyle en 2001, il commence à être connu en dehors de la communauté de "geeks" et à faire des performances live.
+          Il a toujours repoussé les limites de la "chip music", travaillant avec plusieurs styles musicaux anciens et en y ajoutant des voix.
+          En 2007 il a déjà à son actif une centaine de performances live, une quarantaine d'album, la majorité en libre téléchargement.
+          On retrouve sa musique sous d'autres noms , comme le groupe lo-fi c64 guitare "Superdöner" et le duo vocal micropop "HT".
+          Exactement comme dans la "demoscene", il collabore beaucoup avec des artistes visuels, surtout Entter et Jossystem pour des concerts qui jusqu'à maintenant sont loins de la nostalgie des jeux video.
+          Goto80 continue de repousser les limites du son 8-bit et a développé jusquà maintenant une façon unique de maltraiter différents genres musicaux avec sa touche personnelle "chip music".
+      en:
+        presentation: |
+          ﻿Goto80 is Anders Carlsson, born in Sweden. He grew up in the underground computer subculture called the demoscene on the Amiga, C64, Gameboy and PC since the early 1990's. Soon he was developing a relationship especially with the Commodore 64 where his brain and the soundchips would form a buggy and dirty relationship.
+          Already in his early teens he would explore musical styles ranging from ambient through cheesy 1980's music through to gabber and noisy breaks.
+          After his first first vinyl release in 2001 he gained a reputation outside the geek communities, and also started performing live.
+          He kept expanding the boundaries of chip music to work with several retarded musical styles, and added more vocals.
+          His music has also been heard under alot of other names, such as the lo-fi c64 guitar band Superdöner and the vocal micropop duo HT.
+          Just as in the demoscene, he collaborates alot with visual artists, especially Entter and Jossystem to do live shows that at this point are far from silent nerdery and videogame nostalgia.
+          Goto80 still tries to push the boundaries of the 8-bit sound and has by now developed an unmatched skill of abusing different music genres with his personal chip-music touch.
+          In 2007 he's performed about 100 shows and made about 40 releases - most of them for free download.
+
+  guyom:
+    id: 6
+    name: "[guÿôm]"
+    url: http://www.myspace.com/guyoml
+    Translation:
+      fr:
+        presentation: |
+          [Guÿôm] aka Guillaume est avant tout un super héros.
+          Il a découvert ses super pouvoirs il y a une dizaine d'années suite à une exposition accidentelle et mortelle à des discours sur l'économie libérale. Mais grâce à une volonté inébranlable [guÿôm] s'en est sorti et a acquis des super pouvoirs lui permettant de combattre sans relâche les traders et les spéculateurs pour redresser les torts et punir les méchants. Il est équipé d'un masque de super héros fait en vibranium et de pure laine vierge de mérinos (70% minimum) qui lui permet d'avoir une supra vision grâce à un catalyseur en adamantium. Ses vêtements ont été tissés grâce à des anciens numéros de la Pravda, afin de se proteger contre les O.P.A. hostiles. Accessoirement [Guÿôm] relate ses aventures au moyen de la musique.
+          Celle ci est faite en 16 bits (deux fois mieux que le 8 bits!!) Electro barrée, techno parodique, breakcore furieux, idm?
+          Au diable les étiquettes, [Guÿôm] s'affranchit des cases trop restrictives.
+      en:
+        presentation: |
+          [Guÿôm] aka Guillaume is first of all a superhero. He discovered his super powers about ten years ago after accidental and fatal exposure to liberal economy speeches. But thanks to his unstoppable will, [guÿôm] survived and gained super powers allowing him to fight without truce against the traders and speculators to set things right and punish the evil. He is equipped with a superhero mask made of vibranium and pure virgin merinos wool (70% minimum) which grants him supra vision thanks to an adamatium catalyst. His clothes were woven from old Pravda numbers, in order to protect himself from the hostile O.P.A. Also, [Guÿôm] relates his adventures through music. The latter is 16 bits (twice as good as 8 bits!!) electro barred, techno parodic, breakcore furious, idm? Screw the labels, [Guÿôm] goes above and beyond restrictive categories.
+
+  jacquescochise:
+    id: 7
+    name: "Jacques Cochise"
+    url: http://cochise.canalblog.com/
+    Translation:
+      fr:
+        presentation: |
+          En cours de rédaction. Revenez bientôt !
+      en:
+        presentation: |
+          Being edited currently. Come back soon !
+
+  miniroc:
+    id: 8
+    name: "Mini Roc"
+    url: http://www.miniroc.com/
+    Translation:
+      fr:
+        presentation: |
+          Mini Roc, de son vrai nom Jan MichelBack est un musicien allemand faisant de la musique éléctro. 
+          Il a expérimenté différentes sonorités et styles musicaux pendant sept ans avant de découvrir la scène 8bit, en 2003.
+          Très vite, il tombe amoureux des sons lo-fi générés par les jeux vidéos des anciennes consoles, imprésionné par la simplicité technique développée par les morceaux 8bit. 
+          Il commence alors très rapidement à produire son propre panel de sons, provenants de jeux mélangés à des sonoritées modernes de l'électro et des brides de techno.
+          En 2005 , Mini Roc produit des morceaux exclusivement joués sur Gameboy et les à joués en live à travers toute l'Europe.
+      en:
+        presentation: |
+          Mini Roc is electro musician Jan Michelbach from Bochum, Germany. Experementing with electronic sounds and different music styles for about seven years, he got in touch with the 8bit-music scene in 2003.
+          Quickly he became excited by lo-fi sounds generated with classic videogame and computer consoles. Also amazed by the simplicity, nevertheless the range of technology behind 8bit tracks, he soon began producing his own combining typical game sounds with modern electro and techno elements.
+          Since beginning of 2005 Mini Roc has produced his tracks exclusively on a Gameboy and performed them on several live gigs across Europe.
+
+  pocketmaster:
+    id: 10
+    name: "Pocketmaster"
+    url: http://www.pocketmaster.ch/
+    Translation:
+      fr:
+        presentation: |
+          Pocketmaster est un projet de musique lowtech fondé en 2005 à Basel par Cube-C et Emglio Laser.
+          Ils utilisent les cartes son d'une gameboy classique et des ordinateurs 8-bit ou 16-bit, surtout celui de Commodore 64.  Bien sûr, ils utilisent aussi du matériel un peu plus moderne, avec un mélange de samples de diverses sources.  Le résultat: de l'electropop insolite ou du micropunk qui vous fera danser jusqu'à game over.
+          Trop de gribouillis et trop humoristique pour caler dans le minimal mainstream, ils piaillent et ils raillent avec un succés international.  ﻿
+      en:
+        presentation: |
+          Pocketmaster is a lowtech-music-project from Basel founded in 2005 by Cube-C and Emglio Laser.
+          They use the soundchips of classic gameboy and 8-bit or 16-bit homecomputers, especially the one of Commodore 64. Of course also newer hardware is used to some extend, mixed up with samples of various sources. As a result, freaky electropop or micropunk makes you dance until game over.
+          Too squiggly and too humorous to sink into minimal mainstream, they squeak and bleep with international success
+
+  puyopuyo:
+    id: 11
+    name: "Puyo Puyo"
+    url: http://puyopuyo.lautre.net/
+    Translation:
+      fr:
+        presentation: |
+          Après avoir été batteur new-wave dans les eighties, Pascal Lebrain s'est transformé en Puyo Puyo vers 2002.
+          Ce sont l'ordinateur et le logiciel Protools free qui lui ont fourni l'occasion d'élaborer une musique electropop lo-fi un peu déviante et déglinguée, bricolée à la maison avec un matériel minimal et un enthousiasme maximal.
+          Premier bonheur : Felix Kubin le signe sur son label Gagarin Records pour un maxi vinyl "A novel Trick item" (2004). Il enchaîne alors les concerts dans toute l'Europe - et même à Mexico ! - dansant le Puyo Puyo devant des clips qu'il confectionne lui-même toujours dans un esprit ludique et low-budget. Ce karaoke mutant à la fois fragile et énergétique devient sa marque de fabrique, ainsi que son célèbre casque de cosmodroïde.
+          De compilations en maxis il continue ensuite à produire sa musique en dilettante, ce qui ne l'empêche pas de proposer à ses idoles électroniques de remixer un de ses morceaux. C'est ainsi que Felix Kubin, Candie Hank, Brezel Goering (Stereototal), Frederik Schikowski, Groupgris (Kap Bambino) et Gangpol participent au projet : le disque sort en 2009 sous forme de picture disc chez The Brain Records, label créé pour l'occasion. A noter que The Brain est aussi une émission de radio qu'il anime et produit avec sa compagne Eva Lebrain depuis 1999, avec laquelle il organise aussi à Nantes des soirées concerts + party baptisées Superboums.
+      en:
+        presentation: |
+          After being a new wave drummer in the 80s, Pascal Lebrain became Puyo Puyo around 2002. 
+          It was the computer and the program Protools Free that allowed him to create a slightly devious and crazy lo-fi electropop music, home made with little material, but much enthusiasm. 
+          First good news: Feliz Kubin took him on his label Gagarin Records for a maxi vinyl entitled "A novel Trick Item" in 2004.. He then started a series of concerts throughout Europe - and even in Mexico - dancing the Puyo Puyo in video clips he put together himself in the same ludic and low-budjet spirit as always. This mutant karaoke, both fragile and energetic, became is trademark, along with his famous cosmodroid helmet.
+          From compilations to maxis, he went on producing his music, but still asked his electronic idols to remix one of his pieces. This is how Felix Kubin, Candie Hank, Brezel Goering (Stereototal), Frederik Schikowski, Groupgris (Kap Bambino) and Gangpol got started on the project: the album came out in 2009 as a picture disc under Brain Records, a label created for the occasion. The Brain is also a radio show hosted and produced by Lebrain and his partner Eva Lebrain since 1999, with whom he also organizes evening concerts and parties in Nantes called "Superboums".
+
+  sidabitball:
+    id: 12
+    name: "Sidabitball"
+    url: http://www.sidabitball.com/
+    Translation:
+      fr:
+        presentation: |
+          Sidabitball n'est pas un musicien, encore moins une personne.
+          C'est le nom d'un programme de musique que son géniteur, Pierre Boquet, met au point depuis déja 5 ans. Standard de fait dans les industries de la production musicale et de l'agroalimentaire, il a notamment été utilisé par Justin Guetta lors du mastering du dernier album de David Timberlake.
+          À l'heure actuelle, le programme Sidabitball fonctionne exclusivement sur gameboy, mais les rumeurs d'un portage du programme sur d'autres plateformes vont bon train.
+      en:
+        presentation: |
+          Sidabitball is not a musician, let alone a person.
+          It is the name of a music program that his creator, Pierre Boquet, has been working on for 5 years already. A standard in agroalimentary and musical industries, it has notably been used by Justin Guetta during the mastering of David Timberlake's last album.
+          Right now, the Sidabitball program works exclusively on gameboy, but rumors of carrying the program to other platforms are going around.
+
+  sputnikbooster:
+    id: 13
+    name: "Sputnik Booster"
+    url: http://www.myspace.com/sputnikbooster
+    Translation:
+      fr:
+        presentation: |
+          Sputnik Booster and the Future Posers vous offre une musique electrotrash de première classe ; produite grâce aux puces sonores légendaire des Commodore 64, Nintendo Game Boy & Atari ST.
+          Pour ce qui est des visuels, on peut compter sur une meute d'une vingtaine de robots construits de bric et de broc et dansants comme si c'était la dernière fois - probablement l'un des plus spectaculaire show de robots en live, et tout au moins le plus stupide !
+          Leur périple sur la planète terre les a jusqu'à maintenant amené à investir les pistes de danse de nombreuses villes autour du globe, comme Amsterdam, Paris, Berlin, Zurich, Bruxelles, Vienne ou New York.      en:
+        presentation: |
+          Being edited currently. Come back soon !
+
+  tomwoxom:
+    id: 14
+    name: "Tom Woxom"
+    url: http://www.tom-woxom.de
+    Translation:
+      fr:
+        presentation: |
+          Tom Woxom est un artiste electro d'Allemagne de l'Ouest très inspiré par ses expériences avec Protracker sur Amiga 500.
+          Après avoir cherché pendant des années une façon d'obtenir d'autres sonorités dans une qualité supérieure, il réalisa que ses premiers travaux étaient incontestablement plus simples, plus entrainants et nettement plus amusants à composer. Il décida donc de reprendre l'Amiga.
+          En 2008, Tom Woxom crée son propre son en combinant tracker Amiga, claviers, samples à de nouvelles techniques d'enregistrement et d'arrangement.
+          Il espère avoir l'occasion de jouer en live très prochainemment.
+        presentation: |
+          Tom Woxom is a german artist from the Ruhrarea. He plays electro music inspired from his earlier experiences running Protracker on Amiga 500.
+          After having been looking for "better sounds" and "higher fidelity" for years he discovered that his earlier works were definitely more simple and rocking, and that they were funnier to compute. That's why he decided to give the Amiga 500 another go.
+          Tom Woxom built his sound in 2008 running the Amiga combined with playing true waveforms, some little keyboards and modern technologies for arrangement and recording.
+          He's looking forward to performing live soon.
+
+  vicnet:
+    id: 15
+    name: "Vicnet"
+    url: http://www.vic-net.com/
+    Translation:
+      fr:
+        presentation: |
+          Scénographe et designer dans la vraie vie, Vincent Tordjman alias Vicnet est un artiste qualifié par Libération de "Musicien d'aéroport", tant il affectionne de composer ses musiques sur son laptop dans des lieux de passage insolites. Mr. Hadopi est son deuxième album, après un opus aux sonorités 8bit, Vic-CD et Vic-LP sur le label Deco.
+          La musique de Vicnet se caractérise par un trop plein d'influences acquises par la traversée d'univers variés, qu'il assimile et recompose avec une perception unique des sons. Toujours accompagné de ses Roland TB-303 et SH-101, un synthé en plastique à la bandoulière magique, Vicnet compose des mélodies électroniques éclectiques et toniques, hantées par des voix de robots.
+          Il a collaboré entre autres avec Joana Preiss, O.lamm, Lionel Fernandez et Erik Minkinnen de Sister Iodine. Il prépare pour 2010 la musique d'un Opéra chinois.
+        presentation: |
+          Scenographer and designer in real life, Vincent Tordjman aka Vicnet is an artist qualified as "airport musician" by Liberation, because of his habit of composing with his laptop in unusual places. Mr. Hadopi is his second album, following an 8bit filled opus, Vic-CD and Vic-LP on the label Deco.
+          Vicnet's music is characterized by an accumulation of influences acquired from a cross of various universes, which he assimilates and recomposes with a unique perception of sounds. Always with his Roland TB-303 and his SH-101, a plastic keyboard with a magic shoulder belt, Vicnet composes eclectic and tonic electronic melodies, haunted by robot voices.
+          He has collaborated among others with Joana Preiss, O. Lamm, Lionel Fernandez and Erik Minkinnen of Sister Iodine. He is currently working on music for a Chinese opera for 2010.
+
+  xerak:
+    id: 16
+    name: "Xerak"
+    url: http://www.xerak.com/
+    Translation:
+      fr:
+        presentation: |
+          Xerak est un artiste musicien et graphiste, créateur du mouvement electro trash kawaii. 
+          Il puise son inspiration dans l'univers de la bande dessinée americaine et japonaise, du pixel art, du pop art, ainsi que dans l'esthétique des films de science fiction du milieu du siècle.
+          Sa musique c’est un mélange électro acid punk toy kawaii inspiré d’un soupçon de techno japonaise du début des années 90 (Denki groove, Pierre Taki…).
+          Son graphisme est omniprésent dans ses lives et habille ses créations sonores sous forme de vidéo clips en dessins animés ou sous forme de jeux vidéo que l'on peut découvrir sur son site. 
+          Son travail est accompagné de shows musicaux, graphiques et énergiques où il incarne différents personnages plus extravagants les uns que les autres (Le Caniche Punk Rose Delux, le prêcheur du Sexfloor, Le Président Mutant, Le Pâtissier Mutant…).
+        presentation: |
+          XERAK is a designer and a musician creator of the electro trash kawaii mouvement. His universe comes from the Japanese comics the American comics the Pxl Art the Pop art and the science fiction movies of the 50’s.
+          The XERAK music is a melt of electro acid punk toy kawaii with a little bit of Japanese 90’s techno. (Denki Groove, Pierre Taki…).
+          During his lives the sound is followed by his hypnotics designs his energics video creations and his funnies video games. For the shows he plays differents characters like The Delux Punk Pink Poodle the Sexfloor Preacher the Mutant cooker the Mutant Disco Samouraï and the Mutant President.
+
+  astroboiler:
+    name: Astroboiler
+    Translation:
+      fr:
+        presentation: |
+          En cours de rédaction. Revenez bientôt !
+      en:
+        presentation: |
+          Being edited currently. Come back soon !
+
+
+
+Release:
+  dhr01:
+    id: 1
+    title: "Rock the Boulevard, Reach the Bourgeois"
+    sku: D!HR-01
+    Artist: computertruck
+    Translation:
+      fr:
+        presentation: |
+          En cours de rédaction. Revenez bientôt !
+      en:
+        presentation: |
+          Under construction. Come back soon !
+  dhr02:
+    id: 2
+    title: "Digi-Dig"
+    sku: D!HR-02
+    Artist: goto80
+    Translation:
+      fr:
+        presentation: |
+          En cours de rédaction. Revenez bientôt !
+      en:
+        presentation: |
+          Under construction. Come back soon !
+
+  dhr03:
+    id: 3
+    title: "Trip to Trip"
+    sku: D!HR-03
+    Artist: benetbene
+    Translation:
+      fr:
+        presentation: |
+          Les deux punks bleep bleep Ben et Béné accumulent les démos enregistrées dans leur cuisine depuis 2003. Pour la sortie de leur EP sur le net-label parisien Da ! Heard It Records, ils ont décidé, cette fois,d’embarquer micros, ordinateurs et gameboy dans leur voiture.
+          Quelques mois plus tard, ce déménagement improvisé donne naissance à Trip to Trip : 4 titres et 4 vidéos sur un cd/dvd retraçant leur périple realistico-imaginaire à travers 4 villes : un crime à Brest, un retour aux sources à Comines-Komen (ville franco belge de leurs origines), un documentaire sur Paris et un rêve à Boubek (ville imaginaire moitié normande, moitié nordiste) sur laquelle ils ont invité un autochtone à poser voix et texte. Fidèles à leur esprit loufoque, Trip to Trip, ce sont des mélodies pop, de larage punk, un esprit free et des sons 8bit. Un voyage bien énergiquequi vous donnera le goût des vacances...
+          L'ep est en libre téléchargement sur www.daheardit-records.net.
+      en:
+        presentation: |
+          Bleep bleep punks Ben and Béné are piling up demos recorded in their kitchen since 2003. For the release of their EP on the Parisian net-label Da ! Heard It Records, they decided this time to pack up mics, computers and gameboy in their car.
+          A few months later, this improvised move gave birth to Trip to Trip: 4 titles and 4 videos on a cd/dvd tracing their realistico-imaginary journey through 4 cities: a crime in Brest, a return to their roots in Comines-Komen (a Franco-Belgian city from their origins), a documentary on Paris and a dream in Boubek (imaginary town, half norman, half northern) on which they invited a native to set voice and text. True to their wacky minds, Trip to Trip is pop melodies, punk rage, a free spirit and 8bit sounds. An energetic voyage that will give you a taste for vacation...
+
+  dhr04:
+    id: 4
+    title: "Pixel Def"
+    sku: D!HR-04
+    Artist: xerak
+    Translation:
+      fr:
+        presentation: |
+          Xerak nous offre un concentré mutant trash kawaii survitaminé aux sonorités 8bits et techno punk directement inspiré de l’univers de la bande dessinée américaine et japonaise, du pixel art, du pop art, ainsi que dans l'esthétique des films de science fiction du milieu du siècle.
+      en:
+        presentation: |
+          Xerak offers us an over-vitamined, trash kawaii mutant concentrate with 8bit and techno punk sonorities, directly inspired by the American and Japanese comic book universe, pixel art, pop art as well as middle of the century sci-fi movie aesthetics.
+
+  dhr05:
+    id: 5
+    title: "Miniland"
+    sku: D!HR-05
+    Artist: miniroc
+    Translation:
+      fr:
+        presentation: |
+          En cours de rédaction. Revenez bientôt !
+      en:
+        presentation: |
+          Under construction. Come back soon !
+
+  dhr06:
+    id: 6
+    title: "Robot Science"
+    sku: D!HR-06
+    Artist: sputnikbooster
+    Translation:
+      fr:
+        presentation: |
+          Cette fois-ci c'est notre allemand Sputnik Booster qui vous propose son nouvel album Robot Science. Quinze morceaux Electrotrash/8-Bits produits grâce aux puces sonores des Commodore 64, Nintendo Game Boy & Atari ST. L'album est accompagné d'une pochette recto/verso réalisée par le dealeur de pixel Otro.
+          Avec son nouvel album, Sputnik Booster revisite et customise notre jeunesse avec talent. Dès les premières secondes, Robot Science fait l'effet d'un antiride psychologique, ressortez vos protège-oreilles en forme de Mickey, et vos sachets de bonbons Frizzy pazzy, Sputnik et son copilote atypique, le Commodore 64 vous offrent un road trip musical de plus de 50mn enfourché sur sa Game Boy volante.
+          Sur la route, il prend l'Atari en stop pour nous faire découvrir sa vision du Disco, sans oublier le Commodore 64, le copilote facétieux de Sputnik. Vous l'aurez compris, Robot Science est une vraie bouffée d'air frais, faisant redescendre du grenier nos vieux souvenirs d'enfants.
+      en:
+        presentation: |
+          This time, it is German born Sputnik booster who presents his new album Robot Science. Fifteen electrotrash/8bit pieces created with the sound chips of the Commodore 64, Nintendo Game Boy & Atari ST. The album comes with a front & back sleeve created by the dealer of pixel Otro.
+          With his new album, Sputnik Booster revisits and customizes our youth with talent. From the first seconds, Robot Science creates an psychological anti-wrinkler. Take out your Mickey shaped ear protectors and your Frizzy Pazzy candy bags, Sputnik along with his atypical copilot, Commodore 64 takes you on a musical road trip of over 50min on his flying Game boy.
+          On the way, he picks up the Atari to show us his vision of Disco, without forgetting the Commodore 64, Sputnik’s facetious copilot. You get it, Robot Science is a true breath of fresh air, bringing your chilhood memories down out of the attic.
+
+  dhr07:
+    id: 7
+    title: "Grotesque"
+    sku: D!HR-07
+    Artist: sidabitball
+    Translation:
+      fr:
+        presentation: |
+          En cours de rédaction. Revenez bientôt !
+      en:
+        presentation: |
+          Under construction. Come back soon !
+
+  dhr08:
+    id: 8
+    title: "The Awareness of Raving Rabbit"
+    sku: D!HR-08
+    Artist: guyom
+    Translation:
+      fr:
+        presentation: |
+          Da ! Heard It Records s'ouvre à des sonorités différentes de celles qu'on lui connaît en sortant le second album de [Guÿôm] : "The Awareness of Raving Rabbit".
+          [Guÿôm], super héros fantasque et fou furieux traverse différentes sphères musicales. Si le Petit Prince a visité sept planètes, [Guÿôm] nous en fait découvrir neuf au fil de ses morceaux. Ce voyage initiatique avec ses amis imaginaires (tels que Gros Doudou, et le fameux Billybob) lui permet de prendre conscience des absurdités qui l'entourent.
+          Pour [Guÿôm], le monde est à l'image de son univers musical : Sans Frontières. Et bien dansez maintenant !
+      en:
+        presentation: |
+          Da ! Heard It Records opens up to new sonorities with the release of [Guÿôm]’s second album: "The Awareness of Raving Rabbit".
+          [Guÿôm], capricious super hero and nut case, crosses through several musical spheres. The Little Prince may have visited seven planets, [Guÿôm] makes us discover nine through his pieces. This initiatory voyage with his imaginary friends (such as Big Doudou and the famous Billybob) allows him to become conscious of the absurdities that surround him.
+          For [Guÿôm], The world is in the image of his musical universe: without border. Well, danse now!
+
+  dhr09:
+    id: 9
+    title: "Kickstart"
+    sku: D!HR-09
+    Artist: tomwoxom
+    Translation:
+      fr:
+        presentation: |
+          Da ! Heard It Records révise ses classiques avec sa neuvième production : « Kickstart », le premier album de l'allemand Tom Woxom, compositeur passionné par l'Amiga 500.
+          À l'aide de son ordinateur fétiche, de quelques logiciels et claviers, Tom Woxom s'est créé un univers musical déroutant. Une rythmique étoffée, des basses entêtantes et puissantes, cet album entraîne l'auditeur dans de multiples ambiances. Tom Woxom ose des mariages inattendus, comme dans Sofachips où il assemble une voix soul avec une mélodie electro à la limite de la dance.
+          Découvrez un artiste innovant en téléchargeant gratuitement son album
+      en:
+        presentation: |
+          Da ! Heard It Records is going back to the classics with its ninth production: "Kickstart", the first album by Tom Woxom, a German composer fascinated by the Amiga 500.
+          With help from his treasured computer, a couple of keyboards and software, Tom Woxom built himself a puzzling musical universe. Through ornate beats and powerful heady basses, this album lures the listener into multiple atmospheres. Tom Woxom dares unusual pairings, as in Sofachips, where he combines a soul voice with an electro melody on the verge of dance music.
+          Discover this innovative artist by downloading his album for free
+
+  dhr10:
+    id: 10
+    title: "Kiss the Dolphin"
+    sku: D!HR-10
+    Artist: eatrabbit
+    Translation:
+      fr:
+        presentation: |
+          Da ! Heard It Records passe au tempo supérieur avec la dixième sortie du label : Kiss the Dolphin.
+          Kiss the Dolphin , troisième opus du lyonnais Eat Rabbit, est un album atypique, scindé en quatorze titres pour au final n'en former qu'un.
+          Véritable pièce sonore au rythme effréné, Kiss the Dolphin est un méli-mélo de beats enchaînés avec humour et intelligence par un lapin bien décidé à faire monter notre adrénaline auditive.
+          Sérigraphiée et numérotée, la pochette de l'album a été confectionnée par l'artiste lui-même, dans plusieurs versions différentes dont une phosphorescente.
+          « It's not hard to party » : téléchargez l'album electro-bootycore l'adresse suivante http://www.daheardit-records.net/fr/discographie/dhr10/ et faites en profiter vos amis."
+      en:
+        presentation: |
+          Da ! Heard It Records gets down to a higher tempo, with the tenth release of the label: Kiss The Dolphin
+          Kiss the Dolphin is the third album of the Lyon-based Eat Rabbit; atypical one, cut into fourteen tracks that finally merge into one unique sound piece. A mish-mash of beats and rythmic madness, lined up with humor and brilliance by a mad rabbit determined to boost our auditive adrenalin.
+          The album cover is silkscreened and paw-made in a limited numbered edition by the rabbit himself, in different versions, including a phosphorescent one !
+          « It's not hard to party» : download the electro-bootycore album here: http://www.daheardit-records.net/en/discography/dhr10/ and share it loud with your friends.
+  dhr11:
+    id: 11
+    title: "Disco"
+    sku: D!HR-11
+    Artist: puyopuyo
+    Translation:
+      fr:
+        presentation: |
+          Sixième production du charismatique Puyo Puyo, "Disco" s'offre comme un grand mix de références pop électroniques, qui fait la part belle à la voix et aux mélodies groovy. New new-wave allemande, Psychopolka, Turbopop ? Un peu de tout ça et un je-ne-sais-quoi Puyo Puyesque, avec son lot de mélodies dissonantes et de sonorités glitch et kitsch.
+          Beats acérés et uptempo, les treize tracks s'aventurent aussi bien dans les contrées scandées du manifeste punchy (P is for Puyo, Eddie the Head) que de la ritournelle incantatoire aux claviers eighties (Up and away, Amour), en passant par des chemins de traverse acid-disco (Grave Groove), industriel-cinématique (Robot robot, Six kings six pigs) ou encore dark-wave (I fall, tout en fureur et spleen ).
+          Chaque composition synthétise un univers sonore et narratif singulier, attachant comme une chanson d'amour qui colle en boucle au cortex et souvent énergétique à réveiller les morts. Téléchargez gratuitement les treize titres de Puyo Puyo goes disco sur http://www.daheardit-records.net/fr/discographie/dhr11/ . Et surtout… Play it loud !
+      en:
+        presentation: |
+          Disco is the sixth production from the charismatic Puyo Puyo. This latest release puts forward a rather large selection of electronic pop references, giving prominent parts to voice and groovy melodies. This album is a delicious witches brew of German new-wave, Psychopolka, Turbopop and that little Puyesque je-ne-sais-quoi, iodiosyncratic dissonant melodies, glitch and kitsch licks.
+          Sharp uptempo beats adventurously push the thirteen tracks into the punctuated fiefdom of the punchy manifesto (P is for Puyo, Eddie the Head), as well as into the incantatory refrains of 80's keyboards (Up and away, Amour), while passing through acid-disco (Grave Groove), industrial-cinematic (Robot robot, Six kings six pigs) and even dark-wave (I fall, completely berserkte, Spleen)
+          Each composition creates a sonic universe with a singular narrative, appealing like a love song earworm and often with wake-up-the-dead energy. Please download - for free! - all thirteen tracks of Puyo puyo goes disco at http://www.daheardit-records.net/en/discography/dhr11/ And no matter what.... Play it loud!
+
+  dhr12:
+    id: 12
+    title: "Mr. Hadopi"
+    sku: D!HR-12
+    Artist: vicnet
+    Translation:
+      fr:
+        presentation: |
+          Il ne faut pas se fier aux apparences. Si Vicnet semble accueillir en fanfare l'initiative du gouvernement Sarkozy, au nez et à la barbe des futures victimes de la jeune loi HADOPI 2.0, Mr Hadopi est plutôt un pamphlet contre l'hypocrisie dominante et un hommage vibrant à la libre culture. Appauvri et affamé par de longs mois à fignoler dans le froid cet album gratuit, il a réduit ses désirs - et son alimentation - à l'essentiel, et changé ses méthodes pour produire une musique plus épurée, moins digitale et plus chaleureuse: une pompe technoïde et monstrueusement funky, dansante et hyperactive. On pourrait parler d'album de la maturité mais pour Vicnet, ça serait plutôt une cure de jouvence: il décrit ses productions pour le label Da ! Heard It Records comme de la "musique de vieux pour les jeunes".
+          Réalisé entre autres avec son Roland SH-101 sauvé d'une poubelle à Monaco, sa TB-303 ainsi que diverses voix de synthèse, Vicnet nous offre un album viscéralement electro, un mélange touffu d'influences et de souvenirs qui évoque du Egyptian Lover sous MDMA. Régurgitations de traces sonores glanées en voyage dans la rue, les grands magasins, les stations-service, consommées en speed au casque, digérées et reconstituées par la vision lo-tech de Vicnet, écouter Mr. Hadopi donne l'impression d'admirer une Sagrada Familia bricolée, remontée grandeur nature en blocs de Lego.
+          Mr. Hadopi de Vicnet est illustré par son acolyte Shoboshobo, avec lequel il a crée le trio "hassid house" Moishemoishemoishele.
+          Vous pouvez télécharger Mr. Hadopi sur le site de Da ! Heard It Records : http://www.daheardit-records.net/fr/discographie/dhr12/
+          Ce téléchargement est gratuit et sans engagement, mais sous votre entière responsabilité. A vos risques et périls, vous pouvez faire de Mr Hadopi autant de copies que vous le souhaitez et le partager avec vos amis hackers.
+      en:
+        presentation: |
+          You can't judge a book by its cover. While Vicnet seems to mock future victims of the new Hadopi 2.0 law by welcoming with glee the Sarkozy government's initiative with his second album Mr. Hadopi, this album is more of a cry against an ubiquitous hypocrisy and a vibrant ode to free culture. Penniless and starving from long months of finicky work in the cold on this free album, he limited his desires-and eating habits- to the bare minimum, and changed his methods to create a purer music, less digital and warmer: a technoid and monstrously funky pump, lively and hyperactive. While you could consider it a maturity album, to Vicnet, it is more of a rejuvenation: he describes his productions for the label Da! Heard It Records as an "old man's music for young people".
+          Created, among other things, with his Roland SH-101 found in a Monaco trashcan, his TB-303 and various synthesized voices, Vicnet gives us a viscerally electro album, with mixed influences and memories evoking Egyptian Lover under MDMA. Regurgitated traces of sounds gathered from malls, gas stations and streets, taken in, digested and reconstructed by Vincent's lo-fi vision make the Mr Hadopi listening experience like admiring a Sagrada Familia rearranged and rebuilt life size with lego blocks.
+          Mr. Hadopi by Vicnet is illustrated by his acolyte Shoboshobo, with whom he created the "Hassid house" trio Moishemoishemoishele.
+          You can download Mr. Hadopi from the Da! Heard It Records website: http://www.daheardit-records.net/en/discography/dhr12/
+          The downloading of this file is free and requires no engagement, but is under your full responsibility. At your own risk, you may make as many copies of Mr Hadopi as you wish, and share it with your hacker friends.
+
+  dhr13:
+    id: 13
+    title: "Residue"
+    sku: D!HR-13
+    Artist: pocketmaster
+    Translation:
+      fr:
+        presentation: |
+          Residue est le premier album du duo suisse Pocketmaster. 
+          Apres le festif EP Tin Guerilla (2008/auto-produit), le duo formé par Cube-C et Emiglio Laser quitte les bancs de l'auto-production pour sortir son premier album signé sur un label.
+          Habitué des manipulations lowtech et samples de vieilles puces, jouets ou sources variées, Pocketmaster a choisi cette fois de nous surprendre et de conserver le son brut des carte son, sans manipulations. Une certaine image – radicale – de la pureté ! 
+          L'album est donc entièrement concocté à partir du duo de Game-boy et de Commodore 64, épicé par toutes sortes de samples et de quelques vieux synthétiseurs, le tout, enregistré en un temps record. Le résultat est un douze titres frais et joyeux, dans l'esprit des lives survitaminés du duo.
+          Les deux artistes n'hésitent cependant pas à faire dériver leurs morceaux dans plusieurs univers musicaux. En plus d'un titre remixé par Stu, et d'une reprise de Naomi Sample, Residue offre aux auditeurs une magnifique reprise du générique de la série "It Crowd". 
+          A l'opposé de son titre "Residue" qui signifie restes, ou reliques, ce premier disque est un album innovant, illustrant la volonté des deux farfelus de toujours se dépasser.
+      en:
+        presentation: |
+          Residue is Swiss duo Pocketmaster's first album. 
+          After the festive EP Tin Guerilla (2008/self-produced), the Cube-C and Emiglio Laser duo abandons self-production to release its first label album.
+          Used to lowtech manipulations and samples from old chips, toys or other various sources, this time, Pocketmaster chose to surprise us by preserving the sound card's raw sound, without manipulation. A certain image-radical-purety! 
+          The album is thus concocted entirely from the Game-boy and Commodore 64 duo, spiced up with all sorts of samples and a few old synthesizers, all recorded in a record time. The result is a twelve tracker, fresh and joyful, in the spirit of the duo's over-vitamin live performances.
+          Yet, the two artists don't hesitate to have their pieces drift through several musical universes. In addition to a track remixed my Stu, and a Naomi Sample cover, Residue offers the listeners a magnificent cover of the "It Crowd" series' credits. 
+          Contrary to its title "Residue", which means leftover, or relics, this first album is innovative and illustrates the wacky duo's wish to always surpass themselves.
+
+  dhr14:
+    id: 14
+    title: "Astroboiler"
+    sku: D!HR-14
+    Artist: astroboiler
+    Translation:
+      fr:
+        presentation: |
+          Astroboiler est un projet détonnant composé par un artiste protéiforme, présent au sein de la communauté micromusic en 1999, producteur d'Acid music aujourd’hui, avec l’album Astroboiler il nous livre un tout autre univers. Da ! Heard Record réédite aujourd’hui cet album initialement sorti sur cassette audio.
+          Cet enregistrement assez mystérieux réalisé en 1995 nous plonge à la fois dans une ambiance de musiques de films tout en nous faisant songer à la scène industrielle et expérimentale des années 80 avec des groupes comme Sutcliffe Jügend en Angleterre ou ceux de David Lee Myers aux Etats-Unis. Sa musique est aussi assimilable aux genres electronica ou IDM, abstract hip hop, parfois même breakcore, on peut y voir une certaine similitude avec la musique d’Autechre, groupe qui émerge au même moment que la création de cet album.
+          Astroboiler raconte en sept morceaux une histoire sonore singulière, avec une attention particulière portée sur le timbre. En effet, plusieurs sources sonores sont manipulées telles que celles de synthétiseurs analogiques, de sons concrets, ou bien de sons d’instruments acoustiques (remodifiés par la suite) comme vous pourrez l’entendre sur le premier morceau avec la section mélodique réalisée à la harpe.
+          C’est un album très personnel et abstrait, Il emmène son auditeur dans une atmosphère bipolaire avec toujours en trame de fond un caractère froid, austère, sombre voir parfois dérangeant qui par un savant dosage laisse émerger par instants des couleurs chaudes et apaisantes.
+          Les titres des morceaux sont purement fonctionnels (chaque titre est le minutage de chaque morceau) , reflétant le caractère minimaliste de l’album. L’album n’a d’ailleurs pas de nom, album éponyme ou bien simple volonté de ne rien vouloir évoquer, comme si rien ne devait détourner l’attention de la musique.
+          L’artwork a été réalisé par Nazzilla, qui a sû cerner l’univers de l’artiste. La pochette est tout aussi abstraite que les morceaux comme une évocation à ce qu’on s’apprête à entendre.
+          Prenez un aller direct pour un univers céleste en téléchargeant l’album http://www.daheardit-records.net/fr/discographie/dhr14/
+      en:
+        presentation: |
+          Astroboiler is an explosive project composed by a protean artiste prominent in the micromusic community in 1991. Acid music producer today, with the album Astroboiler, he delivers a whole new universe. Today, Da! Heard It Records republishes this album initially released on cassette tape.
+          This rather mysterious recording made in 1995 both plunges us in a movie soundtrack atmosphere and makes us think about the industrial and experimental scene of the 80s, with bands such as Sutcliffe Jügend in England or David Lee Myers in the US. The music is comparable to electronica or IDM, abstract hip hop, sometimes even breakcore, you can see a certain ressemblance with Autechre’s music, a band that emerged around the same time as this album came out.
+          In seven pieces, Astroboiler tells a strange sonorous story, with special attention given to timbre. Indeed, several sound sources are manipulated, such as analog synthesizers, concrete sounds, and acoustic instruments (later modified) as you will hear in the first piece with its melodic section played on the harp.
+          It is a very personal and abstract album. It takes its listeners into a bipolar atmosphere, keeping in the background a constant cold, austere, perhaps even disturbing loom, which through careful dosage, sometimes lets out warm and soothing colors.
+          The piece titles are purely functional (each title is the timing of the piece), reflecting the minimalist character of the album.
+          In fact, the album has no name, eponymous album or simple desire to evoke nothing, as if to prevent anything from becoming a distraction from the music.
+          The artwork was created by Nazzilla, who successfully captured the artist’s universe. The sleeve is just as abstract as the pieces, thus rendering what we are about to hear.
+          Get a direct ticket for a celestial universe by downloading the album: http://www.daheardit-records.net/en/discography/dhr14/
+
+  dhr15:
+    id: 15
+    title: "Robot"
+    sku: D!HR-15
+    Artist: tomwoxom
+    Translation:
+      fr:
+        presentation: |
+          Robot, un nouvel album signé Tom Woxom
+          Quinzième production de Da ! Heard It Records , Robot est le second album de l’allemand Tom Woxom. Album plus personnel et plus abouti que le précédent, l’artiste a ajouté à son univers une légère touche de game boy et Commodore64. Fervent défenseur du droit des robots, Tom Woxom leur dédie son album ainsi que la plupart de ses titres. Il millite pour un monde moins hostile aux robots, plus égalitaire.
+          Un album 8bit electro, que certains s’amuseront parfois à décrire comme “technoid”, un mot parfait pour imager son approche artistique. Comme sur son premier album Tom à utilisé des sons d'Amiga, de C64 et de DMG-01 qu'il modifie par la suite , notamment à l'aide d'un vocoder.
+          Pour ne parler que d’un seul titre Ro or nanobot, who cares ? est un parfait exemple de l'utilisation vocale que fait Tom de son Amiga 500. Accompagné de sonorités typiquement Amiga et d'une rythmique lancinante, ce titre se démarque de l'album par sa clarté et sa beauté.
+          Aidé par Low Bit Revolte en post-production, le rendu final est plus léché, plus cristallin. Robot est un album personnel et intimiste , mais Tom Woxom a tout de même laissé carte blanche à Low Bit Revolte et Rico Zerone pour le remix de deux morceaux.
+          Robot ouvre incontestablement une nouvelle page dans la musique de Tom. On y retrouve la patte reconnaissable de l’artiste, affinée, affirmée et enrichie par ses recherches artistiques.
+          Téléchargez gratuitement le nouvel album de Tom ici : http://www.daheardit-records.net/fr/discographie/dhr15/
+      en:
+        presentation: |
+          Robot, a new album by Tom Woxom
+          Robot is the 2nd album from the German artist Tom Woxom, and marks the 15th release from Da! Heard It Records. This album is more personal and more polished : the Amiga 500 specialist has added a pinch of Gameboy Classic and some Commodore 64. Dedicated robot rights activist, Tom Woxom devotes this album and most of its tracks to them. He fights for a more equal world, and freedom of the robots.
+          It’s an 8-bit electro work, which some will sometimes venture to call “technoid”, the perfect word to conceptualize his artistic approach. As in his first album, Tom used sounds generated directly by his Amiga, the C64 or the DMG-01 and modified them in several ways. Best Amigavocals through a Vocoder.
+          Just taking one track, Ro or Nanobot, who cares? is a perfect example of Tom using his Amiga 500 for vocals. Amiga sonorities arranged in throbbing rythms set this track apart by its clarity and beauty.
+          A bit of help by Low Bit Revolte during post-prodution rendered the end product more sleek and sparkly. Robot is an personal, almost intimate album but Tom Woxom nonetheless he is honored by Low Bit Revolte and Rico Zerone remixing two of his tracks.
+          Undeniably, Robot has opened a new page in Tom’s book of music. One definitely recognizes the mark of the artist, refined, affirmed and enriched by his artistic research.
+          Download this free album here : http://www.daheardit-records.net/en/discography/dhr15/
+
+  dhr16:
+    id: 16
+    title: "Gameboy Love EP"
+    sku: D!HR-16
+    Artist: buskerdroid
+    Translation:
+      fr:
+        presentation: |
+          Nouvel album du chiptuner italien et hyperactif Buskerdroid, Gameboy Love EP contient cinq morceaux intégralement composés à l’aide du logiciel LSDJ, seizième production sur le label Da ! Heard It Records celle-ci s’annonce comme un retour aux sources : la musique 8bit .
+          Buskerdroid offre à ses auditeurs une musique véritablement énergique de part son son survitaminé. L’artiste est sans concessions, il emmène sa gameboy dans ses plus étonnants retranchements en créant des morceaux hybrides mêlant 8bit et hardtek.
+          Gameboy Love EP coupe le souffle de son auditeur, c’est un EP net, court et concis laissant son auditeur dans un état de sur-excitation, d’incompréhension et de frustration. Le titre 3D(istortion) , pour ne citer que lui, submerge son auditeur dans un univers saugrenu, grâce à son rythme effréné et sa mélodie lancinante.
+          Gameboy Love EP s’adresse aux connaisseurs de la mouvance chiptune mais aussi aux amoureux d’autres mouvements electro bien plus violents.
+          N’attendez pas, téléchargez Gameboy Love EP ici dès maintenant.
+      en:
+        presentation: |
+          Gameboy Love EP is the new album by the hyperactive Italian chiptuner Buskerdroid. It comprises 5 tracks made exclusively using the LSDJ software.
+          This 16th original Da! Heard It Records production is back to the basics : 8bit music!
+          Buskerdroid offers his listeners some serious energy through his doped-up sounds. Taking no prisoners, he drags his Gameboy into the most unexpected corners by creating hybrid tracks combining 8bit and hardtek.
+          Gameboy Love EP will leave you breathless, it’s short, clear and concise, leaving the listener in an over-excited, confused and crazed state of mind. The title track 3D(istortion), to mention just one,submerge the listener into an absurd universe thanks to its relentless rythm and throbbing melody.
+          Gameboy Love EP is meant for connoisseurs of the chiptune movement, but also for fanatics of much more violent electro styles.
+          Why wait? Download Gameboy Love EP here now!
+
+  dhr17:
+    id: 17
+    title: "Vengeance"
+    sku: D!HR-17
+    Artist: jacquescochise
+    Translation:
+      fr:
+        presentation: |
+          Da ! Heard It Records est fier de vous présenter Vengeance, une dix-septième production peu commune. Placé sous le signe de la vengeance, cet album est un véritable coup de boule à l’amour.
+          Jacques Cochise, jeune artiste multi-supports ne fait pas les choses à moitié. Son album n’arrondit pas les angles, il rentre dedans : 10mn39 d’exutoire sans mesure.
+          Vengeance est avant tout un album personnel , un message à une fille . Jacques n’a pas délaissé la mélodie pour autant. Une fois de plus, il s’avère net et efficace.
+          L’artwork a été réalisé sur mesure par Satanik Mike, un graphiste lui aussi amoureux de la vengeance et mutilé de l’humour.
+          Exutoire, antidépresseur et musicalement magique, cet album séduira tout autant les mutilés de l’amour que les autres, téléchargez le sans attendre.
+      en:
+        presentation: |
+          Da ! Heard It Records is proud to present Vengeance, its 17th uncommon production. Flying the colors of vengeance, this album is a real head-butt to love.
+          Jacques Cochise does not do things half-ass : his album doesn’t smooth around the corners, he collides with them head on : 10m39s or uncut exhuberance.
+          Vengeance is first and foremost a personal album, a message to a girl. That doesn’t mean that Jacques has abandoned the concept of melody, in fact he proves himself once again as clear and effective.
+          The artwork was designed by Satanik Mike, a graphical artist also in love with vengeance and mutilated by love.

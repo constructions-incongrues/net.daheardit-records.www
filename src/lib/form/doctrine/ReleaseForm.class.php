@@ -12,6 +12,10 @@ class ReleaseForm extends BaseReleaseForm
 {
 	public function configure()
 	{
+		// Behaviors
+		unset($this['created_at'], $this['updated_at'], $this['slug']);
+
+		// i18n
 		$this->embedI18n(array('fr', 'en'));
 	}
 }

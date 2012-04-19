@@ -13,8 +13,15 @@ generator:
 
     config:
       actions: ~
-      fields:  ~
-      list:    ~
+      fields:
+        name:
+          label: Nom
+          help: Le nom de l'artiste
+        url:
+          label: URL
+          help: URL vers le site internet de l'artiste
+      list:
+        display: [=name, url]
       filter:  ~
       form:    ~
       edit:    ~
