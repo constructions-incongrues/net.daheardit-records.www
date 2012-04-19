@@ -1,6 +1,5 @@
       <div class="grid_12 artists_listing_all">
         <div class="artists_content">
-
 <?php for ($i = 0; $i < count($artists); $i++): ?>
 <?php $artist = $artists[$i] ?>
           <div class="grid_3 artists_show">
@@ -12,7 +11,6 @@
           <div class="clear"></div>
 <?php endif; ?>
 <?php endfor; ?>
-
         </div><!-- enf of artists content -->
       </div><!-- end of artists -->
 

@@ -23,6 +23,7 @@ class artistComponents extends sfComponents
 			$artists[$i]['image'] = $image;
 		}
 
+		// Pass data to view
 		$this->artists = $artists;
 	}
 }
