@@ -13,7 +13,8 @@ abstract class BaseReleaseFormFilter extends BaseFormFilterDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'title'      => new sfWidgetFormFilterInput(),
+      'title'      => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      'sku'        => new sfWidgetFormFilterInput(array('with_empty' => false)),
       'image1'     => new sfWidgetFormFilterInput(),
       'image2'     => new sfWidgetFormFilterInput(),
       'artist_id'  => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Artist'), 'add_empty' => true)),
@@ -24,6 +25,7 @@ abstract class BaseReleaseFormFilter extends BaseFormFilterDoctrine
 
     $this->setValidators(array(
       'title'      => new sfValidatorPass(array('required' => false)),
+      'sku'        => new sfValidatorPass(array('required' => false)),
       'image1'     => new sfValidatorPass(array('required' => false)),
       'image2'     => new sfValidatorPass(array('required' => false)),
       'artist_id'  => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Artist'), 'column' => 'id')),
@@ -51,6 +53,7 @@ abstract class BaseReleaseFormFilter extends BaseFormFilterDoctrine
     return array(
       'id'         => 'Number',
       'title'      => 'Text',
+      'sku'        => 'Text',
       'image1'     => 'Text',
       'image2'     => 'Text',
       'artist_id'  => 'ForeignKey',

@@ -25,7 +25,12 @@ Release:
       fields: [presentation]
     Timestampable: ~
   columns:
-    title:        string
+    title:
+      type:     string
+      notblank: true
+    sku:
+      type:     string
+      notblank: true
     presentation: string
     image1:       string
     image2:       string
