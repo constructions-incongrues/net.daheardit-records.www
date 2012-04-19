@@ -32,41 +32,7 @@
 
       <span class="header_calque"></span>
       
-      <div class="header_content">
-
-        <div class="grid_9 header_nav_1 alpha">
-          <h1 class="header_title_dhr"><a href="">da ! heard it records</a></h1>
-        </div> <!-- .grid_9 -->
-        <div class="grid_3 header_nav_2 omega" >
-          <ul class="header_nav_2_icon">
-            <li><a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/img-rss.png" alt="" /></a></li>
-            <li><a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/img-lastfm.png" alt="" /></a></li>
-            <li><a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/img-twitter.png" alt="" /></a></li>
-            <li><a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/img-vimeo.png" alt="" /></a></li>
-            <li><a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/img-google.png" alt="" /></a></li>
-            <li><a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/img-facebook.png" alt="" /></a></li>
-            <li><a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/img-panier.png" alt="" /></a></li>
-            <li class="header_nav_2_button_lang"><a href="">FR</a></li>
-            <li class="header_nav_2_button_lang"><a href="">EN</a></li>
-          </ul>
-        </div><!-- .grid_3 -->
-      </div><!-- end of header_content -->
-
-      <div class="clear"></div><!-- end of clear -->
-
-      <div class="grid_12 header_nav_3">
-        <div class="header_nav_3_content">
-          <ul>
-            <li><a href=""> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/logo/logo-dhr.png" alt="logo" /></a></li>
-            <li><a href="">Artistes</a></li>
-            <li><a href="">Discographies</a></li>
-            <li><a href="">Informations</a></li>
-            <li><a href="">Contact</a></li>
-            <li><a href="">Liens</a></li>
-            <li><a href="">Forum</a></li>
-            <li class="header_nav_3_button_donate"><a href="">&hearts; Dons &hearts; </a></li>
-          </ul>
-        </div><!-- end of header_nav_3_content -->
+<?php include_partial('main/menu') ?>
 
         <div class="grid_12 header_news_1">
           <div class="header_news_1_content">
@@ -78,7 +44,6 @@
         <div class="header_news_2_content">
 
           <div class="grid_12 header_news_2">
-
 
             <div class="grid_3 header_news_2_pictures">
               <p><a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/micronews/1.jpg" alt="" /></a></p>
@@ -179,52 +144,7 @@
 
       <div class="clear"></div> 
 
-
-
-      <div class="grid_12 releases_discography">        
-        <div class="releases_discography_listing_all">
-          <div class="grid_3 releases_discography_number releases_discography_number_first ">
-            <span class="calque_releases"> </span>
-            <span class="releases_discography_last_release">Nouveau</span>  
-
-            <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/artwork/thumb_01.png" alt=""/>
-            <h1><a href="">D!HR-17</a></h1>
-            <h2><a href="">Jacques Cochise Vengeance</a></h2>
-            <ul class="releases_discography_button">
-              <li><a href="">Ajouter Au Panier</a></li>
-            </ul>
-          </div><!-- end of grid_3 releases_discography_number  -->
-
-          <div class="grid_3 releases_discography_number ">
-            <span class="calque_releases"> </span>
-            <span class="releases_discography_last_release">Nouveau</span>  
-            <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/artwork/thumb_01.png" alt=""/>
-            <h1><a href="">D!HR-17</a></h1>
-            <h2><a href="">Jacques Cochise Vengeance</a></h2>
-            <ul class="releases_discography_button">
-              <li><a href="">+ D'infos</a></li>
-              <li><a href="">Ajouter Au Panier</a></li>
-            </ul>
-          </div><!-- end of grid_3 .releases_discography_number  -->
-
-          <div class="grid_3 releases_discography_number ">
-            <span class="calque_releases"> </span>
-            <span class="releases_discography_last_release">Nouveau</span>  
-            <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/artwork/thumb_01.png" alt=""/>
-            <h1><a href="">D!HR-17</a></h1>
-            <h2><a href="">Jacques Cochise Vengeance</a></h2>
-            <ul class="releases_discography_button">
-              <li><a href="">+ D'infos</a></li>
-              <li><a href="">Ajouter Au Panier</a></li>
-            </ul>
-          </div><!-- end of grid_3 releases_discography_number  -->
-          <div class="grid_3 releases_discography_number_default ">
-    
-          </div><!-- end of grid_3 releases_discography_number -->
-
-        </div><!-- end of releases_discography -->
-      </div><!-- end of discogs -->
-
+<?php include_component('release', 'list') ?>
 
       <div class="grid_12 artists">
         <div class="artists_content">
@@ -234,31 +154,7 @@
         </div><!-- end of category_contents --> 
       </div><!-- end of category -->
 
-      <div class="grid_12 artists_listing_all">
-        <div class="artists_content">
-          <div class="grid_3 artists_show">
-            <span class="calque_artists"> </span>
-            <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/artists/benetbene.jpg" alt="" class="artists_pictures" />
-            <p class="artists_title"><a href="">ben et béné</a></p>
-          </div><!-- end of grid_3 -->
-
-          <div class="grid_3 artists_show">
-            <span class="calque_artists"> </span>
-            <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/artists/buskerdroid.jpg" alt="" class="artists_pictures" />
-            <p class="artists_title"><a href="">buskerdroid</a></p>
-          </div><!-- end of grid_3 -->
-
-          <div class="grid_3 artists_show">
-            <span class="calque_artists"> </span>
-            <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/artists/cochise.jpg" alt="" class="artists_pictures" />
-            <p class="artists_title"><a href="">jacques cochise</a></p>
-          </div><!-- end of grid_3 -->
-
-          <div class="grid_3 artists_show_default">
-          </div><!-- end of grid_3 -->
-        </div><!-- enf of artists content -->
-      </div><!-- end of artists -->
-
+<?php include_component('artist', 'list') ?>
 
       <div class="grid_12 category_infos">
         <div class="category_content">

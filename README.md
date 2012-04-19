@@ -1,5 +1,6 @@
 RELEASE ARCHIVE STRUCTURE
 =========================
+
 ```
 /
 	tracks
@@ -12,4 +13,18 @@ RELEASE ARCHIVE STRUCTURE
 		coverN.png
 		other.png
 		foo.png
+```
+
+TEMPLATE STRUCTURE
+=========================
+```
+layout
+	main/menu
+	news/ticker
+	release/list
+		release/thumb
+	artist/list
+		artist/thumb
+	main/informations
+	main/footer
 ```
