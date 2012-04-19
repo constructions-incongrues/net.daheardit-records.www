@@ -31,6 +31,7 @@ Release:
     sku:
       type:     string
       notblank: true
+    released_at:  date
     presentation: string
     image1:       string
     image2:       string

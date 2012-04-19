@@ -20,8 +20,11 @@ generator:
         sku:
           label: sku
           help: La référence catalogue
+        released_at:
+          label: Date de sortie
+          help: La date de sortie officielle
       list:
-        display: [=sku, title, artist]
+        display: [=sku, title, artist, released_at]
       filter:  ~
       form:    ~
       edit:    ~

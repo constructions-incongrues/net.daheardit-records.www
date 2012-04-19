@@ -7,6 +7,7 @@
  * 
  * @property string $title
  * @property string $sku
+ * @property date $released_at
  * @property string $presentation
  * @property string $image1
  * @property string $image2
@@ -16,6 +17,7 @@
  * 
  * @method string              getTitle()        Returns the current record's "title" value
  * @method string              getSku()          Returns the current record's "sku" value
+ * @method date                getReleasedAt()   Returns the current record's "released_at" value
  * @method string              getPresentation() Returns the current record's "presentation" value
  * @method string              getImage1()       Returns the current record's "image1" value
  * @method string              getImage2()       Returns the current record's "image2" value
@@ -24,6 +26,7 @@
  * @method Doctrine_Collection getTrack()        Returns the current record's "Track" collection
  * @method Release             setTitle()        Sets the current record's "title" value
  * @method Release             setSku()          Sets the current record's "sku" value
+ * @method Release             setReleasedAt()   Sets the current record's "released_at" value
  * @method Release             setPresentation() Sets the current record's "presentation" value
  * @method Release             setImage1()       Sets the current record's "image1" value
  * @method Release             setImage2()       Sets the current record's "image2" value
@@ -48,6 +51,9 @@ abstract class BaseRelease extends sfDoctrineRecord
         $this->hasColumn('sku', 'string', null, array(
              'type' => 'string',
              'notblank' => true,
+             ));
+        $this->hasColumn('released_at', 'date', null, array(
+             'type' => 'date',
              ));
         $this->hasColumn('presentation', 'string', null, array(
              'type' => 'string',
