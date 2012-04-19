@@ -109,20 +109,84 @@
 
   <div class="clear"></div>
 
+<div class="clear"></div> 
+
+<div class="grid_12 open_releases"> 
+  <div class="open_releases_content">
+  
+  <div class="grid_12">
+
+    <ul class="open_releases_button">
+      <li> <a href=""> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/release_retour.png" alt="" /> </a></li>
+      <li> <a href=""> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/release_suivant.png" alt="" /> </a></li>
+      <li> <a href=""> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/release_close.png" alt="" /> </a></li>
+    </ul>
+  </div>
+  <hr /> 
+
+    <div class="grid_6 open_releases_artwork">
+    <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/artwork/cover_test.png" alt="" />
+    </div><!-- end of grid_6 -->
+    
+    <div class="grid_6 open_releases_infos">
+
+    <h1 class="open_releases_catalog">D!HR-17</h2>
+    <h2 class="open_releases_artist"><a href="">Artist</a></h2>
+    <h3 class="open_releases_album">Album Name</h3>
+
+    <ul class="open_releases_playlist">
+      <li><a href="">Title</a></li>
+      <li><a href="">Title</a></li>
+      <li><a href="">Title</a></li>
+      <li><a href="">Title</a></li>
+      <li><a href="">Title</a></li>
+      <li><a href="">Title</a></li>
+      <li><a href="">Title</a></li>
+      <li><a href="">Title</a></li>
+    </ul>
+
+    <h1 class="open_releases_title">A propos de la sortie</h1>
+    <p class="open_releases_press_text">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius est id libero condimentum congue. Sed pellentesque metus sit amet mi hendrerit eleifend. Aliquam non ipsum et lacus aliquam accumsan sed a felis. Suspendisse ac nisl nec ipsum ullamcorper fermentum sed vitae nisl. Donec vel diam odio, vehicula eleifend justo. Sed nisi tellus, eleifend at imperdiet a, pharetra vel dolor. Aliquam id elit nulla. Etiam eu dui nec dui faucibus feugiat. Integer ligula justo, semper a fermentum vitae, ullamcorper in massa. Mauris vitae sapien non purus convallis tempus. Etiam volutpat dolor sapien, vel auctor leo. Donec justo nunc, congue ac molestie eget, accumsan quis metus. Vestibulum in lacus congue ligula blandit fermentum ut at justo.
+    </p>
+
+    <h2 class="open_releases_title">Télécharger l'album gratuitement</h2>
+    <ul class="open_releases_download">
+      <li><a href="">MP3</a></li>
+      <li><a href="">OGG</a></li>
+      <li><a href="">FLAC</a></li>
+    </ul>
+
+    <h3 class="open_releases_title">Acheter l'album</h3>
+    <p class="open_releases_buy">
+      <span class="open_releases_price">15€</span>
+       <span class="open_releases_market"><a href="">Ajouter au panier</a> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/img-panier.png" alt="" /></span>
+    </p>
+    <hr>
+    <p class="open_releases_share">Partager</p>
+
+
+
+    </div><!-- end of grid_6 -->
+  </div><!-- enf of release_content -->
+  </div><!-- end of grid_12 release_open -->
       <div class="grid_12 releases">
         <div class="category_content">
           <h1>Discographies</h1>
+            <span class="triangle"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/others/triangle.png" class="triangle" /></span>
         </div><!-- end of category contents --> 
       </div><!-- end of releases -->
 
       <div class="clear"></div> 
 
 
+
       <div class="grid_12 releases_discography">        
         <div class="releases_discography_listing_all">
           <div class="grid_3 releases_discography_number releases_discography_number_first ">
             <span class="calque_releases"> </span>
-            <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/nouveau.png" alt="" class="releases_discography_last_release"/> 
+            <span class="releases_discography_last_release">Nouveau</span>  
+
             <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/artwork/thumb_01.png" alt=""/>
             <h1><a href="">D!HR-17</a></h1>
             <h2><a href="">Jacques Cochise Vengeance</a></h2>
@@ -133,7 +197,7 @@
 
           <div class="grid_3 releases_discography_number ">
             <span class="calque_releases"> </span>
-            <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/nouveau.png" alt="" class="releases_discography_last_release"/> 
+            <span class="releases_discography_last_release">Nouveau</span>  
             <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/artwork/thumb_01.png" alt=""/>
             <h1><a href="">D!HR-17</a></h1>
             <h2><a href="">Jacques Cochise Vengeance</a></h2>
@@ -145,7 +209,7 @@
 
           <div class="grid_3 releases_discography_number ">
             <span class="calque_releases"> </span>
-            <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/nouveau.png" alt="" class="releases_discography_last_release"/> 
+            <span class="releases_discography_last_release">Nouveau</span>  
             <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/artwork/thumb_01.png" alt=""/>
             <h1><a href="">D!HR-17</a></h1>
             <h2><a href="">Jacques Cochise Vengeance</a></h2>
@@ -165,6 +229,8 @@
       <div class="grid_12 artists">
         <div class="artists_content">
           <h1>Artistes</h1>
+    <span class="triangle"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/others/triangle-blanc.png" class="triangle" /></span>
+
         </div><!-- end of category_contents --> 
       </div><!-- end of category -->
 
@@ -196,7 +262,9 @@
 
       <div class="grid_12 category_infos">
         <div class="category_content">
-          <h1>Informations</h1>
+          <h1 >Informations</h1>
+                      <span class="triangle"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/others/triangle.png" class="triangle" /></span>
+
           <span class="infos_button_top"><a href="#top"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/top.png" alt="TOP"></a></span>
         </div><!-- end of category_contents -->
       </div><!-- end of category -->
