@@ -12,3 +12,6 @@ src/config/databases.yml
 src/cache/*
 src/log/*
 src/data/sql/schema.sql
+
+# ananas build toolkit
+etc/trivoallan
