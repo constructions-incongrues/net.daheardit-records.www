@@ -1,6 +1,13 @@
 # You can find more information about this file on the symfony website:
 # http://www.symfony-project.org/reference/1_4/en/10-Routing
 
+# artist
+artist_show:
+  url:   /:sf_culture/artist/:slug
+  param: { module: artist, action: show }
+  requirements:
+    sf_culture: (?:fr|en)
+
 # release
 release_show:
   url:   /:sf_culture/discography/:slug
