@@ -270,7 +270,7 @@ Release:
     id: 1
     title: "Rock the Boulevard, Reach the Bourgeois"
     sku: D!HR-01
-    slug: dhr01
+    slug: dhr-01
     Artist: computertruck
     Translation:
       fr:
@@ -283,7 +283,7 @@ Release:
     id: 2
     title: "Digi-Dig"
     sku: D!HR-02
-    slug: dhr02
+    slug: dhr-02
     Artist: goto80
     Translation:
       fr:
@@ -297,7 +297,7 @@ Release:
     id: 3
     title: "Trip to Trip"
     sku: D!HR-03
-    slug: dhr03
+    slug: dhr-03
     Artist: benetbene
     Translation:
       fr:
@@ -314,7 +314,7 @@ Release:
     id: 4
     title: "Pixel Def"
     sku: D!HR-04
-    slug: dhr04
+    slug: dhr-04
     Artist: xerak
     Translation:
       fr:
@@ -328,7 +328,7 @@ Release:
     id: 5
     title: "Miniland"
     sku: D!HR-05
-    slug: dhr05
+    slug: dhr-05
     Artist: miniroc
     Translation:
       fr:
@@ -342,7 +342,7 @@ Release:
     id: 6
     title: "Robot Science"
     sku: D!HR-06
-    slug: dhr06
+    slug: dhr-06
     Artist: sputnikbooster
     Translation:
       fr:
@@ -360,7 +360,7 @@ Release:
     id: 7
     title: "Grotesque"
     sku: D!HR-07
-    slug: dhr07
+    slug: dhr-07
     Artist: sidabitball
     Translation:
       fr:
@@ -374,7 +374,7 @@ Release:
     id: 8
     title: "The Awareness of Raving Rabbit"
     sku: D!HR-08
-    slug: dhr08
+    slug: dhr-08
     Artist: guyom
     Translation:
       fr:
@@ -392,7 +392,7 @@ Release:
     id: 9
     title: "Kickstart"
     sku: D!HR-09
-    slug: dhr09
+    slug: dhr-09
     Artist: tomwoxom
     Translation:
       fr:
@@ -410,7 +410,7 @@ Release:
     id: 10
     title: "Kiss the Dolphin"
     sku: D!HR-10
-    slug: dhr10
+    slug: dhr-10
     Artist: eatrabbit
     Translation:
       fr:
@@ -430,7 +430,7 @@ Release:
     id: 11
     title: "Disco"
     sku: D!HR-11
-    slug: dhr11
+    slug: dhr-11
     Artist: puyopuyo
     Translation:
       fr:
@@ -448,7 +448,7 @@ Release:
     id: 12
     title: "Mr. Hadopi"
     sku: D!HR-12
-    slug: dhr12
+    slug: dhr-12
     Artist: vicnet
     Translation:
       fr:
@@ -470,7 +470,7 @@ Release:
     id: 13
     title: "Residue"
     sku: D!HR-13
-    slug: dhr13
+    slug: dhr-13
     Artist: pocketmaster
     Translation:
       fr:
@@ -494,7 +494,7 @@ Release:
     id: 14
     title: "Astroboiler"
     sku: D!HR-14
-    slug: dhr14
+    slug: dhr-14
     Artist: astroboiler
     Translation:
       fr:
@@ -521,7 +521,7 @@ Release:
     id: 15
     title: "Robot"
     sku: D!HR-15
-    slug: dhr15
+    slug: dhr-15
     Artist: tomwoxom
     Translation:
       fr:
@@ -547,7 +547,7 @@ Release:
     id: 16
     title: "Gameboy Love EP"
     sku: D!HR-16
-    slug: dhr16
+    slug: dhr-16
     Artist: buskerdroid
     Translation:
       fr:
@@ -570,7 +570,7 @@ Release:
     id: 17
     title: "Vengeance"
     sku: D!HR-17
-    slug: dhr17
+    slug: dhr-17
     Artist: jacquescochise
     Translation:
       fr:

@@ -25,7 +25,7 @@
     <div class="grid_6 open_releases_infos">
 
     <h1 class="open_releases_catalog"><?php echo $release['sku'] ?></h2>
-    <h2 class="open_releases_artist"><a href=""><?php echo $release['Artist']['name'] ?></a></h2>
+    <h2 class="open_releases_artist"><a href="<?php echo url_for(sprintf('@artist_show?slug=%s#artist', $release['Artist']['slug'])) ?>"><?php echo $release['Artist']['name'] ?></a></h2>
     <h3 class="open_releases_album"><?php echo $release['title'] ?></h3>
 
     <ul class="open_releases_playlist">

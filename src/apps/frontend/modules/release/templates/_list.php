@@ -5,7 +5,7 @@
           <div class="grid_3 releases_discography_number releases_discography_number_first ">
             <span class="calque_releases"> </span>
             <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/nouveau.png" class="releases_discography_last_release"/> 
-            <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/artwork/<?php echo $release['image'] ?>" />
+            <img height="220px" width="220px" src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/artwork/<?php echo $release['image'] ?>" />
             <h1><a href="<?php echo url_for(sprintf('@release_show?slug=%s#release', $release['slug'])) ?>"><?php echo $release['sku'] ?></a></h1>
             <h2><a title="<?php echo sprintf('%s - %s', $release['Artist']['name'], $release['title']) ?>" href="<?php echo url_for(sprintf('@release_show?slug=%s#release', $release['slug'])) ?>"><?php echo truncate_text(sprintf('%s - %s', $release['Artist']['name'], $release['title']), 20) ?></a></h2>
             <ul class="releases_discography_button">
