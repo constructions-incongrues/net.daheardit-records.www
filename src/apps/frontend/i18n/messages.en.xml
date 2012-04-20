@@ -5,8 +5,8 @@
     <header/>
     <body>
       <trans-unit id="1">
-        <source>Discographies</source>
-        <target>Discographies</target>
+        <source>Discographie</source>
+        <target>Discography</target>
       </trans-unit>
       <trans-unit id="2">
         <source>Artistes</source>

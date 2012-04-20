@@ -7,9 +7,6 @@
             <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/artists/<?php echo $artist['image'] ?>" class="artists_pictures" />
             <p class="artists_title"><a href="<?php echo url_for('@artist_show?slug='.$artist['slug']) ?>"><?php echo $artist['name'] ?></a></p>
           </div><!-- end of grid_3 -->
-<?php if ($i % 4 === 0): ?>
-          <div class="clear"></div>
-<?php endif; ?>
 <?php endfor; ?>
         </div><!-- enf of artists content -->
       </div><!-- end of artists -->

@@ -25,7 +25,7 @@
           <ul id="menu-main">
             <li><a href="<?php echo url_for('@homepage') ?>"> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/logo/logo-dhr.png" alt="logo" /></a></li>
             <li><a href="#artists"><?php echo __('Artistes') ?></a></li>
-            <li><a href="#discography"><?php echo __('Discographies') ?></a></li>
+            <li><a href="#discography"><?php echo __('Discographie') ?></a></li>
             <li><a href="#informations"><?php echo __('Informations') ?></a></li>
             <li><a href="#contact"><?php echo __('Contact') ?></a></li>
             <li><a href="#links"><?php echo __('Liens') ?></a></li>

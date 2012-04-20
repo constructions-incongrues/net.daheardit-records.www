@@ -59,7 +59,7 @@
           <ul>
             <li><a href=""> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/logo/logo-dhr.png" alt="logo" /></a></li>
             <li><a href="">Artistes</a></li>
-            <li><a href="">Discographies</a></li>
+            <li><a href="">discographie</a></li>
             <li><a href="">Informations</a></li>
             <li><a href="">Contact</a></li>
             <li><a href="">Liens</a></li>
@@ -171,7 +171,7 @@
   </div><!-- end of grid_12 release_open -->
       <div class="grid_12 releases">
         <div class="category_content">
-          <h1>Discographies</h1>
+          <h1>discographie</h1>
             <span class="triangle"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/others/triangle.png" class="triangle" /></span>
         </div><!-- end of category contents --> 
       </div><!-- end of releases -->

@@ -2,7 +2,11 @@
         <div class="releases_discography_listing_all">
 <?php for ($i = 0; $i < count($releases); $i++): ?>
 <?php $release = $releases[$i] ?>
+<?php if ($i %4 === 0): ?>
           <div class="grid_3 releases_discography_number releases_discography_number_first ">
+<?php else: ?>
+          <div class="grid_3 releases_discography_number ">
+<?php endif; ?>
             <span class="calque_releases"> </span>
   <?php if ($release['is_new']): ?>
             <span class="releases_discography_last_release"><?php echo __('Nouveau') ?></span>  
@@ -14,9 +18,6 @@
               <li><a href=""><?php echo __('Ajouter au panier') ?></a></li>
             </ul>
           </div><!-- end of grid_3 releases_discography_number  -->
-  <?php if ($i % 4 == 0): ?>
-          <div class="clear"></div>
-  <?php endif; ?>
 <?php endfor; ?>
         </div><!-- end of releases_discography -->
       </div><!-- end of discogs -->
