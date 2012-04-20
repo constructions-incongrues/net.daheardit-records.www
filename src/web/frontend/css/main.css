@@ -64,7 +64,7 @@ html
 .footer_content,
 .release_content,
 .open_release, 
-.open_artists{ 
+.open_artists_content { 
   width:960px;
   margin-left: auto;
   margin-right: auto;
@@ -336,7 +336,7 @@ font-size:0.8rem;
   margin-top:10px;
 }
 
-.releases_discography_number
+.releases_discography_number,
 {
   background-color:#FFF;
 
@@ -372,14 +372,14 @@ font-size:0.8rem;
 
 
 
-.releases_discography_number h1 
+.releases_discography_number h1,.open_artists_listing_releases h1
 { 
  padding:0px 0px 0px 10px;
  font-size:15px;
  font-size:1.5rem;
 }
 
-.releases_discography_number h2 
+.releases_discography_number h2,.open_artists_listing_releases h2 
 {
  padding:0px 0px 0px 10px;  
  font-size:18px;
@@ -387,24 +387,29 @@ font-size:0.8rem;
  margin-left:-4px;
 }
 
-.releases_discography_number h1 a 
+.releases_discography_number h1 a,.open_artists_listing_releases h1 a
 {
-  color:#29ABE2;
+  color:#29ABE2!important;
+  background-color: #FFF!important;
   text-decoration:none;
   text-transform:uppercase;
   font-weight:normal;
   font-family: 'Jockey One', sans-serif;
+
 }
 
-.releases_discography_number h2 a 
+.releases_discography_number h2 a,.open_artists_listing_releases h2 a
 {
-  color:#000;
+  color:#000!important;
   text-decoration:none;
   text-transform:uppercase;
   margin-top:-5px;
   font-weight:normal;
   font-family: 'Jockey One', sans-serif;
+  background-color: #FFF!important;
 }
+
+
 
 ul.releases_discography_button 
 {
@@ -448,7 +453,7 @@ ul.releases_discography_button
     background-repeat:repeat;
   }  
 
-.artists_listing_all,.open_releases
+.artists_listing_all,.open_releases,.open_artists
 {
  background-image:url(../pics/pattern/pat-bg.png);
  background-repeat:repeat;
@@ -456,7 +461,7 @@ ul.releases_discography_button
  padding:30px 0px 100px 0px;
 }
 
-.open_releases
+.open_releases,.open_artists
 {
   margin-top:-8px;
  border-top:10px solid #000;
@@ -731,21 +736,21 @@ ul.footer_nav_1
 }
 /* OPEN RELEASE */
 
-.open_releases_content,.open_artits_content 
+.open_releases_content,.open_artists_content 
 {
   padding-top:20px;
 }
 
-h1.open_releases_catalog , h2.open_releases_artist, h3.open_releases_album, h3.open_releases_title, h1.open_releases_title, h2.open_releases_title
+h1.open_releases_catalog , h2.open_releases_artist, h3.open_releases_album, h3.open_releases_title, h1.open_releases_title, h2.open_releases_title, h1.open_artists_name, h2.open_artists_title
  {
    font-weight:normal;
    text-transform:uppercase;
    font-family: 'Jockey One', sans-serif;
-   margin-left:-10px;
 
  }
 
-h1.open_releases_title, h2.open_releases_title, h3.open_releases_title
+
+h1.open_releases_title, h2.open_releases_title, h3.open_releases_title,h2.open_artists_title
 {
   font-size:16px;
   font-size:1.6rem;
@@ -794,9 +799,9 @@ h3.open_releases_album
 .open_releases_playlist li a
 {
   background-color: #e6e6e6;
-  width:460px;
+  width:450px;
   display: block;
-  margin:3px 0px 0px -40px;
+  margin:3px 0px 0px -30px;
   padding:2px 2px 2px 5px;
 }
 
@@ -820,11 +825,10 @@ h3.open_releases_album
 
 .open_releases_artwork
 {
-  margin-right:20px;
+  margin-right:30px;
 }
 
-.open_releases_infos 
-{margin-left:10px;}
+
 .open_releases_playlist a:hover 
 
 
@@ -857,22 +861,21 @@ ul.open_releases_playlist
 {
   background-image:url("");
 }
-.open_releases_press_text
+.open_releases_press_text,.open_artists_bio
 {
   color:#666;
   margin-top:-10px; 
-  margin-left:-10px;
   padding-bottom:0px;
 }
 
-ul.open_releases_button
+ul.open_releases_button, ul.open_artists_button
 {
   margin-top:-20px;
   margin-bottom:10px;
   text-align:right;
 }
 
-.open_releases_button li 
+.open_releases_button li, .open_artists_button li 
 {
 
   background-color:transparent;
@@ -896,7 +899,6 @@ ul.open_releases_button
   font-weight:bold;
   padding:5px;
   min-height:20px;
-  margin-left:-10px;
   margin-top:-12px;
   font-size:12px;
   font-size:1.2rem;}
@@ -954,8 +956,7 @@ margin:2px; }
 
   ul.open_releases_share
   {
-    margin-left:-10px!important  ;
-    margin-bottom:-30px;
+    margin-bottom:-60px;
   }
   .open_releases_share li 
   {
@@ -1024,3 +1025,50 @@ margin:2px; }
 }
 
 
+
+/**** 
+OPEN ARTITS 
+*/
+
+h1.open_artists_name
+{
+  color:#000;
+  font-size:25px;
+  font-size:2.5em;
+}
+
+.open_artists_pictures
+{
+    margin-right:30px;
+
+}
+
+.open_artists_pictures img
+{
+  border-radius:500px;
+}
+
+
+
+.open_artists_listing_releases
+{
+  width:220px;
+  background-color:#FFF;
+}
+
+.open_artists_linked ul
+{
+  margin:-10px 0px 10px -10px;
+  padding-bottom:5px;
+}
+.open_artists_linked li 
+{
+  margin:10px;
+
+}
+.open_artists_linked ul a 
+{
+  background-color:#000;
+  padding:5px;
+  color:#FFF;
+text-decoration:none;}
