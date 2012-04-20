@@ -16,4 +16,15 @@ class ReleaseTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('Release');
     }
+
+	public function findOneBySlugAndCulture($slug, $culture = 'fr')
+	{
+		$q = $this->createQuery('r')
+			->where('r.slug = ?', $slug)
+			->leftJoin('r.Artist a')
+			->leftJoin('r.Translation t')
+			->andWhere('t.lang = ?', $culture);
+
+		return $q->fetchOne();
+	}
 }

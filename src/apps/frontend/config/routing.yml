@@ -1,7 +1,20 @@
 # You can find more information about this file on the symfony website:
 # http://www.symfony-project.org/reference/1_4/en/10-Routing
 
-# default rules
+# release
+release_show:
+  url:   /:sf_culture/discography/:slug
+  param: { module: release, action: show }
+  requirements:
+    sf_culture: (?:fr|en)
+
+# homepage
+homepage_localized:
+  url:   /:sf_culture
+  param: { module: main, action: index }
+  requirements:
+    sf_culture: (?:fr|en)
+
 homepage:
   url:   /
   param: { module: main, action: index }

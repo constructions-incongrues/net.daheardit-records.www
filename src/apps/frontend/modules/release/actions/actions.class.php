@@ -10,13 +10,15 @@
  */
 class releaseActions extends sfActions
 {
- /**
-  * Executes index action
-  *
-  * @param sfRequest $request A request object
-  */
-  public function executeIndex(sfWebRequest $request)
-  {
-    $this->forward('default', 'module');
-  }
+	public function executeShow(sfWebRequest $request)
+	{
+		// Fetch release
+		$release = Doctrine_Core::getTable('Release')->findOneBySlugAndCulture($request->getParameter('slug'), $this->getUser()->getCulture());
+		$this->forward404Unless($release);
+
+		// var_dump($release->toArray());exit;
+
+		// Pass data to view
+		$this->release = $release->toArray();
+	}
 }

@@ -10,14 +10,22 @@
  */
 class mainActions extends sfActions
 {
- /**
-  * Executes index action
-  *
-  * @param sfRequest $request A request object
-  */
- public function executeIndex(sfWebRequest $request)
- {
- 	// Select template
- 	return sfView::SUCCESS;
- }
+	/**
+ 	 * Executes index action
+	 *
+	 * @param sfRequest $request A request object
+	 */
+	public function executeIndex(sfWebRequest $request)
+	{
+		// Redirect to localized homepage
+		if (!$request->getParameter('sf_culture'))
+		{
+			$culture = $request->getPreferredCulture(array('en', 'fr'));
+			$this->getUser()->setCulture($culture);
+			$this->redirect('homepage_localized');
+		}
+
+	 	// Select template
+		return sfView::SUCCESS;
+	}
 }

@@ -33,3 +33,9 @@ all:
 
     # Enable the database manager
     use_database:           true
+
+    # i18n
+    default_culture:        fr_FR
+
+    # helpers
+    #standard_helpers: [I18N]
