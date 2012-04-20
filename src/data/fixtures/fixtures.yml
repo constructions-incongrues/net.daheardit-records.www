@@ -548,6 +548,7 @@ Release:
     title: "Gameboy Love EP"
     sku: D!HR-16
     slug: dhr-16
+    is_new: true
     Artist: buskerdroid
     Translation:
       fr:
@@ -571,6 +572,7 @@ Release:
     title: "Vengeance"
     sku: D!HR-17
     slug: dhr-17
+    is_new: true
     Artist: jacquescochise
     Translation:
       fr:

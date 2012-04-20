@@ -22,7 +22,7 @@
 
       <div class="grid_12 header_nav_3">
         <div class="header_nav_3_content">
-          <ul>
+          <ul id="menu-main">
             <li><a href="<?php echo url_for('@homepage') ?>"> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/logo/logo-dhr.png" alt="logo" /></a></li>
             <li><a href="#artists"><?php echo __('Artistes') ?></a></li>
             <li><a href="#discography"><?php echo __('Discographies') ?></a></li>

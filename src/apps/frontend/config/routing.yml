@@ -17,6 +17,12 @@ release_show:
 
 # homepage
 homepage_localized:
+  url:   /:sf_culture/
+  param: { module: main, action: index }
+  requirements:
+    sf_culture: (?:fr|en)
+
+homepage_localized_noslash:
   url:   /:sf_culture
   param: { module: main, action: index }
   requirements:

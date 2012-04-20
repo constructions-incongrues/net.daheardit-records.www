@@ -92,6 +92,11 @@
         <source>Dons</source>
         <target>Donate</target>
       </trans-unit>
+      <trans-unit id="23">
+        <source>Nouveau</source>
+        <target>New</target>
+      </trans-unit>
+
     </body>
   </file>
 </xliff>

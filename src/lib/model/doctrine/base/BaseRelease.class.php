@@ -10,6 +10,7 @@
  * @property date $released_at
  * @property string $presentation
  * @property boolean $is_public
+ * @property boolean $is_new
  * @property string $image1
  * @property string $image2
  * @property integer $artist_id
@@ -21,6 +22,7 @@
  * @method date                getReleasedAt()   Returns the current record's "released_at" value
  * @method string              getPresentation() Returns the current record's "presentation" value
  * @method boolean             getIsPublic()     Returns the current record's "is_public" value
+ * @method boolean             getIsNew()        Returns the current record's "is_new" value
  * @method string              getImage1()       Returns the current record's "image1" value
  * @method string              getImage2()       Returns the current record's "image2" value
  * @method integer             getArtistId()     Returns the current record's "artist_id" value
@@ -31,6 +33,7 @@
  * @method Release             setReleasedAt()   Sets the current record's "released_at" value
  * @method Release             setPresentation() Sets the current record's "presentation" value
  * @method Release             setIsPublic()     Sets the current record's "is_public" value
+ * @method Release             setIsNew()        Sets the current record's "is_new" value
  * @method Release             setImage1()       Sets the current record's "image1" value
  * @method Release             setImage2()       Sets the current record's "image2" value
  * @method Release             setArtistId()     Sets the current record's "artist_id" value
@@ -64,6 +67,10 @@ abstract class BaseRelease extends sfDoctrineRecord
         $this->hasColumn('is_public', 'boolean', null, array(
              'type' => 'boolean',
              'default' => 1,
+             ));
+        $this->hasColumn('is_new', 'boolean', null, array(
+             'type' => 'boolean',
+             'default' => 0,
              ));
         $this->hasColumn('image1', 'string', null, array(
              'type' => 'string',

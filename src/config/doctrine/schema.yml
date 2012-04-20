@@ -39,6 +39,9 @@ Release:
     is_public:
       type:       boolean
       default:    1
+    is_new:
+      type:       boolean
+      default:    0
     image1:       string
     image2:       string
     artist_id:    integer

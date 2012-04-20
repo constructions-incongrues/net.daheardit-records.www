@@ -244,11 +244,11 @@
 
         </div><!-- end of container 12s -->
 
-
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
 
         <!-- scripts concatenated and minified via ant build script-->
+        <script src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/js/jquery.scrollTo-1.4.2-min.js"></script>
         <script src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/js/plugins.js"></script>
         <script src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/js/script.js"></script>
         <!-- end scripts-->
