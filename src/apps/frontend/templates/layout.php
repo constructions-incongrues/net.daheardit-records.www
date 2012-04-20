@@ -80,7 +80,7 @@
 
       <div class="grid_12 releases">
         <div class="category_content">
-          <h1>Discographies</h1>
+          <h1><?php echo __('Discographies') ?></h1>
             <span class="triangle"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/others/triangle.png" class="triangle" /></span>
         </div><!-- end of category contents --> 
       </div><!-- end of releases -->
@@ -91,7 +91,7 @@
 
       <div class="grid_12 artists">
         <div class="artists_content">
-          <h1>Artistes</h1>
+          <h1><?php echo __('Artistes') ?></h1>
     <span class="triangle"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/others/triangle-blanc.png" class="triangle" /></span>
 
         </div><!-- end of category_contents --> 
@@ -101,7 +101,7 @@
 
       <div class="grid_12 category_infos">
         <div class="category_content">
-          <h1 >Informations</h1>
+          <h1 ><?php echo __('Informations') ?></h1>
                       <span class="triangle"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/others/triangle.png" class="triangle" /></span>
 
           <span class="infos_button_top"><a href="#top"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/top.png" alt="TOP"></a></span>
@@ -119,13 +119,13 @@
               En effet, chaque sortie est téléchargeable gratuitement sur le site, dans divers formats audios et disponible en CD série limitée à un prix abordable. Les morceaux sont diffusés sous une licence Creative Commons, encourageant le partage et la réutilisation des œuvres.
             </p>
 
-            <h2>Crédits</h2>
+            <h2><?php echo __('Crédits') ?></h2>
             <ul>
               <li><strong>Johan Mailleret</strong> Initiateur du projet  </li>
               <li><strong><a href="http://pastis-hosting.net">Michel Bertier</a></strong> H&eacute;bergeur dopé au pastis </li>
               <li><strong><a href="http://www.nazzilla">Nazzilla</a></strong> Cloud designer</li>
             </ul>
-            <h3>Greetings</h3>
+            <h3><?php echo __('Greetings') ?></h3>
             <p>Bimbo Tower, Danielle, Didi, Fita, Gabriel, Maryn, Momo Seb, Parasite, Paul, Valkiri, Vincent, les copains ainsi que les graphistes
             </p>
           </div><!-- end of .infos_descr -->
@@ -148,7 +148,7 @@
 
           <div class="grid_3 footer_links_1">
 
-            <h1>Links</h1>
+            <h1><?php echo __('Links') ?></h1>
             <h2>Da ! Heard It Records</h2>
 
             <ul>
@@ -197,7 +197,7 @@
           </div><!-- end of links -->
 
           <div class="grid_6 footer_contact">
-            <h1>Contact</h1>
+            <h1><?php echo __('Contact') ?></h1>
             <ul class="footer_nav_1">
               <li><a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/img-rss.png" alt="" /></a></li>
               <li><a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/img-lastfm.png" alt="" /></a></li>
@@ -207,7 +207,7 @@
               <li><a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/img-panier.png" alt="" /></a></li>
             </ul>
 
-            <h2>Adresse</h2>
+            <h2><?php echo __('Adresse') ?></h2>
             <p>
               Da ! Heard It Records <br/>
               C/O Johan Mailleret <br/>
@@ -215,25 +215,25 @@
               75015 PARIS FRANCE
             </p>
 
-            <h2>Envoyer une demo</h2>
-            <p>Merci d'envoyer vos demos par la poste o&ugrave; par e-mail &agrave; 
+            <h2><?php echo __('Envoyer une demo') ?></h2>
+            <p><?php echo __('Merci d\'envoyer vos demos par la poste ou par e-mail à') ?>
               <strong><a href="mailto:demo@daheardit-records.net">demo@daheardit-records.net</a></strong></p>
 
-              <h2>Formulaire de contact</h2>
+              <h2><?php echo __('Formulaire de contact') ?></h2>
               <form action="send.php" method="post">
 
                 <p>
-                  <label for="name">Nom</label> 
+                  <label for="name"><?php echo __('Nom') ?></label> 
                   <input type="text" name="name" id="name" size="10" class="champs_username required"/>
 
-                  <label for="mail_">Email&nbsp;</label>
+                  <label for="mail_"><?php echo __('Email') ?>&nbsp;</label>
                   <input type="text" name="mail" id="mail_" size="20" class="champs required"/></p>
 
                   <p><textarea rows="7" name="message" cols="50" class="champs required"></textarea></p>
 
                   <p><input type="submit" value="Envoyer" class="valid"/> </p>
                 </form>
-                <p id="required_legend">*   Champs Obligatoires </p>
+                <p id="required_legend">*   <?php echo __('Champs Obligatoires') ?> </p>
 
 
               </div><!-- end of .contact -->

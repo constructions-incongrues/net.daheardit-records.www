@@ -20,8 +20,17 @@ class mainActions extends sfActions
 		// Redirect to localized homepage
 		if (!$request->getParameter('sf_culture'))
 		{
-			$culture = $request->getPreferredCulture(array('en', 'fr'));
-			$this->getUser()->setCulture($culture);
+			if ($this->getUser()->isFirstRequest())
+			{
+				$culture = $request->getPreferredCulture(array('en', 'fr'));
+				$this->getUser()->setCulture($culture);
+				$this->getUser()->isFirstRequest(false);
+			}
+			else
+			{
+				$culture = $this->getUser()->getCulture();
+			}
+
 			$this->redirect('homepage_localized');
 		}
 

@@ -24,12 +24,12 @@
         <div class="header_nav_3_content">
           <ul>
             <li><a href=""> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/logo/logo-dhr.png" alt="logo" /></a></li>
-            <li><a href="">Artistes</a></li>
-            <li><a href="">Discographies</a></li>
-            <li><a href="">Informations</a></li>
-            <li><a href="">Contact</a></li>
-            <li><a href="">Liens</a></li>
-            <li><a href="">Forum</a></li>
-            <li class="header_nav_3_button_donate"><a href="">&hearts; Dons &hearts; </a></li>
+            <li><a href=""><?php echo __('Artistes') ?></a></li>
+            <li><a href=""><?php echo __('Discographies') ?></a></li>
+            <li><a href=""><?php echo __('Informations') ?></a></li>
+            <li><a href=""><?php echo __('Contact') ?></a></li>
+            <li><a href=""><?php echo __('Liens') ?></a></li>
+            <li><a href=""><?php echo __('Forum') ?></a></li>
+            <li class="header_nav_3_button_donate"><a href="">&hearts; <?php echo __('Dons') ?> &hearts; </a></li>
           </ul>
         </div><!-- end of header_nav_3_content -->

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd">
+<xliff version="1.0">
+  <file source-language="EN" target-language="en" datatype="plaintext" original="messages" date="2012-04-20T02:28:14Z" product-name="messages">
+    <header/>
+    <body>
+      <trans-unit id="1">
+        <source>Discographies</source>
+        <target>Discographies</target>
+      </trans-unit>
+      <trans-unit id="2">
+        <source>Artistes</source>
+        <target>Artists</target>
+      </trans-unit>
+      <trans-unit id="3">
+        <source>Informations</source>
+        <target>Informations</target>
+      </trans-unit>
+      <trans-unit id="4">
+        <source>Crédits</source>
+        <target>Credits</target>
+      </trans-unit>
+      <trans-unit id="5">
+        <source>Greetings</source>
+        <target>Greetings</target>
+      </trans-unit>
+      <trans-unit id="6">
+        <source>Links</source>
+        <target>Links</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Contact</source>
+        <target>Contact</target>
+      </trans-unit>
+      <trans-unit id="8">
+        <source>Adresse</source>
+        <target>Address</target>
+      </trans-unit>
+      <trans-unit id="9">
+        <source>Envoyer une demo</source>
+        <target>To send a demo</target>
+      </trans-unit>
+      <trans-unit id="10">
+        <source>Merci d'envoyer vos demos par la poste ou par e-mail à</source>
+        <target>Please send your demos by mail or email to</target>
+      </trans-unit>
+      <trans-unit id="11">
+        <source>Formulaire de contact</source>
+        <target>Contact form</target>
+      </trans-unit>
+      <trans-unit id="12">
+        <source>Nom</source>
+        <target>Name</target>
+      </trans-unit>
+      <trans-unit id="13">
+        <source>Email</source>
+        <target>Email</target>
+      </trans-unit>
+      <trans-unit id="14">
+        <source>Champs Obligatoires</source>
+        <target>Mandatory Fields</target>
+      </trans-unit>
+      <trans-unit id="15">
+        <source>À propos de la sortie</source>
+        <target>About this release</target>
+      </trans-unit>
+      <trans-unit id="16">
+        <source>Télécharger l'album gratuitement</source>
+        <target>Download the album for free</target>
+      </trans-unit>
+      <trans-unit id="17">
+        <source>Acheter l'album</source>
+        <target>Buy the album</target>
+      </trans-unit>
+      <trans-unit id="18">
+        <source>Ajouter au panier</source>
+        <target>Add to cart</target>
+      </trans-unit>
+      <trans-unit id="19">
+        <source>Partager</source>
+        <target>Share</target>
+      </trans-unit>
+      <trans-unit id="20">
+        <source>Liens</source>
+        <target>Links</target>
+      </trans-unit>
+      <trans-unit id="21">
+        <source>Forum</source>
+        <target>Forum</target>
+      </trans-unit>
+      <trans-unit id="22">
+        <source>Dons</source>
+        <target>Donate</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

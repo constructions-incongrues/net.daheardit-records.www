@@ -1,6 +1,6 @@
 <div class="grid_12 releases">
         <div class="category_content">
-          <h1>Discographies</h1>
+          <h1><?php echo $release['sku'] ?></h1>
             <span class="triangle"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/others/triangle.png" class="triangle" /></span>
         </div><!-- end of category contents --> 
       </div><!-- end of releases -->
@@ -39,25 +39,25 @@
       <li><a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/play.png" alt="play" class="open_releases_playlist_icon_play" />Title</a></li>
     </ul>
 
-    <h1 class="open_releases_title">À propos de la sortie</h1>
+    <h1 class="open_releases_title"><?php echo __('À propos de la sortie') ?></h1>
     <p class="open_releases_press_text">
 <?php echo $release['Translation'][$sf_user->getCulture()]['presentation'] ?>
     </p>
 
-    <h2 class="open_releases_title">Télécharger l'album gratuitement</h2>
+    <h2 class="open_releases_title"><?php echo __('Télécharger l\'album gratuitement') ?></h2>
     <ul class="open_releases_download">
       <li><a href="">MP3</a></li>
       <li><a href="">OGG</a></li>
       <li><a href="">FLAC</a></li>
     </ul>
 
-    <h3 class="open_releases_title">Acheter l'album</h3>
+    <h3 class="open_releases_title"><?php echo __('Acheter l\'album') ?></h3>
     <p class="open_releases_buy">
       <span class="open_releases_price">15€</span>
-      <span class="open_releases_market"><a href="">Ajouter au panier</a> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/img-panier.png" alt="" /></span>
+      <span class="open_releases_market"><a href=""><?php echo __('Ajouter au panier') ?></a> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/img-panier.png" alt="" /></span>
     </p>
     <hr>
-    <p class="open_releases_share">Partager</p>
+    <p class="open_releases_share"><?php echo __('Partager') ?></p>
 
     </div><!-- end of grid_6 -->
   </div><!-- enf of release_content -->
