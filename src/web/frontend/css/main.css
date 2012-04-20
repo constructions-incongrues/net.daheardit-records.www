@@ -336,7 +336,7 @@ font-size:0.8rem;
   margin-top:10px;
 }
 
-.releases_discography_number,
+.releases_discography_number
 {
   background-color:#FFF;
 
@@ -387,6 +387,12 @@ font-size:0.8rem;
  margin-left:-4px;
 }
 
+.open_artists_listing_releases h2 
+{
+  margin-top:-25px!important;
+   margin-left:-4px;
+
+}
 .releases_discography_number h1 a,.open_artists_listing_releases h1 a
 {
   color:#29ABE2!important;
@@ -1054,6 +1060,7 @@ h1.open_artists_name
 {
   width:220px;
   background-color:#FFF;
+  padding-bottom:10px;
 }
 
 .open_artists_linked ul
