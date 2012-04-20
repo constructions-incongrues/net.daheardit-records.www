@@ -1,0 +1,86 @@
+h2. Using Aloha Editor
+
+After reading this guide, you will be able to:
+
+* Embed Aloha Editor in your web application.
+* Make areas of your web page editable with Aloha Editor
+
+endprologue.
+
+h3. Prerequisites
+
+For a start, let's assume that you have a simple web page, you want to make editable with Aloha Editor and you already have placed Aloha Editor on your web server.
+
+This is your web page:
+
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<title>Getting Started with Aloha Editor</title>
+	<link rel="stylesheet" href="index.css" type="text/css">
+</head>
+<body>
+	<div id="main">
+		<div id="content"><p>Getting started with Aloha Editor!</p></div>
+	</div>
+</body>
+</html>
+
+Aloha Editor is located in the path +/javascripts+ of your web server.
+
+h3. Embed Aloha Editor
+
+To embed Aloha Editor, you just need to load a single css +/javascripts/aloha/css/aloha.css+ and a javascript file +/javascripts/aloha/lib/aloha.js+ into the *head* section of your page.
+
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<title>Getting Started with Aloha Editor</title>
+	<link rel="stylesheet" href="index.css" type="text/css">
+	<!-- Load Aloha Editor css and js -->
+	<link rel="stylesheet" href="/javascripts/aloha/css/aloha.css" type="text/css">
+	<script src="/javascripts/aloha/lib/aloha.js"
+	  data-aloha-plugins="common/format,common/highlighteditables,common/link"></script>
+</head>
+<body>
+	<div id="main">
+		<div id="content"><p>Getting started with Aloha Editor!</p></div>
+	</div>
+</body>
+</html>
+
+h3. Create editables
+
+An editable is an HTML element that should be editable by Aloha Editor. You can specify the element with a jQuery selector, and simply call +.aloha+ for it.
+
+When we want to make the div with ID *content* editable, we add the script
+
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<title>Getting Started with Aloha Editor</title>
+	<link rel="stylesheet" href="index.css" type="text/css">
+	<!-- Load Aloha Editor css and js -->
+	<link rel="stylesheet" href="/javascripts/aloha/css/aloha.css" type="text/css">
+	<script src="/javascripts/aloha/lib/aloha.js"
+	  data-aloha-plugins="common/format,common/highlighteditables,common/link"></script>
+</head>
+<body>
+	<div id="main">
+		<div id="content"><p>Getting started with Aloha Editor!</p></div>
+	</div>
+	<script type="text/javascript">
+		Aloha.ready( function() {
+			Aloha.jQuery('#content').aloha();
+		});
+	</script>
+</body>
+</html>
+
+NOTE: In this example, the HTML element is made editable in the event handler of the +Aloha.ready+ event. This ensures that aloha is fully loaded, before actually using it and is therefore the recommended way of using Aloha Editor.
+
+h3. Further reading
+
+* Read the section "Configure Aloha Editor":configure_aloha.html to learn how to configure the behavior of Aloha Editor
+* Read more about "Aloha and jQuery":aloha_jquery.html
+* Learn about "Plugins":plugins.html

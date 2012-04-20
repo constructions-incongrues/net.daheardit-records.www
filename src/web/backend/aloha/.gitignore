@@ -1,0 +1,9 @@
+.project
+.settings
+.DS_Store
+target
+doc/guides/staging
+*.js~
+*.orig
+*.swp
+.externalToolBuilders
