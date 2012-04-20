@@ -762,9 +762,9 @@ h1.open_releases_title, h2.open_releases_title, h3.open_releases_title,h2.open_a
   font-size:1.6rem;
 }
 
-h3.open_releases_title
+h2.open_releases_title
 {
-  margin-top:20px;
+  margin-top:10px;
 }
 h1.open_releases_catalog
 {
@@ -880,6 +880,7 @@ ul.open_releases_button, ul.open_artists_button
   margin-bottom:10px;
   text-align:right;
 }
+
 
 .open_releases_button li, .open_artists_button li 
 {
