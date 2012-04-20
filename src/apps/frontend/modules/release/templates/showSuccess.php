@@ -1,3 +1,7 @@
+
+<!-- @see https://github.com/defunkt/jquery-pjax -->
+<title><?php echo $sf_response->getTitle() ?></title>
+
 <div class="grid_12 releases">
         <div class="category_content">
           <h1 id="release"><?php echo $release['sku'] ?></h1>
@@ -11,15 +15,19 @@
   <div class="grid_12">
 
     <ul class="open_releases_button">
-      <li> <a href=""> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/release_retour.png" alt="" /> </a></li>
-      <li> <a href=""> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/release_suivant.png" alt="" /> </a></li>
-      <li> <a href=""> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/release_close.png" alt="" /> </a></li>
+<?php if ($previous): ?>
+      <li> <a href="<?php echo url_for('@release_show?slug=dhr-'.$previous.'#release') ?>" data-pjax="#content_async"> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/release_retour.png" alt="" /> </a></li>
+<?php endif; ?>
+<?php if ($next): ?>
+      <li> <a href="<?php echo url_for('@release_show?slug=dhr-'.$next.'#release') ?>" data-pjax="#content_async"> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/release_suivant.png" alt="" /> </a></li>
+<?php endif; ?>
+      <li> <a href="" data-close="#content_async"> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/release_close.png" alt="" /> </a></li>
     </ul>
   </div>
   <hr /> 
 
     <div class="grid_6 open_releases_artwork">
-    <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/artwork/cover_test.png" alt="" />
+    <img width="400px" src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/artwork/<?php echo $release['slug'] ?>.png" alt="" />
     </div><!-- end of grid_6 -->
     
     <div class="grid_6 open_releases_infos">

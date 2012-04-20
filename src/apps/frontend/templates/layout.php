@@ -76,7 +76,9 @@
 
 <div class="clear"></div> 
 
+<span id="content_async">
 <?php echo $sf_content ?>
+</span>
 
       <div class="grid_12 releases">
         <div class="category_content">
@@ -249,6 +251,7 @@
 
         <!-- scripts concatenated and minified via ant build script-->
         <script src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/js/jquery.scrollTo-1.4.2-min.js"></script>
+        <script src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/js/jquery.pjax.js"></script>
         <script src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/js/plugins.js"></script>
         <script src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/js/script.js"></script>
         <!-- end scripts-->
