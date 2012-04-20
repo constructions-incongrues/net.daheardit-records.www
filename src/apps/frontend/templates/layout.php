@@ -74,8 +74,13 @@
 
   <div class="clear"></div>
 
-<div class="clear"></div> 
-
+ <div class="grid_12 releases">
+        <div class="category_content">
+          <h1>Discographies</h1>
+            <span class="triangle"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/others/triangle.png" class="triangle" /></span>
+        </div><!-- end of category contents --> 
+      </div><!-- end of releases -->
+      
 <div class="grid_12 open_releases"> 
   <div class="open_releases_content">
   
@@ -128,9 +133,17 @@
        <span class="open_releases_market"><a href="">Ajouter au panier</a> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/img-panier.png" alt="" /></span>
     </p>
     <hr>
-    <p class="open_releases_share">Partager</p>
+     
 
-
+    <ul class="open_releases_share">
+    <li>Partager : </li>
+              <li><a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/img-rss.png" alt="" /></a></li>
+              <li><a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/img-lastfm.png" alt="" /></a></li>
+              <li><a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/img-twitter.png" alt="" /></a></li>
+              <li><a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/img-vimeo.png" alt="" /></a></li>
+              <li><a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/img-facebook.png" alt="" /></a></li>
+              <li><a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/img-panier.png" alt="" /></a></li>
+            </ul>
 
     </div><!-- end of grid_6 -->
   </div><!-- enf of release_content -->

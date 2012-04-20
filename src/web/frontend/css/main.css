@@ -448,13 +448,19 @@ ul.releases_discography_button
     background-repeat:repeat;
   }  
 
-.artists_listing_all
+.artists_listing_all,.open_releases
 {
  background-image:url(../pics/pattern/pat-bg.png);
  background-repeat:repeat;
  background-color:#f2f2f2;
  padding:30px 0px 100px 0px;
 }
+
+.open_releases
+{
+  margin-top:-8px;
+ border-top:10px solid #000;
+background-color:#FFF;}
 
 .artists_pictures
  {
@@ -861,7 +867,7 @@ ul.open_releases_playlist
 
 ul.open_releases_button
 {
-  margin-top:-10px;
+  margin-top:-20px;
   margin-bottom:10px;
   text-align:right;
 }
@@ -944,13 +950,24 @@ margin:2px; }
         padding:5px;
  }
 
-  .open_releases_share
+
+
+  ul.open_releases_share
   {
-    color:#666;
+    margin-left:-10px!important  ;
+    margin-bottom:-30px;
+  }
+  .open_releases_share li 
+  {
+    display: inline;
+    margin:2px 2px 2px 2px;
     font-size:12px;
     font-size:1.2rem;
-  }
+            color:#666!important;
+            font-weight:bold;
 
+
+  }
 /* A TRIER */
 
  .releases,.category_infos  
