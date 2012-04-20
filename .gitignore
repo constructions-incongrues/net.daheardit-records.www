@@ -17,3 +17,4 @@ src/data/sql/schema.sql
 # ananas build toolkit
 etc/trivoallan
 etc/bozoo
+etc/prod
