@@ -5,13 +5,16 @@ $(document).ready(function () {
 	});
 
 	$('a[data-pjax]').pjax();
-	$('#content_async').on('pjax:end', function () {
-		$('#content_async').show();
-		$.scrollTo($('#release'));	
+	$('#content_async').on('pjax:start', function () {
+		$.scrollTo($('#discography'), 1000);	
 	});
-
+	$('#content_async').on('pjax:end', function () {
+		$('#content_async').slideDown('slow', function () {
+			$.scrollTo($('#release'));
+		});
+	});
 	$('a[data-close]').live('click', function () {
-		$($(this).data('close')).hide();
+		$($(this).data('close')).slideUp('slow');
 		return false;
-	})
+	});
 });

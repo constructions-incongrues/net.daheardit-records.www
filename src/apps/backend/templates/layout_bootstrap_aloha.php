@@ -33,7 +33,6 @@ Aloha.ready( function() {
     <div class="container-fluid">
       <?php echo $sf_content ?>
     </div>
-
     
     <script>$(function () { prettyPrint() })</script>
 

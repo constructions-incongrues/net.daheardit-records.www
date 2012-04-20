@@ -1,0 +1,47 @@
+# Authentication
+Order deny,allow
+Deny from all
+Allow from 127.0.0.1
+AuthType Basic
+AuthName "Da ! Heard It Records"
+AuthUserFile @dhr.path.root@/web/.htpasswd
+Require valid-user
+Satisfy any
+
+# Apache configuration
+Options +FollowSymLinks
+
+# Rewriting
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # uncomment the following line, if you are having trouble
+  # getting no_script_name to work
+  #RewriteBase /
+
+  # we skip all files with .something
+  #RewriteCond %{REQUEST_URI} \..+$
+  #RewriteCond %{REQUEST_URI} !\.html$
+  #RewriteRule .* - [L]
+
+  # we check if the .html version is here (caching)
+  RewriteRule ^$ index.html [QSA]
+  RewriteRule ^([^.]+)$ $1.html [QSA]
+  RewriteCond %{REQUEST_FILENAME} !-f
+
+  # no, so we redirect to our front web controller
+  RewriteRule ^(.*)$ index.php [QSA,L]
+</IfModule>
+
+# mod_pagespeed
+<IfModule pagespeed_module>
+  ModPagespeed off
+</IfModule>
+
+# New Relic
+php_value newrelic.appname "DHR"
+php_value newrelic.error_collector.record_database_errors 1
+php_value newrelic.transaction_tracer.top100 1
+php_value newrelic.transaction_tracer.explain_enabled 1
+php_value newrelic.capture_params 1
+php_value newrelic.framework symfony
