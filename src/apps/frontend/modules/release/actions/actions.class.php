@@ -16,9 +16,11 @@ class releaseActions extends sfActions
 		$release = Doctrine_Core::getTable('Release')->findOneBySlugAndCulture($request->getParameter('slug'), $this->getUser()->getCulture());
 		$this->forward404Unless($release);
 
-		// var_dump($release->toArray());exit;
+		// Setup metadata
+		$releaseArray = $release->toArray();
+		$this->getResponse()->setTitle(sprintf('[%s] %s - %s', $releaseArray['sku'], $releaseArray['Artist']['name'], $releaseArray['title']));
 
 		// Pass data to view
-		$this->release = $release->toArray();
+		$this->release = $releaseArray;
 	}
 }

@@ -11,7 +11,8 @@ class artistComponents extends sfComponents
 	{
 		// Fetch artists
 		$q = Doctrine_Query::create()
-			->from('Artist');
+			->from('Artist a')
+			->where('a.is_public = 1');
 		$artists = $q->execute(array(), Doctrine_Core::HYDRATE_ARRAY);
 
 		// Fixup images

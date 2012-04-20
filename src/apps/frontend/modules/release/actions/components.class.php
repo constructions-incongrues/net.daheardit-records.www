@@ -12,6 +12,7 @@ class releaseComponents extends sfComponents
 		// Fetch releases
 		$q = Doctrine_Query::create()
 			->from('Release r')
+			->where('r.is_public = 1')
 			->innerJoin('r.Artist a')
 			->orderBy('r.sku desc');
 		$releases = $q->execute(array(), Doctrine_Core::HYDRATE_ARRAY);

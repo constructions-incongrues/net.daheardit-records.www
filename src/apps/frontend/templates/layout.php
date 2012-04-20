@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> -->
 
-  <title>Da ! Heard It Records</title>
+  <title><?php echo $sf_response->getTitle() ?> | Da ! Heard It Records</title>
   <meta name="description" content="">
   <meta name="author" content="">
 
@@ -80,7 +80,7 @@
 
       <div class="grid_12 releases">
         <div class="category_content">
-          <h1><?php echo __('Discographies') ?></h1>
+          <h1 id="discography"><?php echo __('Discographies') ?></h1>
             <span class="triangle"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/others/triangle.png" class="triangle" /></span>
         </div><!-- end of category contents --> 
       </div><!-- end of releases -->
@@ -91,7 +91,7 @@
 
       <div class="grid_12 artists">
         <div class="artists_content">
-          <h1><?php echo __('Artistes') ?></h1>
+          <h1 id="artists"><?php echo __('Artistes') ?></h1>
     <span class="triangle"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/others/triangle-blanc.png" class="triangle" /></span>
 
         </div><!-- end of category_contents --> 
@@ -101,7 +101,7 @@
 
       <div class="grid_12 category_infos">
         <div class="category_content">
-          <h1 ><?php echo __('Informations') ?></h1>
+          <h1 id="informations"><?php echo __('Informations') ?></h1>
                       <span class="triangle"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/others/triangle.png" class="triangle" /></span>
 
           <span class="infos_button_top"><a href="#top"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/top.png" alt="TOP"></a></span>
@@ -148,7 +148,7 @@
 
           <div class="grid_3 footer_links_1">
 
-            <h1><?php echo __('Links') ?></h1>
+            <h1 id="links"><?php echo __('Links') ?></h1>
             <h2>Da ! Heard It Records</h2>
 
             <ul>
@@ -161,7 +161,7 @@
               <li><a href="">Twitter</a></li>
             </ul>
 
-            <h2>Label</h2>
+            <h2>Labels</h2>
 
             <ul>
               <li><a href="">8bitpeoples</a></li>
@@ -197,7 +197,7 @@
           </div><!-- end of links -->
 
           <div class="grid_6 footer_contact">
-            <h1><?php echo __('Contact') ?></h1>
+            <h1 id="contact"><?php echo __('Contact') ?></h1>
             <ul class="footer_nav_1">
               <li><a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/img-rss.png" alt="" /></a></li>
               <li><a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/img-lastfm.png" alt="" /></a></li>
