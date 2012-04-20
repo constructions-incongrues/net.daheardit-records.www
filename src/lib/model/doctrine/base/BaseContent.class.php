@@ -8,19 +8,22 @@
  * @property string $informations
  * @property string $credits
  * @property string $greetings
- * @property string $video
- * @property string $links
+ * @property string $links1
+ * @property string $links2
+ * @property string $footer_video
  * 
  * @method string  getInformations() Returns the current record's "informations" value
  * @method string  getCredits()      Returns the current record's "credits" value
  * @method string  getGreetings()    Returns the current record's "greetings" value
- * @method string  getVideo()        Returns the current record's "video" value
- * @method string  getLinks()        Returns the current record's "links" value
+ * @method string  getLinks1()       Returns the current record's "links1" value
+ * @method string  getLinks2()       Returns the current record's "links2" value
+ * @method string  getFooterVideo()  Returns the current record's "footer_video" value
  * @method Content setInformations() Sets the current record's "informations" value
  * @method Content setCredits()      Sets the current record's "credits" value
  * @method Content setGreetings()    Sets the current record's "greetings" value
- * @method Content setVideo()        Sets the current record's "video" value
- * @method Content setLinks()        Sets the current record's "links" value
+ * @method Content setLinks1()       Sets the current record's "links1" value
+ * @method Content setLinks2()       Sets the current record's "links2" value
+ * @method Content setFooterVideo()  Sets the current record's "footer_video" value
  * 
  * @package    net.daheardit-records.www
  * @subpackage model
@@ -41,10 +44,13 @@ abstract class BaseContent extends sfDoctrineRecord
         $this->hasColumn('greetings', 'string', null, array(
              'type' => 'string',
              ));
-        $this->hasColumn('video', 'string', null, array(
+        $this->hasColumn('links1', 'string', null, array(
              'type' => 'string',
              ));
-        $this->hasColumn('links', 'string', null, array(
+        $this->hasColumn('links2', 'string', null, array(
+             'type' => 'string',
+             ));
+        $this->hasColumn('footer_video', 'string', null, array(
              'type' => 'string',
              ));
     }

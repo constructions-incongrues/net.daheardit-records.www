@@ -116,25 +116,20 @@
 
           <div class="grid_7 infos_descr">
             <p>
-              Créé en 2006, Da ! Heard it Records est un net-label flirtant avec les musiques Toyz-Pop, Electro Trash, Chiptune, Breakcore, Techno Parodique, Electro Punk, Acid, etc, avec un goût prononcé pour le 8-bit et le pixel art.
-              Label éclectique, il a pour ambition de promouvoir de nouveaux artistes et des nouvelles musiques. D!HR est un label ouvert au monde, tant aux artistes professionnels qu'aux amateurs, accessible à tout auditeur de par sa position engagée sur la culture libre et gratuite et par la nature de ses publications.
-              En effet, chaque sortie est téléchargeable gratuitement sur le site, dans divers formats audios et disponible en CD série limitée à un prix abordable. Les morceaux sont diffusés sous une licence Creative Commons, encourageant le partage et la réutilisation des œuvres.
+            <?php include_component('content', 'show', array('block' => 'informations')) ?>
             </p>
 
             <h2><?php echo __('Crédits') ?></h2>
-            <ul>
-              <li><strong>Johan Mailleret</strong> Initiateur du projet  </li>
-              <li><strong><a href="http://pastis-hosting.net">Michel Bertier</a></strong> H&eacute;bergeur dopé au pastis </li>
-              <li><strong><a href="http://www.nazzilla">Nazzilla</a></strong> Cloud designer</li>
-            </ul>
+            <?php include_component('content', 'show', array('block' => 'credits')) ?>
+
             <h3><?php echo __('Greetings') ?></h3>
-            <p>Bimbo Tower, Danielle, Didi, Fita, Gabriel, Maryn, Momo Seb, Parasite, Paul, Valkiri, Vincent, les copains ainsi que les graphistes
+            <p>
+            <?php include_component('content', 'show', array('block' => 'greetings')) ?>
             </p>
           </div><!-- end of .infos_descr -->
 
           <div class="grid_5 infos_vids">
-            <iframe src="http://player.vimeo.com/video/5997914?byline=0&amp;portrait=0" width="350" height="300" class="infos_vids_embed" frameborder="0"></iframe>
-
+            <?php include_component('content', 'show', array('block' => 'footer_video')) ?>
           </div><!-- end of infos_vids -->
         </div><!-- end of .infos-->
       </div><!-- end of .infos content -->
@@ -151,50 +146,14 @@
           <div class="grid_3 footer_links_1">
 
             <h1 id="links"><?php echo __('Links') ?></h1>
-            <h2>Da ! Heard It Records</h2>
-
-            <ul>
-              <li><a href="">Dogmazic</a></li>
-              <li><a href="">Discogs</a></li>
-              <li><a href="">Facebook</a></li>
-              <li><a href="">Free Music Archives</a></li>
-              <li><a href="">Google +</a></li>
-              <li><a href="">Last.fm</a></li>
-              <li><a href="">Twitter</a></li>
-            </ul>
-
-            <h2>Labels</h2>
-
-            <ul>
-              <li><a href="">8bitpeoples</a></li>
-              <li><a href="">Ego Twister </a></li>
-              <li><a href="">Proot Records</a></li>
-
-            </ul>
+            
+            <?php include_component('content', 'show', array('block' => 'links1')) ?>
 
           </div><!-- end of links -->
 
           <div class="grid_3 footer_links_2">
 
-            <h2>Radios</h2>
-
-            <ul>
-              <li><a href="">Mazemod</a></li>
-              <li><a href="">Musique Approximative</a></li>
-              <li><a href="">Ouïedire</a></li>
-              <li><a href="">The Brain</a></li>
-              <li><a href="">Radio Clash</a></li>
-              <li><a href="">We Are Not Toys</a></li>
-            </ul>
-
-            <h2>Friends</h2>
-
-            <ul>
-              <li><a href="">otro</a></li>
-              <li><a href="">Mobyone</a></li>
-              <li><a href="">Nazilla </a></li>
-              <li><a href="">Superpromotion </a></li>
-            </ul>
+          <?php include_component('content', 'show', array('block' => 'links2')) ?>
 
           </div><!-- end of links -->
 
@@ -210,6 +169,7 @@
             </ul>
 
             <h2><?php echo __('Adresse') ?></h2>
+
             <p>
               Da ! Heard It Records <br/>
               C/O Johan Mailleret <br/>

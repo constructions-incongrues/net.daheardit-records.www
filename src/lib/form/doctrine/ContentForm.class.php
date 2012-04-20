@@ -12,6 +12,9 @@ class ContentForm extends BaseContentForm
 {
 	public function configure()
 	{
+		// behaviors
+		unset($this['created_at'], $this['updated_at']);
+
 		$this->embedI18n(array('fr', 'en'));
 	}
 }

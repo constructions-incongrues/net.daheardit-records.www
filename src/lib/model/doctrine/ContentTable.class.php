@@ -16,4 +16,13 @@ class ContentTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('Content');
     }
+
+	public function findWithTranslations($culture = 'fr')
+	{
+		$q = $this->createQuery('c')
+			->leftJoin('c.Translation t')
+			->andWhere('t.lang = ?', $culture);
+
+		return $q->fetchOne();
+	}
 }

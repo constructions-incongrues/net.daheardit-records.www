@@ -15,19 +15,21 @@ abstract class BaseContentForm extends BaseFormDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'id'         => new sfWidgetFormInputHidden(),
-      'video'      => new sfWidgetFormTextarea(),
-      'links'      => new sfWidgetFormTextarea(),
-      'created_at' => new sfWidgetFormDateTime(),
-      'updated_at' => new sfWidgetFormDateTime(),
+      'id'           => new sfWidgetFormInputHidden(),
+      'links1'       => new sfWidgetFormTextarea(),
+      'links2'       => new sfWidgetFormTextarea(),
+      'footer_video' => new sfWidgetFormTextarea(),
+      'created_at'   => new sfWidgetFormDateTime(),
+      'updated_at'   => new sfWidgetFormDateTime(),
     ));
 
     $this->setValidators(array(
-      'id'         => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
-      'video'      => new sfValidatorString(array('required' => false)),
-      'links'      => new sfValidatorString(array('required' => false)),
-      'created_at' => new sfValidatorDateTime(),
-      'updated_at' => new sfValidatorDateTime(),
+      'id'           => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
+      'links1'       => new sfValidatorString(array('required' => false)),
+      'links2'       => new sfValidatorString(array('required' => false)),
+      'footer_video' => new sfValidatorString(array('required' => false)),
+      'created_at'   => new sfValidatorDateTime(),
+      'updated_at'   => new sfValidatorDateTime(),
     ));
 
     $this->widgetSchema->setNameFormat('content[%s]');
