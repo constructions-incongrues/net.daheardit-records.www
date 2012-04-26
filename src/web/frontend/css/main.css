@@ -17,6 +17,8 @@
    margin-left:-5px;
     background-image:url(../pics/pattern/pat-bg.png);
  background-repeat:repeat;
+ background-color:#000;
+ color:#FFF;
  }
  /* TYPO */
 
@@ -70,6 +72,10 @@ html
   margin-right: auto;
 } 
 
+.releases
+{
+  margin-top:-40px!important;
+}
 /* CALQUES */
 
 .header_calque
@@ -307,12 +313,15 @@ font-size:0.8rem;
 
 .header_news_2_descr p
 {
+  font-style:;
   color:#FFF;
   margin:0px 10px 0px 10px;
   padding:0px 10px 0px 10px;
-  font-size:13px;
-  font-size:1.3rem;
+  font-size:12px;
+  font-size:1.2rem;
   text-align:justify;
+  font-family: arial, verdana, sans-serif; 
+
 }
 
 /* DISCOGS */
@@ -332,14 +341,15 @@ font-size:0.8rem;
   background-image:url(../pics/releases/img-release-default.png);
   height:290px;
   width:220px;
-  margin-left:10px;
-  margin-top:10px;
+  margin-left:15px;
+  margin-top:15px;
 }
 
 .releases_discography_number
 {
   background-color:#FFF;
-
+  margin-left:15px;
+  margin-top:15px;
 }
 
 .releases_discography_number_first
@@ -467,6 +477,12 @@ ul.releases_discography_button
  padding:30px 0px 100px 0px;
 }
 
+.category_infos
+{
+ background-image:url(../pics/pattern/pat-bg.png);
+ background-repeat:repeat;
+ background-color:#f2f2f2;
+}
 .open_releases,.open_artists
 {
   margin-top:-8px;
@@ -477,6 +493,7 @@ background-color:#FFF;}
  {
  border-radius:200px;
  margin-top:10px;
+
 }
 
 img.artists_pictures
@@ -492,18 +509,32 @@ img.artists_pictures
   text-decoration:none; 
 }
 
-p.artists_title 
+/*.artists_title 
 {
   font-weight:lighter;
   font-family: 'Jockey One', sans-serif;
-  margin-top:-140px;
-  margin-left:17px;
-  padding-top:5px;
-  transform:rotate(-55deg);
+float:right;
   font-size:19px;
   font-size:1.9rem;
+  display: inline;
+  background-color:#000;
+  padding:5px;  
 }
 
+*/
+.artists_title 
+{
+  position: absolute;
+  font-weight:lighter;
+  font-family: 'Jockey One', sans-serif;
+  top:103px;
+  font-size:19px;
+  font-size:1.9rem;
+    background-color:#000;
+  padding:3px 9px 3px 3px;  
+  display: block;
+  z-index:2000;
+ left:10px}
 .artists h1
 {
  background-color:#f2f2f2;
@@ -571,6 +602,7 @@ margin-left:5px;
  background-image:url(../pics/pattern/pat-bg.png);
  background-repeat:repeat;
  background-color:#000; 
+ float:right;
 }
 
 
@@ -716,8 +748,8 @@ ul.footer_nav_1
 
 .footer_button_top
 {
- margin-top:-50px!important;
-
+ margin-top:-49px!important;
+float:right;
  background-image:url(../pics/pattern/pat-foot.png);
  background-repeat:repeat;
  background-color:#000;
@@ -982,7 +1014,6 @@ margin:2px; }
   {
    background-color:transparent;
    margin-top:-40px!important;
-   margin-top:-10px;
  }
 
 
@@ -1022,13 +1053,11 @@ margin:2px; }
 .releases_discography_number,.artists_show
 {
   font-weight:none;
-  margin:10px;
-}
+  margin:10px;}
 
 .artists_show
 {
-     min-height:240px;
-
+     min-height:230px;
 }
 
 
