@@ -27,7 +27,11 @@
 
     <div class="grid_6 open_releases_artwork">
     <img width="400px" src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/artwork/<?php echo $release['slug'] ?>.png" alt="" />
-    </div><!-- end of grid_6 -->
+ <ul class="open_releases_nav_artwork">
+            <li><a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/caroussel-release.png" alt="" /></a></li>
+            <li><a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/caroussel-release-hover.png" alt="" /></a></li>
+     </ul>
+   </div><!-- end of grid_6 -->
     
     <div class="grid_6 open_releases_infos">
 
@@ -64,8 +68,12 @@
       <span class="open_releases_market"><a href=""><?php echo __('Ajouter au panier') ?></a> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/img-panier.png" alt="" /></span>
     </p>
     <hr>
-    <p class="open_releases_share"><?php echo __('Partager') ?></p>
-
+  <ul class="open_releases_share_button">
+            <li><?php echo __('Partager') ?></li>
+            <li><a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/img-twitter-b.png" alt="" /></a></li>
+            <li><a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/google+-b.png" alt="" /></a></li>
+            <li><a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/img-facebook-b.png" alt="" /></a></li>
+          </ul>
     </div><!-- end of grid_6 -->
   </div><!-- enf of release_content -->
   </div><!-- end of grid_12 release_open -->

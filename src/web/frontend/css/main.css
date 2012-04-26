@@ -177,8 +177,9 @@ font-size:0.8rem;
 {
  width:100%!important;
  background-color:#000;
- height:50px;
+ height:54px;
  margin-top:-20px;
+
 }
 
 .header_nav_3 ul 
@@ -354,7 +355,7 @@ font-size:0.8rem;
   margin-top:15px;
 }
 
-.releases_discography_number_first
+.releases_discography_number_first,.artists_show_first
 {
   margin-left:0px!important;
 }
@@ -480,12 +481,7 @@ ul.releases_discography_button
  padding:30px 0px 100px 0px;
 }
 
-.category_infos
-{
- background-image:url(../pics/pattern/pat-bg.png);
- background-repeat:repeat;
- background-color:#f2f2f2;
-}
+
 .open_releases,.open_artists
 {
   margin-top:-8px;
@@ -1051,21 +1047,33 @@ margin:2px; }
 
 
 
-  ul.open_releases_share
+  ul.open_releases_share_button
   {
-    margin-bottom:-60px;
+    margin-bottom:-20px;
   }
-  .open_releases_share li 
+  .open_releases_share_button li 
   {
     display: inline;
     margin:2px 2px 2px 2px;
-    font-size:12px;
-    font-size:1.2rem;
-            color:#666!important;
+    font-size:14px;
+    font-size:1.4rem;
+            color:#000;
             font-weight:bold;
-
+  text-transform:uppercase;
+    font-family: 'Jockey One', sans-serif;
 
   }
+
+ .open_releases_share_button img 
+{
+  margin-top:-6px;
+  opacity:0.6;
+}
+
+.open_releases_share_button img:hover 
+{
+  opacity:1;
+}
 /* A TRIER */
 
  .releases,.category_infos  
@@ -1172,4 +1180,15 @@ text-decoration:none;}
 {
   background-color:#000;
   color:#FFF;
+}
+
+
+ul.open_releases_nav_artwork
+{
+margin-left:170px;}
+.open_releases_nav_artwork li
+{
+  display:inline;
+  margin:2px;
+  padding:0px;
 }
