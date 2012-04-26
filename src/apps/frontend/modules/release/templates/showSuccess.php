@@ -13,15 +13,14 @@
   <div class="open_releases_content">
   
   <div class="grid_12">
-
     <ul class="open_releases_button">
-<?php if ($previous): ?>
-      <li> <a href="<?php echo url_for('@release_show?slug=dhr-'.$previous.'#release') ?>" data-pjax="#content_async"> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/release_retour.png" alt="" /> </a></li>
+    <?php if ($previous): ?>
+      <li class="open_releases_button_left"> <a href="<?php echo url_for('@release_show?slug=dhr-'.$previous.'#release') ?>" data-pjax="#content_async"> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/hack.png" alt="" /> </a></li>
 <?php endif; ?>
 <?php if ($next): ?>
-      <li> <a href="<?php echo url_for('@release_show?slug=dhr-'.$next.'#release') ?>" data-pjax="#content_async"> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/release_suivant.png" alt="" /> </a></li>
+      <li  class="open_releases_button_right"> <a href="<?php echo url_for('@release_show?slug=dhr-'.$next.'#release') ?>" data-pjax="#content_async"> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/hack.png" alt="" />  </a></li>
 <?php endif; ?>
-      <li> <a href="" data-close="#content_async"> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/release_close.png" alt="" /> </a></li>
+      <li class="open_releases_button_close"> <a href="" data-close="#content_async"> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/hack.png" alt="" /> </a></li>
     </ul>
   </div>
   <hr /> 

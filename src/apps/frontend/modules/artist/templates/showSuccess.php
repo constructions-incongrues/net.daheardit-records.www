@@ -11,7 +11,7 @@
   <div class="grid_12">
 
     <ul class="open_artists_button">
-      <li> <a href=""> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/release_retour.png" alt="" /> </a></li>
+      <li> <a href=""> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/hack.png" alt="" /> </a></li>
       <li> <a href=""> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/release_suivant.png" alt="" /> </a></li>
       <li> <a href=""> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/release_close.png" alt="" /> </a></li>
     </ul>
