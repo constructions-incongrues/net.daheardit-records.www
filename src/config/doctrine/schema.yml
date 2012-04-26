@@ -49,13 +49,11 @@ Release:
 Track:
   actAs:
     Sluggable:
-      fields: [name]
+      fields: [title]
     Timestampable: ~
   columns:
-    name:       string
-    file_mp3:   string
-    file_ogg:   string
-    file_flac:  string
+    title:      string
+    number:     integer
     release_id: integer
 
 Post:

@@ -16,10 +16,8 @@ abstract class BaseTrackForm extends BaseFormDoctrine
   {
     $this->setWidgets(array(
       'id'         => new sfWidgetFormInputHidden(),
-      'name'       => new sfWidgetFormTextarea(),
-      'file_mp3'   => new sfWidgetFormTextarea(),
-      'file_ogg'   => new sfWidgetFormTextarea(),
-      'file_flac'  => new sfWidgetFormTextarea(),
+      'title'      => new sfWidgetFormTextarea(),
+      'number'     => new sfWidgetFormInputText(),
       'release_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Release'), 'add_empty' => true)),
       'slug'       => new sfWidgetFormInputText(),
       'created_at' => new sfWidgetFormDateTime(),
@@ -28,10 +26,8 @@ abstract class BaseTrackForm extends BaseFormDoctrine
 
     $this->setValidators(array(
       'id'         => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
-      'name'       => new sfValidatorString(array('required' => false)),
-      'file_mp3'   => new sfValidatorString(array('required' => false)),
-      'file_ogg'   => new sfValidatorString(array('required' => false)),
-      'file_flac'  => new sfValidatorString(array('required' => false)),
+      'title'      => new sfValidatorString(array('required' => false)),
+      'number'     => new sfValidatorInteger(array('required' => false)),
       'release_id' => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Release'), 'required' => false)),
       'slug'       => new sfValidatorString(array('max_length' => 255, 'required' => false)),
       'created_at' => new sfValidatorDateTime(),

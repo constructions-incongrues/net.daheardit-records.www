@@ -36,14 +36,13 @@
     <h3 class="open_releases_album"><?php echo $release['title'] ?></h3>
 
     <ul class="open_releases_playlist">
-      <li><a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/play.png" alt="play" class="open_releases_playlist_icon_play" />Title</a></li>
-      <li><a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/play.png" alt="play" class="open_releases_playlist_icon_play" />Title</a></li>
-      <li><a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/play.png" alt="play" class="open_releases_playlist_icon_play" />Title</a></li>
-      <li><a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/play.png" alt="play" class="open_releases_playlist_icon_play" />Title</a></li>
-      <li><a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/play.png" alt="play" class="open_releases_playlist_icon_play" />Title</a></li>
-      <li><a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/play.png" alt="play" class="open_releases_playlist_icon_play" />Title</a></li>
-      <li><a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/play.png" alt="play" class="open_releases_playlist_icon_play" />Title</a></li>
-      <li><a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/play.png" alt="play" class="open_releases_playlist_icon_play" />Title</a></li>
+<?php foreach ($release['tracks'] as $track): ?>
+    <?php if ($track['number'] < 10): ?>
+      <li><a href="<?php echo $sf_request->getRelativeUrlRoot() ?>/releases/<?php echo $release['slug'] ?>/0<?php echo $track['number'] ?>_<?php echo $track['slug'] ?>.mp3"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/play.png" alt="play" class="open_releases_playlist_icon_play" /><?php echo $track['title'] ?></a></li>
+    <?php else: ?>
+      <li><a href="<?php echo $sf_request->getRelativeUrlRoot() ?>/releases/<?php echo $release['slug'] ?>/<?php echo $track['number'] ?>_<?php echo $track['slug'] ?>.mp3"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/play.png" alt="play" class="open_releases_playlist_icon_play" /><?php echo $track['title'] ?></a></li>
+    <?php endif; ?> 
+<?php endforeach; ?>
     </ul>
 
     <h1 class="open_releases_title"><?php echo __('À propos de la sortie') ?></h1>
@@ -53,9 +52,9 @@
 
     <h2 class="open_releases_title"><?php echo __('Télécharger l\'album gratuitement') ?></h2>
     <ul class="open_releases_download">
-      <li><a href="">MP3</a></li>
-      <li><a href="">OGG</a></li>
-      <li><a href="">FLAC</a></li>
+      <li><a href="<?php echo $sf_request->getRelativeUrlRoot() ?>/releases/<?php echo $release['slug'] ?>/<?php echo $release['slug'] ?>_mp3_320.zip">MP3</a></li>
+      <li><a href="<?php echo $sf_request->getRelativeUrlRoot() ?>/releases/<?php echo $release['slug'] ?>/<?php echo $release['slug'] ?>_ogg.zip">OGG</a></li>
+      <li><a href="<?php echo $sf_request->getRelativeUrlRoot() ?>/releases/<?php echo $release['slug'] ?>/<?php echo $release['slug'] ?>_flac.zip">FLAC</a></li>
     </ul>
 
     <h3 class="open_releases_title"><?php echo __('Acheter l\'album') ?></h3>
