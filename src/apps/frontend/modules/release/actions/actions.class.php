@@ -16,8 +16,12 @@ class releaseActions extends sfActions
 		$release = Doctrine_Core::getTable('Release')->findOneBySlugAndCulture($request->getParameter('slug'), $this->getUser()->getCulture());
 		$this->forward404Unless($release);
 
+		// Fetch release tracks
+		$tracks = Doctrine_Core::getTable('Track')->findByReleaseId($release['id'], Doctrine_Core::HYDRATE_ARRAY);
+
 		// Setup metadata
 		$releaseArray = $release->toArray();
+		$releaseArray['tracks'] = $tracks;
 		$this->getResponse()->setTitle(sprintf('[%s] %s - %s', $releaseArray['sku'], $releaseArray['Artist']['name'], $releaseArray['title']));
 		
 		// Guess next and previous releases (THIS IS SO UGLY)

@@ -13,10 +13,8 @@ abstract class BaseTrackFormFilter extends BaseFormFilterDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'name'       => new sfWidgetFormFilterInput(),
-      'file_mp3'   => new sfWidgetFormFilterInput(),
-      'file_ogg'   => new sfWidgetFormFilterInput(),
-      'file_flac'  => new sfWidgetFormFilterInput(),
+      'title'      => new sfWidgetFormFilterInput(),
+      'number'     => new sfWidgetFormFilterInput(),
       'release_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Release'), 'add_empty' => true)),
       'slug'       => new sfWidgetFormFilterInput(),
       'created_at' => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => false)),
@@ -24,10 +22,8 @@ abstract class BaseTrackFormFilter extends BaseFormFilterDoctrine
     ));
 
     $this->setValidators(array(
-      'name'       => new sfValidatorPass(array('required' => false)),
-      'file_mp3'   => new sfValidatorPass(array('required' => false)),
-      'file_ogg'   => new sfValidatorPass(array('required' => false)),
-      'file_flac'  => new sfValidatorPass(array('required' => false)),
+      'title'      => new sfValidatorPass(array('required' => false)),
+      'number'     => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
       'release_id' => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Release'), 'column' => 'id')),
       'slug'       => new sfValidatorPass(array('required' => false)),
       'created_at' => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 00:00:00')), 'to_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 23:59:59')))),
@@ -52,10 +48,8 @@ abstract class BaseTrackFormFilter extends BaseFormFilterDoctrine
   {
     return array(
       'id'         => 'Number',
-      'name'       => 'Text',
-      'file_mp3'   => 'Text',
-      'file_ogg'   => 'Text',
-      'file_flac'  => 'Text',
+      'title'      => 'Text',
+      'number'     => 'Number',
       'release_id' => 'ForeignKey',
       'slug'       => 'Text',
       'created_at' => 'Date',
