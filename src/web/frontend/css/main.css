@@ -93,6 +93,7 @@ html
   position:absolute;
   height:220px;
   width:220px;
+  margin-top:20px;
   background-image:url("../pics/releases/img-release.png");
 }
 
@@ -365,6 +366,11 @@ height:125px;}
   margin-top:15px;
 }
 
+.releases_discography_number p 
+{
+  margin-top:-20px;
+}
+
 .releases_discography_number_first,.artists_show_first
 {
   margin-left:0px!important;
@@ -382,7 +388,7 @@ height:125px;}
   height:16px;
   width:68px;
   position: absolute;
-  margin-top:20px;
+  margin-top:40px;
   background-image:url(../pics/icon/nouveau.png);
   font-family: 'Tempesta', sans-serif;
   font-size:8px;
