@@ -1179,6 +1179,7 @@ h1.open_artists_name
   width:220px;
   background-color:#FFF;
   padding-bottom:10px;
+margin:10px;  float:left;
 }
 
 .open_artists_listing_releases h2 

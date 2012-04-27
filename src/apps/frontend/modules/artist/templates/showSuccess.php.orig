@@ -1,6 +1,6 @@
 <div class="grid_12 releases">
         <div class="category_content">
-          <h1 id="artist"><?php echo __('Biographie') ?></h1>
+          <h1><?php echo __('Biographie') ?></h1>
             <span class="triangle"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/others/triangle.png" class="triangle" /></span>
         </div><!-- end of category contents --> 
       </div><!-- end of releases -->
@@ -19,7 +19,7 @@
   <hr /> 
 
     <div class="grid_6 open_artists_pictures">
-    <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/artists/<?php echo $artist['slug'] ?>.jpg" alt="" />
+    <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/artwork/cover_test.png" alt="" />
     </div><!-- end of grid_6 -->
     
     <div class="grid_6 open_releases_infos">
@@ -34,24 +34,34 @@
     <h2 class="open_artists_title"><?php echo __('Où le trouver ?') ?></h2>
 
 <div class="open_artists_linked">
-<?php echo html_entity_decode($artist['more']) ?>
+    <ul>
+      <li><a href="">Myspace</a></li>
+      <li><a href="">Youtube</a></li>
+      <li><a href="">Dailymotion</a></li>
+    <ul>
 </div>
     <hr>
     <h2 class="open_artists_title"><?php echo __('Toutes les sorties') ?></h2>
 
-
  <div class=" open_artists_listing_releases ">
+<<<<<<< HEAD
+            <p><a href=""><span class="calque_releases_2"> </span></a></p>
+            <img width="220px" height="220px" src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/artwork/dhr-17_thumb-new.png" alt=""/>
+            <h1><a href="">D!HR-17</a></h1>
+            <h2><a href="">Jacques Cochise Vengeance</a></h2>
+=======
  <?php foreach ($artist['releases'] as $release): ?>
-           <p><a href=""> <span class="calque_releases_2"></span></a></p>
+            <span class="calque_releases"></span>
             <img width="220px" height="220px" src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/artwork/<?php echo $release['slug'] ?>_thumb-new.png" alt=""/>
             <h1><a href="<?php echo url_for(sprintf('@release_show?slug=%s#release', $release['slug'])) ?>"><?php echo $release['sku'] ?></a></h1>
             <h2><a href="<?php echo url_for(sprintf('@release_show?slug=%s#release', $release['slug'])) ?>"><?php echo $release['title'] ?></a></h2>
+>>>>>>> dc0f38d9081ef1844130145246962ba7786043ab
             <ul class="releases_discography_button">
               <li><a href="<?php echo url_for(sprintf('@release_show?slug=%s#release', $release['slug'])) ?>">+ D'infos</a></li>
               <li><a href=""><? echo __('Ajouter au Panier') ?></a></li>
             </ul>
+          </div>
 <?php endforeach; ?>
-</div>
     </div><!-- end of grid_6 -->
   </div><!-- enf of release_content -->
   </div><!-- end of grid_12 release_open -->
