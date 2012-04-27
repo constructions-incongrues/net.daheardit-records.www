@@ -44,7 +44,7 @@
     <h2 class="open_artists_title">Toutes les sorties  </h2>
 
  <div class=" open_artists_listing_releases ">
-            <span class="calque_releases"> </span>
+            <p><a href=""><span class="calque_releases_2"> </span></a></p>
             <img width="220px" height="220px" src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/artwork/dhr-17_thumb-new.png" alt=""/>
             <h1><a href="">D!HR-17</a></h1>
             <h2><a href="">Jacques Cochise Vengeance</a></h2>

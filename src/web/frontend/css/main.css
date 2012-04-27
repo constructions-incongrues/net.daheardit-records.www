@@ -88,13 +88,18 @@ html
 }
 
 
-.calque_releases
+.calque_releases, .calque_releases_2
 {
   position:absolute;
   height:220px;
   width:220px;
   margin-top:20px;
   background-image:url("../pics/releases/img-release.png");
+}
+
+.calque_releases_2
+{
+  margin:0px;
 }
 
 .calque_artwork
@@ -105,7 +110,7 @@ html
   background-image:url("../pics/releases/img-release.png");
 }
 
-.calque_releases:hover
+.calque_releases:hover, .calque_releases_2:hover
 {
   background-image:url("../pics/releases/img-release-hover.png");
 }
