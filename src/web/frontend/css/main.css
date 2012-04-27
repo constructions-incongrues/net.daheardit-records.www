@@ -109,6 +109,15 @@ html
   width:460px;
   background-image:url("../pics/releases/img-release.png");
 }
+.calque_artists_pictures
+{
+  position:absolute;
+  border-radius:500px;
+  height:460px;
+  width:460px;
+  background-image:url("../pics/releases/img-release.png");
+}
+
 
 .calque_releases:hover, .calque_releases_2:hover
 {
@@ -1170,6 +1179,8 @@ h1.open_artists_name
 .open_artists_pictures img
 {
   border-radius:500px;
+  height:460px;
+   width:460px;
 }
 
 
@@ -1179,7 +1190,8 @@ h1.open_artists_name
   width:220px;
   background-color:#FFF;
   padding-bottom:10px;
-margin:10px;  float:left;
+margin:10px;  
+float:left!important;
 }
 
 .open_artists_listing_releases h2 

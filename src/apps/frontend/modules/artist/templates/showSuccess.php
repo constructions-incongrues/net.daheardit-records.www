@@ -19,7 +19,9 @@
   <hr /> 
 
     <div class="grid_6 open_artists_pictures">
-    <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/artists/<?php echo $artist['slug'] ?>.jpg" alt="" />
+                        <span class="calque_artists_pictures"> </span>
+
+    <img  src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/artists/<?php echo $artist['slug'] ?>.jpg" alt="" />
     </div><!-- end of grid_6 -->
     
     <div class="grid_6 open_releases_infos">
