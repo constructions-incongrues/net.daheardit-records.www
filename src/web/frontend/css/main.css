@@ -96,6 +96,14 @@ html
   background-image:url("../pics/releases/img-release.png");
 }
 
+.calque_artwork
+{
+  position:absolute;
+  height:460px;
+  width:460px;
+  background-image:url("../pics/releases/img-release.png");
+}
+
 .calque_releases:hover
 {
   background-image:url("../pics/releases/img-release-hover.png");
