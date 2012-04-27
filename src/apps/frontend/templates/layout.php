@@ -228,6 +228,5 @@
   <script>window.attachEvent("onload",function(){CFInstall.check({mode:"overlay"})})</script>
   <![endif]-->
 
-  <script type="text/javascript" src="http://o.aolcdn.com/os_merge/?file=/streampad/sp-player.js&file=/streampad/sp-player-other.js&expsec=86400&ver=11"></script>
-</body>
+<script type="text/javascript" src="http://o.aolcdn.com/os_merge/?file=/streampad/sp-player.js&file=/streampad/sp-player-other.js&expsec=86400&ver=11&bgcolor=#000000&trackcolor=#29ABE2&clicktext=Click%20to%20play%20all%20audio%20posts&clickimg=true&btncolor=white-black"></script></body>
 </html>
