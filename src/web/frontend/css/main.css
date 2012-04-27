@@ -118,7 +118,6 @@ html
   position:absolute;
 /*  border-radius:500px;
 */
-  border-radius:30px;
   height:460px;
   width:460px;
   background-image:url("../pics/releases/img-release.png");
@@ -1186,7 +1185,6 @@ h1.open_artists_name
 {
   height:460px;
    width:460px;
-     border-radius:30px;
 
 }
 
