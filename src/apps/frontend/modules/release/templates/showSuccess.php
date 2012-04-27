@@ -15,10 +15,10 @@
   <div class="grid_12">
     <ul class="open_releases_button">
     <?php if ($previous): ?>
-      <li class="open_releases_button_left"> <a href="<?php echo url_for('@release_show?slug=dhr-'.$previous.'#release') ?>" data-pjax="#content_async"> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/hack.png" alt="Before" /> </a></li>
+      <li class="open_releases_button_left"> <a class="release_previous" href="<?php echo url_for('@release_show?slug=dhr-'.$previous.'#release') ?>" data-pjax="#content_async"> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/hack.png" alt="Before" /> </a></li>
 <?php endif; ?>
 <?php if ($next): ?>
-      <li  class="open_releases_button_right"> <a href="<?php echo url_for('@release_show?slug=dhr-'.$next.'#release') ?>" data-pjax="#content_async"> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/hack.png" alt="Previous" />  </a></li>
+      <li  class="open_releases_button_right"> <a class="release_next" href="<?php echo url_for('@release_show?slug=dhr-'.$next.'#release') ?>" data-pjax="#content_async"> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/hack.png" alt="Previous" />  </a></li>
 <?php endif; ?>
       <li class="open_releases_button_close"> <a href="" data-close="#content_async"> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/hack.png" alt="Close" /> </a></li>
     </ul>
@@ -53,7 +53,7 @@
 
     <h1 class="open_releases_title"><?php echo __('À propos de la sortie') ?></h1>
     <p class="open_releases_press_text">
-<?php echo $release['Translation'][$sf_user->getCulture()]['presentation'] ?>
+<?php echo nl2br($release['Translation'][$sf_user->getCulture()]['presentation']) ?>
     </p>
 
     <h2 class="open_releases_title"><?php echo __('Télécharger l\'album gratuitement') ?></h2>

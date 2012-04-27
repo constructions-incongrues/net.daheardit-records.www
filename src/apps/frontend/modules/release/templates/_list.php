@@ -13,7 +13,7 @@
   <?php endif; ?>
             <img height="220px" width="220px" src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/artwork/<?php echo $release['image'] ?>" />
             <h1><a data-pjax="#content_async" href="<?php echo url_for(sprintf('@release_show?slug=%s#release', $release['slug'])) ?>"><?php echo $release['sku'] ?></a></h1>
-            <h2><a data-pjax="#content_async" title="<?php echo sprintf('%s - %s', $release['Artist']['name'], $release['title']) ?>" href="<?php echo url_for(sprintf('@release_show?slug=%s#release', $release['slug'])) ?>"><?php echo truncate_text(sprintf('%s - %s', $release['Artist']['name'], $release['title']), 27) ?></a></h2>
+            <h2><a data-pjax="#content_async" title="<?php echo sprintf('%s - %s', $release['Artist']['name'], $release['title']) ?>" href="<?php echo url_for(sprintf('@release_show?slug=%s#release', $release['slug'])) ?>"><?php echo truncate_text(sprintf('%s - %s', $release['Artist']['name'], $release['title']), 35) ?></a></h2>
             <ul class="releases_discography_button">
               <li><a href=""><?php echo __('Ajouter au panier') ?></a></li>
             </ul>

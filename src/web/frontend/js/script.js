@@ -33,5 +33,7 @@ $(document).ready(function () {
 			url: $(this).attr('href'),
 			container: $(this).data('pjax')
 		});	
+
+		return false;
 	});
 });
