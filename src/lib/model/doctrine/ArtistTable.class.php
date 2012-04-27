@@ -16,4 +16,15 @@ class ArtistTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('Artist');
     }
+
+	public function findOneBySlugAndCulture($slug, $culture = 'fr')
+	{
+		$q = $this->createQuery('a')
+			->where('a.slug = ?', $slug)
+			->leftJoin('a.Translation t')
+			->andWhere('t.lang = ?', $culture);
+
+		return $q->fetchOne();
+	}
+
 }
