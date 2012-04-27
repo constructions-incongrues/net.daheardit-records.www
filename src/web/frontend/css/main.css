@@ -508,7 +508,7 @@ ul.releases_discography_button
   .artists_pictures
   {
    border-radius:200px;
-   margin-top:10px;
+   margin-top:-10px;
 
  }
 
