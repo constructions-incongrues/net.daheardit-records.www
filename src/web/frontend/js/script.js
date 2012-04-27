@@ -14,7 +14,7 @@ $(document).ready(function () {
 	});
 
 	// Handles clicks on releases titles and images
-	$('.releases_discography h1 a, .releases_discography h2 a').click(function() {
+	$('.releases_discography h1 a, .releases_discography h2 a, .releases_discography p a').click(function() {
 		$('#content_async').slideUp('slow');
 		var link = $(this);
 		$.scrollTo($('#discography'), 1000, {onAfter:function() {
@@ -34,6 +34,11 @@ $(document).ready(function () {
 			container: $(this).data('pjax')
 		});	
 
+		return false;
+	});
+
+	$('.infos_button_top a').click(function() {
+		$.scrollTo($('#top'), 1000);
 		return false;
 	});
 });

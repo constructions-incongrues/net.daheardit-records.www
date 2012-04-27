@@ -7,7 +7,7 @@
   <?php else: ?>
           <div class="grid_3 releases_discography_number ">
   <?php endif; ?>
-           <p><a href="#"> <span class="calque_releases"> </span></a></p>
+           <p><a data-pjax="#content_async" href="<?php echo url_for(sprintf('@release_show?slug=%s#release', $release['slug'])) ?>"> <span class="calque_releases"> </span></a></p>
   <?php if ($release['is_new']): ?>
             <span class="releases_discography_last_release"><?php echo __('Nouveau') ?></span>  
   <?php endif; ?>

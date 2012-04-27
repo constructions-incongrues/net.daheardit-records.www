@@ -10,11 +10,22 @@
  */
 class artistActions extends sfActions
 {
- /**
-  * @param sfRequest $request A request object
-  */
-  public function executeShow(sfWebRequest $request)
-  {
-    
-  }
+	/**
+	 * @param sfRequest $request A request object
+	 */
+	 public function executeShow(sfWebRequest $request)
+	 {
+		// Fetch artist
+	 	$artist = Doctrine_Core::getTable('Artist')->findOneBySlugAndCulture($request->getParameter('slug'), $this->getUser()->getCulture());
+	 	$this->forward404Unless($artist);
+
+	 	// Fetch releases
+	 	$releases = Doctrine_Core::getTable('Release')->findByArtistId($artist->id, Doctrine_Core::HYDRATE_ARRAY);
+
+	 	$artistArray = $artist->toArray();
+	 	$artistArray['releases'] = $releases;
+
+		// Pass data to view
+		$this->artist = $artistArray;
+	}
 }
