@@ -15,6 +15,12 @@ Artist:
     id: 1
     name: Ben et Béné
     url: http://www.benetbene.net
+    more: |
+      <ul>
+        <li><a href="">Myspace</a></li>
+        <li><a href="">Youtube</a></li>
+        <li><a href="">Dailymotion</a></li>
+      <ul>
     Translation:
       fr:
         presentation: |
