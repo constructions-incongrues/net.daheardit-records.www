@@ -1,17 +1,44 @@
 <?php
 
 class dhrGenerateReleaseTask extends sfBaseTask
-{  
+{
+	private $conversionProfiles = array();
+
 	protected function configure()
 	{
+		// Conversion profiles
+		$this->conversionProfiles = array(
+			'mp3_320' => array(
+				'name' => 'mp3_320',
+				'commandConvert' => '/usr/bin/ffmpeg -i \'%s\' -ab 320k -metadata title="%s" -metadata artist="%s" -metadata album="%s" -metadata tracknumber="%s" \'%s.mp3\'',
+				'extension' => 'mp3'
+			),
+			'ogg' => array(
+				'name' => 'ogg',
+				'commandConvert' => 'ffmpeg -i \'%s\' -metadata title="%s" -metadata artist="%s" -metadata album="%s" -metadata tracknumber="%s" \'%s.ogg\'',
+				'extension' => 'ogg'
+			),
+			'flac' => array(
+				'name' => 'flac',
+				'commandConvert' => 'ffmpeg -i \'%s\' -metadata title="%s" -metadata artist="%s" -metadata album="%s" -metadata tracknumber="%s" \'%s.flac\'',
+				'extension' => 'flac'
+			)
+		);
+
+		// Task configuration
 		$this->namespace = 'dhr';
 		$this->name = 'release';
 		$this->briefDescription = 'Generates a new release';
 		$this->detailedDescription = '';
     	
     	$this->addArguments(array(
-	    	new sfCommandArgument('directory', sfCommandArgument::REQUIRED, 'Path to directory holding WAV files'),
+	    	new sfCommandArgument('directory', sfCommandArgument::REQUIRED, 'Path to directory holding source files'),
 	    	new sfCommandArgument('sku', sfCommandArgument::REQUIRED, 'Release SKU'),
+    	));
+
+    	$this->addOptions(array(
+    		new sfCommandOption('sourceExtension', null, sfCommandOption::PARAMETER_OPTIONAL, 'Extension of source files', 'flac'),
+    		new sfCommandOption('profiles', null, sfCommandOption::PARAMETER_OPTIONAL, 'Conversion profiles', implode(',', $this->getDefaultConversionProfiles()))
     	));
 	}
 
@@ -20,7 +47,8 @@ class dhrGenerateReleaseTask extends sfBaseTask
 		// Init database
 		$databaseManager = new sfDatabaseManager($this->configuration);
 
-		$release = Doctrine_Core::getTable('Release')->findOneBySku($arguments['sku']);
+		// Fetch release
+		$release = Doctrine_Core::getTable('Release')->findOneBySlug($arguments['sku']);
 
 		// Vars
 		$releaseDir = sprintf('%s/releases/%s', sfConfig::get('sf_web_dir'), $release->slug);
@@ -37,12 +65,12 @@ class dhrGenerateReleaseTask extends sfBaseTask
 		$this->logSection('release', sprintf('Generating release %s from %s', $arguments['sku'], $arguments['directory']));
 
 		// Grab tracks
-		$tracksWav = glob(sprintf('%s/*.wav', $arguments['directory']));
-		if (!count($tracksWav)) {
-			throw new RuntimeException('No WAV file found in directory');
+		$tracksSource = glob(sprintf('%s/*.%s', $arguments['directory'], $options['sourceExtension']));
+		if (!count($tracksSource)) {
+			throw new RuntimeException(sprintf('No .%s files found in directory', $options['sourceExtension']));
 		}
 		mkdir($releaseDir);
-		$this->logSection('release', sprintf('Found %d WAV files :', count($tracksWav)));
+		$this->logSection('release', sprintf('Found %d .%s files :', count($tracksSource), $options['sourceExtension']));
 
 		// Grab pics
 		$pics = glob(sprintf('%s/*.png', $arguments['directory']));
@@ -50,9 +78,9 @@ class dhrGenerateReleaseTask extends sfBaseTask
 		// Build tracks structure
 		$tracks = array();
 		Doctrine_Core::getTable('Track')->createQuery()->delete()->where('release_id = ?', $release['id'])->execute();
-		foreach ($tracksWav as $trackFilepath) {
+		foreach ($tracksSource as $trackFilepath) {
 			$matches = array();
-			preg_match('/^(\d+) - (.*).wav$/', basename($trackFilepath), $matches);
+			preg_match(sprintf('/^(\d+) - (.*).%s$/', $options['sourceExtension']), basename($trackFilepath), $matches);
 			$track = array(
 				'number' => $matches[1],
 				'title'  => $matches[2],
@@ -68,34 +96,23 @@ class dhrGenerateReleaseTask extends sfBaseTask
 			$trackDb->save();
 
 			// Generate streamable track
-			$command = sprintf('/usr/bin/ffmpeg -y -i \'%s\' -ab 128k \'%s/releases/%s/%s_%s.mp3\'', $track['path'], sfConfig::get('sf_web_dir'), $release->slug, $track['number'], $trackDb->slug);
+			$command = sprintf('/usr/bin/ffmpeg -y -i \'%s\' -ab 128k \'%s/assets/%s/%s_%s.mp3\'', $track['path'], sfConfig::get('sf_web_dir'), $release->slug, $track['number'], $trackDb->slug);
 			exec($command);
 
 			$this->logSection('release', sprintf('  %s - %s', $track['number'], $track['title']));
 		}
 
 		// Generate archives
-		$profiles = array(
-			array(
-				'name' => 'mp3_320',
-				'commandConvert' => '/usr/bin/ffmpeg -i \'%s\' -ab 320k -metadata title="%s" -metadata artist="%s" -metadata album="%s" -metadata tracknumber="%s" \'%s.mp3\'',
-				'extension' => 'mp3'
-			),
-			array(
-				'name' => 'ogg',
-				'commandConvert' => 'ffmpeg -i \'%s\' -metadata title="%s" -metadata artist="%s" -metadata album="%s" -metadata tracknumber="%s" \'%s.ogg\'',
-				'extension' => 'ogg'
-			),
-			array(
-				'name' => 'flac',
-				'commandConvert' => 'ffmpeg -i \'%s\' -metadata title="%s" -metadata artist="%s" -metadata album="%s" -metadata tracknumber="%s" \'%s.flac\'',
-				'extension' => 'flac'
-			)
-		);
-		$workspacePath = sprintf('/tmp/%s', uniqid('dhr_'));
+		$workspacePath = sprintf('%s/%s', sys_get_temp_dir(), uniqid('dhr_'));
 		mkdir($workspacePath);
 		$this->logSection('release', sprintf('Creating workspace %s', $workspacePath));
-		foreach ($profiles as $profile) {
+		$profiles = explode(',', $options['profiles']);
+		foreach ($profiles as $profileName) {
+			if (!isset($this->conversionProfiles[$profileName])) {
+				throw new InvalidArgumentException(sprintf('Conversion profile "%s" does not exist', $profileName));
+			}
+
+			$profile = $this->conversionProfiles[$profileName];
 			$workspacePathProfile = sprintf('%s/%s', $workspacePath, $profile['name']);
 			mkdir($workspacePathProfile);
 			$this->logSection('release', sprintf('Generating release for profile %s', $profile['name']));
@@ -103,7 +120,7 @@ class dhrGenerateReleaseTask extends sfBaseTask
 			// Transform and tag tracks
 			foreach ($tracks as $track) {
 				// Transform
-				$command = sprintf($profile['commandConvert'], $track['path'], $track['title'], $release->getArtist()->getName(), $release->title, $track['number'], sprintf('%s/%s', $workspacePathProfile, basename($track['path'], '.wav')));
+				$command = sprintf($profile['commandConvert'], $track['path'], $track['title'], $release->getArtist()->getName(), $release->title, $track['number'], sprintf('%s/%s', $workspacePathProfile, basename($track['path'], '.'.$options['sourceExtension'])));
 				exec($command);
 			}
 	
@@ -119,8 +136,14 @@ class dhrGenerateReleaseTask extends sfBaseTask
 		}
 	}
 
-	protected function tagMp3_320(array $profile, Release $release, array $tracks, $trackGenerated, array $track) {
+	protected function tagMp3_320(array $profile, Release $release, array $tracks, $trackGenerated, array $track) 
+	{
 		$commandTag = sprintf($profile['commandTag'], $release->getArtist()->getName(), $release->title, $track['title'], 'http://www.daheardit-records.net', $track['number'], count($tracks), $trackGenerated);
 		exec($commandTag);
+	}
+
+	private function getDefaultConversionProfiles()
+	{
+		return array_keys($this->conversionProfiles);
 	}
 }
