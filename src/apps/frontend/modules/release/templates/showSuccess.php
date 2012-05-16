@@ -26,10 +26,10 @@
   <hr /> 
 
     <div class="grid_6 open_releases_artwork">
-                  <span class="calque_artwork"> </span>
+      <span class="calque_artwork"> </span>
 
-    <img height="460px" width="460px"src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/artwork/thumb/<?php echo $release['slug'] ?>_2.png" alt="" />
- <ul class="open_releases_nav_artwork">
+    <img height="460px" width="460px"src="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/<?php echo $release['slug'] ?>/images/<?php echo $release['slug'] ?>_2.png" alt="" />
+      <ul class="open_releases_nav_artwork">
             <li><a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/caroussel-release.png" alt="" /></a></li>
             <li><a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/caroussel-release-hover.png" alt="" /></a></li>
      </ul>
