@@ -18,7 +18,15 @@
   <link rel="stylesheet" type="text/css" media="all" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/css/lib/960.gs/fluid_grid.css" />
 
   <link rel="stylesheet" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/css/main.css">
+
   <link rel="shortcut icon" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/favicon.png" />
+
+  <!--[if IE lte IE 8]>
+
+  <link rel="stylesheet" type="text/css" media="all" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/css/lte_ie8.css" />
+
+
+  <![endif]-->
 
   <!-- prefix-free -->
   <script src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/js/prefixfree.min.js"></script>
@@ -43,11 +51,22 @@
 
         <div class="header_news_2_content">
 
-          <div class="grid_12 header_news_2">
+     <div class="header_news_2_closed">
+
+<p class="header_news_2_closed_button">
+              <a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/open-actu.png" alt="Open news" />
+             </p> 
+
+        </div> 
+ 
+
+        <!--  <div class="grid_12 header_news_2">
 
             <div class="grid_3 header_news_2_pictures">
               <p><a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/micronews/1.jpg" alt="" /></a></p>
-            </div><!-- end of header_news_2_pictures -->
+            </div><
+
+
 
             <div class="grid_9 header_news_2_descr">
               
@@ -61,9 +80,8 @@
 
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec magna mi, condimentum in semper rutrum, pellentesque eget lectus. Maecenas sagittis semper ipsum non sodales. Vivamus ante metus, vehicula non lobortis ac, porttitor vitae massa. Mauris eget odio a magna egestas rutrum. Aliquam felis nibh, bibendum sed gravida et, luctus eu lacus. Sed eu tellus ligula. Ut ut turpis quam. Suspendisse potenti. Vivamus interdum posuere imperdiet. Nam pretium tellus in quam dictum pellentesque.
                 </p>
-              </div><!-- end of header_news_2_descr -->
-            </div><!-- end of grid_12 -->
-
+              </div>
+            </div>< -->
 
           </div><!-- enf of header_content -->
 

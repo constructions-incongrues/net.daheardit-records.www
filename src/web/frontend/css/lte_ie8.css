@@ -1,0 +1,7 @@
+.header_news_2_closed_button,.footer_content input.valid, .footer_content input,.footer_content textarea  
+{
+background: transparent;
+-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C29ABE2,endColorstr=#4C29ABE2)"; /* IE8 */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C29ABE2,endColorstr=#4C29ABE2);   /* IE6 & 7 */
+      zoom: 1;
+} 
