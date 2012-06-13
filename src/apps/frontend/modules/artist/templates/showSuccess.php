@@ -43,7 +43,7 @@
  <div class=" open_artists_listing_releases ">
  <?php foreach ($artist['releases'] as $release): ?>
            <p><a href="<?php echo url_for(sprintf('@release_show?slug=%s#release', $release['slug'])) ?>"> <span class="calque_releases_2"></span></a></p>
-            <img width="220px" height="220px" src="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/<?php echo $release['slug'] ?>/<?php echo $release['slug'] ?>_300x300.png" alt=""/>
+            <img width="220px" height="220px" src="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/releases/<?php echo $release['slug'] ?>/<?php echo $release['slug'] ?>_300x300.png" alt=""/>
             <h1><a href="<?php echo url_for(sprintf('@release_show?slug=%s#release', $release['slug'])) ?>"><?php echo $release['sku'] ?></a></h1>
             <h2><a href="<?php echo url_for(sprintf('@release_show?slug=%s#release', $release['slug'])) ?>"><?php echo $release['title'] ?></a></h2>
             <ul class="releases_discography_button">
