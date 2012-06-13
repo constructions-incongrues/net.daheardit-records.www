@@ -65,7 +65,7 @@
 
     <h3 class="open_releases_title"><?php echo __('Acheter l\'album') ?></h3>
     <p class="open_releases_buy">
-      <span class="open_releases_price">15€</span>
+      <span class="open_releases_price">5€</span>
       <span class="open_releases_market"><a href=""><?php echo __('Ajouter au panier') ?></a> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/img-panier.png" alt="" /></span>
     </p>
     <hr>
