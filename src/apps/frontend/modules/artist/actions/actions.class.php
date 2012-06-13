@@ -10,22 +10,43 @@
  */
 class artistActions extends sfActions
 {
-	/**
-	 * @param sfRequest $request A request object
-	 */
-	 public function executeShow(sfWebRequest $request)
-	 {
-		// Fetch artist
-	 	$artist = Doctrine_Core::getTable('Artist')->findOneBySlugAndCulture($request->getParameter('slug'), $this->getUser()->getCulture());
-	 	$this->forward404Unless($artist);
+    /**
+     * @param sfRequest $request A request object
+     */
+     public function executeShow(sfWebRequest $request)
+     {
+        // Fetch artist
+        $artist = Doctrine_Core::getTable('Artist')->findOneBySlugAndCulture($request->getParameter('slug'), $this->getUser()->getCulture());
+        $this->forward404Unless($artist);
 
-	 	// Fetch releases
-	 	$releases = Doctrine_Core::getTable('Release')->findByArtistId($artist->id, Doctrine_Core::HYDRATE_ARRAY);
+        // Fetch releases
+        $releases = Doctrine_Core::getTable('Release')->findByArtistId($artist->id, Doctrine_Core::HYDRATE_ARRAY);
+        $artistArray = $artist->toArray();
+        $artistArray['releases'] = $releases;
 
-	 	$artistArray = $artist->toArray();
-	 	$artistArray['releases'] = $releases;
+        // Get previous artist
+        $pdo = Doctrine_Manager::getInstance()->getCurrentConnection()->getDbh();
+        $stmt = $pdo->prepare('select slug, name from artist where slug < :slug order by slug desc limit 1');
+        $stmt->execute(array('slug' => $artistArray['slug']));
+        $previous = $stmt->fetchAll();
+        $previousArtist = null;
+        if (count($previous)) {
+            $previousArtist = $previous[0];
+        }
 
-		// Pass data to view
-		$this->artist = $artistArray;
-	}
+        // Get next artist
+        $pdo = Doctrine_Manager::getInstance()->getCurrentConnection()->getDbh();
+        $stmt = $pdo->prepare('select slug, name from artist where slug > :slug order by slug asc limit 1');
+        $stmt->execute(array('slug' => $artistArray['slug']));
+        $next = $stmt->fetchAll();
+        $nextArtist = null;
+        if (count($next)) {
+            $nextArtist = $next[0];
+        }
+
+        // Pass data to view
+        $this->previousArtist = $previousArtist;
+        $this->nextArtist = $nextArtist;
+        $this->artist = $artistArray;
+    }
 }
