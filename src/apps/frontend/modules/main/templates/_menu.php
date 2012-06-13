@@ -12,7 +12,7 @@
             <li><a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/img-google.png" alt="" /></a></li>
             <li><a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/img-facebook.png" alt="" /></a></li>
             <li><a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/img-panier.png" alt="" /></a></li>
-            <li class="header_nav_2_button_lang"><a href="<?php echo url_for('@homepage_localized?sf_culture=fr') ?>">FR</a></li>
+            <li class="header_nav_2_button_lang_active"><a href="<?php echo url_for('@homepage_localized?sf_culture=fr') ?>">FR</a></li>
             <li class="header_nav_2_button_lang"><a href="<?php echo url_for('@homepage_localized?sf_culture=en') ?>">EN</a></li>
           </ul>
         </div><!-- .grid_3 -->
