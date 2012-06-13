@@ -20,7 +20,7 @@
 
     <div class="grid_6 open_artists_pictures">
       <span class="calque_artists_pictures"> </span>
-      <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/artists/<?php echo $artist['slug'] ?>.jpg" alt="" />
+      <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/artists/<?php echo $artist['slug'] ?>/<?php echo $artist['slug'] ?>_300x300.jpg" alt="" />
     </div><!-- end of grid_6 -->
     
     <div class="grid_6 open_releases_infos">
