@@ -28,7 +28,7 @@
     <div class="grid_6 open_releases_artwork">
       <span class="calque_artwork"> </span>
 
-    <img height="460px" width="460px"src="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/<?php echo $release['slug'] ?>/images/<?php echo $release['slug'] ?>_2.png" alt="" />
+    <img height="460px" width="460px"src="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/releases/<?php echo $release['slug'] ?>/images/<?php echo $release['slug'] ?>_2.png" alt="" />
       <ul class="open_releases_nav_artwork">
             <li><a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/caroussel-release.png" alt="" /></a></li>
             <li><a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/caroussel-release-hover.png" alt="" /></a></li>
@@ -44,9 +44,9 @@
     <ul class="open_releases_playlist">
 <?php foreach ($release['tracks'] as $track): ?>
     <?php if ($track['number'] < 10): ?>
-      <li><a href="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/<?php echo $release['slug'] ?>/tracks/0<?php echo $track['number'] ?>_<?php echo $track['slug'] ?>.mp3"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/play.png" alt="play" class="open_releases_playlist_icon_play" /><?php echo $track['title'] ?></a></li>
+      <li><a href="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/releases/<?php echo $release['slug'] ?>/tracks/0<?php echo $track['number'] ?>_<?php echo $track['slug'] ?>.mp3"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/play.png" alt="play" class="open_releases_playlist_icon_play" /><?php echo $track['title'] ?></a></li>
     <?php else: ?>
-      <li><a href="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/<?php echo $release['slug'] ?>/tracks/<?php echo $track['number'] ?>_<?php echo $track['slug'] ?>.mp3"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/play.png" alt="play" class="open_releases_playlist_icon_play" /><?php echo $track['title'] ?></a></li>
+      <li><a href="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/releases/<?php echo $release['slug'] ?>/tracks/<?php echo $track['number'] ?>_<?php echo $track['slug'] ?>.mp3"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/play.png" alt="play" class="open_releases_playlist_icon_play" /><?php echo $track['title'] ?></a></li>
     <?php endif; ?> 
 <?php endforeach; ?>
     </ul>

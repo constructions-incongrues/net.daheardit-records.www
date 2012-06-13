@@ -16,12 +16,11 @@
       <li class="open_releases_button_close"> <a href="" data-close="#content_async"> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/hack.png" alt="Close" /> </a></li>
     </ul>
   </div>
-  <hr /> 
+  <hr />
 
     <div class="grid_6 open_artists_pictures">
-                        <span class="calque_artists_pictures"> </span>
-
-    <img  src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/artists/<?php echo $artist['slug'] ?>.jpg" alt="" />
+      <span class="calque_artists_pictures"> </span>
+      <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/artists/<?php echo $artist['slug'] ?>.jpg" alt="" />
     </div><!-- end of grid_6 -->
     
     <div class="grid_6 open_releases_infos">
@@ -41,10 +40,9 @@
     <hr>
     <h2 class="open_artists_title"><?php echo __('Toutes les sorties') ?></h2>
 
-
  <div class=" open_artists_listing_releases ">
  <?php foreach ($artist['releases'] as $release): ?>
-           <p><a href=""> <span class="calque_releases_2"></span></a></p>
+           <p><a href="<?php echo url_for(sprintf('@release_show?slug=%s#release', $release['slug'])) ?>"> <span class="calque_releases_2"></span></a></p>
             <img width="220px" height="220px" src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/artwork/<?php echo $release['slug'] ?>_thumb-new.png" alt=""/>
             <h1><a href="<?php echo url_for(sprintf('@release_show?slug=%s#release', $release['slug'])) ?>"><?php echo $release['sku'] ?></a></h1>
             <h2><a href="<?php echo url_for(sprintf('@release_show?slug=%s#release', $release['slug'])) ?>"><?php echo $release['title'] ?></a></h2>
