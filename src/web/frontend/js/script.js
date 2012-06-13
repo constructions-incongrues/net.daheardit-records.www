@@ -1,5 +1,6 @@
 $(document).ready(function () {
 	
+	/*
 	// Handles animation of content area
 	$('#content_async').on('pjax:end', function () {
 		$('#content_async').slideDown('slow', function () {
@@ -8,7 +9,8 @@ $(document).ready(function () {
 	});
 
 	// Handles closing of content area
-	$('a[data-close]').live('click', function () {
+	$('a.close').live('click', function () {
+		console.log($(this).data('close'));
 		$($(this).data('close')).slideUp('slow');
 		return false;
 	});
@@ -28,7 +30,7 @@ $(document).ready(function () {
 	});
 
 	// Handles navigation between releases
-	$('a.release_previous, a.release_next').live('click', function() {
+	$('a.previous, a.next').live('click', function() {
 		$.pjax({
 			url: $(this).attr('href'),
 			container: $(this).data('pjax')
@@ -41,4 +43,5 @@ $(document).ready(function () {
 		$.scrollTo($('#top'), 1000);
 		return false;
 	});
+	*/
 });

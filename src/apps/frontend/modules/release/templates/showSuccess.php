@@ -14,13 +14,13 @@
   
   <div class="grid_12">
     <ul class="open_releases_button">
-    <?php if ($previous): ?>
-      <li class="open_releases_button_left"> <a class="release_previous" href="<?php echo url_for('@release_show?slug=dhr-'.$previous.'#release') ?>" data-pjax="#content_async"> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/hack.png" alt="Before" /> </a></li>
+<?php if ($previousRelease): ?>
+      <li class="open_releases_button_left"> <a class="previous" href="<?php echo url_for('@release_show?slug='.$previousRelease['slug'].'#release') ?>" data-pjax="#content_async"> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/hack.png" title="<?php echo $previousRelease['title' ] ?>" /> </a></li>
 <?php endif; ?>
-<?php if ($next): ?>
-      <li  class="open_releases_button_right"> <a class="release_next" href="<?php echo url_for('@release_show?slug=dhr-'.$next.'#release') ?>" data-pjax="#content_async"> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/hack.png" alt="Previous" />  </a></li>
+<?php if ($nextRelease): ?>
+      <li  class="open_releases_button_right"> <a class="next" href="<?php echo url_for('@release_show?slug='.$nextRelease['slug'].'#release') ?>" data-pjax="#content_async"> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/hack.png" title="<?php echo $nextRelease['title' ] ?>" />  </a></li>
 <?php endif; ?>
-      <li class="open_releases_button_close"> <a href="" data-close="#content_async"> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/hack.png" alt="Close" /> </a></li>
+      <li class="open_releases_button_close"> <a class="close" href="" data-close="#content_async"> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/hack.png" alt="Close" /> </a></li>
     </ul>
   </div>
   <hr /> 
@@ -65,7 +65,7 @@
 
     <h3 class="open_releases_title"><?php echo __('Acheter l\'album') ?></h3>
     <p class="open_releases_buy">
-      <span class="open_releases_price">15€</span>
+      <span class="open_releases_price">5€</span>
       <span class="open_releases_market"><a href=""><?php echo __('Ajouter au panier') ?></a> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/img-panier.png" alt="" /></span>
     </p>
     <hr>
