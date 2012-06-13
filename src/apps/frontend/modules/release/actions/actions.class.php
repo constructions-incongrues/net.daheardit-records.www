@@ -10,38 +10,43 @@
  */
 class releaseActions extends sfActions
 {
-	public function executeShow(sfWebRequest $request)
-	{
-		// Fetch release
-		$release = Doctrine_Core::getTable('Release')->findOneBySlugAndCulture($request->getParameter('slug'), $this->getUser()->getCulture());
-		$this->forward404Unless($release);
+    public function executeShow(sfWebRequest $request)
+    {
+        // Fetch release
+        $release = Doctrine_Core::getTable('Release')->findOneBySlugAndCulture($request->getParameter('slug'), $this->getUser()->getCulture());
+        $this->forward404Unless($release);
 
-		// Fetch release tracks
-		$tracks = Doctrine_Core::getTable('Track')->findByReleaseId($release['id'], Doctrine_Core::HYDRATE_ARRAY);
+        // Fetch release tracks
+        $tracks = Doctrine_Core::getTable('Track')->findByReleaseId($release['id'], Doctrine_Core::HYDRATE_ARRAY);
 
-		// Setup metadata
-		$releaseArray = $release->toArray();
-		$releaseArray['tracks'] = $tracks;
-		$this->getResponse()->setTitle(sprintf('[%s] %s - %s', $releaseArray['sku'], $releaseArray['Artist']['name'], $releaseArray['title']));
-		
-		// Guess next and previous releases (THIS IS SO UGLY)
-		$previous = null;
-		$next = null;
-		$number = (int)substr($releaseArray['slug'], 4);
-		if ($number > 1) {
-			$previous = $number - 1;
-			if ($previous < 10) {
-				$previous = '0'.$previous;
-			}
-		}
-		$next = $number + 1;
-		if ($next < 10) {
-			$next = '0'.$next;
-		}
+        // Setup metadata
+        $releaseArray = $release->toArray();
+        $releaseArray['tracks'] = $tracks;
+        $this->getResponse()->setTitle(sprintf('[%s] %s - %s', $releaseArray['sku'], $releaseArray['Artist']['name'], $releaseArray['title']));
+        
+        // Get previous artist
+        $pdo = Doctrine_Manager::getInstance()->getCurrentConnection()->getDbh();
+        $stmt = $pdo->prepare('select slug, title from  `release` where slug < :slug order by slug desc limit 1');
+        $stmt->execute(array('slug' => $releaseArray['slug']));
+        $previous = $stmt->fetchAll();
+        $previousRelease = null;
+        if (count($previous)) {
+            $previousRelease = $previous[0];
+        }
 
-		// Pass data to view
-		$this->release = $releaseArray;
-		$this->next = $next;
-		$this->previous = $previous;
-	}
+        // Get next artist
+        $pdo = Doctrine_Manager::getInstance()->getCurrentConnection()->getDbh();
+        $stmt = $pdo->prepare('select slug, title from `release` where slug > :slug order by slug asc limit 1');
+        $stmt->execute(array('slug' => $releaseArray['slug']));
+        $next = $stmt->fetchAll();
+        $nextRelease = null;
+        if (count($next)) {
+            $nextRelease = $next[0];
+        }
+
+        // Pass data to view
+        $this->previousRelease = $previousRelease;
+        $this->nextRelease = $nextRelease;
+        $this->release = $releaseArray;
+    }
 }
