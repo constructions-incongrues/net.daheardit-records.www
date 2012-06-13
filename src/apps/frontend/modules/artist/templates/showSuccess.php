@@ -11,14 +11,13 @@
   <div class="grid_12">
     <ul class="open_artists_button">
 <?php if ($previousArtist): ?>
-      <li class="open_releases_button_left"> <a href="<?php echo url_for('@artist_show?slug='.$previousArtist['slug'].'#artist') ?>" data-pjax="#content_async"> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/hack.png" title="<?php echo $previousArtist['name'] ?>" /> </a></li>
+      <li class="open_releases_button_left"> <a class="previous" href="<?php echo url_for('@artist_show?slug='.$previousArtist['slug'].'#artist') ?>" data-pjax="#content_async"> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/hack.png" title="<?php echo $previousArtist['name'] ?>" /> </a></li>
 <?php endif; ?>
 
 <?php if ($nextArtist): ?>
-      <li class="open_releases_button_right"> <a href="<?php echo url_for('@artist_show?slug='.$nextArtist['slug'].'#artist') ?>" data-pjax="#content_async"> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/hack.png" title="<?php echo $nextArtist['name'] ?>" />  </a></li>
+      <li class="open_releases_button_right"> <a class="next" href="<?php echo url_for('@artist_show?slug='.$nextArtist['slug'].'#artist') ?>" data-pjax="#content_async"> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/hack.png" title="<?php echo $nextArtist['name'] ?>" />  </a></li>
 <?php endif; ?>
-
-      <li class="open_releases_button_close"> <a href="" data-close="#content_async"> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/hack.png" alt="Close" /> </a></li>
+      <li class="open_releases_button_close"> <a class="close" href="" data-close="#content_async"> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/hack.png" alt="Close" /> </a></li>
     </ul>
   </div>
   <hr />
