@@ -111,6 +111,8 @@
 
       <div class="grid_12 artists">
         <div class="artists_content">
+                    <span class="artist_button_top"><a href="#top"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/top_black.png" alt="TOP"></a></span>
+
           <h1 id="artists"><?php echo __('Artistes') ?></h1>
     <span class="triangle"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/others/triangle-blanc.png" class="triangle" /></span>
 
@@ -197,7 +199,7 @@
 
             <h2><?php echo __('Envoyer une demo') ?></h2>
             <p><?php echo __('Merci d\'envoyer vos demos par la poste ou par e-mail à') ?>
-              <strong><a href="mailto:demo@daheardit-records.net">demo@daheardit-records.net</a></strong></p>
+              <a href="mailto:demo@daheardit-records.net">demo@daheardit-records.net</a></p>
 
               <h2><?php echo __('Formulaire de contact') ?></h2>
               <form action="send.php" method="post">
