@@ -24,9 +24,9 @@ class releaseActions extends sfActions
         $releaseArray['tracks'] = $tracks;
         $this->getResponse()->setTitle(sprintf('[%s] %s - %s', $releaseArray['sku'], $releaseArray['Artist']['name'], $releaseArray['title']));
         
-        // Get previous artist
+        // Get previous release
         $pdo = Doctrine_Manager::getInstance()->getCurrentConnection()->getDbh();
-        $stmt = $pdo->prepare('select slug, title from  `release` where slug < :slug order by slug desc limit 1');
+        $stmt = $pdo->prepare('select slug, title, sku from  `release` where slug < :slug order by slug desc limit 1');
         $stmt->execute(array('slug' => $releaseArray['slug']));
         $previous = $stmt->fetchAll();
         $previousRelease = null;
@@ -34,9 +34,9 @@ class releaseActions extends sfActions
             $previousRelease = $previous[0];
         }
 
-        // Get next artist
+        // Get next release
         $pdo = Doctrine_Manager::getInstance()->getCurrentConnection()->getDbh();
-        $stmt = $pdo->prepare('select slug, title from `release` where slug > :slug order by slug asc limit 1');
+        $stmt = $pdo->prepare('select slug, title, sku from `release` where slug > :slug order by slug asc limit 1');
         $stmt->execute(array('slug' => $releaseArray['slug']));
         $next = $stmt->fetchAll();
         $nextRelease = null;

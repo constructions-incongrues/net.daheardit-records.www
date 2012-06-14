@@ -17,7 +17,7 @@
 <?php if ($nextArtist): ?>
       <li class="open_releases_button_right"> <a class="next" href="<?php echo url_for('@artist_show?slug='.$nextArtist['slug'].'#artist') ?>" data-pjax="#content_async"> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/hack.png" title="<?php echo $nextArtist['name'] ?>" />  </a></li>
 <?php endif; ?>
-      <li class="open_releases_button_close"> <a class="close" href="" data-close="#content_async"> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/hack.png" alt="Close" /> </a></li>
+      <li class="open_releases_button_close"> <a class="close" href="<?php echo url_for('@homepage#artists') ?>" data-close="#content_async" title="<?php echo __('Retourner à la liste des artistes') ?>"> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/hack.png" alt="Close" /> </a></li>
     </ul>
   </div>
   <hr />
