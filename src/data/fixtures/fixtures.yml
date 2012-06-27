@@ -268,8 +268,17 @@ Artist:
       en:
         presentation: |
           Being edited currently. Come back soon !
-
-
+  lesrobotsmusique:
+    name: Les Robots Musique
+    Translation:
+      fr:
+        presentation: |
+          Venus tous deux d'une étoile lointaine à bord d'un vaisseau interplanétaire,  Rod Droïd et Puyo Puyo s'apprêtaient à faire une tournée galactique triomphale au sein de l'orchestre impérial. Soudain, leur engin spatial explosa en vol dans une averse de météores. Précipités dans la stratosphère, nos deux compères robots furent alors projetés sur terre et plus précisément à Nantes, France. Ayant pris l'apparence humaine, ils se remirent illico à faire la seule chose qu'ils savaient faire : de la musique et des concerts, pour survivre dans cet environnement hostile, à des milliers d'années-lumière de chez eux. Les Robots Musique étaient nés.
+          Leur duo rappelle naturellement le folklore Kriktoïen, en plus offensif du point de vue rythmique. Leurs textes sont simples (n'oublions pas que ce sont des robots) et légers comme les poèmes Hwagaagaa de leur enfance. Quant à leur sens de la mélodie, il évoque immanquablement les airs entraînants de Gamma Leonis et de Celestia, deux astres célèbres pour leurs happy tunes. Leurs morceaux sont courts, efficaces et parfaits pour les folles chorégraphies métalliques.  
+          Voici quelques mois, Da! Heard it records, toujours en quête de nouveaux talents, eut vent de ce duo droïdesque et décida de le signer sur son label digital. Comme ils ne savaient pas signer, les Robots Musique firent simplement coucou avec la main.
+      en:
+        presentation: |
+          Being edited currently. Come back soon !
 
 Release:
   dhr01:
