@@ -20,7 +20,7 @@
       <li class="open_releases_button_close"> <a class="close" href="<?php echo url_for('@homepage#artists') ?>" data-close="#content_async" title="<?php echo __('Retourner à la liste des artistes') ?>"> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/hack.png" alt="Close" /> </a></li>
     </ul>
   </div>
-  <hr />
+  <hr class="open_artists_button_hr"/>
 
     <div class="grid_6 open_artists_pictures">
       <span class="calque_artists_pictures"> </span>

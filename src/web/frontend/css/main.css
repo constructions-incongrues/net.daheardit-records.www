@@ -1,4 +1,12 @@
+/* debug */
 
+/*.container_12 
+{
+width:960px;
+margin-left: auto;
+margin-right: auto;
+}
+*/
 /* HTML & BODY 
 ***************************************************************/
 
@@ -55,10 +63,11 @@ src: url('../typo/pf_tempesta_seven.ttf');
 width:960px;
 margin-left: auto;
 margin-right: auto;
+
 } 
 
 
-.triangle img {position: absolute;top:-4.4px;}
+.triangle img {position: absolute;top:-4.2px;}
 
 .artists h1,
 .releases h1,
@@ -72,7 +81,7 @@ text-transform:uppercase;
 font-size:27px;
 font-size:2.7rem;
 height:30px;
-padding:5px 0px 10px 13px;
+padding:5px 0px 10px 10px;
 margin-top:10px;
 margin-left:-5px;
 background-image:url(../pics/pattern/pat-bg.png);
@@ -164,7 +173,7 @@ color:#FFF;
 text-decoration:none;
 margin-bottom:-10px;
 font-family: 'Blanch Caps', sans-serif;
-margin-left:-12px;
+margin-left:-0px;
 }
 
 
@@ -175,6 +184,9 @@ margin-left:-12px;
 .header_nav_2
 {
 top:12px;
+text-align:right;
+margin-right:0px;
+margin-left:40px;
 }
 
 .header_nav_2_icon li 
@@ -229,27 +241,43 @@ font-size:0.8rem;
 width:100%!important;
 background-color:#000;
 height:50px;
+
 top:40px;
 z-index:300;
-position:absolute;}
+position:absolute;
+}
+
+
 
 
 .header_nav_3 ul 
 {
 background-color:#000;
-margin-top:0px;
-margin-left:-20px;
+padding-top:3px;
+
 }
 
+.header_nav_3_content_list li:first-child
+{
+  margin-left:-0px;
+top:-4px;
+position:absolute;
+}
+
+.header_nav_3_content_list li:nth-child(2)
+{
+margin-left:100px;
+}
 
 .header_nav_3 li
 {
 color:#29ABE2;
 list-style-type:none;
 display:inline;
-margin:5px 5px 5px 5px;
+margin:5px 10px 5px 10px;
 font-family: 'Jockey One', sans-serif;
 }
+
 
 
 .header_nav_3 a 
@@ -292,7 +320,6 @@ margin-top:112px;}
 .header_news_1_content h1 
 {
 margin-bottom:-20px;
-margin-right:13px;
 }
 
 .header_news_1_content h1 a 
@@ -421,6 +448,8 @@ line-height:15px;
    background-color:transparent;
    margin-top:-41px!important;
    padding-bottom:2px;
+   padding-left:5px;
+
  }
 
 .releases_discography_number,.artists_show
@@ -462,7 +491,7 @@ margin:0px;padding:0px;
 
 .releases_discography_number_first,.artists_show_first
 {
-margin-left:0px!important;
+margin-left:10px!important;
 margin-right:10px;
 }
 .releases_discography_number h1 
@@ -539,7 +568,7 @@ background-color: #FFF!important;
 ul.releases_discography_button 
 {
 margin-top:-20px;
-margin-left:3px;
+margin-left:4px;
 padding-bottom:0px;
 margin-bottom:7px;
 }
@@ -561,6 +590,7 @@ text-decoration:none;
 padding:5px;
 font-weight:normal;
 text-transform:uppercase;
+
 }
 
 .releases_discography_button li a:hover 
@@ -583,6 +613,7 @@ top:-14px;
 {
  background-color:#f2f2f2!important;
  color:#000!important;
+ margin-left:0px;
 }
 
 .artists_listing_all {top:-14px;}
@@ -753,6 +784,7 @@ position:relative;
 float:right;
 padding:2px 3px 2px 2px ;
 margin-top:20px;
+margin-right:5px;
 }
 
 
@@ -762,6 +794,8 @@ position:relative;
 float:right;
 padding:2px 3px 2px 2px ;
 margin-top:-48px;
+margin-right:5px;
+
 background-image:url(../pics/pattern/pat-foot.png);
 background-repeat:repeat;
 background-color:#000;
@@ -778,6 +812,7 @@ background-repeat:repeat;
 background-color:#000;
 padding:30px 0px 100px 0px;
 top:-28px;
+
 }
 
 .footer_content p  {color:#FFF;}
@@ -863,10 +898,11 @@ margin:0px;
 
 ul.footer_nav_1 
 {
-margin:8px 0px 20px 0px;
+margin:8px 0px 20px 20px;
 opacity:0.6;
 padding:2px;
 float:right;
+margin-right:-60px;
 }
 
 
@@ -919,11 +955,7 @@ margin-top:-13px;
 margin-left:-21px;
 }
 
-.open_releases_infos hr
-{
-margin-left:10px;
-width:481px;
-}
+
 .open_releases_infos h2
 {
 margin-left:10px;
@@ -951,7 +983,7 @@ margin-left:10px;
 
 h1.open_releases_title
 {
-margin-top:10px;
+margin-top:-10px;
 margin-left:10px;
 }
 h2.open_releases_title
@@ -1223,12 +1255,12 @@ ul.open_releases_download
   {
     display: inline;
     margin:2px 2px 2px 2px;
-    font-size:14px;
-    font-size:1.4rem;
-    color:#000;
+    font-size:12px;
+    font-size:1.2rem;
+    color:#666;
     font-weight:bold;
-    text-transform:uppercase;
-    font-family: 'Jockey One', sans-serif;
+    text-transform:capitalize;
+    font-family: 'Arial', sans-serif;
 
   }
 
@@ -1245,7 +1277,8 @@ ul.open_releases_download
 
 ul.open_releases_nav_artwork
 {
-text-align:center;}
+text-align:center;
+margin-top:10px;}
 
 .open_releases_nav_artwork li
 {
@@ -1258,9 +1291,21 @@ text-align:center;}
 /* OPEN ARTISTS
 ***************************************************************/
 
+.open_artists_infos hr, .open_releases_infos hr
+{
+  width:480px;
+  margin-left:10px;
+  border-bottom:1px solid #FBFBFB;
+}
+hr.open_releases_button_hr, hr.open_artists_button_hr
+{
+    width:960px;
+  border-bottom:1px solid #FBFBFB;
+}
 .open_artists_infos
 {
 margin-left:-20px;
+margin-top:-13px;
 }
 
 h1.open_artists_name
@@ -1330,6 +1375,7 @@ color:#FFF;
    background-color:transparent;
    margin-top:-70px!important;
    padding-bottom:12px;
+   margin-left:5px;
  }
 
 
