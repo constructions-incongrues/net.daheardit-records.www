@@ -52,7 +52,7 @@
         <h2><a href="<?php echo url_for(sprintf('@release_show?slug=%s#release', $release['slug'])) ?>"><?php echo $release['title'] ?></a></h2>
         <ul class="releases_discography_button">
           <li><a href="<?php echo url_for(sprintf('@release_show?slug=%s#release', $release['slug'])) ?>">+ D'infos</a></li>
-          <li><a href=""><? echo __('Ajouter au Panier') ?></a></li>
+          <li><a href="" class="buy" data-paypalid="<?php echo $release['paypal_id'] ?>"><? echo __('Acheter') ?></a></li>
         </ul>
 <?php endforeach; ?>
     </div>

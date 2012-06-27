@@ -260,6 +260,7 @@ Artist:
           During his lives the sound is followed by his hypnotics designs his energics video creations and his funnies video games. For the shows he plays differents characters like The Delux Punk Pink Poodle the Sexfloor Preacher the Mutant cooker the Mutant Disco Samouraï and the Mutant President.
 
   astroboiler:
+    id: 17
     name: Astroboiler
     Translation:
       fr:
@@ -269,6 +270,7 @@ Artist:
         presentation: |
           Being edited currently. Come back soon !
   lesrobotsmusique:
+    id: 18
     name: Les Robots Musique
     Translation:
       fr:
