@@ -32,4 +32,4 @@ default:
     - "/sfTwitterBootstrapPlugin/js/jquery-ui-1.8.16.custom.min.js" # For date pickers ...
 
   has_layout:     true
-  layout:         layout_bootstrap_aloha
+  layout:         %SF_PLUGINS_DIR%/sfTwitterBootstrapPlugin/templates/layout
