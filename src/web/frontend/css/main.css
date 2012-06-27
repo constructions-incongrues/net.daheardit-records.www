@@ -1,3 +1,4 @@
+
 /* HTML & BODY 
 ***************************************************************/
 
@@ -442,9 +443,9 @@ top:-2px;
 {
 background-image:url(../pics/releases/img-release-default.png);
 height:282px;
-width:220px;
 top:11px;
-margin-left:10px;
+width:220px!important;
+margin:0px 10px 0px 10px;
 }
 
 .releases_discography_number
@@ -552,7 +553,7 @@ font-size:10px;
 font-size:1rem;
 }
 
-.releases_discography_button li a 
+.releases_discography_button li a, .releases_discography_button li 
 {
 background-color:#000;
 color:#29ABE2;
@@ -668,8 +669,9 @@ border-width: 40px 40px 0px 40px ;
 {
 background-image:url(../pics/artists/img-artist-default.png);
 height:240px;
-width:250px;
+width:220px!important;
 margin-left:10px;
+margin-right:10px;
 margin-top:5px;
 }
 
