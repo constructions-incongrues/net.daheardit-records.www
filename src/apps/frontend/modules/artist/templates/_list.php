@@ -16,10 +16,7 @@
 <?php $j = count($artists) + 4 ?>
 <?php for ($i; $i < $j; $i++): ?>
   <?php if ($i % 4 === 0): break; endif; ?>
-        <div class="grid_3 artists_show">
-            <p></p>
-            <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/artists/img-artist-default.png" class="artists_pictures" />
-        </div>
+        <div class="grid_3 artists_show_default"/></div>
 <?php endfor; ?>
         </div><!-- enf of artists content -->
       </div><!-- end of artists -->
