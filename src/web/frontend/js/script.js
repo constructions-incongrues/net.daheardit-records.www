@@ -1,4 +1,9 @@
 $(document).ready(function () {
+	// Donate link
+	$('a.donate').click(function() {
+		$('form#donate').submit();
+		return false;
+	});
 	
 	/*
 	// Handles animation of content area
