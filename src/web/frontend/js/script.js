@@ -1,7 +1,14 @@
 $(document).ready(function () {
 	// Donate link
 	$('a.donate').click(function() {
-		$('form#donate').submit();
+		$('#paypal_id').val('3545843');
+		$('form#paypal').submit();
+		return false;
+	});
+
+	$('a.buy').click(function() {
+		$('#paypal_id').val($(this).data('paypalid'));
+		$('form#paypal').submit();
 		return false;
 	});
 	
