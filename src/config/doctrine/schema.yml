@@ -46,6 +46,7 @@ Release:
     image1:       string
     image2:       string
     artist_id:    integer
+    paypal_id:    string
 
 Track:
   actAs:

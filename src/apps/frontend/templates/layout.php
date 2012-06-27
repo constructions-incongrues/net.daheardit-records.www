@@ -220,10 +220,10 @@
   <!-- Form submission is triggered by click on "Dons" link in header menu -->
   <form action="https://www.paypal.com/cgi-bin/webscr" method="post" id="donate" style="display:none;">
     <input type="hidden" name="cmd" value="_s-xclick" />
-    <input type="hidden" name="hosted_button_id" value="BYCAXFR38R382" />
+    <input type="hidden" name="hosted_button_id" value="3545843" />
     <input type="image" src="https://www.paypalobjects.com/fr_FR/FR/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - la solution de paiement en ligne la plus simple et la plus sécurisée !" />
     <img border="0" src="https://www.paypalobjects.com/fr_FR/i/scr/pixel.gif" width="1" height="1">
   </form>
 
-<script type="text/javascript" src="http://o.aolcdn.com/os_merge/?file=/streampad/sp-player.js&file=/streampad/sp-player-other.js&expsec=86400&ver=11&bgcolor=#000000&trackcolor=#29ABE2&clicktext=Click%20to%20play%20all%20audio%20posts&clickimg=true&btncolor=white-black"></script></body>
+<script type="text/javascript" src="http://o.aolcdn.com/os_merge/?file=/streampad/sp-player.js&amp;file=/streampad/sp-player-other.js&expsec=86400&ver=11&bgcolor=#000000&trackcolor=#29ABE2&clicktext=Click%20to%20play%20all%20audio%20posts&clickimg=true&btncolor=white-black"></script></body>
 </html>

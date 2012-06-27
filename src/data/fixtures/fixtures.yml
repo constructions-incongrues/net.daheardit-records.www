@@ -287,6 +287,7 @@ Release:
     sku: D!HR-01
     slug: dhr-01
     Artist: computertruck
+    paypal_id: ~
     Translation:
       fr:
         presentation: |
@@ -300,6 +301,7 @@ Release:
     sku: D!HR-02
     slug: dhr-02
     Artist: goto80
+    paypal_id: ~
     Translation:
       fr:
         presentation: |
@@ -314,6 +316,7 @@ Release:
     sku: D!HR-03
     slug: dhr-03
     Artist: benetbene
+    paypal_id: ~
     Translation:
       fr:
         presentation: |
@@ -331,6 +334,7 @@ Release:
     sku: D!HR-04
     slug: dhr-04
     Artist: xerak
+    paypal_id: Y8CRWCJZBZQYA
     Translation:
       fr:
         presentation: |
@@ -345,6 +349,7 @@ Release:
     sku: D!HR-05
     slug: dhr-05
     Artist: miniroc
+    paypal_id: LFCFFB9DP3PW2
     Translation:
       fr:
         presentation: |
@@ -359,6 +364,7 @@ Release:
     sku: D!HR-06
     slug: dhr-06
     Artist: sputnikbooster
+    paypal_id: 2JFTJ8FM2RG4E
     Translation:
       fr:
         presentation: |
@@ -377,6 +383,7 @@ Release:
     sku: D!HR-07
     slug: dhr-07
     Artist: sidabitball
+    paypal_id: Q7MNGJJ424NME
     Translation:
       fr:
         presentation: |
@@ -391,6 +398,7 @@ Release:
     sku: D!HR-08
     slug: dhr-08
     Artist: guyom
+    paypal_id: RVZCL9AQZ37SL
     Translation:
       fr:
         presentation: |
@@ -409,6 +417,7 @@ Release:
     sku: D!HR-09
     slug: dhr-09
     Artist: tomwoxom
+    paypal_id: QKCCQC4BJZKUW
     Translation:
       fr:
         presentation: |
@@ -427,6 +436,7 @@ Release:
     sku: D!HR-10
     slug: dhr-10
     Artist: eatrabbit
+    paypal_id: ~
     Translation:
       fr:
         presentation: |
@@ -447,6 +457,7 @@ Release:
     sku: D!HR-11
     slug: dhr-11
     Artist: puyopuyo
+    paypal_id: 67P27TZ4F4DG6
     Translation:
       fr:
         presentation: |
@@ -465,6 +476,7 @@ Release:
     sku: D!HR-12
     slug: dhr-12
     Artist: vicnet
+    paypal_id: MWETNGJF9AQJA
     Translation:
       fr:
         presentation: |
@@ -487,6 +499,7 @@ Release:
     sku: D!HR-13
     slug: dhr-13
     Artist: pocketmaster
+    paypal_id: HRD947EYT8HJL
     Translation:
       fr:
         presentation: |
@@ -511,6 +524,7 @@ Release:
     sku: D!HR-14
     slug: dhr-14
     Artist: astroboiler
+    paypal_id: 647CCNAEXGQCW
     Translation:
       fr:
         presentation: |
@@ -538,6 +552,7 @@ Release:
     sku: D!HR-15
     slug: dhr-15
     Artist: tomwoxom
+    paypal_id: JS58RW7NNS7L2
     Translation:
       fr:
         presentation: |
@@ -565,6 +580,7 @@ Release:
     slug: dhr-16
     is_new: true
     Artist: buskerdroid
+    paypal_id: JS58RW7NNS7L2
     Translation:
       fr:
         presentation: |
@@ -589,6 +605,7 @@ Release:
     slug: dhr-17
     is_new: true
     Artist: jacquescochise
+    paypal_id: JS58RW7NNS7L2
     Translation:
       fr:
         presentation: |
