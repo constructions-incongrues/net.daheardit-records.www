@@ -30,6 +30,6 @@
             <li><a href="#contact"><?php echo __('Contact') ?></a></li>
             <li><a href="#links"><?php echo __('Liens') ?></a></li>
             <li><a href="http://www.musiques-incongrues.net/forum/labels/daheardit-records/"><?php echo __('Forum') ?></a></li>
-            <!-- <li class="header_nav_3_button_donate"><a href="">&hearts; <?php echo __('Dons') ?> &hearts; </a></li> -->
+            <li class="header_nav_3_button_donate"><a href="#" class="donate">&hearts; <?php echo __('Dons') ?> &hearts; </a></li>
           </ul>
         </div><!-- end of header_nav_3_content -->
