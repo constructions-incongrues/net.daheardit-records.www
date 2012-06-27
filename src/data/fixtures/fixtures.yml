@@ -661,3 +661,23 @@ Content:
           </ul>
         greetings: |
           Bimbo Tower, Danielle, Didi, Fita, Gabriel, Maryn, Momo Seb, Parasite, Valkiri, Vincent, also our friends ∧ graphist
+
+Post:
+  post1:
+    Translation:
+      fr:
+        title: Titre en français
+        body: |
+          FR: Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+          Duis dolor sem, hendrerit ac tempor a, varius non erat. Aenean venenatis, 
+          orci egestas dapibus pretium, ante lacus vehicula sem, ac imperdiet quam arcu nec tortor. 
+          Mauris tincidunt tortor elit, eget facilisis enim. Mauris vel dignissim purus. 
+          Mauris dictum, erat id ullamcorper feugiat, magna ligula adipiscing nisi, ac adipiscing justo mi varius lorem. 
+      en:
+        title: English title
+        body: |
+          EN: Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+          Duis dolor sem, hendrerit ac tempor a, varius non erat. Aenean venenatis, 
+          orci egestas dapibus pretium, ante lacus vehicula sem, ac imperdiet quam arcu nec tortor. 
+          Mauris tincidunt tortor elit, eget facilisis enim. Mauris vel dignissim purus. 
+          Mauris dictum, erat id ullamcorper feugiat, magna ligula adipiscing nisi, ac adipiscing justo mi varius lorem. 

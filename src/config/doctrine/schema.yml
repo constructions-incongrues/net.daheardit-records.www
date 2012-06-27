@@ -62,11 +62,18 @@ Post:
     Sluggable:
       fields: [title]
     I18n:
-      fields: [body]
+      fields: [title, body]
     Timestampable: ~
   columns:
-    title:  string
-    body:   string
+    title:
+      type:     string
+      notblank: true
+    body: 
+      type:     string
+      notblank: true
+    image:
+      type:     string
+      notblank: true
 
 Content:
   actAs:

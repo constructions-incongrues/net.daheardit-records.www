@@ -2,16 +2,32 @@
 
 /**
  * Post form.
- *
- * @package    net.daheardit-records.www
- * @subpackage form
- * @author     Constructions Incongrues <contact@constructions-incongrues.net>
- * @version    SVN: $Id: sfDoctrineFormTemplate.php 23810 2009-11-12 11:07:44Z Kris.Wallsmith $
  */
 class PostForm extends BasePostForm
 {
-	public function configure()
-	{
-		$this->embedI18n(array('fr', 'en'));
-	}
+    public function configure()
+    {
+        // Behaviors
+        unset($this['created_at'], $this['updated_at'], $this['slug']);
+
+        // New image
+        $this->validatorSchema['image'] = new sfValidatorFile(
+            array(
+              'required'              => $this->getObject()->isNew(),
+              'path'                  => sfConfig::get('sf_web_dir').'/uploads/news'
+            )
+        );
+        $this->widgetSchema['image'] = new sfWidgetFormInputFileEditable(
+            array(
+                'label'     => "L'image associée à la news",
+                'file_src'  => sfContext::getInstance()->getRequest()->getRelativeUrlRoot().'/uploads/news/'.$this->getObject()->getImage(),
+                'is_image'  => true,
+                'edit_mode' => !$this->isNew(),
+                'template'  => '<div>%file%<br />%input%</div>',
+            )
+        );
+
+        // i18n
+        $this->embedI18n(array('fr', 'en'));
+    }
 }

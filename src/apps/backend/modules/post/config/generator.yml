@@ -13,9 +13,20 @@ generator:
 
     config:
       actions: ~
-      fields:  ~
-      list:    ~
+      fields:
+        title:
+          label: Titre
+          help: Le titre de la news
+        body:
+          label: Contenu
+          help: Le contenu de la news
+        image:
+          label: Image
+          help: L'image associée à la news
+      list:
+        display: [=title, created_at]
       filter:  ~
-      form:    ~
+      form:
+        display: [en, fr, image]
       edit:    ~
       new:     ~

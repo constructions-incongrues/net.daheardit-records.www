@@ -7,11 +7,14 @@
  * 
  * @property string $title
  * @property string $body
+ * @property string $image
  * 
  * @method string getTitle() Returns the current record's "title" value
  * @method string getBody()  Returns the current record's "body" value
+ * @method string getImage() Returns the current record's "image" value
  * @method Post   setTitle() Sets the current record's "title" value
  * @method Post   setBody()  Sets the current record's "body" value
+ * @method Post   setImage() Sets the current record's "image" value
  * 
  * @package    net.daheardit-records.www
  * @subpackage model
@@ -25,9 +28,15 @@ abstract class BasePost extends sfDoctrineRecord
         $this->setTableName('post');
         $this->hasColumn('title', 'string', null, array(
              'type' => 'string',
+             'notblank' => true,
              ));
         $this->hasColumn('body', 'string', null, array(
              'type' => 'string',
+             'notblank' => true,
+             ));
+        $this->hasColumn('image', 'string', null, array(
+             'type' => 'string',
+             'notblank' => true,
              ));
     }
 
@@ -43,7 +52,8 @@ abstract class BasePost extends sfDoctrineRecord
         $i18n0 = new Doctrine_Template_I18n(array(
              'fields' => 
              array(
-              0 => 'body',
+              0 => 'title',
+              1 => 'body',
              ),
              ));
         $timestampable0 = new Doctrine_Template_Timestampable();

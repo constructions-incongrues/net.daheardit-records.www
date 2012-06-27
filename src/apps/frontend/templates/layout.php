@@ -25,7 +25,6 @@
 
   <link rel="stylesheet" type="text/css" media="all" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/css/lte_ie8.css" />
 
-
   <![endif]-->
 
   <!-- prefix-free -->
@@ -49,46 +48,16 @@
           </div><!-- header_news_1_content -->
         </div><!-- end of header_news_1 -->
 
-        <div class="header_news_2_content">
-
-     <div class="header_news_2_closed">
-
-<p class="header_news_2_closed_button">
+<!--
+          <div class="header_news_2_closed">
+            <p class="header_news_2_closed_button">
               <a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/open-actu.png" alt="Open news" />
-             </p> 
+            </p> 
+          </div> 
+-->
+<?php include_component('post', 'list') ?>
 
-        </div> 
- 
-
-        <!--  <div class="grid_12 header_news_2">
-
-            <div class="grid_3 header_news_2_pictures">
-              <p><a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/micronews/1.jpg" alt="" /></a></p>
-            </div><
-
-
-
-            <div class="grid_9 header_news_2_descr">
-              
-              <h1 class="header_news_2_title">
-                Titre 
-                <span class="header_news_2_nav">
-                  <a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/left.png" alt="" /></a>
-                  <a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/right.png" alt="" /></a>
-                  <a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/close.png" alt="" /></a></span>
-                </h1>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec magna mi, condimentum in semper rutrum, pellentesque eget lectus. Maecenas sagittis semper ipsum non sodales. Vivamus ante metus, vehicula non lobortis ac, porttitor vitae massa. Mauris eget odio a magna egestas rutrum. Aliquam felis nibh, bibendum sed gravida et, luctus eu lacus. Sed eu tellus ligula. Ut ut turpis quam. Suspendisse potenti. Vivamus interdum posuere imperdiet. Nam pretium tellus in quam dictum pellentesque.
-                </p>
-              </div>
-            </div>< -->
-
-          </div><!-- enf of header_content -->
-
-        </div>
       </div> <!-- end of header -->
-
-
 
   <div class="clear"></div>
 
