@@ -19,5 +19,12 @@
             </ul>
           </div><!-- end of grid_3 releases_discography_number  -->
 <?php endfor; ?>
+<?php $j = count($releases) + 4 ?>
+<?php for ($i; $i < $j; $i++): ?>
+  <?php if ($i % 4 === 0): break; endif; ?>
+        <div class="grid_3 releases_discography_number ">
+            <img height="220px" width="220px" src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/releases/img-release-default.png" />
+        </div>
+<?php endfor; ?>
         </div><!-- end of releases_discography -->
       </div><!-- end of discogs -->

@@ -10,6 +10,10 @@ class postComponents extends sfComponents
             ->limit(1)
             ->fetchOne(Doctrine_Core::HYDRATE_ARRAY);
 
+        if (!$postLatest['image']) {
+            $postLatest['image'] = 'default.png';
+        }
+
         // Pass data to view
         $this->postLatest = $postLatest;
     }
