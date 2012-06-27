@@ -69,8 +69,8 @@
         <target>Download the album for free</target>
       </trans-unit>
       <trans-unit id="17">
-        <source>Acheter l'album</source>
-        <target>Buy the album</target>
+        <source>Acheter</source>
+        <target>Buy</target>
       </trans-unit>
       <trans-unit id="18">
         <source>Ajouter au panier</source>
@@ -96,7 +96,14 @@
         <source>Nouveau</source>
         <target>New</target>
       </trans-unit>
-
+      <trans-unit id="24">
+        <source>Télécharger</source>
+        <target>Download</target>
+      </trans-unit>
+      <trans-unit id="25">
+        <source>Épuisé</source>
+        <target>Out of Stock</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
