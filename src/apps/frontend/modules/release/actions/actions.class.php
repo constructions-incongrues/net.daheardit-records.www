@@ -44,6 +44,20 @@ class releaseActions extends sfActions
             $nextRelease = $next[0];
         }
 
+        // Opengraph 
+        // TODO : this should go in a filter
+        $headersOgp = array(
+            'title' => $this->getContext()->getResponse()->getTitle() . ' | Da ! Heard It Records',
+            'type'  => 'music.album',
+            'image' => sprintf('http://next.daheardit-records.net/assets/releases/%s/images/%s_1.png', $release['slug'], $release['slug']),
+            'description' => $release['Translation'][$request->getParameter('sf_culture', 'fr')]['presentation']
+        );
+
+        foreach ($headersOgp as $name => $value) {
+            $this->getContext()->getResponse()->addMeta('og:'.$name, $value);
+        }
+
+
         // Pass data to view
         $this->previousRelease = $previousRelease;
         $this->nextRelease = $nextRelease;

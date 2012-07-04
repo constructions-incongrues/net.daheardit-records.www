@@ -30,6 +30,22 @@ class mainActions extends sfActions
             $this->redirect('homepage_localized');
         }
 
+        $this->getResponse()->setTitle($this->getContext()->getI18N()->__('Bienvenue'));
+
+        // Opengraph 
+        // TODO : this should go in a filter
+        $headersOgp = array(
+            'title' => $this->getContext()->getResponse()->getTitle() . ' | Da ! Heard It Records',
+            'type'  => 'website',
+            'url'   => 'http://next.daheardit-records.net/'.$request->getParameter('sf_culture'),
+            'image' => $request->getUriPrefix().$request->getRelativeUrlRoot().'/frontend/pics/logo.png',
+            'description' => $this->getContext()->getI18N()->__('Créé en 2006, Da ! Heard it Records est un net-label flirtant avec les musiques Toyz-Pop, Electro Trash, Chiptune, Breakcore, Techno Parodique, Electro Punk, Acid, et avec un goût prononcé pour le 8-bit et le pixel art.')
+        );
+
+        foreach ($headersOgp as $name => $value) {
+            $this->getContext()->getResponse()->addMeta('og:'.$name, $value);
+        }
+
         // Select template
         return sfView::SUCCESS;
     }

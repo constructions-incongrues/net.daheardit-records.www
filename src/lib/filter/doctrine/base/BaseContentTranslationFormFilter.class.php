@@ -14,13 +14,11 @@ abstract class BaseContentTranslationFormFilter extends BaseFormFilterDoctrine
   {
     $this->setWidgets(array(
       'informations' => new sfWidgetFormFilterInput(),
-      'credits'      => new sfWidgetFormFilterInput(),
       'greetings'    => new sfWidgetFormFilterInput(),
     ));
 
     $this->setValidators(array(
       'informations' => new sfValidatorPass(array('required' => false)),
-      'credits'      => new sfValidatorPass(array('required' => false)),
       'greetings'    => new sfValidatorPass(array('required' => false)),
     ));
 
@@ -43,7 +41,6 @@ abstract class BaseContentTranslationFormFilter extends BaseFormFilterDoctrine
     return array(
       'id'           => 'Number',
       'informations' => 'Text',
-      'credits'      => 'Text',
       'greetings'    => 'Text',
       'lang'         => 'Text',
     );
