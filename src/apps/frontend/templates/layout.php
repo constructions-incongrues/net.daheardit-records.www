@@ -21,6 +21,8 @@
 
   <link rel="shortcut icon" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/favicon.png" />
 
+  <link rel="alternate" type="application/rss+xml" title="<?php echo __('Flux RSS des dernières nouvelles') ?>" href="<?php echo url_for('@feeds_posts?sf_culture='.$sf_request->getParameter('sf_culture', 'fr')) ?>">
+
   <!--[if IE lte IE 8]>
 
   <link rel="stylesheet" type="text/css" media="all" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/css/lte_ie8.css" />
