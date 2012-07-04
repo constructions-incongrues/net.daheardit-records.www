@@ -20,8 +20,12 @@
   <link rel="stylesheet" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/css/main.css">
 
   <link rel="shortcut icon" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/favicon.png" />
-
+  
+<?php if (sfConfig::get('app_feeds_use_feedburner', false)): ?>
+  <link rel="alternate" type="application/rss+xml" title="<?php echo __('Flux RSS des dernières nouvelles') ?>" href="http://feeds.feedburner.com/dhr-news-<?php echo $sf_request->getParameter('sf_culture', 'fr') ?>">
+<?php else: ?>
   <link rel="alternate" type="application/rss+xml" title="<?php echo __('Flux RSS des dernières nouvelles') ?>" href="<?php echo url_for('@feeds_posts?sf_culture='.$sf_request->getParameter('sf_culture', 'fr')) ?>">
+<?php endif; ?>
 
   <!--[if IE lte IE 8]>
 
