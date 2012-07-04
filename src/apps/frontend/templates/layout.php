@@ -201,8 +201,7 @@
         <!-- scripts concatenated and minified via ant build script-->
         <script src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/js/jquery.scrollTo-1.4.2-min.js"></script>
         <script src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/js/jquery.pjax.js"></script>
-        <script src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/js/plugins.js"></script>
-        <script src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/js/script.js"></script>
+        <script src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/js/script.js?v=1"></script>
         <!-- end scripts-->
 
         <script>
