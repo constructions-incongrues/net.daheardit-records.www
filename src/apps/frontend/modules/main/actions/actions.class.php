@@ -10,31 +10,38 @@
  */
 class mainActions extends sfActions
 {
-	/**
- 	 * Executes index action
-	 *
-	 * @param sfRequest $request A request object
-	 */
-	public function executeIndex(sfWebRequest $request)
-	{
-		// Redirect to localized homepage
-		if (!$request->getParameter('sf_culture'))
-		{
-			if ($this->getUser()->isFirstRequest())
-			{
-				$culture = $request->getPreferredCulture(array('en', 'fr'));
-				$this->getUser()->setCulture($culture);
-				$this->getUser()->isFirstRequest(false);
-			}
-			else
-			{
-				$culture = $this->getUser()->getCulture();
-			}
+    /**
+     * Executes index action
+     *
+     * @param sfRequest $request A request object
+     */
+    public function executeIndex(sfWebRequest $request)
+    {
+        // Redirect to localized homepage
+        if (!$request->getParameter('sf_culture')) {
+            if ($this->getUser()->isFirstRequest()) {
+                $culture = $request->getPreferredCulture(array('en', 'fr'));
+                $this->getUser()->setCulture($culture);
+                $this->getUser()->isFirstRequest(false);
+            } else {
+                $culture = $this->getUser()->getCulture();
+            }
 
-			$this->redirect('homepage_localized');
-		}
+            $this->redirect('homepage_localized');
+        }
 
-	 	// Select template
-		return sfView::SUCCESS;
-	}
+        // Select template
+        return sfView::SUCCESS;
+    }
+
+    public function executeError404()
+    {   
+        $this->setLayout(false);
+    }
+
+    public function executeThanks()
+    {   
+        $this->setLayout(false);
+    }
+
 }

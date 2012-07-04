@@ -1,6 +1,23 @@
 # You can find more information about this file on the symfony website:
 # http://www.symfony-project.org/reference/1_4/en/10-Routing
 
+# main
+main_thanks:
+  url: /thanks
+  param: { module: main, action: thanks }
+
+# feeds
+feeds_posts:
+  url: /:sf_culture/feeds/posts
+  param: { module: feeds, action: posts }
+  requirements:
+    sf_culture: (?:fr|en)
+
+# post
+post_show:
+  url: /post/:slug
+  param: { module: post, action: show }
+
 # artist
 artist_show:
   url:   /:sf_culture/artist/:slug

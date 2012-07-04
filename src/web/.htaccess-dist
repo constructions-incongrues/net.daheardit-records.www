@@ -1,12 +1,12 @@
 # Authentication
-Order deny,allow
-Deny from all
-Allow from 127.0.0.1
-AuthType Basic
-AuthName "Da ! Heard It Records"
-AuthUserFile @dhr.path.root@/web/.htpasswd
-Require valid-user
-Satisfy any
+#Order deny,allow
+#Deny from all
+#Allow from 127.0.0.1
+#AuthType Basic
+#AuthName "Da ! Heard It Records"
+#AuthUserFile @dhr.path.root@/web/.htpasswd
+#Require valid-user
+#Satisfy any
 
 # Apache configuration
 Options +FollowSymLinks

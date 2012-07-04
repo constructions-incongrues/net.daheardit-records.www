@@ -96,14 +96,7 @@
         <source>Nouveau</source>
         <target>New</target>
       </trans-unit>
-      <trans-unit id="24">
-        <source>Télécharger</source>
-        <target>Download</target>
-      </trans-unit>
-      <trans-unit id="25">
-        <source>Épuisé</source>
-        <target>Out of Stock</target>
-      </trans-unit>
+
     </body>
   </file>
 </xliff>

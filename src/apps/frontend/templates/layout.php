@@ -20,6 +20,18 @@
   <link rel="stylesheet" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/css/main.css">
 
   <link rel="shortcut icon" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/favicon.png" />
+  
+<?php if (sfConfig::get('app_feeds_use_feedburner', false)): ?>
+  <link rel="alternate" type="application/rss+xml" title="<?php echo __('Flux RSS des dernières nouvelles') ?>" href="http://feeds.feedburner.com/dhr-news-<?php echo $sf_request->getParameter('sf_culture', 'fr') ?>">
+<?php else: ?>
+  <link rel="alternate" type="application/rss+xml" title="<?php echo __('Flux RSS des dernières nouvelles') ?>" href="<?php echo url_for('@feeds_posts?sf_culture='.$sf_request->getParameter('sf_culture', 'fr')) ?>">
+<?php endif; ?>
+
+  <!-- favicon and other icons -->
+  <link rel="shortcut icon" type="image/png" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/favicon.png" />
+  <link rel="apple-touch-icon" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/apple-touch-icon-72.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/apple-touch-icon-72.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/apple-touch-icon-114.png" />
 
   <!--[if IE lte IE 8]>
 
@@ -48,13 +60,6 @@
           </div><!-- header_news_1_content -->
         </div><!-- end of header_news_1 -->
 
-<!--
-          <div class="header_news_2_closed">
-            <p class="header_news_2_closed_button">
-              <a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/open-actu.png" alt="Open news" />
-            </p> 
-          </div> 
--->
 <?php include_component('post', 'list') ?>
 
       </div> <!-- end of header -->
@@ -149,12 +154,7 @@
           <div class="grid_6 footer_contact">
             <h1 id="contact"><?php echo __('Contact') ?></h1>
             <ul class="footer_nav_1">
-              <li><a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/img-rss.png" alt="" /></a></li>
-              <li><a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/img-lastfm.png" alt="" /></a></li>
-              <li><a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/img-twitter.png" alt="" /></a></li>
-              <li><a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/img-vimeo.png" alt="" /></a></li>
-              <li><a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/img-facebook.png" alt="" /></a></li>
-              <li><a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/img-panier.png" alt="" /></a></li>
+<?php include_partial('main/social') ?>
             </ul>
 
             <h2><?php echo __('Adresse') ?></h2>
@@ -201,12 +201,11 @@
         <!-- scripts concatenated and minified via ant build script-->
         <script src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/js/jquery.scrollTo-1.4.2-min.js"></script>
         <script src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/js/jquery.pjax.js"></script>
-        <script src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/js/plugins.js"></script>
-        <script src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/js/script.js"></script>
+        <script src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/js/script.js?v=1"></script>
         <!-- end scripts-->
 
         <script>
-  var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']]; // Change UA-XXXXX-X to be your site's ID
+  var _gaq=[['_setAccount','UA-673133-1'],['_trackPageview']]; // Change UA-XXXXX-X to be your site's ID
   (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
     g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
     s.parentNode.insertBefore(g,s)}(document,'script'));
@@ -217,12 +216,19 @@
   <script>window.attachEvent("onload",function(){CFInstall.check({mode:"overlay"})})</script>
   <![endif]-->
 
-  <!-- Form submission is triggered by click on "Dons" link in header menu -->
+  <!-- Form submission is triggered by click on Paypal links -->
   <form action="https://www.paypal.com/cgi-bin/webscr" method="post" id="paypal" style="display:none;">
     <input type="hidden" name="cmd" value="_s-xclick" />
-    <input type="hidden" id="paypal_id" name="hosted_button_id" value="3545843" />
+    <input type="hidden" id="paypal_id" name="hosted_button_id" value="RDMSQRU34X5YS" />
     <input type="image" src="https://www.paypalobjects.com/fr_FR/FR/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - la solution de paiement en ligne la plus simple et la plus sécurisée !" />
     <img border="0" src="https://www.paypalobjects.com/fr_FR/i/scr/pixel.gif" width="1" height="1">
+  </form>
+
+  <form name="_xclick" action="https://www.paypal.com/cgi-bin/webscr" method="post" style="display:none;" id="paypal-view-cart">
+    <input type="hidden" name="cmd" value="_cart">
+    <input type="hidden" name="business" value="support@daheardit-records.net">
+    <input type="image" src="https://www.paypal.com/fr_XC/i/btn/view_cart_new.gif" border="0" name="submit" alt="Payez avec PayPal : une solution rapide, gratuite et sécurisée!">
+    <input type="hidden" name="display" value="1">
   </form>
 
 <script type="text/javascript" src="http://o.aolcdn.com/os_merge/?file=/streampad/sp-player.js&amp;file=/streampad/sp-player-other.js&expsec=86400&ver=11&bgcolor=#000000&trackcolor=#29ABE2&clicktext=Click%20to%20play%20all%20audio%20posts&clickimg=true&btncolor=white-black"></script></body>

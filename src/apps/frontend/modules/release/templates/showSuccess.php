@@ -70,7 +70,7 @@
     </p>
     <hr>
   <ul class="open_releases_share_button">
-            <li><?php echo __('Partager') ?> :</li>
+            <li><?php echo __('Partager') ?></li>
             <li><a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/img-twitter-b.png" alt="" /></a></li>
             <li><a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/google+-b.png" alt="" /></a></li>
             <li><a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/img-facebook-b.png" alt="" /></a></li>
