@@ -47,6 +47,13 @@ Release:
     image2:       string
     artist_id:    integer
     paypal_id:    string
+    is_available:
+      type:       boolean
+      default:    1
+    price:
+      type:     integer
+      notblank: true
+      default:  5
 
 Track:
   actAs:

@@ -23,6 +23,12 @@ generator:
         released_at:
           label: Date de sortie
           help: La date de sortie officielle
+        price:
+          label: Prix
+          help: Le prix de la release en euros
+        is_available:
+          label: La release est-elle encore disponible ?
+          help: Décocher cette case si la release est épuisée 
       list:
         display: [=sku, title, artist, released_at]
       filter:  ~

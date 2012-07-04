@@ -15,6 +15,8 @@
  * @property string $image2
  * @property integer $artist_id
  * @property string $paypal_id
+ * @property boolean $is_available
+ * @property integer $price
  * @property Artist $Artist
  * @property Doctrine_Collection $Track
  * 
@@ -28,6 +30,8 @@
  * @method string              getImage2()       Returns the current record's "image2" value
  * @method integer             getArtistId()     Returns the current record's "artist_id" value
  * @method string              getPaypalId()     Returns the current record's "paypal_id" value
+ * @method boolean             getIsAvailable()  Returns the current record's "is_available" value
+ * @method integer             getPrice()        Returns the current record's "price" value
  * @method Artist              getArtist()       Returns the current record's "Artist" value
  * @method Doctrine_Collection getTrack()        Returns the current record's "Track" collection
  * @method Release             setTitle()        Sets the current record's "title" value
@@ -40,6 +44,8 @@
  * @method Release             setImage2()       Sets the current record's "image2" value
  * @method Release             setArtistId()     Sets the current record's "artist_id" value
  * @method Release             setPaypalId()     Sets the current record's "paypal_id" value
+ * @method Release             setIsAvailable()  Sets the current record's "is_available" value
+ * @method Release             setPrice()        Sets the current record's "price" value
  * @method Release             setArtist()       Sets the current record's "Artist" value
  * @method Release             setTrack()        Sets the current record's "Track" collection
  * 
@@ -87,6 +93,15 @@ abstract class BaseRelease extends sfDoctrineRecord
              ));
         $this->hasColumn('paypal_id', 'string', null, array(
              'type' => 'string',
+             ));
+        $this->hasColumn('is_available', 'boolean', null, array(
+             'type' => 'boolean',
+             'default' => 1,
+             ));
+        $this->hasColumn('price', 'integer', null, array(
+             'type' => 'integer',
+             'notblank' => true,
+             'default' => 5,
              ));
     }
 

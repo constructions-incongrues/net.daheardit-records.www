@@ -14,7 +14,7 @@
           <img height="220px" width="220px" src="<?php echo $release['image'] ?>" />
             <h1><a data-pjax="#content_async" href="<?php echo url_for(sprintf('@release_show?slug=%s#release', $release['slug'])) ?>"><?php echo $release['sku'] ?></a></h1>
             <h2><a data-pjax="#content_async" title="<?php echo sprintf('%s - %s', $release['Artist']['name'], $release['title']) ?>" href="<?php echo url_for(sprintf('@release_show?slug=%s#release', $release['slug'])) ?>"><?php echo truncate_text(sprintf('%s - %s', $release['Artist']['name'], $release['title']), 35) ?></a></h2>
-<?php if ($release['paypal_id']): ?>
+<?php if ($release['is_available']): ?>
             <ul class="releases_discography_button">
               <li><a href="<?php echo url_for(sprintf('@release_show?slug=%s#release', $release['slug'])) ?>" ><?php echo __('Acheter') ?></a></li>
               <li><a href="<?php echo url_for(sprintf('@release_show?slug=%s#release', $release['slug'])) ?>"><?php echo __('Télécharger') ?></a></li>
