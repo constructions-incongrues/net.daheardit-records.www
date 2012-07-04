@@ -4,6 +4,7 @@ etc/next
 # dist files
 src/config/databases.yml
 src/apps/frontend/config/app.yml
+src/apps/frontend/config/error.html.php
 src/web/.htaccess
 
 # editors

@@ -14,6 +14,8 @@ class postComponents extends sfComponents
                 ->limit(1)
                 ->fetchOne();
         }
+ 
+        $this->getContext()->getActionStack()->getFirstEntry()->getActionInstance()->forward404Unless($post);;
 
         // Fetch previous post
         $postPrevious = Doctrine_Core::getTable('Post')->createQuery('p')

@@ -40,3 +40,8 @@ all:
 
     # helpers
     standard_helpers: [Partial, I18N, Text]
+
+  .actions:
+    # error pages
+    error_404_module: main
+    error_404_action: error404
