@@ -154,12 +154,7 @@
           <div class="grid_6 footer_contact">
             <h1 id="contact"><?php echo __('Contact') ?></h1>
             <ul class="footer_nav_1">
-              <li><a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/img-rss.png" alt="" /></a></li>
-              <li><a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/img-lastfm.png" alt="" /></a></li>
-              <li><a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/img-twitter.png" alt="" /></a></li>
-              <li><a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/img-vimeo.png" alt="" /></a></li>
-              <li><a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/img-facebook.png" alt="" /></a></li>
-              <li><a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/img-panier.png" alt="" /></a></li>
+<?php include_partial('main/social') ?>
             </ul>
 
             <h2><?php echo __('Adresse') ?></h2>
