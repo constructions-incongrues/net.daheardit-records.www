@@ -580,7 +580,7 @@ Release:
     title: "Gameboy Love EP"
     sku: D!HR-16
     slug: dhr-16
-    is_new: true
+    is_new: false
     Artist: buskerdroid
     paypal_id: 5KQHBCVEZSTKY
     Translation:

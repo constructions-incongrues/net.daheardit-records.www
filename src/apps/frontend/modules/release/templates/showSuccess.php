@@ -75,9 +75,12 @@
     <hr>
   <ul class="open_releases_share_button">
             <li><?php echo __('Partager') ?></li>
-            <li><a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/img-twitter-b.png" alt="" /></a></li>
-            <li><a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/google+-b.png" alt="" /></a></li>
-            <li><a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/img-facebook-b.png" alt="" /></a></li>
+            <!--
+            <li><a href="https://twitter.com/share" class="twitter-share-button" data-url="<?php echo url_for('@release_show?slug='.$releases['slug'], true) ?>"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/img-twitter-b.png" /></a></li>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+          -->
+            <li><a target="_blank" href="https://plus.google.com/share?url=<?php echo urlencode(url_for('@release_show?slug='.$release['slug'], true)) ?>"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/google+-b.png" alt="" /></a></li>
+            <li><a target="_blank" href="https://www.facebook.com/sharer.php?u=<?php echo urlencode(url_for('@release_show?slug='.$release['slug'], true)) ?>"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/img-facebook-b.png" alt="" /></a></li>
           </ul>
     </div><!-- end of grid_6 -->
   </div><!-- enf of release_content -->
