@@ -27,6 +27,12 @@
   <link rel="alternate" type="application/rss+xml" title="<?php echo __('Flux RSS des dernières nouvelles') ?>" href="<?php echo url_for('@feeds_posts?sf_culture='.$sf_request->getParameter('sf_culture', 'fr')) ?>">
 <?php endif; ?>
 
+  <!-- favicon and other icons -->
+  <link rel="shortcut icon" type="image/png" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/favicon.png" />
+  <link rel="apple-touch-icon" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/apple-touch-icon-72.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/apple-touch-icon-72.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/apple-touch-icon-114.png" />
+
   <!--[if IE lte IE 8]>
 
   <link rel="stylesheet" type="text/css" media="all" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/css/lte_ie8.css" />
@@ -54,13 +60,6 @@
           </div><!-- header_news_1_content -->
         </div><!-- end of header_news_1 -->
 
-<!--
-          <div class="header_news_2_closed">
-            <p class="header_news_2_closed_button">
-              <a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/open-actu.png" alt="Open news" />
-            </p> 
-          </div> 
--->
 <?php include_component('post', 'list') ?>
 
       </div> <!-- end of header -->
