@@ -112,6 +112,10 @@
         <source>Flux RSS des dernières nouvelles</source>
         <target>Latest news RSS feed</target>
       </trans-unit>
+      <trans-unit id="28">
+        <source>Bienvenue</source>
+        <target>Welcome</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

@@ -31,6 +31,11 @@
   <link rel="apple-touch-icon" sizes="72x72" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/apple-touch-icon-72.png" />
   <link rel="apple-touch-icon" sizes="114x114" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/apple-touch-icon-114.png" />
 
+  <!-- Opengraph -->
+<?php foreach ($sf_response->getMetas() as $name => $value): ?>
+  <meta property="<?php echo $name ?>" content="<?php echo html_entity_decode(str_replace('&amp;#039;', "'", $value), ENT_QUOTES) ?>" />
+<?php endforeach ?>
+
   <!--[if IE lte IE 8]>
 
   <link rel="stylesheet" type="text/css" media="all" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/css/lte_ie8.css" />
@@ -110,9 +115,6 @@
             <p>
             <?php include_component('content', 'show', array('block' => 'informations')) ?>
             </p>
-
-            <h2><?php echo __('Crédits') ?></h2>
-            <?php include_component('content', 'show', array('block' => 'credits')) ?>
 
             <h3><?php echo __('Greetings') ?></h3>
             <p>
