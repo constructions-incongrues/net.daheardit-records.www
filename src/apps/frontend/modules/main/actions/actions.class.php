@@ -38,4 +38,10 @@ class mainActions extends sfActions
     {   
         $this->setLayout(false);
     }
+
+    public function executeThanks()
+    {   
+        $this->setLayout(false);
+    }
+
 }
