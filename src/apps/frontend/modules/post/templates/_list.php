@@ -1,21 +1,35 @@
 <div class="header_news_2_content">
   <div class="grid_12 header_news_2"> 
     <div class="grid_3 header_news_2_pictures">
-      <p><a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/uploads/news/<?php echo $postLatest['image'] ?>" alt="" width="217" height="100" /></a></p>
+      <p><a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/uploads/news/<?php echo $post->getImage() ?>" alt="" width="217" height="100" /></a></p>
     </div>
 
     <div class="grid_9 header_news_2_descr">
       <h1 class="header_news_2_title">
-        <?php echo $postLatest['title'] ?>
-        <!--
+        <?php echo $post['Translation'][$sf_request->getParameter('sf_culture', 'fr')]['title'] ?>
         <span class="header_news_2_nav">
-          <a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/left.png" alt="" /></a>
-          <a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/right.png" alt="" /></a>
-          <a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/close.png" alt="" /></a></span>
-        -->
-        </h1>
-        <p><?php echo nl2br($postLatest['body']) ?></p>
-      </div>
+<?php if ($postPrevious): ?>
+          <a href="<?php echo url_for('@post_show?slug='.$postPrevious->getSlug()) ?>"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/left.png" alt="" /></a>
+<?php endif; ?>
+<?php if ($postNext): ?>
+          <a href="<?php echo url_for('@post_show?slug='.$postNext->getSlug()) ?>"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/right.png" alt="" /></a>
+<?php endif; ?>
+<!--
+          <a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/close.png" alt="" /></a>
+-->
+        </span>
+      </h1>
+      <p><?php echo nl2br($post['Translation'][$sf_request->getParameter('sf_culture', 'fr')]['body']) ?></p>
     </div>
   </div>
+</div>
+
 </div><!-- /header_news_2 -->
+
+<!--
+          <div class="header_news_2_closed">
+            <p class="header_news_2_closed_button">
+              <a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/open-actu.png" alt="Open news" />
+            </p> 
+          </div> 
+-->
