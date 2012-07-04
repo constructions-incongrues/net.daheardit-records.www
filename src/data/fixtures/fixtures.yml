@@ -289,7 +289,7 @@ Release:
     sku: D!HR-01
     slug: dhr-01
     Artist: computertruck
-    paypal_id: ~
+    paypal_id: 5AZL7SJHW9DTG
     Translation:
       fr:
         presentation: |
@@ -303,7 +303,7 @@ Release:
     sku: D!HR-02
     slug: dhr-02
     Artist: goto80
-    paypal_id: ~
+    paypal_id: RTLDMM5DQKL2Y
     Translation:
       fr:
         presentation: |
@@ -318,7 +318,7 @@ Release:
     sku: D!HR-03
     slug: dhr-03
     Artist: benetbene
-    paypal_id: ~
+    paypal_id: JGY7S2LRHML66
     Translation:
       fr:
         presentation: |
@@ -336,7 +336,7 @@ Release:
     sku: D!HR-04
     slug: dhr-04
     Artist: xerak
-    paypal_id: Y8CRWCJZBZQYA
+    paypal_id: PYPDDAE2ZZ92L
     Translation:
       fr:
         presentation: |
@@ -351,7 +351,7 @@ Release:
     sku: D!HR-05
     slug: dhr-05
     Artist: miniroc
-    paypal_id: LFCFFB9DP3PW2
+    paypal_id: EBH7WQWHU478C
     Translation:
       fr:
         presentation: |
@@ -366,7 +366,7 @@ Release:
     sku: D!HR-06
     slug: dhr-06
     Artist: sputnikbooster
-    paypal_id: 2JFTJ8FM2RG4E
+    paypal_id: P446RGPLZYFKS
     Translation:
       fr:
         presentation: |
@@ -385,7 +385,7 @@ Release:
     sku: D!HR-07
     slug: dhr-07
     Artist: sidabitball
-    paypal_id: Q7MNGJJ424NME
+    paypal_id: VHK2UMBMFCCLJ
     Translation:
       fr:
         presentation: |
@@ -400,7 +400,7 @@ Release:
     sku: D!HR-08
     slug: dhr-08
     Artist: guyom
-    paypal_id: RVZCL9AQZ37SL
+    paypal_id: FSXY892YCF3YG
     Translation:
       fr:
         presentation: |
@@ -419,7 +419,7 @@ Release:
     sku: D!HR-09
     slug: dhr-09
     Artist: tomwoxom
-    paypal_id: QKCCQC4BJZKUW
+    paypal_id: JHTCPCHH32X9Q
     Translation:
       fr:
         presentation: |
@@ -438,7 +438,7 @@ Release:
     sku: D!HR-10
     slug: dhr-10
     Artist: eatrabbit
-    paypal_id: ~
+    paypal_id: JHTCPCHH32X9Q
     Translation:
       fr:
         presentation: |
@@ -459,7 +459,7 @@ Release:
     sku: D!HR-11
     slug: dhr-11
     Artist: puyopuyo
-    paypal_id: 67P27TZ4F4DG6
+    paypal_id: KPSK56LY8W2RN
     Translation:
       fr:
         presentation: |
@@ -478,7 +478,7 @@ Release:
     sku: D!HR-12
     slug: dhr-12
     Artist: vicnet
-    paypal_id: MWETNGJF9AQJA
+    paypal_id: 6ZQL27VVGR3PL
     Translation:
       fr:
         presentation: |
@@ -501,7 +501,7 @@ Release:
     sku: D!HR-13
     slug: dhr-13
     Artist: pocketmaster
-    paypal_id: HRD947EYT8HJL
+    paypal_id: FVHECLBV6TPMC
     Translation:
       fr:
         presentation: |
@@ -526,7 +526,7 @@ Release:
     sku: D!HR-14
     slug: dhr-14
     Artist: astroboiler
-    paypal_id: 647CCNAEXGQCW
+    paypal_id: 6HMMP5W6Y8B9S
     Translation:
       fr:
         presentation: |
@@ -554,7 +554,7 @@ Release:
     sku: D!HR-15
     slug: dhr-15
     Artist: tomwoxom
-    paypal_id: JS58RW7NNS7L2
+    paypal_id: 22SF6ZQ8HSY3U
     Translation:
       fr:
         presentation: |
@@ -582,7 +582,7 @@ Release:
     slug: dhr-16
     is_new: true
     Artist: buskerdroid
-    paypal_id: JS58RW7NNS7L2
+    paypal_id: 5KQHBCVEZSTKY
     Translation:
       fr:
         presentation: |
@@ -607,7 +607,7 @@ Release:
     slug: dhr-17
     is_new: true
     Artist: jacquescochise
-    paypal_id: JS58RW7NNS7L2
+    paypal_id: JLTLFVP52F39G
     Translation:
       fr:
         presentation: |
@@ -622,6 +622,22 @@ Release:
           Jacques Cochise does not do things half-ass : his album doesn’t smooth around the corners, he collides with them head on : 10m39s or uncut exhuberance.
           Vengeance is first and foremost a personal album, a message to a girl. That doesn’t mean that Jacques has abandoned the concept of melody, in fact he proves himself once again as clear and effective.
           The artwork was designed by Satanik Mike, a graphical artist also in love with vengeance and mutilated by love.
+
+  dhr18:
+    id: 18
+    title: "Plan 9"
+    sku: D!HR-18
+    slug: dhr-18
+    is_new: true
+    Artist: lesrobotsmusique
+    paypal_id: X9CACU5AN79EQ
+    Translation:
+      fr:
+        presentation: |
+          En cours de rédaction. Revenez bientôt !
+      en:
+        presentation: |
+          Being edited currently. Come back soon !
 
 Content:
   main:
@@ -692,19 +708,39 @@ Content:
 
 Post:
   post1:
+    created_at: "2012-01-01 00:00:00"
     Translation:
       fr:
-        title: Titre en français
+        title: Titre en français (1)
         body: |
-          FR: Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+          FR/1: Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
           Duis dolor sem, hendrerit ac tempor a, varius non erat. Aenean venenatis, 
           orci egestas dapibus pretium, ante lacus vehicula sem, ac imperdiet quam arcu nec tortor. 
           Mauris tincidunt tortor elit, eget facilisis enim. Mauris vel dignissim purus. 
           Mauris dictum, erat id ullamcorper feugiat, magna ligula adipiscing nisi, ac adipiscing justo mi varius lorem. 
       en:
-        title: English title
+        title: English title (1)
         body: |
-          EN: Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+          EN/1: Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+          Duis dolor sem, hendrerit ac tempor a, varius non erat. Aenean venenatis, 
+          orci egestas dapibus pretium, ante lacus vehicula sem, ac imperdiet quam arcu nec tortor. 
+          Mauris tincidunt tortor elit, eget facilisis enim. Mauris vel dignissim purus. 
+          Mauris dictum, erat id ullamcorper feugiat, magna ligula adipiscing nisi, ac adipiscing justo mi varius lorem. 
+  post2:
+    created_at: "2011-01-01 00:00:00"
+    Translation:
+      fr:
+        title: Titre en français (2)
+        body: |
+          FR/2: Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+          Duis dolor sem, hendrerit ac tempor a, varius non erat. Aenean venenatis, 
+          orci egestas dapibus pretium, ante lacus vehicula sem, ac imperdiet quam arcu nec tortor. 
+          Mauris tincidunt tortor elit, eget facilisis enim. Mauris vel dignissim purus. 
+          Mauris dictum, erat id ullamcorper feugiat, magna ligula adipiscing nisi, ac adipiscing justo mi varius lorem. 
+      en:
+        title: English title (2)
+        body: |
+          EN/2: Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
           Duis dolor sem, hendrerit ac tempor a, varius non erat. Aenean venenatis, 
           orci egestas dapibus pretium, ante lacus vehicula sem, ac imperdiet quam arcu nec tortor. 
           Mauris tincidunt tortor elit, eget facilisis enim. Mauris vel dignissim purus. 

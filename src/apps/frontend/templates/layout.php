@@ -217,12 +217,19 @@
   <script>window.attachEvent("onload",function(){CFInstall.check({mode:"overlay"})})</script>
   <![endif]-->
 
-  <!-- Form submission is triggered by click on "Dons" link in header menu -->
+  <!-- Form submission is triggered by click on Paypal links -->
   <form action="https://www.paypal.com/cgi-bin/webscr" method="post" id="paypal" style="display:none;">
     <input type="hidden" name="cmd" value="_s-xclick" />
-    <input type="hidden" id="paypal_id" name="hosted_button_id" value="3545843" />
+    <input type="hidden" id="paypal_id" name="hosted_button_id" value="RDMSQRU34X5YS" />
     <input type="image" src="https://www.paypalobjects.com/fr_FR/FR/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - la solution de paiement en ligne la plus simple et la plus sécurisée !" />
     <img border="0" src="https://www.paypalobjects.com/fr_FR/i/scr/pixel.gif" width="1" height="1">
+  </form>
+
+  <form name="_xclick" action="https://www.paypal.com/cgi-bin/webscr" method="post" style="display:none;" id="paypal-view-cart">
+    <input type="hidden" name="cmd" value="_cart">
+    <input type="hidden" name="business" value="support@daheardit-records.net">
+    <input type="image" src="https://www.paypal.com/fr_XC/i/btn/view_cart_new.gif" border="0" name="submit" alt="Payez avec PayPal : une solution rapide, gratuite et sécurisée!">
+    <input type="hidden" name="display" value="1">
   </form>
 
 <script type="text/javascript" src="http://o.aolcdn.com/os_merge/?file=/streampad/sp-player.js&amp;file=/streampad/sp-player-other.js&expsec=86400&ver=11&bgcolor=#000000&trackcolor=#29ABE2&clicktext=Click%20to%20play%20all%20audio%20posts&clickimg=true&btncolor=white-black"></script></body>

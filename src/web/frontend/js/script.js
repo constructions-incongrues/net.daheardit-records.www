@@ -1,17 +1,17 @@
 $(document).ready(function () {
-	// Donate link
-	$('a.donate').click(function() {
-		$('#paypal_id').val('3545843');
-		$('form#paypal').submit();
-		return false;
-	});
-
-	$('a.buy').click(function() {
+	// Paypal add to cart links
+	$('a.paypal').click(function() {
 		$('#paypal_id').val($(this).data('paypalid'));
 		$('form#paypal').submit();
 		return false;
 	});
-	
+
+	// Paypal view cart
+	$('a.paypal-cart').click(function() {
+		$('form#paypal-view-cart').submit();
+		return false;
+	});
+
 	/*
 	// Handles animation of content area
 	$('#content_async').on('pjax:end', function () {

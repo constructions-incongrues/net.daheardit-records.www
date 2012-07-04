@@ -16,7 +16,7 @@
             <h2><a data-pjax="#content_async" title="<?php echo sprintf('%s - %s', $release['Artist']['name'], $release['title']) ?>" href="<?php echo url_for(sprintf('@release_show?slug=%s#release', $release['slug'])) ?>"><?php echo truncate_text(sprintf('%s - %s', $release['Artist']['name'], $release['title']), 35) ?></a></h2>
 <?php if ($release['paypal_id']): ?>
             <ul class="releases_discography_button">
-              <li><a href="" data-paypalid="<?php echo $release['paypal_id'] ?>" class="buy"><?php echo __('Acheter') ?></a></li>
+              <li><a href="<?php echo url_for(sprintf('@release_show?slug=%s#release', $release['slug'])) ?>" ><?php echo __('Acheter') ?></a></li>
               <li><a href="<?php echo url_for(sprintf('@release_show?slug=%s#release', $release['slug'])) ?>"><?php echo __('Télécharger') ?></a></li>
             </ul>
 <?php else: ?>
