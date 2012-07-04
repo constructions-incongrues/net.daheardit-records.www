@@ -15,10 +15,6 @@ class postComponents extends sfComponents
                 ->fetchOne();
         }
 
-        if (!$post->image) {
-            $post->image = 'default.png';
-        }
-
         // Fetch previous post
         $postPrevious = Doctrine_Core::getTable('Post')->createQuery('p')
             ->orderBy('created_at desc')

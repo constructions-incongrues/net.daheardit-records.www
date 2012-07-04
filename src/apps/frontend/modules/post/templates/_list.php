@@ -1,7 +1,11 @@
 <div class="header_news_2_content">
   <div class="grid_12 header_news_2"> 
     <div class="grid_3 header_news_2_pictures">
+<?php if ($post->getImage()): ?>
       <p><a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/uploads/news/<?php echo $post->getImage() ?>" alt="" width="217" height="100" /></a></p>
+<?php else: ?>
+      <p><a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/micronews/default.png" width="217" height="100" /></a></p>
+<?php endif; ?>
     </div>
 
     <div class="grid_9 header_news_2_descr">
