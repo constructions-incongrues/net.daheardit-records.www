@@ -645,36 +645,39 @@ Content:
     links1: |
       <h2>Da ! Heard It Records</h2>
       <ul>
-        <li><a href="">Dogmazic</a></li>
-        <li><a href="">Discogs</a></li>
-        <li><a href="">Facebook</a></li>
-        <li><a href="">Free Music Archive</a></li>
-        <li><a href="">Google +</a></li>
-        <li><a href="">Last.fm</a></li>
-        <li><a href="">Twitter</a></li>
+        <li><a href="http://www.discogs.com/label/Da%20!%20Heard%20It%20Records">Discogs</a></li>
+        <li><a href="http://www.dogmazic.net/Da__Heard_It_Records">Dogmazic</a></li>
+        <li><a href="https://www.facebook.com/dahearditrecords">Facebook</a></li>
+        <li><a href="http://freemusicarchive.org/label/Da__Heard_It_Records/">Free Music Archive</a></li>
+        <li><a href="https://plus.google.com/102985904813984001814">Google +</a></li>
+        <li><a href="http://www.lastfm.fr/label/Da+!+Heard+It+Records">Last.fm</a></li>
+        <li><a href="https://twitter.com/#!/daheardit">Twitter</a></li>
+        <li><a href="https://vimeo.com/channels/dahearditrecords">Vimeo</a></li>
       </ul>
       <h2>Labels</h2>
       <ul>
-        <li><a href="">8bitpeoples</a></li>
-        <li><a href="">Ego Twister </a></li>
-        <li><a href="">Proot Records</a></li>
+        <li><a href="http://www.8bitpeoples.com/">8bitpeoples</a></li>
+        <li><a href="http://www.darlingdada.com/">Darling Dada</a></li>
+        <li><a href="http://www.egotwister.com/">Ego Twister </a></li>
+        <li><a href="http://prootrecords.com/">Proot Records</a></li>
       </ul>
     links2: |
       <h2>Radios</h2>
       <ul>
-        <li><a href="">Mazemod</a></li>
-        <li><a href="">Musique Approximative</a></li>
-        <li><a href="">Ouïedire</a></li>
-        <li><a href="">The Brain</a></li>
-        <li><a href="">Radio Clash</a></li>
-        <li><a href="">We Are Not Toys</a></li>
+        <li><a href="http://www.mazemod.org/">Mazemod</a></li>
+        <li><a href="http://musiqueapproximative.net/">Musique Approximative</a></li>
+        <li><a href="http://www.ouiedire.net">Ouïedire</a></li>
+        <li><a href="http://www.thebrainradio.com/">The Brain</a></li>
+        <li><a href="http://www.thisisradioclash.org/">Radio Clash</a></li>
+        <li><a href="http://want.benetbene.net/">We Are Not Toys</a></li>
       </ul>
       <h2>Friends</h2>
       <ul>
-        <li><a href="">otro</a></li>
-        <li><a href="">Mobyone</a></li>
-        <li><a href="">Nazilla </a></li>
-        <li><a href="">Superpromotion </a></li>
+        <li><a href="http://www.ilbm.info/">otro</a></li>
+        <li><a href="http://mobyone.net/">Mobyone</a></li>
+        <li><a href="http://www.musiques-incongrues.net/forum/">Musiques Incongrues</a></li>
+        <li><a href="http://www.nazzilla.com/">Nazilla </a></li>
+        <li><a href="http://www.thibaulthuertas.com/">Thibault Huertas</a></li>
       </ul>
     footer_video: |
       <iframe src="http://player.vimeo.com/video/5997914?byline=0&amp;portrait=0" width="350" height="300" class="infos_vids_embed" frameborder="0"></iframe>
@@ -682,27 +685,48 @@ Content:
       fr:
         informations: |
           Créé en 2006, Da ! Heard it Records est un net-label flirtant avec les musiques Toyz-Pop, Electro Trash, Chiptune, Breakcore, Techno Parodique, Electro Punk, Acid, etc, avec un goût prononcé pour le 8-bit et le pixel art. Label éclectique, il a pour ambition de promouvoir de nouveaux artistes et des nouvelles musiques. D!HR est un label ouvert au monde, tant aux artistes professionnels qu'aux amateurs, accessible à tout auditeur de par sa position engagée sur la culture libre et gratuite et par la nature de ses publications. En effet, chaque sortie est téléchargeable gratuitement sur le site, dans divers formats audios et disponible en CD série limitée à un prix abordable. Les morceaux sont diffusés sous une licence Creative Commons, encourageant le partage et la réutilisation des œuvres.
-        credits: |
-          <ul>
-            <li>Johan Mailleret Initiateur du projet</li>
-            <li>Michel Bertier Hébergeur dopé au pastis</li>
-            <li>Nazzilla Cloud designer</li>
-          </ul>
         greetings: |
-          Bimbo Tower, Danielle, Didi, Fita, Gabriel, Maryn, Momo Seb, Parasite, Paul, Valkiri, Vincent, les copains ainsi que les graphistes
-      en:
+          <a href="http://www.myspace.com/astroboiler/">Astroboiler</a>,
+          <a href="http://www.benetbene.net">Ben Et Béné</a>,
+          <a href="http://www.buskerdroid.com/">Buskerdroid</a>,
+          <a href="">Bimbo Tower</a>,
+          <a href="http://computertruck.parishq.net">Computer Truck</a>,
+          <a href="http://www.constructions-incongrues.net/">Constructions Incongrues</a>
+          Danielle Josset,
+          Denni Montono,
+          <a href="">http://entter.com/">Entter</a>,
+          Fita,
+          Gabriel,
+          <a href="http://cochise.canalblog.com/">Jacques Cochise</a>,
+          <a href="http://www.julienbodechon.com/">Julien Bodechon</a>,
+          <a href="http://www.egotwister.com/guyom/index/">[guÿôm]</a>,
+          <a href="http//www.goto80.com">Goto80</a>
+          <a href="http://festen.fr">Maryn</a>,
+          <a href="http/www.miniroc.com">Mini Roc</a>,
+          Momo Seb,
+          <a href="http://valkiri.incongru.org">Valkiri</a>,
+          <a href="http://www.mobyone.net">Mobyone</a>, 
+          <a href="http://www.ilbm.info">Ilbm</a>
+          <a href="http://pastis-hosting.net">Pastis Hosting</a>, 
+          Ptite Gonze,
+          <a href="http://puyopuyo.lautre.net/">Puyo Puyo</a>,
+          <a href="http://www.pocketmaster.ch/">Pocketmaster</a>,
+          <a href="http://templevengeance.incongru.org/">Satanik Mike</a>,
+          <a href="http://ww.myspace.com/sputnikbooster">Sputnik Booster</a>,
+          <a href="http://www.sidabitball.com/">Sidabitball</a>,
+          <a href="http://www.sidabitball.com/">Sidabitball</a>,
+          <a href="http://grogore.free.fr/"">Shoboshobo</a>,
+          <a href="http://roddroid.free.fr/">Rod Droid</a>,
+          <a href="http://www.thibaulthuertas.com/">Thibault Huertas</a>,
+          Tom Woxom,
+          <a href="http://www.vic-net.com/">Vicnet</a>,
+          <a href="http://www.xerak.com">Xerak</a>,      en:
         informations: |
           Da ! Heard it Records, created in 2006, is a net-label touching on Toyz-Pop, Electro Trash, Chiptune, Breakcore and Electro Punk among others, with a heavy leaning towards 8-bit music and pixel/net art.
           The aim of this eclectic record company is to promote new artists and new types if music. D!HR is an outward-looking label, accessible to professional and amateur musicians alike, and to all types of listener, thanks to its policy of open and free culture and to the types of music it publishes.
           Its albums are distributed under a Creative Commons licence, encouraging sharing and reuse of the music.
           Now you can discover the musical universe of Da ! Heard It Records (Ben Et Bené, Xerak, Goto80, Mini Roc, Sidabitball, Sputnik Booster, Computer Truck, ...) on site
           By subscribing to the rss feed or newsletter you will be kept informed of upcoming releases of Le Chien Violet,Aniaetleprogrammeur, etc.
-        credits: |
-          <ul>
-            <li>Johan Mailleret Initiateur du projet</li>
-            <li>Michel Bertier Hébergeur dopé au pastis</li>
-            <li>Nazzilla Cloud designer</li>
-          </ul>
         greetings: |
           Bimbo Tower, Danielle, Didi, Fita, Gabriel, Maryn, Momo Seb, Parasite, Valkiri, Vincent, also our friends ∧ graphist
 
