@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Da ! Heart It Records - T'es perdu ?</title>
+  <style>
+html { 
+  margin:0;
+  padding:0;
+  background: url(@dhr.url.root@/frontend/pics/errors/500.jpg) no-repeat center fixed; 
+  -webkit-background-size: cover; /* pour Chrome et Safari */
+  -moz-background-size: cover; /* pour Firefox */
+  -o-background-size: cover; /* pour Opera */
+  background-size: cover; /* version standardisée */
+}
+
+.click 
+{
+  margin:0;
+  padding:0;
+    background: url(@dhr.url.root@/frontend/pics/errors/click.png) no-repeat center fixed; 
+
+  -webkit-background-size: cover; /* pour Chrome et Safari */
+  -moz-background-size: cover; /* pour Firefox */
+  -o-background-size: cover; /* pour Opera */
+  background-size: cover; /* version standardisée */
+}
+</style>
+
+</head>
+<body>
+	<p><a href="@dhr.url.root@"> <img src="@dhr.url.root@/frontend/pics/errors/click.png" class="click"/></a></p>
+</body>
+</html>
