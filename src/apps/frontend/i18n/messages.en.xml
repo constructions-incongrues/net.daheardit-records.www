@@ -104,6 +104,14 @@
         <source>Épuisé</source>
         <target>Out of Stock</target>
       </trans-unit>
+      <trans-unit id="26">
+        <source>Da ! Heard It Records : Dernières Nouvelles</source>
+        <target>Da ! Heard It Records : Latest Newss</target>
+      </trans-unit>
+      <trans-unit id="27">
+        <source>Flux RSS des dernières nouvelles</source>
+        <target>Latest news RSS feed</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
