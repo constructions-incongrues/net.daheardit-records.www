@@ -90,7 +90,6 @@ Content:
     Timestampable: ~
   columns:
     informations: string
-    credits:      string
     greetings:    string
     links1:       string
     links2:       string

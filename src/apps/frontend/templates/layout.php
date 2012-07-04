@@ -2,14 +2,12 @@
 <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
 <!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
 <!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="<?php echo $sf_request->getParameter('sf_culture', 'fr') ?>" prefix="og: http://ogp.me/ns#"> <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> -->
 
   <title><?php echo $sf_response->getTitle() ?> | Da ! Heard It Records</title>
-  <meta name="description" content="">
-  <meta name="author" content="">
 
   <meta name="viewport" content="width=device-width,initial-scale=1">
 
