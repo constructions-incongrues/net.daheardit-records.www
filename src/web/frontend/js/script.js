@@ -12,6 +12,25 @@ $(document).ready(function () {
 		return false;
 	});
 
+	// Build playlist
+	var playlist = [];
+	$('.open_releases_playlist li a').each(function() {
+		playlist.push({
+			mp3: $(this).attr('href'),
+			title: $(this).text()
+		});
+	});
+
+	new jPlayerPlaylist(
+		{
+			solution: 'flash, html',
+			swfPath: dhrUriRoot + "/frontend/js/jQuery.jPlayer.2.1.0/",
+			jPlayer: "#jquery_jplayer_1", 
+			cssSelectorAncestor: "#jp_container_1",
+			supplied: "mp3"
+		}, 
+	playlist);
+
 	/*
 	// Handles animation of content area
 	$('#content_async').on('pjax:end', function () {
