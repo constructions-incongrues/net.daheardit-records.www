@@ -34,6 +34,17 @@ class releaseActions extends sfActions
             );
         }
 
+        // Press
+        // Find images scans
+        $releaseArray['press'] = array();
+        $pathsScans = glob(sprintf('%s/assets/releases/%s/press/*', sfConfig::get('sf_web_dir'), $release['slug']));
+        foreach ($pathsScans as $path) {
+            $releaseArray['press'][] = array(
+                'title' => ucfirst(str_replace('_', ' ', basename($path, '.jpg'))),
+                'path'  => str_replace(sfConfig::get('sf_web_dir'), '', $path)
+            );
+        }
+
         // Get previous release
         $pdo = Doctrine_Manager::getInstance()->getCurrentConnection()->getDbh();
         $stmt = $pdo->prepare('select slug, title, sku from  `release` where slug < :slug order by slug desc limit 1');

@@ -92,6 +92,16 @@
 <?php echo nl2br($release['Translation'][$sf_user->getCulture()]['presentation']) ?>
     </p>
 
+<?php if (count($release['press'])): ?>
+    <h1 class="open_releases_title"><?php echo __('Ils en parlent') ?></h1>
+    <ul>
+  <?php foreach ($release['press'] as $scan): ?>
+      <li><a href="<?php echo $sf_request->getRelativeUrlRoot().$scan['path'] ?>"><?php echo basename($scan['title']) ?></a></li>
+  <?php endforeach ?>
+
+    </ul>
+<?php endif ?>
+
 <?php if (count($archives)): ?>
     <h2 class="open_releases_title"><?php echo __('Télécharger l\'album gratuitement') ?></h2>
     <ul class="open_releases_download">
