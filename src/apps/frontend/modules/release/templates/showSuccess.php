@@ -94,10 +94,11 @@
 
 <?php if (count($release['press'])): ?>
     <h1 class="open_releases_title"><?php echo __('Ils en parlent') ?></h1>
-    <ul>
+    <ul class="open_releases_reviews">
   <?php foreach ($release['press'] as $link): ?>
       <li><a href="<?php echo $link['url'] ?>"><?php echo basename($link['title']) ?></a></li>
   <?php endforeach ?>
+
     </ul>
 <?php endif ?>
 

@@ -67,7 +67,7 @@ margin-right: auto;
 } 
 
 
-.triangle img {position: absolute;top:-4.2px;}
+.triangle img {position: absolute;top:-4.2px!important;}
 
 .artists h1,
 .releases h1,
@@ -507,7 +507,7 @@ background-repeat:no-repeat;
 height:16px;
 width:68px;
 position: absolute;
-top:20px;
+top:30px;
 background-image:url(../pics/icon/nouveau.png);
 font-family: 'Tempesta', sans-serif;
 font-size:8px;
@@ -577,21 +577,21 @@ margin-bottom:7px;
 .releases_discography_button  li
 {
 display:inline;
-padding:2px;
+padding:0px;
 margin:0px;
 font-size:10px;
 font-size:1rem;
+
 }
 
-.releases_discography_button li a, .releases_discography_button li 
+.releases_discography_button li a
 {
 background-color:#000;
 color:#29ABE2;
 text-decoration:none;
-padding:5px;
 font-weight:normal;
 text-transform:uppercase;
-
+padding:5px;
 }
 
 .releases_discography_button li a:hover 
@@ -951,6 +951,36 @@ border:none}
 /* OPEN RELEASES
 ***************************************************************/
 
+
+.open_releases_reviews li
+{
+  display:inline;
+    margin:4px;
+
+}
+
+.open_releases_reviews li:first-child
+{
+  margin-left:10px;
+}
+.open_releases_reviews li a
+{
+  display:inline;
+  background-color:#E6E6E6;
+  color:#333333;
+  padding-bottom:5px;
+  padding-left:5px;
+  padding-right:5px;
+  padding-top:5px;
+  text-decoration:none;
+    margin-bottom:10px;
+}
+
+.open_releases_reviews li a:hover
+{
+background-color:#000;
+color:#FFF;
+}
 .open_releases_infos
 {
 margin-top:-13px;
@@ -1247,7 +1277,7 @@ ul.open_releases_download
   .open_releases_download a 
   {
     background-color:#e6e6e6;
-    padding:5px;
+    padding:7px;
 
 
   }
@@ -1255,8 +1285,8 @@ ul.open_releases_download
   {
     background-color:#000;
     color:#FFF; 
-    padding:5px;
   }
+
 
 
 
@@ -1412,7 +1442,8 @@ color:#FFF;
 position:absolute;
 padding:15px;
 margin-top:45px;
-margin-left:-120px;
+margin-left:-320px;
+width:300px;
 background:rgba(0,0,0,.9);
 
 opacity:0;
