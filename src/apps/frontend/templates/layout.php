@@ -62,8 +62,8 @@
 
         <div class="grid_12 header_news_1">
           <div class="header_news_1_content">
-            <h1><a href="<?php echo url_for('@artist_show?slug=les-robots-musique') ?>">Les Robots Musiques</a></h1>
-            <h2><a href="<?php echo url_for('@release_show?slug=dhr-18') ?>">Puyo Puyo &amp; Rod Droid</a></h2>
+            <h1><a href="<?php echo url_for('@artist_show?slug=les-robots-musique#artist') ?>">Les Robots Musiques</a></h1>
+            <h2><a href="<?php echo url_for('@release_show?slug=dhr-18#release') ?>">Puyo Puyo &amp; Rod Droid</a></h2>
           </div><!-- header_news_1_content -->
         </div><!-- end of header_news_1 -->
 
@@ -174,6 +174,7 @@
             <p><?php echo __('Merci d\'envoyer vos demos par la poste ou par e-mail à') ?>
               <a href="mailto:demo@daheardit-records.net">demo@daheardit-records.net</a></p>
 
+              <!--
               <h2><?php echo __('Formulaire de contact') ?></h2>
               <form action="send.php" method="post">
 
@@ -189,7 +190,7 @@
                   <p><input type="submit" value="Envoyer" class="valid"/> </p>
                 </form>
                 <p id="required_legend">*   <?php echo __('Champs Obligatoires') ?> </p>
-
+                -->
 
               </div><!-- end of .contact -->
 
