@@ -35,13 +35,22 @@ class releaseActions extends sfActions
         }
 
         // Press
-        // Find images scans
         $releaseArray['press'] = array();
+
+        // Find images scans
         $pathsScans = glob(sprintf('%s/assets/releases/%s/press/*', sfConfig::get('sf_web_dir'), $release['slug']));
         foreach ($pathsScans as $path) {
             $releaseArray['press'][] = array(
                 'title' => ucfirst(str_replace('_', ' ', basename($path, '.jpg'))),
-                'path'  => str_replace(sfConfig::get('sf_web_dir'), '', $path)
+                'url'  => $request->getRelativeUrlRoot().str_replace(sfConfig::get('sf_web_dir'), '', $path)
+            );
+        }
+
+        // Web articles
+        foreach (explode("\n", $releaseArray['links_press']) as $url) {
+            $releaseArray['press'][] = array(
+                'title' => ucfirst(str_replace('www.', '', parse_url($url, PHP_URL_HOST))),
+                'url'  => $url
             );
         }
 

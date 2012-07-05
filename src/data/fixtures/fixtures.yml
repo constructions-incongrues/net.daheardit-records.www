@@ -367,6 +367,10 @@ Release:
     Artist: computertruck
     paypal_id: 5AZL7SJHW9DTG
     is_available: false
+    links_press: |
+      http://www.radiofrance.fr/chaines/france-culture2/emissions_ete/tentatives/fiche.php?diffusion_id=52425
+      http://www.thefrenchtouch.org/tft/objet.php?objet=1752&session_tft_new=8ebe7f7077c450c635d99499373d69d0
+      http://gratisvibes.com/post/2-step-8-bit/
     Translation:
       fr:
         presentation: |
@@ -381,6 +385,9 @@ Release:
     slug: dhr-02
     Artist: goto80
     paypal_id: RTLDMM5DQKL2Y
+    links_press: |
+      http://gratisvibes.com/post/goto80-and-digi-dig/
+      http://www.culture-netlabel.com/content/view/144/63/
     Translation:
       fr:
         presentation: |
@@ -397,6 +404,9 @@ Release:
     Artist: benetbene
     paypal_id: JGY7S2LRHML66
     is_available: false
+    links_press: |
+      http://www.electrochoc.org/index.php?2007/06/05/323-ben-et-bene-da-heard-it-records-myspace
+      http://www.thefrenchtouch.org/tft/objet.php?objet=2145
     Translation:
       fr:
         presentation: |
@@ -415,6 +425,8 @@ Release:
     slug: dhr-04
     Artist: xerak
     paypal_id: PYPDDAE2ZZ92L
+    links_press: |
+      http://www.thefrenchtouch.org/tft/objet.php?objet=2138
     Translation:
       fr:
         presentation: |
@@ -430,6 +442,8 @@ Release:
     slug: dhr-05
     Artist: miniroc
     paypal_id: EBH7WQWHU478C
+    links_press: |
+      http://www.musicaoltranza.net/
     Translation:
       fr:
         presentation: |
@@ -557,6 +571,10 @@ Release:
     slug: dhr-12
     Artist: vicnet
     paypal_id: 6ZQL27VVGR3PL
+    links_press: |
+      http://netlabelsrevue.blogspot.com/2010/04/vicnet-mr-hadopi.html
+      http://www.etherreal.com/spip.php?article3562
+      http://globaltechno.wordpress.com/2010/02/08/comment-faire-la-nique-a-la-loi-hadopi-telechargez-vicnet/
     Translation:
       fr:
         presentation: |
@@ -580,6 +598,8 @@ Release:
     slug: dhr-13
     Artist: pocketmaster
     paypal_id: FVHECLBV6TPMC
+    links_press: |
+      http://www.poin-poin.com/dressez-vos-esgourdes-mainmenu-35/79-indusmusiques-nouvelles/777-pocketmaster-residue
     Translation:
       fr:
         presentation: |
@@ -605,6 +625,8 @@ Release:
     slug: dhr-14
     Artist: astroboiler
     paypal_id: 6HMMP5W6Y8B9S
+    links_press: |
+      http://etherreal.com/spip.php?article4106
     Translation:
       fr:
         presentation: |

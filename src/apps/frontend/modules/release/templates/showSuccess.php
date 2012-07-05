@@ -95,10 +95,9 @@
 <?php if (count($release['press'])): ?>
     <h1 class="open_releases_title"><?php echo __('Ils en parlent') ?></h1>
     <ul>
-  <?php foreach ($release['press'] as $scan): ?>
-      <li><a href="<?php echo $sf_request->getRelativeUrlRoot().$scan['path'] ?>"><?php echo basename($scan['title']) ?></a></li>
+  <?php foreach ($release['press'] as $link): ?>
+      <li><a href="<?php echo $link['url'] ?>"><?php echo basename($link['title']) ?></a></li>
   <?php endforeach ?>
-
     </ul>
 <?php endif ?>
 
