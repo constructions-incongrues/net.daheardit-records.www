@@ -290,6 +290,7 @@ Release:
     slug: dhr-01
     Artist: computertruck
     paypal_id: 5AZL7SJHW9DTG
+    is_available: false
     Translation:
       fr:
         presentation: |
@@ -319,6 +320,7 @@ Release:
     slug: dhr-03
     Artist: benetbene
     paypal_id: JGY7S2LRHML66
+    is_available: false
     Translation:
       fr:
         presentation: |
