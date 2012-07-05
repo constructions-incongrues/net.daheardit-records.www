@@ -44,9 +44,9 @@
     <ul class="open_releases_playlist">
 <?php foreach ($release['tracks'] as $track): ?>
     <?php if ($track['number'] < 10): ?>
-      <li><a href="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/releases/<?php echo $release['slug'] ?>/tracks/0<?php echo $track['number'] ?>_<?php echo $track['slug'] ?>.mp3"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/play.png" alt="play" class="open_releases_playlist_icon_play" /><?php echo $track['title'] ?></a></li>
+      <li><a href="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/releases/<?php echo $release['slug'] ?>/tracks/<?php echo str_replace('-', '', $release['slug']) ?>_0<?php echo $track['number'] ?>.mp3"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/play.png" alt="play" class="open_releases_playlist_icon_play" /><?php echo $track['title'] ?></a></li>
     <?php else: ?>
-      <li><a href="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/releases/<?php echo $release['slug'] ?>/tracks/<?php echo $track['number'] ?>_<?php echo $track['slug'] ?>.mp3"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/play.png" alt="play" class="open_releases_playlist_icon_play" /><?php echo $track['title'] ?></a></li>
+      <li><a href="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/releases/<?php echo $release['slug'] ?>/tracks/<?php echo str_replace('-', '', $release['slug']) ?>_<?php echo $track['number'] ?>.mp3"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/play.png" alt="play" class="open_releases_playlist_icon_play" /><?php echo $track['title'] ?></a></li>
     <?php endif; ?> 
 <?php endforeach; ?>
     </ul>
@@ -60,7 +60,7 @@
     <h2 class="open_releases_title"><?php echo __('Télécharger l\'album gratuitement') ?></h2>
     <ul class="open_releases_download">
   <?php foreach ($archives as $archive): ?>
-      <li><a href="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/releases/<?php echo $release['slug'] ?>/archives/<?php echo $archive['filename'] ?>"><?php echo $archive['name'] ?></a></li>
+      <li><a href="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/releases/<?php echo $release['slug'] ?>/archives/<?php echo $archive['filename'] ?>"><?php echo strtoupper($archive['name']) ?></a></li>
   <?php endforeach ?>
     </ul>
 <?php endif ?>
@@ -74,8 +74,8 @@
   <ul class="open_releases_share_button">
             <li><?php echo __('Partager') ?></li>
             <!--<li><a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/img-twitter-b.png" alt="" /></a></li>-->
-            <li><a target="_blank" href="https://plus.google.com/share?url=<?php echo url_for('@release_show?slug='.$release['slug'])?>"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/google+-b.png" alt="" /></a></li>
-            <li><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo url_for('@release_show?slug='.$release['slug'])?>"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/img-facebook-b.png" /></a></li>
+            <li><a target="_blank" href="https://plus.google.com/share?url=<?php echo url_for('@release_show?slug='.$release['slug'], true)?>"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/google+-b.png" alt="" /></a></li>
+            <li><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo url_for('@release_show?slug='.$release['slug'], true)?>"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/img-facebook-b.png" /></a></li>
           </ul>
     </div><!-- end of grid_6 -->
   </div><!-- enf of release_content -->
