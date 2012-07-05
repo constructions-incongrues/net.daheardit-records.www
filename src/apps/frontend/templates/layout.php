@@ -62,7 +62,7 @@
 
         <div class="grid_12 header_news_1">
           <div class="header_news_1_content">
-            <h1><a href="<?php echo url_for('@artist_show?slug=les-robots-musique#artist') ?>">Les Robots Musiques</a></h1>
+            <h1><a href="<?php echo url_for('@artist_show?slug=les-robots-musique#artist') ?>">Les Robots Musique</a></h1>
             <h2><a href="<?php echo url_for('@release_show?slug=dhr-18#release') ?>">Puyo Puyo &amp; Rod Droid</a></h2>
           </div><!-- header_news_1_content -->
         </div><!-- end of header_news_1 -->
@@ -238,6 +238,5 @@
     <input type="image" src="https://www.paypal.com/fr_XC/i/btn/view_cart_new.gif" border="0" name="submit" alt="Payez avec PayPal : une solution rapide, gratuite et sécurisée!">
     <input type="hidden" name="display" value="1">
   </form>
-
-<!-- <script type="text/javascript" src="http://o.aolcdn.com/os_merge/?file=/streampad/sp-player.js&amp;file=/streampad/sp-player-other.js&expsec=86400&ver=11&bgcolor=#000000&trackcolor=#29ABE2&clicktext=Click%20to%20play%20all%20audio%20posts&clickimg=true&btncolor=white-black"></script></body> -->
+  
 </html>
