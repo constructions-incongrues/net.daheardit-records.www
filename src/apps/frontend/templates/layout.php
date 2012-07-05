@@ -5,6 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="<?php echo $sf_request->getParameter('sf_culture', 'fr') ?>" prefix="og: http://ogp.me/ns#"> <!--<![endif]-->
 <head>
   <meta charset="utf-8">
+  <meta name="google-site-verification" content="GZLJrrM8tvBsh05BvBY8GHUsEFhojyg5inFZAfaHh-Y" />
   <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> -->
 
   <title><?php echo $sf_response->getTitle() ?> | Da ! Heard It Records</title>

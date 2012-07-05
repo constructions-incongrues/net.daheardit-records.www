@@ -47,11 +47,14 @@ class releaseActions extends sfActions
         }
 
         // Web articles
-        foreach (explode("\n", $releaseArray['links_press']) as $url) {
-            $releaseArray['press'][] = array(
-                'title' => ucfirst(str_replace('www.', '', parse_url($url, PHP_URL_HOST))),
-                'url'  => $url
-            );
+        $urls = explode("\n", $releaseArray['links_press']);
+        if ($urls[0]) {
+            foreach ($urls as $url) {
+                $releaseArray['press'][] = array(
+                    'title' => ucfirst(str_replace('www.', '', parse_url($url, PHP_URL_HOST))),
+                    'url'  => $url
+                );
+            }
         }
 
         // Get previous release
