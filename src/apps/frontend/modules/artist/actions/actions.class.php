@@ -44,6 +44,9 @@ class artistActions extends sfActions
             $nextArtist = $next[0];
         }
 
+        // Carousel
+        $artistArray['links_carousel'] = explode("\n", $artistArray['links_carousel']);
+
         // Configure response
         $this->getResponse()->setTitle($artist['name']);
 

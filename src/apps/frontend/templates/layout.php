@@ -16,8 +16,6 @@
   <link rel="stylesheet" type="text/css" media="all" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/css/lib/960.gs/text.css" />
   <link rel="stylesheet" type="text/css" media="all" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/css/lib/960.gs/fluid_grid.css" />
 
-  <!-- <link rel="stylesheet" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/js/jQuery.jPlayer.2.1.0/skins/blue.monday/jplayer.blue.monday.css" type="text/css" media="screen" /> -->
-
   <link rel="stylesheet" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/css/main.css">
   
 <?php if (sfConfig::get('app_feeds_use_feedburner', false)): ?>
@@ -63,8 +61,8 @@
 
         <div class="grid_12 header_news_1">
           <div class="header_news_1_content">
-            <h1><a href="">Les Robots Musiques</a></h1>
-            <h2><a href="">Puyo Puyo &amp; Rob Droid</a></h2>
+            <h1><a href="<?php echo url_for('@artist_show?slug=les-robots-musique') ?>">Les Robots Musiques</a></h1>
+            <h2><a href="<?php echo url_for('@release_show?slug=dhr-18') ?>">Puyo Puyo &amp; Rob Droid</a></h2>
           </div><!-- header_news_1_content -->
         </div><!-- end of header_news_1 -->
 

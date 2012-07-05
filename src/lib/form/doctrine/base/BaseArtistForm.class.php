@@ -15,27 +15,29 @@ abstract class BaseArtistForm extends BaseFormDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'id'         => new sfWidgetFormInputHidden(),
-      'name'       => new sfWidgetFormTextarea(),
-      'url'        => new sfWidgetFormTextarea(),
-      'image'      => new sfWidgetFormTextarea(),
-      'more'       => new sfWidgetFormTextarea(),
-      'is_public'  => new sfWidgetFormInputCheckbox(),
-      'slug'       => new sfWidgetFormInputText(),
-      'created_at' => new sfWidgetFormDateTime(),
-      'updated_at' => new sfWidgetFormDateTime(),
+      'id'             => new sfWidgetFormInputHidden(),
+      'name'           => new sfWidgetFormTextarea(),
+      'url'            => new sfWidgetFormTextarea(),
+      'image'          => new sfWidgetFormTextarea(),
+      'links_carousel' => new sfWidgetFormInputText(),
+      'more'           => new sfWidgetFormTextarea(),
+      'is_public'      => new sfWidgetFormInputCheckbox(),
+      'slug'           => new sfWidgetFormInputText(),
+      'created_at'     => new sfWidgetFormDateTime(),
+      'updated_at'     => new sfWidgetFormDateTime(),
     ));
 
     $this->setValidators(array(
-      'id'         => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
-      'name'       => new sfValidatorString(),
-      'url'        => new sfValidatorRegex(array('pattern' => '|^http(s)?://[a-z0-9-]+(.[a-z0-9-]+)*(:[0-9]+)?(/.*)?$|', 'required' => false)),
-      'image'      => new sfValidatorString(array('required' => false)),
-      'more'       => new sfValidatorString(array('required' => false)),
-      'is_public'  => new sfValidatorBoolean(array('required' => false)),
-      'slug'       => new sfValidatorString(array('max_length' => 255, 'required' => false)),
-      'created_at' => new sfValidatorDateTime(),
-      'updated_at' => new sfValidatorDateTime(),
+      'id'             => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
+      'name'           => new sfValidatorString(),
+      'url'            => new sfValidatorRegex(array('pattern' => '|^http(s)?://[a-z0-9-]+(.[a-z0-9-]+)*(:[0-9]+)?(/.*)?$|', 'required' => false)),
+      'image'          => new sfValidatorString(array('required' => false)),
+      'links_carousel' => new sfValidatorPass(array('required' => false)),
+      'more'           => new sfValidatorString(array('required' => false)),
+      'is_public'      => new sfValidatorBoolean(array('required' => false)),
+      'slug'           => new sfValidatorString(array('max_length' => 255, 'required' => false)),
+      'created_at'     => new sfValidatorDateTime(),
+      'updated_at'     => new sfValidatorDateTime(),
     ));
 
     $this->validatorSchema->setPostValidator(

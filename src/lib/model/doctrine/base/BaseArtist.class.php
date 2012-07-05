@@ -9,24 +9,27 @@
  * @property string $url
  * @property string $image
  * @property string $presentation
+ * @property text $links_carousel
  * @property string $more
  * @property boolean $is_public
  * @property Doctrine_Collection $Release
  * 
- * @method string              getName()         Returns the current record's "name" value
- * @method string              getUrl()          Returns the current record's "url" value
- * @method string              getImage()        Returns the current record's "image" value
- * @method string              getPresentation() Returns the current record's "presentation" value
- * @method string              getMore()         Returns the current record's "more" value
- * @method boolean             getIsPublic()     Returns the current record's "is_public" value
- * @method Doctrine_Collection getRelease()      Returns the current record's "Release" collection
- * @method Artist              setName()         Sets the current record's "name" value
- * @method Artist              setUrl()          Sets the current record's "url" value
- * @method Artist              setImage()        Sets the current record's "image" value
- * @method Artist              setPresentation() Sets the current record's "presentation" value
- * @method Artist              setMore()         Sets the current record's "more" value
- * @method Artist              setIsPublic()     Sets the current record's "is_public" value
- * @method Artist              setRelease()      Sets the current record's "Release" collection
+ * @method string              getName()           Returns the current record's "name" value
+ * @method string              getUrl()            Returns the current record's "url" value
+ * @method string              getImage()          Returns the current record's "image" value
+ * @method string              getPresentation()   Returns the current record's "presentation" value
+ * @method text                getLinksCarousel()  Returns the current record's "links_carousel" value
+ * @method string              getMore()           Returns the current record's "more" value
+ * @method boolean             getIsPublic()       Returns the current record's "is_public" value
+ * @method Doctrine_Collection getRelease()        Returns the current record's "Release" collection
+ * @method Artist              setName()           Sets the current record's "name" value
+ * @method Artist              setUrl()            Sets the current record's "url" value
+ * @method Artist              setImage()          Sets the current record's "image" value
+ * @method Artist              setPresentation()   Sets the current record's "presentation" value
+ * @method Artist              setLinksCarousel()  Sets the current record's "links_carousel" value
+ * @method Artist              setMore()           Sets the current record's "more" value
+ * @method Artist              setIsPublic()       Sets the current record's "is_public" value
+ * @method Artist              setRelease()        Sets the current record's "Release" collection
  * 
  * @package    net.daheardit-records.www
  * @subpackage model
@@ -51,6 +54,9 @@ abstract class BaseArtist extends sfDoctrineRecord
              ));
         $this->hasColumn('presentation', 'string', null, array(
              'type' => 'string',
+             ));
+        $this->hasColumn('links_carousel', 'text', null, array(
+             'type' => 'text',
              ));
         $this->hasColumn('more', 'string', null, array(
              'type' => 'string',

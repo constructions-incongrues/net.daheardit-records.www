@@ -12,6 +12,7 @@ $(document).ready(function () {
 		return false;
 	});
 
+	// Media player
 	if ($('.open_releases_playlist li a')) {
 		// Build playlist
 		var playlist = [];
@@ -25,6 +26,33 @@ $(document).ready(function () {
 		// Media player
 		new jPlayerPlaylist(null, playlist, {solution: 'flash, html', swfPath: dhrUriRoot + "/frontend/js/jQuery.jPlayer.2.1.0/"});
 	}
+
+	// Carousels
+	$('a.carousel-nav').click(function() {
+		
+
+		// Vimeo
+		if ($(this).attr('href').match(/.*vimeo.*/)) {
+			$('#carousel-iframe').remove();
+			$('.calque_artists_pictures').hide();
+			var iframe = $('<iframe id="carousel-iframe" src="http://player.vimeo.com/video/'+ $(this).attr('href').match(/.*\/(\d+)/)[1] +'" width="460" height="460" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>')
+			$('#carousel-current').hide();
+			iframe.insertAfter('#carousel-current');
+		} else {
+			// Images
+			$('.calque_artists_pictures').show();
+			$('#carousel-current').show();
+			$('#carousel-iframe').hide();
+			$('#carousel-current').attr('src', $(this).attr('href'));
+		}
+
+		// Navigation
+		$('a.carousel-nav img').each(function() {
+			$(this).attr('src', dhrUriRoot + '/frontend/pics/button/caroussel-release.png');
+		});
+		$(this).find('img').attr('src', dhrUriRoot + '/frontend/pics/button/caroussel-release-hover.png');
+		return false;
+	});
 
 	/*
 	// Handles animation of content area

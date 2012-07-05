@@ -54,6 +54,14 @@ class releaseActions extends sfActions
             $nextRelease = $next[0];
         }
 
+        // Artwork
+        $artworks = array();
+        $pathsArtworks = glob(sprintf('%s/assets/releases/%s/images/*.png', sfConfig::get('sf_web_dir'), $release['slug']));
+        foreach ($pathsArtworks as $path) {
+            $artworks[] = str_replace(sfConfig::get('sf_web_dir'), '', $path);
+        }
+        $releaseArray['artworks'] = $artworks;
+
         // Opengraph 
         // TODO : this should go in a filter
         $headersOgp = array(
@@ -62,7 +70,6 @@ class releaseActions extends sfActions
             'image' => sprintf('http://next.daheardit-records.net/assets/releases/%s/images/%s_1.png', $release['slug'], $release['slug']),
             'description' => $release['Translation'][$request->getParameter('sf_culture', 'fr')]['presentation']
         );
-
         foreach ($headersOgp as $name => $value) {
             $this->getContext()->getResponse()->addMeta('og:'.$name, $value);
         }

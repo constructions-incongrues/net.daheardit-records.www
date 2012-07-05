@@ -24,7 +24,14 @@
 
     <div class="grid_6 open_artists_pictures">
       <span class="calque_artists_pictures"> </span>
-      <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/artists/<?php echo $artist['slug'] ?>/<?php echo $artist['slug'] ?>_300x300.jpg" alt="" />
+      <img id="carousel-current" height="460px" width="460px" src="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/artists/<?php echo $artist['slug'] ?>/<?php echo $artist['slug'] ?>_300x300.jpg" alt="" />
+      <ul class="open_releases_nav_artwork">
+            <li><a class="carousel-nav" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/artists/<?php echo $artist['slug'] ?>/<?php echo $artist['slug'] ?>_300x300.jpg"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/caroussel-release-hover.png" alt="" /></a></li>
+<?php for ($i = 1; $i < count($artist['links_carousel']); $i++): ?>
+            <li><a class="carousel-nav" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/<?php echo $artist['links_carousel'][$i] ?>"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/caroussel-release.png" alt="" /></a></li>
+<?php endfor ?>
+     </ul>
+
     </div><!-- end of grid_6 -->
     
     <div class="grid_6 open_artists_infos">
