@@ -55,6 +55,7 @@ Release:
       type:     integer
       notblank: true
       default:  5
+    links_press: text
 
 Track:
   actAs:

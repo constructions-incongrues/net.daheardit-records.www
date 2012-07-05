@@ -158,13 +158,11 @@
 			this._refresh(function() {
 				if(self.options.playlistOptions.autoPlay) {
 					self.play(self.current);
-				} else {
-					self.select(self.current);
 				}
 			});
 		},
 		_initPlaylist: function(playlist) {
-			this.current = 0;
+			this.current = -1;
 			this.shuffled = false;
 			this.removing = false;
 			this.original = $.extend(true, [], playlist); // Copy the Array of Objects

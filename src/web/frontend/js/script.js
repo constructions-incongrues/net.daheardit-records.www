@@ -24,7 +24,10 @@ $(document).ready(function () {
 		});
 
 		// Media player
-		new jPlayerPlaylist(null, playlist, {solution: 'flash, html', swfPath: dhrUriRoot + "/frontend/js/jQuery.jPlayer.2.1.0/"});
+		new jPlayerPlaylist(null, playlist, {
+			solution: 'flash, html', 
+			swfPath: dhrUriRoot + "/frontend/js/jQuery.jPlayer.2.1.0/"
+		});
 	}
 
 	// Carousels
