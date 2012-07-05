@@ -21,7 +21,7 @@
             </ul>
 <?php else: ?>
             <ul class="releases_discography_button">
-              <li><?php echo __('Épuisé') ?></li>
+              <li><a href="<?php echo url_for(sprintf('@release_show?slug=%s#release', $release['slug'])) ?>"><?php echo __('Épuisé') ?></a></li>
               <li><a href="<?php echo url_for(sprintf('@release_show?slug=%s#release', $release['slug'])) ?>"><?php echo __('Télécharger') ?></a></li>
             </ul>
 <?php endif; ?>
