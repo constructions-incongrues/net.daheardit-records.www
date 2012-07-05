@@ -211,6 +211,9 @@ Artist:
         <li><a href="https://www.facebook.com/officialpuyopuyo">Facebook/</a></li>
         <li><a href="http://www.myspace.com/puyopuyo">Myspace</a></li>
       <ul>
+    links_carousel: |
+      https://vimeo.com/11503305
+      https://vimeo.com/7233308
     Translation:
       fr:
         presentation: |
@@ -232,6 +235,9 @@ Artist:
       <ul>
         <li><a href="http://www.sidabitball.com/">www.sidabitball.com</a></li>
       <ul>
+    links_carousel: |
+      https://vimeo.com/14505117
+      https://vimeo.com/5998863
     Translation:
       fr:
         presentation: |
@@ -306,7 +312,8 @@ Artist:
         <li><a href="https://www.facebook.com/xerak">Facebook</a></li>
         <li><a href="http://www.myspace.com/xerak1">Myspace</a></li>
       <ul>
-    url: 
+    links_carousel: |
+      https://vimeo.com/14327568
     Translation:
       fr:
         presentation: |
