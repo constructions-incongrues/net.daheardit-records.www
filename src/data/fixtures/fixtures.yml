@@ -14,12 +14,11 @@ Artist:
   benetbene:
     id: 1
     name: Ben et Béné
-    url: http://www.benetbene.net
     more: |
       <ul>
-        <li><a href="">Myspace</a></li>
-        <li><a href="">Youtube</a></li>
-        <li><a href="">Dailymotion</a></li>
+        <li><a href="http://www.benetbene.net">www.benetbene.net</a></li>
+        <li><a href="https://www.facebook.com/pages/Ben-et-B%C3%A9n%C3%A9/20216379469">facebook</a></li>
+        <li><a href="http://www.myspace.com/benetbene">Myspace</a></li>
       <ul>
     Translation:
       fr:
@@ -39,7 +38,13 @@ Artist:
   buskerdroid:
     id: 2
     name: Buskerdroid
-    url: http://www.buskerdroid.com/
+    more: |
+      <ul>
+        <li><a href="http://www.buskerdroid.com/">http://www.buskerdroid.com/</a></li>
+        <li><a href="https://www.facebook.com/buskerdroid">Facebook</a></li>
+        <li><a href="http://www.myspace.com/buskerdroid">Myspace</a></li>
+        <li><a href="http://soundcloud.com/buskerdroid/sets">Soundcloud</a></li>
+      <ul>
     Translation:
       fr:
         presentation: |
@@ -51,7 +56,11 @@ Artist:
   computertruck:
     id: 3
     name: Computer Truck
-    url: http://computertruck.parishq.net
+    more: |
+      <ul>
+        <li><a href="http://computertruck.parishq.net">http://computertruck.parishq.net</a></li>
+        <li><a href="http://www.myspace.com/computertruck">Myspace</a></li>
+      <ul>
     Translation:
       fr:
         presentation: |
@@ -67,7 +76,11 @@ Artist:
   eatrabbit:
     id: 4
     name: Eat Rabbit
-    url: http://www.myspace.com/eatrabbit
+    more: |
+      <ul>
+        <li><a href="http://www.myspace.com/eatrabbit">Myspace</a></li>
+        <li><a href="https://www.facebook.com/eatrabbit">Facebook</a></li>
+      <ul>
     Translation:
       fr:
         presentation: |
@@ -79,7 +92,12 @@ Artist:
   goto80:
     id: 5
     name: Goto80
-    url: http://www.goto80.com/
+    more: |
+      <ul>
+        <li><a href="http://www.goto80.com">www.goto80.com</a></li>
+        <li><a href="https://www.facebook.com/goto80">Facebook</a></li>
+        <li><a href="http://twitter.com/#!/goto80">Twitter</a></li>
+      <ul>
     Translation:
       fr:
         presentation: |
@@ -105,7 +123,11 @@ Artist:
   guyom:
     id: 6
     name: "[guÿôm]"
-    url: http://www.myspace.com/guyoml
+    more: |
+      <ul>
+        <li><a href="http://www.egotwister.com/guyom/index/">www.egotwister.com/guyom/index/</a></li>
+        <li><a href="http://www.myspace.com/guyoml">Myspace</a></li>
+      <ul>
     Translation:
       fr:
         presentation: |
@@ -120,7 +142,10 @@ Artist:
   jacquescochise:
     id: 7
     name: "Jacques Cochise"
-    url: http://cochise.canalblog.com/
+    more: |
+      <ul>
+        <li><a href="http://cochise.canalblog.com/">http://cochise.canalblog.com/</a></li>
+      <ul>
     Translation:
       fr:
         presentation: |
@@ -132,7 +157,12 @@ Artist:
   miniroc:
     id: 8
     name: "Mini Roc"
-    url: http://www.miniroc.com/
+    more: |
+      <ul>
+        <li><a href="http://www.miniroc.com/">www.miniroc.com/</a></li>
+        <li><a href="http://www.myspace.com/miniroc">Myspace</a></li>
+      <ul>
+
     Translation:
       fr:
         presentation: |
@@ -150,7 +180,11 @@ Artist:
   pocketmaster:
     id: 10
     name: "Pocketmaster"
-    url: http://www.pocketmaster.ch/
+    more: |
+      <ul>
+        <li><a href="http://www.pocketmaster.ch/">www.pocketmaster.ch/</a></li>
+        <li><a href="http://www.myspace.com/pocketmaster">Myspace</a></li>
+      <ul>
     Translation:
       fr:
         presentation: |
@@ -166,7 +200,12 @@ Artist:
   puyopuyo:
     id: 11
     name: "Puyo Puyo"
-    url: http://puyopuyo.lautre.net/
+    more: |
+      <ul>
+        <li><a href="http://puyopuyo.lautre.net/">http://puyopuyo.lautre.net/</a></li>
+        <li><a href="https://www.facebook.com/officialpuyopuyo">Facebook/</a></li>
+        <li><a href="http://www.myspace.com/puyopuyo">Myspace</a></li>
+      <ul>
     Translation:
       fr:
         presentation: |
@@ -184,7 +223,10 @@ Artist:
   sidabitball:
     id: 12
     name: "Sidabitball"
-    url: http://www.sidabitball.com/
+    more: |
+      <ul>
+        <li><a href="http://www.sidabitball.com/">www.sidabitball.com</a></li>
+      <ul>
     Translation:
       fr:
         presentation: |
@@ -200,7 +242,11 @@ Artist:
   sputnikbooster:
     id: 13
     name: "Sputnik Booster"
-    url: http://www.myspace.com/sputnikbooster
+    more: |
+      <ul>
+        <li><a href="https://www.facebook.com/pages/Sputnik-Booster-The-Future-Posers/117490921652175">Facebook</a></li>
+        <li><a href="http://www.myspace.com/sputnikbooster">Myspace</a></li>
+      <ul>
     Translation:
       fr:
         presentation: |
@@ -213,7 +259,6 @@ Artist:
   tomwoxom:
     id: 14
     name: "Tom Woxom"
-    url: http://www.tom-woxom.de
     Translation:
       fr:
         presentation: |
@@ -230,7 +275,12 @@ Artist:
   vicnet:
     id: 15
     name: "Vicnet"
-    url: http://www.vic-net.com/
+    more: |
+      <ul>
+        <li><a href="http://www.vic-net.com/">www.vic-net.com</a></li>
+        <li><a href="https://www.facebook.com/pages/Vicnet/419589410001">Facebook</a></li>
+        <li><a href="http://www.myspace.com/vicnet">Myspace</a></li>
+      <ul>
     Translation:
       fr:
         presentation: |
@@ -245,7 +295,13 @@ Artist:
   xerak:
     id: 16
     name: "Xerak"
-    url: http://www.xerak.com/
+    more: |
+      <ul>
+        <li><a href="http://www.xerak.com/">www.xerak.com</a></li>
+        <li><a href="https://www.facebook.com/xerak">Facebook</a></li>
+        <li><a href="http://www.myspace.com/xerak1">Myspace</a></li>
+      <ul>
+    url: 
     Translation:
       fr:
         presentation: |
@@ -262,6 +318,10 @@ Artist:
   astroboiler:
     id: 17
     name: Astroboiler
+    more: |
+      <ul>
+        <li><a href="http://www.myspace.com/astroboiler>Myspace</a></li>
+      <ul>
     Translation:
       fr:
         presentation: |
@@ -272,6 +332,10 @@ Artist:
   lesrobotsmusique:
     id: 18
     name: Les Robots Musique
+     more: |
+      <ul>
+        <li><a href="http://www.myspace.com/lesrobotsmusique">Myspace</a></li>
+      <ul>
     Translation:
       fr:
         presentation: |

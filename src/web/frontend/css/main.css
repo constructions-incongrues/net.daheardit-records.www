@@ -985,7 +985,7 @@ margin-left:10px;
 
 h1.open_releases_title
 {
-margin-top:-10px;
+margin-top:20px;
 margin-left:10px;
 }
 h2.open_releases_title
@@ -1049,23 +1049,34 @@ margin:3px 0px 0px -30px;
 padding:2px 2px 2px 5px;
 }
 
-.open_releases_playlist a:hover 
+.open_releases_playlist a:hover
 {
 color:#FFF;
 text-decoration:none;
 background-color:#1a1a1a;
 }
 
-.open_releases_playlist_icon_play 
+ a.jp-playlist-current {
+color:#FFF!important;
+text-decoration:none;
+background-color:#1A1A1A!important;}
+
+
+
+span .open_releases_playlist_icon_play 
 {
-margin-top:-3px;
 margin-right:5px;
+color:#535353!important;
 }
 
-.open_releases_playlist_icon_play:hover 
+
+span .open_releases_playlist_icon_play:hover 
 {
-background-image:url("../pics/icon/play-hover.png");
+margin-right:5px;
+color:#FFF!important;
 }
+
+
 
 .open_releases_artwork
 {
@@ -1084,7 +1095,7 @@ margin-left:-4px;
 
 ul.open_releases_playlist
 {
-margin: 0.75em 0;
+margin: 0px 0.75em 0.75em 0;
 padding: 0 1em;
 list-style: none;
 }
@@ -1436,3 +1447,5 @@ opacity:1;
 /*transform*/
         transform:scale(1) rotateZ(0);
 }
+
+
