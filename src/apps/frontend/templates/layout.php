@@ -167,7 +167,8 @@
               Da ! Heard It Records <br/>
               C/O Johan Mailleret <br/>
               171, Rue Saint Charles <br/>
-              75015 PARIS FRANCE
+              75015 PARIS FRANCE<br />
+              <a href="mailto:contact@daheardit-records.net">contact@daheardit-records.net</a>
             </p>
 
             <h2><?php echo __('Envoyer une demo') ?></h2>
