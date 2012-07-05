@@ -507,7 +507,7 @@ background-repeat:no-repeat;
 height:16px;
 width:68px;
 position: absolute;
-top:30px;
+top:20px;
 background-image:url(../pics/icon/nouveau.png);
 font-family: 'Tempesta', sans-serif;
 font-size:8px;
@@ -521,7 +521,7 @@ padding-left:8px;
 
 .releases_discography_last_release a 
 {
-margin-top:1px;
+margin-top:3px;
 }
 
 
