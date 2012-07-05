@@ -11,13 +11,14 @@
 
   <meta name="viewport" content="width=device-width,initial-scale=1">
 
+  <!-- 960 Grid system--> 
   <link rel="stylesheet" type="text/css" media="all" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/css/lib/960.gs/reset.css" />
   <link rel="stylesheet" type="text/css" media="all" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/css/lib/960.gs/text.css" />
   <link rel="stylesheet" type="text/css" media="all" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/css/lib/960.gs/fluid_grid.css" />
 
-  <link rel="stylesheet" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/css/main.css">
+  <link rel="stylesheet" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/js/jQuery.jPlayer.2.1.0/skins/blue.monday/jplayer.blue.monday.css" type="text/css" media="screen" />
 
-  <link rel="shortcut icon" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/favicon.png" />
+  <link rel="stylesheet" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/css/main.css">
   
 <?php if (sfConfig::get('app_feeds_use_feedburner', false)): ?>
   <link rel="alternate" type="application/rss+xml" title="<?php echo __('Flux RSS des dernières nouvelles') ?>" href="http://feeds.feedburner.com/dhr-news-<?php echo $sf_request->getParameter('sf_culture', 'fr') ?>">
@@ -44,6 +45,10 @@
 
   <!-- prefix-free -->
   <script src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/js/prefixfree.min.js"></script>
+
+  <script>
+  dhrUriRoot = '<?php echo $sf_request->getRelativeUrlRoot() ?>';
+  </script>
 </head>
 <body>
 
@@ -199,6 +204,8 @@
         <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
 
         <!-- scripts concatenated and minified via ant build script-->
+        <script src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/js/jQuery.jPlayer.2.1.0/jquery.jplayer.min.js"></script>
+        <script src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/js/jQuery.jPlayer.2.1.0/add-on/jplayer.playlist.min.js"></script>
         <script src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/js/jquery.scrollTo-1.4.2-min.js"></script>
         <script src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/js/jquery.pjax.js"></script>
         <script src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/js/script.js?v=1"></script>
@@ -231,5 +238,5 @@
     <input type="hidden" name="display" value="1">
   </form>
 
-<script type="text/javascript" src="http://o.aolcdn.com/os_merge/?file=/streampad/sp-player.js&amp;file=/streampad/sp-player-other.js&expsec=86400&ver=11&bgcolor=#000000&trackcolor=#29ABE2&clicktext=Click%20to%20play%20all%20audio%20posts&clickimg=true&btncolor=white-black"></script></body>
+<!-- <script type="text/javascript" src="http://o.aolcdn.com/os_merge/?file=/streampad/sp-player.js&amp;file=/streampad/sp-player-other.js&expsec=86400&ver=11&bgcolor=#000000&trackcolor=#29ABE2&clicktext=Click%20to%20play%20all%20audio%20posts&clickimg=true&btncolor=white-black"></script></body> -->
 </html>
