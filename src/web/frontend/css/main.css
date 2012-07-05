@@ -356,7 +356,7 @@ margin-top:100px;}
   font-style:;
   font-size:10px;
   font-size:1em;
-  text-transform:lowercase;
+  text-transform:none;
 }
 
 .header_news_2 a:hover
