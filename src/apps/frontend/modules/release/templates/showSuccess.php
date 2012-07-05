@@ -76,7 +76,7 @@
       </div>
     </div>
 
-    <ul class="open_releases_playlist">
+    <ul class="open_releases_playlist" style="display:none;">
 <?php foreach ($release['tracks'] as $track): ?>
     <?php if ($track['number'] < 10): ?>
       <li><a href="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/releases/<?php echo $release['slug'] ?>/tracks/<?php echo str_replace('-', '', $release['slug']) ?>_0<?php echo $track['number'] ?>.mp3"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/play.png" alt="play" class="open_releases_playlist_icon_play" /><?php echo $track['title'] ?></a></li>
