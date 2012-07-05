@@ -330,10 +330,11 @@ Artist:
   astroboiler:
     id: 17
     name: Astroboiler
+    slug: astroboiler
     more: |
       <ul>
         <li><a href="http://www.myspace.com/astroboiler>Myspace</a></li>
-      <ul>
+      </ul>
     Translation:
       fr:
         presentation: |
@@ -341,6 +342,7 @@ Artist:
       en:
         presentation: |
           Being edited currently. Come back soon !
+
   lesrobotsmusique:
     id: 18
     name: Les Robots Musique

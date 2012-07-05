@@ -12,8 +12,9 @@ class artistComponents extends sfComponents
         // Fetch artists
         $q = Doctrine_Query::create()
             ->from('Artist a')
-            ->where('a.is_public = 1');
-        $artists = $q->execute(array(), Doctrine_Core::HYDRATE_ARRAY);
+            ->where('a.is_public = 1')
+            ->addOrderBy('a.name asc');
+        $artists = $q->execute(null, Doctrine_Core::HYDRATE_ARRAY);
 
         // Fixup images
         for ($i = 0; $i < count($artists); $i++) {
