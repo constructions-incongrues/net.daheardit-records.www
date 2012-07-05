@@ -23,7 +23,7 @@
 -->
         </span>
       </h1>
-      <p><?php echo nl2br($post['Translation'][$sf_request->getParameter('sf_culture', 'fr')]['body']) ?></p>
+      <p><?php echo html_entity_decode($post['Translation'][$sf_request->getParameter('sf_culture', 'fr')]['body']) ?></p>
     </div>
   </div>
 </div>
