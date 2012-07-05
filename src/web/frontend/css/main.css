@@ -347,7 +347,8 @@ opacity:0.95;
 padding:5px 0px 0px 0px;
 margin-bottom:0px;
 border-right:1px solid #28abe3; 
-height:116px;}  
+height:116px;
+margin-top:100px;}  
 
 .header_news_2_nav
 {
@@ -521,7 +522,7 @@ padding-left:8px;
 
 .releases_discography_last_release a 
 {
-margin-top:3px;
+margin-top:px;
 }
 
 
@@ -1436,14 +1437,14 @@ color:#FFF;
 }
 
 /* INFO BULLE */
-
+/*
 
  .donate_infos a span {
 position:absolute;
 padding:15px;
 margin-top:45px;
-margin-left:-320px;
-width:300px;
+margin-left:-280px;
+width:250px;
 background:rgba(0,0,0,.9);
 
 opacity:0;
@@ -1454,21 +1455,18 @@ text-transform:none;
 font-family: 'Arial', sans-serif;
 float:left;
 ;
-/*transform*/
 
      -o-transform:scale(0) rotate(-12deg);
         transform:scale(0) rotateZ(-12deg);
-/*transition*/
 
-        transition:all .25s;
+        transition:all .105s;
 
-/*box-shadow*/
+
         box-shadow:0 0 2px rgba(0,0,0,.5);
 }
 .donate_infos a:hover span, .donate_infos a:focus span{
 opacity:1;
-/*transform*/
         transform:scale(1) rotateZ(0);
 }
 
-
+*/

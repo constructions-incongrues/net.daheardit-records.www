@@ -27,10 +27,7 @@
 
             <li><a href="http://www.musiques-incongrues.net/forum/labels/daheardit-records/"><?php echo __('Forum') ?></a></li>
             <li class="header_nav_3_button_donate donate_infos"><a href="#" class="donate paypal" data-paypalid="RDMSQRU34X5YS">&hearts; <?php echo __('Dons') ?> &hearts;         
-            <span>
-              Produire de la musique gratuite, ça coûte de sous !
-              Vous pouvez nous aider à continuer en faisant un don d'argent au label.
-            </span>
+          
 </li>
           </ul>
 
