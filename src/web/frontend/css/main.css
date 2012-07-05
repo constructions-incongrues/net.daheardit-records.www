@@ -186,7 +186,8 @@ margin-left:-0px;
 top:12px;
 text-align:right;
 margin-right:0px;
-margin-left:40px;
+margin-left:30px;
+margin-
 }
 
 .header_nav_2_icon li 
@@ -274,7 +275,7 @@ margin-left:100px;
 color:#29ABE2;
 list-style-type:none;
 display:inline;
-margin:5px 10px 5px 10px;
+margin:5px 8px 5px 9px;
 font-family: 'Jockey One', sans-serif;
 }
 
@@ -601,6 +602,7 @@ background-color:#29ABE2;
 
 /* ARTISTS
 ***************************************************************/
+
 .artists
 {
 background-color:#000;
@@ -701,8 +703,8 @@ border-width: 40px 40px 0px 40px ;
 background-image:url(../pics/artists/img-artist-default.png);
 height:240px;
 width:220px!important;
-margin-left:10px;
-margin-right:10px;
+margin-left:9px;
+margin-right:9px;
 margin-top:5px;
 }
 
@@ -1391,5 +1393,11 @@ color:#FFF;
 .artists_show
 {
  min-height:230px;
+ padding:0px;
+ margin:0px 9px 0px 9px;
 }
 
+.artists_show_first
+{
+  margin-left:0px;
+}

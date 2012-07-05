@@ -634,10 +634,14 @@ Release:
     Translation:
       fr:
         presentation: |
-          En cours de rédaction. Revenez bientôt !
+          Venus tous deux d'une étoile lointaine à bord d'un vaisseau interplanétaire,  Rod Droïd et Puyo Puyo s'apprêtaient à faire une tournée galactique triomphale au sein de l'orchestre impérial. Soudain, leur engin spatial explosa en vol dans une averse de météores. Précipités dans la stratosphère, nos deux compères robots furent alors projetés sur terre et plus précisément à Nantes, France. Ayant pris l'apparence humaine, ils se remirent illico à faire la seule chose qu'ils savaient faire : de la musique et des concerts, pour survivre dans cet environnement hostile, à des milliers d'années-lumière de chez eux. Les Robots Musique étaient nés.
+          Leur duo rappelle naturellement le folklore Kriktoïen, en plus offensif du point de vue rythmique. Leurs textes sont simples (n'oublions pas que ce sont des robots) et légers comme les poèmes Hwagaagaa de leur enfance. Quant à leur sens de la mélodie, il évoque immanquablement les airs entraînants de Gamma Leonis et de Celestia, deux astres célèbres pour leurs happy tunes. Leurs morceaux sont courts, efficaces et parfaits pour les folles chorégraphies métalliques.  
+          Voici quelques mois, Da! Heard it records, toujours en quête de nouveaux talents, eut vent de ce duo droïdesque et décida de le signer sur son label digital. Comme ils ne savaient pas signer, les Robots Musique firent simplement coucou avec la main.
       en:
         presentation: |
-          Being edited currently. Come back soon !
+          Coming from a far-away star aboard an interplanetary ship, Rod Droïd and Puyo Puyo were getting ready for a triumphant galactic tour in the heart of the imperial orchestra. Suddenly, their space engine exploded in midflight during a meteor shower. Propelled into the stratosphere, our two robot companions were thus projected to Earth, and more precisely, to Nantes, France. Assuming a human appearance, they immediately set to do the only things they knew how, music and concerts, in order to survive in this hostile environment thousands of light-years away from home. The Music Robots were born.
+          The duo is naturally reminiscent of Kriktoian folklore, only more offensive as far as rhythm goes. Their lyrics are simple (they are robots after all) and as light as the Hwagaagaa poems of their childhood. As for their sense of melody, it unmistakably evokes the engaging airs of Gamma Leonis and of Celestia, two stars famous for their happy tunes. Their pieces are short, efficient, and perfect for crazy, metallic choreographies.
+          A few months ago, Da! Heard it Records-always on the lookout for new talents-heard of this droidesque duo and decided to have them sign on its digital label. The robots, not knowing how to sign, simply waved their hands hello
 
 Content:
   main:
@@ -657,6 +661,7 @@ Content:
       <h2>Labels</h2>
       <ul>
         <li><a href="http://www.8bitpeoples.com/">8bitpeoples</a></li>
+        <li><a href="http://www.dataglitch.org">Dataglitch</a></li>
         <li><a href="http://www.darlingdada.com/">Darling Dada</a></li>
         <li><a href="http://www.egotwister.com/">Ego Twister </a></li>
         <li><a href="http://prootrecords.com/">Proot Records</a></li>
@@ -674,7 +679,6 @@ Content:
       <h2>Friends</h2>
       <ul>
         <li><a href="http://www.ilbm.info/">otro</a></li>
-        <li><a href="http://mobyone.net/">Mobyone</a></li>
         <li><a href="http://www.musiques-incongrues.net/forum/">Musiques Incongrues</a></li>
         <li><a href="http://www.nazzilla.com/">Nazilla </a></li>
         <li><a href="http://www.thibaulthuertas.com/">Thibault Huertas</a></li>
@@ -694,7 +698,8 @@ Content:
           <a href="http://www.constructions-incongrues.net/">Constructions Incongrues</a>
           Danielle Josset,
           Denni Montono,
-          <a href="">http://entter.com/">Entter</a>,
+          <a href="http://entter.com/">Entter</a>,
+          <a href="http://www.myspace.com/eatrabbit">Eat Rabbit</a>,
           Fita,
           Gabriel,
           <a href="http://cochise.canalblog.com/">Jacques Cochise</a>,
@@ -716,6 +721,7 @@ Content:
           <a href="http://www.sidabitball.com/">Sidabitball</a>,
           <a href="http://www.sidabitball.com/">Sidabitball</a>,
           <a href="http://grogore.free.fr/"">Shoboshobo</a>,
+          <a href="http://www.stereotype.ws/">Stereotype</a>,
           <a href="http://roddroid.free.fr/">Rod Droid</a>,
           <a href="http://www.thibaulthuertas.com/">Thibault Huertas</a>,
           Tom Woxom,
@@ -729,8 +735,43 @@ Content:
           Now you can discover the musical universe of Da ! Heard It Records (Ben Et Bené, Xerak, Goto80, Mini Roc, Sidabitball, Sputnik Booster, Computer Truck, ...) on site
           By subscribing to the rss feed or newsletter you will be kept informed of upcoming releases of Le Chien Violet,Aniaetleprogrammeur, etc.
         greetings: |
-          Bimbo Tower, Danielle, Didi, Fita, Gabriel, Maryn, Momo Seb, Parasite, Valkiri, Vincent, also our friends ∧ graphist
-
+          <a href="http://www.myspace.com/astroboiler/">Astroboiler</a>,
+          <a href="http://www.benetbene.net">Ben Et Béné</a>,
+          <a href="http://www.buskerdroid.com/">Buskerdroid</a>,
+          <a href="">Bimbo Tower</a>,
+          <a href="http://computertruck.parishq.net">Computer Truck</a>,
+          <a href="http://www.constructions-incongrues.net/">Constructions Incongrues</a>
+          Danielle Josset,
+          Denni Montono,
+          <a href="http://entter.com/">Entter</a>,
+          <a href="http://www.myspace.com/eatrabbit">Eat Rabbit</a>,
+          Fita,
+          Gabriel,
+          <a href="http://cochise.canalblog.com/">Jacques Cochise</a>,
+          <a href="http://www.julienbodechon.com/">Julien Bodechon</a>,
+          <a href="http://www.egotwister.com/guyom/index/">[guÿôm]</a>,
+          <a href="http//www.goto80.com">Goto80</a>
+          <a href="http://festen.fr">Maryn</a>,
+          <a href="http/www.miniroc.com">Mini Roc</a>,
+          Momo Seb,
+          <a href="http://valkiri.incongru.org">Valkiri</a>,
+          <a href="http://www.mobyone.net">Mobyone</a>, 
+          <a href="http://www.ilbm.info">Ilbm</a>
+          <a href="http://pastis-hosting.net">Pastis Hosting</a>, 
+          Ptite Gonze,
+          <a href="http://puyopuyo.lautre.net/">Puyo Puyo</a>,
+          <a href="http://www.pocketmaster.ch/">Pocketmaster</a>,
+          <a href="http://templevengeance.incongru.org/">Satanik Mike</a>,
+          <a href="http://ww.myspace.com/sputnikbooster">Sputnik Booster</a>,
+          <a href="http://www.sidabitball.com/">Sidabitball</a>,
+          <a href="http://www.sidabitball.com/">Sidabitball</a>,
+          <a href="http://grogore.free.fr/"">Shoboshobo</a>,
+          <a href="http://www.stereotype.ws/">Stereotype</a>,
+          <a href="http://roddroid.free.fr/">Rod Droid</a>,
+          <a href="http://www.thibaulthuertas.com/">Thibault Huertas</a>,
+          Tom Woxom,
+          <a href="http://www.vic-net.com/">Vicnet</a>,
+          <a href="http://www.xerak.com">Xerak</a>
 Post:
   post1:
     created_at: "2012-01-01 00:00:00"

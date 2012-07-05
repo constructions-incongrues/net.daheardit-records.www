@@ -17,7 +17,6 @@ abstract class BaseContentTranslationForm extends BaseFormDoctrine
     $this->setWidgets(array(
       'id'           => new sfWidgetFormInputHidden(),
       'informations' => new sfWidgetFormTextarea(),
-      'credits'      => new sfWidgetFormTextarea(),
       'greetings'    => new sfWidgetFormTextarea(),
       'lang'         => new sfWidgetFormInputHidden(),
     ));
@@ -25,7 +24,6 @@ abstract class BaseContentTranslationForm extends BaseFormDoctrine
     $this->setValidators(array(
       'id'           => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
       'informations' => new sfValidatorString(array('required' => false)),
-      'credits'      => new sfValidatorString(array('required' => false)),
       'greetings'    => new sfValidatorString(array('required' => false)),
       'lang'         => new sfValidatorChoice(array('choices' => array($this->getObject()->get('lang')), 'empty_value' => $this->getObject()->get('lang'), 'required' => false)),
     ));
