@@ -5,4 +5,5 @@
 all:
   feeds:
     use_feedburner: @feeds.feedburner_enabled@
-
+  dhr:
+    url_root: "@dhr.url.root@"

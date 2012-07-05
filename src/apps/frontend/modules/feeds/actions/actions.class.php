@@ -15,15 +15,15 @@ class feedsActions extends sfActions
         // Instanciate feed
         $feed = new sfRssFeed();
         $feed->setTitle($this->getContext()->getI18N()->__('Da ! Heard It Records : Dernières Nouvelles'));
-        $feed->setLink('http://www.daheardit-records.net');
+        $feed->setLink(sfConfig::get('app_dhr_url_root'));
         $feed->setAuthorEmail('contact@daheardit-records.net');
         $feed->setAuthorName('Da ! Heard It Records');
 
         // Define feed image
         $feedImage = new sfFeedImage();
         $feedImage->setTitle('Da ! Heard It Records');
-        $feedImage->setLink('http://www.daheardit-records.net');
-        $feedImage->setImage('http://next.daheardit-records.net/frontend/pics/logo.png');
+        $feedImage->setLink(sfConfig::get('app_dhr_url_root'));
+        $feedImage->setImage(sfConfig::get('app_dhr_url_root').'/frontend/pics/logo.png');
         $feed->setImage($feedImage);
 
         // Fetch latest posts
@@ -41,7 +41,15 @@ class feedsActions extends sfActions
             $item->setAuthorEmail('contact@daheardit-records.net');
             $item->setPubdate($post->getDateTimeObject('created_at')->getTimestamp());
             $item->setUniqueId($post->getSlug());
-            $item->setDescription($post->Translation[$request->getParameter('sf_culture', 'fr')]->body);
+            $item->setDescription(
+                sprintf(
+                    '%s<p><img src="%s%s/uploads/news/%s" /></p>', 
+                    $post->Translation[$request->getParameter('sf_culture', 'fr')]->body,
+                    $request->getUriPrefix(),
+                    $request->getRelativeUrlRoot(),
+                    $post->getImage()
+                )
+            );
             $feed->addItem($item);
         }
 
