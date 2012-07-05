@@ -254,7 +254,11 @@
 				if(self.current !== index) {
 					self.play(index);
 				} else {
-					$(self.cssSelector.jPlayer).jPlayer("play");
+					if ($(self.cssSelector.jPlayer).data("jPlayer").status.paused) {
+						$(self.cssSelector.jPlayer).jPlayer("play");
+					} else {
+						$(self.cssSelector.jPlayer).jPlayer("pause");
+					}
 				}
 				$(this).blur();
 				return false;
