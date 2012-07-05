@@ -23,8 +23,10 @@ $(document).ready(function () {
 		});
 
 		// Media player
-		// NOTE : options are not passed to jPlayer, i had to hack jplayer.min.js to put my own values
 		new jPlayerPlaylist(null, playlist, {solution: 'flash, html', swfPath: dhrUriRoot + "/frontend/js/jQuery.jPlayer.2.1.0/"});
+		$("#jquery_jplayer_1").bind($.jPlayer.event.play, function(event) {
+			console.log(event.jPlayer);
+		});
 	}
 
 	/*

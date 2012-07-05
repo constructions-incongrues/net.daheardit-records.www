@@ -241,7 +241,8 @@
 			}
 
 			// The title is given next in the HTML otherwise the float:right on the free media corrupts in IE6/7
-			listItem += "<a href='javascript:;' class='" + this.options.playlistOptions.itemClass + "' tabindex='1'><img src='"+dhrUriRoot+"/frontend/pics/icon/play.png' alt='play' class='open_releases_playlist_icon_play' />" + media.title + (media.artist ? " <span class='jp-artist'>by " + media.artist + "</span>" : "") + "</a>";
+			listItem += "<a href='javascript:;' class='" + this.options.playlistOptions.itemClass + "' tabindex='1'>►" + media.title + (media.artist ? " <span class='jp-artist'>by " + media.artist + "</span>" : "") + "</a>";
+			// listItem += "<a href='javascript:;' class='" + this.options.playlistOptions.itemClass + "' tabindex='1'><img src='"+dhrUriRoot+"/frontend/pics/icon/play.png' alt='play' class='open_releases_playlist_icon_play' />" + media.title + (media.artist ? " <span class='jp-artist'>by " + media.artist + "</span>" : "") + "</a>";
 			listItem += "</div></li>";
 
 			return listItem;
@@ -390,6 +391,7 @@
 			} else if(index === undefined) {
 				$(this.cssSelector.jPlayer).jPlayer("play");
 			}
+
 		},
 		pause: function() {
 			$(this.cssSelector.jPlayer).jPlayer("pause");
