@@ -209,7 +209,7 @@
         <script src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/js/jQuery.jPlayer.2.1.0/add-on/jplayer.playlist.js"></script>
         <script src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/js/jquery.scrollTo-1.4.2-min.js"></script>
         <script src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/js/jquery.pjax.js"></script>
-        <script src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/js/script.js?v=1"></script>
+        <script src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/js/script.js"></script>
         <!-- end scripts-->
 
         <script>
@@ -238,5 +238,5 @@
     <input type="image" src="https://www.paypal.com/fr_XC/i/btn/view_cart_new.gif" border="0" name="submit" alt="Payez avec PayPal : une solution rapide, gratuite et sécurisée!">
     <input type="hidden" name="display" value="1">
   </form>
-  
+
 </html>

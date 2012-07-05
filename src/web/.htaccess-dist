@@ -58,7 +58,7 @@ RedirectMatch permanent /(fr|en)/(links|liens)(/)? @dhr.url.root@/$1/#links
 # mod_pagespeed
 <IfModule pagespeed_module>
   ModPagespeed on
-  ModPagespeedEnableFilters CoreFilters,insert_image_dimensions,lazyload_images,defer_javascript,extend_cache
+  ModPagespeedEnableFilters CoreFilters,insert_image_dimensions,defer_javascript,extend_cache
 </IfModule>
 
 # New Relic
