@@ -30,10 +30,19 @@ $(document).ready(function () {
 		});
 	}
 
+	// Top menu
+	$('#menu-main li a').click(function() {
+		$.scrollTo($($(this).attr('href')), 1000);
+		return false;
+	});
+
+	$('.infos_button_top a').click(function() {
+		$.scrollTo($('#top'), 1000);
+		return false;
+	});
+
 	// Carousels
 	$('a.carousel-nav').click(function() {
-		
-
 		// Vimeo
 		if ($(this).attr('href').match(/.*vimeo.*/)) {
 			$('#carousel-iframe').remove();
@@ -93,11 +102,6 @@ $(document).ready(function () {
 			container: $(this).data('pjax')
 		});	
 
-		return false;
-	});
-
-	$('.infos_button_top a').click(function() {
-		$.scrollTo($('#top'), 1000);
 		return false;
 	});
 	*/
