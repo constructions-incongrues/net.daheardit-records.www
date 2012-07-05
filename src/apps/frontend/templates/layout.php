@@ -63,7 +63,7 @@
         <div class="grid_12 header_news_1">
           <div class="header_news_1_content">
             <h1><a href="<?php echo url_for('@artist_show?slug=les-robots-musique') ?>">Les Robots Musiques</a></h1>
-            <h2><a href="<?php echo url_for('@release_show?slug=dhr-18') ?>">Puyo Puyo &amp; Rob Droid</a></h2>
+            <h2><a href="<?php echo url_for('@release_show?slug=dhr-18') ?>">Puyo Puyo &amp; Rod Droid</a></h2>
           </div><!-- header_news_1_content -->
         </div><!-- end of header_news_1 -->
 
