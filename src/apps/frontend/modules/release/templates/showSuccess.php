@@ -45,27 +45,24 @@
     <div id="jp_container_1" class="jp-audio">
       <div class="jp-type-playlist">
         <div class="jp-gui jp-interface">
-         <!--  <ul class="jp-controls">
+         <ul class="jp-controls" style="display:none;">
             <li><a href="javascript:;" class="jp-previous" tabindex="1">previous</a></li>
             <li><a href="javascript:;" class="jp-play" tabindex="1">play</a></li>
             <li><a href="javascript:;" class="jp-pause" tabindex="1">pause</a></li>
             <li><a href="javascript:;" class="jp-next" tabindex="1">next</a></li>
             <li><a href="javascript:;" class="jp-stop" tabindex="1">stop</a></li>
-   
           </ul>
-          <div class="jp-progress">
+          <div class="jp-progress" style="display:none;">
             <div class="jp-seek-bar">
               <div class="jp-play-bar"></div>
-
             </div>
           </div>
    
-       <<div class="jp-current-time"></div>
-          <div class="jp-duration"></div>
-     -->
+          <div class="jp-current-time" style="display:none;"></div>
+          <div class="jp-duration" style="display:none;"></div>
         </div>
         <div class="jp-playlist">
-          <ul>
+          <ul class="open_releases_playlist">
             <li></li>
           </ul>
         </div>

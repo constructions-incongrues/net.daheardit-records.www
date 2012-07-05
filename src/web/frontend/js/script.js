@@ -19,13 +19,12 @@ $(document).ready(function () {
 			playlist.push({
 				mp3: $(this).attr('href'),
 				title: $(this).text(),
-				free: true
 			});
 		});
 
 		// Media player
 		// NOTE : options are not passed to jPlayer, i had to hack jplayer.min.js to put my own values
-		new jPlayerPlaylist({solution: 'flash, html', swfPath: dhrUriRoot + "/frontend/js/jQuery.jPlayer.2.1.0/"}, playlist);
+		new jPlayerPlaylist(null, playlist, {solution: 'flash, html', swfPath: dhrUriRoot + "/frontend/js/jQuery.jPlayer.2.1.0/"});
 	}
 
 	/*
