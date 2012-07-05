@@ -90,7 +90,7 @@ class releaseActions extends sfActions
         $headersOgp = array(
             'title' => $this->getContext()->getResponse()->getTitle() . ' | Da ! Heard It Records',
             'type'  => 'music.album',
-            'image' => sprintf('http://next.daheardit-records.net/assets/releases/%s/images/%s_1.png', $release['slug'], $release['slug']),
+            'image' => sprintf(sfConfig::get('app_dhr_url_root').'/assets/releases/%s/images/%s_1.png', $release['slug'], $release['slug']),
             'description' => $release['Translation'][$request->getParameter('sf_culture', 'fr')]['presentation']
         );
         foreach ($headersOgp as $name => $value) {

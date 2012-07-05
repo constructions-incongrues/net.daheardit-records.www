@@ -37,7 +37,7 @@ class mainActions extends sfActions
         $headersOgp = array(
             'title' => $this->getContext()->getResponse()->getTitle() . ' | Da ! Heard It Records',
             'type'  => 'website',
-            'url'   => 'http://next.daheardit-records.net/'.$request->getParameter('sf_culture'),
+            'url'   => sfConfig::get('app_dhr_url_root').'/'.$request->getParameter('sf_culture'),
             'image' => $request->getUriPrefix().$request->getRelativeUrlRoot().'/frontend/pics/logo.png',
             'description' => $this->getContext()->getI18N()->__('Créé en 2006, Da ! Heard it Records est un net-label flirtant avec les musiques Toyz-Pop, Electro Trash, Chiptune, Breakcore, Techno Parodique, Electro Punk, Acid, et avec un goût prononcé pour le 8-bit et le pixel art.')
         );

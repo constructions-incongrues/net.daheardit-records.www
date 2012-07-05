@@ -55,7 +55,7 @@ class artistActions extends sfActions
         $headersOgp = array(
             'title' => $this->getContext()->getResponse()->getTitle() . ' | Da ! Heard It Records',
             'type'  => 'website',
-            'image' => sprintf('http://next.daheardit-records.net/assets/artists/%s/%s_300x300.jpg', $artist['slug'], $artist['slug']),
+            'image' => sprintf(sfConfig::get('app_dhr_url_root').'/assets/artists/%s/%s_300x300.jpg', $artist['slug'], $artist['slug']),
             'description' => $artist['Translation'][$request->getParameter('sf_culture', 'fr')]['presentation']
         );
 
