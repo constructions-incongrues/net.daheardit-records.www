@@ -26,14 +26,14 @@
 
     <div class="grid_6 open_releases_artwork">
       <span class="calque_artwork"> </span>
-      <img id="carousel-current" height="460px" width="460px" src="<?php echo $sf_request->getRelativeUrlRoot() ?>/<?php echo $release['artworks'][0] ?>" />
+      <img id="carousel-current" height="460px" width="460px" src="<?php echo $sf_request->getRelativeUrlRoot() ?><?php echo $release['artworks'][0] ?>" />
 <?php for ($i = 1; $i < count($release['artworks']); $i++): ?>
-  <img style="display:none;" height="460px" width="460px" src="<?php echo $sf_request->getRelativeUrlRoot() ?>/<?php echo $release['artworks'][$i] ?>" />
+  <img style="display:none;" height="460px" width="460px" src="<?php echo $sf_request->getRelativeUrlRoot() ?><?php echo $release['artworks'][$i] ?>" />
 <?php endfor ?>
       <ul class="open_releases_nav_artwork">
-            <li><a class="carousel-nav" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/<?php echo $release['artworks'][0] ?>"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/caroussel-release-hover.png" alt="" /></a></li>
+            <li><a class="carousel-nav" href="<?php echo $sf_request->getRelativeUrlRoot() ?><?php echo $release['artworks'][0] ?>"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/caroussel-release-hover.png" alt="" /></a></li>
 <?php for ($i = 1; $i < count($release['artworks']); $i++): ?>
-            <li><a class="carousel-nav" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/<?php echo $release['artworks'][$i] ?>"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/caroussel-release.png" alt="" /></a></li>
+            <li><a class="carousel-nav" href="<?php echo $sf_request->getRelativeUrlRoot() ?><?php echo $release['artworks'][$i] ?>"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/caroussel-release.png" alt="" /></a></li>
 <?php endfor ?>
      </ul>
    </div><!-- end of grid_6 -->
