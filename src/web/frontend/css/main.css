@@ -350,6 +350,20 @@ border-right:1px solid #28abe3;
 height:116px;
 margin-top:100px;}  
 
+.header_news_2 a 
+{
+  color:#29ABE2;
+  font-style:;
+  font-size:10px;
+  font-size:1em;
+  text-transform:lowercase;
+}
+
+.header_news_2 a:hover
+{
+  color:#b2b2b2;
+
+}
 .header_news_2_nav
 {
 padding-bottom:5px;
