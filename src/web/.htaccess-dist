@@ -25,8 +25,8 @@ Options +FollowSymLinks
 
 # Redirection for legacy urls
 # Releases
-RedirectMatch permanent /(fr|en)/discograph(ie|y)/dhr(\d+) @dhr.url.root@/$1/discography/dhr-$2#release
-RedirectMatch permanent /(fr|en)/discograph(ie|y)          @dhr.url.root@/$1/#discography
+RedirectMatch permanent /(fr|en)/discograph(ie|y)/dhr(\d+)(/)? @dhr.url.root@/$1/discography/dhr-$3#release
+RedirectMatch permanent /(fr|en)/discograph(ie|y)(/)?$         @dhr.url.root@/$1/#discography
 
 # Artists
 RedirectMatch permanent /(fr|en)/artist(e)?s/ben_et_bene(/)?     @dhr.url.root@/$1/artist/ben-et-bene#artist
@@ -47,8 +47,8 @@ RedirectMatch permanent /(fr|en)/artist(e)?s/xerak(/)?           @dhr.url.root@/
 RedirectMatch permanent /(fr|en)/artist(e)?s(/index.php)?        @dhr.url.root@/$1/#artists
 
 # Misc
-RedirectMatch permanent /(fr|en)/informations(/)? @dhr.url.root@/$1/#informations
-RedirectMatch permanent /(fr|en)/contact(/)? @dhr.url.root@/$1/#contact
+RedirectMatch permanent /(fr|en)/informations(/)?  @dhr.url.root@/$1/#informations
+RedirectMatch permanent /(fr|en)/contact(/)?       @dhr.url.root@/$1/#contact
 RedirectMatch permanent /(fr|en)/(links|liens)(/)? @dhr.url.root@/$1/#links
 
 # mod_pagespeed
