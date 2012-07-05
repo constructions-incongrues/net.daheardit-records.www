@@ -12,19 +12,21 @@ $(document).ready(function () {
 		return false;
 	});
 
-	// Build playlist
-	var playlist = [];
-	$('.open_releases_playlist li a').each(function() {
-		playlist.push({
-			mp3: $(this).attr('href'),
-			title: $(this).text(),
-			free: true
+	if ($('.open_releases_playlist li a')) {
+		// Build playlist
+		var playlist = [];
+		$('.open_releases_playlist li a').each(function() {
+			playlist.push({
+				mp3: $(this).attr('href'),
+				title: $(this).text(),
+				free: true
+			});
 		});
-	});
 
-
-	new jPlayerPlaylist({solution: 'flash, html', swfPath: dhrUriRoot + "/frontend/js/jQuery.jPlayer.2.1.0/"}, playlist);
-
+		// Media player
+		// NOTE : options are not passed to jPlayer, i had to hack jplayer.min.js to put my own values
+		new jPlayerPlaylist({solution: 'flash, html', swfPath: dhrUriRoot + "/frontend/js/jQuery.jPlayer.2.1.0/"}, playlist);
+	}
 
 	/*
 	// Handles animation of content area
