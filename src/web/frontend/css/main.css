@@ -1401,3 +1401,38 @@ color:#FFF;
 {
   margin-left:0px;
 }
+
+/* INFO BULLE */
+
+
+ a span{
+position:absolute;
+padding:15px;
+margin-top:45px;
+margin-left:-120px;
+background:rgba(0,0,0,.9);
+
+opacity:0;
+color:#FFF;
+font-size:12px;
+font-size:1.2rem;
+text-transform:none;
+font-family: 'Arial', sans-serif;
+float:left;
+;
+/*transform*/
+
+     -o-transform:scale(0) rotate(-12deg);
+        transform:scale(0) rotateZ(-12deg);
+/*transition*/
+
+        transition:all .25s;
+
+/*box-shadow*/
+        box-shadow:0 0 2px rgba(0,0,0,.5);
+}
+.donate_infos a:hover span, .donate_infos a:focus span{
+opacity:1;
+/*transform*/
+        transform:scale(1) rotateZ(0);
+}
