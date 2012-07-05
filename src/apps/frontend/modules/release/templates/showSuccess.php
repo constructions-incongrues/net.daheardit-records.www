@@ -56,16 +56,18 @@
 <?php echo nl2br($release['Translation'][$sf_user->getCulture()]['presentation']) ?>
     </p>
 
+<?php if (count($archives)): ?>
     <h2 class="open_releases_title"><?php echo __('Télécharger l\'album gratuitement') ?></h2>
     <ul class="open_releases_download">
-      <li><a href="<?php echo $sf_request->getRelativeUrlRoot() ?>/releases/<?php echo $release['slug'] ?>/<?php echo $release['slug'] ?>_mp3_320.zip">MP3</a></li>
-      <li><a href="<?php echo $sf_request->getRelativeUrlRoot() ?>/releases/<?php echo $release['slug'] ?>/<?php echo $release['slug'] ?>_ogg.zip">OGG</a></li>
-      <li><a href="<?php echo $sf_request->getRelativeUrlRoot() ?>/releases/<?php echo $release['slug'] ?>/<?php echo $release['slug'] ?>_flac.zip">FLAC</a></li>
+  <?php foreach ($archives as $archive): ?>
+      <li><a href="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/releases/<?php echo $release['slug'] ?>/archives/<?php echo $archive['filename'] ?>"><?php echo $archive['name'] ?></a></li>
+  <?php endforeach ?>
     </ul>
+<?php endif ?>
 
-    <h3 class="open_releases_title"><?php echo __('Acheter l\'album') ?></h3>
+    <h3 class="open_releases_title"><?php echo __('Acheter') ?></h3>
     <p class="open_releases_buy">
-      <span class="open_releases_price">5€</span>
+      <span class="open_releases_price"><?php echo $release['price'] ?> €</span>
       <span class="open_releases_market"><a href=""><?php echo __('Ajouter au panier') ?></a> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/img-panier.png" alt="" /></span>
     </p>
     <hr>
