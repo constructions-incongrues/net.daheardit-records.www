@@ -66,6 +66,18 @@ $(document).ready(function () {
 		return false;
 	});
 
+	// Track releases download count
+	// @see https://developers.google.com/analytics/devguides/collection/gajs/eventTrackerGuide
+	$('a.release-download').click(function() {
+		_gaq.push(['_trackEvent', 'Releases', 'Archive Downloaded - ' + $(this).data('dhr-archive-format'), $(this).data('dhr-release-slug')]);
+	});
+
+	// Track releases streaming activity
+	$("#jquery_jplayer_1").bind($.jPlayer.event.play, function(event) {
+		trackInfos = event.jPlayer.status.src.match(/^.*\/(dhr\d+)_(\d+)\.mp3$/);
+		_gaq.push(['_trackEvent', 'Releases', 'Track Played - ' + trackInfos[2], trackInfos[1]]);
+	});
+
 	/*
 	// Handles animation of content area
 	$('#content_async').on('pjax:end', function () {

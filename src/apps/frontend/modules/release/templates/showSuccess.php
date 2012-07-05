@@ -106,7 +106,7 @@
     <h2 class="open_releases_title"><?php echo __('Télécharger l\'album gratuitement') ?></h2>
     <ul class="open_releases_download">
   <?php foreach ($archives as $archive): ?>
-      <li><a href="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/releases/<?php echo $release['slug'] ?>/archives/<?php echo $archive['filename'] ?>"><?php echo strtoupper($archive['name']) ?></a></li>
+      <li><a class="release-download" data-dhr-release-slug="<?php echo $release['slug'] ?>" data-dhr-archive-format="<?php echo $archive['name'] ?>" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/releases/<?php echo $release['slug'] ?>/archives/<?php echo $archive['filename'] ?>"><?php echo strtoupper($archive['name']) ?></a></li>
   <?php endforeach ?>
     </ul>
 <?php endif ?>

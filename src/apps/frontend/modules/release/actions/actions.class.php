@@ -30,7 +30,7 @@ class releaseActions extends sfActions
         foreach ($archivesPaths as $path) {
             $archives[] = array(
                 'filename' => basename($path),
-                'name' => str_replace(array($release['slug'], '_'), array('', ' '), basename($path, '.zip'))
+                'name' => trim(str_replace(array($release['slug'], '_'), array('', ' '), basename($path, '.zip')))
             );
         }
 
