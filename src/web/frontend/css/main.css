@@ -1405,7 +1405,7 @@ color:#FFF;
 /* INFO BULLE */
 
 
- a span{
+ .donate_infos a span {
 position:absolute;
 padding:15px;
 margin-top:45px;
