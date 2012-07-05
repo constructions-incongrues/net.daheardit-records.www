@@ -21,7 +21,9 @@ class feedsActions extends sfActions
 
         // Define feed image
         $feedImage = new sfFeedImage();
+        $feedImage->setTitle('Da ! Heard It Records');
         $feedImage->setLink('http://www.daheardit-records.net');
+        $feedImage->setImage('http://next.daheardit-records.net/frontend/pics/logo.png');
         $feed->setImage($feedImage);
 
         // Fetch latest posts
