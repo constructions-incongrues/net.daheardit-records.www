@@ -776,24 +776,16 @@ Content:
           <a href="http://www.xerak.com">Xerak</a>
 Post:
   post1:
-    created_at: "2012-01-01 00:00:00"
+    created_at: "2012-07-05 00:00:00"
     Translation:
       fr:
-        title: Titre en français (1)
+        title: D!HR est de retour!
         body: |
-          FR/1: Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-          Duis dolor sem, hendrerit ac tempor a, varius non erat. Aenean venenatis, 
-          orci egestas dapibus pretium, ante lacus vehicula sem, ac imperdiet quam arcu nec tortor. 
-          Mauris tincidunt tortor elit, eget facilisis enim. Mauris vel dignissim purus. 
-          Mauris dictum, erat id ullamcorper feugiat, magna ligula adipiscing nisi, ac adipiscing justo mi varius lorem. 
+         D!HR se met à l'heure d'été avec un nouveau site tout beau tout propre realisé par Thibault Huertas en collaboration avec Constructions Incongrue . Nous remercions infiniement Nazilla qui avait réalisé la premiere version du site, vous pouvez voir ses nouvelles compositions sur son site www......com .  C'est aussi l'occasion de vous présenter la 18ème release du label : Plan 9 des Robots Musiques ;  duo de Rob Droid et Puyo Puyo ! Cet album vous accompagnera parfaitement pendant votre visite du nouveau site . 
       en:
-        title: English title (1)
+        title: D!HR is back !
         body: |
-          EN/1: Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-          Duis dolor sem, hendrerit ac tempor a, varius non erat. Aenean venenatis, 
-          orci egestas dapibus pretium, ante lacus vehicula sem, ac imperdiet quam arcu nec tortor. 
-          Mauris tincidunt tortor elit, eget facilisis enim. Mauris vel dignissim purus. 
-          Mauris dictum, erat id ullamcorper feugiat, magna ligula adipiscing nisi, ac adipiscing justo mi varius lorem. 
+          D!HR is ready for the summer with a brand-spanking-new site created by Thibault Huertas in collaboration with Constructions Incongrues. We give great thanks to Nazilla who designed the first version of the site. You can see Nazilla's new compositions on their site www……com. This is also a great opportunity to introduce the label's 18th release: Plan 9 des Robots Musiques (Plan 9 of the Music Robots), a Rod Droïd and Puyo Puyo duo! This album will make for a great accompaniment as you browse through our new site.
   post2:
     created_at: "2011-01-01 00:00:00"
     Translation:
