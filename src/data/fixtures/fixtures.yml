@@ -1618,3 +1618,39 @@ Track:
     title: "Los Angeles"
     number: 8
     Release: dhr17
+  dhr18_track1:
+    title: "Planet 16"
+    number: 1
+    Release: dhr18
+  dhr18_track2:
+    title: "Yo Yo Yo"
+    number: 2
+    Release: dhr18
+  dhr18_track3:
+    title: "Droids Are Coming"
+    number: 3
+    Release: dhr18
+  dhr18_track4:
+    title: "Monster Chase"
+    number: 4
+    Release: dhr18
+  dhr18_track5:
+    title: "Ich Viel Spielen"
+    number: 5
+    Release: dhr18
+  dhr18_track6:
+    title: "Mushrooms"
+    number: 6
+    Release: dhr18
+  dhr18_track7:
+    title: "Robots Unite"
+    number: 7
+    Release: dhr18
+  dhr18_track8:
+    title: "Plan 9"
+    number: 8
+    Release: dhr18
+  dhr18_track9:
+    title: "Good Night Little Robot"
+    number: 9
+    Release: dhr18
