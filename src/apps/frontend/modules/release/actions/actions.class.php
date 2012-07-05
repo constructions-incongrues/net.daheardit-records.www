@@ -24,6 +24,16 @@ class releaseActions extends sfActions
         $releaseArray['tracks'] = $tracks;
         $this->getResponse()->setTitle(sprintf('[%s] %s - %s', $releaseArray['sku'], $releaseArray['Artist']['name'], $releaseArray['title']));
         
+        // Archives
+        $archives = array();
+        $archivesPaths = glob(sprintf('%s/web/assets/releases/%s/archives/*.zip', sfConfig::get('sf_root_dir'), $release['slug']));
+        foreach ($archivesPaths as $path) {
+            $archives[] = array(
+                'filename' => basename($path),
+                'name' => str_replace(array($release['slug'], '_'), array('', ' '), basename($path, '.zip'))
+            );
+        }
+
         // Get previous release
         $pdo = Doctrine_Manager::getInstance()->getCurrentConnection()->getDbh();
         $stmt = $pdo->prepare('select slug, title, sku from  `release` where slug < :slug order by slug desc limit 1');
@@ -44,9 +54,23 @@ class releaseActions extends sfActions
             $nextRelease = $next[0];
         }
 
+        // Opengraph 
+        // TODO : this should go in a filter
+        $headersOgp = array(
+            'title' => $this->getContext()->getResponse()->getTitle() . ' | Da ! Heard It Records',
+            'type'  => 'music.album',
+            'image' => sprintf('http://next.daheardit-records.net/assets/releases/%s/images/%s_1.png', $release['slug'], $release['slug']),
+            'description' => $release['Translation'][$request->getParameter('sf_culture', 'fr')]['presentation']
+        );
+
+        foreach ($headersOgp as $name => $value) {
+            $this->getContext()->getResponse()->addMeta('og:'.$name, $value);
+        }
+
         // Pass data to view
         $this->previousRelease = $previousRelease;
         $this->nextRelease = $nextRelease;
         $this->release = $releaseArray;
+        $this->archives = $archives;
     }
 }

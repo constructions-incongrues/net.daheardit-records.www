@@ -811,3 +811,736 @@ Post:
           orci egestas dapibus pretium, ante lacus vehicula sem, ac imperdiet quam arcu nec tortor. 
           Mauris tincidunt tortor elit, eget facilisis enim. Mauris vel dignissim purus. 
           Mauris dictum, erat id ullamcorper feugiat, magna ligula adipiscing nisi, ac adipiscing justo mi varius lorem. 
+Track:
+  dhr01_track1:
+    title: "Intro"
+    number: 1
+    Release: dhr01
+  dhr01_track2:
+    title: "Complimenti"
+    number: 2
+    Release: dhr01
+  dhr01_track3:
+    title: "Robocop (police system error)"
+    number: 3
+    Release: dhr01
+  dhr01_track4:
+    title: "Obtek - (Wankers United rmx)"
+    number: 4
+    Release: dhr01
+  dhr01_track5:
+    title: "Give'em da boot"
+    number: 5
+    Release: dhr01
+  dhr01_track6:
+    title: "Euritmix sux my dix"
+    number: 6
+    Release: dhr01
+  dhr01_track7:
+    title: "The cave ("ask olli" - computer truck rmx) Original par Sputnik Booster"
+    number: 7
+    Release: dhr01
+  dhr01_track8:
+    title: "I see zombie"
+    number: 8
+    Release: dhr01
+  dhr01_track9:
+    title: "Garage a gogo (John C.Holmes mix)"
+    number: 9
+    Release: dhr01
+  dhr01_track10:
+    title: "Cracovian scene (Feat Yann from benetbene)"
+    number: 10
+    Release: dhr01
+  dhr01_track11:
+    title: "Damn noizy kidz"
+    number: 11
+    Release: dhr01
+  dhr01_track12:
+    title: "Solidwanker in a nazi truckkk...(Feat Wankers United)"
+    number: 12
+    Release: dhr01
+  dhr01_track13:
+    title: "Mom"
+    number: 13
+    Release: dhr01
+  dhr01_track14:
+    title: "Outro - insect.R."
+    number: 14
+    Release: dhr01
+  dhr01_track15:
+    title: "Final outro - i see zombiezzz dark side & parallel dimen"
+    number: 15
+    Release: dhr01
+  dhr01_track16:
+    title: "Flipside feat wanker united instru Rendered"
+    number: 16
+    Release: dhr01
+  dhr02_track1:
+    title: "Cp-l"
+    number: 1
+    Release: dhr02
+  dhr02_track2:
+    title: "Datahell"
+    number: 2
+    Release: dhr02
+  dhr02_track3:
+    title: "Exy"
+    number: 3
+    Release: dhr02
+  dhr02_track4:
+    title: "Bullcactus"
+    number: 4
+    Release: dhr02
+  dhr02_track5:
+    title: "Soft Commmando"
+    number: 5
+    Release: dhr02
+  dhr02_track6:
+    title: "Monster"
+    number: 6
+    Release: dhr02
+  dhr02_track7:
+    title: "Spill"
+    number: 7
+    Release: dhr02
+  dhr02_track8:
+    title: "Markus"
+    number: 8
+    Release: dhr02
+  dhr02_track9:
+    title: "Rofon"
+    number: 9
+    Release: dhr02
+  dhr02_track10:
+    title: "Datahell beta"
+    number: 10
+    Release: dhr02
+  dhr03_track1:
+    title: "Brest"
+    number: 1
+    Release: dhr03
+  dhr03_track2:
+    title: "Comines - Komen"
+    number: 2
+    Release: dhr03
+  dhr03_track3:
+    title: "Paris Ill Town"
+    number: 3
+    Release: dhr03
+  dhr03_track4:
+    title: "Boubek (Paroles par Michel Bertier)"
+    number: 4
+    Release: dhr03
+  dhr04_track1:
+    title: "Jesus Mega Score Xxx"
+    number: 1
+    Release: dhr04
+  dhr04_track2:
+    title: "Chopin Is A Fuckin' Brother"
+    number: 2
+    Release: dhr04
+  dhr04_track3:
+    title: "Pixel Jazz X"
+    number: 3
+    Release: dhr04
+  dhr04_track4:
+    title: "The Binary Disco Killer"
+    number: 4
+    Release: dhr04
+  dhr04_track5:
+    title: "Moshi Moshi Kiss"
+    number: 5
+    Release: dhr04
+  dhr04_track6:
+    title: "Bionic Samouraiii"
+    number: 6
+    Release: dhr04
+  dhr04_track7:
+    title: "Papi Danse"
+    number: 7
+    Release: dhr04
+  dhr04_track8:
+    title: "Delicious Peanut"
+    number: 8
+    Release: dhr04
+  dhr04_track9:
+    title: "Strawberries Panic"
+    number: 9
+    Release: dhr04
+  dhr04_track10:
+    title: "This Lovely Snake"
+    number: 10
+    Release: dhr04
+  dhr04_track11:
+    title: "La Sphere De La Terre"
+    number: 11
+    Release: dhr04
+  dhr04_track12:
+    title: "Distorsion Dimension"
+    number: 12
+    Release: dhr04
+  dhr04_track13:
+    title: "Pxlcoucou"
+    number: 13
+    Release: dhr04
+  dhr05_track1:
+    title: "Hello! Hello! Hello!"
+    number: 1
+    Release: dhr05
+  dhr05_track2:
+    title: "414"
+    number: 2
+    Release: dhr05
+  dhr05_track3:
+    title: "Oh Hoity - Toity Are We"
+    number: 3
+    Release: dhr05
+  dhr05_track4:
+    title: "Miniland"
+    number: 4
+    Release: dhr05
+  dhr05_track5:
+    title: "Select A"
+    number: 5
+    Release: dhr05
+  dhr05_track6:
+    title: "Bitter Bleeps"
+    number: 6
+    Release: dhr05
+  dhr05_track7:
+    title: "It's A Long Way To The Top"
+    number: 7
+    Release: dhr05
+  dhr05_track8:
+    title: "Piepmatz"
+    number: 8
+    Release: dhr05
+  dhr05_track9:
+    title: "Rage Against The Highscore"
+    number: 9
+    Release: dhr05
+  dhr05_track10:
+    title: "Miniland2"
+    number: 10
+    Release: dhr05
+  dhr05_track11:
+    title: "Rave On You Zappelphilipp"
+    number: 11
+    Release: dhr05
+  dhr06_track1:
+    title: "Intro / Jabberwocky"
+    number: 1
+    Release: dhr06
+  dhr06_track2:
+    title: "Prophet Punk"
+    number: 2
+    Release: dhr06
+  dhr06_track3:
+    title: "Type your text"
+    number: 3
+    Release: dhr06
+  dhr06_track4:
+    title: "Firestorm"
+    number: 4
+    Release: dhr06
+  dhr06_track5:
+    title: "I wanna be"
+    number: 5
+    Release: dhr06
+  dhr06_track6:
+    title: "Robot Science"
+    number: 6
+    Release: dhr06
+  dhr06_track7:
+    title: "The land of the ghosts"
+    number: 7
+    Release: dhr06
+  dhr06_track8:
+    title: "Oi! the Posers (Remix by Computer Truck)"
+    number: 8
+    Release: dhr06
+  dhr06_track9:
+    title: "Rocket base"
+    number: 9
+    Release: dhr06
+  dhr06_track10:
+    title: "Syntax Error"
+    number: 10
+    Release: dhr06
+  dhr06_track11:
+    title: "Space Invaders (feat. Sirios Hack)"
+    number: 11
+    Release: dhr06
+  dhr06_track12:
+    title: "Monster Planet"
+    number: 12
+    Release: dhr06
+  dhr06_track13:
+    title: "Pit Stop"
+    number: 13
+    Release: dhr06
+  dhr06_track14:
+    title: "Computer Toy"
+    number: 14
+    Release: dhr06
+  dhr06_track15:
+    title: "Deutschland muss sterben (Slime Cover)"
+    number: 15
+    Release: dhr06
+  dhr07_track1:
+    title: "Red Lights"
+    number: 1
+    Release: dhr07
+  dhr07_track2:
+    title: "The Dj Theory"
+    number: 2
+    Release: dhr07
+  dhr07_track3:
+    title: "Rez"
+    number: 3
+    Release: dhr07
+  dhr07_track4:
+    title: "Break Bite"
+    number: 4
+    Release: dhr07
+  dhr07_track5:
+    title: "Grotesque"
+    number: 5
+    Release: dhr07
+  dhr07_track6:
+    title: "Kids On Acid"
+    number: 6
+    Release: dhr07
+  dhr07_track7:
+    title: "Tekmood"
+    number: 7
+    Release: dhr07
+  dhr07_track8:
+    title: "Sputnik Brothers"
+    number: 8
+    Release: dhr07
+  dhr07_track9:
+    title: "Fucked"
+    number: 9
+    Release: dhr07
+  dhr08_track1:
+    title: "Billybob Enquete"
+    number: 1
+    Release: dhr08
+  dhr08_track2:
+    title: "L'hymne des nounours"
+    number: 2
+    Release: dhr08
+  dhr08_track3:
+    title: "Kawaii Nuigurumi"
+    number: 3
+    Release: dhr08
+  dhr08_track4:
+    title: "Le coup de blues des héros"
+    number: 4
+    Release: dhr08
+  dhr08_track5:
+    title: "Sans frontières (awareness)"
+    number: 5
+    Release: dhr08
+  dhr08_track6:
+    title: "Gros doudou et le pays du libre échange"
+    number: 6
+    Release: dhr08
+  dhr08_track7:
+    title: "Harry pretty (c'est beau la vie)"
+    number: 7
+    Release: dhr08
+  dhr08_track8:
+    title: "Les angoisses existencielles de couin couin le canard"
+    number: 8
+    Release: dhr08
+  dhr08_track9:
+    title: "...Eh bien ! dansez maintenant!"
+    number: 9
+    Release: dhr08
+  dhr09_track1:
+    title: "Loading"
+    number: 1
+    Release: dhr09
+  dhr09_track2:
+    title: "Chipset"
+    number: 2
+    Release: dhr09
+  dhr09_track3:
+    title: "This is Amiga speaking"
+    number: 3
+    Release: dhr09
+  dhr09_track4:
+    title: "Paula and Sid"
+    number: 4
+    Release: dhr09
+  dhr09_track5:
+    title: "Planet on"
+    number: 5
+    Release: dhr09
+  dhr09_track6:
+    title: "Sofachips"
+    number: 6
+    Release: dhr09
+  dhr09_track7:
+    title: "Electronic Mind"
+    number: 7
+    Release: dhr09
+  dhr09_track8:
+    title: "Changemode"
+    number: 8
+    Release: dhr09
+  dhr09_track9:
+    title: "Kickstart"
+    number: 9
+    Release: dhr09
+  dhr09_track10:
+    title: "Amigabass"
+    number: 10
+    Release: dhr09
+  dhr09_track11:
+    title: "Woxom"
+    number: 11
+    Release: dhr09
+  dhr09_track12:
+    title: "Casiodream"
+    number: 12
+    Release: dhr09
+  dhr09_track13:
+    title: "Flybass (Tom Woxom's Kickstart Edit)"
+    number: 13
+    Release: dhr09
+  dhr09_track14:
+    title: "Chipset (Steve's Vocoder Dudez Version)"
+    number: 14
+    Release: dhr09
+  dhr10_track1:
+    title: "Waves of piss"
+    number: 1
+    Release: dhr10
+  dhr10_track2:
+    title: "Monsieur Dauphin"
+    number: 2
+    Release: dhr10
+  dhr10_track3:
+    title: "Aquatron"
+    number: 3
+    Release: dhr10
+  dhr10_track4:
+    title: "Seagulls"
+    number: 4
+    Release: dhr10
+  dhr10_track5:
+    title: "The book of the dead seahorses"
+    number: 5
+    Release: dhr10
+  dhr10_track6:
+    title: "Squid"
+    number: 6
+    Release: dhr10
+  dhr10_track7:
+    title: "Caviar on a booty"
+    number: 7
+    Release: dhr10
+  dhr10_track8:
+    title: "Black sharks"
+    number: 8
+    Release: dhr10
+  dhr10_track9:
+    title: "Save me flipper"
+    number: 9
+    Release: dhr10
+  dhr10_track10:
+    title: "Japanese plankton"
+    number: 10
+    Release: dhr10
+  dhr10_track11:
+    title: "Bouncing tale"
+    number: 11
+    Release: dhr10
+  dhr10_track12:
+    title: "Deep deep deep"
+    number: 12
+    Release: dhr10
+  dhr10_track13:
+    title: "Whale burger"
+    number: 13
+    Release: dhr10
+  dhr10_track14:
+    title: "Hard to party"
+    number: 14
+    Release: dhr10
+  dhr11_track1:
+    title: "Initials PP"
+    number: 1
+    Release: dhr11
+  dhr11_track2:
+    title: "Eddie The Head"
+    number: 2
+    Release: dhr11
+  dhr11_track3:
+    title: "Frankeistein Meets The Mummy"
+    number: 3
+    Release: dhr11
+  dhr11_track4:
+    title: "The Village"
+    number: 4
+    Release: dhr11
+  dhr11_track5:
+    title: "Up And Away"
+    number: 5
+    Release: dhr11
+  dhr11_track6:
+    title: "Robo Robo"
+    number: 6
+    Release: dhr11
+  dhr11_track7:
+    title: "Amour"
+    number: 7
+    Release: dhr11
+  dhr11_track8:
+    title: "Lazy"
+    number: 8
+    Release: dhr11
+  dhr11_track9:
+    title: "Grave Groove"
+    number: 9
+    Release: dhr11
+  dhr11_track10:
+    title: "Youpeeya"
+    number: 10
+    Release: dhr11
+  dhr11_track11:
+    title: "Mechanical Man"
+    number: 11
+    Release: dhr11
+  dhr11_track12:
+    title: "Six Kings, Six Pigs"
+    number: 12
+    Release: dhr11
+  dhr11_track13:
+    title: "I Fall"
+    number: 13
+    Release: dhr11
+  dhr12_track1:
+    title: "Swiss Underwater"
+    number: 1
+    Release: dhr12
+  dhr12_track2:
+    title: "Sms"
+    number: 2
+    Release: dhr12
+  dhr12_track3:
+    title: "Handicapped Lover"
+    number: 3
+    Release: dhr12
+  dhr12_track4:
+    title: "Mr. Hadopi"
+    number: 4
+    Release: dhr12
+  dhr12_track5:
+    title: "Aphte 707"
+    number: 5
+    Release: dhr12
+  dhr12_track6:
+    title: "Chinese Sportswear"
+    number: 6
+    Release: dhr12
+  dhr12_track7:
+    title: "Up And Down"
+    number: 7
+    Release: dhr12
+  dhr12_track8:
+    title: "Acid Liver"
+    number: 8
+    Release: dhr12
+  dhr12_track9:
+    title: "Paper Eyeballs Part XXIII"
+    number: 9
+    Release: dhr12
+  dhr12_track10:
+    title: "Paper Eyeballs Part XXIV"
+    number: 10
+    Release: dhr12
+  dhr12_track11:
+    title: "Feelgood - Jamie Lidell - Vicnet Mix"
+    number: 11
+    Release: dhr12
+  dhr12_track12:
+    title: "Egyptian Night"
+    number: 12
+    Release: dhr12
+  dhr13_track1:
+    title: "Dr. Sleepgood 2"
+    number: 1
+    Release: dhr13
+  dhr13_track2:
+    title: "Crunch"
+    number: 2
+    Release: dhr13
+  dhr13_track3:
+    title: "Ninja Maggots"
+    number: 3
+    Release: dhr13
+  dhr13_track4:
+    title: "Wrong Calibration"
+    number: 4
+    Release: dhr13
+  dhr13_track5:
+    title: "Unsynthethisch"
+    number: 5
+    Release: dhr13
+  dhr13_track6:
+    title: "It Crowd Remix"
+    number: 6
+    Release: dhr13
+  dhr13_track7:
+    title: "Mob"
+    number: 7
+    Release: dhr13
+  dhr13_track8:
+    title: "Play The Game"
+    number: 8
+    Release: dhr13
+  dhr13_track9:
+    title: "Frag'Em"
+    number: 9
+    Release: dhr13
+  dhr13_track10:
+    title: "Information Rmx"
+    number: 10
+    Release: dhr13
+  dhr13_track11:
+    title: "Die Uhr Rmx"
+    number: 11
+    Release: dhr13
+  dhr13_track12:
+    title: "Epilog (Stu Rmx)"
+    number: 12
+    Release: dhr13
+  dhr14_track1:
+    title: "12.49"
+    number: 1
+    Release: dhr14
+  dhr14_track2:
+    title: "11.28"
+    number: 2
+    Release: dhr14
+  dhr14_track3:
+    title: "7.35"
+    number: 3
+    Release: dhr14
+  dhr14_track4:
+    title: "8.22"
+    number: 4
+    Release: dhr14
+  dhr14_track5:
+    title: "4.53"
+    number: 5
+    Release: dhr14
+  dhr14_track6:
+    title: "10.17"
+    number: 6
+    Release: dhr14
+  dhr14_track7:
+    title: "7.47"
+    number: 7
+    Release: dhr14
+  dhr15_track1:
+    title: "Loading"
+    number: 1
+    Release: dhr15
+  dhr15_track2:
+    title: "Diego"
+    number: 2
+    Release: dhr15
+  dhr15_track3:
+    title: "Ro- Or Nanobot, Who Cares ?"
+    number: 3
+    Release: dhr15
+  dhr15_track4:
+    title: "GTG"
+    number: 4
+    Release: dhr15
+  dhr15_track5:
+    title: "For Robots"
+    number: 5
+    Release: dhr15
+  dhr15_track6:
+    title: "Guru Meditation"
+    number: 6
+    Release: dhr15
+  dhr15_track7:
+    title: "Synthetisator"
+    number: 7
+    Release: dhr15
+  dhr15_track8:
+    title: "Herz Aus Gold"
+    number: 8
+    Release: dhr15
+  dhr15_track9:
+    title: "Electric People"
+    number: 9
+    Release: dhr15
+  dhr15_track10:
+    title: "Robot Or Nanobot ? | remix by Low Bit Revolte"
+    number: 10
+    Release: dhr15
+  dhr15_track11:
+    title: "For Robots Friendly Floater Mix | remixed by Rico Zerone"
+    number: 11
+    Release: dhr15
+  dhr16_track1:
+    title: "Blast"
+    number: 1
+    Release: dhr16
+  dhr16_track2:
+    title: "Gameboy Love"
+    number: 2
+    Release: dhr16
+  dhr16_track3:
+    title: "God Bless His Mess"
+    number: 3
+    Release: dhr16
+  dhr16_track4:
+    title: "3D(istortion)"
+    number: 4
+    Release: dhr16
+  dhr16_track5:
+    title: "I Want You"
+    number: 5
+    Release: dhr16
+  dhr17_track1:
+    title: "Intro"
+    number: 1
+    Release: dhr17
+  dhr17_track2:
+    title: "Pourquoi"
+    number: 2
+    Release: dhr17
+  dhr17_track3:
+    title: "Fuck My Bitch"
+    number: 3
+    Release: dhr17
+  dhr17_track4:
+    title: "Pom Pom Girl"
+    number: 4
+    Release: dhr17
+  dhr17_track5:
+    title: "Pensée"
+    number: 5
+    Release: dhr17
+  dhr17_track6:
+    title: "Loosdee"
+    number: 6
+    Release: dhr17
+  dhr17_track7:
+    title: "Ex-Cuse"
+    number: 7
+    Release: dhr17
+  dhr17_track8:
+    title: "Los Angeles"
+    number: 8
+    Release: dhr17

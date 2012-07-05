@@ -44,6 +44,22 @@ class artistActions extends sfActions
             $nextArtist = $next[0];
         }
 
+        // Configure response
+        $this->getResponse()->setTitle($artist['name']);
+
+        // Opengraph 
+        // TODO : this should go in a filter
+        $headersOgp = array(
+            'title' => $this->getContext()->getResponse()->getTitle() . ' | Da ! Heard It Records',
+            'type'  => 'website',
+            'image' => sprintf('http://next.daheardit-records.net/assets/artists/%s/%s_300x300.jpg', $artist['slug'], $artist['slug']),
+            'description' => $artist['Translation'][$request->getParameter('sf_culture', 'fr')]['presentation']
+        );
+
+        foreach ($headersOgp as $name => $value) {
+            $this->getContext()->getResponse()->addMeta('og:'.$name, $value);
+        }
+
         // Pass data to view
         $this->previousArtist = $previousArtist;
         $this->nextArtist = $nextArtist;
