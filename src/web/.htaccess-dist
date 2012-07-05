@@ -28,6 +28,10 @@ Options +FollowSymLinks
 RedirectMatch permanent /(fr|en)/discograph(ie|y)/dhr(\d+)(/)? @dhr.url.root@/$1/discography/dhr-$3#release
 RedirectMatch permanent /(fr|en)/discograph(ie|y)(/)?$         @dhr.url.root@/$1/#discography
 
+# Archives
+RedirectMatch permanent /archives/dhr(\d+).zip      @dhr.url.root@/assets/releases/dhr-$1/archives/dhr-$1_ogg.zip
+RedirectMatch permanent /archives/dhr(\d+)_(.*).zip  @dhr.url.root@/assets/releases/dhr-$1/archives/dhr-$1_$2.zip
+
 # Artists
 RedirectMatch permanent /(fr|en)/artist(e)?s/ben_et_bene(/)?     @dhr.url.root@/$1/artist/ben-et-bene#artist
 RedirectMatch permanent /(fr|en)/artist(e)?s/computer_truck(/)?  @dhr.url.root@/$1/artist/computer-truck#artist
