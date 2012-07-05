@@ -85,7 +85,6 @@
       </div>
     </div>
 
-<!--
     <ul class="open_releases_playlist">
 <?php foreach ($release['tracks'] as $track): ?>
     <?php if ($track['number'] < 10): ?>
@@ -95,7 +94,6 @@
     <?php endif; ?> 
 <?php endforeach; ?>
     </ul>
--->
 
     <h1 class="open_releases_title"><?php echo __('À propos de la sortie') ?></h1>
     <p class="open_releases_press_text">
