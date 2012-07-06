@@ -74,8 +74,8 @@ $(document).ready(function () {
 
 	// Track releases streaming activity
 	$("#jquery_jplayer_1").bind($.jPlayer.event.play, function(event) {
-		trackInfos = event.jPlayer.status.src.match(/^.*\/(dhr\d+)_(\d+)\.mp3$/);
-		_gaq.push(['_trackEvent', 'Releases', 'Track Played - ' + trackInfos[2], trackInfos[1]]);
+		trackInfos = event.jPlayer.status.src.match(/^.*\/dhr(\d+)_(\d+)\.mp3$/);
+		_gaq.push(['_trackEvent', 'Releases', 'Track Played - ' + trackInfos[2], 'dhr-' + trackInfos[1]]);
 	});
 
 	/*
