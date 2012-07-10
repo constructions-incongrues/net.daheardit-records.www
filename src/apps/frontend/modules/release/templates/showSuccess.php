@@ -80,10 +80,19 @@
     <ul class="open_releases_playlist" style="display:none;">
 <?php foreach ($release['tracks'] as $track): ?>
     <?php if ($track['number'] < 10): ?>
-      <li><a href="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/releases/<?php echo $release['slug'] ?>/tracks/<?php echo str_replace('-', '', $release['slug']) ?>_0<?php echo $track['number'] ?>.mp3"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/play.png" alt="play" class="open_releases_playlist_icon_play" /><?php echo $track['title'] ?></a></li>
+      <?php $zero = '0'; ?>
     <?php else: ?>
-      <li><a href="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/releases/<?php echo $release['slug'] ?>/tracks/<?php echo str_replace('-', '', $release['slug']) ?>_<?php echo $track['number'] ?>.mp3"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/play.png" alt="play" class="open_releases_playlist_icon_play" /><?php echo $track['title'] ?></a></li>
+      <?php $zero = ''; ?>
     <?php endif; ?> 
+    <li itemprop="track" itemscope itemtype="http://schema.org/MusicRecording">
+      <a itemprop="url" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/releases/<?php echo $release['slug'] ?>/tracks/<?php echo str_replace('-', '', $release['slug']) ?>_<?php echo $zero ?><?php echo $track['number'] ?>.mp3">
+        <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/play.png" alt="play" class="open_releases_playlist_icon_play" />
+        <span itemprop="name"><?php echo $track['title'] ?></span>
+      </a>
+      <meta itemprop="inAlbum" content="<?php echo htmlentities($release['title']) ?>" />
+      <meta itemprop="byArtist" content="<?php echo htmlentities($release['Artist']['name']) ?>" />
+      <meta itemprop="duration" content="PT6M33S" />
+    </li>
 <?php endforeach; ?>
     </ul>
 
