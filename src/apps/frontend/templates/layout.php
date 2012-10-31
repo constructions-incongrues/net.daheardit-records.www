@@ -165,9 +165,7 @@
 
             <p>
               Da ! Heard It Records <br/>
-              C/O Johan Mailleret <br/>
-              Chez Tristan Rivoallan <br /
-              34, Rue des gardes <br/>
+              34, Rue des gardes <br />
               75018 PARIS FRANCE<br />
               <a href="mailto:contact@daheardit-records.net">contact@daheardit-records.net</a>
             </p>
