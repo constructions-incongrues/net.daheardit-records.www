@@ -1,6 +1,9 @@
 # configuration profiles
 etc/next
 
+# composer
+vendor/*
+
 # dist files
 src/config/databases.yml
 src/apps/frontend/config/app.yml
