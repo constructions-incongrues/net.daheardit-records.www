@@ -25,7 +25,7 @@ Artist:
 Release:
   actAs:
     Sluggable:
-      fields: [title]
+      fields: [sku]
     I18n:
       fields: [presentation]
     Timestampable: ~

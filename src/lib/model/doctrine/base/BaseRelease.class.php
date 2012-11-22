@@ -125,7 +125,7 @@ abstract class BaseRelease extends sfDoctrineRecord
         $sluggable0 = new Doctrine_Template_Sluggable(array(
              'fields' => 
              array(
-              0 => 'title',
+              0 => 'sku',
              ),
              ));
         $i18n0 = new Doctrine_Template_I18n(array(
