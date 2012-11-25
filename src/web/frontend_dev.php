@@ -7,7 +7,7 @@ $ipWhiteList = array(
     '78.192.130.120'    // rue Saint-Charles
 );
 if (!in_array(@$_SERVER['REMOTE_ADDR'], $ipWhiteList)) {
-    die('You are not allowed to access this file. Check '.basename(__FILE__).' for more information.');
+//    die('You are not allowed to access this file. Check '.basename(__FILE__).' for more information.');
 }
 
 require_once dirname(__FILE__).'/../config/ProjectConfiguration.class.php';
