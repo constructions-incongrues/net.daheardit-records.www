@@ -98,7 +98,7 @@
 
     <h1 class="open_releases_title"><?php echo __('À propos de la sortie') ?></h1>
     <p class="open_releases_press_text">
-<?php echo nl2br($release['Translation'][$sf_user->getCulture()]['presentation']) ?>
+<?php echo nl2br(html_entity_decode($release['Translation'][$sf_user->getCulture()]['presentation'])) ?>
     </p>
 
 <?php if (count($release['press'])): ?>
