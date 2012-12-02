@@ -5,6 +5,6 @@ all:
   doctrine:
     class: sfDoctrineDatabase
     param:
-      dsn:      mysql:host=@database.www.host@;dbname=@database.www.name@
-      username: @database.www.username@
-      password: @database.www.password@
+      dsn:      mysql:host=@database.main.hostname@;dbname=@database.main.name@
+      username: @database.main.username@
+      password: @database.main.password@
