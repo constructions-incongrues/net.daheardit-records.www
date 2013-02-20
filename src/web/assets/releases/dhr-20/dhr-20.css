@@ -31,3 +31,8 @@ font-weight:lighter;
 font-size:45px;
 font-size:4.5rem;
 opacity:0.9;}
+
+.header_news_1_content h2 
+{
+	margin-left:-10px;
+}
