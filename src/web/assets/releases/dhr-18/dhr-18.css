@@ -1,0 +1,31 @@
+.header_news_1_content,.header_news_2_content 
+{
+font-family: 'Jockey One', sans-serif;
+text-align:right;
+margin-top:112px;}
+
+.header_news_1_content a,.header_news_2_content a  
+{
+ text-decoration:none;
+}
+
+.header_news_1_content h1 
+{
+margin-bottom:-20px;
+}
+
+.header_news_1_content h1 a 
+{
+color:#FFF;
+font-weight:lighter;
+font-size:60px;
+font-size:6rem;
+}
+
+.header_news_1_content h2 a 
+{
+color:#fced20;
+font-weight:lighter;
+font-size:48px;
+font-size:4.8rem
+}
