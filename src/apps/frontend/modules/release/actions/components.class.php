@@ -12,9 +12,15 @@ class releaseComponents extends sfComponents
         // Fetch releases
         $q = Doctrine_Query::create()
             ->from('Release r')
-            ->where('r.is_public = 1')
             ->innerJoin('r.Artist a')
             ->orderBy('r.sku desc');
+
+        // Only display releases marked as public unless in preview mode
+        if (!$request->hasParameter('preview')) {
+            $q = $q->where('r.is_public = 1');
+        }
+
+        // Execute query
         $releases = $q->execute(array(), Doctrine_Core::HYDRATE_ARRAY);
 
         // Fixup data
@@ -34,18 +40,26 @@ class releaseComponents extends sfComponents
 
     public function executeHometitle(sfWebRequest $request)
     {
-        $release = Doctrine_Core::getTable('Release')->findOneBySlugAndCulture(
-            $request->getParameter('featured')
-        );
-
-        if (!$release) {
-            $release = Doctrine_Core::getTable('Release')->findLatestPublic();
+        // Preview mode : display latest private release unless a specific release is requested
+        if ($request->hasParameter('preview')) {
+            if ($request->hasParameter('featured')) {
+                $release = Doctrine_Core::getTable('Release')->findOneBySlugAndCulture(
+                    $request->getParameter('featured')
+                );
+            } else {
+                $release = Doctrine_Core::getTable('Release')->findLatest(false);
+            }
+        } else {
+            // Last public release
+            $release = Doctrine_Core::getTable('Release')->findLatest(true);
         }
 
+        // This should not happen
         if (!$release) {
             throw new RuntimeException('Could not find any featured release');
         }
 
+        // Pass data to view
         $this->release = $release;
     }
 }
