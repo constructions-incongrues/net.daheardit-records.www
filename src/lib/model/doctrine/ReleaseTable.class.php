@@ -31,10 +31,12 @@ class ReleaseTable extends Doctrine_Table
 	public function findLatest($public = true)
 	{
 		$q = $this->createQuery('r')
-            ->where('r.is_public = ?', $public)
             ->innerJoin('r.Artist a')
             ->orderBy('r.sku desc')
             ->limit(1);
+        if ($public) {
+        	$q = $q->where('r.is_public = 1');
+        }
 
 		return $q->fetchOne();
 	}
