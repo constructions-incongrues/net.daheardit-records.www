@@ -27,4 +27,15 @@ class ReleaseTable extends Doctrine_Table
 
 		return $q->fetchOne();
 	}
+
+	public function findLatestPublic()
+	{
+		$q = $this->createQuery('r')
+            ->where('r.is_public = 1')
+            ->innerJoin('r.Artist a')
+            ->orderBy('r.sku desc')
+            ->limit(1);
+
+		return $q->fetchOne();
+	}
 }

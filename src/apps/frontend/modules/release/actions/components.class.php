@@ -31,4 +31,21 @@ class releaseComponents extends sfComponents
         // Pass data to view
         $this->releases = $releases;
     }
+
+    public function executeHometitle(sfWebRequest $request)
+    {
+        $release = Doctrine_Core::getTable('Release')->findOneBySlugAndCulture(
+            $request->getParameter('featured')
+        );
+
+        if (!$release) {
+            $release = Doctrine_Core::getTable('Release')->findLatestPublic();
+        }
+
+        if (!$release) {
+            throw new RuntimeException('Could not find any featured release');
+        }
+
+        $this->release = $release;
+    }
 }

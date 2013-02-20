@@ -62,8 +62,7 @@
 
         <div class="grid_12 header_news_1">
           <div class="header_news_1_content">
-            <h1><a href="<?php echo url_for('@artist_show?slug=marc-de-blanchard#artist') ?>">Marc de Blanchard</a></h1>
-            <h2><a href="<?php echo url_for('@release_show?slug=dhr-19#release') ?>">Serenade</a></h2>
+  <?php echo include_component('release', 'hometitle') ?>
           </div><!-- header_news_1_content -->
         </div><!-- end of header_news_1 -->
 
