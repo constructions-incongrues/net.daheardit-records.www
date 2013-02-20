@@ -73,8 +73,9 @@ class dhrGenerateReleaseTask extends sfBaseTask
 		mkdir($releaseDir);
 		$this->logSection('release', sprintf('Found %d .%s files :', count($tracksSource), $options['sourceExtension']));
 
-		// Grab pics
+		// Grab other files
 		$pics = glob(sprintf('%s/*.png', $arguments['directory']));
+		$pdfs = glob(sprintf('%s/*.pdf', $arguments['directory']));
 
 		// Build tracks structure
 		$tracks = array();
@@ -138,6 +139,9 @@ class dhrGenerateReleaseTask extends sfBaseTask
 		
 				foreach ($pics as $pic) {
 					copy($pic, $workspacePathProfile.'/'.basename($pic));
+				}
+				foreach ($pdfs as $pdf) {
+					copy($pdf, $workspacePathProfile.'/'.basename($pdf));
 				}
 
 				// Create archive
