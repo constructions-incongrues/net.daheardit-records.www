@@ -7,6 +7,7 @@
  * 
  * @property string $title
  * @property string $sku
+ * @property string $slug
  * @property date $released_at
  * @property string $presentation
  * @property boolean $is_public
@@ -23,6 +24,7 @@
  * 
  * @method string              getTitle()        Returns the current record's "title" value
  * @method string              getSku()          Returns the current record's "sku" value
+ * @method string              getSlug()         Returns the current record's "slug" value
  * @method date                getReleasedAt()   Returns the current record's "released_at" value
  * @method string              getPresentation() Returns the current record's "presentation" value
  * @method boolean             getIsPublic()     Returns the current record's "is_public" value
@@ -38,6 +40,7 @@
  * @method Doctrine_Collection getTrack()        Returns the current record's "Track" collection
  * @method Release             setTitle()        Sets the current record's "title" value
  * @method Release             setSku()          Sets the current record's "sku" value
+ * @method Release             setSlug()         Sets the current record's "slug" value
  * @method Release             setReleasedAt()   Sets the current record's "released_at" value
  * @method Release             setPresentation() Sets the current record's "presentation" value
  * @method Release             setIsPublic()     Sets the current record's "is_public" value
@@ -67,6 +70,10 @@ abstract class BaseRelease extends sfDoctrineRecord
              'notblank' => true,
              ));
         $this->hasColumn('sku', 'string', null, array(
+             'type' => 'string',
+             'notblank' => true,
+             ));
+        $this->hasColumn('slug', 'string', null, array(
              'type' => 'string',
              'notblank' => true,
              ));
@@ -122,12 +129,6 @@ abstract class BaseRelease extends sfDoctrineRecord
              'local' => 'id',
              'foreign' => 'release_id'));
 
-        $sluggable0 = new Doctrine_Template_Sluggable(array(
-             'fields' => 
-             array(
-              0 => 'sku',
-             ),
-             ));
         $i18n0 = new Doctrine_Template_I18n(array(
              'fields' => 
              array(
@@ -135,7 +136,6 @@ abstract class BaseRelease extends sfDoctrineRecord
              ),
              ));
         $timestampable0 = new Doctrine_Template_Timestampable();
-        $this->actAs($sluggable0);
         $this->actAs($i18n0);
         $this->actAs($timestampable0);
     }

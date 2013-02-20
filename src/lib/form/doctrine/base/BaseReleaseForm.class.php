@@ -18,6 +18,7 @@ abstract class BaseReleaseForm extends BaseFormDoctrine
       'id'           => new sfWidgetFormInputHidden(),
       'title'        => new sfWidgetFormTextarea(),
       'sku'          => new sfWidgetFormTextarea(),
+      'slug'         => new sfWidgetFormTextarea(),
       'released_at'  => new sfWidgetFormDate(),
       'is_public'    => new sfWidgetFormInputCheckbox(),
       'is_new'       => new sfWidgetFormInputCheckbox(),
@@ -28,7 +29,6 @@ abstract class BaseReleaseForm extends BaseFormDoctrine
       'is_available' => new sfWidgetFormInputCheckbox(),
       'price'        => new sfWidgetFormInputText(),
       'links_press'  => new sfWidgetFormInputText(),
-      'slug'         => new sfWidgetFormInputText(),
       'created_at'   => new sfWidgetFormDateTime(),
       'updated_at'   => new sfWidgetFormDateTime(),
     ));
@@ -37,6 +37,7 @@ abstract class BaseReleaseForm extends BaseFormDoctrine
       'id'           => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
       'title'        => new sfValidatorString(),
       'sku'          => new sfValidatorString(),
+      'slug'         => new sfValidatorString(),
       'released_at'  => new sfValidatorDate(array('required' => false)),
       'is_public'    => new sfValidatorBoolean(array('required' => false)),
       'is_new'       => new sfValidatorBoolean(array('required' => false)),
@@ -47,14 +48,9 @@ abstract class BaseReleaseForm extends BaseFormDoctrine
       'is_available' => new sfValidatorBoolean(array('required' => false)),
       'price'        => new sfValidatorInteger(array('required' => false)),
       'links_press'  => new sfValidatorPass(array('required' => false)),
-      'slug'         => new sfValidatorString(array('max_length' => 255, 'required' => false)),
       'created_at'   => new sfValidatorDateTime(),
       'updated_at'   => new sfValidatorDateTime(),
     ));
-
-    $this->validatorSchema->setPostValidator(
-      new sfValidatorDoctrineUnique(array('model' => 'Release', 'column' => array('slug')))
-    );
 
     $this->widgetSchema->setNameFormat('release[%s]');
 

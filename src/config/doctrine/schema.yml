@@ -24,8 +24,6 @@ Artist:
 
 Release:
   actAs:
-    Sluggable:
-      fields: [sku]
     I18n:
       fields: [presentation]
     Timestampable: ~
@@ -34,6 +32,9 @@ Release:
       type:     string
       notblank: true
     sku:
+      type:     string
+      notblank: true
+    slug:
       type:     string
       notblank: true
     released_at:  date
