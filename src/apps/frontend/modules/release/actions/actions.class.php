@@ -15,6 +15,9 @@ class releaseActions extends sfActions
         // Fetch release
         $release = Doctrine_Core::getTable('Release')->findOneBySlugAndCulture($request->getParameter('slug'), $this->getUser()->getCulture());
         $this->forward404Unless($release);
+        if (!$request->hasParameter('preview') && !$release->is_public) {
+            $this->forward404();
+        }
 
         // Fetch release tracks
         $tracks = Doctrine_Core::getTable('Track')->findByReleaseId($release['id'], Doctrine_Core::HYDRATE_ARRAY);

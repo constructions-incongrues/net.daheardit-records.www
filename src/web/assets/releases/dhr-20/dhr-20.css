@@ -20,8 +20,8 @@ margin-bottom:-20px;
 {
 color:#fff;
 font-weight:lighter;
-font-size:3.8px;
-font-size:38rem;
+font-size:38px;
+font-size:3.8rem;
 opacity:0.9;}
 
 .header_news_1_content h2 a 
@@ -30,7 +30,8 @@ color:#000;
 font-weight:lighter;
 font-size:32px;
 font-size:3.2rem;
-opacity:0.9;}
+opacity:0.9;
+}
 
 .header_news_1_content h2 
 {
