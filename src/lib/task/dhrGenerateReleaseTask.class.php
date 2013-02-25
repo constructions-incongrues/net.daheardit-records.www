@@ -40,6 +40,8 @@ class dhrGenerateReleaseTask extends sfBaseTask
     		new sfCommandOption('sourceExtension', null, sfCommandOption::PARAMETER_OPTIONAL, 'Extension of source files', 'flac'),
     		new sfCommandOption('profiles', null, sfCommandOption::PARAMETER_OPTIONAL, 'Conversion profiles', implode(',', $this->getDefaultConversionProfiles())),
     		new sfCommandOption('archives', null, sfCommandOption::PARAMETER_NONE, 'Generates archives ?'),
+    		new sfCommandOption('db', null, sfCommandOption::PARAMETER_NONE, 'Create database records ? (CAREFUL : deletes existing data)'),
+    		new sfCommandOption('streamables', null, sfCommandOption::PARAMETER_NONE, 'Generate streamable MP3s ?'),
     	));
 	}
 
@@ -79,7 +81,9 @@ class dhrGenerateReleaseTask extends sfBaseTask
 
 		// Build tracks structure
 		$tracks = array();
-		Doctrine_Core::getTable('Track')->createQuery()->delete()->where('release_id = ?', $release['id'])->execute();
+		if ($options['db']) {
+			Doctrine_Core::getTable('Track')->createQuery()->delete()->where('release_id = ?', $release['id'])->execute();
+		}
 		foreach ($tracksSource as $trackFilepath) {
 			$matches = array();
 			preg_match(sprintf('/^(\d+) - (.*).%s$/', $options['sourceExtension']), basename($trackFilepath), $matches);
@@ -99,16 +103,27 @@ class dhrGenerateReleaseTask extends sfBaseTask
 			$tracks[] = $track;
 
 			// Create track in database
-			$trackDb = new Track();
-			$trackDb->number = $track['number'];
-			$trackDb->title = $track['title'];
-			$trackDb->release_id = $release['id'];
-			$trackDb->save();
+			if ($options['db']) {
+				$trackDb = new Track();
+				$trackDb->number = $track['number'];
+				$trackDb->title = $track['title'];
+				$trackDb->release_id = $release['id'];
+				$trackDb->save();
+			}
 
 			// Generate streamable track
-			// TODO : track naming is not consistent 
-			$command = sprintf('/usr/bin/ffmpeg -y -i \'%s\' -ab 128k \'%s/assets/releases/%s/tracks/%s_%s.mp3\'', $track['path'], sfConfig::get('sf_web_dir'), $release->slug, str_replace('-', '', $release->slug), $track['number']);
-			exec($command);
+			if ($options['streamables']) {
+				// TODO : track naming is not consistent
+				$command = sprintf(
+					'/usr/bin/ffmpeg -y -i \'%s\' -ab 128k \'%s/assets/releases/%s/tracks/%s_%s.mp3\'', 
+					$track['path'], 
+					sfConfig::get('sf_web_dir'), 
+					$release->slug, 
+					str_replace('-', '', $release->slug), 
+					$track['number']
+				);
+				exec(escapeshellcmd($command));
+			}
 
 			$this->logSection('release', sprintf('  %s - %s', $track['number'], $track['title']));
 		}
@@ -140,9 +155,9 @@ class dhrGenerateReleaseTask extends sfBaseTask
 						$release->title, 
 						$track['number'], 
 						substr($release->getReleasedAt(), 0, 4),
-						sprintf('%s/%s', $workspacePathProfile, basename($track['path'], '.'.$options['sourceExtension']))
+						sprintf('%s/%s', $workspacePathProfile, $this->translit(basename($track['path'], '.'.$options['sourceExtension'])))
 					);
-					exec($command);
+					exec(escapeshellcmd($command));
 				}
 		
 				foreach ($pics as $pic) {
@@ -154,8 +169,8 @@ class dhrGenerateReleaseTask extends sfBaseTask
 
 				// Create archive
 				$zipPath = sprintf('%s/archives/%s_%s.zip', $releaseDir, $release->slug, $profile['name']);
-				$commandZip = sprintf('zip -rj %s %s', $zipPath, $workspacePathProfile);
-				exec($commandZip);
+				$commandZip = sprintf('zip -rj -UN=n %s %s', $zipPath, $workspacePathProfile);
+				$res = exec($commandZip);
 				$this->logSection('release', sprintf('Generated release for profile %s in %s', $profile['name'], $zipPath));
 			}
 		}
@@ -164,5 +179,9 @@ class dhrGenerateReleaseTask extends sfBaseTask
 	private function getDefaultConversionProfiles()
 	{
 		return array_keys($this->conversionProfiles);
+	}
+
+	private function translit($text) {
+		return iconv('utf-8', 'us-ascii//TRANSLIT', $text);
 	}
 }
