@@ -1175,6 +1175,19 @@ padding-bottom:0px;
 line-height:17px;
 }
 
+.open_releases_press_text a 
+{
+color: #000;
+opacity: 0.9;
+  text-decoration: none;
+}
+
+.open_releases_press_text a:hover 
+{
+color: #000;
+opacity: 1;
+}
+
 ul.open_releases_button, ul.open_artists_button
 {
 margin-top:-40px;
