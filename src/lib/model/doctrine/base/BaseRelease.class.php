@@ -17,7 +17,7 @@
  * @property integer $artist_id
  * @property string $paypal_id
  * @property boolean $is_available
- * @property integer $price
+ * @property string $price
  * @property text $links_press
  * @property Artist $Artist
  * @property Doctrine_Collection $Track
@@ -34,7 +34,7 @@
  * @method integer             getArtistId()     Returns the current record's "artist_id" value
  * @method string              getPaypalId()     Returns the current record's "paypal_id" value
  * @method boolean             getIsAvailable()  Returns the current record's "is_available" value
- * @method integer             getPrice()        Returns the current record's "price" value
+ * @method string              getPrice()        Returns the current record's "price" value
  * @method text                getLinksPress()   Returns the current record's "links_press" value
  * @method Artist              getArtist()       Returns the current record's "Artist" value
  * @method Doctrine_Collection getTrack()        Returns the current record's "Track" collection
@@ -108,8 +108,8 @@ abstract class BaseRelease extends sfDoctrineRecord
              'type' => 'boolean',
              'default' => 1,
              ));
-        $this->hasColumn('price', 'integer', null, array(
-             'type' => 'integer',
+        $this->hasColumn('price', 'string', null, array(
+             'type' => 'string',
              'notblank' => true,
              'default' => 5,
              ));

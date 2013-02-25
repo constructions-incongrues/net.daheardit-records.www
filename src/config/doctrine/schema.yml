@@ -53,7 +53,7 @@ Release:
       type:       boolean
       default:    1
     price:
-      type:     integer
+      type:     string
       notblank: true
       default:  5
     links_press: text

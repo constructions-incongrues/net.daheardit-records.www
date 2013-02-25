@@ -123,7 +123,7 @@
 <?php if ($release['is_available']): ?>
     <h3 class="open_releases_title"><?php echo __('Acheter') ?></h3>
     <p class="open_releases_buy">
-      <span class="open_releases_price"><?php echo $release['price'] ?> €</span>
+      <span class="open_releases_price">€ <?php echo $release['price'] ?></span>
       <span class="open_releases_market"><a href="" class="paypal" data-paypalid="<?php echo $release['paypal_id'] ?>"><?php echo __('Ajouter au panier') ?></a> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/img-panier.png" alt="" /></span>
     </p>
 <?php endif ?>
