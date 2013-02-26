@@ -26,19 +26,19 @@
 
     <div class="grid_6 open_releases_artwork">
       <span class="calque_artwork"> </span>
-      <img id="carousel-current" height="460px" width="460px" src="<?php echo $sf_request->getRelativeUrlRoot() ?><?php echo $release['artworks'][0] ?>" />
+      <img id="carousel-current" height="460px" width="460px" src="<?php echo url_for('@main_image').sprintf('?url=%s%s%s&transform=cropCenter&params=500,500', $sf_request->getUriPrefix(), $sf_request->getRelativeUrlRoot(), urlencode($release['artworks'][0])) ?>" />
 <?php for ($i = 1; $i < count($release['artworks']); $i++): ?>
-  <img style="display:none;" height="460px" width="460px" src="<?php echo $sf_request->getRelativeUrlRoot() ?><?php echo $release['artworks'][$i] ?>" />
+      <img style="display:none;" height="460px" width="460px" src="<?php echo url_for('@main_image').sprintf('?url=%s%s%s&transform=cropCenter&params=500,500', $sf_request->getUriPrefix(), $sf_request->getRelativeUrlRoot(), urlencode($release['artworks'][$i])) ?>" />
 <?php endfor ?>
       <ul class="open_releases_nav_artwork">
             <li>
-              <a class="carousel-nav current" href="<?php echo $sf_request->getRelativeUrlRoot() ?><?php echo $release['artworks'][0] ?>" title="<?php echo __("Survolez l'image pour mettre le carousel en pause") ?>">
+              <a class="carousel-nav current" href="<?php echo url_for('@main_image').sprintf('?url=%s%s%s&transform=cropCenter&params=500,500', $sf_request->getUriPrefix(), $sf_request->getRelativeUrlRoot(), urlencode($release['artworks'][0])) ?>" title="<?php echo __("Survolez l'image pour mettre le carousel en pause") ?>">
                 <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/caroussel-release-hover.png" />
               </a>
             </li>
 <?php for ($i = 1; $i < count($release['artworks']); $i++): ?>
             <li>
-              <a class="carousel-nav" href="<?php echo $sf_request->getRelativeUrlRoot() ?><?php echo $release['artworks'][$i] ?>" title="<?php echo __("Survolez l'image pour mettre le carousel en pause") ?>">
+              <a class="carousel-nav" href="<?php echo url_for('@main_image').sprintf('?url=%s%s%s&transform=cropCenter&params=500,500', $sf_request->getUriPrefix(), $sf_request->getRelativeUrlRoot(), urlencode($release['artworks'][$i])) ?>" title="<?php echo __("Survolez l'image pour mettre le carousel en pause") ?>">
                 <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/caroussel-release.png" />
               </a>
             </li>
@@ -55,7 +55,11 @@
     
     <div class="grid_6 open_releases_infos">
 
-    <h1 class="open_releases_catalog"><?php echo $release['sku'] ?> - <span class="open_releases_infos_date">date</span></h1>
+    <h1 class="open_releases_catalog"><?php echo $release['sku'] ?>
+<?php if ($release['released_at']): ?>
+     - <span class="open_releases_infos_date"><?php echo $release['released_at'] ?></span>
+<?php endif; ?>
+   </h1>
     <h2 class="open_releases_artist"><a href="<?php echo url_for(sprintf('@artist_show?slug=%s#artist', $release['Artist']['slug'])) ?>"><?php echo $release['Artist']['name'] ?></a></h2>
     <h3 class="open_releases_album"><?php echo $release['title'] ?></h3>
 

@@ -60,4 +60,54 @@ class mainActions extends sfActions
         $this->setLayout(false);
     }
 
+    public function executeImageResize(sfWebRequest $request)
+    {
+        // Sanity checks
+        if (!$request->hasParameter('url')) {
+            throw new InvalidArgumentException('Missing "url" parameter');
+        } else {
+            if (!filter_var(urldecode($request->getParameter('url')), FILTER_VALIDATE_URL)) {
+                throw new InvalidArgumentException(sprintf('Invalid URL : %s', $request->getParameter('url')));
+            } 
+        }
+
+        // Download image
+        // TODO : url => filesystem map
+        $urlImage = $request->getParameter('url');
+        $data = file_get_contents($urlImage);
+        if (!$data) {
+            throw new RuntimeException(sprintf('Could not download image from url : %s', $urlImage));
+        }
+
+        // Load image
+        $image = new sfImage();
+        $image->loadString($data);
+
+        // Transform image
+        $transform = $request->getParameter('transform', 'thumbnail'); 
+        $params = explode(",", $request->getParameter('params', '150,150'));
+
+        // TODO : create proper transform class (and commit it to upstream !)
+        if ($transform == 'cropCenter') {
+            list($width, $height) = explode(",", $request->getParameter('params', '150,150'));
+            $left = ($image->getWidth() - $width) / 2;
+            $top = ($image->getHeight() - $height) / 2;
+            $params = array($left, $top, $width, $height);
+            $transform = 'crop';
+        }
+        call_user_func_array(
+            array($image, $transform),
+            $params
+        );
+
+        // TODO : Cache image
+
+        // Create response
+        $response = $this->getResponse();
+        $response->setContentType($image->getMIMEType());
+        $response->setContent($image);
+
+        return sfView::NONE;
+    }
+
 }
