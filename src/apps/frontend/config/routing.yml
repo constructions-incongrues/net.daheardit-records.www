@@ -6,6 +6,10 @@ main_thanks:
   url: /thanks
   param: { module: main, action: thanks }
 
+main_image:
+  url: /image
+  param: { module: main, action: ImageResize }
+
 # feeds
 feeds_posts:
   url: /:sf_culture/feeds/posts
