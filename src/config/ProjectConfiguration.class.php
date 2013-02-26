@@ -12,7 +12,8 @@ class ProjectConfiguration extends sfProjectConfiguration
 			'sfDoctrinePlugin',
 			'sfTwitterBootstrapPlugin',
 			'sfDoctrineGuardPlugin',
-			'sfFeed2Plugin'
+			'sfFeed2Plugin',
+			'sfImageTransformPlugin'
 		);
 	}
 
