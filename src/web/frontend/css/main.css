@@ -1465,6 +1465,10 @@ color:#FFF;
   margin-left:0px;
 }
 
+a.carousel-nav {
+  text-decoration: none;
+}
+
 /* INFO BULLE */
 /*
 
