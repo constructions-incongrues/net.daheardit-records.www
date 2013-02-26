@@ -55,7 +55,11 @@
     
     <div class="grid_6 open_releases_infos">
 
-    <h1 class="open_releases_catalog"><?php echo $release['sku'] ?> - <span class="open_releases_infos_date">date</span></h1>
+    <h1 class="open_releases_catalog"><?php echo $release['sku'] ?>
+<?php if ($release['released_at']): ?>
+     - <span class="open_releases_infos_date"><?php echo $release['released_at'] ?></span>
+<?php endif; ?>
+   </h1>
     <h2 class="open_releases_artist"><a href="<?php echo url_for(sprintf('@artist_show?slug=%s#artist', $release['Artist']['slug'])) ?>"><?php echo $release['Artist']['name'] ?></a></h2>
     <h3 class="open_releases_album"><?php echo $release['title'] ?></h3>
 
