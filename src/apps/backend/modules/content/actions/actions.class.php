@@ -13,4 +13,17 @@ require_once dirname(__FILE__).'/../lib/contentGeneratorHelper.class.php';
  */
 class contentActions extends autoContentActions
 {
+	public function executeClearCache(sfWebRequest $request)
+	{
+		// Execute cache clear command upon request
+		$results = array();
+		if ($request->getMethod() == sfWebRequest::POST) {
+			$command = sprintf('%s/symfony cache:clear --app=frontend', sfConfig::get('sf_root_dir'));
+			exec($command, $results);
+			$results[] = $command;
+		}
+
+		// Pass data to view
+		$this->results = $results;
+	}
 }

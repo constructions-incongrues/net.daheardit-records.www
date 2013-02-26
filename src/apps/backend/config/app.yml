@@ -39,4 +39,7 @@ all:
           Créer:
             url:              content_new
             image:            pencil.png
+          "Invalider le cache":
+            url:              content_clearCache
+            image:            button-synchronize.png
 

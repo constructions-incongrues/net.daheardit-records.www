@@ -7,6 +7,10 @@ content:
     column:               id
     with_wildcard_routes: true
 
+content_clearCache:
+  url:   /content/clearCache
+  param: { module: content, action: clearCache }
+
 post:
   class: sfDoctrineRouteCollection
   options:
