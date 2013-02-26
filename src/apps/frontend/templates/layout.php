@@ -211,11 +211,11 @@
         </script>
 
         <!-- scripts concatenated and minified via ant build script-->
-        <script src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/js/jQuery.jPlayer.2.1.0/jquery.jplayer.min.js?v=1"></script>
-        <script src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/js/jQuery.jPlayer.2.1.0/add-on/jplayer.playlist.js?v=1"></script>
-        <script src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/js/jquery.scrollTo-1.4.2-min.js?v=1"></script>
-        <script src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/js/jquery.pjax.js?v=1"></script>
-        <script src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/js/script.js?v=1"></script>
+        <script src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/js/jQuery.jPlayer.2.1.0/jquery.jplayer.min.js?v=3"></script>
+        <script src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/js/jQuery.jPlayer.2.1.0/add-on/jplayer.playlist.js?v=3"></script>
+        <script src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/js/jquery.scrollTo-1.4.2-min.js?v=3"></script>
+        <script src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/js/jquery.pjax.js?v=3"></script>
+        <script src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/js/script.js?v=3"></script>
         <!-- end scripts-->
 
         <script>

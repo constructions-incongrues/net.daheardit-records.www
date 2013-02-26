@@ -26,9 +26,17 @@
       <span class="calque_artists_pictures"> </span>
       <img id="carousel-current" height="460px" width="460px" src="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/artists/<?php echo $artist['slug'] ?>/<?php echo $artist['slug'] ?>_300x300.jpg" alt="" />
       <ul class="open_releases_nav_artwork">
-            <li><a class="carousel-nav" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/artists/<?php echo $artist['slug'] ?>/<?php echo $artist['slug'] ?>_300x300.jpg"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/caroussel-release-hover.png" alt="" /></a></li>
-<?php for ($i = 1; $i < count($artist['links_carousel']); $i++): ?>
-            <li><a class="carousel-nav" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/<?php echo $artist['links_carousel'][$i] ?>"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/caroussel-release.png" alt="" /></a></li>
+        <li>
+          <a class="carousel-nav current" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/artists/<?php echo $artist['slug'] ?>/<?php echo $artist['slug'] ?>_300x300.jpg" title="<?php echo __("Survolez l'image pour mettre le carousel en pause") ?>">
+            <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/caroussel-release-hover.png" />
+          </a>
+        </li>
+<?php for ($i = 0; $i < count($artist['links_carousel']); $i++): ?>
+        <li>
+          <a class="carousel-nav" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/<?php echo $artist['links_carousel'][$i] ?>" title="<?php echo __("Survolez l'image pour mettre le carousel en pause") ?>">
+            <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/caroussel-release.png" />
+          </a>
+        </li>
 <?php endfor ?>
      </ul>
 

@@ -16,7 +16,7 @@ Artist:
       regexp: "|^http(s)?://[a-z0-9-]+(.[a-z0-9-]+)*(:[0-9]+)?(/.*)?$|"
     image:        string
     presentation: string
-    links_carousel: text
+    links_carousel: string
     more:        string
     is_public:
       type:       boolean
@@ -39,6 +39,7 @@ Release:
       notblank: true
     released_at:  date
     presentation: string
+    links_carousel: string
     is_public:
       type:       boolean
       default:    1

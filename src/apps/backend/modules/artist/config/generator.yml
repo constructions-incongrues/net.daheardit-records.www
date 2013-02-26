@@ -20,6 +20,9 @@ generator:
         url:
           label: URL
           help: URL vers le site internet de l'artiste
+        links_carousel:
+          label : Liens carousel
+          help: Un lien par ligne
       list:
         display: [=name, url]
       filter:  ~

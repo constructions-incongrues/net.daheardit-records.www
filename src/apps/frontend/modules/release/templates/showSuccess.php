@@ -31,9 +31,24 @@
   <img style="display:none;" height="460px" width="460px" src="<?php echo $sf_request->getRelativeUrlRoot() ?><?php echo $release['artworks'][$i] ?>" />
 <?php endfor ?>
       <ul class="open_releases_nav_artwork">
-            <li><a class="carousel-nav" href="<?php echo $sf_request->getRelativeUrlRoot() ?><?php echo $release['artworks'][0] ?>"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/caroussel-release-hover.png" alt="" /></a></li>
+            <li>
+              <a class="carousel-nav current" href="<?php echo $sf_request->getRelativeUrlRoot() ?><?php echo $release['artworks'][0] ?>" title="<?php echo __("Survolez l'image pour mettre le carousel en pause") ?>">
+                <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/caroussel-release-hover.png" />
+              </a>
+            </li>
 <?php for ($i = 1; $i < count($release['artworks']); $i++): ?>
-            <li><a class="carousel-nav" href="<?php echo $sf_request->getRelativeUrlRoot() ?><?php echo $release['artworks'][$i] ?>"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/caroussel-release.png" alt="" /></a></li>
+            <li>
+              <a class="carousel-nav" href="<?php echo $sf_request->getRelativeUrlRoot() ?><?php echo $release['artworks'][$i] ?>" title="<?php echo __("Survolez l'image pour mettre le carousel en pause") ?>">
+                <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/caroussel-release.png" />
+              </a>
+            </li>
+<?php endfor ?>
+<?php for ($i = 0; $i < count($release['links_carousel']); $i++): ?>
+            <li>
+              <a class="carousel-nav" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/<?php echo $release['links_carousel'][$i] ?>" title="<?php echo __("Survolez l'image pour mettre le carousel en pause") ?>">
+                <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/caroussel-release.png" />
+              </a>
+            </li>
 <?php endfor ?>
      </ul>
    </div><!-- end of grid_6 -->

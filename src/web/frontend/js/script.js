@@ -65,6 +65,7 @@ $(document).ready(function () {
 			$('.calque_artists_pictures').hide();
 			var iframe = $('<iframe id="carousel-iframe" src="http://player.vimeo.com/video/'+ $(this).attr('href').match(/.*\/(\d+)/)[1] +'" width="460" height="460" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>')
 			$('#carousel-current').hide();
+			$('.calque_artwork').hide();
 			iframe.insertAfter('#carousel-current');
 		} else {
 			// Images
@@ -72,14 +73,38 @@ $(document).ready(function () {
 			$('#carousel-current').show();
 			$('#carousel-iframe').hide();
 			$('#carousel-current').attr('src', $(this).attr('href'));
+			$('.calque_artwork').show();
 		}
 
 		// Navigation
+		$('a.carousel-nav').removeClass('current');
+		$(this).addClass('current');
 		$('a.carousel-nav img').each(function() {
 			$(this).attr('src', dhrUriRoot + '/frontend/pics/button/caroussel-release.png');
 		});
 		$(this).find('img').attr('src', dhrUriRoot + '/frontend/pics/button/caroussel-release-hover.png');
 		return false;
+	});
+
+	// Carousel auto change
+	createIntervalCarousel = function() {
+			intervalCarousel = setInterval(function() {
+			var e = $('a.carousel-nav.current').parent().next().children()[0];
+			if (e == undefined) {
+				e = $('a.carousel-nav')[0];
+			}
+			e.click()
+		}, 8000);
+	};	
+
+	createIntervalCarousel();
+
+	$('div.open_artists_pictures, div.open_releases_artwork').on('mouseover', function() {
+		clearInterval(intervalCarousel);
+	});
+
+	$('div.open_artists_pictures, div.open_releases_artwork').on('mouseout', function() {
+		createIntervalCarousel();
 	});
 
 	// Track releases download count

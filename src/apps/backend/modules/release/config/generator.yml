@@ -32,6 +32,9 @@ generator:
         is_available:
           label: La release est-elle encore disponible ?
           help: Décocher cette case si la release est épuisée 
+        links_carousel:
+          label : Liens carousel
+          help: Un lien par ligne
       list:
         display: [=sku, title, artist, released_at]
       filter:  ~
