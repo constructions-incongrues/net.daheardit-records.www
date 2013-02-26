@@ -24,9 +24,25 @@ $(document).ready(function () {
 		});
 
 		// Media player
-		new jPlayerPlaylist(null, playlist, {
+		var player = new jPlayerPlaylist(null, playlist, {
 			solution: 'flash, html', 
-			swfPath: dhrUriRoot + "/frontend/js/jQuery.jPlayer.2.1.0/"
+			swfPath: dhrUriRoot + "/frontend/js/jQuery.jPlayer.2.1.0/",
+			playlistOptions: { autoPlay: window.autoPlay }
+		});
+
+		// Track releases streaming activity
+		$("#jquery_jplayer_1").bind($.jPlayer.event.play, function(event) {
+			trackInfos = event.jPlayer.status.src.match(/^.*\/dhr(\d+)_(\d+)\.mp3$/);
+			_gaq.push(['_trackEvent', 'Releases', 'Track Played - ' + trackInfos[2], 'dhr-' + trackInfos[1]]);
+		});
+
+		// Go to previous release after release's last track
+		$("#jquery_jplayer_1").bind($.jPlayer.event.ended, function(event) {
+			if (event.jPlayer.status.src == $('.open_releases_playlist li a').last().attr('href')) {
+				if ($('a.previous')) {
+					window.location = $('a.previous').attr('href').split('#')[0] + '?play#release';;
+				}
+			}
 		});
 	}
 
@@ -70,12 +86,6 @@ $(document).ready(function () {
 	// @see https://developers.google.com/analytics/devguides/collection/gajs/eventTrackerGuide
 	$('a.release-download').click(function() {
 		_gaq.push(['_trackEvent', 'Releases', 'Archive Downloaded - ' + $(this).data('dhr-archive-format'), $(this).data('dhr-release-slug')]);
-	});
-
-	// Track releases streaming activity
-	$("#jquery_jplayer_1").bind($.jPlayer.event.play, function(event) {
-		trackInfos = event.jPlayer.status.src.match(/^.*\/dhr(\d+)_(\d+)\.mp3$/);
-		_gaq.push(['_trackEvent', 'Releases', 'Track Played - ' + trackInfos[2], 'dhr-' + trackInfos[1]]);
 	});
 
 	/*

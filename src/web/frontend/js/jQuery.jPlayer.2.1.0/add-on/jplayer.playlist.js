@@ -162,7 +162,7 @@
 			});
 		},
 		_initPlaylist: function(playlist) {
-			this.current = -1;
+			this.current = 0;
 			this.shuffled = false;
 			this.removing = false;
 			this.original = $.extend(true, [], playlist); // Copy the Array of Objects
