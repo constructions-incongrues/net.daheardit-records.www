@@ -62,7 +62,7 @@
 
         <div class="grid_12 header_news_1">
           <div class="header_news_1_content">
-  <?php echo include_component('release', 'hometitle') ?>
+<?php include_component('release', 'hometitle') ?>
           </div><!-- header_news_1_content -->
         </div><!-- end of header_news_1 -->
 
@@ -202,12 +202,20 @@
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
 
+        <script>
+<?php if ($sf_request->hasParameter('play')): ?>
+          window.autoPlay = true;
+<?php else: ?>
+          window.autoPlay = false;
+<?php endif; ?>
+        </script>
+
         <!-- scripts concatenated and minified via ant build script-->
-        <script src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/js/jQuery.jPlayer.2.1.0/jquery.jplayer.min.js"></script>
-        <script src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/js/jQuery.jPlayer.2.1.0/add-on/jplayer.playlist.js"></script>
-        <script src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/js/jquery.scrollTo-1.4.2-min.js"></script>
-        <script src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/js/jquery.pjax.js"></script>
-        <script src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/js/script.js"></script>
+        <script src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/js/jQuery.jPlayer.2.1.0/jquery.jplayer.min.js?v=1"></script>
+        <script src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/js/jQuery.jPlayer.2.1.0/add-on/jplayer.playlist.js?v=1"></script>
+        <script src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/js/jquery.scrollTo-1.4.2-min.js?v=1"></script>
+        <script src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/js/jquery.pjax.js?v=1"></script>
+        <script src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/js/script.js?v=1"></script>
         <!-- end scripts-->
 
         <script>

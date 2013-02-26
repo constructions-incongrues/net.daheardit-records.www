@@ -4,6 +4,12 @@ class postComponents extends sfComponents
 {
     public function executeList(sfWebRequest $request)
     {
+        // TODO : ugly :D
+        $style = '';
+        if ($request->getParameter('module') != 'main' && $request->getParameter('module') != 'post') {
+            $style = 'display:none;';
+        }
+
         if ($this->getContext()->getRouting()->getCurrentRouteName() == 'post_show') {
             // Fetch requested post
             $post= Doctrine_Core::getTable('Post')->findOneBySlug($request->getParameter('slug'));
@@ -35,5 +41,6 @@ class postComponents extends sfComponents
         $this->postPrevious = $postPrevious;
         $this->postNext = $postNext;
         $this->post = $post;
+        $this->style = $style;
     }
 }

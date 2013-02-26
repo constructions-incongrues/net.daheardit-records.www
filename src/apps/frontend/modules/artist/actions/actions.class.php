@@ -44,6 +44,17 @@ class artistActions extends sfActions
             $nextArtist = $next[0];
         }
 
+        /*
+         * Featured release (header image, css, etc)
+         * @see release/hometitle component
+         */
+        if (!$request->hasParameter('featured')) {
+            $release = $artistArray['releases'][array_rand($artistArray['releases'])];
+            if (is_readable(sprintf('%s/web/assets/releases/%s/header.jpg', sfConfig::get('sf_root_dir'), $release['slug']))) {
+                $request->setParameter('featured', $release['slug']);
+            }
+        }
+
         // Carousel
         $artistArray['links_carousel'] = explode("\n", $artistArray['links_carousel']);
 

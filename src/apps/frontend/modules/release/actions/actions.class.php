@@ -88,6 +88,16 @@ class releaseActions extends sfActions
         }
         $releaseArray['artworks'] = $artworks;
 
+        /*
+         * Featured release (header image, css, etc)
+         * @see release/hometitle component
+         */
+        if (!$request->hasParameter('featured')) {
+            if (is_readable(sprintf('%s/web/assets/releases/%s/header.jpg', sfConfig::get('sf_root_dir'), $release->slug))) {
+                $request->setParameter('featured', $release->slug);
+            }
+        }
+
         // Opengraph 
         // TODO : this should go in a filter
         $headersOgp = array(

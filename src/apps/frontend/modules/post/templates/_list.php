@@ -1,4 +1,4 @@
-<div class="header_news_2_content">
+<div class="header_news_2_content" style="<?php echo $style ?>">
   <div class="grid_12 header_news_2"> 
     <div class="grid_3 header_news_2_pictures">
 <?php if ($post->getImage()): ?>
