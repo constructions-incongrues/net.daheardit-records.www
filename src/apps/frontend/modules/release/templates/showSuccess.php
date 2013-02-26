@@ -3,7 +3,7 @@
 
 <div class="grid_12 releases">
         <div class="category_content">
-          <h1 id="release"><?php echo $release['sku'] ?></h1>
+          <h1 id="release"><?php echo $release['sku'] ?> </h1>
             <span class="triangle"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/others/triangle.png" class="triangle" /></span>
         </div><!-- end of category contents --> 
       </div><!-- end of releases -->
@@ -55,7 +55,7 @@
     
     <div class="grid_6 open_releases_infos">
 
-    <h1 class="open_releases_catalog"><?php echo $release['sku'] ?></h2>
+    <h1 class="open_releases_catalog"><?php echo $release['sku'] ?> - <span class="open_releases_infos_date">date</span></h1>
     <h2 class="open_releases_artist"><a href="<?php echo url_for(sprintf('@artist_show?slug=%s#artist', $release['Artist']['slug'])) ?>"><?php echo $release['Artist']['name'] ?></a></h2>
     <h3 class="open_releases_album"><?php echo $release['title'] ?></h3>
 
