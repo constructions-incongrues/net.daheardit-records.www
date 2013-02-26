@@ -89,7 +89,11 @@ class releaseActions extends sfActions
         $releaseArray['artworks'] = $artworks;
 
         // Other carousel items
-        $releaseArray['links_carousel'] = explode("\n", $release->links_carousel);
+        if (trim($releaseArray['links_carousel'])) {
+            $releaseArray['links_carousel'] = explode("\n", trim($releaseArray['links_carousel']));
+        } else {
+            $releaseArray['links_carousel'] = array();
+        }
 
         /*
          * Featured release (header image, css, etc)

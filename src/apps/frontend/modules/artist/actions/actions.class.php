@@ -56,7 +56,11 @@ class artistActions extends sfActions
         }
 
         // Carousel
-        $artistArray['links_carousel'] = explode("\n", $artistArray['links_carousel']);
+        if (trim($artistArray['links_carousel'])) {
+            $artistArray['links_carousel'] = explode("\n", trim($artistArray['links_carousel']));
+        } else {
+            $artistArray['links_carousel'] = array();
+        }
 
         // Configure response
         $this->getResponse()->setTitle($artist['name']);
