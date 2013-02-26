@@ -10,6 +10,11 @@ margin-right: auto;
 /* HTML & BODY 
 ***************************************************************/
 
+.header_nav_3_content_logo img
+{
+  margin-top:-1px;
+}
+
 body
 {
 padding:0px;
