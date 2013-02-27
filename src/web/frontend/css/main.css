@@ -1045,6 +1045,25 @@ h1.open_releases_title
 margin-top:20px;
 margin-left:10px;
 }
+
+.open_releases_download_licence
+{
+color:#666;
+text-decoration:none;
+margin-left:12px;
+margin-top:-14px;
+margin-bottom:25px;
+font-size:13px;
+font-size:1.3rem;
+
+}
+
+.open_releases_download_licence a 
+{
+  color:#000;
+  text-decoration:none;
+}
+
 h2.open_releases_title
 {
 margin-top:10px;
