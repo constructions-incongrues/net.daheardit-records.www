@@ -3,6 +3,7 @@
 class dhrGenerateReleaseTask extends sfBaseTask
 {
 	private $conversionProfiles = array();
+	private $includeExtensions = array();
 
 	protected function configure()
 	{
@@ -30,7 +31,7 @@ class dhrGenerateReleaseTask extends sfBaseTask
 		$this->name = 'release';
 		$this->briefDescription = 'Generates a new release';
 		$this->detailedDescription = '';
-    	
+
     	$this->addArguments(array(
 	    	new sfCommandArgument('directory', sfCommandArgument::REQUIRED, 'Path to directory holding source files'),
 	    	new sfCommandArgument('slug', sfCommandArgument::REQUIRED, 'Release slug'),
@@ -42,6 +43,7 @@ class dhrGenerateReleaseTask extends sfBaseTask
     		new sfCommandOption('archives', null, sfCommandOption::PARAMETER_NONE, 'Generates archives ?'),
     		new sfCommandOption('db', null, sfCommandOption::PARAMETER_NONE, 'Create database records ? (CAREFUL : deletes existing data)'),
     		new sfCommandOption('streamables', null, sfCommandOption::PARAMETER_NONE, 'Generate streamable MP3s ?'),
+    		new sfCommandOption('includeExtensions', null, sfCommandOption::PARAMETER_OPTIONAL, 'Non-audio extensions in source directory to be included in archives'),
     	));
 	}
 
@@ -76,8 +78,17 @@ class dhrGenerateReleaseTask extends sfBaseTask
 		$this->logSection('release', sprintf('Found %d .%s files :', count($tracksSource), $options['sourceExtension']));
 
 		// Grab other files
-		$pics = glob(sprintf('%s/*.png', $arguments['directory']));
-		$pdfs = glob(sprintf('%s/*.pdf', $arguments['directory']));
+		$includedFiles = array();
+		if ($options['includeExtensions']) {
+			foreach (explode(',', $options['includeExtensions']) as $extension) {
+				$this->logSection('release', sprintf('Including *.%s', $extension));
+				$includedFiles[] = glob(sprintf('%s/*.%s', $arguments['directory'], $extension));
+			}
+		}
+
+		if ($options['streamables']) {
+			mkdir(sprintf('%s/assets/releases/%s/tracks', sfConfig::get('sf_web_dir'), $release->slug));
+		}
 
 		// Build tracks structure
 		$tracks = array();
@@ -115,11 +126,11 @@ class dhrGenerateReleaseTask extends sfBaseTask
 			if ($options['streamables']) {
 				// TODO : track naming is not consistent
 				$command = sprintf(
-					'/usr/bin/ffmpeg -y -i \'%s\' -ab 128k \'%s/assets/releases/%s/tracks/%s_%s.mp3\'', 
-					$track['path'], 
-					sfConfig::get('sf_web_dir'), 
-					$release->slug, 
-					str_replace('-', '', $release->slug), 
+					'/usr/bin/ffmpeg -y -i \'%s\' -ab 128k \'%s/assets/releases/%s/tracks/%s_%s.mp3\'',
+					$track['path'],
+					sfConfig::get('sf_web_dir'),
+					$release->slug,
+					str_replace('-', '', $release->slug),
 					$track['number']
 				);
 				exec(escapeshellcmd($command));
@@ -148,29 +159,30 @@ class dhrGenerateReleaseTask extends sfBaseTask
 				foreach ($tracks as $track) {
 					// Transform
 					$command = sprintf(
-						$profile['commandConvert'], 
-						$track['path'], 
-						$track['title'], 
-						$release->getArtist()->getName(), 
-						$release->title, 
-						$track['number'], 
+						$profile['commandConvert'],
+						$track['path'],
+						$track['title'],
+						$release->getArtist()->getName(),
+						$release->title,
+						$track['number'],
 						substr($release->getReleasedAt(), 0, 4),
 						sprintf('%s/%s', $workspacePathProfile, $this->translit(basename($track['path'], '.'.$options['sourceExtension'])))
 					);
 					exec(escapeshellcmd($command));
 				}
-		
-				foreach ($pics as $pic) {
-					copy($pic, $workspacePathProfile.'/'.basename($pic));
-				}
-				foreach ($pdfs as $pdf) {
-					copy($pdf, $workspacePathProfile.'/'.basename($pdf));
+
+				foreach ($includedFiles as $files) {
+					foreach ($files as $file) {
+						$this->logSection('release', sprintf('Adding non-audio file : %s', $file));
+						copy($file, $workspacePathProfile.'/'.basename($file));
+					}
 				}
 
 				// Create archive
 				$zipPath = sprintf('%s/archives/%s_%s.zip', $releaseDir, $release->slug, $profile['name']);
 				$commandZip = sprintf('zip -rj -UN=n %s %s', $zipPath, $workspacePathProfile);
 				$res = exec($commandZip);
+				var_dump($res);
 				$this->logSection('release', sprintf('Generated release for profile %s in %s', $profile['name'], $zipPath));
 			}
 		}
