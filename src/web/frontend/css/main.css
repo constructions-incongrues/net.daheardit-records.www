@@ -178,6 +178,7 @@ text-decoration:none;
 margin-bottom:-10px;
 font-family: 'Blanch Caps', sans-serif;
 margin-left:-0px;
+font-weight: lighter;
 }
 
 
@@ -218,23 +219,21 @@ color:#FFF;
 text-decoration:none;
 padding:2px;
 font-family: 'Tempesta', sans-serif;
-font-size:8px;
-font-size:0.8rem;
+font-size:9px;
+font-size:0.9rem;
 background-color:#000;
-opacity:1;
 
 }
 
 .header_nav_2_button_lang a 
 {
 background-color:#000;
-opacity:1;
 color: #29ABE2;
 text-decoration:none;
 padding:2px;
 font-family: 'Tempesta', sans-serif;
-font-size:8px;
-font-size:0.8rem;
+font-size:9px;
+font-size:0.9rem;
 }
 
 
