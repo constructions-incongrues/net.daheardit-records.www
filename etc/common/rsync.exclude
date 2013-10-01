@@ -1,5 +1,3 @@
-/cache
-/log
 *-dist
 .git
 *.mp3
