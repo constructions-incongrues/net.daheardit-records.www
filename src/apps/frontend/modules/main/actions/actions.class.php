@@ -32,7 +32,7 @@ class mainActions extends sfActions
 
         $this->getResponse()->setTitle($this->getContext()->getI18N()->__('Bienvenue'));
 
-        // Opengraph 
+        // Opengraph
         // TODO : this should go in a filter
         $headersOgp = array(
             'title' => $this->getContext()->getResponse()->getTitle() . ' | Da ! Heard It Records',
@@ -51,12 +51,12 @@ class mainActions extends sfActions
     }
 
     public function executeError404()
-    {   
+    {
         $this->setLayout(false);
     }
 
     public function executeThanks()
-    {   
+    {
         $this->setLayout(false);
     }
 
@@ -68,7 +68,7 @@ class mainActions extends sfActions
         } else {
             if (!filter_var(urldecode($request->getParameter('url')), FILTER_VALIDATE_URL)) {
                 throw new InvalidArgumentException(sprintf('Invalid URL : %s', $request->getParameter('url')));
-            } 
+            }
         }
 
         // Download image
@@ -84,7 +84,7 @@ class mainActions extends sfActions
         $image->loadString($data);
 
         // Transform image
-        $transform = $request->getParameter('transform', 'thumbnail'); 
+        $transform = $request->getParameter('transform', 'thumbnail');
         $params = explode(",", $request->getParameter('params', '150,150'));
 
         // TODO : create proper transform class (and commit it to upstream !)
@@ -94,6 +94,10 @@ class mainActions extends sfActions
             $top = ($image->getHeight() - $height) / 2;
             $params = array($left, $top, $width, $height);
             $transform = 'crop';
+            if ($image->getWidth() < $width) {
+                $transform = 'thumbnail';
+                $params = array($width, $height);
+            }
         }
         call_user_func_array(
             array($image, $transform),
