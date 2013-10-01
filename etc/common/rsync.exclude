@@ -1,3 +1,12 @@
 /cache
 /log
 *-dist
+.git
+*.mp3
+*.zip
+/src/cache
+/src/log
+/vendor
+/etc
+*.bak
+*.swp
