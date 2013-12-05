@@ -5,12 +5,12 @@
         <div class="category_content">
           <h1 id="release"><?php echo $release['sku'] ?> </h1>
             <span class="triangle"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/others/triangle.png" class="triangle" /></span>
-        </div><!-- end of category contents --> 
+        </div><!-- end of category contents -->
       </div><!-- end of releases -->
 
-<div class="grid_12 open_releases"> 
+<div class="grid_12 open_releases">
   <div class="open_releases_content">
-  
+
   <div class="grid_12">
     <ul class="open_releases_button">
 <?php if ($previousRelease): ?>
@@ -52,12 +52,12 @@
 <?php endfor ?>
      </ul>
    </div><!-- end of grid_6 -->
-    
+
     <div class="grid_6 open_releases_infos">
 
     <h1 class="open_releases_catalog"><?php echo $release['sku'] ?>
 <?php if ($release['released_at']): ?>
-     - <span class="open_releases_infos_date"><?php echo $release['released_at'] ?></span> 
+     - <span class="open_releases_infos_date"><?php echo $release['released_at'] ?></span>
 <?php endif; ?>
    </h1>
     <h2 class="open_releases_artist"><a href="<?php echo url_for(sprintf('@artist_show?slug=%s#artist', $release['Artist']['slug'])) ?>"><?php echo $release['Artist']['name'] ?></a></h2>
@@ -80,7 +80,7 @@
               <div class="jp-play-bar"></div>
             </div>
           </div>
-   
+
           <div class="jp-current-time" style="display:none;"></div>
           <div class="jp-duration" style="display:none;"></div>
         </div>
@@ -101,7 +101,7 @@
       <?php $zero = '0'; ?>
     <?php else: ?>
       <?php $zero = ''; ?>
-    <?php endif; ?> 
+    <?php endif; ?>
     <li itemprop="track" itemscope itemtype="http://schema.org/MusicRecording">
       <a itemprop="url" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/releases/<?php echo $release['slug'] ?>/tracks/<?php echo str_replace('-', '', $release['slug']) ?>_<?php echo $zero ?><?php echo $track['number'] ?>.mp3">
         <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/play.png" alt="play" class="open_releases_playlist_icon_play" />
@@ -114,7 +114,7 @@
 <?php endforeach; ?>
     </ul>
 
-    <h1 class="open_releases_title"><?php echo __('À propos de la sortie') ?>   
+    <h1 class="open_releases_title"><?php echo __('À propos de la sortie') ?>
 </h1>
     <p class="open_releases_press_text">
 <?php echo nl2br(html_entity_decode($release['Translation'][$sf_user->getCulture()]['presentation'])) ?>
@@ -133,7 +133,7 @@
 <?php if (count($archives)): ?>
     <h2 class="open_releases_title"><?php echo __('Télécharger l\'album') ?>
 </h2>
- <p class="open_releases_download_licence">Ce(tte) œuvre est mise à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/2.0/fr/">Licence Creative Commons Attribution - Pas d’Utilisation Commerciale - Pas de Modification 2.0 France</a>.</p>
+ <p class="open_releases_download_licence">Ce(tte) œuvre est mise à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/deed.fr">Licence Creative Commons Attribution - Pas d’Utilisation Commerciale - Pas de Modification 4.0 France</a>.</p>
 
 <span style="margin-top:-25px;"> </span>
     <ul class="open_releases_download">
@@ -142,7 +142,7 @@
       <li><a class="release-download" data-dhr-release-slug="<?php echo $release['slug'] ?>" data-dhr-archive-format="<?php echo $archive['name'] ?>" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/releases/<?php echo $release['slug'] ?>/archives/<?php echo $archive['filename'] ?>"><?php echo strtoupper($archive['name']) ?></a></li>
   <?php endforeach ?>
     </ul>
-   
+
 
 
 
@@ -156,7 +156,7 @@
       <span class="open_releases_market"><a href="" class="paypal" data-paypalid="<?php echo $release['paypal_id'] ?>"><?php echo __('Ajouter au panier') ?></a> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/img-panier.png" alt="" /></span>
     </p>
 <?php endif ?>
-  
+
   <hr />
 
   <ul class="open_releases_share_button">
