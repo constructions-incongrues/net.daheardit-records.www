@@ -11,17 +11,17 @@ class dhrGenerateReleaseTask extends sfBaseTask
 		$this->conversionProfiles = array(
 			'mp3_320' => array(
 				'name' => 'mp3_320',
-				'commandConvert' => '/usr/bin/ffmpeg -i \'%s\' -ab 320k -metadata title="%s" -metadata artist="%s" -metadata album="%s" -metadata tracknumber="%s" -metadata year="%s" \'%s.mp3\'',
+				'commandConvert' => 'avconv -loglevel warning -i %s -ab 320k -metadata title=%s -metadata artist=%s -metadata album=%s -metadata tracknumber=%s -metadata year=%s %s.mp3',
 				'extension' => 'mp3'
 			),
 			'ogg' => array(
 				'name' => 'ogg',
-				'commandConvert' => 'ffmpeg -i \'%s\' -metadata title="%s" -metadata artist="%s" -metadata album="%s" -metadata tracknumber="%s" -metadata year="%s" \'%s.ogg\'',
+				'commandConvert' => 'avconv -loglevel warning -i %s -metadata title=%s -metadata artist=%s -metadata album=%s -metadata tracknumber=%s -metadata year=%s %s.ogg',
 				'extension' => 'ogg'
 			),
 			'flac' => array(
 				'name' => 'flac',
-				'commandConvert' => 'ffmpeg -i \'%s\' -metadata title="%s" -metadata artist="%s" -metadata album="%s" -metadata tracknumber="%s" -metadata year="%s" \'%s.flac\'',
+				'commandConvert' => 'avconv -loglevel warning -i %s -metadata title=%s -metadata artist=%s -metadata album=%s -metadata tracknumber=%s -metadata year="%s" %s.flac',
 				'extension' => 'flac'
 			)
 		);
@@ -126,16 +126,15 @@ class dhrGenerateReleaseTask extends sfBaseTask
 			if ($options['streamables']) {
 				// TODO : track naming is not consistent
 				$command = sprintf(
-					'/usr/bin/ffmpeg -y -i \'%s\' -ab 128k \'%s/assets/releases/%s/tracks/%s_%s.mp3\'',
-					$track['path'],
+					'avconv -loglevel warning -y -i %s -ab 128k \'%s/assets/releases/%s/tracks/%s_%s.mp3\'',
+					escapeshellarg($track['path']),
 					sfConfig::get('sf_web_dir'),
 					$release->slug,
 					str_replace('-', '', $release->slug),
 					$track['number']
 				);
-				exec(escapeshellcmd($command));
+				exec($command);
 			}
-
 			$this->logSection('release', sprintf('  %s - %s', $track['number'], $track['title']));
 		}
 
@@ -160,15 +159,16 @@ class dhrGenerateReleaseTask extends sfBaseTask
 					// Transform
 					$command = sprintf(
 						$profile['commandConvert'],
-						$track['path'],
-						$track['title'],
-						$release->getArtist()->getName(),
-						$release->title,
-						$track['number'],
-						substr($release->getReleasedAt(), 0, 4),
-						sprintf('%s/%s', $workspacePathProfile, $this->translit(basename($track['path'], '.'.$options['sourceExtension'])))
+						escapeshellarg($track['path']),
+						escapeshellarg($track['title']),
+						escapeshellarg($release->getArtist()->getName()),
+						escapeshellarg($release->title),
+						escapeshellarg($track['number']),
+						escapeshellarg(substr($release->getReleasedAt(), 0, 4)),
+						escapeshellarg(sprintf('%s/%s', $workspacePathProfile, $this->translit(basename($track['path'], '.'.$options['sourceExtension']))))
 					);
-					exec(escapeshellcmd($command));
+					var_dump($command);
+					exec($command);
 				}
 
 				foreach ($includedFiles as $files) {
@@ -182,7 +182,6 @@ class dhrGenerateReleaseTask extends sfBaseTask
 				$zipPath = sprintf('%s/archives/%s_%s.zip', $releaseDir, $release->slug, $profile['name']);
 				$commandZip = sprintf('zip -rj -UN=n %s %s', $zipPath, $workspacePathProfile);
 				$res = exec($commandZip);
-				var_dump($res);
 				$this->logSection('release', sprintf('Generated release for profile %s in %s', $profile['name'], $zipPath));
 			}
 		}
