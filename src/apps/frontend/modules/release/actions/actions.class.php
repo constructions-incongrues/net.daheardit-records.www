@@ -20,13 +20,17 @@ class releaseActions extends sfActions
         }
 
         // Fetch release tracks
-        $tracks = Doctrine_Core::getTable('Track')->findByReleaseId($release['id'], Doctrine_Core::HYDRATE_ARRAY);
+        $q = Doctrine_Query::create()
+            ->from('Track t')
+            ->where('t.release_id = ?')
+            ->orderBy('t.number');
+        $tracks = $q->execute(array($release['id']), Doctrine_Core::HYDRATE_ARRAY);
 
         // Setup metadata
         $releaseArray = $release->toArray();
         $releaseArray['tracks'] = $tracks;
         $this->getResponse()->setTitle(sprintf('[%s] %s - %s', $releaseArray['sku'], $releaseArray['Artist']['name'], $releaseArray['title']));
-        
+
         // Archives
         $archives = array();
         $archivesPaths = glob(sprintf('%s/web/assets/releases/%s/archives/*.zip', sfConfig::get('sf_root_dir'), $release['slug']));
@@ -105,7 +109,7 @@ class releaseActions extends sfActions
             }
         }
 
-        // Opengraph 
+        // Opengraph
         // TODO : this should go in a filter
         $headersOgp = array(
             'title' => $this->getContext()->getResponse()->getTitle() . ' | Da ! Heard It Records',
