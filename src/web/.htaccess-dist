@@ -1,5 +1,5 @@
 # Apache configuration
-Options ollowSymLinks
+Options FollowSymLinks
 
 # Rewriting
 <IfModule mod_rewrite.c>
