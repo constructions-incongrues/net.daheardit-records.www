@@ -18,29 +18,31 @@ text-align:right;
 .header_news_1_content h1
 {
 position: relative;
-top:80px;
+top:-100px;
+left:-180px;
 }
 
 
 .header_news_1_content h1 a
 {
-color:#fff;
+color:#000;
 font-weight:lighter;
-font-size:50px;
-font-size:5rem;
+font-size:40px;
+font-size:4rem;
 opacity:0.9;}
 
 .header_news_1_content h2 a
 {
-color:#fff;
+color:#000;
 font-weight:lighter;
-font-size:40px;
-font-size:4rem;
+font-size:30px;
+font-size:3rem;
 opacity:0.9;
 text-transform: capitalize;}
 
 .header_news_1_content h2
 {
 position: relative;
-top:80px;
+top:-95px;
+left:-180px;
 }
