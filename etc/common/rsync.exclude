@@ -1,10 +1,11 @@
 *-dist
-.git
+*.bak
 *.mp3
+*.swp
 *.zip
+.git
+/etc
 /src/cache
 /src/log
+/src/web/assets
 /vendor
-/etc
-*.bak
-*.swp
