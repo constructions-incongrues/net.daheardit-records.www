@@ -5,14 +5,9 @@ Options FollowSymLinks
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
-  # uncomment the following line, if you are having trouble
-  # getting no_script_name to work
-  #RewriteBase /
-
-  # we skip all files with .something
-  #RewriteCond %{REQUEST_URI} \..+$
-  #RewriteCond %{REQUEST_URI} !\.html$
-  #RewriteRule .* - [L]
+  RewriteCond %{HTTP_HOST}  !cdn\.daheardit-records\.net
+  RewriteCond $1            "\.(mp3|zip)$" [NC]
+  RewriteRule ^(.*)         http://cdn.daheardit-records.net/$1 [L,R]
 
   # we check if the .html version is here (caching)
   RewriteRule ^$ index.html [QSA]
@@ -22,6 +17,7 @@ Options FollowSymLinks
   # no, so we redirect to our front web controller
   RewriteRule ^(.*)$ index.php [QSA,L]
 </IfModule>
+
 
 # Redirection for legacy urls
 # Releases
