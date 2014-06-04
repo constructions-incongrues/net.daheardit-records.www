@@ -11,17 +11,17 @@ class dhrGenerateReleaseTask extends sfBaseTask
         $this->conversionProfiles = array(
             'mp3_320' => array(
                 'name' => 'mp3_320',
-                'commandConvert' => 'avconv -loglevel warning -i %s -ab 320k -metadata title=%s -metadata artist=%s -metadata album=%s -metadata tracknumber=%s -metadata year=%s %s.mp3',
+                'commandConvert' => 'avconv -loglevel warning -analyzeduration 100000000 -i %s -q:a 9 -metadata title=%s -metadata artist=%s -metadata album=%s -metadata track=%s -metadata year=%s %s.mp3',
                 'extension' => 'mp3'
             ),
             'ogg' => array(
                 'name' => 'ogg',
-                'commandConvert' => 'avconv -loglevel warning -i %s -metadata title=%s -metadata artist=%s -metadata album=%s -metadata tracknumber=%s -metadata year=%s %s.ogg',
+                'commandConvert' => 'avconv -loglevel warning -analyzeduration 100000000 -i %s -metadata title=%s -metadata artist=%s -metadata album=%s -metadata track=%s -metadata year=%s %s.ogg',
                 'extension' => 'ogg'
             ),
             'flac' => array(
                 'name' => 'flac',
-                'commandConvert' => 'avconv -loglevel warning -i %s -metadata title=%s -metadata artist=%s -metadata album=%s -metadata tracknumber=%s -metadata year="%s" %s.flac',
+                'commandConvert' => 'avconv -loglevel warning -analyzeduration 100000000 -i %s -metadata title=%s -metadata artist=%s -metadata album=%s -metadata track=%s -metadata year=%s %s.flac',
                 'extension' => 'flac'
             )
         );
@@ -74,7 +74,11 @@ class dhrGenerateReleaseTask extends sfBaseTask
         if (!count($tracksSource)) {
             throw new RuntimeException(sprintf('No .%s files found in directory', $options['sourceExtension']));
         }
-        mkdir($releaseDir);
+
+        if (!is_dir($releaseDir)) {
+            mkdir($releaseDir);
+        }
+
         $this->logSection('release', sprintf('Found %d .%s files :', count($tracksSource), $options['sourceExtension']));
 
         // Grab other files
@@ -87,7 +91,10 @@ class dhrGenerateReleaseTask extends sfBaseTask
         }
 
         if ($options['streamables']) {
-            mkdir(sprintf('%s/assets/releases/%s/tracks', sfConfig::get('sf_web_dir'), $release->slug));
+            $dirStreamables = sprintf('%s/assets/releases/%s/tracks', sfConfig::get('sf_web_dir'), $release->slug);
+            if (!is_dir($dirStreamables)) {
+                mkdir($dirStreamables);
+            }
         }
 
         // Build tracks structure
@@ -126,7 +133,7 @@ class dhrGenerateReleaseTask extends sfBaseTask
             if ($options['streamables']) {
                 // TODO : track naming is not consistent
                 $command = sprintf(
-                    'avconv -loglevel warning -y -i %s -ab 128k \'%s/assets/releases/%s/tracks/%s_%s.mp3\'',
+                    'avconv -loglevel warning -analyzeduration 100000000 -y -i %s -ab 128k \'%s/assets/releases/%s/tracks/%s_%s.mp3\'',
                     escapeshellarg($track['path']),
                     sfConfig::get('sf_web_dir'),
                     $release->slug,
@@ -167,19 +174,26 @@ class dhrGenerateReleaseTask extends sfBaseTask
                         escapeshellarg(substr($release->getReleasedAt(), 0, 4)),
                         escapeshellarg(sprintf('%s/%s', $workspacePathProfile, $this->translit(basename($track['path'], '.'.$options['sourceExtension']))))
                     );
-                    var_dump($command);
+                    $this->logSection($profile['name'], sprintf('%s - %s', $track['number'], $track['title']));
+                    // var_dump($command);
                     exec($command);
                 }
 
                 foreach ($includedFiles as $files) {
                     foreach ($files as $file) {
-                        $this->logSection('release', sprintf('Adding non-audio file : %s', $file));
+                        $this->logSection($profile['name'], sprintf('Adding non-audio file : %s', $file));
                         copy($file, $workspacePathProfile.'/'.basename($file));
                     }
                 }
 
                 // Create archive
+                if (!is_dir($releaseDir.'/archives')) {
+                    mkdir($releaseDir.'/archives');
+                }
                 $zipPath = sprintf('%s/archives/%s_%s.zip', $releaseDir, $release->slug, $profile['name']);
+                if (file_exists($zipPath)) {
+                    unlink($zipPath);
+                }
                 $commandZip = sprintf('zip -rj -UN=n %s %s', $zipPath, $workspacePathProfile);
                 $res = exec($commandZip);
                 $this->logSection('release', sprintf('Generated release for profile %s in %s', $profile['name'], $zipPath));

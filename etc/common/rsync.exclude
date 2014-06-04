@@ -8,3 +8,5 @@
 /src/cache
 /src/log
 /vendor
+/src/web/assets/releases/*/tracks
+/src/web/assets/releases/*/archives
