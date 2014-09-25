@@ -44,6 +44,7 @@ class dhrGenerateReleaseTask extends sfBaseTask
             new sfCommandOption('db', null, sfCommandOption::PARAMETER_NONE, 'Create database records ? (CAREFUL : deletes existing data)'),
             new sfCommandOption('streamables', null, sfCommandOption::PARAMETER_NONE, 'Generate streamable MP3s ?'),
             new sfCommandOption('includeExtensions', null, sfCommandOption::PARAMETER_OPTIONAL, 'Non-audio extensions in source directory to be included in archives'),
+            new sfCommandOption('workspace', null, sfCommandOption::PARAMETER_OPTIONAL, 'Path to workspace directory', sys_get_temp_dir()),
         ));
     }
 
@@ -147,7 +148,7 @@ class dhrGenerateReleaseTask extends sfBaseTask
 
         // Generate archives
         if ($options['archives']) {
-            $workspacePath = sprintf('%s/%s', sys_get_temp_dir(), uniqid('dhr_'));
+            $workspacePath = sprintf('%s/%s', $options['workspace'], uniqid('dhr_'));
             mkdir($workspacePath);
             $this->logSection('release', sprintf('Creating workspace %s', $workspacePath));
             $profiles = explode(',', $options['profiles']);
