@@ -116,7 +116,7 @@
 
 
 <?php if (count($archives)): ?>
-    <h2 class="open_releases_title"><?php echo __('Télécharger l\'album') ?> - Faire un <a href="#" class="donate paypal" data-paypalid="RDMSQRU34X5YS">&hearts; <?php echo __('don') ?> &hearts;</h2>
+    <h2 class="open_releases_title"><?php echo __('Télécharger l\'album') ?> - Faire un <a href="#" class="donate paypal" data-paypalid="RDMSQRU34X5YS">&hearts; <?php echo __('don') ?> &hearts;</a></h2>
 
 <span style="margin-top:-25px;"> </span>
     <ul class="open_releases_download">
