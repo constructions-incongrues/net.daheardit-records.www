@@ -64,6 +64,15 @@ class releaseActions extends sfActions
             }
         }
 
+        // Press releases
+        $pathsScans = glob(sprintf('%s/assets/releases/%s/press-releases/*', sfConfig::get('sf_web_dir'), $release['slug']));
+        foreach ($pathsScans as $path) {
+            $releaseArray['press-releases'][] = array(
+                'title' => ucfirst(str_replace('_', ' ', basename($path, '.pdf'))),
+                'url'  => $request->getRelativeUrlRoot().str_replace(sfConfig::get('sf_web_dir'), '', $path)
+            );
+        }
+
         // Get previous release
         $pdo = Doctrine_Manager::getInstance()->getCurrentConnection()->getDbh();
         $stmt = $pdo->prepare('select slug, title, sku from `release` where slug < :slug order by slug desc limit 1');
