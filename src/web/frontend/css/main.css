@@ -1070,7 +1070,7 @@ margin-top:20px;
 margin-bottom: 30px;
 }
 
-h2.open_releases_title a {color: #ea1D78;}
+h2.open_releases_title a {color: #ea1D78;text-decoration: none;}
 
 h3.open_releases_title 
 {
