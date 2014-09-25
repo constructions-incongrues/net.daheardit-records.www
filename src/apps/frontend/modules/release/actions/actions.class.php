@@ -66,7 +66,7 @@ class releaseActions extends sfActions
 
         // Get previous release
         $pdo = Doctrine_Manager::getInstance()->getCurrentConnection()->getDbh();
-        $stmt = $pdo->prepare('select slug, title, sku from  `release` where slug < :slug order by slug desc limit 1');
+        $stmt = $pdo->prepare('select slug, title, sku from `release` where slug < :slug order by slug desc limit 1');
         $stmt->execute(array('slug' => $releaseArray['slug']));
         $previous = $stmt->fetchAll();
         $previousRelease = null;

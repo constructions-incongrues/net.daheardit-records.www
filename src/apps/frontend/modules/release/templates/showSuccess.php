@@ -114,8 +114,29 @@
 <?php endforeach; ?>
     </ul>
 
-    <h1 class="open_releases_title"><?php echo __('À propos de la sortie') ?>
-</h1>
+
+<?php if (count($archives)): ?>
+    <h2 class="open_releases_title"><?php echo __('Télécharger l\'album') ?></h2>
+
+<span style="margin-top:-25px;"> </span>
+    <ul class="open_releases_download">
+  <?php foreach ($archives as $archive): ?>
+      <li><a class="release-download" data-dhr-release-slug="<?php echo $release['slug'] ?>" data-dhr-archive-format="<?php echo $archive['name'] ?>" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/releases/<?php echo $release['slug'] ?>/archives/<?php echo $archive['filename'] ?>"><?php echo strtoupper($archive['name']) ?></a></li>
+  <?php endforeach ?>
+    </ul>
+ <p class="open_releases_download_licence">Ce(tte) œuvre est mise à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/deed.fr">Licence Creative Commons Attribution - Pas d’Utilisation Commerciale - Pas de Modification 4.0 France</a>.</p>
+<?php endif ?>
+
+<?php if ($release['is_available']): ?>
+    <h3 class="open_releases_title"><?php echo __('Acheter') ?></h3>
+    <p class="open_releases_buy">
+      <span class="open_releases_price">€ <?php echo $release['price'] ?></span>
+      <span class="open_releases_market"><a href="" class="paypal" data-paypalid="<?php echo $release['paypal_id'] ?>"><?php echo __('Ajouter au panier') ?></a> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/img-panier.png" alt="" /></span>
+    </p>
+<?php endif ?>
+
+    <h1 class="open_releases_title"><?php echo __('À propos de la sortie') ?></h1>
+
     <p class="open_releases_press_text">
 <?php echo nl2br(html_entity_decode($release['Translation'][$sf_user->getCulture()]['presentation'])) ?>
     </p>
@@ -128,33 +149,6 @@
   <?php endforeach ?>
 
     </ul>
-<?php endif ?>
-
-<?php if (count($archives)): ?>
-    <h2 class="open_releases_title"><?php echo __('Télécharger l\'album') ?>
-</h2>
- <p class="open_releases_download_licence">Ce(tte) œuvre est mise à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/deed.fr">Licence Creative Commons Attribution - Pas d’Utilisation Commerciale - Pas de Modification 4.0 France</a>.</p>
-
-<span style="margin-top:-25px;"> </span>
-    <ul class="open_releases_download">
-  <?php foreach ($archives as $archive): ?>
-
-      <li><a class="release-download" data-dhr-release-slug="<?php echo $release['slug'] ?>" data-dhr-archive-format="<?php echo $archive['name'] ?>" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/releases/<?php echo $release['slug'] ?>/archives/<?php echo $archive['filename'] ?>"><?php echo strtoupper($archive['name']) ?></a></li>
-  <?php endforeach ?>
-    </ul>
-
-
-
-
-
-<?php endif ?>
-
-<?php if ($release['is_available']): ?>
-    <h3 class="open_releases_title"><?php echo __('Acheter') ?></h3>
-    <p class="open_releases_buy">
-      <span class="open_releases_price">€ <?php echo $release['price'] ?></span>
-      <span class="open_releases_market"><a href="" class="paypal" data-paypalid="<?php echo $release['paypal_id'] ?>"><?php echo __('Ajouter au panier') ?></a> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/img-panier.png" alt="" /></span>
-    </p>
 <?php endif ?>
 
   <hr />
