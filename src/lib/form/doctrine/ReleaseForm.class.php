@@ -14,7 +14,6 @@ class ReleaseForm extends BaseReleaseForm
     {
         // Custom widgets
         $this->setWidget('links_press', new sfWidgetFormTextArea());
-        $this->setWidget('released_at', new sfWidgetFormDate(array('years' => range(date('Y') - 10, date('Y') + 1))));
 
         // Behaviors
         unset($this['created_at'], $this['updated_at']);
