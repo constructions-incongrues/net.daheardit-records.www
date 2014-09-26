@@ -196,7 +196,7 @@
 				$(this.cssSelector.playlist + " ul").slideUp(displayTime, function() {
 					var $this = $(this);
 					$(this).empty();
-					
+
 					$.each(self.playlist, function(i,v) {
 						$this.append(self._createListItem(self.playlist[i]));
 					});
@@ -254,6 +254,7 @@
 				} else {
 					if ($(self.cssSelector.jPlayer).data("jPlayer").status.paused) {
 						$(self.cssSelector.jPlayer).jPlayer("play");
+						self.play(index);
 					} else {
 						$(self.cssSelector.jPlayer).jPlayer("pause");
 					}
