@@ -116,7 +116,7 @@
 
 
 <?php if (count($archives)): ?>
-    <h2 class="open_releases_title"><?php echo __('Télécharger l\'album') ?> - Faire un <a href="#" class="donate paypal" data-paypalid="RDMSQRU34X5YS">&hearts; <?php echo __('don') ?> &hearts;</a></h2>
+    <h2 class="open_releases_title"><?php echo __('Télécharger librement') ?> ou faire un <a href="#" class="donate paypal" data-paypalid="RDMSQRU34X5YS">&hearts; <?php echo __('don') ?> &hearts;</a></h2>
 
 <span style="margin-top:-25px;"> </span>
     <ul class="open_releases_download">
@@ -128,7 +128,7 @@
 <?php endif ?>
 
 <?php if ($release['is_available']): ?>
-    <h3 class="open_releases_title"><?php echo __('Acheter') ?></h3>
+    <h3 class="open_releases_title"><?php echo __('Acheter une copie physique') ?></h3>
     <p class="open_releases_buy">
       <span class="open_releases_price">€ <?php echo $release['price'] ?></span>
       <span class="open_releases_market"><a href="" class="paypal" data-paypalid="<?php echo $release['paypal_id'] ?>"><?php echo __('Ajouter au panier') ?></a> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/img-panier.png" alt="" /></span>
