@@ -9,6 +9,4 @@
 /src/log
 /vendor
 /src/web/assets/releases/*/archives
-/src/web/assets/releases/*/images
-/src/web/assets/releases/*/press
 /src/web/assets/releases/*/tracks
