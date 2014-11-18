@@ -17,10 +17,11 @@ $(document).ready(function () {
         // Build playlist
         var playlist = [];
         $('.open_releases_playlist li a').each(function() {
-            playlist.push({
-                mp3: $(this).attr('href'),
-                title: $(this).text(),
-            });
+            var media = {mp3: $(this).attr('href'), title: $(this).text()};
+            if ($(this).text().match(/\(bonus track\)/i)) {
+                media.liClass = 'bonus';
+            }
+            playlist.push(media);
         });
 
         // Media player

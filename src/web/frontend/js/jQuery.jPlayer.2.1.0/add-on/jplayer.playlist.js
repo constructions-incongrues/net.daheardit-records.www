@@ -216,7 +216,11 @@
 			var self = this;
 
 			// Wrap the <li> contents in a <div>
-			var listItem = "<li><div>";
+			if (media.liClass != undefined) {
+				var listItem = "<li class=" + media.liClass + "><div>";
+			} else {
+				var listItem = "<li><div>";
+			}
 
 			// Create remove control
 			listItem += "<a href='javascript:;' class='" + this.options.playlistOptions.removeItemClass + "'>&times;</a>";
