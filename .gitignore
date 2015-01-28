@@ -31,3 +31,4 @@ src/web/releases/*
 
 # assets
 *.mp3
+/src/config/ProjectConfiguration.class.php
