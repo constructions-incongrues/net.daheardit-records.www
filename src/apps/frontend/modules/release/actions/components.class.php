@@ -59,9 +59,11 @@ class releaseComponents extends sfComponents
         );
 
         // Master header
-        $headers = glob(sprintf('%s/assets/header-master.*', sfConfig::get('sf_web_dir')));
-        if (count($headers)) {
-            $urlHeader = sprintf('%s/assets/%s', $this->getRequest()->getRelativeUrlRoot(), basename($headers[0]));
+        if (!$this->getRequest()->hasParameter('slug')) {
+            $headers = glob(sprintf('%s/assets/header-master.*', sfConfig::get('sf_web_dir')));
+            if (count($headers)) {
+                $urlHeader = sprintf('%s/assets/%s', $this->getRequest()->getRelativeUrlRoot(), basename($headers[0]));
+            }
         }
 
         // Pass data to view
