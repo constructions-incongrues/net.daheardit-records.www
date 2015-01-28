@@ -1,6 +1,6 @@
 <style type="text/css">
 .header {
-background-image:url("<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/releases/<?php echo $release->slug ?>/header.jpg");
+	background-image:url("<?php echo $urlHeader ?>");
 }
 </style>
 <link rel="stylesheet" type="text/css" media="all" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/releases/<?php echo $release->slug ?>/<?php echo $release->slug ?>.css" />

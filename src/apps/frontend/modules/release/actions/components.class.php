@@ -40,7 +40,6 @@ class releaseComponents extends sfComponents
 
     public function executeHometitle(sfWebRequest $request)
     {
-
         if ($request->hasParameter('featured')) {
             $release = Doctrine_Core::getTable('Release')->findOneBySlugAndCulture($request->getParameter('featured'));
         } else {
@@ -52,7 +51,21 @@ class releaseComponents extends sfComponents
             throw new RuntimeException('Could not find any featured release');
         }
 
+        // Build URL to header
+        $urlHeader = sprintf(
+            '%s/assets/releases/%s/header.jpg',
+            $this->getRequest()->getRelativeUrlRoot(), 
+            $release->slug
+        );
+
+        // Master header
+        $headers = glob(sprintf('%s/assets/header-master.*', sfConfig::get('sf_web_dir')));
+        if (count($headers)) {
+            $urlHeader = sprintf('%s/assets/%s', $this->getRequest()->getRelativeUrlRoot(), basename($headers[0]));
+        }
+
         // Pass data to view
+        $this->urlHeader = $urlHeader;
         $this->release = $release;
     }
 }
