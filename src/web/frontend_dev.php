@@ -10,6 +10,10 @@ if (!in_array(@$_SERVER['REMOTE_ADDR'], $ipWhiteList)) {
 //    die('You are not allowed to access this file. Check '.basename(__FILE__).' for more information.');
 }
 
+// Composer
+require_once(__DIR__.'/../../vendor/autoload.php');
+
+// Symfony
 require_once dirname(__FILE__).'/../config/ProjectConfiguration.class.php';
 
 $configuration = ProjectConfiguration::getApplicationConfiguration('frontend', 'dev', true);

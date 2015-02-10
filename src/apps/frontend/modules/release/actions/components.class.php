@@ -1,4 +1,5 @@
 <?php
+use Symfony\Component\Finder\Finder;
 
 class releaseComponents extends sfComponents
 {
@@ -54,20 +55,72 @@ class releaseComponents extends sfComponents
         // Build URL to header
         $urlHeader = sprintf(
             '%s/assets/releases/%s/header.jpg',
-            $this->getRequest()->getRelativeUrlRoot(), 
+            $this->getRequest()->getRelativeUrlRoot(),
             $release->slug
         );
 
+        $urlStylesheet = null;
+        $urlScript = null;
+
         // Master header
         if (!$this->getRequest()->hasParameter('slug')) {
-            $headers = glob(sprintf('%s/assets/header-master.*', sfConfig::get('sf_web_dir')));
-            if (count($headers)) {
-                $urlHeader = sprintf('%s/assets/%s', $this->getRequest()->getRelativeUrlRoot(), basename($headers[0]));
+            // Image
+            $finder = new Finder();
+            $headerImages = $finder
+                ->files()
+                ->name('/\.gif|\.jpg|\.png$/')
+                ->depth('== 0')
+                ->in(sprintf('%s/assets/', sfConfig::get('sf_web_dir')));
+
+            $headerImages = iterator_to_array($headerImages, false);
+
+            if (count($headerImages)) {
+                $urlHeader = sprintf(
+                    '%s/assets/%s',
+                    $this->getRequest()->getRelativeUrlRoot(),
+                    basename($headerImages[0]->getFilename())
+                );
+            }
+
+            $finder = new Finder();
+            $headerStylesheets = $finder
+                ->files()
+                ->name('*.css')
+                ->depth('== 0')
+                ->in(sprintf('%s/assets/', sfConfig::get('sf_web_dir')));
+
+            $headerStylesheets = iterator_to_array($headerStylesheets, false);
+
+            if (count($headerStylesheets)) {
+                $urlStylesheet = sprintf(
+                    '%s/assets/%s',
+                    $this->getRequest()->getRelativeUrlRoot(),
+                    basename($headerStylesheets[0]->getFilename())
+                );
+            }
+
+            $finder = new Finder();
+            $headerScripts = $finder
+                ->files()
+                ->name('*.js')
+                ->depth('== 0')
+                ->in(sprintf('%s/assets/', sfConfig::get('sf_web_dir')));
+
+            $headerScripts = iterator_to_array($headerScripts, false);
+
+            if (count($headerScripts)) {
+                $urlScript = sprintf(
+                    '%s/assets/%s',
+                    $this->getRequest()->getRelativeUrlRoot(),
+                    basename($headerScripts[0]->getFilename())
+                );
             }
         }
 
         // Pass data to view
-        $this->urlHeader = $urlHeader;
         $this->release = $release;
+        $this->urlHeader = $urlHeader;
+        $this->urlScript = $urlScript;
+        $this->urlStylesheet = $urlStylesheet;
     }
 }

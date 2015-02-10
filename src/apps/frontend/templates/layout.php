@@ -12,13 +12,13 @@
 
   <meta name="viewport" content="width=device-width,initial-scale=1">
 
-  <!-- 960 Grid system--> 
+  <!-- 960 Grid system-->
   <link rel="stylesheet" type="text/css" media="all" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/css/lib/960.gs/reset.css" />
   <link rel="stylesheet" type="text/css" media="all" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/css/lib/960.gs/text.css" />
   <link rel="stylesheet" type="text/css" media="all" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/css/lib/960.gs/fluid_grid.css" />
 
   <link rel="stylesheet" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/css/main.css">
-  
+
 <?php if (sfConfig::get('app_feeds_use_feedburner', false)): ?>
   <link rel="alternate" type="application/rss+xml" title="<?php echo __('Flux RSS des dernières nouvelles') ?>" href="http://feeds.feedburner.com/dhr-news-<?php echo $sf_request->getParameter('sf_culture', 'fr') ?>">
 <?php else: ?>
@@ -57,7 +57,7 @@
     <div class="grid_12 header">
 
       <span class="header_calque"></span>
-      
+
 <?php include_partial('main/menu') ?>
 
         <div class="grid_12 header_news_1">
@@ -72,7 +72,7 @@
 
   <div class="clear"></div>
 
-<div class="clear"></div> 
+<div class="clear"></div>
 
 <span id="content_async">
 <?php echo $sf_content ?>
@@ -82,10 +82,10 @@
         <div class="category_content">
           <h1 id="discography"><?php echo __('Discographie') ?></h1>
             <span class="triangle"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/others/triangle.png" class="triangle" /></span>
-        </div><!-- end of category contents --> 
+        </div><!-- end of category contents -->
       </div><!-- end of releases -->
 
-      <div class="clear"></div> 
+      <div class="clear"></div>
 
 <?php include_component('release', 'list') ?>
 
@@ -96,7 +96,7 @@
           <h1 id="artists"><?php echo __('Artistes') ?></h1>
     <span class="triangle"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/others/triangle-blanc.png" class="triangle" /></span>
 
-        </div><!-- end of category_contents --> 
+        </div><!-- end of category_contents -->
       </div><!-- end of category -->
 
 <?php include_component('artist', 'list') ?>
@@ -143,7 +143,7 @@
           <div class="grid_3 footer_links_1">
 
             <h1 id="links"><?php echo __('Links') ?></h1>
-            
+
             <?php include_component('content', 'show', array('block' => 'links1')) ?>
 
           </div><!-- end of links -->
@@ -178,7 +178,7 @@
               <form action="send.php" method="post">
 
                 <p>
-                  <label for="name"><?php echo __('Nom') ?></label> 
+                  <label for="name"><?php echo __('Nom') ?></label>
                   <input type="text" name="name" id="name" size="10" class="champs_username required"/>
 
                   <label for="mail_"><?php echo __('Email') ?>&nbsp;</label>
@@ -217,6 +217,10 @@
         <script src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/js/jquery.pjax.js?v=3"></script>
         <script src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/js/script.js?v=3"></script>
         <!-- end scripts-->
+
+        <?php if (has_slot('home_script')): ?>
+          <?php include_slot('home_script') ?>
+        <?php endif; ?>
 
         <script>
   var _gaq=[['_setAccount','UA-673133-1'],['_trackPageview']]; // Change UA-XXXXX-X to be your site's ID
