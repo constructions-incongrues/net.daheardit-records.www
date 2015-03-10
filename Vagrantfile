@@ -19,6 +19,9 @@ Vagrant.configure(2) do |config|
   # documentation for more information about their specific syntax and use.
   config.vm.provision "shell", path: "provision.sh"
 
+  # @see https://github.com/dotless-de/vagrant-vbguest
+  config.vbguest.auto_update = false
+
   # @see https://github.com/phinze/landrush
   config.landrush.enabled = true
   config.vm.hostname = "daheardit-records.vagrant.dev"
