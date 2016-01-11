@@ -26,7 +26,7 @@
             <li><a href="#linkus"><?php echo __('Liens') ?></a></li>
 
             <li><a href="http://www.musiques-incongrues.net/forum/labels/daheardit-records/"><?php echo __('Forum') ?></a></li>
-            <li class="header_nav_3_button_donate donate_infos"><a href="#" class="donate paypal" data-paypalid="RDMSQRU34X5YS">&hearts; <?php echo __('Dons') ?> &hearts;         
+            <li class="header_nav_3_button_donate donate_infos"><a href="https://www.helloasso.com/associations/constructions-incongrues" class="donate">&hearts; <?php echo __('Dons') ?> &hearts;
           
 </li>
           </ul>

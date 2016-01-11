@@ -11,3 +11,4 @@
 /src/web/assets/releases/*/archives
 /src/web/assets/releases/*/tracks
 /.vagrant
+/.idea
