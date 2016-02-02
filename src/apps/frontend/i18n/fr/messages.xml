@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd">
 <xliff version="1.0">
-  <file source-language="EN" target-language="fr" datatype="plaintext" original="messages" date="2012-04-20T02:28:06Z" product-name="messages">
+  <file source-language="EN" target-language="fr" datatype="plaintext" original="messages" date="2014-09-26T11:12:19Z" product-name="messages">
     <header/>
     <body>
       <trans-unit id="1">
@@ -90,6 +90,90 @@
       </trans-unit>
       <trans-unit id="22">
         <source>Dons</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="23">
+        <source>Flux RSS des dernières nouvelles</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="24">
+        <source>Discographie</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="25">
+        <source>Retourner à la liste des sorties</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="26">
+        <source>Survolez l'image pour mettre le carousel en pause</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="27">
+        <source>Chargement du player en cours. Patience :)</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="28">
+        <source>Télécharger librement</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="29">
+        <source>don</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="30">
+        <source>Acheter une copie physique</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="31">
+        <source>Ils en parlent</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="32">
+        <source>Nouveau</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="33">
+        <source>Acheter</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="34">
+        <source>Télécharger</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="35">
+        <source>Épuisé</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="36">
+        <source>Bienvenue</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="37">
+        <source>Créé en 2006, Da ! Heard it Records est un net-label flirtant avec les musiques Toyz-Pop, Electro Trash, Chiptune, Breakcore, Techno Parodique, Electro Punk, Acid, et avec un goût prononcé pour le 8-bit et le pixel art.</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="38">
+        <source>Biographie</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="39">
+        <source>Retourner à la liste des artistes</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="40">
+        <source>Où le trouver ?</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="41">
+        <source>Toutes les sorties</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="42">
+        <source>+ D'infos</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="43">
+        <source>Da ! Heard It Records : Dernières Nouvelles</source>
         <target/>
       </trans-unit>
     </body>

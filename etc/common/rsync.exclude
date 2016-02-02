@@ -12,3 +12,6 @@
 /src/web/assets/releases/*/tracks
 /.vagrant
 /.idea
+/.otto
+/.ottoid
+/src/web/uploads/news

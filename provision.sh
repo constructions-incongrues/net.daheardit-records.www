@@ -4,7 +4,7 @@
 apt-get -qq update
 
 # Configuration de la timezone
-echo "Europe/Paris" > /etc/timezone 
+echo "Europe/Paris" > /etc/timezone
 apt-get install -y tzdata
 dpkg-reconfigure -f noninteractive tzdata
 
@@ -33,18 +33,17 @@ mysql --defaults-file=/etc/mysql/debian.cnf -e "create database net_dahearditrec
 mysql --defaults-file=/etc/mysql/debian.cnf net_dahearditrecords_www < /vagrant/src/data/fixtures/net_dahearditrecords_www.dump.sql
 
 # Configuration du projet
-apt-get install -y ant 
+apt-get install -y ant
 cd /vagrant
 git submodule update --init --recursive
 ./composer.phar install --prefer-dist --no-progress
 ant configure build -Dprofile=vagrant
-/vagrant/src/symfony cache:clear
 
 # Mise à disposition du projet dans Apache
 ln -sf /vagrant/src/web/* /var/www/
 rm -f /var/www/index.html
 
 # Informations
-echo 
+echo
 echo -e "Le site est disponible à l'adresse : http://daheardit-records.vagrant.dev/frontend_dev.php"
 echo -e "PhpMyAdmin est disponible à l'adresse : http://daheardit-records.vagrant.dev/phpmyadmin/ (root / root)"
