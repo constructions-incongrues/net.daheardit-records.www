@@ -141,12 +141,16 @@
 <?php echo nl2br(html_entity_decode($release['Translation'][$sf_user->getCulture()]['presentation'])) ?>
     </p>
 
-<?php if (count($release['press-releases'])): ?>
+<?php if (isset($release['press-releases']) && count($release['press-releases'])): ?>
     <ul class="open_releases_reviews">
   <?php foreach ($release['press-releases'] as $link): ?>
       <li><a href="<?php echo $link['url'] ?>"><?php echo basename($link['title']) ?></a></li>
   <?php endforeach ?>
     </ul>
+<?php endif ?>
+
+<?php if (isset($release['ArtworkArtist'])): ?>
+  <p class="open_releases_press_text"><?php echo __('Artwork par ') ?><a href="<?php echo url_for(sprintf('@artwork_artist_show?slug=%s#artwork_artist', $release['ArtworkArtist']['slug'])) ?>" title="<?php echo $release['ArtworkArtist']['name'] ?>"><?php echo $release['ArtworkArtist']['name'] ?></a></p>
 <?php endif ?>
 
 <?php if (count($release['press'])): ?>

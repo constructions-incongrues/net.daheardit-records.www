@@ -14,7 +14,17 @@ all:
           Créer:
             url:              artist_new
             image:            user.png
-      Release:
+
+      Graphistes:
+        items:
+          Lister:
+            url:              artwork_artist
+            image:            user.png
+          Créer:
+            url:              artwork_artist_new
+            image:            user.png
+
+      Sorties:
         items:
           Lister:
             url:              release
@@ -22,14 +32,6 @@ all:
           Créer:
             url:              release_new
             image:            music.png
-      News:
-        items:
-          Lister:
-            url:              post
-            image:            megaphone.png
-          Créer:
-            url:              post_new
-            image:            megaphone.png
 
       Contenus:
         items:

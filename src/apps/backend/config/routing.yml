@@ -1,3 +1,12 @@
+artwork_artist:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                ArtworkArtist
+    module:               artwork_artist
+    prefix_path:          /artwork_artist
+    column:               id
+    with_wildcard_routes: true
+
 content:
   class: sfDoctrineRouteCollection
   options:

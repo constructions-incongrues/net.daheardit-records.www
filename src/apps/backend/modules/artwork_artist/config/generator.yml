@@ -1,0 +1,31 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           ArtworkArtist
+    theme:                 twitter
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          artwork_artist
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        name:
+          label: Nom
+          help: Le nom de l'artiste
+        url:
+          label: URL
+          help: URL vers le site internet de l'artiste
+        links_carousel:
+          label : Liens carousel
+          help: Un lien par ligne
+      list:
+        display: [=name, url]
+      filter:  ~
+      form:    ~
+      edit:    ~
+      new:     ~

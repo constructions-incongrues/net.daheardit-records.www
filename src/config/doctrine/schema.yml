@@ -8,7 +8,29 @@ Artist:
       fields: [presentation]
     Timestampable: ~
   columns:
-    name:         
+    name:
+      type:     string
+      notblank: true
+    url:
+      type: string
+      regexp: "|^http(s)?://[a-z0-9-]+(.[a-z0-9-]+)*(:[0-9]+)?(/.*)?$|"
+    image:        string
+    presentation: string
+    links_carousel: string
+    more:        string
+    is_public:
+      type:       boolean
+      default:    1
+
+ArtworkArtist:
+  actAs:
+    Sluggable:
+      fields: [name]
+    I18n:
+      fields: [presentation]
+    Timestampable: ~
+  columns:
+    name:
       type:     string
       notblank: true
     url:
@@ -49,6 +71,7 @@ Release:
     image1:       string
     image2:       string
     artist_id:    integer
+    artwork_artist_id:    integer
     paypal_id:    string
     is_available:
       type:       boolean
@@ -80,7 +103,7 @@ Post:
     title:
       type:     string
       notblank: true
-    body: 
+    body:
       type:     string
       notblank: true
     image:

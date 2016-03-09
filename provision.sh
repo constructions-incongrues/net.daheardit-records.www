@@ -30,7 +30,7 @@ apt-get install -y phpmyadmin
 # Création de la base de données
 mysql --defaults-file=/etc/mysql/debian.cnf -e "drop database if exists net_dahearditrecords_www"
 mysql --defaults-file=/etc/mysql/debian.cnf -e "create database net_dahearditrecords_www default charset utf8 collate utf8_general_ci"
-mysql --defaults-file=/etc/mysql/debian.cnf net_dahearditrecords_www < /vagrant/src/data/fixtures/net_dahearditrecords_www.dump.sql
+# mysql --defaults-file=/etc/mysql/debian.cnf net_dahearditrecords_www < /vagrant/src/data/fixtures/net_dahearditrecords_www.dump.sql
 
 # Configuration du projet
 apt-get install -y ant
@@ -38,6 +38,8 @@ cd /vagrant
 git submodule update --init --recursive
 ./composer.phar install --prefer-dist --no-progress
 ant configure build -Dprofile=vagrant
+./src/symfony doctrine:build --all --no-confirmation
+./src/symfony doctrine:data-load
 
 # Mise à disposition du projet dans Apache
 ln -sf /vagrant/src/web/* /var/www/

@@ -21,13 +21,13 @@
             <li class="header_nav_3_content_logo"><a href="<?php echo url_for('@homepage') ?>"> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/logo/logo-dhr.png" alt="logo" /></a></li>
             <li><a href="#discography"><?php echo __('Discographie') ?></a></li>
             <li><a href="#artists"><?php echo __('Artistes') ?></a></li>
-            <li><a href="#informations"><?php echo __('Informations') ?></a></li>
-            <li><a href="#contact"><?php echo __('Contact') ?></a></li>
-            <li><a href="#linkus"><?php echo __('Liens') ?></a></li>
+            <li><a href="#artwork_artists"><?php echo __('Graphistes') ?></a></li>
+            <li><a href="#informations"><?php echo __('Contact') ?></a></li>
+            <li><a href="#links"><?php echo __('Liens') ?></a></li>
 
             <li><a href="http://www.musiques-incongrues.net/forum/labels/daheardit-records/"><?php echo __('Forum') ?></a></li>
             <li class="header_nav_3_button_donate donate_infos"><a href="https://www.helloasso.com/associations/constructions-incongrues" class="donate">&hearts; <?php echo __('Dons') ?> &hearts;
-          
+
 </li>
           </ul>
 

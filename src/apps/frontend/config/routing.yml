@@ -29,6 +29,13 @@ artist_show:
   requirements:
     sf_culture: (?:fr|en)
 
+# artwork_artist
+artwork_artist_show:
+  url:   /:sf_culture/gfx/:slug
+  param: { module: artwork_artist, action: show }
+  requirements:
+    sf_culture: (?:fr|en)
+
 # release
 release_show:
   url:   /:sf_culture/discography/:slug
