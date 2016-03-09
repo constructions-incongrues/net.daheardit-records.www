@@ -33,7 +33,7 @@
 
   <!-- Opengraph -->
 <?php foreach ($sf_response->getMetas() as $name => $value): ?>
-  <meta property="<?php echo $name ?>" content="<?php echo html_entity_decode(str_replace('&amp;#039;', "'", $value), ENT_QUOTES) ?>" />
+  <meta property="<?php echo $name ?>" content="<?php echo html_entity_decode(str_replace(['&amp;#039;'], ["'"], $value), ENT_QUOTES) ?>" />
 <?php endforeach ?>
 
   <!--[if IE lte IE 8]>

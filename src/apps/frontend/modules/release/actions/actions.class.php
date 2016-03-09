@@ -119,12 +119,62 @@ class releaseActions extends sfActions
         }
 
         // Opengraph
+        $releaseTracks = Doctrine_Core::getTable('Track')->findUrlsForRelease($release['id']);
+        $playlist = [];
+        foreach ($releaseTracks as $track) {
+            $zero = '';
+            if ($track['number'] < 10) {
+                $zero = 0;
+            }
+            $playlist[] = sprintf(
+                '%s/assets/releases/%s/tracks/%s_%s%s.mp3',
+                'http://www.daheardit-records.net',
+                $release['slug'],
+                str_replace('-', '', $release['slug']),
+                $zero,
+                $track['number']
+            );
+        }
+        $flowplayerConfig = [
+            "canvas" => [
+                "backgroundImage" => sprintf(
+                    "url(%s/assets/releases/%s/images/%s_1.png)",
+                    'http://www.daheardit-records.net',
+                    $release['slug'],
+                    $release['slug']
+                ),
+                "linkWindow" => "_blank",
+                "linkUrl" => $this->getContext()->getRouting()->generate('release_show', ['slug' => $release['slug']], true),
+            ],
+            "playlist" => $playlist,
+            "plugins" => [
+                "audio" => [
+                    "url" => sprintf("%s/frontend/swf/flowplayer/flowplayer.audio.swf", 'http://www.daheardit-records.net')
+                ],
+                "controls" => [
+                    "playlist" => true,
+                    "autoHide" => false,
+                    "fullscreen" => false
+                ]
+            ]
+        ];
+
         // TODO : this should go in a filter
         $headersOgp = array(
             'title' => $this->getContext()->getResponse()->getTitle() . ' | Da ! Heard It Records',
-            'type'  => 'music.album',
-            'image' => sprintf(sfConfig::get('app_dhr_url_root').'/assets/releases/%s/images/%s_1.png', $release['slug'], $release['slug']),
-            'description' => $release['Translation'][$request->getParameter('sf_culture', 'fr')]['presentation']
+            'description' => strip_tags($release['Translation'][$request->getParameter('sf_culture', 'fr')]['presentation']),
+            'image' => sprintf('http://www.daheardit-records.net'.'/assets/releases/%s/images/%s_1.png', $release['slug'], $release['slug']),
+            'type'  => 'video.other',
+            'video' => sprintf(
+                '%s/frontend/swf/flowplayer/flowplayer-3.2.18.swf?config=%s',
+                'http://www.daheardit-records.net',
+                json_encode($flowplayerConfig, JSON_UNESCAPED_SLASHES)
+            ),
+            'video:secure_url' => sprintf(
+                '%s/frontend/swf/flowplayer/flowplayer-3.2.18.swf?config=%s',
+                'https://www.daheardit-records.net',
+                json_encode($flowplayerConfig, JSON_UNESCAPED_SLASHES)
+            )
         );
         foreach ($headersOgp as $name => $value) {
             $this->getContext()->getResponse()->addMeta('og:'.$name, $value);
