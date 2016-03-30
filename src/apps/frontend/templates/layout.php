@@ -115,7 +115,7 @@
       <div class="grid_12 category_infos">
          <div class="category_content">
           <h1 id="informations"><?php echo __('Informations') ?></h1>
-                      <span class="triangle"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/others/triangle.png" class="triangle" /></span>
+                      <span class="triangle"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/others/triangle-blanc.png" class="triangle" /></span>
 
           <span class="infos_button_top"><a href="#top"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/top.png" alt="TOP"></a></span>
         </div><!-- end of category_contents -->

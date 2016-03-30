@@ -1,4 +1,4 @@
-      <div class="grid_12 artists_listing_all">
+      <div class="grid_12  artwork_artist">
         <div class="artists_content">
 <?php for ($i = 0; $i < count($artists); $i++): ?>
 <?php $artist = $artists[$i] ?>
@@ -7,8 +7,8 @@
   <?php else: ?>
   		  <div class="grid_3 artists_show">
   <?php endif; ?>
-            <p><a href="<?php echo url_for('@artwork_artist_show?slug='.$artist['slug']) ?>#artwork_artist"> <span class="calque_artists"> </span></a></p>
-            <img src="<?php echo $artist['image'] ?>" class="artists_pictures" />
+            <p><a href="<?php echo url_for('@artwork_artist_show?slug='.$artist['slug']) ?>#artwork_artist"> <span class="calque_artists_artwork"> </span></a></p>
+            <img src="<?php echo $artist['image'] ?>" class="artists_artwork_pictures" />
             <p class="artists_title"><a href="<?php echo url_for('@artwork_artist_show?slug='.$artist['slug']) ?>#artwork_artist"><?php echo $artist['name'] ?></a></p>
           </div><!-- end of grid_3 -->
 <?php endfor; ?>

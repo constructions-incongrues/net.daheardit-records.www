@@ -92,8 +92,8 @@ margin-top:10px;
 margin-left:-5px;
 background-image:url(../pics/pattern/pat-bg.png);
 background-repeat:repeat;
-background-color:#000;
-color:#FFF;
+background-color:#f2f2f2;
+color:#000;
 }
 
 /* CALQUES
@@ -153,6 +153,35 @@ background-image:url("../pics/artists/img-artist.png");
 .calque_artists:hover
 {
 background-image:url("../pics/artists/img-artist-hover.png");
+}
+
+
+.calque_artists_pictures
+{
+position:absolute;
+height:460px;
+width:460px;
+background-image:url("../pics/releases/img-release.png");
+}
+
+.calque_releases:hover, .calque_releases_2:hover
+{
+background-image:url("../pics/releases/img-release-hover.png");
+}
+
+
+.calque_artists_artwork
+{
+position:absolute;
+height:233px;
+width:220px;
+top:7px;
+background-image:url("../pics/artists/hexagone-trame.png");
+}
+
+.calque_artists_artwork:hover
+{
+background-image:url("../pics/artists/forme-over.png");
 }
 
 
@@ -648,7 +677,7 @@ background-repeat:repeat;
 background-color:#f2f2f2;
 padding:30px 0px 100px 0px;
 }
-
+.artwork_artist {background-color: #000;top:-12px;}
 
 .open_releases,.open_artists
 {
@@ -738,7 +767,7 @@ margin-top:5px;
 {
 background-image:url(../pics/pattern/pat-bg.png);
 background-repeat:repeat;
-background-color:#000;
+background-color:#f2f2f2;
 padding:30px 0px 50px 0px;
 top:-28px;
 }
@@ -749,7 +778,7 @@ top:-28px;
 .infos_descr h3,
 .infos_descr h4
 {
-color:#FFF;
+color:#000;
 font-family: 'Jockey One', sans-serif;
 font-weight:normal;
 text-transform:uppercase;
@@ -758,7 +787,7 @@ text-transform:uppercase;
 .infos_descr
 {
 
-color:#b2b2b2;
+color:#000;
 text-align:left;
 }
 
@@ -770,12 +799,11 @@ margin-left:0px;
 
 .infos_descr a
 {
-color:#29ABE2;
+color:#000;
 text-decoration:none;
-opacity:0.7;
 }
 .infos_descr a:hover
-{opacity:1;color:#29ABE2;}
+{opacity:1;color:#000;text-decoration: underline;}
 .infos_vids
 {
 margin-left:20px;
@@ -798,12 +826,22 @@ padding:2px 3px 2px 2px ;
 margin-top:20px;
 }
 
+.artwork_artist_button_top
+{
+background-image:url(../pics/pattern/pat-bg.png);
+background-repeat:repeat;
+background-color:#F2F2F2;
+position:relative;
+float:right;
+padding:2px 3px 2px 2px ;
+margin-top:20px;
+}
 .infos_button_top
 {
 
 background-image:url(../pics/pattern/pat-bg.png);
 background-repeat:repeat;
-background-color:#000;
+background-color:#f2f2f2;
 position:relative;
 float:right;
 padding:2px 3px 2px 2px ;
@@ -817,12 +855,12 @@ margin-right:5px;
 position:relative;
 float:right;
 padding:2px 3px 2px 2px ;
-margin-top:-48px;
+margin-top:-50px;
 margin-right:5px;
 
 background-image:url(../pics/pattern/pat-foot.png);
 background-repeat:repeat;
-background-color:#000;
+background-color:#29abe2;
 }
 
 
@@ -833,7 +871,7 @@ background-color:#000;
 {
 background-image:url(../pics/pattern/pat-foot.png);
 background-repeat:repeat;
-background-color:#000;
+background-color:#29abe2;
 padding:30px 0px 100px 0px;
 top:-28px;
 
@@ -865,7 +903,6 @@ font-size:2rem;
 color:#FFF;
 font-size:15px;
 font-size:1.5rem;
-opacity:0.7;
 margin:10px 0px 10px 0px;
 }
 
@@ -882,24 +919,23 @@ padding-left:10px;
 }
 .footer_links_1 li a, .footer_links_2 li a
 {
-color:#29ABE2;
+color:#FFF;
+background-color: #000;
 padding:2px 2px 0px 2px;
 text-decoration:none;
-opacity:0.7;
 }
 
 .footer_links_1 li a:hover, .footer_links_2 li a:hover
-{color:#29ABE2;opacity:1;}
+{color:#000;background-color:#FFF;opacity:1;}
 .footer p
 {
-color:#b2b2b2;
+color:#fff;
 }
 
 .footer_content p a
 {
-color:#29ABE2;
+color:#000;
 text-decoration:none;
-opacity:0.7;
 }
 
 .footer_content p a:hover
@@ -923,7 +959,6 @@ margin:0px;
 ul.footer_nav_1
 {
 margin:8px 0px 20px 20px;
-opacity:0.6;
 padding:2px;
 float:right;
 margin-right:-60px;
@@ -947,7 +982,7 @@ border:0px;
 {
 background-color:#000;
    text-transform:uppercase;
-color:#28ABE3;
+color:#FFF;
 background-image:none;
 background-repeat:repeat;
 float:right;
@@ -1481,7 +1516,7 @@ color:#FFF;
 
 
 .releases h1,
-.category_infos h1
+.category_artwork_artist h1
 {
  background-color:#000;
  color:#FFF;
