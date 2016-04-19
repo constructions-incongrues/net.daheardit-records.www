@@ -105,6 +105,8 @@
         <div class="category_content">
           <h1 id="artwork_artists"><?php echo __('Graphistes') ?></h1>
             <span class="triangle"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/others/triangle.png" class="triangle" /></span>
+                 <span class="graphists_button_top"><a href="#top"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/top_black.png" alt="TOP"></a></span>
+
         </div><!-- end of category contents -->
       </div><!-- end of releases -->
 

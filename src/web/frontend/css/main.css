@@ -769,7 +769,7 @@ background-image:url(../pics/pattern/pat-bg.png);
 background-repeat:repeat;
 background-color:#f2f2f2;
 padding:30px 0px 50px 0px;
-top:-28px;
+top:-22px;
 }
 
 
@@ -811,7 +811,7 @@ width:276px;
 }
 
 
-
+#informations {margin-top:120px!important;}
 /* BUTTON TOP - ANCRE
 ***************************************************************/
 
@@ -836,6 +836,20 @@ float:right;
 padding:2px 3px 2px 2px ;
 margin-top:20px;
 }
+
+.graphists_button_top
+{
+
+background-image:url(../pics/pattern/pat-bg.png);
+background-repeat:repeat;
+background-color:#f2f2f2;
+position:relative;
+float:right;
+padding:2px 3px 2px 2px ;
+margin-top:5px;
+margin-right:5px;
+}
+
 .infos_button_top
 {
 
@@ -845,7 +859,7 @@ background-color:#f2f2f2;
 position:relative;
 float:right;
 padding:2px 3px 2px 2px ;
-margin-top:20px;
+margin-top:25px;
 margin-right:5px;
 }
 
@@ -921,7 +935,7 @@ padding-left:10px;
 {
 color:#FFF;
 background-color: #000;
-padding:2px 2px 0px 2px;
+padding:2px 5px 2px 5px;
 text-decoration:none;
 }
 
@@ -1577,3 +1591,25 @@ opacity:1;
 
 /* linkl temp*/
 
+-------------
+.hexagon {
+      position: relative;
+      display: inline-block;
+      width: 205px;
+      height: 233px;
+      overflow: hidden;
+      color: #fff;
+      -webkit-mask-image: url('http://i40.tinypic.com/kajqg.jpg');
+      text-align: center;
+      
+    }
+    .hexagon .contenthexa{
+      height: 255px;
+      width: 225px;
+      margin: auto;
+      margin-top: 16px;
+      
+    }
+    .hexagon a {
+      cursor: -webkit-zoom-in; cursor: -moz-zoom-in;
+    }

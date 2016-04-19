@@ -8,7 +8,9 @@
   		  <div class="grid_3 artists_show">
   <?php endif; ?>
             <p><a href="<?php echo url_for('@artwork_artist_show?slug='.$artist['slug']) ?>#artwork_artist"> <span class="calque_artists_artwork"> </span></a></p>
-            <img src="<?php echo $artist['image'] ?>" class="artists_artwork_pictures" />
+            <img src="<?php echo $artist['image'] ?>" class="artists_artwork_pictures hexagon" />
+
+
             <p class="artists_title"><a href="<?php echo url_for('@artwork_artist_show?slug='.$artist['slug']) ?>#artwork_artist"><?php echo $artist['name'] ?></a></p>
           </div><!-- end of grid_3 -->
 <?php endfor; ?>
