@@ -52,6 +52,12 @@
       <?php echo nl2br($artist['Translation'][$sf_user->getCulture()]['presentation']) ?>
     </p>
 
+<?php if ($artist['url']): ?>
+    <p class="open_artists_bio">
+      <a href="<?php echo $artist['url'] ?>"><?php echo $artist['url'] ?></a>
+    </p>
+<?php endif ?>
+
     <hr />
 <?php if (!empty($artist['more'])): ?>
     <h2 class="open_artists_title"><?php echo __('Liens') ?></h2>
