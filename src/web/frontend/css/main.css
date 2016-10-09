@@ -1137,7 +1137,7 @@ margin-left:10px;
 padding-top:20px;
 }
 
-h1.open_releases_catalog , h2.open_releases_artist, h3.open_releases_album, h3.open_releases_title , h1.open_releases_title, h2.open_releases_title, h1.open_artists_name, h2.open_artists_title, .open_releases_share_button
+h1.open_releases_catalog , h2.open_releases_artwork_credit, h2.open_releases_artist, h3.open_releases_album, h3.open_releases_title , h1.open_releases_title, h2.open_releases_title, h1.open_artists_name, h2.open_artists_title, .open_releases_share_button
 {
 font-weight:normal;
 text-transform:uppercase;
@@ -1145,6 +1145,13 @@ font-family: 'Jockey One', sans-serif;
 
 }
 
+h2.open_releases_artwork_credit {
+color:#000;
+font-size:14px;
+font-size:1.4rem;
+margin-top:-40px;
+text-align: right;}
+.open_releases_artwork_credit a {color:#666;text-decoration: none;}
 
 h1.open_releases_title, h2.open_releases_title, h3.open_releases_title, h2.open_artists_title
 {
@@ -1189,7 +1196,7 @@ h3.open_releases_title
 {
 margin-top:20px;
 }
-h1.open_releases_catalog, h3.open_releases_album, h3.open_releases_title,.open_releases_buy,   ul.open_releases_download, .open_releases_share_button
+h1.open_releases_catalog,h2.open_releases_artwork_credit, h3.open_releases_album, h3.open_releases_title,.open_releases_buy,   ul.open_releases_download, .open_releases_share_button
 {
   margin-left:10px;
 
@@ -1314,6 +1321,13 @@ width: 0;
 left: -1em;
 }
 
+/*.open_releases_artwork_credit {
+  color:#000;
+  margin-left:10px;
+margin-top:-10px;
+padding-bottom:0px;
+line-height:17px;
+}*/
 .open_releases_press_text,.open_artists_bio
 {
 color:#666;
@@ -1324,7 +1338,7 @@ padding-bottom:0px;
 line-height:17px;
 }
 
-.open_releases_press_text a
+.open_releases_press_text a /*.open_releases_artwork_credit a*/
 {
 color: #000;
 opacity: 0.9;
@@ -1656,25 +1670,3 @@ opacity:1;
 
 /* linkl temp*/
 
--------------
-.hexagon {
-      position: relative;
-      display: inline-block;
-      width: 205px;
-      height: 233px;
-      overflow: hidden;
-      color: #fff;
-      -webkit-mask-image: url('http://i40.tinypic.com/kajqg.jpg');
-      text-align: center;
-      
-    }
-    .hexagon .contenthexa{
-      height: 255px;
-      width: 225px;
-      margin: auto;
-      margin-top: 16px;
-      
-    }
-    .hexagon a {
-      cursor: -webkit-zoom-in; cursor: -moz-zoom-in;
-    }
