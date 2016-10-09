@@ -449,7 +449,7 @@ ArtworkArtist:
           Graphiste7 EN
 
   graphiste8:
-    id: 6
+    id: 8
     name: Graphiste8
     more: ~
     Translation:
@@ -756,6 +756,7 @@ Release:
     sku: D!HR-15
     slug: dhr-15
     Artist: tomwoxom
+    ArtworkArtist: nazzilla    
     paypal_id: 22SF6ZQ8HSY3U
     Translation:
       fr:
