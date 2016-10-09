@@ -178,7 +178,7 @@ background-image:url("../pics/releases/img-release-hover.png");
 top:7px;
 background-image:url("../pics/artists/hexagone-trame.png");
 */
-height:255px;
+height:254px;
 width:220px;
 -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
@@ -203,7 +203,7 @@ background-image:url("../pics/artists/forme-over.png");
 height:254px;
 width:158px;
 top:20px;
-margin-left: 32px;
+margin-left: 31px;
 }
 
 
