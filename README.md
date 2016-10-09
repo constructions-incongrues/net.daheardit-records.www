@@ -23,7 +23,7 @@ ant deploy -Dprofile=pastishosting-preview -Drsync.option="--dry-run --delete-af
 #### Pour de vrai
 
 ```bash
-ant deploy -Dprofile=pastishosting-preview -Drsync.options="--delete-after"
+ant deploy cloudflare.purgeAll -Dprofile=pastishosting-preview -Drsync.options="--delete-after"
 ```
 
 ### sur www.daheardit-records.net
@@ -37,5 +37,5 @@ ant deploy -Dprofile=pastishosting -Drsync.option="--dry-run --delete-after"
 #### Pour de vrai
 
 ```bash
-ant deploy -Dprofile=pastishosting -Drsync.options="--delete-after"
+ant deploy cloudflare.purgeAll -Dprofile=pastishosting -Drsync.options="--delete-after"
 ```
