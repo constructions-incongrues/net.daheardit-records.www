@@ -52,11 +52,3 @@ RedirectMatch permanent /(fr|en)/(links|liens)(/)? @dhr.url.root@/$1/#links
   ModPagespeed on
   ModPagespeedEnableFilters CoreFilters,insert_image_dimensions,defer_javascript,extend_cache
 </IfModule>
-
-# New Relic
-php_value newrelic.appname "DHR"
-php_value newrelic.error_collector.record_database_errors 1
-php_value newrelic.transaction_tracer.top100 1
-php_value newrelic.transaction_tracer.explain_enabled 1
-php_value newrelic.capture_params 1
-php_value newrelic.framework symfony
