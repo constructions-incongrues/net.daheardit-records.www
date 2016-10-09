@@ -976,19 +976,7 @@ Content:
           Tom Woxom,
           <a href="http://www.vic-net.com/">Vicnet</a>,
           <a href="http://www.xerak.com">Xerak</a>
-Post:
-  post1:
-    created_at: "2012-07-05 00:00:00"
-    image: 1.jpg
-    Translation:
-      fr:
-        title: D!HR est de retour !
-        body: |
-         D!HR se met à l'heure d'été avec un nouveau site tout beau tout propre realisé par <a href="http://www.thibaulthuertas.com/">Thibault Huertas</a> en collaboration avec le bureau des Constructions Incongrues. Nous remercions infiniement Nazilla qui avait réalisé la premiere version du site, vous pouvez voir ses nouvelles compositions sur son site <a href="http://www.nazilla.com">www.nazilla.com</a>.  C'est aussi l'occasion de vous présenter la 18ème release du label : Plan 9 des Robots Musiques ;  duo de Rod Droïd et Puyo Puyo ! Cet album vous accompagnera parfaitement pendant votre visite du nouveau site.
-      en:
-        title: D!HR is back !
-        body: |
-          D!HR is ready for the summer with a brand-spanking-new site created by <a href="http://www.thibaulthuertas.com/">Thibault Huertas</a> in collaboration with Constructions Incongrues. We give great thanks to Nazilla who designed the first version of the site. You can see Nazilla's new compositions on their site <a href="http://www.nazilla.com">www.nazilla.com</a>. This is also a great opportunity to introduce the label's 18th release: Plan 9 des Robots Musiques (Plan 9 of the Music Robots), a Rod Droïd and Puyo Puyo duo! This album will make for a great accompaniment as you browse through our new site.
+
 Track:
   dhr01_track1:
     title: "Intro"
