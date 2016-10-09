@@ -59,10 +59,11 @@
     <?php echo html_entity_decode($artist['more']) ?>
     </div>
     <hr />
-    <h2 class="open_artists_title"><?php echo __('Toutes les sorties') ?></h2>
+    <h2 class="open_artists_title"><?php echo __('Illustration(s)') ?></h2>
 
      <div class=" open_artists_listing_releases ">
  <?php foreach ($artist['releases'] as $release): ?>
+  <div class="grid_3 releases_discography_number releases_discography_number_first ">
         <p><a href="<?php echo url_for(sprintf('@release_show?slug=%s#release', $release['slug'])) ?>"> <span class="calque_releases_2"></span></a></p>
         <img width="220px" height="220px" src="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/releases/<?php echo $release['slug'] ?>/<?php echo $release['slug'] ?>_300x300.png" alt=""/>
         <h1><a href="<?php echo url_for(sprintf('@release_show?slug=%s#release', $release['slug'])) ?>"><?php echo $release['sku'] ?></a></h1>
@@ -70,6 +71,7 @@
         <ul class="releases_discography_button">
           <li><a href="<?php echo url_for(sprintf('@release_show?slug=%s#release', $release['slug'])) ?>"><?php echo __("+ D'infos") ?></a></li>
         </ul>
+        </div>
 <?php endforeach; ?>
     </div>
     </div><!-- end of grid_6 -->
