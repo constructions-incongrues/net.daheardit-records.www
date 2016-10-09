@@ -17,13 +17,13 @@ vagrant up
 #### Simulation
 
 ```bash
-ant deploy -Dprofile=pastishosting-preview -Drsync.option="--dry-run --delete-after"
+ant deploy -Dprofile=pastishosting-preview -Drsync.option="--dry-run --delete-after" && ant configure -Dprofile=vagrant
 ```
 
 #### Pour de vrai
 
 ```bash
-ant deploy cloudflare.purgeAll -Dprofile=pastishosting-preview -Drsync.options="--delete-after"
+ant deploy cloudflare.purgeAll -Dprofile=pastishosting-preview -Drsync.options="--delete-after" && ant configure -Dprofile=vagrant
 ```
 
 ### sur www.daheardit-records.net
@@ -31,11 +31,11 @@ ant deploy cloudflare.purgeAll -Dprofile=pastishosting-preview -Drsync.options="
 #### Simulation
 
 ```bash
-ant deploy -Dprofile=pastishosting -Drsync.option="--dry-run --delete-after"
+ant deploy -Dprofile=pastishosting -Drsync.option="--dry-run --delete-after" && ant configure -Dprofile=vagrant
 ```
 
 #### Pour de vrai
 
 ```bash
-ant deploy cloudflare.purgeAll -Dprofile=pastishosting -Drsync.options="--delete-after"
+ant deploy cloudflare.purgeAll -Dprofile=pastishosting -Drsync.options="--delete-after" && ant configure -Dprofile=vagrant
 ```
