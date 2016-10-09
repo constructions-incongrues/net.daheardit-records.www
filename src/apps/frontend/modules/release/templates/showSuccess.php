@@ -51,14 +51,19 @@
             </li>
 <?php endfor ?>
      </ul>
+     <?php if (isset($release['ArtworkArtist'])): ?>
+  <h2 class="open_releases_artwork_credit"><?php echo __('Artwork : ') ?><a href="<?php echo url_for(sprintf('@artwork_artist_show?slug=%s#artwork_artist', $release['ArtworkArtist']['slug'])) ?>" title="<?php echo $release['ArtworkArtist']['name'] ?>"><?php echo $release['ArtworkArtist']['name'] ?></a></h2>
+<?php endif ?>
    </div><!-- end of grid_6 -->
 
     <div class="grid_6 open_releases_infos">
 
     <h1 class="open_releases_catalog"><?php echo $release['sku'] ?>
 <?php if ($release['released_at']): ?>
-     - <span class="open_releases_infos_date"><?php echo $release['released_at'] ?></span>
+     - <span class="open_releases_infos_date"><?php echo $release['released_at'] ?></span> - 
 <?php endif; ?>
+
+
    </h1>
     <h2 class="open_releases_artist"><a href="<?php echo url_for(sprintf('@artist_show?slug=%s#artist', $release['Artist']['slug'])) ?>"><?php echo $release['Artist']['name'] ?></a></h2>
     <h3 class="open_releases_album"><?php echo $release['title'] ?> </h3>
@@ -124,6 +129,7 @@
       <li><a class="release-download" data-dhr-release-slug="<?php echo $release['slug'] ?>" data-dhr-archive-format="<?php echo $archive['name'] ?>" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/releases/<?php echo $release['slug'] ?>/archives/<?php echo $archive['filename'] ?>"><?php echo strtoupper($archive['name']) ?></a></li>
   <?php endforeach ?>
     </ul>
+
  <p class="open_releases_download_licence">Cette œuvre est mise à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/deed.fr">Licence Creative Commons Attribution - Pas d’Utilisation Commerciale - Pas de Modification 4.0 France</a>.</p>
 <?php endif ?>
 
@@ -135,7 +141,10 @@
     </p>
 <?php endif ?>
 
-    <h1 class="open_releases_title"><?php echo __('À propos de la sortie') ?></h1>
+    
+    <h1 class="open_releases_title">
+
+    <?php echo __('À propos de la sortie') ?></h1>
 
     <p class="open_releases_press_text">
 <?php echo nl2br(html_entity_decode($release['Translation'][$sf_user->getCulture()]['presentation'])) ?>
@@ -149,9 +158,8 @@
     </ul>
 <?php endif ?>
 
-<?php if (isset($release['ArtworkArtist'])): ?>
-  <p class="open_releases_press_text"><?php echo __('Artwork par ') ?><a href="<?php echo url_for(sprintf('@artwork_artist_show?slug=%s#artwork_artist', $release['ArtworkArtist']['slug'])) ?>" title="<?php echo $release['ArtworkArtist']['name'] ?>"><?php echo $release['ArtworkArtist']['name'] ?></a></p>
-<?php endif ?>
+
+
 
 <?php if (count($release['press'])): ?>
     <h1 class="open_releases_title"><?php echo __('Ils en parlent') ?></h1>
