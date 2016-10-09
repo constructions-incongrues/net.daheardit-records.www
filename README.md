@@ -8,17 +8,18 @@ vagrant plugin install vagrant-vbguest
 vagrant plugin install vagrant-share
 vagrant plugin install landrush
 vagrant up
-
-sudo sh -c 'echo "server=/vagrant.dev/127.0.0.1#10053" > /etc/dnsmasq.d/vagrant-landrush'
-sudo service dnsmasq restart
 ```
 
-# Déploiement des sources
+## Déploiement
+
+### Simulation
 
 ```bash
-# Test
-ant deploy -Dprofile=jeroboam
+ant deploy -Dprofile=pastishosting -Drsync.option="--dry-run --delete-after"
+```
 
-# Déploiement effectif
-ant deploy -Dprofile=jeroboam -Drsync.options=--delete-after
+### Pour de vrai
+
+```bash
+ant deploy -Dprofile=pastishosting -Drsync.options="--progress --delete-after"
 ```

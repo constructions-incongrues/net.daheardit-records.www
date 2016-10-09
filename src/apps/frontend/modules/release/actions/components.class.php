@@ -52,12 +52,16 @@ class releaseComponents extends sfComponents
             throw new RuntimeException('Could not find any featured release');
         }
 
-        // Build URL to header
-        $urlHeader = sprintf(
-            '%s/assets/releases/%s/header.jpg',
-            $this->getRequest()->getRelativeUrlRoot(),
-            $release->slug
-        );
+        if (is_readable(sprintf('%s/frontend/pics/others/header_force.jpg', sfConfig::get('sf_web_dir')))) {
+            $urlHeader = sprintf('%s/frontend/pics/others/header_force.jpg', $this->getRequest()->getRelativeUrlRoot());
+        } else {
+            // Build URL to header
+            $urlHeader = sprintf(
+                '%s/assets/releases/%s/header.jpg',
+                $this->getRequest()->getRelativeUrlRoot(),
+                $release->slug
+            );
+        }
 
         $urlStylesheet = null;
         $urlScript = null;

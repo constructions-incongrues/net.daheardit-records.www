@@ -5,11 +5,6 @@ Options FollowSymLinks
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
-  # CDN
-  RewriteCond %{HTTP_HOST}  !cdn\.daheardit-records\.net
-  RewriteCond $1            "\.(mp3|zip)$" [NC]
-  RewriteRule ^(.*)         http://cdn.daheardit-records.net/$1 [L,R]
-
   # we check if the .html version is here (caching)
   RewriteRule ^$ index.html [QSA]
   RewriteRule ^([^.]+)$ $1.html [QSA]

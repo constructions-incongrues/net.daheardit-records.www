@@ -113,5 +113,4 @@ class mainActions extends sfActions
 
         return sfView::NONE;
     }
-
 }
