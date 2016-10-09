@@ -77,7 +77,8 @@ margin-right: auto;
 
 .artists h1,
 .releases h1,
-.category_infos h1
+.category_infos h1, 
+.artwork_artists_listing_all h1
 {
 font-family: 'Jockey One', sans-serif;
 font-weight:lighter;
@@ -170,18 +171,39 @@ background-image:url("../pics/releases/img-release-hover.png");
 }
 
 
+.artists_show_artwork_first img, .artists_show_artwork img
+{
+/*position:absolute;
+
+top:7px;
+background-image:url("../pics/artists/hexagone-trame.png");
+*/
+height:255px;
+width:220px;
+-webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.artists_show_artwork_first , .artists_show_artwork
+{margin: 0px 9px 0px 9px;}
+
 .calque_artists_artwork
 {
 position:absolute;
 height:255px;
 width:220px;
-top:7px;
+top:20px;
 background-image:url("../pics/artists/hexagone-trame.png");
+z-index: 3000;
 }
 
 .calque_artists_artwork:hover
 {
 background-image:url("../pics/artists/forme-over.png");
+height:254px;
+width:158px;
+top:20px;
+margin-left: 32px;
 }
 
 
@@ -677,8 +699,18 @@ background-repeat:repeat;
 background-color:#f2f2f2;
 padding:30px 0px 100px 0px;
 }
-.artwork_artist {background-color: #000;top:-12px;}
-
+.artwork_artist {
+  background-color: #000;
+  top:0px;
+  padding:30px 0px 100px 0px;
+   margin-top: -14px;
+}
+ .artwork_artists_listing_all {
+   background-color: transparent;
+   margin-top: -63px;
+   padding-bottom: 2px;
+   padding-left: 5px;
+}
 .open_releases,.open_artists
 {
 top:-2px;
@@ -696,13 +728,36 @@ height:220px;
 width:220px;
 }
 
-.artists_title a
+.artists_title a, .artists_artwork_title a
 {
 color:#29ABE2;
 text-transform:uppercase;
 text-decoration:none;
+
 }
 
+.artists_artwork_title a {background-color:#000;
+font-weight:lighter;
+font-family: 'Jockey One', sans-serif;
+font-size:19px;
+font-size:1.9rem;
+padding:3px 9px 3px 9px;
+}
+.artists_artwork_title {
+ position:absolute; 
+margin:0;
+ padding:0;
+ width:100%;
+font-weight:lighter;
+font-family: 'Jockey One', sans-serif;
+top:130px;
+font-size:19px;
+font-size:1.9rem;
+padding:3px 9px 3px 3px;
+display: block;
+z-index:2000;
+text-align: center;
+}
 .artists_title
 {
 position: absolute;
@@ -759,6 +814,15 @@ margin-right:9px;
 margin-top:5px;
 }
 
+.artists_show_artwork_default 
+{
+background-image:url(../pics/artists/hexagone-trame.png);
+height:255px;
+width:220px!important;
+margin-left:9px;
+margin-right:9px;
+margin-top:20px;  
+}
 
 /* INFOS
 ***************************************************************/
@@ -846,7 +910,7 @@ background-color:#f2f2f2;
 position:relative;
 float:right;
 padding:2px 3px 2px 2px ;
-margin-top:5px;
+margin-top:20px;
 margin-right:5px;
 }
 
@@ -1530,7 +1594,8 @@ color:#FFF;
 
 
 .releases h1,
-.category_artwork_artist h1
+.category_artwork_artist h1, 
+.artwork_artists_listing_all h1
 {
  background-color:#000;
  color:#FFF;
