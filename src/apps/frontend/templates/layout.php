@@ -101,7 +101,7 @@
 
 <?php include_component('artist', 'list') ?>
 
-      <div class="grid_12 artwork_artists">
+      <div class="grid_12 artwork_artists_listing_all">
         <div class="category_content">
           <h1 id="artwork_artists"><?php echo __('Graphistes') ?></h1>
             <span class="triangle"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/others/triangle.png" class="triangle" /></span>
