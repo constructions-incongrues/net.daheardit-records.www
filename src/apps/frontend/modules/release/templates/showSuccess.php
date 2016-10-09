@@ -52,7 +52,9 @@
 <?php endfor ?>
      </ul>
      <?php if (isset($release['ArtworkArtist'])): ?>
-  <h2 class="open_releases_artwork_credit"><?php echo __('Illustrateur : ') ?><a href="<?php echo url_for(sprintf('@artwork_artist_show?slug=%s#artwork_artist', $release['ArtworkArtist']['slug'])) ?>" title="<?php echo $release['ArtworkArtist']['name'] ?>"><?php echo $release['ArtworkArtist']['name'] ?></a></h2>
+    <h2 class="open_releases_artwork_credit"><?php echo __('Illustrateur : ') ?><a href="<?php echo url_for(sprintf('@artwork_artist_show?slug=%s#artwork_artist', $release['ArtworkArtist']['slug'])) ?>" title="<?php echo $release['ArtworkArtist']['name'] ?>"><?php echo $release['ArtworkArtist']['name'] ?></a></h2>
+<?php else: ?>
+    <h2 class="open_releases_artwork_credit"><?php echo __('Illustrateur : ') ?><a href="<?php echo url_for(sprintf('@artist_show?slug=%s#artist', $release['Artist']['slug'])) ?>" title="<?php echo $release['Artist']['name'] ?>"><?php echo $release['Artist']['name'] ?></a></h2>
 <?php endif ?>
    </div><!-- end of grid_6 -->
 
