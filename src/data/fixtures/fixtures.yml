@@ -400,6 +400,42 @@ ArtworkArtist:
         presentation: |
           STEREOTYPE EN
 
+  elisekm:
+    id: 4
+    name: Élise Kobitsch Miana
+    more: ~
+    Translation:
+      fr:
+        presentation: |
+          ELISE FR
+      en:
+        presentation: |
+          ELISE EN
+
+  shoboshobo:
+    id: 5
+    name: Shoboshobo
+    more: ~
+    Translation:
+      fr:
+        presentation: |
+          Shoboshobo FR
+      en:
+        presentation: |
+          Shoboshobo EN
+
+  otro:
+    id: 6
+    name: Otro
+    more: ~
+    Translation:
+      fr:
+        presentation: |
+          OTRO FR
+      en:
+        presentation: |
+          OTRO EN
+
 Release:
   dhr01:
     id: 1
