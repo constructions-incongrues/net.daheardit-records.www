@@ -436,6 +436,30 @@ ArtworkArtist:
         presentation: |
           OTRO EN
 
+  graphiste7:
+    id: 7
+    name: Graphiste7
+    more: ~
+    Translation:
+      fr:
+        presentation: |
+          Graphiste7 FR
+      en:
+        presentation: |
+          Graphiste7 EN
+
+  graphiste8:
+    id: 6
+    name: Graphiste8
+    more: ~
+    Translation:
+      fr:
+        presentation: |
+          Graphiste8 FR
+      en:
+        presentation: |
+          Graphiste8 EN
+
 Release:
   dhr01:
     id: 1

@@ -90,25 +90,25 @@
 <?php include_component('release', 'list') ?>
 
       <div class="grid_12 artists">
-        <div class="artists_content">
+        <div class="category_content">
                     <span class="artist_button_top"><a href="#top"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/top_black.png" alt="TOP"></a></span>
 
           <h1 id="artists"><?php echo __('Artistes') ?></h1>
     <span class="triangle"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/others/triangle-blanc.png" class="triangle" /></span>
 
-        </div><!-- end of category_contents -->
-      </div><!-- end of category -->
+        </div><!-- end of artists_content -->
+      </div><!-- end of artists -->
 
 <?php include_component('artist', 'list') ?>
 
-      <div class="grid_12 releases">
+      <div class="grid_12 artwork_artists">
         <div class="category_content">
           <h1 id="artwork_artists"><?php echo __('Graphistes') ?></h1>
             <span class="triangle"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/others/triangle.png" class="triangle" /></span>
                  <span class="graphists_button_top"><a href="#top"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/top_black.png" alt="TOP"></a></span>
 
         </div><!-- end of category contents -->
-      </div><!-- end of releases -->
+      </div><!-- end of artwork_artists -->
 
 
 <?php include_component('artwork_artist', 'list') ?>
