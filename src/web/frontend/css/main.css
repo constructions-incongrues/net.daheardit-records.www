@@ -184,24 +184,27 @@ width:220px;
 clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
 
-.artists_show_artwork_first , .artists_show_artwork 
+.artists_show_artwork_first , .artists_show_artwork
 {margin: 0px 9px 0px 9px;}
-/*
-
 
 .calque_artists_artwork
 {
 position:absolute;
 height:255px;
 width:220px;
-top:7px;
+top:20px;
 background-image:url("../pics/artists/hexagone-trame.png");
+z-index: 3000;
 }
 
 .calque_artists_artwork:hover
 {
 background-image:url("../pics/artists/forme-over.png");
-}*/
+height:254px;
+width:158px;
+top:20px;
+margin-left: 32px;
+}
 
 
 /* HEADER
