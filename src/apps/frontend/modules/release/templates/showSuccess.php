@@ -123,7 +123,7 @@
     </ul>
 
 <?php if (count($release['links_carousel_video'])): ?>
-    <h3 class="open_releases_title"><?php echo __('Clip(s)') ?></h3>
+    <h3 class="open_releases_title"><?php echo __('Vidéo(s)') ?></h3>
     <ul class="open_releases_playlist">
     <?php foreach ($release['links_carousel_video'] as $url): ?>
         <li><a class="video" href="<?php echo $url ?>"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/play.png" alt="play" class="open_releases_playlist_icon_play" /><?php echo $url ?></a></li>
