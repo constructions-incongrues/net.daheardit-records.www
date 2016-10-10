@@ -1218,12 +1218,12 @@ font-family: 'Jockey One', sans-serif;
 }
 
 h2.open_releases_artwork_credit {
-color:#666;
+color:#000;
 font-size:13px;
 font-size:1.3rem;
 margin-top:-40px;
 text-align: right;}
-.open_releases_artwork_credit a,  .open_artists_bio a {color:#666;text-decoration: none;}
+.open_releases_artwork_credit a,  .open_artists_bio a {color:#000;text-decoration: none;}
 .open_releases_artwork_credit a:hover,.open_artits_bio a:hover {color:#000;}
 h1.open_releases_title, h2.open_releases_title, h3.open_releases_title, h2.open_artists_title
 {
@@ -1322,6 +1322,9 @@ width:450px;
 display: block;
 margin:3px 0px 0px -30px;
 padding:2px 2px 2px 5px;
+      text-transform: capitalize;
+
+
 }
 
 .open_releases_playlist a:hover
@@ -1370,6 +1373,7 @@ margin-left:-4px;
 
 ul.open_releases_playlist
 {
+
 margin: 0px 0.75em 0.75em 0;
 padding: 0 1em;
 list-style: none;
