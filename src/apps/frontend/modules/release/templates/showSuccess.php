@@ -122,6 +122,7 @@
     </ul>
 
 
+
 <?php if (count($archives)): ?>
     <h2 class="open_releases_title"><?php echo __('Télécharger librement') ?> ou faire un <a href="https://www.helloasso.com/associations/constructions-incongrues" class="donate">&hearts; <?php echo __('don') ?> &hearts;</a></h2>
 
@@ -131,6 +132,8 @@
       <li><a class="release-download" data-dhr-release-slug="<?php echo $release['slug'] ?>" data-dhr-archive-format="<?php echo $archive['name'] ?>" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/releases/<?php echo $release['slug'] ?>/archives/<?php echo $archive['filename'] ?>"><?php echo strtoupper($archive['name']) ?></a></li>
   <?php endforeach ?>
     </ul>
+
+
 
  <p class="open_releases_download_licence">Cette œuvre est mise à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/deed.fr">Licence Creative Commons Attribution - Pas d’Utilisation Commerciale - Pas de Modification 4.0 France</a>.</p>
 <?php endif ?>
@@ -143,7 +146,12 @@
     </p>
 <?php endif ?>
 
-    
+
+        <h3 class="open_releases_title"><?php echo __('Clip') ?></h3>
+    <ul class="open_releases_download">
+<li><a href="">test</a></li>
+</ul>
+
     <h1 class="open_releases_title">
 
     <?php echo __('À propos de la sortie') ?></h1>
