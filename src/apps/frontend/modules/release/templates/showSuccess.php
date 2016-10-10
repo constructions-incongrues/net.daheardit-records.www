@@ -43,9 +43,9 @@
               </a>
             </li>
 <?php endfor ?>
-<?php for ($i = 0; $i < count($release['links_carousel']); $i++): ?>
+<?php for ($i = 0; $i < count($release['links_carousel_other']); $i++): ?>
             <li>
-              <a class="carousel-nav" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/<?php echo $release['links_carousel'][$i] ?>" title="<?php echo __("Survolez l'image pour mettre le carousel en pause") ?>">
+              <a class="carousel-nav" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/<?php echo $release['links_carousel_other'][$i] ?>" title="<?php echo __("Survolez l'image pour mettre le carousel en pause") ?>">
                 <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/caroussel-release.png" />
               </a>
             </li>
@@ -122,12 +122,14 @@
 <?php endforeach; ?>
     </ul>
 
-        <h3 class="open_releases_title"><?php echo __('Clip') ?></h3>
+<?php if ($release['links_carousel_video']): ?>
+        <h3 class="open_releases_title"><?php echo __('Clip(s)') ?></h3>
     <ul class="open_releases_playlist">
-<li><a href="">Infecticide - Chansons Triste</a></li>
-<li><a href="">Infecticide - Chansons Triste</a></li>
-<li><a href="">Infecticide - Chansons Triste</a></li>
-
+    <?php foreach ($release['links_carousel_video'] as $url): ?>
+        <li><a href="<?php echo $url ?>"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/play.png" alt="play" class="open_releases_playlist_icon_play" /><?php echo $url ?></a></li>
+    <?php endforeach ?>
+    </ul>
+<?php endif ?>
 
 
 

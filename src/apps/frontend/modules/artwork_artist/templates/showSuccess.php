@@ -76,7 +76,6 @@
             <h1 style="margin-left:-5px;"><a data-pjax="#content_async" href="<?php echo url_for(sprintf('@release_show?slug=%s#release', $release['slug'])) ?>"><?php echo $release['sku'] ?></a></h1>
             <h2 style="margin-bottom:0px;"><a data-pjax="#content_async" title="<?php echo sprintf('%s - %s', $artist['name'], $release['title']) ?>" href="<?php echo url_for(sprintf('@release_show?slug=%s#release', $release['slug'])) ?>"><?php echo truncate_text(sprintf('%s - %s', $artist['name'], $release['title']), 35) ?></a></h2>
 
-
 <?php endforeach; ?>
     </div>
     </div><!-- end of grid_6 -->

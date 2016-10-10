@@ -170,21 +170,89 @@ background-image:url("../pics/releases/img-release.png");
 background-image:url("../pics/releases/img-release-hover.png");
 }
 
-
+/*
 .artists_show_artwork_first img, .artists_show_artwork img
 {
 /*position:absolute;
 
 top:7px;
 background-image:url("../pics/artists/hexagone-trame.png");
-*/
+
 height:254px;
 width:220px;
 -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+clip-path: url("#clipPolygon");
+}
+*/
 
+.hexagon {
+  position: relative;
+  width: 220px; 
+  height: 127.02px;
+  margin: 63.51px 0;
+  background-size: auto 254.0341px;
+  background-position: center;
+margin-left:9px;
+margin-right:9px;
+margin-top:90px;  }
+
+.hexTop,
+.hexBottom {
+  position: absolute;
+  z-index: 1;
+  width: 155.56px;
+  height: 155.56px;
+  overflow: hidden;
+  -webkit-transform: scaleY(0.5774) rotate(-45deg);
+  -ms-transform: scaleY(0.5774) rotate(-45deg);
+  transform: scaleY(0.5774) rotate(-45deg);
+  background: inherit;
+  left: 32.22px;
 }
 
+/*counter transform the bg image on the caps*/
+.hexTop:after,
+.hexBottom:after {
+  content: "";
+  position: absolute;
+  width: 220.0000px;
+  height: 127.01705922171767px;
+  -webkit-transform:  rotate(45deg) scaleY(1.7321) translateY(-63.5085px);
+  -ms-transform:      rotate(45deg) scaleY(1.7321) translateY(-63.5085px);
+  transform:          rotate(45deg) scaleY(1.7321) translateY(-63.5085px);
+  -webkit-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
+  background: inherit;
+}
+
+.hexTop {
+  top: -77.7817px;
+}
+
+.hexTop:after {
+  background-position: center top;
+}
+
+.hexBottom {
+  bottom: -77.7817px;
+}
+
+.hexBottom:after {
+  background-position: center bottom;
+}
+
+.hexagon:after {
+  content: "";
+  position: absolute;
+  top: 0.0000px;
+  left: 0;
+  width: 220.0000px;
+  height: 127.0171px;
+  z-index: 2;
+  background: inherit;
+}
 .artists_show_artwork_first , .artists_show_artwork
 {margin: 0px 9px 0px 9px;}
 
@@ -195,7 +263,7 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 position:absolute;
 height:255px;
 width:220px;
-top:20px;
+top:-63px;
 z-index: 3000;
 }
 
@@ -204,7 +272,7 @@ z-index: 3000;
 background-image:url("../pics/artists/forme-over.png");
 height:254px;
 width:158px;
-top:20px;
+top:-63px;
 margin-left: 31px;
 z-index:4000;
 }
@@ -755,7 +823,7 @@ margin:0;
  width:100%;
 font-weight:lighter;
 font-family: 'Jockey One', sans-serif;
-top:130px;
+top:43px;
 font-size:19px;
 font-size:1.9rem;
 padding:3px 9px 3px 3px;
