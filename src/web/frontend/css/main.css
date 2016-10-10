@@ -256,15 +256,26 @@ margin-top:90px;  }
 .artists_show_artwork_first , .artists_show_artwork
 {margin: 0px 9px 0px 9px;}
 
+.calque_artists_artwork_no_select
+{
+background-image:url("../pics/artists/forme-noselect.png");
+position: absolute;
+height:254px;
+width:158px;
+top:-63px;
+margin-left: 31px;
+z-index:3000;
+}
+
 .calque_artists_artwork
 {
-  background-image:url("../pics/artists/hexagone-trame.png");
-
-position:absolute;
-height:255px;
-width:220px;
+background-image:url("../pics/artists/hexagone-trame.png");
+position: absolute;
+height:254px;
+width:158px;
 top:-63px;
-z-index: 3000;
+margin-left: 31px;
+z-index:3000;
 }
 
 .calque_artists_artwork:hover
@@ -888,15 +899,7 @@ margin-right:9px;
 margin-top:5px;
 }
 
-.artists_show_artwork_default 
-{
-background-image:url(../pics/artists/hexagone-trame.png);
-height:255px;
-width:220px!important;
-margin-left:9px;
-margin-right:9px;
-margin-top:20px;  
-}
+
 
 /* INFOS
 ***************************************************************/
