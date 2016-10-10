@@ -474,6 +474,18 @@ ArtworkArtist:
         presentation: |
           Graphiste8 EN
 
+  graphiste9:
+    id: 9
+    name: Graphiste9
+    more: ~
+    Translation:
+      fr:
+        presentation: |
+          Graphiste9 FR
+      en:
+        presentation: |
+          Graphiste9 EN
+
 Release:
   dhr01:
     id: 1
