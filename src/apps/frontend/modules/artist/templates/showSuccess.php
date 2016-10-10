@@ -55,9 +55,7 @@
     <hr />
     <h2 class="open_artists_title"><?php echo __('Où le trouver ?') ?></h2>
 
-    <div class="open_artists_linked">
-    <?php echo html_entity_decode($artist['more']) ?>
-    </div>
+
     <hr />
     <h2 class="open_artists_title"><?php echo __('Toutes les sorties') ?></h2>
 

@@ -59,14 +59,7 @@
 <?php endif ?>
 
     <hr />
-<?php if (!empty($artist['more'])): ?>
-    <h2 class="open_artists_title"><?php echo __('Liens') ?></h2>
 
-    <div class="open_artists_linked">
-    <?php echo html_entity_decode($artist['more']) ?>
-    </div>
-    <hr />
-<?php endif ?>
 
     <h2 class="open_artists_title"><?php echo __('Illustration(s)') ?></h2>
 
