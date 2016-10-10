@@ -136,7 +136,7 @@ $(document).ready(function () {
         var match = $(e).attr('href').match(/.*youtube.com\/watch\?v=(.+).*/);
         if (match) {
             $.getJSON(
-                'https://www.googleapis.com/youtube/v3/videos?id=dOJwGl3yLMU&key=AIzaSyB2PdLvZ7DIllTB6PeY6eeBqi9mruirfMo&fields=items(snippet(title))&part=snippet',
+                'https://www.googleapis.com/youtube/v3/videos?id=' + match[1] + '&key=AIzaSyB2PdLvZ7DIllTB6PeY6eeBqi9mruirfMo&fields=items(snippet(title))&part=snippet',
                 function (data) {
                     $(e).text(data.items[0].snippet.title);
                 }
