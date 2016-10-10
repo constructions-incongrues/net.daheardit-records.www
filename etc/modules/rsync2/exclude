@@ -2,7 +2,8 @@
 *.bak
 *.mp3
 *.orig
-*.sw*
+*.swp
+*.swo
 *.zip
 *~
 .git

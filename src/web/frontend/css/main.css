@@ -1542,3 +1542,6 @@ opacity:1;
 
 /* linkl temp*/
 
+.artists_show_artwork.default .hexagon {
+    opacity: 0.1;
+}

@@ -36,6 +36,12 @@ release_show:
   requirements:
     sf_culture: (?:fr|en)
 
+release_track_show:
+  url:   /:sf_culture/discography/:slug/:number
+  param: { module: release, action: showTrack }
+  requirements:
+    sf_culture: (?:fr|en)
+
 # homepage
 homepage_localized:
   url:   /:sf_culture/
