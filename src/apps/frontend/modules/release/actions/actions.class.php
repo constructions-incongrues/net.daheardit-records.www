@@ -184,7 +184,7 @@ class releaseActions extends sfActions
                     'style' => ['body' => [
                         'color' => '000000'
                     ]]
-                ],
+                ]
             ]
         ];
 
@@ -193,7 +193,7 @@ class releaseActions extends sfActions
         $headersOgp = [
             'title' => $this->getContext()->getResponse()->getTitle(),
             'description' => strip_tags($release['Translation'][$request->getParameter('sf_culture', 'fr')]['presentation']),
-            'image' => sprintf($request->getUriPrefix().'/assets/releases/%s/images/%s_1.png', $release['slug'], $release['slug']),
+            'image' => sprintf(str_replace('http://', 'https://', $request->getUriPrefix()).'/assets/releases/%s/images/%s_1.png', $release['slug'], $release['slug']),
             'type'  => 'video.other',
             'video' => sprintf(
                 '%s/frontend/swf/flowplayer/flowplayer-3.2.18.swf?config=%s',
