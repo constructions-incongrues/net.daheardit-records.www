@@ -102,10 +102,21 @@ class releaseActions extends sfActions
         $releaseArray['artworks'] = $artworks;
 
         // Other carousel items
+        $releaseArray['links_carousel_other'] = [];
+        $releaseArray['links_carousel_video'] = [];
         if (trim($releaseArray['links_carousel'])) {
             $releaseArray['links_carousel'] = explode("\n", trim($releaseArray['links_carousel']));
+            foreach ($releaseArray['links_carousel'] as $url) {
+                $host = str_replace('www.', '', parse_url($url, PHP_URL_HOST));
+                if ($host == 'vimeo.com' || $host == 'youtube.com') {
+                    $releaseArray['links_carousel_video'][] = $url;
+                } else {
+                    $releaseArray['links_carousel_other'][] = $url;
+                }
+            }
         } else {
-            $releaseArray['links_carousel'] = array();
+            $releaseArray['links_carousel_other'] = [];
+            $releaseArray['links_carousel_video'] = [];
         }
 
         /*
