@@ -549,7 +549,7 @@ top:-2px;
 .releases_discography_number_default
 {
 background-image:url(../pics/releases/img-release-default.png);
-height:282px;
+height:256px;
 top:11px;
 width:220px!important;
 margin:0px 10px 0px 10px;
@@ -1150,13 +1150,13 @@ font-family: 'Jockey One', sans-serif;
 }
 
 h2.open_releases_artwork_credit {
-color:#000;
-font-size:14px;
-font-size:1.4rem;
+color:#666;
+font-size:13px;
+font-size:1.3rem;
 margin-top:-40px;
 text-align: right;}
-.open_releases_artwork_credit a,  .open_artists_bio a {color:#000;text-decoration: none;}
-.open_artits_bio a:hover {color:#000;}
+.open_releases_artwork_credit a,  .open_artists_bio a {color:#666;text-decoration: none;}
+.open_releases_artwork_credit a:hover,.open_artits_bio a:hover {color:#000;}
 h1.open_releases_title, h2.open_releases_title, h3.open_releases_title, h2.open_artists_title
 {
 font-size:16px;
