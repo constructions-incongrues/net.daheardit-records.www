@@ -31,7 +31,7 @@ artist_show:
 
 # artwork_artist
 artwork_artist_show:
-  url:   /:sf_culture/gfx/:slug
+  url:   /:sf_culture/illustrator/:slug
   param: { module: artwork_artist, action: show }
   requirements:
     sf_culture: (?:fr|en)

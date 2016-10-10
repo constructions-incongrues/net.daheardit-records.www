@@ -21,7 +21,7 @@
             <li class="header_nav_3_content_logo"><a href="<?php echo url_for('@homepage') ?>"> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/logo/logo-dhr.png" alt="logo" /></a></li>
             <li><a href="#discography"><?php echo __('Discographie') ?></a></li>
             <li><a href="#artists"><?php echo __('Artistes') ?></a></li>
-            <li><a href="#artwork_artists"><?php echo __('Graphistes') ?></a></li>
+            <li><a href="#artwork_artists"><?php echo __('Illustrateurs') ?></a></li>
             <li><a href="#informations"><?php echo __('Contact') ?></a></li>
             <li><a href="#links"><?php echo __('Liens') ?></a></li>
 
