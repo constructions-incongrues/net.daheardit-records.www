@@ -59,7 +59,7 @@
     <?php echo html_entity_decode($artist['more']) ?>
     </div>
     <hr />
-    <h2 class="open_artists_title"><?php echo __('Illustration(s)') ?></h2>
+    <h2 class="open_artists_title"><?php echo __('Toutes les sorties') ?></h2>
 
      <div class=" open_artists_listing_releases ">
  <?php foreach ($artist['releases'] as $release): ?>

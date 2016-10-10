@@ -68,17 +68,15 @@
     <hr />
 <?php endif ?>
 
-    <h2 class="open_artists_title"><?php echo __('Toutes les sorties') ?></h2>
+    <h2 class="open_artists_title"><?php echo __('Illustration(s)') ?></h2>
 
      <div class=" open_artists_listing_releases ">
  <?php foreach ($artist['releases'] as $release): ?>
-        <p><a href="<?php echo url_for(sprintf('@release_show?slug=%s#release', $release['slug'])) ?>"> <span class="calque_releases_2"></span></a></p>
-        <img width="220px" height="220px" src="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/releases/<?php echo $release['slug'] ?>/<?php echo $release['slug'] ?>_300x300.png" alt=""/>
-        <h1><a href="<?php echo url_for(sprintf('@release_show?slug=%s#release', $release['slug'])) ?>"><?php echo $release['sku'] ?></a></h1>
-        <h2><a href="<?php echo url_for(sprintf('@release_show?slug=%s#release', $release['slug'])) ?>"><?php echo $release['title'] ?></a></h2>
-        <ul class="releases_discography_button">
-          <li><a href="<?php echo url_for(sprintf('@release_show?slug=%s#release', $release['slug'])) ?>"><?php echo __("+ D'infos") ?></a></li>
-        </ul>
+   <img width="220px" height="220px" src="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/releases/<?php echo $release['slug'] ?>/<?php echo $release['slug'] ?>_300x300.png" alt=""/>
+            <h1 style="margin-left:-5px;"><a data-pjax="#content_async" href="<?php echo url_for(sprintf('@release_show?slug=%s#release', $release['slug'])) ?>"><?php echo $release['sku'] ?></a></h1>
+            <h2 style="margin-bottom:0px;"><a data-pjax="#content_async" title="<?php echo sprintf('%s - %s', $artist['name'], $release['title']) ?>" href="<?php echo url_for(sprintf('@release_show?slug=%s#release', $release['slug'])) ?>"><?php echo truncate_text(sprintf('%s - %s', $artist['name'], $release['title']), 35) ?></a></h2>
+
+
 <?php endforeach; ?>
     </div>
     </div><!-- end of grid_6 -->
