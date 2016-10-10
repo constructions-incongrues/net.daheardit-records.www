@@ -102,6 +102,7 @@
       </div>
     </div>
 
+
     <ul class="open_releases_playlist" style="display:none;">
 <?php foreach ($release['tracks'] as $track): ?>
     <?php if ($track['number'] < 10): ?>
@@ -120,6 +121,13 @@
     </li>
 <?php endforeach; ?>
     </ul>
+
+        <h3 class="open_releases_title"><?php echo __('Clip') ?></h3>
+    <ul class="open_releases_playlist">
+<li><a href="">Infecticide - Chansons Triste</a></li>
+<li><a href="">Infecticide - Chansons Triste</a></li>
+<li><a href="">Infecticide - Chansons Triste</a></li>
+
 
 
 
@@ -147,9 +155,6 @@
 <?php endif ?>
 
 
-        <h3 class="open_releases_title"><?php echo __('Clip') ?></h3>
-    <ul class="open_releases_download">
-<li><a href="">test</a></li>
 </ul>
 
     <h1 class="open_releases_title">
