@@ -7,7 +7,7 @@
   <?php else: ?>
         <div class="grid_3 artists_show_artwork ">
   <?php endif; ?>
-<div class="hexagon" style="background-image: url(http://csshexagon.com/img/meow.jpg);">
+<div class="hexagon" style="background-image: url(<?php echo $artist['image'] ?>);">
 <p><a href="<?php echo url_for('@artwork_artist_show?slug='.$artist['slug']) ?>#artwork_artist"> <span class="calque_artists_artwork"> </span></a></p>
 
 
