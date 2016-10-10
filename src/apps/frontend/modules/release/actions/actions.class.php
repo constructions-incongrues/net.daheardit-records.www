@@ -214,4 +214,32 @@ class releaseActions extends sfActions
             $this->getResponse()->setContentType('application/rss+xml');
         }
     }
+
+    public function executeShowTrack(sfWebRequest $request)
+    {
+        // Fetch release
+        $release = Doctrine_Core::getTable('Release')->findOneBySlugAndCulture($request->getParameter('slug'), $this->getUser()->getCulture());
+        $this->forward404Unless($release);
+        if (!$request->hasParameter('preview') && !$release->is_public) {
+            $this->forward404();
+        }        
+
+        // Fetch release
+        $track = Doctrine_Core::getTable('Track')->findOneByReleaseIdAndNumber($release['id'], $request->getParameter('number'));
+        $this->forward404Unless($track);
+
+        // Prefix a zero ?
+        $zero = '';
+        if ($track['number'] < 10) {
+            $zero = '0';
+        }
+
+        // Configure view
+        $this->setLayout(false);
+
+        // Pass data to view
+        $this->track = $track;
+        $this->release = $release;
+        $this->zero = $zero;
+    }
 }
