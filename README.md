@@ -21,5 +21,6 @@ ant deploy -Dprofile=pastishosting -Drsync.option="--dry-run --delete-after"
 ### Pour de vrai
 
 ```bash
-ant deploy -Dprofile=pastishosting -Drsync.options="--progress --delete-after"
+ant deploy -Dprofile=pastishosting -Drsync.options="--progress --delete-after" && ssh -p 2222 daheardit-record@docker01.pastis-hostîng.net \
+&& ssh -p 2222 daheardit-record@docker01.pastis-hostîng.net /var/www/vhosts/daheardit-records.net/httpdocs/src/symfony cc
 ```
