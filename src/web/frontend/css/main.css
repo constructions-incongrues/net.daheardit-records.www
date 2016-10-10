@@ -193,7 +193,9 @@ clip-path: url("#clipPolygon");
   margin: 63.51px 0;
   background-size: auto 254.0341px;
   background-position: center;
-}
+margin-left:9px;
+margin-right:9px;
+margin-top:90px;  }
 
 .hexTop,
 .hexBottom {
@@ -261,7 +263,7 @@ clip-path: url("#clipPolygon");
 position:absolute;
 height:255px;
 width:220px;
-top:20px;
+top:-63px;
 z-index: 3000;
 }
 
@@ -270,7 +272,7 @@ z-index: 3000;
 background-image:url("../pics/artists/forme-over.png");
 height:254px;
 width:158px;
-top:20px;
+top:-63px;
 margin-left: 31px;
 z-index:4000;
 }
@@ -821,7 +823,7 @@ margin:0;
  width:100%;
 font-weight:lighter;
 font-family: 'Jockey One', sans-serif;
-top:130px;
+top:50px;
 font-size:19px;
 font-size:1.9rem;
 padding:3px 9px 3px 3px;
