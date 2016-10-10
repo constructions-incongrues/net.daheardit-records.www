@@ -29,7 +29,7 @@ class releaseActions extends sfActions
         // Setup metadata
         $releaseArray = $release->toArray();
         $releaseArray['tracks'] = $tracks;
-        $this->getResponse()->setTitle(sprintf('[%s] %s - %s', $releaseArray['sku'], $releaseArray['Artist']['name'], $releaseArray['title']));
+        $this->getResponse()->setTitle(sprintf('%s - %s', $releaseArray['Artist']['name'], $releaseArray['title']));
 
         // Archives
         $archives = array();
@@ -46,6 +46,9 @@ class releaseActions extends sfActions
 
         // Find images scans
         $pathsScans = glob(sprintf('%s/assets/releases/%s/press/*', sfConfig::get('sf_web_dir'), $release['slug']));
+        if (!is_array($pathsScans)) {
+            $pathsScans = [];
+        }
         foreach ($pathsScans as $path) {
             $releaseArray['press'][] = array(
                 'title' => ucfirst(str_replace('_', ' ', basename($path, '.jpg'))),
@@ -66,6 +69,9 @@ class releaseActions extends sfActions
 
         // Press releases
         $pathsScans = glob(sprintf('%s/assets/releases/%s/press-releases/*', sfConfig::get('sf_web_dir'), $release['slug']));
+        if (!is_array($pathsScans)) {
+            $pathsScans = [];
+        }
         foreach ($pathsScans as $path) {
             $releaseArray['press-releases'][] = array(
                 'title' => ucfirst(str_replace('_', ' ', basename($path, '.pdf'))),
@@ -147,46 +153,63 @@ class releaseActions extends sfActions
             );
         }
         $flowplayerConfig = [
-            "canvas" => [
-                "backgroundImage" => sprintf(
-                    "url(%s/assets/releases/%s/images/%s_1.png)",
-                    'http://www.daheardit-records.net',
-                    $release['slug'],
-                    $release['slug']
-                ),
-                "linkWindow" => "_blank",
-                "linkUrl" => $this->getContext()->getRouting()->generate('release_show', ['slug' => $release['slug']], true),
+            'playlist' => $this->getContext()->getRouting()->generate('release_show', ['slug' => $releaseArray['slug'], 'sf_format' => 'mediarss']),
+            'canvas' => [
+                'backgroundImage' => sprintf(str_replace('http://', 'https://', $request->getUriPrefix()).'/assets/releases/%s/images/%s_1.png', $release['slug'], $release['slug']),
+                'backgroundGradient' => 'none'
             ],
-            "playlist" => $playlist,
-            "plugins" => [
-                "audio" => [
-                    "url" => sprintf("%s/frontend/swf/flowplayer/flowplayer.audio.swf", 'http://www.daheardit-records.net')
+            'plugins' => [
+                'audio' => [
+                    'url' => sprintf('%s/frontend/swf/flowplayer/flowplayer.audio.swf', str_replace('http://', 'https://', $request->getUriPrefix()))
                 ],
-                "controls" => [
-                    "playlist" => true,
-                    "autoHide" => false,
-                    "fullscreen" => false
-                ]
+                'controls' => [
+                    'playlist' => true,
+                    'autoHide' => true,
+                    'fullscreen' => false,
+                    'backgroundGradient' => 'none'
+                ],
+                'captions' => [
+                    'url' => sprintf('%s/frontend/swf/flowplayer/flowplayer.captions-3.2.10.swf', str_replace('http://', 'https://', $request->getUriPrefix())),
+                    'captionTarget' => 'content',
+                    'button' => null
+                ],
+                'content' => [
+                    'url' => sprintf('%s/frontend/swf/flowplayer/flowplayer.content-3.2.9.swf', str_replace('http://', 'https://', $request->getUriPrefix())),
+                    'height' => 40,
+                    'top' => 0,
+                    'left' => 0,
+                    'width' => 486,
+                    'borderRadius' => 0,
+                    'background' => "none",
+                    'style' => ['body' => [
+                        'color' => '000000'
+                    ]]
+                ],
             ]
         ];
 
+
         // TODO : this should go in a filter
-        $headersOgp = array(
-            'title' => $this->getContext()->getResponse()->getTitle() . ' | Da ! Heard It Records',
+        $headersOgp = [
+            'title' => $this->getContext()->getResponse()->getTitle(),
             'description' => strip_tags($release['Translation'][$request->getParameter('sf_culture', 'fr')]['presentation']),
-            'image' => sprintf('http://www.daheardit-records.net'.'/assets/releases/%s/images/%s_1.png', $release['slug'], $release['slug']),
+            'image' => sprintf($request->getUriPrefix().'/assets/releases/%s/images/%s_1.png', $release['slug'], $release['slug']),
             'type'  => 'video.other',
             'video' => sprintf(
                 '%s/frontend/swf/flowplayer/flowplayer-3.2.18.swf?config=%s',
-                'http://www.daheardit-records.net',
-                json_encode($flowplayerConfig, JSON_UNESCAPED_SLASHES)
+                str_replace('http', 'https', $request->getUriPrefix()),
+                urlencode(json_encode($flowplayerConfig))
             ),
             'video:secure_url' => sprintf(
                 '%s/frontend/swf/flowplayer/flowplayer-3.2.18.swf?config=%s',
-                'https://www.daheardit-records.net',
-                json_encode($flowplayerConfig, JSON_UNESCAPED_SLASHES)
-            )
-        );
+                str_replace('http://', 'https://', $request->getUriPrefix()),
+                urlencode(json_encode($flowplayerConfig))
+            ),
+            'video:height' => 400,
+            'video:width' => 486,
+            'video:type' => 'application/x-shockwave-flash'
+        ];
+
         foreach ($headersOgp as $name => $value) {
             $this->getContext()->getResponse()->addMeta('og:'.$name, $value);
         }
@@ -196,5 +219,38 @@ class releaseActions extends sfActions
         $this->nextRelease = $nextRelease;
         $this->release = $releaseArray;
         $this->archives = $archives;
+
+        // Set content type
+        if ($request->getParameter('sf_format') == 'mediarss') {
+            $this->getResponse()->setContentType('application/rss+xml');
+        }
+    }
+
+    public function executeShowTrack(sfWebRequest $request)
+    {
+        // Fetch release
+        $release = Doctrine_Core::getTable('Release')->findOneBySlugAndCulture($request->getParameter('slug'), $this->getUser()->getCulture());
+        $this->forward404Unless($release);
+        if (!$request->hasParameter('preview') && !$release->is_public) {
+            $this->forward404();
+        }        
+
+        // Fetch release
+        $track = Doctrine_Core::getTable('Track')->findOneByReleaseIdAndNumber($release['id'], $request->getParameter('number'));
+        $this->forward404Unless($track);
+
+        // Prefix a zero ?
+        $zero = '';
+        if ($track['number'] < 10) {
+            $zero = '0';
+        }
+
+        // Configure view
+        $this->setLayout(false);
+
+        // Pass data to view
+        $this->track = $track;
+        $this->release = $release;
+        $this->zero = $zero;
     }
 }

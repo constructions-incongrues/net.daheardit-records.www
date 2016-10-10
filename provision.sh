@@ -9,6 +9,7 @@ apt-get install -y tzdata
 dpkg-reconfigure -f noninteractive tzdata
 
 # Installation de Apache et PHP
+a2enmod rewrite
 apt-get -y install libapache2-mod-php5 php5-cli
 
 # Installation de Git
@@ -43,7 +44,10 @@ ant configure build -Dprofile=vagrant
 
 # Mise à disposition du projet dans Apache
 ln -sf /vagrant/src/web/* /var/www/
+ln -sf /vagrant/src/web/.htaccess /var/www/.htaccess
 rm -f /var/www/index.html
+sed -i "s/AllowOverride None/AllowOverride All/" /etc/apache2/sites-available/default
+service apache2 restart
 
 # Informations
 echo

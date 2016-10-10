@@ -168,6 +168,18 @@
         <source>+ D'infos</source>
         <target>More informations</target>
       </trans-unit>
+      <trans-unit id="42">
+        <source>Illustrateurs</source>
+        <target>Illustrators</target>
+      </trans-unit>
+      <trans-unit id="43">
+        <source>Illustrateur</source>
+        <target>Illustrator</target>
+      </trans-unit>
+      <trans-unit id="44">
+        <source>Vidéo(s)</source>
+        <target>Video(s)</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
