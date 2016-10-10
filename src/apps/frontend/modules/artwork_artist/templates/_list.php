@@ -24,7 +24,14 @@
 <?php $j = count($artists) + 4 ?>
 <?php for ($i; $i < $j; $i++): ?>
   <?php if ($i % 4 === 0): break; endif; ?>
-        <div class="grid_3 artists_show_artwork_default"/></div>
+  <div class="grid_3 artists_show_artwork ">
+  <div class="hexagon" style="background-image:url(<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/artwork/default.jpg);"> 
+  <div class="hexTop"></div>
+  <div class="hexBottom"></div>
+  </div>
+  </div>
+
+
 <?php endfor; ?>
         </div><!-- enf of artists content -->
       </div><!-- end of artists -->
