@@ -2,4 +2,39 @@
 <project name="net.daheardit-records.www" default="help" basedir=".">
 	<!-- Initialize toolkit -->
 	<import file="vendor/constructions-incongrues/ananas-build-toolkit/modules/toolkit/module.xml" />
+
+    <target name="deploy-to">
+        <!-- Simulation du déploiement -->
+        <echo>Simulation du déploiement</echo>
+        <antcall target="deploy">
+            <param name="rsync.options" value="--delete-after --dry-run" />
+        </antcall>
+
+        <!-- On demande à l'utilisateur s'il veut continuer -->
+        <input
+            message="La simulation est terminée. Procéder au déploiement effectif ? (o/n)?"
+            validargs="o,n"
+            addproperty="do.deploy"
+        />
+        <condition property="do.abort">
+            <equals arg1="n" arg2="${do.deploy}"/>
+        </condition>
+        <fail if="do.abort">Déploiement annulé.</fail>
+
+        <!-- Déploiement effectif -->
+        <echo>Déploiement effectif</echo>
+        <antcall target="deploy">
+            <param name="rsync.options" value="--delete-after" />
+        </antcall>
+
+        <!-- Invalidation du cache Symfony -->
+        <echo>Invalidation du cache Symfony</echo>
+        <exec executable="ssh">
+            <arg line="-p 2222 daheardit-record@docker01.pastis-hosting.net /var/www/vhosts/daheardit-records.net/httpdocs/src/symfony cache:clear" />
+        </exec>
+
+        <!-- Invalidation du cache Cloudflare -->
+        <echo>Invalidation du cache Cloudflare</echo>
+        <antcall target="cloudflare.purgeAll" />
+    </target>
 </project>
