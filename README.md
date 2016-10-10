@@ -37,14 +37,14 @@ vagrant provision
 
 # Déploiement
 
-## sur [preview.daheardit-records.net](preview.daheardit-records.net)
+## sur [preview.daheardit-records.net](http://preview.daheardit-records.net)
 
 ```bash
 ant deploy-to -Dprofile=pastishosting-preview
 ```
 
 
-## sur [www.daheardit-records.net](www.daheardit-records.net)
+## sur [www.daheardit-records.net](http://www.daheardit-records.net)
 
 ```bash
 ant deploy-to -Dprofile=pastishosting
