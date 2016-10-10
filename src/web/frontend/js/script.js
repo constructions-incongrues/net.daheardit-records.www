@@ -132,6 +132,25 @@ $(document).ready(function () {
         _gaq.push(['_trackEvent', 'Releases', 'Archive Downloaded - ' + $(this).data('dhr-archive-format'), $(this).data('dhr-release-slug')]);
     });
 
+    $('a.video').each(function(i, e) {
+        var match = $(e).attr('href').match(/.*youtube.com\/watch\?v=(.+).*/);
+        if (match) {
+            $.getJSON(
+                'https://www.googleapis.com/youtube/v3/videos?id=dOJwGl3yLMU&key=AIzaSyB2PdLvZ7DIllTB6PeY6eeBqi9mruirfMo&fields=items(snippet(title))&part=snippet',
+                function (data) {
+                    $(e).text(data.items[0].snippet.title);
+                }
+            );
+        }
+        var match = $(e).attr('href').match(/.*vimeo.com\/(\d+)/);
+        if (match) {
+            console.log(match);
+            $.getJSON('http://vimeo.com/api/v2/video/' + match[1] + '.json', function (data) {
+                $(e).text(data[0].title);
+            });
+        }
+    })
+
     /*
     // Handles animation of content area
     $('#content_async').on('pjax:end', function () {

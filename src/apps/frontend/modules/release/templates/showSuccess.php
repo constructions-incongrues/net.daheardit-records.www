@@ -52,9 +52,9 @@
 <?php endfor ?>
      </ul>
      <?php if (isset($release['ArtworkArtist'])): ?>
-    <h2 class="open_releases_artwork_credit"><?php echo __('Illustrateur : ') ?><a href="<?php echo url_for(sprintf('@artwork_artist_show?slug=%s#artwork_artist', $release['ArtworkArtist']['slug'])) ?>" title="<?php echo $release['ArtworkArtist']['name'] ?>"><?php echo $release['ArtworkArtist']['name'] ?></a></h2>
+    <h2 class="open_releases_artwork_credit"><?php echo __('Illustration : ') ?><a href="<?php echo url_for(sprintf('@artwork_artist_show?slug=%s#artwork_artist', $release['ArtworkArtist']['slug'])) ?>" title="<?php echo $release['ArtworkArtist']['name'] ?>"><?php echo $release['ArtworkArtist']['name'] ?></a></h2>
 <?php else: ?>
-    <h2 class="open_releases_artwork_credit"><?php echo __('Illustrateur : ') ?><a href="<?php echo url_for(sprintf('@artist_show?slug=%s#artist', $release['Artist']['slug'])) ?>" title="<?php echo $release['Artist']['name'] ?>"><?php echo $release['Artist']['name'] ?></a></h2>
+    <h2 class="open_releases_artwork_credit"><?php echo __('Illustration : ') ?><a href="<?php echo url_for(sprintf('@artist_show?slug=%s#artist', $release['Artist']['slug'])) ?>" title="<?php echo $release['Artist']['name'] ?>"><?php echo $release['Artist']['name'] ?></a></h2>
 <?php endif ?>
    </div><!-- end of grid_6 -->
 
@@ -126,7 +126,7 @@
         <h3 class="open_releases_title"><?php echo __('Clip(s)') ?></h3>
     <ul class="open_releases_playlist">
     <?php foreach ($release['links_carousel_video'] as $url): ?>
-        <li><a href="<?php echo $url ?>"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/play.png" alt="play" class="open_releases_playlist_icon_play" /><?php echo $url ?></a></li>
+        <li><a class="video" href="<?php echo $url ?>"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/play.png" alt="play" class="open_releases_playlist_icon_play" /><?php echo $url ?></a></li>
     <?php endforeach ?>
     </ul>
 <?php endif ?>
