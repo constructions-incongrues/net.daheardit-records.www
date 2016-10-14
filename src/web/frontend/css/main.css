@@ -1237,7 +1237,7 @@ font-size:1.3rem;
 margin-top:-40px;
 text-align: right;
 font-weight: lighter;}
-h2.open_releases_artwork_credit a:hover {color:#666;}
+h2.open_releases_artwork_credit a {color:#666;font-weight: lighter;}
 h2.open_releases_artwork_credit a:hover {color:#000;}
 
 .open_releases_artwork_credit a,  .open_artists_bio a {color:#000;font-weight:bold;text-decoration: none;}
