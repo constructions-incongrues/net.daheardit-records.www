@@ -263,7 +263,7 @@ margin-top:90px;  }
 position:absolute;
 height:255px;
 width:220px;
-top:-63px;
+top:-64px;
 z-index: 3000;
 }
 .calque_artists_artwork_no
@@ -273,7 +273,7 @@ z-index: 3000;
 position:absolute;
 height:254px;
 width:158px;
-top:-63px;
+top:-64px;
 margin-left: 31px;
 
 z-index: 3000;
@@ -285,7 +285,7 @@ z-index: 3000;
 background-image:url("../pics/artists/forme-over.png");
 height:254px;
 width:158px;
-top:-63px;
+top:-64px;
 margin-left: 31px;
 z-index:4000;
 }
