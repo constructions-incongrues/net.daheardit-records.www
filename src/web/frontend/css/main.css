@@ -1222,7 +1222,7 @@ margin-left:10px;
 padding-top:20px;
 }
 
-h1.open_releases_catalog , h2.open_releases_artwork_credit, .open_artists_bio a, h2.open_releases_artist, h3.open_releases_album, h3.open_releases_title , h1.open_releases_title, h2.open_releases_title, h1.open_artists_name, h2.open_artists_title, .open_releases_share_button
+h1.open_releases_catalog , h2.open_releases_artwork_credit, h2.open_releases_artist, h3.open_releases_album, h3.open_releases_title , h1.open_releases_title, h2.open_releases_title, h1.open_artists_name, h2.open_artists_title, .open_releases_share_button
 {
 font-weight:normal;
 text-transform:uppercase;
@@ -1236,7 +1236,7 @@ font-size:13px;
 font-size:1.3rem;
 margin-top:-40px;
 text-align: right;}
-.open_releases_artwork_credit a,  .open_artists_bio a {color:#000;text-decoration: none;}
+.open_releases_artwork_credit a,  .open_artists_bio a {color:#000;font-weight:bold;text-decoration: none;}
 .open_releases_artwork_credit a:hover,.open_artits_bio a:hover {color:#000;}
 h1.open_releases_title, h2.open_releases_title, h3.open_releases_title, h2.open_artists_title
 {
