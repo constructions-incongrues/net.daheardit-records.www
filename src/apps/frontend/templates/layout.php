@@ -153,10 +153,11 @@
 
         <div class="footer_content">
 
+
+   
           <div class="grid_3 footer_links_1">
 
             <h1 id="links"><?php echo __('Links') ?></h1>
-
             <?php include_component('content', 'show', array('block' => 'links1')) ?>
 
           </div><!-- end of links -->
@@ -172,6 +173,7 @@
             <ul class="footer_nav_1">
 <?php include_partial('main/social') ?>
             </ul>
+            
 
             <h2><?php echo __('Adresse') ?></h2>
 
