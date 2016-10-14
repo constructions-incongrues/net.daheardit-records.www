@@ -63,7 +63,7 @@
 
     <h2 class="open_artists_title"><?php echo __('Illustration(s)') ?></h2>
 
-<div style="width:600px; ">
+<div style="width:600px;">
  <?php foreach ($artist['releases'] as $release): ?>
        <div class="open_artists_listing_releases ">
 
