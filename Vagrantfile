@@ -12,7 +12,7 @@ Vagrant.configure(2) do |config|
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
-  config.vm.box = "ubuntu/trusty"
+  config.vm.box = "ubuntu/trusty64"
 
   # Enable provisioning with a shell script. Additional provisioners such as
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
@@ -20,9 +20,13 @@ Vagrant.configure(2) do |config|
   config.vm.provision "shell", path: "provision.sh"
 
   # @see https://github.com/dotless-de/vagrant-vbguest
-  config.vbguest.auto_update = false
+  config.vbguest.auto_update = true
 
   # @see https://github.com/phinze/landrush
   config.landrush.enabled = true
   config.vm.hostname = "daheardit-records.vagrant.dev"
+
+  config.vm.provider "virtualbox" do |v|
+    v.linked_clone = true
+  end
 end
