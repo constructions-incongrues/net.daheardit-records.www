@@ -50,4 +50,5 @@ service apache2 restart
 # Informations
 echo
 echo -e "Le site est disponible à l'adresse : http://daheardit-records.vagrant.test/frontend_dev.php"
+echo -e "Le backoffice du site est disponible à l'adresse : http://daheardit-records.vagrant.test/backend_dev.php"
 echo -e "PhpMyAdmin est disponible à l'adresse : http://daheardit-records.vagrant.test/phpmyadmin/ (root / root)"
