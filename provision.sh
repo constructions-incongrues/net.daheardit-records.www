@@ -44,7 +44,7 @@ ant configure build -Dprofile=vagrant
 ln -sf /vagrant/src/web/* /var/www/
 ln -sf /vagrant/src/web/.htaccess /var/www/.htaccess
 rm -f /var/www/index.html
-sed -i "s/AllowOverride None/AllowOverride All/" /etc/apache2/sites-available/default
+sed -i "s/DocumentRoot \/var\/www\/html/DocumentRoot \/var\/www\//" /etc/apache2/sites-enabled/000-default.conf
 service apache2 restart
 
 # Informations
