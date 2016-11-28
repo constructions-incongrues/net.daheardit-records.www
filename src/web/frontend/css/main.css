@@ -788,7 +788,7 @@ padding:30px 0px 100px 0px;
 .artwork_artist {
   background-color: #000;
   top:0px;
-  padding:30px 0px 100px 0px;
+  padding:30px 0px 120px 0px;
    margin-top: -14px;
 }
  .artwork_artists_listing_all {
@@ -842,8 +842,8 @@ font-size:1.9rem;
 padding:3px 9px 3px 3px;
 display: block;
 z-index:2000;
-text-align: center;
 z-index:5000;
+left:-3px;
 }
 .artists_title
 {
@@ -1015,17 +1015,18 @@ margin-right:5px;
 }
 
 
+
 .footer_button_top
 {
 position:relative;
 float:right;
 padding:2px 3px 2px 2px ;
-margin-top:-50px;
+margin-top:-48px;
 margin-right:5px;
 
 background-image:url(../pics/pattern/pat-foot.png);
 background-repeat:repeat;
-background-color:#29abe2;
+background-color:#000;
 }
 
 
@@ -1036,7 +1037,7 @@ background-color:#29abe2;
 {
 background-image:url(../pics/pattern/pat-foot.png);
 background-repeat:repeat;
-background-color:#29abe2;
+background-color:#000;
 padding:30px 0px 100px 0px;
 top:-28px;
 
@@ -1044,16 +1045,18 @@ top:-28px;
 
 .footer_content p  {color:#FFF;}
 
-.footer_content h1, .footer_content h2
+.footer_content h1, .footer_content h2 
 {
 font-weight:normal;
 text-transform:uppercase;
 font-family: 'Jockey One', sans-serif;
-}
+} 
 
-.footer_content h1
+.footer_content h1 
 {
 color:#FFF;
+background-image:url(../pics/pattern/pat-bg.png);
+background-repeat:repeat;
 display:inline;
 padding:2px 4px 2px 4px;
 margin-left:-2px;
@@ -1066,42 +1069,44 @@ font-size:2rem;
 color:#FFF;
 font-size:15px;
 font-size:1.5rem;
+opacity:0.7;
 margin:10px 0px 10px 0px;
-}
+} 
 
-.footer_links_1 ul, li, .footer_links_2 ul, li
+.footer_links_1 ul, li, .footer_links_2 ul, li 
 {
 list-style-type:none;
 }
 
-.footer_links_1 li, .footer_links_2 li
+.footer_links_1 li, .footer_links_2 li 
 {
 margin:5px 0px 5px -10px;
 padding-left:10px;
 
 }
-.footer_links_1 li a, .footer_links_2 li a
+.footer_links_1 li a, .footer_links_2 li a 
 {
-color:#FFF;
-background-color: #000;
-padding:2px 5px 2px 5px;
+color:#29ABE2;
+padding:2px 2px 0px 2px;
 text-decoration:none;
+opacity:0.7;
 }
 
 .footer_links_1 li a:hover, .footer_links_2 li a:hover
-{color:#000;background-color:#FFF;opacity:1;}
-.footer p
+{color:#29ABE2;opacity:1;}
+.footer p 
 {
-color:#fff;
+color:#b2b2b2;
 }
 
-.footer_content p a
+.footer_content p a 
 {
-color:#000;
+color:#29ABE2;
 text-decoration:none;
+opacity:0.7;
 }
 
-.footer_content p a:hover
+.footer_content p a:hover 
 {
 opacity:1;
 }
@@ -1109,7 +1114,7 @@ opacity:1;
 {
 margin-top:30px;
 }
-.footer_nav_1 li
+.footer_nav_1 li 
 {
 display:inline;
 padding:0px;
@@ -1119,21 +1124,22 @@ margin:0px;
 
 .footer_nav_1 li:hover {opacity:1;}
 
-ul.footer_nav_1
+ul.footer_nav_1 
 {
 margin:8px 0px 20px 20px;
+opacity:0.6;
 padding:2px;
 float:right;
 margin-right:-60px;
 }
 
 
-.footer_content textarea
+.footer_content textarea  
 {
 margin-top:-10px;
 width:460px;}
 
-.footer_content input,.footer_content textarea
+.footer_content input,.footer_content textarea  
 {
 border:0px;
 
@@ -1141,11 +1147,11 @@ border:0px;
   background-color: rgba(41, 171, 226, 0.3); }
 
 
-.footer_content input.valid
+.footer_content input.valid 
 {
 background-color:#000;
    text-transform:uppercase;
-color:#FFF;
+color:#28ABE3;
 background-image:none;
 background-repeat:repeat;
 float:right;
@@ -1167,7 +1173,6 @@ cursor:pointer!important;
 background-color:#29ABE2;
 opacity:1;
 border:none}
-
 /* OPEN RELEASES
 ***************************************************************/
 

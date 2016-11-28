@@ -188,6 +188,13 @@
             <p><?php echo __('Merci d\'envoyer vos demos par la poste ou par e-mail à') ?>
               <a href="mailto:demo@daheardit-records.net">demo@daheardit-records.net</a></p>
 
+            <h2><?php echo __('Crédits') ?></h2>
+
+            <p>
+              Le graphisme du site est réalisé par <a href="http://www.thibaulthuertas.com/">Thibault Huertas</a>.  <br />
+              Le projet <a href="http://www.daheardit-records.net">Da ! Heard It Records</a> est développé par <a href="http://www.constructions-incongrues.net">Constructions Incongrues</a> et hébergé par <a href="http://www.pastis-hosting.net">Pastis Hosting</a>.
+            </p>
+
               <!--
               <h2><?php echo __('Formulaire de contact') ?></h2>
               <form action="send.php" method="post">
@@ -208,8 +215,8 @@
 
               </div><!-- end of .contact -->
 
-
             </div><!-- end of .footer_content -->
+
           </div><!-- end of footer -->
 
         </div><!-- end of container 12s -->
