@@ -24,7 +24,7 @@ Vagrant.configure(2) do |config|
 
   # @see https://github.com/phinze/landrush
   config.landrush.enabled = true
-  config.vm.hostname = "daheardit-records.vagrant.dev"
+  config.vm.hostname = "daheardit-records.vagrant.test"
 
   config.vm.provider "virtualbox" do |v|
     v.linked_clone = true
