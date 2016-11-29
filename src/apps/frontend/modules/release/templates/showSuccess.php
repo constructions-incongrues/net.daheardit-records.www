@@ -119,8 +119,9 @@
       <meta itemprop="byArtist" content="<?php echo htmlentities($release['Artist']['name']) ?>" />
       <meta itemprop="duration" content="PT6M33S" />
     </li>
+        </ul>
+
 <?php endforeach; ?>
-    </ul>
 
 <?php if (count($release['links_carousel_video'])): ?>
     <h3 class="open_releases_title"><?php echo __('Vidéo(s)') ?></h3>
@@ -187,14 +188,7 @@
     </ul>
 <?php endif ?>
 
-  <hr />
 
-  <ul class="open_releases_share_button">
-            <li><?php echo __('Partager') ?> : </li>
-            <!--<li><a href=""><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/img-twitter-b.png" alt="" /></a></li>-->
-            <li><a target="_blank" href="https://plus.google.com/share?url=<?php echo url_for('@release_show?slug='.$release['slug'], true)?>"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/google+-b.png" alt="" /></a></li>
-            <li><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo url_for('@release_show?slug='.$release['slug'], true)?>"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/img-facebook-b.png" /></a></li>
-          </ul>
     </div><!-- end of grid_6 -->
   </div><!-- enf of release_content -->
   </div><!-- end of grid_12 release_open -->

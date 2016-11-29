@@ -1,14 +1,14 @@
 
 /* debug */
 
-/*.container_12
+/*.container_12 
 {
 width:960px;
 margin-left: auto;
 margin-right: auto;
 }
 */
-/* HTML & BODY
+/* HTML & BODY 
 ***************************************************************/
 
 .header_nav_3_content_logo img
@@ -19,36 +19,36 @@ margin-right: auto;
 body
 {
 padding:0px;
-font-family: 'Open Sans', sans-serif;
+font-family: "Arial", Helvetica, sans-serif;
 }
 
-html
+html 
 {
 font-size:62.5%;
 }
 
-/* TYPO
+/* TYPO 
 ***************************************************************/
 
-@font-face
+@font-face 
 {
 font-family: 'Blanch Caps';
 src: url('../typo/blanch_caps.ttf');
 }
 
-@font-face
+@font-face 
 {
 font-family: 'Jockey One';
 src: url('../typo/JockeyOne-Regular.ttf');
 }
 
-@font-face
+@font-face 
 {
 font-family: 'Tempesta';
 src: url('../typo/pf_tempesta_seven.ttf');
 }
 
-/* TEMPLATE CONTENT
+/* TEMPLATE CONTENT 
 ***************************************************************/
 
 
@@ -64,16 +64,16 @@ src: url('../typo/pf_tempesta_seven.ttf');
 .infos_content,
 .footer_content,
 .release_content,
-.open_release,
-.open_artists_content {
+.open_release, 
+.open_artists_content { 
 width:960px;
 margin-left: auto;
 margin-right: auto;
 
-}
+} 
 
 
-.triangle img {position: absolute;top:-4.1px!important;}
+.triangle img {position: absolute;top:-4.2px!important;}
 
 .artists h1,
 .releases h1,
@@ -97,7 +97,7 @@ background-color:#f2f2f2;
 color:#000;
 }
 
-/* CALQUES
+/* CALQUES 
 ***************************************************************/
 
 .header_calque
@@ -142,7 +142,7 @@ background-image:url("../pics/releases/img-release.png");
 background-image:url("../pics/releases/img-release-hover.png");
 }
 
-.calque_artists
+.calque_artists 
 {
 position:absolute;
 height:233px;
@@ -157,6 +157,7 @@ background-image:url("../pics/artists/img-artist-hover.png");
 }
 
 
+<<<<<<< HEAD
 .calque_artists_pictures
 {
 position:absolute;
@@ -292,9 +293,12 @@ z-index:4000;
 
 
 /* HEADER
+=======
+/* HEADER 
+>>>>>>> 3ac9f86b917563667d081453d9bda52d97ea8fc3
 ***************************************************************/
 
-.header
+.header 
 {
 background-position: center center;
 background-repeat: repeat;
@@ -307,7 +311,7 @@ height:680px;
 /** NAV-1
 *****************************/
 
-.header_title_dhr a
+.header_title_dhr a 
 {
 color:#FFF;
 text-decoration:none;
@@ -328,9 +332,10 @@ top:12px;
 text-align:right;
 margin-right:0px;
 margin-left:30px;
+margin-
 }
 
-.header_nav_2_icon li
+.header_nav_2_icon li 
 {
 display:inline;
 opacity:0.7;
@@ -338,17 +343,17 @@ opacity:0.7;
 margin:0px;
 }
 
-.header_nav_2_icon li:hover
+.header_nav_2_icon li:hover 
 {
 opacity:1;
 }
 
-.header_nav_2_button_lang
+.header_nav_2_button_lang 
 {
 background-color:#000;
 }
 
-.header_nav_2_button_lang_active a
+.header_nav_2_button_lang_active a 
 {
 color:#FFF;
 text-decoration:none;
@@ -360,7 +365,7 @@ background-color:#000;
 
 }
 
-.header_nav_2_button_lang a
+.header_nav_2_button_lang a 
 {
 background-color:#000;
 color: #29ABE2;
@@ -375,7 +380,7 @@ font-size:0.9rem;
 /** NAV-3
 *****************************/
 
-.header_nav_3
+.header_nav_3 
 {
 width:100%!important;
 background-color:#000;
@@ -389,7 +394,7 @@ position:absolute;
 
 
 
-.header_nav_3 ul
+.header_nav_3 ul 
 {
 background-color:#000;
 padding-top:3px;
@@ -419,7 +424,7 @@ font-family: 'Jockey One', sans-serif;
 
 
 
-.header_nav_3 a
+.header_nav_3 a 
 {
 color:#29ABE2;
 text-decoration:none;
@@ -428,7 +433,7 @@ font-size:28px;
 font-size:2.8rem;
 }
 
-.header_nav_3 a:hover
+.header_nav_3 a:hover 
 {
 color:#FFF;
 }
@@ -446,24 +451,24 @@ opacity:0.9;
 *****************************/
 
 
-.header_news_1_content,.header_news_2_content
+.header_news_1_content,.header_news_2_content 
 {
 font-family: 'Jockey One', sans-serif;
 text-align:right;
 margin-top:112px;}
 
-.header_news_1_content a,.header_news_2_content a
+.header_news_1_content a,.header_news_2_content a  
 {
  text-decoration:none;
 }
 
-.header_news_1_content h1
+.header_news_1_content h1 
 {
 margin-bottom:-20px;
 }
 
 
-.header_news_1_content h1 a
+.header_news_1_content h1 a 
 {
 color:#000;
 font-weight:lighter;
@@ -471,7 +476,7 @@ font-size:60px;
 font-size:6rem;
 opacity:0.9;}
 
-.header_news_1_content h2 a
+.header_news_1_content h2 a 
 {
 color:#FFF;
 font-weight:lighter;
@@ -486,11 +491,11 @@ background-color:#000;
 opacity:0.95;
 padding:5px 0px 0px 0px;
 margin-bottom:0px;
-border-right:1px solid #28abe3;
+border-right:1px solid #28abe3; 
 height:116px;
-margin-top:100px;}
+margin-top:100px;}  
 
-.header_news_2 a
+.header_news_2 a 
 {
   color:#29ABE2;
   font-style:;
@@ -535,28 +540,28 @@ margin-top:10px;
 
 .header_news_2_closed_button:hover
 {
-   background-color: rgb(41, 171, 226);
+   background-color: rgb(41, 171, 226); 
 }
 .header_news_2_closed_button img
 {
 float:left;
 }
-.header_news_2_nav img
+.header_news_2_nav img 
 {  opacity:0.5;}
-.header_news_2_nav img:hover
+.header_news_2_nav img:hover 
 {
 opacity:1;
 }
 
-.header_news_2_nav a
+.header_news_2_nav a 
 {
 padding:0px 2px 0px 2px;
 font-family: 'Tempesta', sans-serif;
 
 }
 
-.header_news_2_title
-{
+.header_news_2_title 
+{    
 font-family: 'Jockey One', sans-serif;
 color:#FFF;
 font-weight:lighter;
@@ -579,7 +584,7 @@ padding-bottom:0px;
 top:-4px;
 }
 
-.header_news_2_pictures img
+.header_news_2_pictures img 
 {
 margin:10px;
 }
@@ -592,6 +597,7 @@ padding:0px 10px 0px 10px;
 font-size:12px;
 font-size:1.2rem;
 text-align:left;
+font-family: arial, verdana, sans-serif; 
 line-height:15px;
 
 }
@@ -609,7 +615,6 @@ line-height:15px;
  }
 
 .releases_discography_number h2 {margin-bottom: 0px}
-
 .releases_discography_number,.artists_show
 {
 font-weight:none;
@@ -621,12 +626,12 @@ margin:10px;
 background-image:url(../pics/pattern/pat-bg.png);
 background-repeat:repeat;
 background-color:#000;
-padding:70px 0px 90px 0px;
+padding:30px 0px 40px 0px;
 top:-2px;
 }
 
 
-.releases_discography_number_default
+.releases_discography_number_default 
 {
 background-image:url(../pics/releases/img-release-default.png);
 height:256px;
@@ -642,7 +647,7 @@ width:220px!important;
 }
 
 
-.releases_discography_number p
+.releases_discography_number p 
 {
 margin:0px;padding:0px;
 }
@@ -652,14 +657,18 @@ margin:0px;padding:0px;
 margin-left:10px!important;
 margin-right:10px;
 }
-.releases_discography_number h1
+.releases_discography_number h1 
 {
 padding:0px;
 margin:0px 0px -6px -4px;
 }
 
+<<<<<<< HEAD
 
 .releases_discography_last_release
+=======
+.releases_discography_last_release 
+>>>>>>> 3ac9f86b917563667d081453d9bda52d97ea8fc3
 {
 background-repeat:no-repeat;
 height:16px;
@@ -673,27 +682,27 @@ font-size:0.8rem;
 color:#FFF;
 text-transform:uppercase;
 font-weight:lighter;
-text-align: center;
-padding-top:1px;
+padding-left:8px;
+
 }
 
-.releases_discography_last_release a
+.releases_discography_last_release a 
 {
 margin-top:px;
 }
 
 
-.open_artists_listing_releases h1,
+.open_artists_listing_releases h1, 
 .releases_discography_number h1
-{
+{ 
 padding:0px 0px 0px 10px;
 font-size:14px;
 font-size:1.4rem;
 }
 
-.releases_discography_number h2,.open_artists_listing_releases h2
+.releases_discography_number h2,.open_artists_listing_releases h2 
 {
-padding:0px 0px 0px 10px;
+padding:0px 0px 0px 10px;  
 font-size:14px;
 font-size:1.4rem;
 margin-left:-4px;
@@ -723,9 +732,8 @@ background-color: #FFF!important;
 }
 
 
-.releases_discography_number h2 a:hover,.open_artists_listing_releases h2 a:hover {color:#29ABE2!important;}
 
-ul.releases_discography_button
+ul.releases_discography_button 
 {
 margin-top:-20px;
 margin-left:4px;
@@ -753,7 +761,7 @@ text-transform:uppercase;
 padding:5px;
 }
 
-.releases_discography_button li a:hover
+.releases_discography_button li a:hover 
 {
 color:#000;
 background-color:#29ABE2;
@@ -768,7 +776,7 @@ background-color:#000;
 background-image:url(../pics/pattern/pat-bg.png);
 background-repeat:repeat;
 top:-14px;
-}
+}  
 
 .artists h1
 {
@@ -783,12 +791,12 @@ top:-14px;
 background-image:url(../pics/pattern/pat-bg.png);
 background-repeat:repeat;
 background-color:#f2f2f2;
-padding:70px 0px 120px 0px;
+padding:30px 0px 100px 0px;
 }
 .artwork_artist {
   background-color: #000;
   top:0px;
-  padding:60px 0px 150px 0px;
+  padding:30px 0px 100px 0px;
    margin-top: -14px;
 }
  .artwork_artists_listing_all {
@@ -816,8 +824,9 @@ width:220px;
 
 .artists_title a, .artists_artwork_title a
 {
-color:#29ABE2;
+color:#29ABE2; 
 text-transform:uppercase;
+<<<<<<< HEAD
 text-decoration:none;
 
 }
@@ -842,10 +851,16 @@ font-size:1.9rem;
 padding:3px 9px 3px 3px;
 display: block;
 z-index:2000;
+text-align: center;
 z-index:5000;
-left:-3px;
 }
 .artists_title
+=======
+text-decoration:none; 
+}
+
+.artists_title 
+>>>>>>> 3ac9f86b917563667d081453d9bda52d97ea8fc3
 {
 position: absolute;
 font-weight:lighter;
@@ -854,7 +869,7 @@ top:113px;
 font-size:19px;
 font-size:1.9rem;
 background-color:#000;
-padding:3px 9px 3px 3px;
+padding:3px 9px 3px 3px;  
 display: block;
 z-index:2000;
 left:10px
@@ -865,14 +880,14 @@ left:10px
 .tags h1{
 line-height:24px;
 position:relative;
-}
+} 
 
 .tags h1{
 background-color:#FFF;
 color:#000;
 text-decoration:none;
 
-}
+} 
 .tags h1:after{
 content:"";
 float:left;
@@ -883,15 +898,15 @@ height:0;
 border-color: transparent transparent  transparent #FFF ;
 margin-left:5px;
 border-style:solid;
-border-width: 40px 40px 0px 40px ;
-}
+border-width: 40px 40px 0px 40px ;    
+} 
 
 
 /* TO CLEAN
 ***************************************************************/
 
 
-.artists_show_default
+.artists_show_default 
 {
 background-image:url(../pics/artists/img-artist-default.png);
 height:240px;
@@ -899,7 +914,6 @@ width:220px!important;
 margin-left:9px;
 margin-right:9px;
 margin-top:5px;
-opacity:0.49;
 }
 
 .artists_show_artwork_default 
@@ -920,7 +934,7 @@ margin-top:20px;
 background-image:url(../pics/pattern/pat-bg.png);
 background-repeat:repeat;
 background-color:#f2f2f2;
-padding:70px 0px 60px 0px;
+padding:30px 0px 50px 0px;
 top:-22px;
 }
 
@@ -936,16 +950,14 @@ font-weight:normal;
 text-transform:uppercase;
 }
 
-.infos_descr h3 {margin:30px 0px 5px 0px;}
-.infos_descr
+.infos_descr 
 {
 
 color:#000;
 text-align:left;
 }
 
-
-.infos_descr li
+.infos_descr li 
 {
 list-style-type:none;
 margin-left:0px;
@@ -956,8 +968,13 @@ margin-left:0px;
 color:#000;
 text-decoration:none;
 }
+<<<<<<< HEAD
 .infos_descr a:hover
 {opacity:1;color:#000;text-decoration: underline;}
+=======
+.infos_descr a:hover 
+{opacity:1;color:#29ABE2;}
+>>>>>>> 3ac9f86b917563667d081453d9bda52d97ea8fc3
 .infos_vids
 {
 margin-left:20px;
@@ -969,17 +986,18 @@ width:276px;
 /* BUTTON TOP - ANCRE
 ***************************************************************/
 
-.artist_button_top
+.artist_button_top 
 {
 background-image:url(../pics/pattern/pat-bg.png);
 background-repeat:repeat;
-background-color:#F2F2F2;
+background-color:#F2F2F2; 
 position:relative;
 float:right;
-padding:2px 3px 2px 2px ;
+padding:2px 3px 2px 2px ; 
 margin-top:20px;
 }
 
+<<<<<<< HEAD
 .artwork_artist_button_top
 {
 background-image:url(../pics/pattern/pat-bg.png);
@@ -992,11 +1010,18 @@ margin-top:20px;
 }
 
 .graphists_button_top
+=======
+.infos_button_top 
+>>>>>>> 3ac9f86b917563667d081453d9bda52d97ea8fc3
 {
 
 background-image:url(../pics/pattern/pat-bg.png);
 background-repeat:repeat;
+<<<<<<< HEAD
 background-color:#f2f2f2;
+=======
+background-color:#000; 
+>>>>>>> 3ac9f86b917563667d081453d9bda52d97ea8fc3
 position:relative;
 float:right;
 padding:2px 3px 2px 2px ;
@@ -1018,18 +1043,17 @@ margin-right:5px;
 }
 
 
-
 .footer_button_top
 {
 position:relative;
 float:right;
 padding:2px 3px 2px 2px ;
-margin-top:-93px;
+margin-top:-50px;
 margin-right:5px;
 
 background-image:url(../pics/pattern/pat-foot.png);
 background-repeat:repeat;
-background-color:#000;
+background-color:#29abe2;
 }
 
 
@@ -1040,8 +1064,8 @@ background-color:#000;
 {
 background-image:url(../pics/pattern/pat-foot.png);
 background-repeat:repeat;
-background-color:#000;
-padding:70px 0px 60px 0px;
+background-color:#29abe2;
+padding:30px 0px 100px 0px;
 top:-28px;
 
 }
@@ -1058,8 +1082,6 @@ font-family: 'Jockey One', sans-serif;
 .footer_content h1 
 {
 color:#FFF;
-background-image:url(../pics/pattern/pat-bg.png);
-background-repeat:repeat;
 display:inline;
 padding:2px 4px 2px 4px;
 margin-left:-2px;
@@ -1072,7 +1094,6 @@ font-size:2rem;
 color:#FFF;
 font-size:15px;
 font-size:1.5rem;
-opacity:0.7;
 margin:10px 0px 10px 0px;
 } 
 
@@ -1089,24 +1110,28 @@ padding-left:10px;
 }
 .footer_links_1 li a, .footer_links_2 li a 
 {
-color:#29ABE2;
-padding:2px 2px 0px 2px;
+color:#FFF;
+background-color: #000;
+padding:2px 5px 2px 5px;
 text-decoration:none;
-opacity:0.7;
 }
 
 .footer_links_1 li a:hover, .footer_links_2 li a:hover
+<<<<<<< HEAD
+{color:#000;background-color:#FFF;opacity:1;}
+.footer p
+=======
 {color:#29ABE2;opacity:1;}
 .footer p 
+>>>>>>> 3ac9f86b917563667d081453d9bda52d97ea8fc3
 {
-color:#b2b2b2;
+color:#fff;
 }
 
 .footer_content p a 
 {
-color:#29ABE2;
+color:#000;
 text-decoration:none;
-opacity:0.7;
 }
 
 .footer_content p a:hover 
@@ -1130,7 +1155,6 @@ margin:0px;
 ul.footer_nav_1 
 {
 margin:8px 0px 20px 20px;
-opacity:0.6;
 padding:2px;
 float:right;
 margin-right:-60px;
@@ -1154,7 +1178,7 @@ border:0px;
 {
 background-color:#000;
    text-transform:uppercase;
-color:#28ABE3;
+color:#FFF;
 background-image:none;
 background-repeat:repeat;
 float:right;
@@ -1176,6 +1200,7 @@ cursor:pointer!important;
 background-color:#29ABE2;
 opacity:1;
 border:none}
+
 /* OPEN RELEASES
 ***************************************************************/
 
@@ -1221,11 +1246,11 @@ margin-left:-21px;
 margin-left:10px;
 }
 
-.open_releases_infos_date
+.open_releases_infos_date 
 {
 
 }
-.open_releases_content,.open_artists_content
+.open_releases_content,.open_artists_content 
 {
 padding-top:20px;
 }
@@ -1275,7 +1300,7 @@ font-size:1.3rem;
 
 }
 
-.open_releases_download_licence a
+.open_releases_download_licence a 
 {
   color:#000;
   text-decoration:none;
@@ -1289,7 +1314,7 @@ margin-bottom: 30px;
 
 h2.open_releases_title a {color: #ea1D78;text-decoration: none;}
 
-h3.open_releases_title
+h3.open_releases_title 
 {
 margin-top:20px;
 }
@@ -1321,7 +1346,7 @@ text-decoration:none;
 text-decoration:none;
 }
 
-h2.open_releases_artist a:hover
+h2.open_releases_artist a:hover 
 {
 color:#29ABE2;
 }
@@ -1335,10 +1360,6 @@ font-size:3.3rem;
 margin-top:-36px;
 }
 
-.open_releases_playlist li.bonus a
-{
-  font-style: italic;
-}
 
 .open_releases_playlist li a
 {
@@ -1365,14 +1386,14 @@ background-color:#1A1A1A!important;}
 
 
 
-span .open_releases_playlist_icon_play
+span .open_releases_playlist_icon_play 
 {
 margin-right:5px;
 color:#535353!important;
 }
 
 
-span .open_releases_playlist_icon_play:hover
+span .open_releases_playlist_icon_play:hover 
 {
 margin-right:5px;
 color:#FFF!important;
@@ -1386,7 +1407,7 @@ margin-right:30px;
 }
 
 
-.open_artists_listing_releases h2,
+.open_artists_listing_releases h2, 
 {
 margin-top:-25px!important;
 margin-left:-4px;
@@ -1404,7 +1425,7 @@ list-style: none;
 }
 
 
-.open_releases li a
+.open_releases li a 
 {
 text-decoration:none;
 color:#000;
@@ -1433,19 +1454,23 @@ line-height:17px;
 color:#666;
   margin-left:10px;
 
-margin-top:-10px;
+margin-top:-10px; 
 padding-bottom:0px;
 line-height:17px;
 }
 
+<<<<<<< HEAD
 .open_releases_press_text a /*.open_releases_artwork_credit a*/
+=======
+.open_releases_press_text a 
+>>>>>>> 3ac9f86b917563667d081453d9bda52d97ea8fc3
 {
 color: #000;
 opacity: 0.9;
   text-decoration: none;
 }
 
-.open_releases_press_text a:hover
+.open_releases_press_text a:hover 
 {
 color: #000;
 opacity: 1;
@@ -1457,7 +1482,7 @@ margin-top:-40px;
 margin-bottom:0px;
 text-align:right;}
 
-.open_releases_button li, .open_artists_button li
+.open_releases_button li, .open_artists_button li 
 {
 
   background-color:transparent;
@@ -1477,7 +1502,7 @@ text-align:right;}
   font-size:40px;
 }
 
-.open_releases_button_left
+.open_releases_button_left 
 {
   background-image:url("../pics/button/release_retour.png");
 
@@ -1514,7 +1539,7 @@ text-align:right;}
 {
   color:transparent!important;
 }
-.open_releases_buy
+.open_releases_buy 
 {
   background-color:#1a1a1a;
   color:#FFF;
@@ -1531,25 +1556,25 @@ text-align:right;}
 {
   background-color: #29ABE2;
 }
-.open_releases_buy img
+.open_releases_buy img 
 {
   padding:0px 2px 0px 2px;
 }
 
-.open_releases_price
+.open_releases_price 
 {
   float:left;
   margin-top:1px;
 }
-.open_releases_market
+.open_releases_market 
 {
   float:right;
 }
 
-.open_releases_buy a
+.open_releases_buy a 
 {
   color:#FFF;
-  text-decoration:none;
+  text-decoration:none; 
 }
 
 
@@ -1558,26 +1583,26 @@ ul.open_releases_download
   margin:-10px 0px 10px 2px;
 }
 
-.open_releases_download li
+.open_releases_download li 
 {
   display:inline;
   padding:5px;
   font-size:10px;
   font-size:1em;
-font-family: 'Open Sans', sans-serif;
+  font-family: arial, verdana, sans-serif; 
   margin:2px; }
 
-  .open_releases_download a
+  .open_releases_download a 
   {
     background-color:#e6e6e6;
     padding:7px;
 
 
   }
-  .open_releases_download a:hover
+  .open_releases_download a:hover 
   {
     background-color:#000;
-    color:#FFF;
+    color:#FFF; 
   }
 
 
@@ -1587,7 +1612,7 @@ font-family: 'Open Sans', sans-serif;
   {
     margin-bottom:-20px;
   }
-  .open_releases_share_button li
+  .open_releases_share_button li 
   {
     display: inline;
     margin:2px 2px 2px 2px;
@@ -1596,17 +1621,17 @@ font-family: 'Open Sans', sans-serif;
     color:#666;
     font-weight:bold;
     text-transform:capitalize;
-font-family: 'Open Sans', sans-serif;
+    font-family: 'Arial', sans-serif;
 
   }
 
-  .open_releases_share_button img
+  .open_releases_share_button img 
   {
     margin-top:-6px;
     opacity:0.6;
   }
 
-  .open_releases_share_button img:hover
+  .open_releases_share_button img:hover 
   {
     opacity:1;
   }
@@ -1673,6 +1698,7 @@ float:left!important;
 width:220px;
 background-color:#FFF;
 padding-bottom:0px;
+<<<<<<< HEAD
 margin:10px 10px 10px 10px;
 float:left;
 position: relative;
@@ -1680,8 +1706,15 @@ position: relative;
 
 
 .open_artists_listing_releases img,
+=======
+margin:10px 10px 10px 10px;  
+float:left!important;
+}
+
+.open_artists_listing_releases img 
+>>>>>>> 3ac9f86b917563667d081453d9bda52d97ea8fc3
 {margin-top:-20px;}
-.open_artists_listing_releases h2
+.open_artists_listing_releases h2 
 {
 margin-top:-25px;
 }
@@ -1690,12 +1723,12 @@ margin-top:-25px;
 margin:-10px 0px 10px 0px;
 padding-bottom:5px;
 }
-.open_artists_linked li
+.open_artists_linked li 
 {
 margin:10px;
 
 }
-.open_artists_linked ul a
+.open_artists_linked ul a 
 {
 background-color:#e6e6e6;
 padding:5px;
@@ -1710,7 +1743,7 @@ color:#FFF;
   /* A TRIER */
 
 
- .category_infos
+ .category_infos  
   {
    background-color:transparent;
    margin-top:-70px!important;
@@ -1781,7 +1814,7 @@ opacity:1;
 */
 
 /* linkl temp*/
-
-.artists_show_artwork.default .hexagon {
-    opacity: 0.1;
-}
+  
+ +.artists_show_artwork.default .hexagon {
+ +    opacity: 0.1;
+ +}

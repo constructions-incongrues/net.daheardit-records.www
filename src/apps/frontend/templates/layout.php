@@ -12,6 +12,8 @@
 
   <meta name="viewport" content="width=device-width,initial-scale=1">
 
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
   <!-- 960 Grid system-->
   <link rel="stylesheet" type="text/css" media="all" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/css/lib/960.gs/reset.css" />
   <link rel="stylesheet" type="text/css" media="all" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/css/lib/960.gs/text.css" />
@@ -105,7 +107,7 @@
         <div class="category_content">
           <h1 id="artwork_artists"><?php echo __('Illustrateurs') ?></h1>
             <span class="triangle"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/others/triangle.png" class="triangle" /></span>
-                 <span class="graphists_button_top"><a href="#top"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/top_black.png" alt="TOP"></a></span>
+                 <span class="graphists_button_top"><a href="#top"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/top.png" alt="TOP"></a></span>
 
         </div><!-- end of category contents -->
       </div><!-- end of artwork_artists -->
@@ -188,6 +190,13 @@
             <p><?php echo __('Merci d\'envoyer vos demos par la poste ou par e-mail à') ?>
               <a href="mailto:demo@daheardit-records.net">demo@daheardit-records.net</a></p>
 
+            <h2><?php echo __('Crédits') ?></h2>
+
+            <p>
+              Le graphisme du site est réalisé par <a href="http://www.thibaulthuertas.com/">Thibault Huertas</a>.  <br />
+              Le projet <a href="http://www.daheardit-records.net">Da ! Heard It Records</a> est développé par <a href="http://www.constructions-incongrues.net">Constructions Incongrues</a> et hébergé par <a href="http://www.pastis-hosting.net">Pastis Hosting</a>.
+            </p>
+
               <!--
               <h2><?php echo __('Formulaire de contact') ?></h2>
               <form action="send.php" method="post">
@@ -208,8 +217,8 @@
 
               </div><!-- end of .contact -->
 
-
             </div><!-- end of .footer_content -->
+
           </div><!-- end of footer -->
 
         </div><!-- end of container 12s -->
