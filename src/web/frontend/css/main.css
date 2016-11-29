@@ -592,7 +592,6 @@ padding:0px 10px 0px 10px;
 font-size:12px;
 font-size:1.2rem;
 text-align:left;
-font-family: arial, verdana, sans-serif;
 line-height:15px;
 
 }
@@ -1563,7 +1562,7 @@ ul.open_releases_download
   padding:5px;
   font-size:10px;
   font-size:1em;
-  font-family: arial, verdana, sans-serif;
+font-family: 'Open Sans', sans-serif;
   margin:2px; }
 
   .open_releases_download a
@@ -1595,7 +1594,7 @@ ul.open_releases_download
     color:#666;
     font-weight:bold;
     text-transform:capitalize;
-    font-family: 'Arial', sans-serif;
+font-family: 'Open Sans', sans-serif;
 
   }
 
