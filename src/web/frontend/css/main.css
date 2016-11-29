@@ -936,12 +936,14 @@ font-weight:normal;
 text-transform:uppercase;
 }
 
+.infos_descr h3 {margin:30px 0px 5px 0px;}
 .infos_descr
 {
 
 color:#000;
 text-align:left;
 }
+
 
 .infos_descr li
 {

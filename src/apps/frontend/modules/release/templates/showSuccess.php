@@ -187,7 +187,6 @@
     </ul>
 <?php endif ?>
 
-  <hr />
 
     </div><!-- end of grid_6 -->
   </div><!-- enf of release_content -->
