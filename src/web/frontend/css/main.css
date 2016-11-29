@@ -328,7 +328,6 @@ top:12px;
 text-align:right;
 margin-right:0px;
 margin-left:30px;
-margin-
 }
 
 .header_nav_2_icon li
@@ -611,6 +610,7 @@ line-height:15px;
  }
 
 .releases_discography_number h2 {margin-bottom: 0px}
+
 .releases_discography_number,.artists_show
 {
 font-weight:none;
@@ -674,8 +674,8 @@ font-size:0.8rem;
 color:#FFF;
 text-transform:uppercase;
 font-weight:lighter;
-padding-left:8px;
-
+text-align: center;
+padding-top:1px;
 }
 
 .releases_discography_last_release a
@@ -724,6 +724,7 @@ background-color: #FFF!important;
 }
 
 
+.releases_discography_number h2 a:hover,.open_artists_listing_releases h2 a:hover {color:#29ABE2!important;}
 
 ul.releases_discography_button
 {
@@ -899,6 +900,7 @@ width:220px!important;
 margin-left:9px;
 margin-right:9px;
 margin-top:5px;
+opacity:0.49;
 }
 
 .artists_show_artwork_default 
