@@ -119,8 +119,9 @@
       <meta itemprop="byArtist" content="<?php echo htmlentities($release['Artist']['name']) ?>" />
       <meta itemprop="duration" content="PT6M33S" />
     </li>
+        </ul>
+
 <?php endforeach; ?>
-    </ul>
 
 <?php if (count($release['links_carousel_video'])): ?>
     <h3 class="open_releases_title"><?php echo __('Vidéo(s)') ?></h3>
