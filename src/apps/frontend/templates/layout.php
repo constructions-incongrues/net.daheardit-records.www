@@ -12,6 +12,8 @@
 
   <meta name="viewport" content="width=device-width,initial-scale=1">
 
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
   <!-- 960 Grid system-->
   <link rel="stylesheet" type="text/css" media="all" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/css/lib/960.gs/reset.css" />
   <link rel="stylesheet" type="text/css" media="all" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/css/lib/960.gs/text.css" />
