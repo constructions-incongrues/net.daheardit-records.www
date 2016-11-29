@@ -150,7 +150,7 @@
       <div class="grid_12 footer">
 
         <div class="category_content">
-          <span class="footer_button_top"><a href="#top"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/top.png" alt="TOP"></a></span>
+          <span class="footer_button_top"><a href="#top"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/top_black.png" alt="TOP"></a></span>
         </div><!-- end of category_contents -->
 
         <div class="footer_content">
