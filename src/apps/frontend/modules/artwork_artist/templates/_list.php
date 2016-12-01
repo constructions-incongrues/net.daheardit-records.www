@@ -25,7 +25,7 @@
 <?php for ($i; $i < $j; $i++): ?>
   <?php if ($i % 4 === 0): break; endif; ?>
   <div class="grid_3 artists_show_artwork ">
-  <div class="hexagon" style="background-image:url(<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/artwork/default.jpg);"> 
+  <div class="hexagon" style="background-image:url(<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics//artists/artwork_artists_default.png);"> 
   <div class="hexTop"></div>
   <div class="hexBottom"></div>
   </div>
