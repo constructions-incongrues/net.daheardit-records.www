@@ -3,7 +3,7 @@
 ```bash
 apt update
 apt install -y ant git php-cli
-git clone git@github.com:constructions-incongrues/net.daheardit-records.www.git
+git clone --recursive git@github.com:constructions-incongrues/net.daheardit-records.www.git
 cd net.daheardit-records.www
 ./composer.phar install
 ant install
@@ -29,7 +29,7 @@ phpMyAdmin est accessible à l'adresse http://daheardit-records.vagrant.dev/phpm
 ## Modification des données de la base de données de développement
 
 Les données de la base sont déclarées dans le fichier src/data/fixtures/fixtures.yml.
-Une fois que ce fichier a été modifié, il faut recharger les données à l'aide de la commande suivante : 
+Une fois que ce fichier a été modifié, il faut recharger les données à l'aide de la commande suivante :
 
 ```bash
 vagrant provision
