@@ -123,7 +123,7 @@
 
         </ul>
 
-
+<hr />
 <?php if (count($release['links_carousel_video'])): ?>
     <h3 class="open_releases_title"><?php echo __('Vidéo(s)') ?></h3>
     <ul class="open_releases_playlist">
