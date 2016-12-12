@@ -1,5 +1,5 @@
 $(document).ready(function() {
     $('.header').click(function() {
-        window.location = 'http://www.daheardit-records.net/fr/discography/dhr-28';
+        window.location = 'https://www.youtube.com/watch?v=Ve5c6Ou8ZLY';
     });
 });
