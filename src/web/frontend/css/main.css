@@ -107,6 +107,8 @@ background-repeat: repeat;
 width: 100%;
 height:680px;
 position:absolute;
+cursor: pointer;
+
 }
 
 
@@ -300,7 +302,6 @@ background-position: center center;
 background-repeat: repeat;
 width: 100%;
 height:680px;
-cursor: pointer;
 }
 
 
