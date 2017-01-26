@@ -62,7 +62,7 @@
 
     <h1 class="open_releases_catalog"><?php echo $release['sku'] ?>
 <?php if ($release['released_at']): ?>
-     - <span class="open_releases_infos_date"><?php echo $release['released_at'] ?></span> - 
+     - <span class="open_releases_infos_date"><?php echo $release['released_at'] ?></span> -
 <?php endif; ?>
 
 
@@ -120,13 +120,12 @@
       <meta itemprop="duration" content="PT6M33S" />
     </li>
   <?php endforeach; ?>
-
-        </ul>
+    </ul>
 
 
 <?php if (count($release['links_carousel_video'])): ?>
     <h3 class="open_releases_title"><?php echo __('Vidéo(s)') ?></h3>
-    <ul class="open_releases_playlist">
+    <ul class="open_releases_videos">
     <?php foreach ($release['links_carousel_video'] as $url): ?>
         <li><a class="video" href="<?php echo $url ?>"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/play.png" alt="play" class="open_releases_playlist_icon_play" /><?php echo $url ?></a></li>
     <?php endforeach ?>

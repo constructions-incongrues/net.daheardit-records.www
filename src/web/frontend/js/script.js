@@ -47,7 +47,6 @@ $(document).ready(function () {
         });
 
         $("#jquery_jplayer_1").bind($.jPlayer.event.resize, function(event) {
-            alert('raoul');
             $($('.open_releases_playlist li')[0]).hide();
         });
     }
