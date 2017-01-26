@@ -135,7 +135,7 @@
 
 
 <?php if (count($archives)): ?>
-    <h2 class="open_releases_title"><?php echo __('Télécharger librement') ?> ou faire un <a href="https://www.helloasso.com/associations/constructions-incongrues" class="donate">&hearts; <?php echo __('don') ?> &hearts;</a></h2>
+    <h2 class="open_releases_title"><?php echo __('Télécharger librement') ?> ou faire un <a href="https://www.helloasso.com/associations/constructions-incongrues/formulaires/1" class="donate">&hearts; <?php echo __('don') ?> &hearts;</a></h2>
 
 <span style="margin-top:-25px;"> </span>
     <ul class="open_releases_download">
