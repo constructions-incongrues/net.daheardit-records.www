@@ -1335,9 +1335,8 @@ font-size:33px;
 font-size:3.3rem;
 margin-top:-36px;
 }
-.open_releases_videos li {
-  margin: 0;
-  padding: 0;
+.open_releases_videos {
+  margin-left: 17px;
 }
 
 .open_releases_playlist li.bonus a, .open_releases_videos li.bonus a
