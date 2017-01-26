@@ -77,7 +77,7 @@ margin-right: auto;
 
 .artists h1,
 .releases h1,
-.category_infos h1, 
+.category_infos h1,
 .artwork_artists_listing_all h1
 {
 font-family: 'Jockey One', sans-serif;
@@ -190,7 +190,7 @@ clip-path: url("#clipPolygon");
 
 .hexagon {
   position: relative;
-  width: 220px; 
+  width: 220px;
   height: 127.02px;
   margin: 63.51px 0;
   background-size: auto 254.0341px;
@@ -832,7 +832,7 @@ font-size:1.9rem;
 padding:3px 9px 3px 9px;
 }
 .artists_artwork_title {
- position:absolute; 
+ position:absolute;
 margin:0;
  padding:0;
  width:100%;
@@ -904,14 +904,14 @@ margin-top:5px;
 opacity:0.49;
 }
 
-.artists_show_artwork_default 
+.artists_show_artwork_default
 {
 background-image:url(../pics/artists/hexagone-trame.png);
 height:255px;
 width:220px!important;
 margin-left:9px;
 margin-right:9px;
-margin-top:20px;  
+margin-top:20px;
 }
 
 /* INFOS
@@ -1049,14 +1049,14 @@ top:-28px;
 
 .footer_content p  {color:#FFF;}
 
-.footer_content h1, .footer_content h2 
+.footer_content h1, .footer_content h2
 {
 font-weight:normal;
 text-transform:uppercase;
 font-family: 'Jockey One', sans-serif;
-} 
+}
 
-.footer_content h1 
+.footer_content h1
 {
 color:#FFF;
 background-image:url(../pics/pattern/pat-bg.png);
@@ -1075,20 +1075,20 @@ font-size:15px;
 font-size:1.5rem;
 opacity:0.7;
 margin:10px 0px 10px 0px;
-} 
+}
 
-.footer_links_1 ul, li, .footer_links_2 ul, li 
+.footer_links_1 ul, li, .footer_links_2 ul, li
 {
 list-style-type:none;
 }
 
-.footer_links_1 li, .footer_links_2 li 
+.footer_links_1 li, .footer_links_2 li
 {
 margin:5px 0px 5px -10px;
 padding-left:10px;
 
 }
-.footer_links_1 li a, .footer_links_2 li a 
+.footer_links_1 li a, .footer_links_2 li a
 {
 color:#29ABE2;
 padding:2px 2px 0px 2px;
@@ -1098,19 +1098,19 @@ opacity:0.7;
 
 .footer_links_1 li a:hover, .footer_links_2 li a:hover
 {color:#29ABE2;opacity:1;}
-.footer p 
+.footer p
 {
 color:#b2b2b2;
 }
 
-.footer_content p a 
+.footer_content p a
 {
 color:#29ABE2;
 text-decoration:none;
 opacity:0.7;
 }
 
-.footer_content p a:hover 
+.footer_content p a:hover
 {
 opacity:1;
 }
@@ -1118,7 +1118,7 @@ opacity:1;
 {
 margin-top:30px;
 }
-.footer_nav_1 li 
+.footer_nav_1 li
 {
 display:inline;
 padding:0px;
@@ -1128,7 +1128,7 @@ margin:0px;
 
 .footer_nav_1 li:hover {opacity:1;}
 
-ul.footer_nav_1 
+ul.footer_nav_1
 {
 margin:8px 0px 20px 20px;
 opacity:0.6;
@@ -1138,12 +1138,12 @@ margin-right:-60px;
 }
 
 
-.footer_content textarea  
+.footer_content textarea
 {
 margin-top:-10px;
 width:460px;}
 
-.footer_content input,.footer_content textarea  
+.footer_content input,.footer_content textarea
 {
 border:0px;
 
@@ -1151,7 +1151,7 @@ border:0px;
   background-color: rgba(41, 171, 226, 0.3); }
 
 
-.footer_content input.valid 
+.footer_content input.valid
 {
 background-color:#000;
    text-transform:uppercase;
@@ -1335,13 +1335,16 @@ font-size:33px;
 font-size:3.3rem;
 margin-top:-36px;
 }
+.open_releases_videos {
+  margin-left: 17px;
+}
 
-.open_releases_playlist li.bonus a
+.open_releases_playlist li.bonus a, .open_releases_videos li.bonus a
 {
   font-style: italic;
 }
 
-.open_releases_playlist li a
+.open_releases_playlist li a, .open_releases_videos li a
 {
 background-color: #e6e6e6;
 width:450px;
@@ -1352,7 +1355,7 @@ padding:2px 2px 2px 5px;
 
 }
 
-.open_releases_playlist a:hover
+.open_releases_playlist a:hover, .open_releases_videos a:hover
 {
 color:#FFF;
 text-decoration:none;
@@ -1366,14 +1369,14 @@ background-color:#1A1A1A!important;}
 
 
 
-span .open_releases_playlist_icon_play
+span .open_releases_playlist_icon_play, span .open_releases_playlist_icon_play
 {
 margin-right:5px;
 color:#535353!important;
 }
 
 
-span .open_releases_playlist_icon_play:hover
+span .open_releases_playlist_icon_play:hover, span .open_releases_playlist_icon_play:hover
 {
 margin-right:5px;
 color:#FFF!important;
@@ -1396,7 +1399,7 @@ margin-left:-4px;
 
 
 
-ul.open_releases_playlist
+ul.open_releases_playlist, ul.open_releases_playlist
 {
 
 margin: 0px 0.75em 0.75em 0;
@@ -1411,7 +1414,7 @@ text-decoration:none;
 color:#000;
 }
 
-.open_releases_playlist_button
+.open_releases_playlist_button, .open_releases_videos_button
 {
 border-color: transparent #111;
 border-style: solid;
@@ -1721,7 +1724,7 @@ color:#FFF;
 
 
 .releases h1,
-.category_artwork_artist h1, 
+.category_artwork_artist h1,
 .artwork_artists_listing_all h1
 {
  background-color:#000;
