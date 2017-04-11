@@ -46,7 +46,7 @@
 
     <div class="grid_6 open_artists_infos">
 
-    <h1 class="open_artists_name"><?php echo $artist['name'] ?></h2>
+    <h1 class="open_artists_name"><?php echo $artist['name'] ?></h1>
 
     <p class="open_artists_bio">
       <?php echo nl2br($artist['Translation'][$sf_user->getCulture()]['presentation']) ?>
@@ -71,7 +71,7 @@
    <span class="calque_releases"></span>
    <img width="220px" height="220px" src="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/releases/<?php echo $release['slug'] ?>/<?php echo $release['slug'] ?>_300x300.png" alt=""/>
             <h1 style="margin-left:-5px;"><a data-pjax="#content_async" href="<?php echo url_for(sprintf('@release_show?slug=%s#release', $release['slug'])) ?>"><?php echo $release['sku'] ?></a></h1>
-            <h2 style="margin-bottom:0px;"><a data-pjax="#content_async" title="<?php echo sprintf('%s - %s', $artist['name'], $release['title']) ?>" href="<?php echo url_for(sprintf('@release_show?slug=%s#release', $release['slug'])) ?>"><?php echo truncate_text(sprintf('%s - %s', $artist['name'], $release['title']), 35) ?></a></h2>
+            <h2 style="margin-bottom:0px;"><a data-pjax="#content_async" title="<?php echo sprintf('%s - %s', $artist['name'], $release['title']) ?>" href="<?php echo url_for(sprintf('@release_show?slug=%s#release', $release['slug'])) ?>"><?php echo truncate_text(sprintf('%s', $release['title']), 36) ?></a></h2>
     </a></span>
     </div>
 
