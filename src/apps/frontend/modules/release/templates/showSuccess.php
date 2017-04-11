@@ -62,7 +62,7 @@
 
     <h1 class="open_releases_catalog"><?php echo $release['sku'] ?>
 <?php if ($release['released_at']): ?>
-     - <span class="open_releases_infos_date"><?php echo $release['released_at'] ?></span> -
+     - <span class="open_releases_infos_date"><?php echo $release['released_at'] ?></span>
 <?php endif; ?>
 
 
