@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Da ! Heart It Records - T'es perdu ?</title>
+  <title>Da ! Heard It Records - T'es perdu ?</title>
   <style>
 html { 
   margin:0;
