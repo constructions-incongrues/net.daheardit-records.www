@@ -19,14 +19,22 @@ Vagrant.configure(2) do |config|
   # documentation for more information about their specific syntax and use.
   config.vm.provision "shell", path: "provision.sh"
 
-  # @see https://github.com/dotless-de/vagrant-vbguest
-  config.vbguest.auto_update = true
+  # Forward SSH
+  config.ssh.forward_agent = true
+
+  # Use a linked clone
+  config.vm.provider "virtualbox" do |vb|
+    vb.linked_clone = true
+  end
+
+  # Synced folder permissions
+  config.vm.synced_folder "./", "/vagrant", 
+    id: "vagrant-root",
+    owner: "vagrant",
+    group: "www-data",
+    mount_options: ["dmode=775,fmode=664"]
 
   # @see https://github.com/phinze/landrush
   config.landrush.enabled = true
   config.vm.hostname = "daheardit-records.vagrant.test"
-
-  config.vm.provider "virtualbox" do |v|
-    v.linked_clone = true
-  end
 end

@@ -43,7 +43,7 @@ class dhrGenerateReleaseTask extends sfBaseTask
             new sfCommandOption('archives', null, sfCommandOption::PARAMETER_NONE, 'Generates archives ?'),
             new sfCommandOption('db', null, sfCommandOption::PARAMETER_NONE, 'Create database records ? (CAREFUL : deletes existing data)'),
             new sfCommandOption('streamables', null, sfCommandOption::PARAMETER_NONE, 'Generate streamable MP3s ?'),
-            new sfCommandOption('includeExtensions', null, sfCommandOption::PARAMETER_OPTIONAL, 'Non-audio extensions in source directory to be included in archives'),
+            new sfCommandOption('includeExtensions', null, sfCommandOption::PARAMETER_OPTIONAL, 'Non-audio extensions in source directory to be included in archives', 'jpg,png,txt'),
             new sfCommandOption('workspace', null, sfCommandOption::PARAMETER_OPTIONAL, 'Path to workspace directory', sys_get_temp_dir()),
         ));
     }
