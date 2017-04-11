@@ -8,7 +8,7 @@
   <meta name="google-site-verification" content="GZLJrrM8tvBsh05BvBY8GHUsEFhojyg5inFZAfaHh-Y" />
   <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> -->
 
-  <title><?php echo $sf_response->getTitle() ?> | Da ! Heard It Records</title>
+  <title><?php echo utf8_decode(html_entity_decode($sf_response->getTitle())) ?> | Da ! Heard It Records</title>
 
   <meta name="viewport" content="width=device-width,initial-scale=1">
 
