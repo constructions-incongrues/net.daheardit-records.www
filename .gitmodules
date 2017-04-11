@@ -6,4 +6,4 @@
 	url = git@github.com:ARAMISAUTO/sfTwitterBootstrapPlugin.git
 [submodule "src/plugins/sfDoctrineGuardPlugin"]
 	path = src/plugins/sfDoctrineGuardPlugin
-	url = https://github.com/ibolmo/sfDoctrineGuardPlugin.git
+	url = git@github.com:LExpress/sfDoctrineGuardPlugin.git
