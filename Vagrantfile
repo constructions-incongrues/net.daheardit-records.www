@@ -32,7 +32,7 @@ Vagrant.configure(2) do |config|
     id: "vagrant-root",
     owner: "vagrant",
     group: "www-data",
-    mount_options: ["dmode=775,fmode=664"]
+    mount_options: ["dmode=775,fmode=777"]
 
   # @see https://github.com/phinze/landrush
   config.landrush.enabled = true
