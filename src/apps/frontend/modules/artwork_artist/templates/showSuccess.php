@@ -49,7 +49,7 @@
     <h1 class="open_artists_name"><?php echo $artist['name'] ?></h1>
 
     <p class="open_artists_bio">
-      <?php echo nl2br($artist['Translation'][$sf_user->getCulture()]['presentation']) ?>
+      <?php echo auto_link_text(nl2br($artist['Translation'][$sf_user->getCulture()]['presentation'])) ?>
     </p>
 
 <?php if ($artist['url']): ?>
