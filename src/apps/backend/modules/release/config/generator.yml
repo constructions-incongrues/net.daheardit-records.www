@@ -28,7 +28,7 @@ generator:
           help: La date de sortie officielle
         price:
           label: Prix
-          help: Le prix de la release en euros
+          help: Le prix et les identifiants Paypal des différents formats de la release (en euros). Un par ligne. Format : format,prix,id_paypal
         is_available:
           label: La release est-elle encore disponible ?
           help: Décocher cette case si la release est épuisée

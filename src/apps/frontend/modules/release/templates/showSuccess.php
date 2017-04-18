@@ -167,10 +167,12 @@
 
 <?php if ($release['is_available']): ?>
     <h3 class="open_releases_title"><?php echo __('Acheter une copie physique') ?></h3>
+    <?php foreach ($release['prices'] as $price): ?>
     <p class="open_releases_buy">
-      <span class="open_releases_price">€ <?php echo $release['price'] ?></span>
-      <span class="open_releases_market"><a href="" class="paypal" data-paypalid="<?php echo $release['paypal_id'] ?>"><?php echo __('Ajouter au panier') ?></a> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/img-panier.png" alt="" /></span>
+      <span class="open_releases_price"><?php echo $price['format'] ?> : <?php echo $price['price'] ?> €</span>
+      <span class="open_releases_market"><a href="" class="paypal" data-paypalid="<?php echo $price['paypal_id'] ?>"><?php echo __('Ajouter au panier') ?></a> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/img-panier.png" alt="" /></span>
     </p>
+    <?php endforeach; ?>
 <?php endif ?>
 
 
