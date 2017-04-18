@@ -1,3 +1,15 @@
+<?php slot('morescript') ?>
+<?php if ($release['url_header']): ?>
+    <script>
+        $(document).ready(function() {
+            $('.header').click(function() {
+                window.location = '<?php echo $release['url_header'] ?>';
+            });
+        });
+    </script>
+<?php endif; ?>
+<?php end_slot(); ?>
+
 <!-- @see https://github.com/defunkt/jquery-pjax -->
 <title><?php echo $sf_response->getTitle() ?></title>
 
@@ -192,3 +204,4 @@
     </div><!-- end of grid_6 -->
   </div><!-- enf of release_content -->
   </div><!-- end of grid_12 release_open -->
+

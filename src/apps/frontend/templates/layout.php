@@ -242,9 +242,7 @@
         <script src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/js/script.js?v=3"></script>
         <!-- end scripts-->
 
-        <?php if (has_slot('home_script')): ?>
-          <?php include_slot('home_script') ?>
-        <?php endif; ?>
+  <?php include_slot('morescript') ?>
 
         <script>
   var _gaq=[['_setAccount','UA-673133-1'],['_trackPageview']]; // Change UA-XXXXX-X to be your site's ID

@@ -11,6 +11,7 @@
  * @property date $released_at
  * @property string $presentation
  * @property string $links_carousel
+ * @property string $url_header
  * @property boolean $is_public
  * @property boolean $is_new
  * @property string $image1
@@ -31,6 +32,7 @@
  * @method date                getReleasedAt()        Returns the current record's "released_at" value
  * @method string              getPresentation()      Returns the current record's "presentation" value
  * @method string              getLinksCarousel()     Returns the current record's "links_carousel" value
+ * @method string              getUrlHeader()         Returns the current record's "url_header" value
  * @method boolean             getIsPublic()          Returns the current record's "is_public" value
  * @method boolean             getIsNew()             Returns the current record's "is_new" value
  * @method string              getImage1()            Returns the current record's "image1" value
@@ -50,6 +52,7 @@
  * @method Release             setReleasedAt()        Sets the current record's "released_at" value
  * @method Release             setPresentation()      Sets the current record's "presentation" value
  * @method Release             setLinksCarousel()     Sets the current record's "links_carousel" value
+ * @method Release             setUrlHeader()         Sets the current record's "url_header" value
  * @method Release             setIsPublic()          Sets the current record's "is_public" value
  * @method Release             setIsNew()             Sets the current record's "is_new" value
  * @method Release             setImage1()            Sets the current record's "image1" value
@@ -93,6 +96,9 @@ abstract class BaseRelease extends sfDoctrineRecord
              'type' => 'string',
              ));
         $this->hasColumn('links_carousel', 'string', null, array(
+             'type' => 'string',
+             ));
+        $this->hasColumn('url_header', 'string', null, array(
              'type' => 'string',
              ));
         $this->hasColumn('is_public', 'boolean', null, array(

@@ -35,6 +35,9 @@ generator:
         links_carousel:
           label : Liens carousel
           help: Un lien par ligne
+        url_header:
+          label : URL du header
+          help: Lien vers lequel pointera le header
       list:
         display: [=sku, title, artist, artwork_artist, released_at]
       filter:  ~

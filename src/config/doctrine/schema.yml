@@ -62,6 +62,7 @@ Release:
     released_at:  date
     presentation: string
     links_carousel: string
+    url_header: string
     is_public:
       type:       boolean
       default:    1
