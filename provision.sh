@@ -31,7 +31,7 @@ apt-get install -y phpmyadmin
 # Création de la base de données
 mysql --defaults-file=/etc/mysql/debian.cnf -e "drop database if exists net_dahearditrecords_www"
 mysql --defaults-file=/etc/mysql/debian.cnf -e "create database net_dahearditrecords_www default charset utf8 collate utf8_general_ci"
-# mysql --defaults-file=/etc/mysql/debian.cnf net_dahearditrecords_www < /vagrant/src/data/fixtures/net_dahearditrecords_www.dump.sql
+mysql --defaults-file=/etc/mysql/debian.cnf net_dahearditrecords_www < /vagrant/src/data/fixtures/net_dahearditrecords_www.dump.sql
 
 # Configuration du projet
 apt-get install -y ant

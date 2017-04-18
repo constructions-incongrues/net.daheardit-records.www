@@ -197,7 +197,7 @@ class releaseActions extends sfActions
             'type'  => 'video.other',
             'video' => sprintf(
                 '%s/frontend/swf/flowplayer/flowplayer-3.2.18.swf?config=%s',
-                str_replace('http', 'https', $request->getUriPrefix()),
+                $request->getUriPrefix(),
                 urlencode(json_encode($flowplayerConfig))
             ),
             'video:secure_url' => sprintf(
