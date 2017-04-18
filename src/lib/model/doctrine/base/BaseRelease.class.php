@@ -10,6 +10,7 @@
  * @property string $slug
  * @property date $released_at
  * @property string $presentation
+ * @property string $license
  * @property string $links_carousel
  * @property string $url_header
  * @property boolean $is_public
@@ -31,6 +32,7 @@
  * @method string              getSlug()              Returns the current record's "slug" value
  * @method date                getReleasedAt()        Returns the current record's "released_at" value
  * @method string              getPresentation()      Returns the current record's "presentation" value
+ * @method string              getLicense()           Returns the current record's "license" value
  * @method string              getLinksCarousel()     Returns the current record's "links_carousel" value
  * @method string              getUrlHeader()         Returns the current record's "url_header" value
  * @method boolean             getIsPublic()          Returns the current record's "is_public" value
@@ -51,6 +53,7 @@
  * @method Release             setSlug()              Sets the current record's "slug" value
  * @method Release             setReleasedAt()        Sets the current record's "released_at" value
  * @method Release             setPresentation()      Sets the current record's "presentation" value
+ * @method Release             setLicense()           Sets the current record's "license" value
  * @method Release             setLinksCarousel()     Sets the current record's "links_carousel" value
  * @method Release             setUrlHeader()         Sets the current record's "url_header" value
  * @method Release             setIsPublic()          Sets the current record's "is_public" value
@@ -93,6 +96,9 @@ abstract class BaseRelease extends sfDoctrineRecord
              'type' => 'date',
              ));
         $this->hasColumn('presentation', 'string', null, array(
+             'type' => 'string',
+             ));
+        $this->hasColumn('license', 'string', null, array(
              'type' => 'string',
              ));
         $this->hasColumn('links_carousel', 'string', null, array(

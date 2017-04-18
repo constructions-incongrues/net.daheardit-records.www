@@ -38,6 +38,9 @@ generator:
         url_header:
           label : URL du header
           help: Lien vers lequel pointera le header
+        license:
+          label : Licence
+          help: HTML décrivant la licence de la sortie
       list:
         display: [=sku, title, artist, artwork_artist, released_at]
       filter:  ~

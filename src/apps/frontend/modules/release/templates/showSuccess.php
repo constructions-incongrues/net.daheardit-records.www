@@ -147,19 +147,23 @@
 
 
 <?php if (count($archives)): ?>
+    <span style="margin-top:-25px;"> </span>
     <h2 class="open_releases_title"><?php echo __('Télécharger librement') ?> ou faire un <a href="https://www.helloasso.com/associations/constructions-incongrues/formulaires/1" class="donate">&hearts; <?php echo __('don') ?> &hearts;</a></h2>
 
-<span style="margin-top:-25px;"> </span>
     <ul class="open_releases_download">
   <?php foreach ($archives as $archive): ?>
       <li><a class="release-download" data-dhr-release-slug="<?php echo $release['slug'] ?>" data-dhr-archive-format="<?php echo $archive['name'] ?>" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/releases/<?php echo $release['slug'] ?>/archives/<?php echo $archive['filename'] ?>"><?php echo strtoupper($archive['name']) ?></a></li>
   <?php endforeach ?>
     </ul>
-
-
-
- <p class="open_releases_download_licence">Cette œuvre est mise à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/deed.fr">Licence Creative Commons Attribution - Pas d’Utilisation Commerciale - Pas de Modification 4.0 France</a>.</p>
 <?php endif ?>
+
+    <p class="open_releases_download_licence">
+<?php if ($release['license']): ?>
+    <?php echo html_entity_decode($release['license']) ?>
+<?php else: ?>
+        Cette œuvre est mise à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/deed.fr">Licence Creative Commons Attribution - Pas d’Utilisation Commerciale - Pas de Modification 4.0 France</a>.
+<?php endif ?>
+    </p>
 
 <?php if ($release['is_available']): ?>
     <h3 class="open_releases_title"><?php echo __('Acheter une copie physique') ?></h3>

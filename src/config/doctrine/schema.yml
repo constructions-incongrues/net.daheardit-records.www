@@ -61,6 +61,7 @@ Release:
       notblank: true
     released_at:  date
     presentation: string
+    license: string
     links_carousel: string
     url_header: string
     is_public:
