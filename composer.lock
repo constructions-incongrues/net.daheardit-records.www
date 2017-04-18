@@ -4,15 +4,15 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "a3c1818527964e05f2870ab8dc85258c",
+    "content-hash": "6b3a60fd710e0f0dcafc6f79e5edd3bf",
     "packages": [
         {
             "name": "constructions-incongrues/ananas-build-toolkit",
-            "version": "0.34.5",
+            "version": "0.34.6",
             "source": {
                 "type": "git",
-                "url": "git@github.com:constructions-incongrues/ananas-build-toolkit.git",
-                "reference": "b2115f4441ed97c7be4290757fb6c67b91a61684"
+                "url": "https://github.com/constructions-incongrues/ananas-build-toolkit.git",
+                "reference": "0ee984b9958c677b26aa15208fd6ca62fb7d28af"
             },
             "require": {
                 "php": ">=5.5.0"
@@ -30,7 +30,7 @@
                 "issues": "https://github.com/constructions-incongrues/ananas-build-toolkit/issues",
                 "source": "https://github.com/constructions-incongrues/ananas-build-toolkit"
             },
-            "time": "2016-10-06 11:31:11"
+            "time": "2017-03-06T15:25:45+00:00"
         },
         {
             "name": "symfony/finder",
@@ -80,7 +80,7 @@
             ],
             "description": "Symfony Finder Component",
             "homepage": "https://symfony.com",
-            "time": "2015-07-09 16:02:48"
+            "time": "2015-07-09T16:02:48+00:00"
         }
     ],
     "packages-dev": [],

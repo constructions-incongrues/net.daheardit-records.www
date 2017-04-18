@@ -2,11 +2,11 @@
     "repositories": [
         {
             "type": "git",
-            "url": "git@github.com:constructions-incongrues/ananas-build-toolkit.git"
+            "url": "https://github.com/constructions-incongrues/ananas-build-toolkit.git"
         }
     ],
     "require": {
-        "constructions-incongrues/ananas-build-toolkit": "0.34.*",
+        "constructions-incongrues/ananas-build-toolkit": "^0.34",
         "symfony/finder": "2.6.*"
     }
 }
