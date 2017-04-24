@@ -1,3 +1,15 @@
+<?php slot('morescript') ?>
+<?php if ($release['url_header']): ?>
+    <script>
+        $(document).ready(function() {
+            $('.header').click(function() {
+                window.location = '<?php echo $release['url_header'] ?>';
+            });
+        });
+    </script>
+<?php endif; ?>
+<?php end_slot(); ?>
+
 <!-- @see https://github.com/defunkt/jquery-pjax -->
 <title><?php echo $sf_response->getTitle() ?></title>
 
@@ -135,26 +147,32 @@
 
 
 <?php if (count($archives)): ?>
+    <span style="margin-top:-25px;"> </span>
     <h2 class="open_releases_title"><?php echo __('Télécharger librement') ?> ou faire un <a href="https://www.helloasso.com/associations/constructions-incongrues/formulaires/1" class="donate">&hearts; <?php echo __('don') ?> &hearts;</a></h2>
 
-<span style="margin-top:-25px;"> </span>
     <ul class="open_releases_download">
   <?php foreach ($archives as $archive): ?>
       <li><a class="release-download" data-dhr-release-slug="<?php echo $release['slug'] ?>" data-dhr-archive-format="<?php echo $archive['name'] ?>" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/releases/<?php echo $release['slug'] ?>/archives/<?php echo $archive['filename'] ?>"><?php echo strtoupper($archive['name']) ?></a></li>
   <?php endforeach ?>
     </ul>
-
-
-
- <p class="open_releases_download_licence">Cette œuvre est mise à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/deed.fr">Licence Creative Commons Attribution - Pas d’Utilisation Commerciale - Pas de Modification 4.0 France</a>.</p>
 <?php endif ?>
+
+    <p class="open_releases_download_licence">
+<?php if ($release['license']): ?>
+    <?php echo html_entity_decode($release['license']) ?>
+<?php else: ?>
+        Cette œuvre est mise à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/deed.fr">Licence Creative Commons Attribution - Pas d’Utilisation Commerciale - Pas de Modification 4.0 France</a>.
+<?php endif ?>
+    </p>
 
 <?php if ($release['is_available']): ?>
     <h3 class="open_releases_title"><?php echo __('Acheter une copie physique') ?></h3>
+    <?php foreach ($release['prices'] as $price): ?>
     <p class="open_releases_buy">
-      <span class="open_releases_price">€ <?php echo $release['price'] ?></span>
-      <span class="open_releases_market"><a href="" class="paypal" data-paypalid="<?php echo $release['paypal_id'] ?>"><?php echo __('Ajouter au panier') ?></a> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/img-panier.png" alt="" /></span>
+      <span class="open_releases_price"><?php echo $price['format'] ?> : <?php echo $price['price'] ?> €</span>
+      <span class="open_releases_market"><a href="" class="paypal" data-paypalid="<?php echo $price['paypal_id'] ?>"><?php echo __('Ajouter au panier') ?></a> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/img-panier.png" alt="" /></span>
     </p>
+    <?php endforeach; ?>
 <?php endif ?>
 
 
@@ -192,3 +210,4 @@
     </div><!-- end of grid_6 -->
   </div><!-- enf of release_content -->
   </div><!-- end of grid_12 release_open -->
+

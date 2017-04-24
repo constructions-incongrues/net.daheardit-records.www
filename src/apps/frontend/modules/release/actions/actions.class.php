@@ -31,6 +31,18 @@ class releaseActions extends sfActions
         $releaseArray['tracks'] = $tracks;
         $this->getResponse()->setTitle(sprintf('%s - %s', $releaseArray['Artist']['name'], $releaseArray['title']));
 
+        // Extract prices informations
+	    $prices = [];
+	    foreach (explode("\n", $releaseArray['price']) as $priceInfo) {
+		    $partsPrice = explode(',', $priceInfo);
+			$prices[] = [
+				'format'    => $partsPrice[0],
+				'price'     => $partsPrice[1],
+				'paypal_id' => $partsPrice[2]
+			];
+	    }
+	    $releaseArray['prices'] = $prices;
+
         // Archives
         $archives = array();
         $archivesPaths = glob(sprintf('%s/web/assets/releases/%s/archives/*.zip', sfConfig::get('sf_root_dir'), $release['slug']));
