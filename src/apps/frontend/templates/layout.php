@@ -140,7 +140,7 @@
             </p>
           </div><!-- end of .infos_descr -->
 
-          <div class="grid_5 infos_vids">
+          <div class="grid_5 infos_vids" id="vids">
             <?php include_component('content', 'show', array('block' => 'footer_video')) ?>
           </div><!-- end of infos_vids -->
         </div><!-- end of .infos-->

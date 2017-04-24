@@ -9,7 +9,7 @@
             <li><a href="#discography"><?php echo __('Discographie') ?></a></li>
             <li><a href="#artists"><?php echo __('Artistes') ?></a></li>
             <li><a href="#artwork_artists"><?php echo __('Illustrations') ?></a></li>
-            <li a href="#vids"><a href="https://www.youtube.com/watch?v=Ve5c6Ou8ZLY&list=PLgpmTifGJBPQGp_JLT572YE7wV1gWTEpN">Videos</a></li>
+            <li> <a href="#vids"><?php echo __('Vidéos') ?></a></li>
             <li><a href="#informations"><?php echo __('Contact') ?></a></li>
             <li><a href="#links"><?php echo __('Liens') ?></a></li>
             <li><a href="<?php echo url_for('@homepage_localized?sf_culture=fr') ?>">FR </a> / <a href="<?php echo url_for('@homepage_localized?sf_culture=en') ?>">EN</a></li>
