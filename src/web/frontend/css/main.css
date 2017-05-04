@@ -426,8 +426,8 @@ font-family: 'Jockey One', sans-serif;
 color:#29ABE2;
 text-decoration:none;
 text-transform:uppercase;
-font-size:27px;
-font-size:2.7rem;
+font-size:26px;
+font-size:2.6rem;
 }
 
 .header_nav_3 a:hover
@@ -967,8 +967,8 @@ width:276px;
 }
 
 
-#informations {margin-top:120px!important;}
-/* BUTTON TOP - ANCRE
+/*#informations {margin-top:120px!important;}
+*//* BUTTON TOP - ANCRE
 ***************************************************************/
 
 .artist_button_top
@@ -1789,3 +1789,23 @@ opacity:1;
 .artists_show_artwork.default .hexagon {
     opacity: 0.1;
 }
+
+/* mailing list */
+
+#mc_embed_signup {background-color: #transparent;}
+
+#mce-EMAIL {}
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: rgba(41, 171, 226, 0.7);}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color: rgba(41, 171, 226, 0.7);
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+color: rgba(41, 171, 226, 0.7);
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+color: rgba(41, 171, 226, 0.7);
+}
+input#mce-EMAIL{height: 44px; width: 294px;border:0px;margin: 10px 0px 40px 0px; background-color: rgba(41, 171, 226, 0.15),color: rgba(41, 171, 226, 0.15);
+}
+input.button {height: 44px; width:54px;border:0px;position: absolute;top:40px;margin:0px 0px  0px -4px;background-color: rgba(41, 171, 226, 1);color: #FFF;font-weight: bold;  text-transform: uppercase;    font-family: 'Jockey One', sans-serif;font-size: 15px;font-size: 1.5rem;}argin:
