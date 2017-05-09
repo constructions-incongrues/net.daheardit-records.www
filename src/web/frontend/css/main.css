@@ -427,7 +427,7 @@ color:#29ABE2;
 text-decoration:none;
 text-transform:uppercase;
 font-size:26px;
-font-size:2.6rem;
+font-size:2.6 rem;
 }
 
 .header_nav_3 a:hover
@@ -1794,7 +1794,7 @@ opacity:1;
 
 #mc_embed_signup {background-color: #transparent;}
 
-#mce-EMAIL {}
+
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
     color: rgba(41, 171, 226, 0.7);}
 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
@@ -1803,9 +1803,48 @@ opacity:1;
 ::-moz-placeholder { /* Mozilla Firefox 19+ */
 color: rgba(41, 171, 226, 0.7);
 }
+
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
 color: rgba(41, 171, 226, 0.7);
 }
-input#mce-EMAIL{height: 44px; width: 294px;border:0px;margin: 10px 0px 40px 0px; background-color: rgba(41, 171, 226, 0.15),color: rgba(41, 171, 226, 0.15);
+
+
+#mc_embed_signup .mce_inline_error {background-color: transparent!important;}
+input#mce-EMAIL
+{
+  height: 44px; 
+  width: 354px;
+  border:0px;
+  margin: 20px 0px 20px 0px;
+  background-color: rgba(41, 171, 226, 0.15);
+  color: rgba(41, 171, 226, 0.15);
+  padding-left: 10px;
 }
-input.button {height: 44px; width:54px;border:0px;position: absolute;top:40px;margin:0px 0px  0px -4px;background-color: rgba(41, 171, 226, 1);color: #FFF;font-weight: bold;  text-transform: uppercase;    font-family: 'Jockey One', sans-serif;font-size: 15px;font-size: 1.5rem;}argin:
+input#mce-EMAIL:focus
+{
+ 
+  background-color: rgba(41, 171, 226, 0.15);
+  color: rgba(41, 171, 226, 1);
+  outline: none;
+}
+input.button {
+  height: 44px; 
+  width:54px;
+  border:0px;
+  position: absolute;
+  top:50px;
+  margin:0px 0px  0px -4px;
+  background-color: rgba(41, 171, 226, 1);
+  color: #FFF;
+  font-weight: bold;  
+  text-transform: uppercase;
+  font-family: 'Jockey One', sans-serif;
+  font-size: 15px;
+  font-size: 1.5rem;
+}
+input.button:hover 
+{
+  background-color: rgba(41, 171, 226, 0.90);
+}
+
+input.button:focus {outline: none;}

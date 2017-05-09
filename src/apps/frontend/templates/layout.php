@@ -129,6 +129,8 @@
 
         <div class="infos_content">
 
+        
+
 <iframe width="960" height="540" src="https://www.youtube.com/embed/e8UoUJha3zw?list=PLgpmTifGJBPQGp_JLT572YE7wV1gWTEpN" frameborder="0" allowfullscreen></iframe>        </div><!-- end of .infos-->
       </div><!-- end of .infos content -->
 
@@ -273,6 +275,8 @@ $.extend($.validator.messages, {
           </div><!-- end of footer -->
 
         </div><!-- end of container 12s -->
+
+
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
