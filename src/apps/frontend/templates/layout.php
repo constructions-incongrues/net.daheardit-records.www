@@ -118,7 +118,7 @@
 
       <div class="grid_12 category_infos">
          <div class="category_content">
-          <h1 id="vids"><?php echo __('Vidéos') ?></h1>
+          <h1 id="videos"><?php echo __('Vidéos') ?></h1>
           <span class="triangle"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/others/triangle-blanc.png" class="triangle" /></span>
 
           <span class="infos_button_top"><a href="#top"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/top_black.png" alt="TOP"></a></span>

@@ -9,7 +9,7 @@
             <li><a href="#discography"><?php echo __('Discographie') ?></a></li>
             <li><a href="#artists"><?php echo __('Artistes') ?></a></li>
             <li><a href="#artwork_artists"><?php echo __('Illustrations') ?></a></li>
-            <li> <a href="#Vids"><?php echo __('Vidéos') ?></a></li>
+            <li> <a href="#videos"><?php echo __('Vidéos') ?></a></li>
             <li><a href="#informations"><?php echo __('Informations') ?></a></li>
             <li><a href="<?php echo url_for('@homepage_localized?sf_culture=fr') ?>">FR </a> / <a href="<?php echo url_for('@homepage_localized?sf_culture=en') ?>">EN</a></li>
             <!--<li><a href="http://www.musiques-incongrues.net/forum/labels/daheardit-records/"><?php echo __('Forum') ?></a></li> -->
