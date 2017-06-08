@@ -85,7 +85,7 @@ $(document).ready(function () {
         //         $('.calque_artwork').hide();
         //         iframe.insertAfter('#carousel-current');
         // } 
-        else {
+        // else {
                 // Images
                 $('iframe').remove();
                 $('.calque_artists_pictures').show();
@@ -93,7 +93,7 @@ $(document).ready(function () {
                 $('#carousel-iframe').hide();
                 $('#carousel-current').attr('src', $(this).attr('href'));
                 $('.calque_artwork').show();
-        }
+        // }
 
         // Navigation
         $('a.carousel-nav').removeClass('current');
