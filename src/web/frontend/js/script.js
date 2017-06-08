@@ -66,7 +66,7 @@ $(document).ready(function () {
     // Carousels
     $('a.carousel-nav').click(function() {
         // Vimeo
-  
+  // vids reste statique, bouton caroussel change mais pas de changement d'image
                 // Images
                 $('iframe').remove();
                 $('.calque_artists_pictures').show();
