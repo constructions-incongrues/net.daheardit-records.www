@@ -66,7 +66,16 @@ $(document).ready(function () {
     // Carousels
     $('a.carousel-nav').click(function() {
         // Vimeo
-       
+  
+                // Images
+                $('iframe').remove();
+                $('.calque_artists_pictures').show();
+                $('#carousel-current').show();
+                $('#carousel-iframe').hide();
+                $('#carousel-current').attr('src', $(this).attr('href'));
+                $('.calque_artwork').show();
+        }
+
         // Navigation
         $('a.carousel-nav').removeClass('current');
         $(this).addClass('current');
