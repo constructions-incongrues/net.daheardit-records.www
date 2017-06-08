@@ -84,15 +84,15 @@ $(document).ready(function () {
                 $('#carousel-current').hide();
                 $('.calque_artwork').hide();
                 iframe.insertAfter('#carousel-current');
-        // } else {
-        //         // Images
-        //         $('iframe').remove();
-        //         $('.calque_artists_pictures').show();
-        //         $('#carousel-current').show();
-        //         $('#carousel-iframe').hide();
-        //         $('#carousel-current').attr('src', $(this).attr('href'));
-        //         $('.calque_artwork').show();
-        // }
+        } else {
+                // Images
+                $('iframe').remove();
+                $('.calque_artists_pictures').show();
+                $('#carousel-current').show();
+                $('#carousel-iframe').hide();
+                $('#carousel-current').attr('src', $(this).attr('href'));
+                $('.calque_artwork').show();
+        }
 
         // Navigation
         $('a.carousel-nav').removeClass('current');
