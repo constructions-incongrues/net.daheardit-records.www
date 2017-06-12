@@ -255,7 +255,7 @@
         <script src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/js/jQuery.jPlayer.2.1.0/add-on/jplayer.playlist.js?v=3"></script>
         <script src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/js/jquery.scrollTo-1.4.2-min.js?v=3"></script>
         <script src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/js/jquery.pjax.js?v=3"></script>
-        <script src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/js/script.js?v=3"></script>
+        <script src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/js/script.js?v=4"></script>
         <!-- end scripts-->
 
   <?php include_slot('morescript') ?>
