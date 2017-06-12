@@ -1435,11 +1435,11 @@ line-height:17px;
 .open_releases_press_text,.open_artists_bio
 {
 color:#666;
-  margin-left:10px;
-
+margin-left:10px;
 margin-top:-10px;
 padding-bottom:0px;
 line-height:17px;
+text-align: justify;
 }
 
 .open_releases_press_text a /*.open_releases_artwork_credit a*/
