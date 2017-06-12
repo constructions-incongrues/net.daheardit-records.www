@@ -69,27 +69,27 @@
         if ($(this).attr('href').match(/.*vimeo.*/)) {
                 $('iframe').show();
                 $('#carousel-iframe').show();
-                $('.calque_artists_pictures').hide();
+                $('.calque_artists_pictures').show();
                 var iframe = $('<iframe id="carousel-iframe" src="http://player.vimeo.com/video/'+ $(this).attr('href').match(/.*\/(\d+)/)[1] +'" width="460" height="460" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>')
-                $('#carousel-current').hide();
-                $('.calque_artwork').hide();
+                $('#carousel-current').show();
+                $('.calque_artwork').show();
                 iframe.insertAfter('#carousel-current');
         } else if ($(this).attr('href').match(/.*youtube.*/)) {
                 // Youtube
                 $('iframe').show();
                 $('#carousel-iframe').show();
-                $('.calque_artists_pictures').hide();
+                $('.calque_artists_pictures').show();
                 var id = $(this).attr('href').match(/.*v=(.+)/)[1];
                 var iframe = $('<iframe width="460" height="259" src="//www.youtube.com/embed/'+ id +'" frameborder="0" allowfullscreen></iframe>');
-                $('#carousel-current').hide();
-                $('.calque_artwork').hide();
+                $('#carousel-current').show();
+                $('.calque_artwork').show();
                 iframe.insertAfter('#carousel-current');
         } else {
                 // Images
-                $('iframe').remove();
+                $('iframe').show();
                 $('.calque_artists_pictures').show();
                 $('#carousel-current').show();
-                $('#carousel-iframe').hide();
+                $('#carousel-iframe').show();
                 $('#carousel-current').attr('src', $(this).attr('href'));
                 $('.calque_artwork').show();
         }
