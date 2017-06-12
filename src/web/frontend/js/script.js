@@ -1,4 +1,4 @@
-$(document).ready(function () {
+ $(document).ready(function () {
     // Paypal add to cart links
     $('a.paypal').click(function() {
         $('#paypal_id').val($(this).data('paypalid'));
