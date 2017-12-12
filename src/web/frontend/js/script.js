@@ -131,7 +131,7 @@
         _gaq.push(['_trackEvent', 'Releases', 'Archive Downloaded - ' + $(this).data('dhr-archive-format'), $(this).data('dhr-release-slug')]);
     });
 
-    $('a.video').each(function(i, e) {
+    $('.open_releases_videos a.video').each(function(i, e) {
         var match = $(e).attr('href').match(/.*youtube.com\/watch\?v=(.+).*/);
         if (match) {
             $.getJSON(
