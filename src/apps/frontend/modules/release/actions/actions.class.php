@@ -32,16 +32,16 @@ class releaseActions extends sfActions
         $this->getResponse()->setTitle(sprintf('%s - %s', $releaseArray['Artist']['name'], $releaseArray['title']));
 
         // Extract prices informations
-	    $prices = [];
-	    foreach (explode("\n", $releaseArray['price']) as $priceInfo) {
-		    $partsPrice = explode(',', $priceInfo);
-			$prices[] = [
-				'format'    => $partsPrice[0],
-				'price'     => $partsPrice[1],
-				'paypal_id' => $partsPrice[2]
-			];
-	    }
-	    $releaseArray['prices'] = $prices;
+        $prices = [];
+        foreach (explode("\n", $releaseArray['price']) as $priceInfo) {
+            $partsPrice = explode(',', $priceInfo);
+            $prices[] = [
+                'format'    => $partsPrice[0],
+                'price'     => $partsPrice[1],
+                'paypal_id' => $partsPrice[2]
+            ];
+        }
+        $releaseArray['prices'] = $prices;
 
         // Archives
         $archives = array();
@@ -52,6 +52,18 @@ class releaseActions extends sfActions
                 'name' => trim(str_replace(array($release['slug'], '_'), array('', ' '), basename($path, '.zip')))
             );
         }
+
+        // PDF press kits
+        $presskits = array();
+        $presskitsPaths = glob(sprintf('%s/web/assets/releases/%s/*.pdf', sfConfig::get('sf_root_dir'), $release['slug']));
+        foreach ($presskitsPaths as $path) {
+            $presskits[] = array(
+                'name' => trim(str_replace(array('com-'.$release['slug'].'-', '_'), array('', ' '), basename($path, '.pdf'))),
+                'url'  => $request->getRelativeUrlRoot().str_replace(sfConfig::get('sf_web_dir'), '', $path)
+            );
+        }
+
+        $releaseArray['presskits'] = $presskits;
 
         // Press
         $releaseArray['press'] = array();
@@ -245,7 +257,7 @@ class releaseActions extends sfActions
         $this->forward404Unless($release);
         if (!$request->hasParameter('preview') && !$release->is_public) {
             $this->forward404();
-        }        
+        }
 
         // Fetch release
         $track = Doctrine_Core::getTable('Track')->findOneByReleaseIdAndNumber($release['id'], $request->getParameter('number'));

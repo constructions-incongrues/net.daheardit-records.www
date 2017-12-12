@@ -186,6 +186,15 @@
 <?php echo nl2br(html_entity_decode($release['Translation'][$sf_user->getCulture()]['presentation'])) ?>
     </p>
 
+<?php if (count($release['presskits'])): ?>
+    <h1 class="open_releases_title">PDF</h1>
+    <ul class="open_releases_reviews">
+  <?php foreach ($release['presskits'] as $presskit): ?>
+      <li><a href="<?php echo $presskit['url'] ?>"><?php echo $presskit['name'] ?></a></li>
+  <?php endforeach ?>
+    </ul>
+<?php endif ?>
+
 <?php if (isset($release['press-releases']) && count($release['press-releases'])): ?>
     <ul class="open_releases_reviews">
   <?php foreach ($release['press-releases'] as $link): ?>
@@ -210,4 +219,3 @@
     </div><!-- end of grid_6 -->
   </div><!-- enf of release_content -->
   </div><!-- end of grid_12 release_open -->
-
