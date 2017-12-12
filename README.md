@@ -53,10 +53,10 @@ ant deploy-to -Dprofile=pastishosting
 
 - $RELEASE_SKU = l'identifiant de la sortie. Par exemple : `dhr-21` ou `dhr-32`
 - Créer un dossier qui va contenir tous les fichiers devant faire partie des archives (fichiers audio, images et autres) : `rm -r /tmp/$RELEASE_SKU && mkdir /tmp/$RELEASE_SKU`
-- Dans ce dossier, copier les fichiers audio qui doivent être nommés ainsi : TRACK_NUMBER - TRACK_TITLE.EXTENSIONK (par exemple : 01 - Waves of Piss.wav ou 10 - Deep Deep Deep.flac)
+- Dans ce dossier, copier les fichiers audio qui doivent être nommés ainsi : TRACK_NUMBER - TRACK_TITLE.EXTENSION (par exemple : 01 - Waves of Piss.wav ou 10 - Deep Deep Deep.flac)
 - Dans ce dossier copier tous les fichiers non-audio supplémentaires : images, textes, etc.
 - Uploader ce dossier sur Pastis Hosting : `rsync -avz --delete-after /tmp/$RELEASE_SKU -e 'ssh -p 2222' daheardit-record@ftp.pastis-hosting.net:/tmp/`
 - Se connecter sur Pastis Hosting - `ssh -p 2222 daheardit-record@ftp.pastis-hosting.net`
 - Se placer à la racine du projet `cd httpdocs`
 - Exécuter la commande de génération des archives (où $SKU = l'identifiant de la release : par exemple, dhr-33) : `./src/symfony dhr:release --includeExtensions=png --archives --db --streamables --sourceExtension=$SOURCE_EXTENSION /tmp/$RELEASE_SKU $RELEASE_SKU` où SOURCE_EXTENSION correspond à l'extension des fichiers sources (`wav` ou `flac`)
-- Faire le ménage `rm -r /tmp/$RELEASE_SKU`
+- Faire le ménage `rm -r /tmp/$RELEASE_SKU && ssh -p 2222 daheardit-record@ftp.pastis-hosting.net rm -r /tmp/$RELEASE_SKU`
