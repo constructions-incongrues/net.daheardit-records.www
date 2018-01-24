@@ -9,6 +9,9 @@ sudo add-apt-repository -y ppa:mc3man/trusty-media
 # Mise à jour des dépots
 apt-get -qq update
 
+# Installation des paquets nécessaires à la suite
+apt-get -y install ffmpeg git imagemagick python3-pip unzip
+
 # Configuration de la timezone
 echo "Europe/Paris" > /etc/timezone
 apt-get install -y tzdata
@@ -17,9 +20,6 @@ dpkg-reconfigure -f noninteractive tzdata
 # Installation de Apache et PHP
 apt-get -y install libapache2-mod-php5 php5-cli
 a2enmod rewrite
-
-# Installation des paquets nécessaires à la suite
-apt-get -y install ffmpeg git python3-pip unzip
 
 # Installation de youtube-upload
 # https://github.com/tokland/youtube-upload

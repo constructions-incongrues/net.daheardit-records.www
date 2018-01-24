@@ -34,3 +34,4 @@ src/web/releases/*
 *.mp3
 /src/config/ProjectConfiguration.class.php
 /src/data/fixtures/dhr-*
+/src/data/tmp/*
