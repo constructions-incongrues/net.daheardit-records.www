@@ -1,7 +1,16 @@
 #!/usr/bin/env bash
 
+# Fail early
+set -e
+
+# Installation des dépôts tiers
+sudo add-apt-repository -y ppa:mc3man/trusty-media
+
 # Mise à jour des dépots
 apt-get -qq update
+
+# Installation des paquets nécessaires à la suite
+apt-get -y install ffmpeg git imagemagick python3-pip unzip
 
 # Configuration de la timezone
 echo "Europe/Paris" > /etc/timezone
@@ -9,11 +18,18 @@ apt-get install -y tzdata
 dpkg-reconfigure -f noninteractive tzdata
 
 # Installation de Apache et PHP
-a2enmod rewrite
 apt-get -y install libapache2-mod-php5 php5-cli
+a2enmod rewrite
 
-# Installation de Git
-apt-get -y install git
+# Installation de youtube-upload
+# https://github.com/tokland/youtube-upload
+pip3 install --upgrade google-api-python-client progressbar2
+rm -rf youtube-upload-master
+rm -f master.zip
+wget https://github.com/tokland/youtube-upload/archive/master.zip
+unzip master.zip
+cd youtube-upload-master
+python3 setup.py install
 
 # Installation de MySQL
 echo "mysql-server mysql-server/root_password password root" | debconf-set-selections
