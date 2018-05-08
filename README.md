@@ -56,6 +56,7 @@ ant deploy-to -Dprofile=pastishosting
 - Créer un dossier de travail qui va contenir tous les fichiers devant faire partie des archives (fichiers audio, images et autres) : `rm -r ./src/data/tmp/$RELEASE_SKU && mkdir -p ./src/data/tmp/$RELEASE_SKU`
 - Dans ce dossier, copier les fichiers audio qui doivent être nommés ainsi : TRACK_NUMBER - TRACK_TITLE.EXTENSION (par exemple : 01 - Waves of Piss.wav ou 10 - Deep Deep Deep.flac)
 - Dans ce dossier copier tous les fichiers non-audio supplémentaires : images, textes, etc.
+
 ### Génération des archives
 
 - Uploader le dossier de travail sur Pastis Hosting : `rsync -avz --delete-after ./src/data/tmp/$RELEASE_SKU -e 'ssh -p 2222' daheardit-record@ftp.pastis-hosting.net:/tmp/`

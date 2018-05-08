@@ -20,7 +20,7 @@ Vagrant.configure(2) do |config|
   config.vm.provision "shell", path: "provision.sh"
 
   # Forward SSH
-#  config.ssh.forward_agent = true
+  config.ssh.forward_agent = true
 
   # Use a linked clone
   config.vm.provider "virtualbox" do |vb|

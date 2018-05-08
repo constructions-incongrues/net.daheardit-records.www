@@ -3,10 +3,15 @@
 # Fail early
 set -e
 
-# Installation des dépôts tiers
-sudo add-apt-repository -y ppa:mc3man/trusty-media
+# Fix DNS
+echo "nameserver 8.8.8.8" > /etc/resolv.conf
 
 # Mise à jour des dépots
+apt-get -qq update
+
+# Installation des dépôts tiers
+apt-get install -y python-software-properties software-properties-common
+add-apt-repository -y ppa:mc3man/trusty-media
 apt-get -qq update
 
 # Installation des paquets nécessaires à la suite
