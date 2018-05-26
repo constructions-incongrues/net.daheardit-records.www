@@ -36,11 +36,6 @@ RUN curl -L "https://github.com/tianon/gosu/releases/download/1.10/gosu-amd64" >
     && chmod +x /usr/local/bin/gosu \
     && gosu nobody true
 
-# Installs Dockito Vault ONVAULT utility
-# https://github.com/dockito/vault
-RUN curl -L https://raw.githubusercontent.com/dockito/vault/master/ONVAULT > /usr/local/bin/ONVAULT && \
-    chmod +x /usr/local/bin/ONVAULT
-
 # Install development packages
 RUN apt-get -y install ${PACKAGES_DEV}
 
@@ -58,4 +53,4 @@ COPY --chown=app:app ./ /usr/local/src/app
 WORKDIR /usr/local/src/app
 
 # Build application
-RUN gosu app ONVAULT make install
+RUN gosu app make install
