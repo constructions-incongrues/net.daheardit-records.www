@@ -60,8 +60,7 @@ cd /vagrant
 git submodule update --init --recursive
 ./composer.phar install --prefer-dist --no-progress
 ant configure build -Dprofile=vagrant
-./src/symfony doctrine:build --all --no-confirmation
-./src/symfony doctrine:data-load
+./src/symfony doctrine:build --all-classes --no-confirmation
 
 # Mise à disposition du projet dans Apache
 ln -sf /vagrant/src/web/* /var/www/
