@@ -490,7 +490,8 @@ padding:5px 0px 0px 0px;
 margin-bottom:0px;
 border-right:1px solid #28abe3;
 height:116px;
-margin-top:100px;}
+margin-top:100px;
+display: none;}
 
 .header_news_2 a
 {
