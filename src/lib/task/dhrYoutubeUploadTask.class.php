@@ -50,27 +50,21 @@ class dhrYoutubeUploadTask extends sfBaseTask
 
         $this->logSection('release-youtube', sprintf('Uploading release %s from %s', $arguments['slug'], $arguments['directory']));
 
-        // Grab tracks
+        // Grab image files
+        $imageSource = sprintf('%s/youtube.png', $arguments['directory']);
+        if (!file_exists($imageSource)) {
+            throw new RuntimeException('No youtube.png file found in directory');
+        }
+
+        $this->logSection('release-youtube', 'Found youtube.png file');
+
+        // Grab audio files
         $tracksSource = glob(sprintf('%s/*.%s', $arguments['directory'], $options['sourceExtension']));
         if (!count($tracksSource)) {
             throw new RuntimeException(sprintf('No .%s files found in directory', $options['sourceExtension']));
         }
 
         $this->logSection('release-youtube', sprintf('Found %d .%s files', count($tracksSource), $options['sourceExtension']));
-
-        // Generate video image
-        $command = sprintf(
-            'montage %s/assets/releases/%s/images/%s_1.png %s/assets/releases/%s/images/%s_2.png -geometry 460x460 %s/cover.png',
-            sfConfig::get('sf_web_dir'),
-            $release->slug,
-            $release->slug,
-            sfConfig::get('sf_web_dir'),
-            $release->slug,
-            $release->slug,
-            $workspacePath
-        );
-        var_dump($command);
-        exec($command);
 
         $tracks = [];
         foreach ($tracksSource as $trackFilePath) {
@@ -93,8 +87,8 @@ class dhrYoutubeUploadTask extends sfBaseTask
 
             // Generate videos
             $command = sprintf(
-                "ffmpeg -loop 1 -i '%s/cover.png' -i '%s' -c:v libx264 -tune stillimage -c:a aac -b:a 320k -pix_fmt yuv444p -shortest '%s/%s.mp4'",
-                $workspacePath,
+                "ffmpeg -loop 1 -i '%s/youtube.png' -i '%s' -c:v libx264 -tune stillimage -c:a aac -b:a 320k -pix_fmt yuv444p -shortest '%s/%s.mp4'",
+                $arguments['directory'],
                 $trackFilePath,
                 $workspacePath,
                 basename($trackFilePath, '.'.$options['sourceExtension'])

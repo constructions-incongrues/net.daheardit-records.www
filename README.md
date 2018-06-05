@@ -1,4 +1,6 @@
-# Installation d'un environnement de développement
+# Da ! Heard It Records
+
+## Installation d'un environnement de développement
 
 ```bash
 apt update
@@ -9,11 +11,11 @@ cd net.daheardit-records.www
 ant install
 ```
 
-# Développement
+## Développement
 
-## Démarrage de la machine virtuelle
+### Démarrage de la machine virtuelle
 
-```
+```sh
 vagrant up
 ```
 
@@ -26,24 +28,22 @@ Le site est accessible aux adresses suivantes :
 
 phpMyAdmin est accessible à l'adresse http://daheardit-records.vagrant.dev/phpmyadmin (root / root)
 
-## Modification des données de la base de données de développement
+### Rappatriement des de la dernière version de la base de données
 
-Les données de la base sont déclarées dans le fichier src/data/fixtures/fixtures.yml.
-Une fois que ce fichier a été modifié, il faut recharger les données à l'aide de la commande suivante :
-
-```bash
+```sh
+ssh -p 2222 daheardit-record@ftp.pastis-hosting.net mysqldump -hmysql.1 -udaheardit-record -p daheardit-record > ./src/data/fixtures/net_dahearditrecords_www.dump.sql
 vagrant provision
 ```
 
-# Déploiement
+## Déploiement
 
-## sur [preview.daheardit-records.net](http://preview.daheardit-records.net)
+### sur [preview.daheardit-records.net](http://preview.daheardit-records.net)
 
 ```bash
 ant deploy-to -Dprofile=pastishosting-preview
 ```
 
-## sur [www.daheardit-records.net](http://www.daheardit-records.net)
+### sur [www.daheardit-records.net](http://www.daheardit-records.net)
 
 ```bash
 ant deploy-to -Dprofile=pastishosting
@@ -59,7 +59,7 @@ ant deploy-to -Dprofile=pastishosting
 
 ### Génération des archives
 
-- Uploader le dossier de travail sur Pastis Hosting : `rsync -avz --delete-after ./src/data/tmp/$RELEASE_SKU -e 'ssh -p 2222' daheardit-record@ftp.pastis-hosting.net:/tmp/`
+- Uploader le dossier de travail sur Pastis Hosting : `rsync -avz --delete-after --progress ./src/data/tmp/$RELEASE_SKU -e 'ssh -p 2222' daheardit-record@ftp.pastis-hosting.net:/tmp/`
 - Se connecter sur Pastis Hosting - `ssh -p 2222 daheardit-record@ftp.pastis-hosting.net`
 - Se placer à la racine du projet `cd httpdocs`
 - Exécuter la commande de génération des archives (où `$SKU` = l'identifiant de la release : par exemple, `dhr-33`) : `./src/symfony dhr:release --includeExtensions=png,pdf,txt --archives --db --streamables --sourceExtension=$SOURCE_EXTENSION /tmp/$RELEASE_SKU $RELEASE_SKU` où `$SOURCE_EXTENSION` correspond à l'extension des fichiers sources (`wav` ou `flac`)
@@ -68,7 +68,8 @@ ant deploy-to -Dprofile=pastishosting
 ### Publication sur Youtube
 
 - Copier les deux fichiers JSON de connexion à Youtube dans le dossier `./src/data/tmp` : `cp /media/$USER/secrets/daheardit-records.net/*.json ./src/data/tmp/`
+- Créer un fichier `./src/data/tmp/$RELEASE_SKU/youtube.png` de dimensions 1280x760 px
 - Démarrer la machine virtuelle : `vagrant up`
 - Se connecter à la machine virtuelle : `vagrant ssh`
-- Exécuter le script de publication : `/vagrant/src/symfony dhr:release-youtube --sourceExtension=$SOURCE_EXTENSION ./src/data/tmp/$RELEASE_SKU $RELEASE_SKU /vagrant/src/data/tmp/dahearditrecordsnet_client_secret.json /vagrant/src/data/tmp/dahearditrecordsnet_youtube_credentials.json`
+- Exécuter le script de publication : `/vagrant/src/symfony dhr:release-youtube --sourceExtension=$SOURCE_EXTENSION /vagrant/src/data/tmp/$RELEASE_SKU $RELEASE_SKU /vagrant/src/data/tmp/dahearditrecordsnet_client_secret.json /vagrant/src/data/tmp/dahearditrecordsnet_youtube_credentials.json`
 - **Supprimer les fichiers de connexion** : `rm /vagrant/src/data/tmp/*.json`
