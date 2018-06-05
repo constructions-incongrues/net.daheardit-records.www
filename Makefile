@@ -14,8 +14,8 @@ install:
 start:
 	# Start service
 	# Dependencies are declared by adding a DEPENDENCIES= string at the end of the command
-	# eg. $(MAKE) -C ../../../.. dhr-start-service DEPENDENCIES="rabbitmq ws"
-	$(MAKE) -C ../../../.. dhr-start-service DEPENDENCIES="dbgp-proxy"
+	# eg. $(MAKE) -C ../../../.. daheardit-start-service DEPENDENCIES="rabbitmq ws"
+	$(MAKE) -C ../../../.. daheardit-start-service DEPENDENCIES="dbgp-proxy"
 
 # Règles propres au projet
 
