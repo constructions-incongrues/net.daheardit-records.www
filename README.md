@@ -67,7 +67,7 @@ ant deploy-to -Dprofile=pastishosting
 
 ### Publication sur Youtube
 
-- Copier les deux fichiers JSON de connexion à Youtube dans le dossier `./src/data/tmp` : `cp /media/$USER/secrets/daheardit-records.net/*.json ./src/data/tmp/`
+- Copier les deux fichiers JSON de connexion à Youtube dans le dossier `./src/data/tmp` : `cp -v /media/$USER/secrets/daheardit-records.net/*.json ./src/data/tmp/`
 - Créer un fichier `./src/data/tmp/$RELEASE_SKU/youtube.png` de dimensions 1280x760 px
 - Démarrer la machine virtuelle : `vagrant up`
 - Se connecter à la machine virtuelle : `vagrant ssh`

@@ -118,7 +118,8 @@ EOT;
                 " --description-file=%s/description.txt".
                 " --privacy=private".
                 " --thumbnail=%s/assets/releases/%s/images/%s_1.png".
-                " --playlist='%s - %s [%s] (Full Album)'".
+                // " --playlist='%s - %s [%s] (Full Album)'".
+                " --playlist='Artist - Title [%s] (Full Album)'".
                 " '%s/%s.mp4'",
                 $arguments['clientSecret'],
                 $arguments['oauthCredentials'],
@@ -130,8 +131,8 @@ EOT;
                 sfConfig::get('sf_web_dir'),
                 $release->slug,
                 $release->slug,
-                $release->getArtist()->getName(),
-                $release->title,
+                // $release->getArtist()->getName(),
+                // $release->title,
                 $release->sku,
                 $workspacePath,
                 basename($trackFilePath, '.'.$options['sourceExtension'])
