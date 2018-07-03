@@ -28,7 +28,7 @@ a2enmod rewrite
 
 # Installation de youtube-upload
 # https://github.com/tokland/youtube-upload
-pip3 install --upgrade google-api-python-client progressbar2
+pip3 install --upgrade google-api-python-client progressbar2 oauth2client
 rm -rf youtube-upload-master
 rm -f master.zip
 wget https://github.com/tokland/youtube-upload/archive/master.zip
