@@ -51,73 +51,29 @@
   dhrUriRoot = '<?php echo $sf_request->getRelativeUrlRoot() ?>';
   </script>
 </head>
+
+
 <body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v2.5";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
 
   <div class="container_12" id="top">
 
     <div class="grid_12 header">
-
+<div class="fb-post" data-href="{your-post-url}"></div>
+  <script src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v2.5" 
+      async></script>  
+  <div class="fb-post" 
+      data-href="https://www.facebook.com/20531316728/posts/10154009990506729/"
+      data-width="500"></div>
       <span class="header_calque"></span>
-
-      <ul>
-<?php
-//function to retrieve posts from facebook’s server
-function loadFB($fbID){
-    $url = "http://graph.facebook.com/".$fbID."/feed?limit=3";
-    // Update by MC Vooges 11jun 2014: Access token is now required:
-    $url.= '&access_token=YOUR_TOKEN|YOUR_ACCESS_SECRET';// *
-
-    //load and setup CURL
-     $c = curl_init($url);
-     curl_setopt($c, CURLOPT_RETURNTRANSFER, 1);
-    //get data from facebook and decode JSON
-     $page = json_decode(curl_exec($c));
-    //close the connection
-     curl_close($c);
-    //return the data as an object
-     return $page->data;
-}
-
-/* Change These Values */
-// Your Facebook ID
- $fbid = "190506416472588";
-// How many posts to show?
- $fbLimit = 10;
-// Your Timezone
-date_default_timezone_set("America/Chicago");
-
-
-/* Dont Change */
-// Variable used to count how many we’ve loaded
- $fbCount = 0;
-// Call the function and get the posts from facebook
- $myPosts = loadFB($fbid);
-
-
-//loop through all the posts we got from facebook
-foreach($myPosts as $dPost){
-    //only show posts that are posted by the page admin
-    if($dPost->from->id==$fbid){
-        //get the post date / time and convert to unix time
-         $dTime = strtotime($dPost->created_time);
-        //format the date / time into something human readable
-        //if you want it formatted differently look up the php date function
-         $myTime=date("M d Y h:ia",$dTime);
-        ?>
-        <ul>
-            <li><?php echo($dPost->message) . $myTime; ?></li>
-        </ul>
-        <?php
-        //increment counter
-         $fbCount++;
-        //if we’ve outputted the number set above in fblimit we’re done
-         if($fbCount >= $fbLimit) break;
-    }
-}
-?>
-</ul>
-
 
 <?php include_partial('main/menu') ?>
 
