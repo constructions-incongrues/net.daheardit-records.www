@@ -82,7 +82,8 @@
 
       <div class="grid_12 releases">
         <div class="category_content">
-          <h1 id="discography"><a name="discography"><?php echo __('Discographie') ?></a></h1>
+        <a name="discography"></a>
+          <h1 id="discography"><?php echo __('Discographie') ?></h1>
             <span class="triangle"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/others/triangle.png" class="triangle" /></span>
         </div><!-- end of category contents -->
       </div><!-- end of releases -->
