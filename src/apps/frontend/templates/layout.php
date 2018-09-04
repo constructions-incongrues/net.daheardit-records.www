@@ -50,6 +50,18 @@
   <script>
   dhrUriRoot = '<?php echo $sf_request->getRelativeUrlRoot() ?>';
   </script>
+  <script>
+  $(document).ready(function () {
+        var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+        if (window.location.hash && isChrome) {
+            setTimeout(function () {
+                var hash = window.location.hash;
+                window.location.hash = "";
+                window.location.hash = hash;
+            }, 300);
+        }
+    });
+    </script>
 </head>
 <body>
 
@@ -82,7 +94,6 @@
 
       <div class="grid_12 releases">
         <div class="category_content">
-        <a name="discography"></a>
           <h1 id="discography"><?php echo __('Discographie') ?></h1>
             <span class="triangle"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/others/triangle.png" class="triangle" /></span>
         </div><!-- end of category contents -->
