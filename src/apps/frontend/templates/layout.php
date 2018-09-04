@@ -67,12 +67,7 @@
   <div class="container_12" id="top">
 
     <div class="grid_12 header">
-<div class="fb-post" data-href="{your-post-url}"></div>
-  <script src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v2.5" 
-      async></script>  
-  <div class="fb-post" 
-      data-href="https://www.facebook.com/20531316728/posts/10154009990506729/"
-      data-width="500"></div>
+
       <span class="header_calque"></span>
 
 <?php include_partial('main/menu') ?>
@@ -99,6 +94,13 @@
         <div class="category_content">
           <h1 id="discography"><?php echo __('Discographie') ?></h1>
             <span class="triangle"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/others/triangle.png" class="triangle" /></span>
+
+            <div class="fb-post" data-href="{your-post-url}"></div>
+  <script src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v2.5" 
+      async></script>  
+  <div class="fb-post" 
+      data-href="https://www.facebook.com/20531316728/posts/10154009990506729/"
+      data-width="500"></div>
         </div><!-- end of category contents -->
       </div><!-- end of releases -->
 
