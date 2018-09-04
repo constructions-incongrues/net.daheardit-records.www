@@ -59,11 +59,11 @@ ant deploy-to -Dprofile=pastishosting
 
 ### Génération des archives
 
-- Uploader le dossier de travail sur Pastis Hosting : `rsync -avz --delete-after --progress ./src/data/tmp/$RELEASE_SKU -e 'ssh' daheardit-record@ftp.pastis-hosting.net:/var/www/vhosts/daheardit-records.net/httpdocs/src/data/tmp/`
+- Uploader le dossier de travail sur Pastis Hosting : `rsync -avz --delete-after --progress ./src/data/tmp/$RELEASE_SKU -e 'ssh' daheardit-record@ftp.pastis-hosting.net:/tmp/`
 - Se connecter sur Pastis Hosting - `ssh daheardit-record@ftp.pastis-hosting.net`
 - Se placer à la racine du projet `cd httpdocs`
-- Exécuter la commande de génération des archives (où `$RELEASE_SKU` = l'identifiant de la release : par exemple, `dhr-33`) : `./src/symfony dhr:release --includeExtensions=jpg,png,pdf,txt --archives --db --streamables --sourceExtension=$SOURCE_EXTENSION /var/www/vhosts/daheardit-records.net/httpdocs/src/data/tmp/$RELEASE_SKU $RELEASE_SKU` où `$SOURCE_EXTENSION` correspond à l'extension des fichiers sources (`wav` ou `flac`)
-- Faire le ménage `ssh daheardit-record@ftp.pastis-hosting.net rm -r /var/www/vhosts/daheardit-records.net/httpdocs/src/data/tmp/$RELEASE_SKU`
+- Exécuter la commande de génération des archives (où `$RELEASE_SKU` = l'identifiant de la release : par exemple, `dhr-33`) : `./src/symfony dhr:release --includeExtensions=jpg,png,pdf,txt --archives --db --streamables --sourceExtension=$SOURCE_EXTENSION /tmp/$RELEASE_SKU $RELEASE_SKU` où `$SOURCE_EXTENSION` correspond à l'extension des fichiers sources (`wav` ou `flac`)
+- Faire le ménage `ssh daheardit-record@ftp.pastis-hosting.net rm -r /tmp/$RELEASE_SKU`
 
 ### Publication sur Youtube
 
