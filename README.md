@@ -28,10 +28,10 @@ Le site est accessible aux adresses suivantes :
 
 phpMyAdmin est accessible à l'adresse http://daheardit-records.vagrant.dev/phpmyadmin (root / root)
 
-### Rappatriement des de la dernière version de la base de données
+### Rappatriement de la dernière version de la base de données
 
 ```sh
-ssh -p 2222 daheardit-record@ftp.pastis-hosting.net mysqldump -hmysql.1 -udaheardit-record -p daheardit-record > ./src/data/fixtures/net_dahearditrecords_www.dump.sql
+ssh daheardit-record@ftp.pastis-hosting.net mysqldump -hmysql.1 -udaheardit-record -p daheardit-record > ./src/data/fixtures/net_dahearditrecords_www.dump.sql
 vagrant provision
 ```
 
@@ -53,17 +53,17 @@ ant deploy-to -Dprofile=pastishosting
 
 - `$RELEASE_SKU` = l'identifiant de la sortie. Par exemple : `dhr-21` ou `dhr-32`
 - Se placer à la racine des sources du projet
-- Créer un dossier de travail qui va contenir tous les fichiers devant faire partie des archives (fichiers audio, images et autres) : `rm -r ./src/data/tmp/$RELEASE_SKU && mkdir -p ./src/data/tmp/$RELEASE_SKU`
+- Créer un dossier de travail qui va contenir tous les fichiers devant faire partie des archives (fichiers audio, images et autres) : `rm -rf ./src/data/tmp/$RELEASE_SKU && mkdir -p ./src/data/tmp/$RELEASE_SKU`
 - Dans ce dossier, copier les fichiers audio qui doivent être nommés ainsi : TRACK_NUMBER - TRACK_TITLE.EXTENSION (par exemple : 01 - Waves of Piss.wav ou 10 - Deep Deep Deep.flac)
 - Dans ce dossier copier tous les fichiers non-audio supplémentaires : images, textes, etc.
 
 ### Génération des archives
 
-- Uploader le dossier de travail sur Pastis Hosting : `rsync -avz --delete-after --progress ./src/data/tmp/$RELEASE_SKU -e 'ssh -p 2222' daheardit-record@ftp.pastis-hosting.net:/tmp/`
-- Se connecter sur Pastis Hosting - `ssh -p 2222 daheardit-record@ftp.pastis-hosting.net`
+- Uploader le dossier de travail sur Pastis Hosting : `rsync -avz --delete-after --progress ./src/data/tmp/$RELEASE_SKU -e 'ssh' daheardit-record@ftp.pastis-hosting.net:/var/www/vhosts/daheardit-records.net/httpdocs/src/data/tmp/`
+- Se connecter sur Pastis Hosting - `ssh daheardit-record@ftp.pastis-hosting.net`
 - Se placer à la racine du projet `cd httpdocs`
-- Exécuter la commande de génération des archives (où `$SKU` = l'identifiant de la release : par exemple, `dhr-33`) : `./src/symfony dhr:release --includeExtensions=png,pdf,txt --archives --db --streamables --sourceExtension=$SOURCE_EXTENSION /tmp/$RELEASE_SKU $RELEASE_SKU` où `$SOURCE_EXTENSION` correspond à l'extension des fichiers sources (`wav` ou `flac`)
-- Faire le ménage `ssh -p 2222 daheardit-record@ftp.pastis-hosting.net rm -r /tmp/$RELEASE_SKU`
+- Exécuter la commande de génération des archives (où `$RELEASE_SKU` = l'identifiant de la release : par exemple, `dhr-33`) : `./src/symfony dhr:release --includeExtensions=jpg,png,pdf,txt --archives --db --streamables --sourceExtension=$SOURCE_EXTENSION /var/www/vhosts/daheardit-records.net/httpdocs/src/data/tmp/$RELEASE_SKU $RELEASE_SKU` où `$SOURCE_EXTENSION` correspond à l'extension des fichiers sources (`wav` ou `flac`)
+- Faire le ménage `ssh daheardit-record@ftp.pastis-hosting.net rm -r /var/www/vhosts/daheardit-records.net/httpdocs/src/data/tmp/$RELEASE_SKU`
 
 ### Publication sur Youtube
 
