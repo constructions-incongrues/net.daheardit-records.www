@@ -15,9 +15,6 @@ class ProjectConfiguration extends sfProjectConfiguration
 			'sfFeed2Plugin',
 			'sfImageTransformPlugin'
 		);
-
-        $this->setLogDir(@symfony1.log.path@);
-        $this->setCacheDir(@symfony1.cache.path@);
 	}
 
 	public function configureDoctrine()
