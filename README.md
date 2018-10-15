@@ -67,9 +67,10 @@ ant deploy-to -Dprofile=pastishosting
 
 ### Publication sur Youtube
 
-- Copier les deux fichiers JSON de connexion à Youtube dans le dossier `./src/data/tmp` : `cp -v /media/$USER/secrets/daheardit-records.net/*.json ./src/data/tmp/`
-- Créer un fichier `./src/data/tmp/$RELEASE_SKU/youtube.png` de dimensions 1280x760 px
+- Copier le fichiers JSON de connexion à Youtube dans le dossier `./src/data/tmp` : `cp -v /media/$USER/secrets/daheardit-records.net/*.json ./src/data/tmp/`
+- Créer un fichier `./src/data/tmp/$RELEASE_SKU/youtube.png` de dimensions 1280x760px
 - Démarrer la machine virtuelle : `vagrant up`
 - Se connecter à la machine virtuelle : `vagrant ssh`
-- Exécuter le script de publication : `/vagrant/src/symfony dhr:release-youtube --sourceExtension=$SOURCE_EXTENSION /vagrant/src/data/tmp/$RELEASE_SKU $RELEASE_SKU /vagrant/src/data/tmp/dahearditrecordsnet_client_secret.json /vagrant/src/data/tmp/dahearditrecordsnet_youtube_credentials.json`
+- Exécuter le script de génération des vidéos : `/vagrant/src/symfony dhr:generate-videos --sourceExtension=${SOURCE_EXTENSION-flac} /vagrant/src/data/tmp/$RELEASE_SKU /vagrant/src/data/tmp/$RELEASE_SKU/youtube $RELEASE_SKU`
+- Exécuter le script de publication : `/vagrant/src/symfony dhr:youtube-upload /vagrant/src/data/tmp/$RELEASE_SKU/youtube $RELEASE_SKU /vagrant/src/data/tmp/dahearditrecordsnet_client_secret.json`
 - **Supprimer les fichiers de connexion** : `rm /vagrant/src/data/tmp/*.json`

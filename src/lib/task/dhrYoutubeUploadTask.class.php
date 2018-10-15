@@ -6,15 +6,14 @@ class dhrYoutubeUploadTask extends sfBaseTask
     {
         // Task configuration
         $this->namespace = 'dhr';
-        $this->name = 'release-youtube';
-        $this->briefDescription = 'Creates Youtube videos and playlist for a release';
+        $this->name = 'youtube-upload';
+        $this->briefDescription = 'Uploads videos to Youtube and puts them in a playlist';
         $this->detailedDescription = '';
 
         $this->addArguments(array(
-            new sfCommandArgument('directory', sfCommandArgument::REQUIRED, 'Path to directory holding source files'),
+            new sfCommandArgument('directory', sfCommandArgument::REQUIRED, 'Path to directory holding video files'),
             new sfCommandArgument('slug', sfCommandArgument::REQUIRED, 'Release slug'),
             new sfCommandArgument('clientSecret', sfCommandArgument::REQUIRED, 'Path to client secret JSON file'),
-            new sfCommandArgument('oauthCredentials', sfCommandArgument::REQUIRED, 'Path to OAuth credentials JSON file'),
         ));
 
         $this->addOptions(array(
@@ -28,10 +27,9 @@ class dhrYoutubeUploadTask extends sfBaseTask
         // Init database
         $databaseManager = new sfDatabaseManager($this->configuration);
 
-        // Create workspace
         $workspacePath = sprintf('%s/%s', $options['workspace'], uniqid('dhr_'));
         mkdir($workspacePath);
-        $this->logSection('release-youtube', sprintf('Creating workspace %s', $workspacePath));
+        $this->logSection('youtube-upload', sprintf('Creating workspace %s', $workspacePath));
 
         // Fetch release
         $release = Doctrine_Core::getTable('Release')->findOneBySlug($arguments['slug']);
@@ -48,7 +46,7 @@ class dhrYoutubeUploadTask extends sfBaseTask
             throw new InvalidArgumentException(sprintf('Release %s does not exist', $arguments['slug']));
         }
 
-        $this->logSection('release-youtube', sprintf('Uploading release %s from %s', $arguments['slug'], $arguments['directory']));
+        $this->logSection('youtube-upload', sprintf('Uploading release %s from %s', $arguments['slug'], $arguments['directory']));
 
         // Grab image files
         $imageSource = sprintf('%s/youtube.png', $arguments['directory']);
@@ -56,20 +54,20 @@ class dhrYoutubeUploadTask extends sfBaseTask
             throw new RuntimeException('No youtube.png file found in directory');
         }
 
-        $this->logSection('release-youtube', 'Found youtube.png file');
+        $this->logSection('youtube-upload', 'Found youtube.png file');
 
         // Grab audio files
-        $tracksSource = glob(sprintf('%s/*.%s', $arguments['directory'], $options['sourceExtension']));
+        $tracksSource = glob(sprintf('%s/*.%s', $arguments['directory'], 'mp4'));
         if (!count($tracksSource)) {
-            throw new RuntimeException(sprintf('No .%s files found in directory', $options['sourceExtension']));
+            throw new RuntimeException(sprintf('No .%s files found in directory', 'mp4'));
         }
 
-        $this->logSection('release-youtube', sprintf('Found %d .%s files', count($tracksSource), $options['sourceExtension']));
+        $this->logSection('youtube-upload', sprintf('Found %d .%s files', count($tracksSource), 'mp4'));
 
         $tracks = [];
         foreach ($tracksSource as $trackFilePath) {
             $matches = array();
-            preg_match(sprintf('/^(\d+) - (.*).%s$/', $options['sourceExtension']), basename($trackFilePath), $matches);
+            preg_match(sprintf('/^(\d+) - (.*).%s$/', 'mp4'), basename($trackFilePath), $matches);
             if (count($matches) < 2) {
                 $track = array(
                     'number' => '0',
@@ -84,17 +82,6 @@ class dhrYoutubeUploadTask extends sfBaseTask
                 );
             }
             $tracks[] = $track;
-
-            // Generate videos
-            $command = sprintf(
-                "ffmpeg -loop 1 -i '%s/youtube.png' -i '%s' -c:v libx264 -tune stillimage -c:a aac -b:a 320k -pix_fmt yuv444p -shortest '%s/%s.mp4'",
-                $arguments['directory'],
-                $trackFilePath,
-                $workspacePath,
-                basename($trackFilePath, '.'.$options['sourceExtension'])
-            );
-            var_dump($command);
-            exec($command);
 
             // Generate description
             $tpl = <<<EOT
@@ -112,17 +99,15 @@ EOT;
             $command = sprintf(
                 "youtube-upload ".
                 " --client-secrets=%s".
-                " --credentials-file=%s".
                 " --title='%s - %s - %s [%s]'".
                 " --category=Music".
                 " --description-file=%s/description.txt".
                 " --privacy=private".
                 " --thumbnail=%s/assets/releases/%s/images/%s_1.png".
-                // " --playlist='%s - %s [%s] (Full Album)'".
-                " --playlist='Artist - Title [%s] (Full Album)'".
+                " --playlist='%s - %s [%s] (Full Album)'".
+                " --playlist='%s - %s [%s] (Full Album)'".
                 " '%s/%s.mp4'",
                 $arguments['clientSecret'],
-                $arguments['oauthCredentials'],
                 $track['number'],
                 $release->getArtist()->getName(),
                 $track['title'],
@@ -131,11 +116,11 @@ EOT;
                 sfConfig::get('sf_web_dir'),
                 $release->slug,
                 $release->slug,
-                // $release->getArtist()->getName(),
-                // $release->title,
+                $release->getArtist()->getName(),
+                $release->title,
                 $release->sku,
                 $workspacePath,
-                basename($trackFilePath, '.'.$options['sourceExtension'])
+                basename($trackFilePath, '.'.'mp4')
             );
             var_dump($command);
             exec($command);

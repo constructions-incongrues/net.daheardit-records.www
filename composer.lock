@@ -1,0 +1,94 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "6b3a60fd710e0f0dcafc6f79e5edd3bf",
+    "packages": [
+        {
+            "name": "constructions-incongrues/ananas-build-toolkit",
+            "version": "0.34.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/constructions-incongrues/ananas-build-toolkit.git",
+                "reference": "0ee984b9958c677b26aa15208fd6ca62fb7d28af"
+            },
+            "require": {
+                "php": ">=5.5.0"
+            },
+            "type": "library",
+            "authors": [
+                {
+                    "name": "Constructions Incongrues",
+                    "email": "contact@constructions-incongrues.net"
+                }
+            ],
+            "description": "L'Ananas Build Toolkit est un framework de configuration et de déploiement de projet logiciel.",
+            "homepage": "https://github.com/constructions-incongrues/ananas-build-toolkit",
+            "support": {
+                "issues": "https://github.com/constructions-incongrues/ananas-build-toolkit/issues",
+                "source": "https://github.com/constructions-incongrues/ananas-build-toolkit"
+            },
+            "time": "2017-03-06T15:25:45+00:00"
+        },
+        {
+            "name": "symfony/finder",
+            "version": "v2.6.13",
+            "target-dir": "Symfony/Component/Finder",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/finder.git",
+                "reference": "203a10f928ae30176deeba33512999233181dd28"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/203a10f928ae30176deeba33512999233181dd28",
+                "reference": "203a10f928ae30176deeba33512999233181dd28",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "symfony/phpunit-bridge": "~2.7"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.6-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\Finder\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Finder Component",
+            "homepage": "https://symfony.com",
+            "time": "2015-07-09T16:02:48+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}
