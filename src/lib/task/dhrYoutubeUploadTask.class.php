@@ -97,16 +97,15 @@ EOT;
 
             // Upload videos
             $command = sprintf(
-                "youtube-upload ".
-                " --client-secrets=%s".
-                " --title='%s - %s - %s [%s]'".
-                " --category=Music".
-                " --description-file=%s/description.txt".
-                " --privacy=private".
-                " --thumbnail=%s/assets/releases/%s/images/%s_1.png".
-                " --playlist='%s - %s [%s] (Full Album)'".
-                " --playlist='%s - %s [%s] (Full Album)'".
-                " '%s/%s.mp4'",
+                'youtube-upload '.
+                ' --client-secrets=%s'.
+                ' --title="%s - %s - %s [%s]"'.
+                ' --category=Music'.
+                ' --description-file=%s/description.txt'.
+                ' --privacy=private'.
+                ' --thumbnail=%s/assets/releases/%s/images/%s_1.png'.
+                ' --playlist="%s - %s [%s] (Full Album)"'.
+                ' "%s/%s.mp4"',
                 $arguments['clientSecret'],
                 $track['number'],
                 $release->getArtist()->getName(),
@@ -119,7 +118,7 @@ EOT;
                 $release->getArtist()->getName(),
                 $release->title,
                 $release->sku,
-                $workspacePath,
+                $arguments['directory'],
                 basename($trackFilePath, '.'.'mp4')
             );
             var_dump($command);

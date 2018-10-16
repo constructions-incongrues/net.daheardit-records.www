@@ -68,7 +68,7 @@ ant deploy-to -Dprofile=pastishosting
 ### Publication sur Youtube
 
 - Copier le fichiers JSON de connexion à Youtube dans le dossier `./src/data/tmp` : `cp -v /media/$USER/secrets/daheardit-records.net/*.json ./src/data/tmp/`
-- Créer un fichier `./src/data/tmp/$RELEASE_SKU/youtube.png` de dimensions 1280x760px
+- Créer un fichier `./src/data/tmp/$RELEASE_SKU/youtube/youtube.png` de dimensions 1280x760px
 - Démarrer la machine virtuelle : `vagrant up`
 - Se connecter à la machine virtuelle : `vagrant ssh`
 - Exécuter le script de génération des vidéos : `/vagrant/src/symfony dhr:generate-videos --sourceExtension=${SOURCE_EXTENSION-flac} /vagrant/src/data/tmp/$RELEASE_SKU /vagrant/src/data/tmp/$RELEASE_SKU/youtube $RELEASE_SKU`

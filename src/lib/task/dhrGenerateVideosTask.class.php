@@ -85,7 +85,7 @@ class dhrGenerateVideosTask extends sfBaseTask
 
             // Generate videos
             $command = sprintf(
-                "ffmpeg -loop 1 -i '%s/youtube.png' -i '%s' -c:v libx264 -tune stillimage -c:a aac -b:a 320k -pix_fmt yuv444p -shortest '%s/%s.mp4'",
+                'ffmpeg -loop 1 -i "%s/youtube.png" -i "%s" -c:v libx264 -tune stillimage -c:a aac -b:a 320k -pix_fmt yuv444p -shortest "%s/%s.mp4"',
                 $arguments['source-directory'],
                 $trackFilePath,
                 $arguments['destination-directory'],
