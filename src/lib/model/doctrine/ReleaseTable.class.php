@@ -33,7 +33,7 @@ class ReleaseTable extends Doctrine_Table
 	{
 		$q = $this->createQuery('r')
             ->innerJoin('r.Artist a')
-            ->orderBy('r.sku desc')
+            ->orderBy('r.released_at desc')
             ->limit(1);
         if ($public) {
         	$q = $q->where('r.is_public = 1');
