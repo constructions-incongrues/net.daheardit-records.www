@@ -14,7 +14,7 @@ class releaseComponents extends sfComponents
         $q = Doctrine_Query::create()
             ->from('Release r')
             ->innerJoin('r.Artist a')
-            ->orderBy('r.sku desc');
+            ->orderBy('r.released_at desc');
 
         // Only display releases marked as public unless in preview mode
         if (!$request->hasParameter('preview')) {
