@@ -14,11 +14,6 @@ class dhrGenerateReleaseTask extends sfBaseTask
                 'commandConvert' => 'avconv -loglevel warning -analyzeduration 100000000 -i %s -q:a 0 -metadata title=%s -metadata artist=%s -metadata album=%s -metadata track=%s -metadata year=%s %s.mp3',
                 'extension' => 'mp3'
             ),
-            'ogg' => array(
-                'name' => 'ogg',
-                'commandConvert' => 'avconv -loglevel warning -analyzeduration 100000000 -i %s -metadata title=%s -metadata artist=%s -metadata album=%s -metadata track=%s -metadata year=%s %s.ogg',
-                'extension' => 'ogg'
-            ),
             'flac' => array(
                 'name' => 'flac',
                 'commandConvert' => 'avconv -loglevel warning -analyzeduration 100000000 -i %s -metadata title=%s -metadata artist=%s -metadata album=%s -metadata track=%s -metadata year=%s %s.flac',
