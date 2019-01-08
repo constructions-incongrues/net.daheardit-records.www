@@ -63,12 +63,12 @@ ant deploy-to -Dprofile=pastishosting
 - Se connecter sur Pastis Hosting - `ssh daheardit-record@ftp.pastis-hosting.net`
 - Se placer à la racine du projet `cd httpdocs`
 - Exécuter la commande de génération des archives (où `$RELEASE_SKU` = l'identifiant de la release : par exemple, `dhr-33`) : `./src/symfony dhr:release --includeExtensions=jpg,png,pdf,txt --archives --db --streamables --sourceExtension=$SOURCE_EXTENSION /tmp/$RELEASE_SKU $RELEASE_SKU` où `$SOURCE_EXTENSION` correspond à l'extension des fichiers sources (`wav` ou `flac`)
-- Faire le ménage `ssh daheardit-record@ftp.pastis-hosting.net rm -r /tmp/$RELEASE_SKU`
+- Faire le ménage `rm -r /tmp/$RELEASE_SKU /tmp/dhr_*`
 
 ### Publication sur Youtube
 
 - Copier le fichiers JSON de connexion à Youtube dans le dossier `./src/data/tmp` : `cp -v /media/$USER/secrets/daheardit-records.net/*.json ./src/data/tmp/`
-- Créer un fichier `./src/data/tmp/$RELEASE_SKU/youtube/youtube.png` de dimensions 1280x760px
+- Créer un fichier `./src/data/tmp/$RELEASE_SKU/youtube.png` de dimensions 1280x760px
 - Démarrer la machine virtuelle : `vagrant up`
 - Se connecter à la machine virtuelle : `vagrant ssh`
 - Exécuter le script de génération des vidéos : `/vagrant/src/symfony dhr:generate-videos --sourceExtension=${SOURCE_EXTENSION-flac} /vagrant/src/data/tmp/$RELEASE_SKU /vagrant/src/data/tmp/$RELEASE_SKU/youtube $RELEASE_SKU`
