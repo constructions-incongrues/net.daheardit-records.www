@@ -10,6 +10,8 @@ Vagrant.configure(2) do |config|
   # For a complete reference, please see the online documentation at
   # https://docs.vagrantup.com.
 
+  config.vm.network "public_network"
+
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
   config.vm.box = "bento/ubuntu-14.04"
@@ -35,6 +37,6 @@ Vagrant.configure(2) do |config|
     mount_options: ["dmode=775,fmode=777"]
 
   # @see https://github.com/phinze/landrush
-  config.landrush.enabled = true
+  #config.landrush.enabled = true
   config.vm.hostname = "daheardit-records.vagrant.test"
 end
