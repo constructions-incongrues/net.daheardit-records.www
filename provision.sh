@@ -29,12 +29,7 @@ a2enmod rewrite
 # Installation de youtube-upload
 # https://github.com/tokland/youtube-upload
 pip3 install --upgrade google-api-python-client progressbar2 oauth2client
-rm -rf youtube-upload-master
-rm -f master.zip
-wget https://github.com/tokland/youtube-upload/archive/master.zip
-unzip master.zip
-cd youtube-upload-master
-python3 setup.py install
+pip3 install --upgrade git+https://github.com/yisraeldov/youtube-upload@patch-1
 
 # Installation de MySQL
 echo "mysql-server mysql-server/root_password password root" | debconf-set-selections
