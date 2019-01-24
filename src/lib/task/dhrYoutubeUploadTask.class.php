@@ -91,6 +91,7 @@ class dhrYoutubeUploadTask extends sfBaseTask
 ► Label : http://www.daheardit-records.net
 ► Free Music Archive : http://freemusicarchive.org/label/Da__Heard_It_Records/
 ► Facebook : https://www.facebook.com/dahearditrecords/
+► Instagram : https://www.instagram.com/dahearditrecords/
 ► Twitter : https://twitter.com/daheardit
 EOT;
             file_put_contents(sprintf('%s/description.txt', $workspacePath), sprintf($tpl, $release->slug, strip_tags($release->getPresentation())));
