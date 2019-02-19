@@ -13,7 +13,8 @@ class releaseActions extends sfActions
     public function executeShow(sfWebRequest $request)
     {
         // Fetch release
-        $release = Doctrine_Core::getTable('Release')->findOneBySlugAndCulture($request->getParameter('slug'), $this->getUser()->getCulture());
+        $culture = $this->getUser()->getCulture();
+        $release = Doctrine_Core::getTable('Release')->findOneBySlugAndCulture($request->getParameter('slug'), $culture);
         $this->forward404Unless($release);
         if (!$request->hasParameter('preview') && !$release->is_public) {
             $this->forward404();
@@ -113,6 +114,18 @@ class releaseActions extends sfActions
                     'title' => strtoupper(array_shift($parts)),
                     'url'  => $url
                 );
+            }
+        }
+
+        // Video links
+        $releaseArray['videos'] = [];
+        $urls = explode("\n", $releaseArray['links_videos']);
+        if ($urls[0]) {
+            foreach ($urls as $url) {
+                if ($culture != 'fr') {
+                    $url .= '?cc_load_policy=1&cc_lang_pref=en';
+                }
+                $releaseArray['videos'][] = $url;
             }
         }
 

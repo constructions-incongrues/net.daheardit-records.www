@@ -68,6 +68,12 @@
 <?php else: ?>
     <h2 class="open_releases_artwork_credit"><?php echo __('Illustration : ') ?><a href="<?php echo url_for(sprintf('@artist_show?slug=%s#artist', $release['Artist']['slug'])) ?>" title="<?php echo $release['Artist']['name'] ?>"><?php echo $release['Artist']['name'] ?></a></h2>
 <?php endif ?>
+
+<?php if (count($release['videos'])): ?>
+  <?php foreach ($release['videos'] as $video): ?>
+    <iframe width="100%" height="250" src="<?php echo $video ?>" frameborder="0" allowfullscreen></iframe>
+  <?php endforeach ?>
+<?php endif ?>
    </div><!-- end of grid_6 -->
 
     <div class="grid_6 open_releases_infos">
