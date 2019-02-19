@@ -55,13 +55,6 @@
               </a>
             </li>
 <?php endfor ?>
-<?php for ($i = 0; $i < count($release['links_carousel_other']); $i++): ?>
-            <li>
-              <a class="carousel-nav" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/<?php echo $release['links_carousel_other'][$i] ?>" title="<?php echo __("Survolez l'image pour mettre le carousel en pause") ?>">
-                <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/caroussel-release.png" />
-              </a>
-            </li>
-<?php endfor ?>
      </ul>
      <?php if (isset($release['ArtworkArtist'])): ?>
     <h2 class="open_releases_artwork_credit"><?php echo __('Illustration : ') ?><a href="<?php echo url_for(sprintf('@artwork_artist_show?slug=%s#artwork_artist', $release['ArtworkArtist']['slug'])) ?>" title="<?php echo $release['ArtworkArtist']['name'] ?>"><?php echo $release['ArtworkArtist']['name'] ?></a></h2>
@@ -139,16 +132,6 @@
     </li>
   <?php endforeach; ?>
     </ul>
-
-
-<?php if (count($release['links_carousel_video'])): ?>
-    <h3 class="open_releases_title"><?php echo __('Vidéo(s)') ?></h3>
-    <ul class="open_releases_videos">
-    <?php foreach ($release['links_carousel_video'] as $url): ?>
-        <li><a class="video" href="<?php echo $url ?>"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/play.png" alt="play" class="open_releases_playlist_icon_play" /><?php echo $url ?></a></li>
-    <?php endforeach ?>
-    </ul>
-<?php endif ?>
 
 <?php if (count($archives)): ?>
     <span style="margin-top:-25px;"> </span>
