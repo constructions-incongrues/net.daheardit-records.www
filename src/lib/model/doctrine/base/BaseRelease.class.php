@@ -23,52 +23,55 @@
  * @property boolean $is_available
  * @property string $price
  * @property text $links_press
+ * @property text $links_streaming
  * @property Artist $Artist
  * @property ArtworkArtist $ArtworkArtist
  * @property Doctrine_Collection $Track
  * 
- * @method string              getTitle()             Returns the current record's "title" value
- * @method string              getSku()               Returns the current record's "sku" value
- * @method string              getSlug()              Returns the current record's "slug" value
- * @method date                getReleasedAt()        Returns the current record's "released_at" value
- * @method string              getPresentation()      Returns the current record's "presentation" value
- * @method string              getLicense()           Returns the current record's "license" value
- * @method string              getLinksCarousel()     Returns the current record's "links_carousel" value
- * @method string              getUrlHeader()         Returns the current record's "url_header" value
- * @method boolean             getIsPublic()          Returns the current record's "is_public" value
- * @method boolean             getIsNew()             Returns the current record's "is_new" value
- * @method string              getImage1()            Returns the current record's "image1" value
- * @method string              getImage2()            Returns the current record's "image2" value
- * @method integer             getArtistId()          Returns the current record's "artist_id" value
- * @method integer             getArtworkArtistId()   Returns the current record's "artwork_artist_id" value
- * @method string              getPaypalId()          Returns the current record's "paypal_id" value
- * @method boolean             getIsAvailable()       Returns the current record's "is_available" value
- * @method string              getPrice()             Returns the current record's "price" value
- * @method text                getLinksPress()        Returns the current record's "links_press" value
- * @method Artist              getArtist()            Returns the current record's "Artist" value
- * @method ArtworkArtist       getArtworkArtist()     Returns the current record's "ArtworkArtist" value
- * @method Doctrine_Collection getTrack()             Returns the current record's "Track" collection
- * @method Release             setTitle()             Sets the current record's "title" value
- * @method Release             setSku()               Sets the current record's "sku" value
- * @method Release             setSlug()              Sets the current record's "slug" value
- * @method Release             setReleasedAt()        Sets the current record's "released_at" value
- * @method Release             setPresentation()      Sets the current record's "presentation" value
- * @method Release             setLicense()           Sets the current record's "license" value
- * @method Release             setLinksCarousel()     Sets the current record's "links_carousel" value
- * @method Release             setUrlHeader()         Sets the current record's "url_header" value
- * @method Release             setIsPublic()          Sets the current record's "is_public" value
- * @method Release             setIsNew()             Sets the current record's "is_new" value
- * @method Release             setImage1()            Sets the current record's "image1" value
- * @method Release             setImage2()            Sets the current record's "image2" value
- * @method Release             setArtistId()          Sets the current record's "artist_id" value
- * @method Release             setArtworkArtistId()   Sets the current record's "artwork_artist_id" value
- * @method Release             setPaypalId()          Sets the current record's "paypal_id" value
- * @method Release             setIsAvailable()       Sets the current record's "is_available" value
- * @method Release             setPrice()             Sets the current record's "price" value
- * @method Release             setLinksPress()        Sets the current record's "links_press" value
- * @method Release             setArtist()            Sets the current record's "Artist" value
- * @method Release             setArtworkArtist()     Sets the current record's "ArtworkArtist" value
- * @method Release             setTrack()             Sets the current record's "Track" collection
+ * @method string              get()                  Returns the current record's "title" value
+ * @method string              get()                  Returns the current record's "sku" value
+ * @method string              get()                  Returns the current record's "slug" value
+ * @method date                get()                  Returns the current record's "released_at" value
+ * @method string              get()                  Returns the current record's "presentation" value
+ * @method string              get()                  Returns the current record's "license" value
+ * @method string              get()                  Returns the current record's "links_carousel" value
+ * @method string              get()                  Returns the current record's "url_header" value
+ * @method boolean             get()                  Returns the current record's "is_public" value
+ * @method boolean             get()                  Returns the current record's "is_new" value
+ * @method string              get()                  Returns the current record's "image1" value
+ * @method string              get()                  Returns the current record's "image2" value
+ * @method integer             get()                  Returns the current record's "artist_id" value
+ * @method integer             get()                  Returns the current record's "artwork_artist_id" value
+ * @method string              get()                  Returns the current record's "paypal_id" value
+ * @method boolean             get()                  Returns the current record's "is_available" value
+ * @method string              get()                  Returns the current record's "price" value
+ * @method text                get()                  Returns the current record's "links_press" value
+ * @method text                get()                  Returns the current record's "links_streaming" value
+ * @method Artist              get()                  Returns the current record's "Artist" value
+ * @method ArtworkArtist       get()                  Returns the current record's "ArtworkArtist" value
+ * @method Doctrine_Collection get()                  Returns the current record's "Track" collection
+ * @method Release             set()                  Sets the current record's "title" value
+ * @method Release             set()                  Sets the current record's "sku" value
+ * @method Release             set()                  Sets the current record's "slug" value
+ * @method Release             set()                  Sets the current record's "released_at" value
+ * @method Release             set()                  Sets the current record's "presentation" value
+ * @method Release             set()                  Sets the current record's "license" value
+ * @method Release             set()                  Sets the current record's "links_carousel" value
+ * @method Release             set()                  Sets the current record's "url_header" value
+ * @method Release             set()                  Sets the current record's "is_public" value
+ * @method Release             set()                  Sets the current record's "is_new" value
+ * @method Release             set()                  Sets the current record's "image1" value
+ * @method Release             set()                  Sets the current record's "image2" value
+ * @method Release             set()                  Sets the current record's "artist_id" value
+ * @method Release             set()                  Sets the current record's "artwork_artist_id" value
+ * @method Release             set()                  Sets the current record's "paypal_id" value
+ * @method Release             set()                  Sets the current record's "is_available" value
+ * @method Release             set()                  Sets the current record's "price" value
+ * @method Release             set()                  Sets the current record's "links_press" value
+ * @method Release             set()                  Sets the current record's "links_streaming" value
+ * @method Release             set()                  Sets the current record's "Artist" value
+ * @method Release             set()                  Sets the current record's "ArtworkArtist" value
+ * @method Release             set()                  Sets the current record's "Track" collection
  * 
  * @package    net.daheardit-records.www
  * @subpackage model
@@ -142,6 +145,9 @@ abstract class BaseRelease extends sfDoctrineRecord
              'default' => 5,
              ));
         $this->hasColumn('links_press', 'text', null, array(
+             'type' => 'text',
+             ));
+        $this->hasColumn('links_streaming', 'text', null, array(
              'type' => 'text',
              ));
     }

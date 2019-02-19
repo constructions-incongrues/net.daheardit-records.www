@@ -103,6 +103,19 @@ class releaseActions extends sfActions
             );
         }
 
+        // Streaming links
+        $releaseArray['streaming'] = [];
+        $urls = explode("\n", $releaseArray['links_streaming']);
+        if ($urls[0]) {
+            foreach ($urls as $url) {
+                $parts = explode('.', str_replace('www.', '', parse_url($url, PHP_URL_HOST)));
+                $releaseArray['streaming'][] = array(
+                    'title' => strtoupper(array_shift($parts)),
+                    'url'  => $url
+                );
+            }
+        }
+
         // Get previous release
         $pdo = Doctrine_Manager::getInstance()->getCurrentConnection()->getDbh();
         $stmt = $pdo->prepare('select slug, title, sku from `release` where slug < :slug order by slug desc limit 1');

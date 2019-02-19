@@ -83,6 +83,7 @@ Release:
       notblank: true
       default:  5
     links_press: text
+    links_streaming: text
 
 Track:
   actAs:
