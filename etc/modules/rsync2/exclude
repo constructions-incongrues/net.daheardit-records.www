@@ -1,12 +1,12 @@
+.git
 *-dist
 *.bak
 *.mp3
 *.orig
-*.swp
 *.swo
+*.swp
 *.zip
 *~
-.git
 /.idea
 /.otto
 /.ottoid
@@ -15,9 +15,11 @@
 /etc
 /etc
 /src/cache
+/src/data/tmp
 /src/log
 /src/web/assets/releases/*/archives
 /src/web/assets/releases/*/tracks
+/src/web/press/x454gfrgr89
 /src/web/uploads/news
 /vendor/constructions-incongrues
 /vendor/constructions-incongrues/ananas-build-toolkit

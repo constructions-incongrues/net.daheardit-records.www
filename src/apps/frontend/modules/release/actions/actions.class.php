@@ -110,7 +110,7 @@ class releaseActions extends sfActions
             foreach ($urls as $url) {
                 $parts = explode('.', str_replace('www.', '', parse_url($url, PHP_URL_HOST)));
                 $releaseArray['streaming'][] = array(
-                    'title' => ucfirst(array_shift($parts)),
+                    'title' => strtoupper(array_shift($parts)),
                     'url'  => $url
                 );
             }

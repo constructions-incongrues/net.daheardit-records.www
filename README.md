@@ -40,12 +40,14 @@ vagrant provision
 ### sur [preview.daheardit-records.net](http://preview.daheardit-records.net)
 
 ```bash
+vagrant ssh
 ant deploy-to -Dprofile=pastishosting-preview
 ```
 
 ### sur [www.daheardit-records.net](http://www.daheardit-records.net)
 
 ```bash
+vagrant ssh
 ant deploy-to -Dprofile=pastishosting
 ```
 
