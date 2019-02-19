@@ -33,6 +33,7 @@ abstract class BaseReleaseForm extends BaseFormDoctrine
       'is_available'      => new sfWidgetFormInputCheckbox(),
       'price'             => new sfWidgetFormTextarea(),
       'links_press'       => new sfWidgetFormInputText(),
+      'links_streaming'   => new sfWidgetFormInputText(),
       'created_at'        => new sfWidgetFormDateTime(),
       'updated_at'        => new sfWidgetFormDateTime(),
     ));
@@ -56,6 +57,7 @@ abstract class BaseReleaseForm extends BaseFormDoctrine
       'is_available'      => new sfValidatorBoolean(array('required' => false)),
       'price'             => new sfValidatorString(array('required' => false)),
       'links_press'       => new sfValidatorPass(array('required' => false)),
+      'links_streaming'   => new sfValidatorPass(array('required' => false)),
       'created_at'        => new sfValidatorDateTime(),
       'updated_at'        => new sfValidatorDateTime(),
     ));
