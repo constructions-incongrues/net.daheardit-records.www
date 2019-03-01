@@ -1,0 +1,7 @@
+{
+    "name": "constructionsincongrues/dahearditrecords",
+    "type": "project",
+    "require": {
+        "symfony/finder": "^3.4"
+    }
+}

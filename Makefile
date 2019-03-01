@@ -1,12 +1,11 @@
-.PHONY: configure install
-
 # Règles obligatoires
 
-configure: install
-	# Configure app
-	git submodule update --init --recursive
-	ant configure build -Dprofile=docker
+attach:
+	docker-compose run --rm --entrypoint fixuid php /bin/bash
 
-install:
-	# Install app dependencies (composer, npm, etc)
-	./composer.phar install
+build:
+	git submodule update --init --recursive
+	docker-compose build
+
+start: build
+	docker-compose up
