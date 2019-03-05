@@ -4,6 +4,6 @@
 # default values
 all:
   feeds:
-    use_feedburner: @feeds.feedburner_enabled@
+    use_feedburner: ${FEEDBURNER_ENABLED}
   dhr:
-    url_root: "@dhr.url.root@"
+    url_root: "${DHR_URL_ROOT}"

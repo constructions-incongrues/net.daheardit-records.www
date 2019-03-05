@@ -35,3 +35,4 @@ src/web/releases/*
 /src/data/fixtures/dhr-*
 /src/data/tmp/*
 /src/vendor/
+/var

@@ -23,10 +23,10 @@ RUN addgroup --gid 1000 daheardit && \
     printf "user: daheardit\ngroup: daheardit\n" > /etc/fixuid/config.yml
 
 # Install additional packages and PHP extensions
-RUN apk --update --no-cache add apache-ant bash openssh-client curl freetype-dev git libjpeg-turbo-dev libpng-dev make zip \
-    && docker-php-ext-install -j$(nproc) opcache pdo_mysql \
-    && docker-php-ext-install -j$(nproc) gd \
-    && docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/
+RUN apk --update --no-cache add bash curl ffmpeg freetype-dev gettext git imagemagick libjpeg-turbo-dev libpng-dev make python3 zip && \
+    docker-php-ext-install -j$(nproc) gd opcache pdo_mysql && \
+    docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ && \
+    pip3 install --upgrade google-api-python-client progressbar2 oauth2client git+https://github.com/yisraeldov/youtube-upload@patch-1
 
 # Copy application sources to container
 COPY --chown=daheardit:daheardit ./src /usr/local/src

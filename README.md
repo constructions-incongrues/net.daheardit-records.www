@@ -3,8 +3,8 @@
 ## Installation d'un environnement de développement
 
 ```bash
-apt update
-apt install -y ant git php-cli
+apt-get update
+apt install git make
 git clone --recursive git@github.com:constructions-incongrues/net.daheardit-records.www.git
 cd net.daheardit-records.www
 ./composer.phar install
