@@ -23,7 +23,7 @@ class ReleaseTable extends Doctrine_Table
 			->where('r.slug = ?', $slug)
             ->leftJoin('r.Artist a')
 			->leftJoin('r.ArtworkArtist aa')
-			->leftJoin('r.Translation t')
+			->leftJoin('r.Translation t ON a.id = t.release_id')
 			->andWhere('t.lang = ?', $culture);
 
 		return $q->fetchOne();
