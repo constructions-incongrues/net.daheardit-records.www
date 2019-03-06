@@ -40,7 +40,7 @@ CREATE TABLE `directus_collections` (
 
 LOCK TABLES `directus_collections` WRITE;
 /*!40000 ALTER TABLE `directus_collections` DISABLE KEYS */;
-INSERT INTO `directus_collections` VALUES ('artist',1,0,0,'accessibility',NULL,NULL),('language',1,1,0,'outlined_flag',NULL,NULL);
+INSERT INTO `directus_collections` VALUES ('artist',1,0,0,'accessibility',NULL,NULL),('artist_translation',1,1,0,NULL,NULL,NULL),('language',1,1,0,'outlined_flag',NULL,NULL);
 /*!40000 ALTER TABLE `directus_collections` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -121,4 +121,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-03-05 17:19:29
+-- Dump completed on 2019-03-06 12:57:45
