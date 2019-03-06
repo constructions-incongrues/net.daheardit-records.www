@@ -20,7 +20,7 @@ class ContentTable extends Doctrine_Table
 	public function findWithTranslations($culture = 'fr')
 	{
 		$q = $this->createQuery('c')
-			->leftJoin('c.Translation t')
+			->leftJoin('c.Translation t ON a.id = t.content_id')
 			->andWhere('t.lang = ?', $culture);
 
 		return $q->fetchOne();
