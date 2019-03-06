@@ -4,6 +4,3 @@
 [submodule "src/plugins/sfTwitterBootstrapPlugin"]
 	path = src/plugins/sfTwitterBootstrapPlugin
 	url = git@github.com:ARAMISAUTO/sfTwitterBootstrapPlugin.git
-[submodule "src/plugins/sfDoctrineGuardPlugin"]
-	path = src/plugins/sfDoctrineGuardPlugin
-	url = git@github.com:LExpress/sfDoctrineGuardPlugin.git
