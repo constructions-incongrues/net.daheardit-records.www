@@ -168,10 +168,9 @@ class dhrGenerateReleaseTask extends sfBaseTask
                         escapeshellarg($release->title),
                         escapeshellarg($track['number']),
                         escapeshellarg(substr($release->getReleasedAt(), 0, 4)),
-                        escapeshellarg(sprintf('%s/%s', $workspacePathProfile, $this->translit(basename($track['path'], '.'.$options['sourceExtension']))))
+                        escapeshellarg(sprintf('%s/%s.%s', $workspacePathProfile, basename($track['path'], '.'.$options['sourceExtension']), $profile['extension']))
                     );
                     $this->logSection($profile['name'], sprintf('%s - %s', $track['number'], $track['title']));
-                    // var_dump($command);
                     exec($command);
                 }
 

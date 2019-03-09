@@ -24,6 +24,7 @@ RUN addgroup --gid 1000 daheardit && \
 
 # Install additional packages and PHP extensions
 RUN apk --update --no-cache add bash curl ffmpeg freetype-dev gettext git imagemagick libjpeg-turbo-dev libpng-dev make python3 zip && \
+    ln -sf /usr/bin/ffmpeg /usr/bin/avconv && \
     docker-php-ext-install -j$(nproc) gd opcache pdo_mysql && \
     docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ && \
     pip3 install --upgrade google-api-python-client progressbar2 oauth2client git+https://github.com/yisraeldov/youtube-upload@patch-1
