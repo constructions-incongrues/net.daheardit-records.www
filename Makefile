@@ -15,6 +15,9 @@ build: ## Génération de l'image Docker
 clean: stop ## Suppression des containers de l'application
 	docker-compose rm -f
 
+database-import:
+	ssh daheardit-record@ftp.pastis-hosting.net mysqldump -h127.0.0.1 -udaheardit-record -pdaheardit-reco daheardit-record > ./src/data/fixtures/net_dahearditrecords_www.dump.sql
+
 deploy: ## Configure et déploie l'application
 	PROFILE=$(PROFILE) docker-compose run --rm --entrypoint fixuid php make configure
 	rsync -avzm --dry-run --exclude-from=./env/$(PROFILE)/rsync/exclude --include-from=./env/$(PROFILE)/rsync/include 'ssh -p $$RSYNC_SSH_PORT' $$RSYNC_LOCAL_PATH $$RSYNC_REMOTE_USER@$$RSYNC_REMOTE_HOST:$$RSYNC_REMOTE_PATH
