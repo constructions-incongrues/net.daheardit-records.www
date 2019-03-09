@@ -2,6 +2,10 @@
 
 ## Utilisation
 
+## Édition du contenu
+
+L'interface de gestion du contenu du site est disponible à l'adresse <https://ivresse.constructions-incongrues.net>.
+
 ## Génération des artefacts d'une nouvelle sortie
 
 Paramètres :
@@ -97,16 +101,3 @@ make database-import
 ```sh
 make directus-export
 ```
-
-## Documentation legacy à mettre à jour
-
-#### Publication sur Youtube
-
-- Copier le fichiers JSON de connexion à Youtube dans le dossier `./src/data/tmp` : `cp -v /media/$USER/secrets/daheardit-records.net/*.json ./src/data/tmp/`. Le fichier peut être généré à cette adresse : <https://console.cloud.google.com/iam-admin/serviceaccounts?folder=&organizationId=&project=dahearditrecordsnet>
-- Créer un fichier `./src/data/tmp/$RELEASE_SKU/youtube.png` de dimensions 1280x760px
-- Démarrer la machine virtuelle : `vagrant up`
-- Se connecter à la machine virtuelle : `vagrant ssh`
-- Exécuter le script de génération des vidéos : `/vagrant/src/symfony dhr:generate-videos --sourceExtension=${SOURCE_EXTENSION-flac} /vagrant/src/data/tmp/$RELEASE_SKU /vagrant/src/data/tmp/$RELEASE_SKU/youtube $RELEASE_SKU`
-- Copier le fichier `youtube.png` : `cp ./src/data/tmp/$RELEASE_SKU/youtube.png ./src/data/tmp/$RELEASE_SKU/youtube/`
-- Exécuter le script de publication : `/vagrant/src/symfony dhr:youtube-upload /vagrant/src/data/tmp/$RELEASE_SKU/youtube $RELEASE_SKU /vagrant/src/data/tmp/dahearditrecordsnet_client_secret.json`
-- **Supprimer les fichiers de connexion** : `rm /vagrant/src/data/tmp/*.json`
