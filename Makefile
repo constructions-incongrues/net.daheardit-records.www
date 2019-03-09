@@ -29,7 +29,7 @@ directus-export: ## Export des tables Directus de structure
 	docker-compose up -d db
 	docker-compose exec db mysqldump -proot daheardit directus_collections directus_fields directus_relations | grep -v 'Warning: Using a password on the command line interface can be insecure.' > ./src/data/fixtures/directus_structure.sql
 
-release: database-import release-archives release-videos-generate release-videos-upload ## Génération des artefacts de la sortie ${RELEASE_SKU}
+release: database-import release-clean release-archives release-videos-generate release-videos-upload ## Génération des artefacts de la sortie ${RELEASE_SKU}
 
 release-archives: start ## Génération des archives de la sortie
 	@if [ -z "$$RELEASE_SKU" ]; then echo "La variable RELEASE_SKU doit être définie"; exit 255; fi
@@ -38,6 +38,10 @@ release-archives: start ## Génération des archives de la sortie
 	docker-compose exec db mysqldump -proot daheardit track | grep -v "Warning: Using a password on the command line interface can be insecure." > /tmp/track.sql
 	ssh daheardit-record@ftp.pastis-hosting.net 'mysql -udaheardit-record -pdaheardit-reco daheardit-record' < /tmp/track.sql
 	rm /tmp/track.sql
+
+release-clean: ## Suppression des artefacts de la sortie
+	@if [ -z "$$RELEASE_SKU" ]; then echo "La variable RELEASE_SKU doit être définie"; exit 255; fi
+	rm -rf ./src/web/assets/releases/$$RELEASE_SKU/archives/* ./src/web/assets/releases/$$RELEASE_SKU/tracks/* ./src/data/tmp/$$RELEASE_SKU/youtube/**
 
 release-videos-generate: ## Génération des vidéos de chaque track
 	rm -rf ./src/data/tmp/$$RELEASE_SKU/youtube
