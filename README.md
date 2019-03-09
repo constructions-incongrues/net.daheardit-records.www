@@ -45,7 +45,7 @@ make deploy
 - Déploiement effectif :
 
 ```sh
-make deploy RSYNC_PARAMETERS=""
+make deploy RSYNC_PARAMETERS=
 ```
 
 ## Développement
