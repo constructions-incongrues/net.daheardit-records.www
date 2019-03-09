@@ -18,9 +18,6 @@ services:
     volumes:
       - ./var/db:/var/lib/mysql
       - ./src/data/fixtures/daheardit.sql:/docker-entrypoint-initdb.d/00_daheardit.sql
-      - ./src/data/fixtures/drop_sf_guard_tables.sql:/docker-entrypoint-initdb.d/01_drop_sf_guard_tables.sql
-      - ./src/data/fixtures/drop_foreign_keys.sql:/docker-entrypoint-initdb.d/02_drop_foreign_keys.sql
-      - ./src/data/fixtures/update_translation_tables.sql:/docker-entrypoint-initdb.d/03_update_translation_tables.sql
 
   directus:
     image: directus/api:2.0.18

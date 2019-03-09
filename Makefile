@@ -29,12 +29,6 @@ directus-export: ## Export des tables Directus de structure
 	docker-compose up -d db
 	docker-compose exec db mysqldump -proot daheardit directus_collections directus_fields directus_relations | grep -v 'Warning: Using a password on the command line interface can be insecure.' > ./src/data/fixtures/directus_structure.sql
 
-directus-import: ## Import des tables Directus de structure
-	docker-compose up -d db
-	docker container exec -i `docker-compose ps -q db` mysql -proot daheardit < ./src/data/fixtures/directus_structure.sql
-	docker container exec -i `docker-compose ps -q db` mysql -proot daheardit < ./src/data/fixtures/directus_collection_presets.sql
-	docker container exec -i `docker-compose ps -q db` mysql -proot daheardit < ./src/data/fixtures/directus_languages.sql
-
 start: build ## Démarrage de l'application
 	docker-compose up
 
