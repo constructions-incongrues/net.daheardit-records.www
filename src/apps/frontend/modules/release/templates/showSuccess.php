@@ -16,7 +16,7 @@
 <div class="grid_12 releases">
         <div class="category_content">
           <h1 id="release"><?php echo $release['sku'] ?> </h1>
-            <span class="triangle"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/others/triangle.png" class="triangle" /></span>
+            <span class="triangle"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/others/triangle-bord.png" class="triangle" /></span>
         </div><!-- end of category contents -->
       </div><!-- end of releases -->
 
