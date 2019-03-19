@@ -285,4 +285,10 @@ class releaseActions extends sfActions
         $this->release = $release;
         $this->zero = $zero;
     }
+
+    public function executePress(sfWebRequest $request)
+    {
+        // Configure view
+        $this->setLayout(false);
+    }
 }

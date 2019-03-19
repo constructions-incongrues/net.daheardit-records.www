@@ -23,11 +23,11 @@ RUN addgroup --gid 1000 daheardit && \
     printf "user: daheardit\ngroup: daheardit\n" > /etc/fixuid/config.yml
 
 # Install additional packages and PHP extensions
-RUN apk --update --no-cache add bash curl ffmpeg freetype-dev gettext git imagemagick libjpeg-turbo-dev libpng-dev make python3 zip && \
+RUN apk --update --no-cache add bash curl ffmpeg fontconfig freetype-dev gettext git imagemagick libffi-dev libjpeg-turbo-dev libpng-dev make python3 python3-dev zip && \
     ln -sf /usr/bin/ffmpeg /usr/bin/avconv && \
     docker-php-ext-install -j$(nproc) gd opcache pdo_mysql && \
     docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ && \
-    pip3 install --upgrade google-api-python-client progressbar2 oauth2client git+https://github.com/yisraeldov/youtube-upload@patch-1
+    pip3 install --upgrade google-api-python-client progressbar2 oauth2client git+https://github.com/yisraeldov/youtube-upload@patch-1 WeasyPrint
 
 # Copy application sources to container
 COPY --chown=daheardit:daheardit ./src /usr/local/src
