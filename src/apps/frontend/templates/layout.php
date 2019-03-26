@@ -105,7 +105,7 @@
 
       <div class="grid_12 artwork_artists_listing_all">
         <div class="category_content">
-          <h1 id="artwork_artists"><?php echo __('Illustrateurs') ?></h1>
+          <h1 id="artwork_artists"><?php echo __('Illustrations') ?></h1>
             <span class="triangle"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/others/triangle-bord.png" class="triangle" /></span>
                  <span class="graphists_button_top"><a href="#top"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/top.png" alt="TOP"></a></span>
 
