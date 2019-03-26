@@ -52,7 +52,9 @@ make deploy RSYNC_PARAMETERS=
 
 ### Installation des dépendances
 
-docker, docker-compose, git, make
+```sh
+sudo apt-get install docker docker-compose git make
+```
 
 ### Récupération des sources
 
@@ -74,9 +76,13 @@ make start
 
 Cette commande rend disponibles les URL suivantes :
 
-- <http://adminer.daheardit.localhost> : Une interface de gestion de la base de données
+- <http://admin.daheardit.localhost> : L'interface d'administration du site, fournie par [Directus](https://docs.directus.io/guides/user-guide.html)
+  - Identifiants : `admin@daheadit.localhost` / `admin`
+- <http://adminer.daheardit.localhost> : Une interface de gestion de la base de données, fournie par [Adminer](https://www.adminer.org)
+  - Identifiants : `root` / `root`
+- <http://api.daheardit.localhost> : L'API du site fournie par [Directus](https://docs.directus.io/api/reference.html)
 - <http://daheardit.localhost> : Le site internet de Da ! Heard It Records
-- <http://directus.daheardit.localhost> : L'interface d'administration du site internet
+- <http://traefik.daheardit.localhost> : L'interface d'administration du reverse proxy [Traefik](https://docs.traefik.io/)
 
 ### Arrêt de l'application
 

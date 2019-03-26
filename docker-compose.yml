@@ -1,25 +1,26 @@
 version: '3'
 
 services:
+  admin:
+    depends_on:
+      - api
+    environment:
+      API_ENDPOINT: "admin.daheardit.localhost; http://api.daheardit.localhost/_/"
+      CORS_ENABLED: "true"
+    image: directus/app:7.0.18
+    labels:
+      traefik.frontend.rule: "Host:admin.daheardit.localhost"
+      traefik.port: "80"
+
   adminer:
     depends_on:
       - db
     image: adminer
     labels:
-        traefik.frontend.rule: "Host:adminer.daheardit.localhost"
-        traefik.port: "8080"
-    restart: always
+      traefik.frontend.rule: "Host:adminer.daheardit.localhost"
+      traefik.port: "8080"
 
-  db:
-    environment:
-      MYSQL_DATABASE: daheardit
-      MYSQL_ROOT_PASSWORD: root
-    image: mysql:5.6
-    volumes:
-      - ./var/db:/var/lib/mysql
-      - ./src/data/fixtures/daheardit.sql:/docker-entrypoint-initdb.d/00_daheardit.sql
-
-  directus:
+  api:
     image: directus/api:2.0.18
     depends_on:
       - db
@@ -31,8 +32,17 @@ services:
       ADMIN_EMAIL: "admin@daheardit.localhost"
       ADMIN_PASSWORD: "admin"
     labels:
-      traefik.frontend.rule: "Host:directus.daheardit.localhost"
+      traefik.frontend.rule: "Host:api.daheardit.localhost"
       traefik.port: "80"
+
+  db:
+    environment:
+      MYSQL_DATABASE: daheardit
+      MYSQL_ROOT_PASSWORD: root
+    image: mysql:5.6
+    volumes:
+      - ./var/db:/var/lib/mysql
+      - ./src/data/fixtures/daheardit.sql:/docker-entrypoint-initdb.d/00_daheardit.sql
 
   php:
     build: .
@@ -58,6 +68,7 @@ services:
     networks:
       default:
         aliases:
+          - api.daheardit.localhost
           - daheardit.localhost
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
