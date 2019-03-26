@@ -51,11 +51,10 @@
         });
     }
 
-
     // Top menu
     $('#menu-main li a').click(function(event) {
         event.stopPropagation();
-        e = document.getElementById($(this).attr('href').slice(0, -1));
+        var e = document.getElementById($(this).attr('href').slice(1));
         e.scrollIntoView();
         return false;
     });
