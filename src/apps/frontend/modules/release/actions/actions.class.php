@@ -38,8 +38,8 @@ class releaseActions extends sfActions
             $partsPrice = explode(',', $priceInfo);
             $prices[] = [
                 'format'    => $partsPrice[0],
-                'price'     => $partsPrice[1],
-                'paypal_id' => $partsPrice[2]
+                'price'     => isset($partsPrice[1]) ? $partsPrice[1] : null,
+                'paypal_id' => isset($partsPrice[2]) ? $partsPrice[2] : null
             ];
         }
         $releaseArray['prices'] = $prices;
