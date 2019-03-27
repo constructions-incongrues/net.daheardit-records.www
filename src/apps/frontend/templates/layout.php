@@ -35,9 +35,6 @@
   <meta property="<?php echo $name ?>" content="<?php echo strip_tags(html_entity_decode(html_entity_decode(html_entity_decode($value, ENT_QUOTES), ENT_QUOTES), ENT_QUOTES)) ?>" />
 <?php endforeach ?>
 
-  <!-- prefix-free -->
-  <script src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/js/prefixfree.min?v=<?php echo sfConfig::get('app_version') ? sfConfig::get('app_version') : date('U') ?>"></script>
-
   <script>
   dhrUriRoot = '<?php echo $sf_request->getRelativeUrlRoot() ?>';
   </script>
