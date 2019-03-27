@@ -131,7 +131,7 @@ class releaseActions extends sfActions
 
         // Get previous release
         $pdo = Doctrine_Manager::getInstance()->getCurrentConnection()->getDbh();
-        $stmt = $pdo->prepare('select slug, title, sku from `release` where released_at < :released_at order by released_at desc limit 1');
+        $stmt = $pdo->prepare('select slug, title, sku from `release` where released_at < :released_at and is_public = true order by released_at desc limit 1');
         $stmt->execute(array('released_at' => $releaseArray['released_at']));
         $previous = $stmt->fetchAll();
         $previousRelease = null;
@@ -141,7 +141,7 @@ class releaseActions extends sfActions
 
         // Get next release
         $pdo = Doctrine_Manager::getInstance()->getCurrentConnection()->getDbh();
-        $stmt = $pdo->prepare('select slug, title, sku from `release` where released_at > :released_at order by released_at asc limit 1');
+        $stmt = $pdo->prepare('select slug, title, sku from `release` where released_at > :released_at and is_public = true order by released_at asc limit 1');
         $stmt->execute(array('released_at' => $releaseArray['released_at']));
         $next = $stmt->fetchAll();
         $nextRelease = null;
