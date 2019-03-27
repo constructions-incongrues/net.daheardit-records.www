@@ -5,7 +5,8 @@
 all:
   api:
     url_root: "${API_URL_ROOT}"
-  feeds:
-    use_feedburner: ${FEEDBURNER_ENABLED}
   dhr:
     url_root: "${DHR_URL_ROOT}"
+  feeds:
+    use_feedburner: ${FEEDBURNER_ENABLED}
+  version: "${APP_VERSION}"
