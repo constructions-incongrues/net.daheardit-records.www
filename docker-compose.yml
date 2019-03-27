@@ -34,6 +34,9 @@ services:
     labels:
       traefik.frontend.rule: "Host:api.daheardit.localhost"
       traefik.port: "80"
+    volumes:
+      - ./src/web/assets:/var/www/html/public/uploads/_/originals/assets
+      - ./src/lib/Thumbnailer.php:/var/www/html/src/core/Directus/Filesystem/Thumbnailer.php
 
   db:
     environment:

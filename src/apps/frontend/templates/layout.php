@@ -1,8 +1,5 @@
 <!doctype html>
-<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="<?php echo $sf_request->getParameter('sf_culture', 'fr') ?>" prefix="og: http://ogp.me/ns#"> <!--<![endif]-->
+<html class="no-js" lang="<?php echo $sf_request->getParameter('sf_culture', 'fr') ?>" prefix="og: http://ogp.me/ns#">
 <head>
   <meta charset="utf-8">
   <meta name="google-site-verification" content="GZLJrrM8tvBsh05BvBY8GHUsEFhojyg5inFZAfaHh-Y" />
@@ -15,11 +12,11 @@
 <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
   <!-- 960 Grid system-->
-  <link rel="stylesheet" type="text/css" media="all" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/css/lib/960.gs/reset.css" />
-  <link rel="stylesheet" type="text/css" media="all" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/css/lib/960.gs/text.css" />
-  <link rel="stylesheet" type="text/css" media="all" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/css/lib/960.gs/fluid_grid.css" />
+  <link rel="stylesheet" type="text/css" media="all" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/css/lib/960.gs/reset.css?v=<?php echo sfConfig::get('app_version') ? sfConfig::get('app_version') : date('U') ?>" />
+  <link rel="stylesheet" type="text/css" media="all" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/css/lib/960.gs/text.css?v=<?php echo sfConfig::get('app_version') ? sfConfig::get('app_version') : date('U') ?>" />
+  <link rel="stylesheet" type="text/css" media="all" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/css/lib/960.gs/fluid_grid.css?v=<?php echo sfConfig::get('app_version') ? sfConfig::get('app_version') : date('U') ?>" />
 
-  <link rel="stylesheet" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/css/main.css">
+  <link rel="stylesheet" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/css/main.css?v=<?php echo sfConfig::get('app_version') ? sfConfig::get('app_version') : date('U') ?>">
 
 <?php if (sfConfig::get('app_feeds_use_feedburner', false)): ?>
   <link rel="alternate" type="application/rss+xml" title="<?php echo __('Flux RSS des dernières nouvelles') ?>" href="http://feeds.feedburner.com/dhr-news-<?php echo $sf_request->getParameter('sf_culture', 'fr') ?>">
@@ -35,17 +32,8 @@
 
   <!-- Opengraph -->
 <?php foreach ($sf_response->getMetas() as $name => $value): ?>
-  <meta property="<?php echo $name ?>" content="<?php echo html_entity_decode(html_entity_decode(html_entity_decode($value, ENT_QUOTES), ENT_QUOTES), ENT_QUOTES) ?>" />
+  <meta property="<?php echo $name ?>" content="<?php echo strip_tags(html_entity_decode(html_entity_decode(html_entity_decode($value, ENT_QUOTES), ENT_QUOTES), ENT_QUOTES)) ?>" />
 <?php endforeach ?>
-
-  <!--[if IE lte IE 8]>
-
-  <link rel="stylesheet" type="text/css" media="all" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/css/lte_ie8.css" />
-
-  <![endif]-->
-
-  <!-- prefix-free -->
-  <script src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/js/prefixfree.min.js"></script>
 
   <script>
   dhrUriRoot = '<?php echo $sf_request->getRelativeUrlRoot() ?>';
@@ -105,7 +93,7 @@
 
       <div class="grid_12 artwork_artists_listing_all">
         <div class="category_content">
-          <h1 id="artwork_artists"><?php echo __('Illustrateurs') ?></h1>
+          <h1 id="artwork_artists"><?php echo __('Illustrations') ?></h1>
             <span class="triangle"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/others/triangle-bord.png" class="triangle" /></span>
                  <span class="graphists_button_top"><a href="#top"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/top.png" alt="TOP"></a></span>
 
@@ -240,7 +228,7 @@
         </div><!-- end of container 12s -->
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
+        <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js?v=<?php echo sfConfig::get('app_version') ? sfConfig::get('app_version') : date('U') ?>"><\/script>')</script>
 
         <script>
 <?php if ($sf_request->hasParameter('play')): ?>
@@ -251,11 +239,9 @@
         </script>
 
         <!-- scripts concatenated and minified via ant build script-->
-        <script src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/js/jQuery.jPlayer.2.1.0/jquery.jplayer.min.js?v=3"></script>
-        <script src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/js/jQuery.jPlayer.2.1.0/add-on/jplayer.playlist.js?v=3"></script>
-        <script src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/js/jquery.scrollTo-1.4.2-min.js?v=3"></script>
-        <script src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/js/jquery.pjax.js?v=3"></script>
-        <script src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/js/script.js?v=4"></script>
+        <script src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/js/jQuery.jPlayer.2.1.0/jquery.jplayer.min.js?v=<?php echo sfConfig::get('app_version') ? sfConfig::get('app_version') : date('U') ?>"></script>
+        <script src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/js/jQuery.jPlayer.2.1.0/add-on/jplayer.playlist.js?v=<?php echo sfConfig::get('app_version') ? sfConfig::get('app_version') : date('U') ?>"></script>
+        <script src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/js/script.js?v=<?php echo sfConfig::get('app_version') ? sfConfig::get('app_version') : date('U') ?>"></script>
         <!-- end scripts-->
 
   <?php include_slot('morescript') ?>
@@ -266,11 +252,6 @@
     g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
     s.parentNode.insertBefore(g,s)}(document,'script'));
   </script>
-
-  <!--[if lt IE 7 ]>
-  <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js"></script>
-  <script>window.attachEvent("onload",function(){CFInstall.check({mode:"overlay"})})</script>
-  <![endif]-->
 
   <!-- Form submission is triggered by click on Paypal links -->
   <form action="https://www.paypal.com/cgi-bin/webscr" method="post" id="paypal" style="display:none;">

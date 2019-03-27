@@ -38,19 +38,19 @@
 
     <div class="grid_6 open_releases_artwork">
       <span class="calque_artwork"> </span>
-      <img id="carousel-current" height="460px" width="460px" src="<?php echo url_for('@main_image').sprintf('?url=%s%s%s&transform=cropCenter&params=500,500', $sf_request->getUriPrefix(), $sf_request->getRelativeUrlRoot(), urlencode($release['artworks'][0])) ?>" />
+      <img id="carousel-current" height="460px" width="460px" src="<?php echo sprintf('//%s/thumbnail/_/500/500/crop/best%s', sfConfig::get('app_api_url_root'), $release['artworks'][0]) ?>" />
 <?php for ($i = 1; $i < count($release['artworks']); $i++): ?>
-      <img style="display:none;" height="460px" width="460px" src="<?php echo url_for('@main_image').sprintf('?url=%s%s%s&transform=cropCenter&params=500,500', $sf_request->getUriPrefix(), $sf_request->getRelativeUrlRoot(), urlencode($release['artworks'][$i])) ?>" />
+      <img style="display:none;" height="460px" width="460px" src="<?php echo sprintf('//%s/thumbnail/_/500/500/crop/best%s', sfConfig::get('app_api_url_root'), $release['artworks'][$i]) ?>" />
 <?php endfor ?>
       <ul class="open_releases_nav_artwork">
             <li>
-              <a class="carousel-nav current" href="<?php echo url_for('@main_image').sprintf('?url=%s%s%s&transform=cropCenter&params=500,500', $sf_request->getUriPrefix(), $sf_request->getRelativeUrlRoot(), urlencode($release['artworks'][0])) ?>" title="<?php echo __("Survolez l'image pour mettre le carousel en pause") ?>">
+              <a class="carousel-nav current" href="<?php echo sprintf('//%s/thumbnail/_/500/500/crop/best%s', sfConfig::get('app_api_url_root'), $release['artworks'][0]) ?>" title="<?php echo __("Survolez l'image pour mettre le carousel en pause") ?>">
                 <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/caroussel-release-hover.png" />
               </a>
             </li>
 <?php for ($i = 1; $i < count($release['artworks']); $i++): ?>
             <li>
-              <a class="carousel-nav" href="<?php echo url_for('@main_image').sprintf('?url=%s%s%s&transform=cropCenter&params=500,500', $sf_request->getUriPrefix(), $sf_request->getRelativeUrlRoot(), urlencode($release['artworks'][$i])) ?>" title="<?php echo __("Survolez l'image pour mettre le carousel en pause") ?>">
+              <a class="carousel-nav" href="<?php echo sprintf('//%s/thumbnail/_/500/500/crop/best%s', sfConfig::get('app_api_url_root'), $release['artworks'][$i]) ?>" title="<?php echo __("Survolez l'image pour mettre le carousel en pause") ?>">
                 <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/caroussel-release.png" />
               </a>
             </li>
@@ -167,8 +167,14 @@
     <h3 class="open_releases_title"><?php echo __('Acheter une copie physique') ?></h3>
     <?php foreach ($release['prices'] as $price): ?>
     <p class="open_releases_buy">
+    <?php if (is_numeric($price['price'])): ?>
       <span class="open_releases_price"><?php echo $price['format'] ?> : <?php echo $price['price'] ?> €</span>
+    <?php else: ?>
+      <span class="open_releases_price"><?php echo $price['format'] ?> : <?php echo $price['price'] ?></span>
+    <?php endif ?>
+    <?php if ($price['paypal_id']): ?>
       <span class="open_releases_market"><a href="" class="paypal" data-paypalid="<?php echo $price['paypal_id'] ?>"><?php echo __('Ajouter au panier') ?></a> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/img-panier.png" alt="" /></span>
+    <?php endif ?>
     </p>
     <?php endforeach; ?>
 <?php endif ?>
