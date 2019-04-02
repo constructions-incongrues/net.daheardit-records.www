@@ -62,7 +62,6 @@ Release:
     released_at:  date
     presentation: string
     license: string
-    links_carousel: string
     url_header: string
     is_public:
       type:       boolean
@@ -84,6 +83,7 @@ Release:
       default:  5
     links_press: text
     links_streaming: text
+    links_videos: text
 
 Track:
   actAs:

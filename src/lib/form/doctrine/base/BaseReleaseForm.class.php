@@ -21,7 +21,6 @@ abstract class BaseReleaseForm extends BaseFormDoctrine
       'slug'              => new sfWidgetFormTextarea(),
       'released_at'       => new sfWidgetFormDate(),
       'license'           => new sfWidgetFormTextarea(),
-      'links_carousel'    => new sfWidgetFormTextarea(),
       'url_header'        => new sfWidgetFormTextarea(),
       'is_public'         => new sfWidgetFormInputCheckbox(),
       'is_new'            => new sfWidgetFormInputCheckbox(),
@@ -34,6 +33,7 @@ abstract class BaseReleaseForm extends BaseFormDoctrine
       'price'             => new sfWidgetFormTextarea(),
       'links_press'       => new sfWidgetFormInputText(),
       'links_streaming'   => new sfWidgetFormInputText(),
+      'links_videos'      => new sfWidgetFormInputText(),
       'created_at'        => new sfWidgetFormDateTime(),
       'updated_at'        => new sfWidgetFormDateTime(),
     ));
@@ -45,7 +45,6 @@ abstract class BaseReleaseForm extends BaseFormDoctrine
       'slug'              => new sfValidatorString(),
       'released_at'       => new sfValidatorDate(array('required' => false)),
       'license'           => new sfValidatorString(array('required' => false)),
-      'links_carousel'    => new sfValidatorString(array('required' => false)),
       'url_header'        => new sfValidatorString(array('required' => false)),
       'is_public'         => new sfValidatorBoolean(array('required' => false)),
       'is_new'            => new sfValidatorBoolean(array('required' => false)),
@@ -58,6 +57,7 @@ abstract class BaseReleaseForm extends BaseFormDoctrine
       'price'             => new sfValidatorString(array('required' => false)),
       'links_press'       => new sfValidatorPass(array('required' => false)),
       'links_streaming'   => new sfValidatorPass(array('required' => false)),
+      'links_videos'      => new sfValidatorPass(array('required' => false)),
       'created_at'        => new sfValidatorDateTime(),
       'updated_at'        => new sfValidatorDateTime(),
     ));

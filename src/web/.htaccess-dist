@@ -17,35 +17,35 @@ Options FollowSymLinks
 
 # Redirection for legacy urls
 # Releases
-RedirectMatch permanent /(fr|en)/discograph(ie|y)/dhr(\d+)(/)? @dhr.url.root@/$1/discography/dhr-$3#release
-RedirectMatch permanent /(fr|en)/discograph(ie|y)(/)?$         @dhr.url.root@/$1/#discography
+RedirectMatch permanent /(fr|en)/discograph(ie|y)/dhr(\d+)(/)? ${DHR_URL_ROOT}/$1/discography/dhr-$3#release
+RedirectMatch permanent /(fr|en)/discograph(ie|y)(/)?$         ${DHR_URL_ROOT}/$1/#discography
 
 # Archives
-RedirectMatch permanent /archives/dhr(\d+).zip      @dhr.url.root@/assets/releases/dhr-$1/archives/dhr-$1_ogg.zip
-RedirectMatch permanent /archives/dhr(\d+)_(.*).zip  @dhr.url.root@/assets/releases/dhr-$1/archives/dhr-$1_$2.zip
+RedirectMatch permanent /archives/dhr(\d+).zip      ${DHR_URL_ROOT}/assets/releases/dhr-$1/archives/dhr-$1_ogg.zip
+RedirectMatch permanent /archives/dhr(\d+)_(.*).zip  ${DHR_URL_ROOT}/assets/releases/dhr-$1/archives/dhr-$1_$2.zip
 
 # Artists
-RedirectMatch permanent /(fr|en)/artist(e)?s/ben_et_bene(/)?     @dhr.url.root@/$1/artist/ben-et-bene#artist
-RedirectMatch permanent /(fr|en)/artist(e)?s/computer_truck(/)?  @dhr.url.root@/$1/artist/computer-truck#artist
-RedirectMatch permanent /(fr|en)/artist(e)?s/goto80(/)?          @dhr.url.root@/$1/artist/goto80#artist
-RedirectMatch permanent /(fr|en)/artist(e)?s/miniroc(/)?         @dhr.url.root@/$1/artist/miniroc#artist
-RedirectMatch permanent /(fr|en)/artist(e)?s/puyo_puyo(/)?       @dhr.url.root@/$1/artist/puyo-puyo#artist
-RedirectMatch permanent /(fr|en)/artist(e)?s/sputnik_booster(/)? @dhr.url.root@/$1/artist/sputnik-booster#artist
-RedirectMatch permanent /(fr|en)/artist(e)?s/vicnet(/)?          @dhr.url.root@/$1/artist/vicnet#artist
-RedirectMatch permanent /(fr|en)/artist(e)?s/buskerdroid(/)?     @dhr.url.root@/$1/artist/buskerdroid#artist
-RedirectMatch permanent /(fr|en)/artist(e)?s/eat_rabbit(/)?      @dhr.url.root@/$1/artist/eat-rabbit#artist
-RedirectMatch permanent /(fr|en)/artist(e)?s/guyom(/)?           @dhr.url.root@/$1/artist/guyom#artist
-RedirectMatch permanent /(fr|en)/artist(e)?s/jacques_cochise(/)? @dhr.url.root@/$1/artist/jacques-cochise#artist
-RedirectMatch permanent /(fr|en)/artist(e)?s/pocketmaster(/)?    @dhr.url.root@/$1/artist/pocketmaster#artist
-RedirectMatch permanent /(fr|en)/artist(e)?s/sidabitball(/)?     @dhr.url.root@/$1/artist/sidabitball#artist
-RedirectMatch permanent /(fr|en)/artist(e)?s/tom_woxom(/)?       @dhr.url.root@/$1/artist/tom-woxom#artist
-RedirectMatch permanent /(fr|en)/artist(e)?s/xerak(/)?           @dhr.url.root@/$1/artist/xerak#artist
-RedirectMatch permanent /(fr|en)/artist(e)?s(/index.php)?        @dhr.url.root@/$1/#artists
+RedirectMatch permanent /(fr|en)/artist(e)?s/ben_et_bene(/)?     ${DHR_URL_ROOT}/$1/artist/ben-et-bene#artist
+RedirectMatch permanent /(fr|en)/artist(e)?s/computer_truck(/)?  ${DHR_URL_ROOT}/$1/artist/computer-truck#artist
+RedirectMatch permanent /(fr|en)/artist(e)?s/goto80(/)?          ${DHR_URL_ROOT}/$1/artist/goto80#artist
+RedirectMatch permanent /(fr|en)/artist(e)?s/miniroc(/)?         ${DHR_URL_ROOT}/$1/artist/miniroc#artist
+RedirectMatch permanent /(fr|en)/artist(e)?s/puyo_puyo(/)?       ${DHR_URL_ROOT}/$1/artist/puyo-puyo#artist
+RedirectMatch permanent /(fr|en)/artist(e)?s/sputnik_booster(/)? ${DHR_URL_ROOT}/$1/artist/sputnik-booster#artist
+RedirectMatch permanent /(fr|en)/artist(e)?s/vicnet(/)?          ${DHR_URL_ROOT}/$1/artist/vicnet#artist
+RedirectMatch permanent /(fr|en)/artist(e)?s/buskerdroid(/)?     ${DHR_URL_ROOT}/$1/artist/buskerdroid#artist
+RedirectMatch permanent /(fr|en)/artist(e)?s/eat_rabbit(/)?      ${DHR_URL_ROOT}/$1/artist/eat-rabbit#artist
+RedirectMatch permanent /(fr|en)/artist(e)?s/guyom(/)?           ${DHR_URL_ROOT}/$1/artist/guyom#artist
+RedirectMatch permanent /(fr|en)/artist(e)?s/jacques_cochise(/)? ${DHR_URL_ROOT}/$1/artist/jacques-cochise#artist
+RedirectMatch permanent /(fr|en)/artist(e)?s/pocketmaster(/)?    ${DHR_URL_ROOT}/$1/artist/pocketmaster#artist
+RedirectMatch permanent /(fr|en)/artist(e)?s/sidabitball(/)?     ${DHR_URL_ROOT}/$1/artist/sidabitball#artist
+RedirectMatch permanent /(fr|en)/artist(e)?s/tom_woxom(/)?       ${DHR_URL_ROOT}/$1/artist/tom-woxom#artist
+RedirectMatch permanent /(fr|en)/artist(e)?s/xerak(/)?           ${DHR_URL_ROOT}/$1/artist/xerak#artist
+RedirectMatch permanent /(fr|en)/artist(e)?s(/index.php)?        ${DHR_URL_ROOT}/$1/#artists
 
 # Misc
-RedirectMatch permanent /(fr|en)/informations(/)?  @dhr.url.root@/$1/#informations
-RedirectMatch permanent /(fr|en)/contact(/)?       @dhr.url.root@/$1/#contact
-RedirectMatch permanent /(fr|en)/(links|liens)(/)? @dhr.url.root@/$1/#links
+RedirectMatch permanent /(fr|en)/informations(/)?  ${DHR_URL_ROOT}/$1/#informations
+RedirectMatch permanent /(fr|en)/contact(/)?       ${DHR_URL_ROOT}/$1/#contact
+RedirectMatch permanent /(fr|en)/(links|liens)(/)? ${DHR_URL_ROOT}/$1/#links
 
 # mod_pagespeed
 <IfModule pagespeed_module>

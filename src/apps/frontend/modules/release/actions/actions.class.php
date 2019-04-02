@@ -13,7 +13,8 @@ class releaseActions extends sfActions
     public function executeShow(sfWebRequest $request)
     {
         // Fetch release
-        $release = Doctrine_Core::getTable('Release')->findOneBySlugAndCulture($request->getParameter('slug'), $this->getUser()->getCulture());
+        $culture = $this->getUser()->getCulture();
+        $release = Doctrine_Core::getTable('Release')->findOneBySlugAndCulture($request->getParameter('slug'), $culture);
         $this->forward404Unless($release);
         if (!$request->hasParameter('preview') && !$release->is_public) {
             $this->forward404();
@@ -37,8 +38,8 @@ class releaseActions extends sfActions
             $partsPrice = explode(',', $priceInfo);
             $prices[] = [
                 'format'    => $partsPrice[0],
-                'price'     => $partsPrice[1],
-                'paypal_id' => $partsPrice[2]
+                'price'     => isset($partsPrice[1]) ? $partsPrice[1] : null,
+                'paypal_id' => isset($partsPrice[2]) ? $partsPrice[2] : null
             ];
         }
         $releaseArray['prices'] = $prices;
@@ -116,10 +117,22 @@ class releaseActions extends sfActions
             }
         }
 
+        // Video links
+        $releaseArray['videos'] = [];
+        $urls = explode("\n", $releaseArray['links_videos']);
+        if ($urls[0]) {
+            foreach ($urls as $url) {
+                if ($culture != 'fr') {
+                    $url .= '?cc_load_policy=1&cc_lang_pref=en';
+                }
+                $releaseArray['videos'][] = $url;
+            }
+        }
+
         // Get previous release
         $pdo = Doctrine_Manager::getInstance()->getCurrentConnection()->getDbh();
-        $stmt = $pdo->prepare('select slug, title, sku from `release` where slug < :slug order by slug desc limit 1');
-        $stmt->execute(array('slug' => $releaseArray['slug']));
+        $stmt = $pdo->prepare('select slug, title, sku from `release` where released_at < :released_at and is_public = true order by released_at desc limit 1');
+        $stmt->execute(array('released_at' => $releaseArray['released_at']));
         $previous = $stmt->fetchAll();
         $previousRelease = null;
         if (count($previous)) {
@@ -128,8 +141,8 @@ class releaseActions extends sfActions
 
         // Get next release
         $pdo = Doctrine_Manager::getInstance()->getCurrentConnection()->getDbh();
-        $stmt = $pdo->prepare('select slug, title, sku from `release` where slug > :slug order by slug asc limit 1');
-        $stmt->execute(array('slug' => $releaseArray['slug']));
+        $stmt = $pdo->prepare('select slug, title, sku from `release` where released_at > :released_at and is_public = true order by released_at asc limit 1');
+        $stmt->execute(array('released_at' => $releaseArray['released_at']));
         $next = $stmt->fetchAll();
         $nextRelease = null;
         if (count($next)) {
@@ -143,24 +156,6 @@ class releaseActions extends sfActions
             $artworks[] = str_replace(sfConfig::get('sf_web_dir'), '', $path);
         }
         $releaseArray['artworks'] = $artworks;
-
-        // Other carousel items
-        $releaseArray['links_carousel_other'] = [];
-        $releaseArray['links_carousel_video'] = [];
-        if (trim($releaseArray['links_carousel'])) {
-            $releaseArray['links_carousel'] = explode("\n", trim($releaseArray['links_carousel']));
-            foreach ($releaseArray['links_carousel'] as $url) {
-                $host = str_replace('www.', '', parse_url($url, PHP_URL_HOST));
-                if ($host == 'vimeo.com' || $host == 'youtube.com') {
-                    $releaseArray['links_carousel_video'][] = $url;
-                } else {
-                    $releaseArray['links_carousel_other'][] = $url;
-                }
-            }
-        } else {
-            $releaseArray['links_carousel_other'] = [];
-            $releaseArray['links_carousel_video'] = [];
-        }
 
         /*
          * Featured release (header image, css, etc)

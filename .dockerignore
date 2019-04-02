@@ -1,1 +1,7 @@
+.git
+*.bak
+*.mp3
+*.zip
+/etc
 /src/data/tmp
+/var

@@ -34,3 +34,6 @@ src/web/releases/*
 *.mp3
 /src/data/fixtures/dhr-*
 /src/data/tmp/*
+/src/vendor/
+/var
+/src/web/assets/releases/dhr-40/archives/

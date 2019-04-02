@@ -21,8 +21,8 @@ class ArtistTable extends Doctrine_Table
 	{
 		$q = $this->createQuery('a')
 			->where('a.slug = ?', $slug)
-			->leftJoin('a.Translation t')
-			->andWhere('t.lang = ?', $culture);
+            ->leftJoin('a.Translation t ON a.id = t.artist_id')
+            ->andWhere('t.lang = ?', $culture);
 
 		return $q->fetchOne();
 	}
