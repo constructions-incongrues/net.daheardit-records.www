@@ -11,12 +11,12 @@ class dhrGenerateReleaseTask extends sfBaseTask
         $this->conversionProfiles = array(
             'mp3_320' => array(
                 'name' => 'mp3_320',
-                'commandConvert' => 'avconv -loglevel warning -analyzeduration 100000000 -i %s -q:a 0 -metadata title=%s -metadata artist=%s -metadata album=%s -metadata track=%s -metadata year=%s %s.mp3',
+                'commandConvert' => 'avconv -loglevel warning -analyzeduration 100000000 -i %s -q:a 0 -metadata title=%s -metadata artist=%s -metadata album=%s -metadata track=%s -metadata year=%s %s',
                 'extension' => 'mp3'
             ),
             'flac' => array(
                 'name' => 'flac',
-                'commandConvert' => 'avconv -loglevel warning -analyzeduration 100000000 -i %s -metadata title=%s -metadata artist=%s -metadata album=%s -metadata track=%s -metadata year=%s %s.flac',
+                'commandConvert' => 'avconv -loglevel warning -analyzeduration 100000000 -i %s -metadata title=%s -metadata artist=%s -metadata album=%s -metadata track=%s -metadata year=%s %s',
                 'extension' => 'flac'
             )
         );

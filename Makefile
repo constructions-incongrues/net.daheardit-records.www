@@ -20,11 +20,11 @@ clean: stop ## Suppression des containers de l'application
 	docker-compose rm -f
 
 database-import: ## Récupération de la base de donnée de production
-	ssh daheardit-record@ftp.pastis-hosting.net mysqldump -h127.0.0.1 -udaheardit-record -pdaheardit-reco daheardit-record > ./src/data/fixtures/net_dahearditrecords_www.dump.sql
+	ssh daheardit-record@ftp.pastis-hosting.net mysqldump -h127.0.0.1 -udaheardit-record -pdaheardit-reco daheardit-record > ./src/data/fixtures/daheardit.sql
 
 deploy: ## Configure et déploie l'application
 	PROFILE=$(PROFILE) docker-compose run --rm --entrypoint fixuid php make configure
-	rsync -avzm "$(RSYNC_PARAMETERS)" --exclude-from=./etc/$(PROFILE)/rsync/exclude --include-from=./etc/$(PROFILE)/rsync/include -e "ssh -p $$RSYNC_SSH_PORT" "$$RSYNC_LOCAL_PATH" "$$RSYNC_REMOTE_USER@$$RSYNC_REMOTE_HOST:$$RSYNC_REMOTE_PATH"
+	rsync -avzm $(RSYNC_PARAMETERS) --exclude-from=./etc/$(PROFILE)/rsync/exclude --include-from=./etc/$(PROFILE)/rsync/include -e "ssh -p $$RSYNC_SSH_PORT" "$$RSYNC_LOCAL_PATH" "$$RSYNC_REMOTE_USER@$$RSYNC_REMOTE_HOST:$$RSYNC_REMOTE_PATH"
 
 directus-export: ## Export des tables Directus de structure
 	docker-compose up -d db

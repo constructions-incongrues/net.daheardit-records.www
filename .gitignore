@@ -37,3 +37,4 @@ src/web/releases/*
 /src/vendor/
 /var
 /src/web/assets/releases/dhr-40/archives/
+/src/web/assets/releases/*/archives/*.zip
