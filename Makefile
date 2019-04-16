@@ -20,7 +20,7 @@ clean: stop ## Suppression des containers de l'application
 	docker-compose rm -f
 
 database-import: ## Récupération de la base de donnée de production
-	ssh daheardit-record@ftp.pastis-hosting.net mysqldump -h127.0.0.1 -udaheardit-record -pdaheardit-reco daheardit-record > ./src/data/fixtures/net_dahearditrecords_www.dump.sql
+	ssh daheardit-record@ftp.pastis-hosting.net mysqldump -h127.0.0.1 -udaheardit-record -pdaheardit-reco daheardit-record > ./src/data/fixtures/daheardit.sql
 
 deploy: ## Configure et déploie l'application
 	PROFILE=$(PROFILE) docker-compose run --rm --entrypoint fixuid php make configure

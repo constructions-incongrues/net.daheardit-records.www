@@ -5,12 +5,6 @@
 *.swo
 *.swp
 *~
-/.idea
-/.otto
-/.ottoid
-/.vagrant
-/composer.*
-/etc
 /etc
 /src/cache
 /src/data/tmp
@@ -18,5 +12,3 @@
 /src/web/press
 /src/web/uploads/news
 /var
-/vendor/constructions-incongrues
-/vendor/constructions-incongrues/ananas-build-toolkit
