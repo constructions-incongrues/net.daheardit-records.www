@@ -83,7 +83,7 @@
 
     <div id="amplitude-player">
 
-<?php if ($sf_request->hasParameter('preview')): ?>
+<?php if ($showPlayerProgressBar): ?>
       <div id="time-container">
         <span class="current-time">
           <span data-amplitude-main-current-minutes="true" class="amplitude-current-minutes">00</span>:<span data-amplitude-main-current-seconds="true" class="amplitude-current-seconds">00</span>
