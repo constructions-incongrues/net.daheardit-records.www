@@ -81,38 +81,40 @@
     <h2 class="open_releases_artist"><a href="<?php echo url_for(sprintf('@artist_show?slug=%s#artist', $release['Artist']['slug'])) ?>"><?php echo $release['Artist']['name'] ?></a></h2>
     <h3 class="open_releases_album"><?php echo $release['title'] ?> </h3>
 
-    <div id="jquery_jplayer_1" class="jp-jplayer"></div>
+    <div id="amplitude-player">
 
-    <div id="jp_container_1" class="jp-audio">
-      <div class="jp-type-playlist">
-        <div class="jp-gui jp-interface">
-         <ul class="jp-controls" style="display:none;">
-            <li><a href="javascript:;" class="jp-previous" tabindex="1">previous</a></li>
-            <li><a href="javascript:;" class="jp-play" tabindex="1">play</a></li>
-            <li><a href="javascript:;" class="jp-pause" tabindex="1">pause</a></li>
-            <li><a href="javascript:;" class="jp-next" tabindex="1">next</a></li>
-            <li><a href="javascript:;" class="jp-stop" tabindex="1">stop</a></li>
-          </ul>
-          <div class="jp-progress" style="display:none;">
-            <div class="jp-seek-bar">
-              <div class="jp-play-bar"></div>
-            </div>
-          </div>
-
-          <div class="jp-current-time" style="display:none;"></div>
-          <div class="jp-duration" style="display:none;"></div>
+<?php if ($sf_request->hasParameter('preview')): ?>
+      <div id="time-container">
+        <span class="current-time">
+          <span data-amplitude-main-current-minutes="true" class="amplitude-current-minutes">00</span>:<span data-amplitude-main-current-seconds="true" class="amplitude-current-seconds">00</span>
+        </span>
+        <div id="progress-container">
+          <input type="range" class="amplitude-song-slider" step=".1" />
+          <progress id="song-buffered-progress" class="amplitude-buffered-progress" amplitude-main-song-played-progress="true"></progress>
         </div>
-        <div class="jp-playlist">
-          <ul class="open_releases_playlist">
-            <li></li>
-          </ul>
-        </div>
-        <div class="jp-no-solution">
-          <p><?php echo __('Chargement du player en cours. Patience :)') ?></p>
-        </div>
+        <span class="duration">
+          <span data-amplitude-main-duration-minutes="true" class="amplitude-duration-minutes">00</span>:<span data-amplitude-main-duration-seconds="true" class="amplitude-duration-seconds">00</span>
+        </span>
       </div>
+<?php endif ?>
+      <ul class="open_releases_playlist">
+      <?php foreach ($release['tracks'] as $track): ?>
+        <?php if ($track['number'] < 10): ?>
+          <?php $zero = '0'; ?>
+        <?php else: ?>
+          <?php $zero = ''; ?>
+        <?php endif; ?>
+        <li itemprop="track" itemscope itemtype="http://schema.org/MusicRecording" class="song amplitude-play-pause" data-amplitude-song-index="<?php echo $track['number'] - 1 ?>">
+          <a itemprop="url" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/releases/<?php echo $release['slug'] ?>/tracks/<?php echo str_replace('-', '', $release['slug']) ?>_<?php echo $zero ?><?php echo $track['number'] ?>.mp3" onclick="return false;">
+            <span itemprop="name"><?php echo $track['title'] ?></span>
+          </a>
+          <meta itemprop="inAlbum" content="<?php echo htmlentities($release['title']) ?>" />
+          <meta itemprop="byArtist" content="<?php echo htmlentities($release['Artist']['name']) ?>" />
+          <meta itemprop="duration" content="PT6M33S" />
+        </li>
+      <?php endforeach; ?>
+      </ul>
     </div>
-
 
     <ul class="open_releases_playlist" style="display:none;">
 <?php foreach ($release['tracks'] as $track): ?>
