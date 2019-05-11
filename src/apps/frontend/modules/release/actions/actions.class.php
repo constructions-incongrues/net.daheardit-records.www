@@ -109,9 +109,9 @@ class releaseActions extends sfActions
         $urls = explode("\n", $releaseArray['links_streaming']);
         if ($urls[0]) {
             foreach ($urls as $url) {
-                $parts = explode('.', str_replace('www.', '', parse_url($url, PHP_URL_HOST)));
+                $parts = explode('.', parse_url($url, PHP_URL_HOST));
                 $releaseArray['streaming'][] = array(
-                    'title' => strtoupper(array_shift($parts)),
+                    'title' => strtoupper(array_slice($parts, -2, 1)[0]),
                     'url'  => $url
                 );
             }
