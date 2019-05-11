@@ -1,4 +1,17 @@
  $(document).ready(function () {
+    if (document.getElementById('amplitude-player')) {
+        var songs = [];
+        $('li.song').each(function(i, e) {
+            songs.push({
+                "name": $(e).find('span')[0].textContent,
+                "url": $(e).find('a')[0].href
+            })
+        });
+        Amplitude.init({
+            "songs": songs
+        });
+    }
+
     // Paypal add to cart links
     $('a.paypal').click(function() {
         $('#paypal_id').val($(this).data('paypalid'));
@@ -11,45 +24,6 @@
         $('form#paypal-view-cart').submit();
         return false;
     });
-
-    // Media player
-    if ($('.open_releases_playlist li a')) {
-        // Build playlist
-        var playlist = [];
-        $('.open_releases_playlist li a').each(function() {
-            var media = {mp3: $(this).attr('href'), title: $(this).text()};
-            if ($(this).text().match(/\(bonus track\)/i)) {
-                media.liClass = 'bonus';
-            }
-            playlist.push(media);
-        });
-
-        // Media player
-        var player = new jPlayerPlaylist(null, playlist, {
-            solution: 'flash, html',
-            swfPath: dhrUriRoot + "/frontend/js/jQuery.jPlayer.2.1.0/",
-            playlistOptions: { autoPlay: window.autoPlay }
-        });
-
-        // Track releases streaming activity
-        $("#jquery_jplayer_1").bind($.jPlayer.event.play, function(event) {
-            trackInfos = event.jPlayer.status.src.match(/^.*\/dhr(\d+)_(\d+)\.mp3$/);
-            _gaq.push(['_trackEvent', 'Releases', 'Track Played - ' + trackInfos[2], 'dhr-' + trackInfos[1]]);
-        });
-
-        // Go to previous release after release's last track
-        $("#jquery_jplayer_1").bind($.jPlayer.event.ended, function(event) {
-            if (event.jPlayer.status.src == $('.open_releases_playlist li a').last().attr('href')) {
-                if ($('a.previous')) {
-                    window.location = $('a.previous').attr('href').split('#')[0] + '?play#release';;
-                }
-            }
-        });
-
-        $("#jquery_jplayer_1").bind($.jPlayer.event.resize, function(event) {
-            $($('.open_releases_playlist li')[0]).hide();
-        });
-    }
 
     // Top menu
     $('#menu-main li a').click(function(event) {

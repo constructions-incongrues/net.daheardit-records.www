@@ -239,8 +239,7 @@
         </script>
 
         <!-- scripts concatenated and minified via ant build script-->
-        <script src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/js/jQuery.jPlayer.2.1.0/jquery.jplayer.min.js?v=<?php echo sfConfig::get('app_version') ? sfConfig::get('app_version') : date('U') ?>"></script>
-        <script src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/js/jQuery.jPlayer.2.1.0/add-on/jplayer.playlist.js?v=<?php echo sfConfig::get('app_version') ? sfConfig::get('app_version') : date('U') ?>"></script>
+        <script type="text/javascript" src="<?php echo $sf_request->getRelativeUrlRoot() ?>/node_modules/amplitudejs/dist/amplitude.js"></script>
         <script src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/js/script.js?v=<?php echo sfConfig::get('app_version') ? sfConfig::get('app_version') : date('U') ?>"></script>
         <!-- end scripts-->
 

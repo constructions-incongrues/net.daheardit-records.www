@@ -23,7 +23,7 @@ RUN addgroup --gid 1000 daheardit && \
     printf "user: daheardit\ngroup: daheardit\n" > /etc/fixuid/config.yml
 
 # Install additional packages and PHP extensions
-RUN apk --update --no-cache add bash curl ffmpeg freetype-dev gettext git imagemagick libjpeg-turbo-dev libpng-dev make python3 zip && \
+RUN apk --update --no-cache add bash curl ffmpeg freetype-dev gettext git imagemagick libjpeg-turbo-dev libpng-dev make nodejs npm python3 zip && \
     ln -sf /usr/bin/ffmpeg /usr/bin/avconv && \
     docker-php-ext-install -j$(nproc) gd opcache pdo_mysql && \
     docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ && \
