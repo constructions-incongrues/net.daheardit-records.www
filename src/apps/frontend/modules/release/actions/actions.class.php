@@ -111,7 +111,7 @@ class releaseActions extends sfActions
             foreach ($urls as $url) {
                 $parts = explode('.', parse_url($url, PHP_URL_HOST));
                 $title = array_slice($parts, -2, 1)[0];
-                if ($title == 'bandcamp' && !$request->hasParameter('preview')) {
+                if (!Doctrine_Core::getTable('Component')->findOneByName('release_bandcamp_url')->getIsActivated()) {
                     continue;
                 }
                 $releaseArray['streaming'][] = array(
@@ -251,10 +251,11 @@ class releaseActions extends sfActions
         }
 
         // Pass data to view
-        $this->previousRelease = $previousRelease;
-        $this->nextRelease = $nextRelease;
-        $this->release = $releaseArray;
         $this->archives = $archives;
+        $this->nextRelease = $nextRelease;
+        $this->previousRelease = $previousRelease;
+        $this->release = $releaseArray;
+        $this->showPlayerProgressBar = Doctrine_Core::getTable('Component')->findOneByName('release_player_progress_bar')->getIsActivated();
 
         // Set content type
         if ($request->getParameter('sf_format') == 'mediarss') {

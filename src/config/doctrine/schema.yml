@@ -124,3 +124,12 @@ Content:
     links1:       string
     links2:       string
     footer_video: string
+
+Component:
+  columns:
+    name:
+      type: varchar
+    is_activated:
+      type: boolean
+    description:
+      type: text
