@@ -110,8 +110,12 @@ class releaseActions extends sfActions
         if ($urls[0]) {
             foreach ($urls as $url) {
                 $parts = explode('.', parse_url($url, PHP_URL_HOST));
+                $title = array_slice($parts, -2, 1)[0];
+                if ($title == 'bandcamp' && !$request->hasParameter('preview')) {
+                    continue;
+                }
                 $releaseArray['streaming'][] = array(
-                    'title' => strtoupper(array_slice($parts, -2, 1)[0]),
+                    'title' => strtoupper($title),
                     'url'  => $url
                 );
             }
