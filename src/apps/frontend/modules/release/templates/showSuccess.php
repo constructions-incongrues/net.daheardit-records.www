@@ -83,6 +83,7 @@
 
     <div id="amplitude-player">
 
+<?php if ($sf_request->hasParameter('preview')): ?>
       <div id="time-container">
         <span class="current-time">
           <span data-amplitude-main-current-minutes="true" class="amplitude-current-minutes">00</span>:<span data-amplitude-main-current-seconds="true" class="amplitude-current-seconds">00</span>
@@ -95,7 +96,7 @@
           <span data-amplitude-main-duration-minutes="true" class="amplitude-duration-minutes">00</span>:<span data-amplitude-main-duration-seconds="true" class="amplitude-duration-seconds">00</span>
         </span>
       </div>
-
+<?php endif ?>
       <ul class="open_releases_playlist">
       <?php foreach ($release['tracks'] as $track): ?>
         <?php if ($track['number'] < 10): ?>
