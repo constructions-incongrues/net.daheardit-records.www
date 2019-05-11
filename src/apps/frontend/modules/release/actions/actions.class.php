@@ -107,11 +107,12 @@ class releaseActions extends sfActions
         // Streaming links
         $releaseArray['streaming'] = [];
         $urls = explode("\n", $releaseArray['links_streaming']);
+        $bandcampLinkStatus = Doctrine_Core::getTable('Component')->findOneByLabel('release_bandcamp_link')->getStatus();
         if ($urls[0]) {
             foreach ($urls as $url) {
                 $parts = explode('.', parse_url($url, PHP_URL_HOST));
                 $title = array_slice($parts, -2, 1)[0];
-                if (!Doctrine_Core::getTable('Component')->findOneByName('release_bandcamp_url')->getIsActivated()) {
+                if ($title == 'bandcamp' && ($bandcampLinkStatus === 'deleted' || $bandcampLinkStatus == 'draft' && !$request->hasParameter('preview'))) {
                     continue;
                 }
                 $releaseArray['streaming'][] = array(
@@ -250,12 +251,15 @@ class releaseActions extends sfActions
             $this->getContext()->getResponse()->addMeta('og:'.$name, $value);
         }
 
+        // Feature flags
+        $playerProgressBarStatus =  Doctrine_Core::getTable('Component')->findOneByLabel('player_progress_bar')->getStatus();
+
         // Pass data to view
         $this->archives = $archives;
         $this->nextRelease = $nextRelease;
         $this->previousRelease = $previousRelease;
         $this->release = $releaseArray;
-        $this->showPlayerProgressBar = Doctrine_Core::getTable('Component')->findOneByName('release_player_progress_bar')->getIsActivated();
+        $this->showPlayerProgressBar =  $playerProgressBarStatus == 'published' || $playerProgressBarStatus == 'draft' && $request->hasParameter('preview');
 
         // Set content type
         if ($request->getParameter('sf_format') == 'mediarss') {

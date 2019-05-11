@@ -13,15 +13,15 @@ abstract class BaseComponentFormFilter extends BaseFormFilterDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'name'         => new sfWidgetFormFilterInput(),
-      'is_activated' => new sfWidgetFormChoice(array('choices' => array('' => 'yes or no', 1 => 'yes', 0 => 'no'))),
-      'description'  => new sfWidgetFormFilterInput(),
+      'label'       => new sfWidgetFormFilterInput(),
+      'status'      => new sfWidgetFormFilterInput(),
+      'description' => new sfWidgetFormFilterInput(),
     ));
 
     $this->setValidators(array(
-      'name'         => new sfValidatorPass(array('required' => false)),
-      'is_activated' => new sfValidatorChoice(array('required' => false, 'choices' => array('', 1, 0))),
-      'description'  => new sfValidatorPass(array('required' => false)),
+      'label'       => new sfValidatorPass(array('required' => false)),
+      'status'      => new sfValidatorPass(array('required' => false)),
+      'description' => new sfValidatorPass(array('required' => false)),
     ));
 
     $this->widgetSchema->setNameFormat('component_filters[%s]');
@@ -41,10 +41,10 @@ abstract class BaseComponentFormFilter extends BaseFormFilterDoctrine
   public function getFields()
   {
     return array(
-      'id'           => 'Number',
-      'name'         => 'Text',
-      'is_activated' => 'Boolean',
-      'description'  => 'Text',
+      'id'          => 'Number',
+      'label'       => 'Text',
+      'status'      => 'Text',
+      'description' => 'Text',
     );
   }
 }

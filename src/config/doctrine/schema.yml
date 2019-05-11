@@ -127,9 +127,9 @@ Content:
 
 Component:
   columns:
-    name:
+    label:
       type: varchar
-    is_activated:
-      type: boolean
+    status:
+      type: varchar
     description:
       type: text

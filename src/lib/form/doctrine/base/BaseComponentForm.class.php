@@ -15,17 +15,17 @@ abstract class BaseComponentForm extends BaseFormDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'id'           => new sfWidgetFormInputHidden(),
-      'name'         => new sfWidgetFormInputText(),
-      'is_activated' => new sfWidgetFormInputCheckbox(),
-      'description'  => new sfWidgetFormInputText(),
+      'id'          => new sfWidgetFormInputHidden(),
+      'label'       => new sfWidgetFormInputText(),
+      'status'      => new sfWidgetFormInputText(),
+      'description' => new sfWidgetFormInputText(),
     ));
 
     $this->setValidators(array(
-      'id'           => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
-      'name'         => new sfValidatorPass(array('required' => false)),
-      'is_activated' => new sfValidatorBoolean(array('required' => false)),
-      'description'  => new sfValidatorPass(array('required' => false)),
+      'id'          => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
+      'label'       => new sfValidatorPass(array('required' => false)),
+      'status'      => new sfValidatorPass(array('required' => false)),
+      'description' => new sfValidatorPass(array('required' => false)),
     ));
 
     $this->widgetSchema->setNameFormat('component[%s]');
