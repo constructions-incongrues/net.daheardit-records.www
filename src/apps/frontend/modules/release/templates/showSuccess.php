@@ -135,13 +135,22 @@
 
 <?php if (count($archives)): ?>
     <span style="margin-top:-25px;"> </span>
-    <h2 class="open_releases_title"><?php echo __('Télécharger librement') ?> ou faire un <a href="https://www.helloasso.com/associations/constructions-incongrues/formulaires/1" class="donate">&hearts; <?php echo __('don') ?> &hearts;</a></h2>
+    <h2 class="open_releases_title"><?php echo __('Télécharger librement') ?></h2>
 
     <ul class="open_releases_download">
   <?php foreach ($archives as $archive): ?>
       <li><a class="release-download" data-dhr-release-slug="<?php echo $release['slug'] ?>" data-dhr-archive-format="<?php echo $archive['name'] ?>" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/releases/<?php echo $release['slug'] ?>/archives/<?php echo $archive['filename'] ?>"><?php echo strtoupper($archive['name']) ?></a></li>
   <?php endforeach ?>
     </ul>
+<?php endif ?>
+
+
+<?php if (count($release['streaming'])): ?>
+  <ul class="open_releases_download">
+  <?php foreach ($release['streaming'] as $link): ?>
+      <li><a class="release-download" href="<?php echo $link['url'] ?>"><?php echo basename($link['title']) ?></a></li>
+  <?php endforeach ?>
+  </ul>
 <?php endif ?>
 
     <p class="open_releases_download_licence">
@@ -152,15 +161,7 @@
 <?php endif ?>
     </p>
 
-<?php if (count($release['streaming'])): ?>
-  <span style="margin-top:-25px;"> </span>
-  <h3 class="open_releases_title"><?php echo __('Écouter en streaming') ?></h3>
-  <ul class="open_releases_download">
-  <?php foreach ($release['streaming'] as $link): ?>
-      <li><a class="release-download" href="<?php echo $link['url'] ?>"><?php echo basename($link['title']) ?></a></li>
-  <?php endforeach ?>
-  </ul>
-<?php endif ?>
+
 
 
 <?php if ($release['is_available']): ?>
@@ -182,7 +183,16 @@
 
 </ul>
 
+<p class="donateinfos">
+
+<a href="https://www.helloasso.com/associations/constructions-incongrues/formulaires/1" class="donate">&hearts; <?php echo __('don') ?> &hearts;</a>
+<br />
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse facilisis mi eget quam bibendum, in venenatis ex fringilla. Nunc mattis dignissim libero cursus hendrerit. Aliquam at mauris aliquam leo auctor convallis ut ut ligula. Proin metus odio, eleifend quis enim eget, pellentesque rutrum orci. Sed vitae arcu quis sapien tincidunt faucibus et vel velit. Nam leo turpis, mollis eget egestas nec, mattis ut ex. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse sed dui in arcu venenatis cursus. Suspendisse potenti. Donec tincidunt, ex et faucibus malesuada, purus ante commodo lectus, eu rhoncus mauris metus sit amet risus.
+</p>
+
+
     <h1 class="open_releases_title">
+
 
     <?php echo __('À propos de la sortie') ?></h1>
 
