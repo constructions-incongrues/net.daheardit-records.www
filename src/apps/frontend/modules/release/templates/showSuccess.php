@@ -174,21 +174,16 @@
       <span class="open_releases_price"><?php echo $price['format'] ?> : <?php echo $price['price'] ?></span>
     <?php endif ?>
     <?php if ($price['paypal_id']): ?>
-      <span class="open_releases_market"><a href="" class="paypal" data-paypalid="<?php echo $price['paypal_id'] ?>"><?php echo __('Ajouter au panier') ?></a> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/img-panier.png" alt="" /></span>
+      <span class="open_releases_market"><a href="" class="paypal" data-paypalid="<?php echo $price['paypal_id'] ?>"><?php echo __('Ajouter au panier') ?></a> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/icon/img-panier.png" alt="" /></span> 
     <?php endif ?>
     </p>
+    
+<span class="donatebuttonrelease2"<a href="https://www.helloasso.com/associations/constructions-incongrues/formulaires/1" class="donate">&hearts; <?php echo __('faire un don') ?> </a></span> 
     <?php endforeach; ?>
 <?php endif ?>
 
 
 </ul>
-
-<p class="donateinfos">
-
-<a href="https://www.helloasso.com/associations/constructions-incongrues/formulaires/1" class="donate">&hearts; <?php echo __('don') ?> &hearts;</a>
-<br />
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse facilisis mi eget quam bibendum, in venenatis ex fringilla. Nunc mattis dignissim libero cursus hendrerit. Aliquam at mauris aliquam leo auctor convallis ut ut ligula. Proin metus odio, eleifend quis enim eget, pellentesque rutrum orci. Sed vitae arcu quis sapien tincidunt faucibus et vel velit. Nam leo turpis, mollis eget egestas nec, mattis ut ex. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse sed dui in arcu venenatis cursus. Suspendisse potenti. Donec tincidunt, ex et faucibus malesuada, purus ante commodo lectus, eu rhoncus mauris metus sit amet risus.
-</p>
 
 
     <h1 class="open_releases_title">
@@ -226,6 +221,17 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse facilisis m
     </ul>
 <?php endif ?>
 
+
+<!-- <div id="donateinfos">
+<p>
+<strong>Faire un don</strong>
+<br />
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse facilisis mi eget quam bibendum, in venenatis ex fringilla. Nunc mattis dignissim libero cursus hendrerit. Aliquam at mauris aliquam leo auctor convallis ut ut ligula. Proin metus odio, eleifend quis enim eget, pellentesque rutrum orci. Sed vitae arcu quis sapien tincidunt faucibus et vel velit. Nam leo turpis, mollis eget egestas nec, mattis ut ex. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse sed dui in arcu venenatis cursus. Suspendisse potenti. Donec tincidunt, ex et faucibus malesuada, purus ante commodo lectus, eu rhoncus mauris metus sit amet risus.
+<br />
+
+<span class="donatebuttonrelease"<a href="https://www.helloasso.com/associations/constructions-incongrues/formulaires/1" class="donate">&hearts; <?php echo __('don') ?> </a></span>
+</p>
+</div> -->
 
     </div><!-- end of grid_6 -->
   </div><!-- enf of release_content -->

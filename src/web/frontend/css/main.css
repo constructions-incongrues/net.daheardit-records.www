@@ -1525,11 +1525,13 @@ text-align:right;}
 }
 .open_releases_buy
 {
-  background-color:#transparent;
-  color:#29ABE2;
+/*  background-color:#transparent;
+ color:#29ABE2;*/
+ color:#FFF;
+  background-color:#1a1a1a;
   border-radius: 4px;
-  border:1px solid #29ABE2;
-  font-weight: bold;
+/*  border:1px solid #29ABE2;
+*/  font-weight: bold;
   padding:5px;
   min-height:20px;
   margin-top:-12px;
@@ -1567,7 +1569,7 @@ text-align:right;}
 
 ul.open_releases_download
 {
-  margin:-10px 0px 10px 2px;
+  margin:25px 0px 25px 2px;
 }
 
 .open_releases_download li
@@ -1586,6 +1588,7 @@ font-family: 'Open Sans', sans-serif;
     border-radius: 4px;
     font-weight: bold;
     padding:7px;
+     
 
 
   }
@@ -1860,13 +1863,47 @@ input.button:hover
 
 input.button:focus {outline: none;}
 
-.donateinfos
+#donateinfos
 {
   margin-left: 10px;
-  opacity: 0.04;
   border-radius: 4px;
-  background-color: #ea1d79;
+  background-color: #f6edf2;
+  color: #ea1d79;
+  font-weight: 500;
+  padding: 20px;
+
 }
 
+.donatebuttonrelease {
+  padding: 10px;
+  color: #FFF;
+  border-radius: 4px;
+  border: solid 1px #ea1d79;
+  background-color: #ea1d79;
+  border: none;
+  margin-top: 10px;
+  padding: 5px 11px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
 
+.donatebuttonrelease2 {
+  color: #ea1d79;
+  border-radius: 4px;
+  border: solid 1px #ea1d79;
+  background-color: #f6edf2;
+/*  padding: px 3px 3px 10px;
+*/ 
+  padding:5px;
+  margin: -10px 0px 0px 10px;
+  display: inline-block;
+  width: 471px;
+}
 
+.donatebuttonrelease a {
+ color:#FFF;
+}
+
+.jp-playlist .open_releases_playlist {color:#000!important; font-weight: bold;}
