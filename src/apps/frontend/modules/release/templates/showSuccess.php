@@ -51,7 +51,7 @@
 <?php for ($i = 1; $i < count($release['artworks']); $i++): ?>
             <li>
               <a class="carousel-nav" href="<?php echo sprintf('//%s/thumbnail/_/500/500/crop/best%s', sfConfig::get('app_api_url_root'), $release['artworks'][$i]) ?>" title="<?php echo __("Survolez l'image pour mettre le carousel en pause") ?>">
-                <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/caroussel-release.png" />
+                <img src="<?php   echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/caroussel-release.png" />
               </a>
             </li>
 <?php endfor ?>
@@ -70,6 +70,29 @@
    </div><!-- end of grid_6 -->
 
     <div class="grid_6 open_releases_infos">
+      <div class="player">
+        <h1><?php echo $release['sku'] ?> - <?php echo $release['released_at'] ?></h1>
+        <h2><a href="<?php echo url_for(sprintf('@artist_show?slug=%s#artist', $release['Artist']['slug'])) ?>"><?php echo $release['Artist']['name'] ?></a></h2>
+        <h3><?php echo $release['title'] ?> </h3>
+      </div>
+
+      <ul class="playlist">
+      <?php foreach ($release['tracks'] as $track): ?>
+        <?php if ($track['number'] < 10): ?>
+          <?php $zero = '0'; ?>
+        <?php else: ?>
+          <?php $zero = ''; ?>
+        <?php endif; ?>
+        <li itemprop="track" itemscope itemtype="http://schema.org/MusicRecording" class="song amplitude-play-pause" data-amplitude-song-index="<?php echo $track['number'] - 1 ?>">
+          <a itemprop="url" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/releases/<?php echo $release['slug'] ?>/tracks/<?php echo str_replace('-', '', $release['slug']) ?>_<?php echo $zero ?><?php echo $track['number'] ?>.mp3" onclick="return false;">
+            <span itemprop="name"><?php echo $track['title'] ?></span>
+          </a>
+          <meta itemprop="inAlbum" content="<?php echo htmlentities($release['title']) ?>" />
+          <meta itemprop="byArtist" content="<?php echo htmlentities($release['Artist']['name']) ?>" />
+          <meta itemprop="duration" content="PT6M33S" />
+        </li>
+      <?php endforeach; ?>
+      </ul>
 
     <h1 class="open_releases_catalog"><?php echo $release['sku'] ?>
 <?php if ($release['released_at']): ?>

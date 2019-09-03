@@ -2115,3 +2115,72 @@ li.amplitude-playing a {
   background-color: #000;
   color: #FFF;
 }
+
+.player {
+  height: 278px;
+  border-radius: 4px;
+  background-color: #1a1a1a;
+  padding: 22px;
+}
+
+.player h1 {
+  text-transform: uppercase;
+  font-family: "Open Sans";
+  font-size: 13px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #b2b2b2;
+}
+
+.player h1 {
+  margin-bottom: 10px;
+}
+.player h2, .player h3 {
+  margin: 0;
+}
+
+.player h2 a {
+  color: #fff;
+  font-size: 44px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Jockey One";
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+.player h3 {
+  font-family: "Jockey One";
+  font-size: 32px;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #b2b2b2;
+}
+
+ul.playlist {
+  margin: 0;
+  padding: 0;
+}
+
+.playlist li {
+  font-family: "Open Sans";
+  margin: 0;
+  padding: 0;
+  height: 32px;
+  width: 100%;
+  border-radius: 4px;
+  background-color: #ededed;
+  border: solid 2px #fff;
+  font-weight: 600;
+
+}
