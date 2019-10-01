@@ -10,17 +10,20 @@
  * @property string $links1
  * @property string $links2
  * @property string $footer_video
+ * @property string $url_header
  * 
  * @method string  getInformations() Returns the current record's "informations" value
  * @method string  getGreetings()    Returns the current record's "greetings" value
  * @method string  getLinks1()       Returns the current record's "links1" value
  * @method string  getLinks2()       Returns the current record's "links2" value
  * @method string  getFooterVideo()  Returns the current record's "footer_video" value
+ * @method string  getUrlHeader()    Returns the current record's "url_header" value
  * @method Content setInformations() Sets the current record's "informations" value
  * @method Content setGreetings()    Sets the current record's "greetings" value
  * @method Content setLinks1()       Sets the current record's "links1" value
  * @method Content setLinks2()       Sets the current record's "links2" value
  * @method Content setFooterVideo()  Sets the current record's "footer_video" value
+ * @method Content setUrlHeader()    Sets the current record's "url_header" value
  * 
  * @package    net.daheardit-records.www
  * @subpackage model
@@ -45,6 +48,9 @@ abstract class BaseContent extends sfDoctrineRecord
              'type' => 'string',
              ));
         $this->hasColumn('footer_video', 'string', null, array(
+             'type' => 'string',
+             ));
+        $this->hasColumn('url_header', 'string', null, array(
              'type' => 'string',
              ));
     }

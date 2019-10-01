@@ -47,6 +47,11 @@ class releaseComponents extends sfComponents
             $release = Doctrine_Core::getTable('Release')->findLatest(!$request->hasParameter('preview'));
         }
 
+        $linkHeader = Doctrine_Core::getTable('Content')->findAll(Doctrine_Core::HYDRATE_ARRAY)[0]['url_header'];
+        if (!empty($linkHeader)) {
+            $release['url_header'] = $linkHeader;
+        }
+
         // This should not happen
         if (!$release) {
             throw new RuntimeException('Could not find any featured release');

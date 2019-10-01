@@ -19,6 +19,7 @@ abstract class BaseContentForm extends BaseFormDoctrine
       'links1'       => new sfWidgetFormTextarea(),
       'links2'       => new sfWidgetFormTextarea(),
       'footer_video' => new sfWidgetFormTextarea(),
+      'url_header'   => new sfWidgetFormTextarea(),
       'created_at'   => new sfWidgetFormDateTime(),
       'updated_at'   => new sfWidgetFormDateTime(),
     ));
@@ -28,6 +29,7 @@ abstract class BaseContentForm extends BaseFormDoctrine
       'links1'       => new sfValidatorString(array('required' => false)),
       'links2'       => new sfValidatorString(array('required' => false)),
       'footer_video' => new sfValidatorString(array('required' => false)),
+      'url_header'   => new sfValidatorString(array('required' => false)),
       'created_at'   => new sfValidatorDateTime(),
       'updated_at'   => new sfValidatorDateTime(),
     ));
