@@ -124,4 +124,8 @@ Content:
     links1:       string
     links2:       string
     footer_video: string
-    url_header:   string
+
+Header:
+  columns:
+    url: string
+    enabled: boolean

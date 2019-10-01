@@ -5,9 +5,6 @@
 }
 <?php endif ?>
 </style>
-<?php if (!is_null($urlStylesheet)): ?>
-<link rel="stylesheet" type="text/css" media="all" href="<?php echo $urlStylesheet ?>" />
-<?php endif ?>
 <link rel="stylesheet" type="text/css" media="all" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/releases/<?php echo $release->slug ?>/<?php echo $release->slug ?>.css" />
 
 <?php slot('morescript') ?>

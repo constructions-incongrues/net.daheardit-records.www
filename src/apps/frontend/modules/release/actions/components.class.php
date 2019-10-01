@@ -47,89 +47,30 @@ class releaseComponents extends sfComponents
             $release = Doctrine_Core::getTable('Release')->findLatest(!$request->hasParameter('preview'));
         }
 
-        $linkHeader = Doctrine_Core::getTable('Content')->findAll(Doctrine_Core::HYDRATE_ARRAY)[0]['url_header'];
-        if (!empty($linkHeader)) {
-            $release['url_header'] = $linkHeader;
-        }
-
         // This should not happen
         if (!$release) {
             throw new RuntimeException('Could not find any featured release');
         }
 
-        if (is_readable(sprintf('%s/frontend/pics/others/header_force.jpg', sfConfig::get('sf_web_dir')))) {
-            $urlHeader = sprintf('%s/frontend/pics/others/header_force.jpg', $this->getRequest()->getRelativeUrlRoot());
-        } else {
-            // Build URL to header
-            $urlHeader = sprintf(
-                '%s/assets/releases/%s/header.jpg',
-                $this->getRequest()->getRelativeUrlRoot(),
-                $release->slug
-            );
-        }
+        // Build URL to header
+        $urlHeader = sprintf(
+            '%s/assets/releases/%s/header.jpg',
+            $this->getRequest()->getRelativeUrlRoot(),
+            $release->slug
+        );
 
-        $urlStylesheet = null;
-        $urlScript = null;
-
-        // Master header
-        if (!$this->getRequest()->hasParameter('slug')) {
-            // Image
-            $finder = new Finder();
-            $headerImages = $finder
-                ->files()
-                ->name('/\.gif|\.jpg|\.png$/')
-                ->depth('== 0')
-                ->in(sprintf('%s/assets/', sfConfig::get('sf_web_dir')));
-
-            $headerImages = iterator_to_array($headerImages, false);
-
-            if (count($headerImages)) {
-                $urlHeader = sprintf(
-                    '%s/assets/%s',
-                    $this->getRequest()->getRelativeUrlRoot(),
-                    basename($headerImages[0]->getFilename())
-                );
+        $customHeader = Doctrine_Core::getTable('Header')->findOneByEnabled(1, Doctrine_Core::HYDRATE_ARRAY);
+        if ($customHeader) {
+            if (!empty($customHeader['url'])) {
+                $release['url_header'] = $customHeader['url'];
             }
-
-            $finder = new Finder();
-            $headerStylesheets = $finder
-                ->files()
-                ->name('*.css')
-                ->depth('== 0')
-                ->in(sprintf('%s/assets/', sfConfig::get('sf_web_dir')));
-
-            $headerStylesheets = iterator_to_array($headerStylesheets, false);
-
-            if (count($headerStylesheets)) {
-                $urlStylesheet = sprintf(
-                    '%s/assets/%s',
-                    $this->getRequest()->getRelativeUrlRoot(),
-                    basename($headerStylesheets[0]->getFilename())
-                );
-            }
-
-            $finder = new Finder();
-            $headerScripts = $finder
-                ->files()
-                ->name('*.js')
-                ->depth('== 0')
-                ->in(sprintf('%s/assets/', sfConfig::get('sf_web_dir')));
-
-            $headerScripts = iterator_to_array($headerScripts, false);
-
-            if (count($headerScripts)) {
-                $urlScript = sprintf(
-                    '%s/assets/%s',
-                    $this->getRequest()->getRelativeUrlRoot(),
-                    basename($headerScripts[0]->getFilename())
-                );
+            if (is_readable(sprintf('%s/frontend/pics/others/header_force.jpg', sfConfig::get('sf_web_dir')))) {
+                $urlHeader = sprintf('%s/frontend/pics/others/header_force.jpg', $this->getRequest()->getRelativeUrlRoot());
             }
         }
 
         // Pass data to view
         $this->release = $release;
         $this->urlHeader = $urlHeader;
-        $this->urlScript = $urlScript;
-        $this->urlStylesheet = $urlStylesheet;
     }
 }
