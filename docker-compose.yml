@@ -44,7 +44,6 @@ services:
       MYSQL_ROOT_PASSWORD: root
     image: mysql:5.6
     volumes:
-      - ./var/db:/var/lib/mysql
       - ./src/data/fixtures/daheardit.sql:/docker-entrypoint-initdb.d/00_daheardit.sql
 
   php:

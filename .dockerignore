@@ -1,7 +1,7 @@
 .git
 *.bak
 *.mp3
+*.mp4
 *.zip
 /etc
 /src/data/tmp
-/var
