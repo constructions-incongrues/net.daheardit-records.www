@@ -67,10 +67,31 @@ class releaseComponents extends sfComponents
             if (is_readable(sprintf('%s/frontend/pics/others/header_force.jpg', sfConfig::get('sf_web_dir')))) {
                 $urlHeader = sprintf('%s/frontend/pics/others/header_force.jpg', $this->getRequest()->getRelativeUrlRoot());
             }
+            $finder = new Finder();
+            $headerStylesheets = $finder
+                ->files()
+                ->name('*.css')
+                ->depth('== 0')
+                ->in(sprintf('%s/assets/', sfConfig::get('sf_web_dir')));
+
+            $headerStylesheets = iterator_to_array($headerStylesheets, false);
+
+            if (count($headerStylesheets)) {
+                $urlStylesheet = sprintf(
+                    '%s/assets/%s',
+                    $this->getRequest()->getRelativeUrlRoot(),
+                    basename($headerStylesheets[0]->getFilename())
+                );
+            }
+
+            if (is_readable(sprintf('%s/frontend/pics/others/header_force.jpg', sfConfig::get('sf_web_dir')))) {
+                $urlHeader = sprintf('%s/frontend/pics/others/header_force.jpg', $this->getRequest()->getRelativeUrlRoot());
+            }
         }
 
         // Pass data to view
         $this->release = $release;
         $this->urlHeader = $urlHeader;
+        $this->urlStylesheet = $urlStylesheet;
     }
 }
