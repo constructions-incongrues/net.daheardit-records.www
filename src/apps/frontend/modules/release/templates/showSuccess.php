@@ -104,17 +104,6 @@
 <?php endif ?>
     </p>
 
-<?php if (count($release['streaming'])): ?>
-  <span style="margin-top:-25px;"> </span>
-  <h3 class="open_releases_title"><?php echo __('Écouter en streaming') ?></h3>
-  <ul class="open_releases_download">
-  <?php foreach ($release['streaming'] as $link): ?>
-      <li><a class="release-download" href="<?php echo $link['url'] ?>"><?php echo basename($link['title']) ?></a></li>
-  <?php endforeach ?>
-  </ul>
-<?php endif ?>
-
-
 <?php if ($release['is_available']): ?>
     <h3 class="open_releases_title"><?php echo __('Acheter une copie physique') ?></h3>
     <?php foreach ($release['prices'] as $price): ?>
@@ -129,6 +118,16 @@
     <?php endif ?>
     </p>
     <?php endforeach; ?>
+<?php endif ?>
+
+<?php if (count($release['streaming'])): ?>
+  <span style="margin-top:-25px;"> </span>
+  <h3 class="open_releases_title"><?php echo __('Écouter en streaming') ?></h3>
+  <ul class="open_releases_download">
+  <?php foreach ($release['streaming'] as $link): ?>
+      <li><a class="release-download" href="<?php echo $link['url'] ?>"><?php echo basename($link['title']) ?></a></li>
+  <?php endforeach ?>
+  </ul>
 <?php endif ?>
 
 
