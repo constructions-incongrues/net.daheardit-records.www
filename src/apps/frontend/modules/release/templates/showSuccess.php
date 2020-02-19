@@ -81,7 +81,9 @@
     <h2 class="open_releases_artist"><a href="<?php echo url_for(sprintf('@artist_show?slug=%s#artist', $release['Artist']['slug'])) ?>"><?php echo $release['Artist']['name'] ?></a></h2>
     <h3 class="open_releases_album"><?php echo $release['title'] ?> </h3>
 
-<?php echo html_entity_decode($release['player_code']) ?>
+<div class="open_releases_press_text">
+  <?php echo html_entity_decode($release['player_code']) ?>
+</div>
 
 <?php if (count($archives)): ?>
     <span style="margin-top:-25px;"> </span>
