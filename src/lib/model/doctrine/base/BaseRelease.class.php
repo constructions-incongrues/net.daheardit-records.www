@@ -24,6 +24,7 @@
  * @property text $links_press
  * @property text $links_streaming
  * @property text $links_videos
+ * @property text $player_code
  * @property Artist $Artist
  * @property ArtworkArtist $ArtworkArtist
  * @property Doctrine_Collection $Track
@@ -47,6 +48,7 @@
  * @method text                getLinksPress()        Returns the current record's "links_press" value
  * @method text                getLinksStreaming()    Returns the current record's "links_streaming" value
  * @method text                getLinksVideos()       Returns the current record's "links_videos" value
+ * @method text                getPlayerCode()        Returns the current record's "player_code" value
  * @method Artist              getArtist()            Returns the current record's "Artist" value
  * @method ArtworkArtist       getArtworkArtist()     Returns the current record's "ArtworkArtist" value
  * @method Doctrine_Collection getTrack()             Returns the current record's "Track" collection
@@ -69,6 +71,7 @@
  * @method Release             setLinksPress()        Sets the current record's "links_press" value
  * @method Release             setLinksStreaming()    Sets the current record's "links_streaming" value
  * @method Release             setLinksVideos()       Sets the current record's "links_videos" value
+ * @method Release             setPlayerCode()        Sets the current record's "player_code" value
  * @method Release             setArtist()            Sets the current record's "Artist" value
  * @method Release             setArtworkArtist()     Sets the current record's "ArtworkArtist" value
  * @method Release             setTrack()             Sets the current record's "Track" collection
@@ -148,6 +151,9 @@ abstract class BaseRelease extends sfDoctrineRecord
              'type' => 'text',
              ));
         $this->hasColumn('links_videos', 'text', null, array(
+             'type' => 'text',
+             ));
+        $this->hasColumn('player_code', 'text', null, array(
              'type' => 'text',
              ));
     }
