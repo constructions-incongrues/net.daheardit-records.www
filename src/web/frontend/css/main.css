@@ -1389,6 +1389,7 @@ color:#FFF!important;
 .open_releases_artwork
 {
 margin-right:30px;
+
 }
 
 
@@ -1434,15 +1435,23 @@ margin-top:-10px;
 padding-bottom:0px;
 line-height:17px;
 }*/
-.open_releases_press_text,.open_artists_bio
+.open_releases_press_text
 {
 color:#666;
 margin-left:10px;
-margin-top:14px;
-margin-bottom: -25px;
+margin-top:13px;
 padding-bottom:0px;
 line-height:17px;
 text-align: justify;
+}
+
+.open_artists_bio
+{
+  color:#666;
+  margin-left:10px;
+  margin-top:14px;
+  padding-bottom:0px;
+  line-height:17px;
 }
 
 .open_releases_press_text a /*.open_releases_artwork_credit a*/
@@ -1522,22 +1531,23 @@ text-align:right;
 {
   color:transparent!important;
 }
-.open_releases_buy
-{
-  background-color:#333;
-  color:#FFF;
-  font-weight:bold;
-  padding:5px;
-  min-height:20px;
-  margin-bottom:0.1em;
-  font-size:12px;
-  font-size:1.2rem;
-  width:442px;
-}
+  .open_releases_buy
+  {
+    background-color:transparent;
+    color:#000;
+    min-height:20px;
+    margin-bottom:0.1em;
+    font-size:12px;
+    font-size:1.2rem;
+    width:442px;
+    padding: 0.1em 0em 0.1sem 0em;
 
-.open_releases_buy:hover
+  }
+
+.open_releases_buy a:hover
 {
-  background-color: #29ABE2;
+  color:#000;
+
 }
 .open_releases_buy img
 {
@@ -1556,28 +1566,29 @@ text-align:right;
 
 .open_releases_buy a
 {
-  color:#FFF;
+  color:#0099FF;
   text-decoration:none;
+  font-weight: bold;
 }
 
 
 ul.open_releases_download
 {
-  margin:1em 0px 2em 2px;
+  margin:-1em 0px 2em 0.7em;
 }
 
 .open_releases_download li
 {
   display:inline;
-  padding:5px;
   font-size:10px;
   font-size:1em;
-font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   margin:2px; }
 
   .open_releases_download a
   {
-    background-color:#e6e6e6;
+    /* background-color:#e6e6e6; */
+    /* font-weight: bold; */
     padding:7px;
 
 
@@ -1586,6 +1597,7 @@ font-family: 'Open Sans', sans-serif;
   {
     background-color:#000;
     color:#FFF;
+    font-weight: bold;
   }
 
 
@@ -1644,7 +1656,7 @@ margin-top:10px;}
 hr.open_releases_button_hr, hr.open_artists_button_hr
 {
     width:960px;
-  border-bottom:1px solid #FBFBFB;
+    margin-bottom:3.5em;
 }
 .open_artists_infos
 {

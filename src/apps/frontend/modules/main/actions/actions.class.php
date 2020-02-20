@@ -50,6 +50,50 @@ class mainActions extends sfActions
         return sfView::SUCCESS;
     }
 
+    /**
+     * Executes catalog action
+     *
+     * @param sfRequest $request A request object
+     */
+    public function executeCatalog(sfWebRequest $request)
+    {
+        // Fetch releases
+        $q = Doctrine_Query::create()
+            ->from('Release r')
+            ->innerJoin('r.Artist a')
+            ->orderBy('r.released_at desc');
+
+        // Only display releases marked as public unless in preview mode
+        if (!$request->hasParameter('preview')) {
+            $q = $q->where('r.is_public = 1');
+        }
+
+        // Execute query
+        $releases = $q->execute(array(), Doctrine_Core::HYDRATE_ARRAY);
+
+        // Fixup data
+        for ($i = 0; $i < count($releases); $i++) {
+            $pathImage = sprintf('%s/assets/releases/%s/%s_300x300.png', sfConfig::get('sf_web_dir'), $releases[$i]['slug'], $releases[$i]['slug']);
+            if (!is_readable($pathImage)) {
+                $uriImage = sprintf('%s/frontend/pics/releases/img-release-default.png', $request->getRelativeUrlRoot());
+            } else {
+                $uriImage = sprintf('%s/assets/releases/%s/%s_300x300.png', $request->getRelativeUrlRoot(), $releases[$i]['slug'], $releases[$i]['slug']);
+            }
+            $releases[$i]['image'] = $uriImage;
+        }
+
+        // Pass data to view
+        $this->releases = $releases;
+
+        // Configure view
+        $this->setLayout(false);
+        sfConfig::set('sf_web_debug', false);
+
+        // Select template
+        return sfView::SUCCESS;
+    }
+
+
     public function executeError404()
     {
         $this->setLayout(false);

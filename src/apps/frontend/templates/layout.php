@@ -16,7 +16,7 @@
   <link rel="stylesheet" type="text/css" media="all" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/css/lib/960.gs/text.css?v=<?php echo sfConfig::get('app_version') ? sfConfig::get('app_version') : date('U') ?>" />
   <link rel="stylesheet" type="text/css" media="all" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/css/lib/960.gs/fluid_grid.css?v=<?php echo sfConfig::get('app_version') ? sfConfig::get('app_version') : date('U') ?>" />
 
-  <link rel="stylesheet" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/css/main.css?v=<?php echo sfConfig::get('app_version') ? sfConfig::get('app_version') : date('U') ?>">
+  <link rel="stylesheet" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/css/main.css?v=<?php echo date('U') ?>">
 
 <?php if (sfConfig::get('app_feeds_use_feedburner', false)): ?>
   <link rel="alternate" type="application/rss+xml" title="<?php echo __('Flux RSS des dernières nouvelles') ?>" href="http://feeds.feedburner.com/dhr-news-<?php echo $sf_request->getParameter('sf_culture', 'fr') ?>">

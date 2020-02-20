@@ -9,6 +9,7 @@
   <div class="open_artists_content">
   
   <div class="grid_12">
+  <h1 class="open_artists_name"><?php echo $artist['name'] ?></h1>
     <ul class="open_artists_button">
 <?php if ($previousArtist): ?>
       <li class="open_releases_button_left"> <a class="previous" href="<?php echo url_for('@artist_show?slug='.$previousArtist['slug'].'#artist') ?>" data-pjax="#content_async"> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/hack.png" title="<?php echo $previousArtist['name'] ?>" /> </a></li>
@@ -23,14 +24,7 @@
   <hr class="open_artists_button_hr"/>
 
     <div class="grid_6 open_artists_pictures">
-      <span class="calque_artists_pictures"> </span>
       <img id="carousel-current" height="460px" width="460px" src="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/artists/<?php echo $artist['slug'] ?>/<?php echo $artist['slug'] ?>_300x300.jpg" alt="" />
-      <ul class="open_releases_nav_artwork">
-        <li>
-          <a class="carousel-nav current" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/artists/<?php echo $artist['slug'] ?>/<?php echo $artist['slug'] ?>_300x300.jpg" title="<?php echo __("Survolez l'image pour mettre le carousel en pause") ?>">
-            <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/caroussel-release-hover.png" />
-          </a>
-        </li>
 <?php if (count($artist['links_carousel'])): ?>
   <?php for ($i = 0; $i < count($artist['links_carousel']); ++$i): ?>
         <li>
@@ -46,21 +40,14 @@
     
     <div class="grid_6 open_artists_infos">
 
-    <h1 class="open_artists_name"><?php echo $artist['name'] ?></h1>
-
     <p class="open_artists_bio">
       <?php echo nl2br($artist['Translation'][$sf_user->getCulture()]['presentation']) ?>
+      <?php if ($artist['url']): ?>
+          <br><br><a href="<?php echo $artist['url'] ?>"><?php echo $artist['url'] ?></a>
+      <?php endif ?>
     </p>
 
-<?php if ($artist['url']): ?>
-    <p class="open_artists_bio">
-      <a href="<?php echo $artist['url'] ?>"><?php echo $artist['url'] ?></a>
-    </p>
-<?php endif ?>
-
-
-    <h2 class="open_artists_title"><?php echo __('Sortie(s) sur Da ! Heard It Records : ') ?></h2>
-
+    <hr />
 <div style="width:600px;">
  <?php foreach ($artist['releases'] as $release): ?>
        <div class="open_artists_listing_releases ">
