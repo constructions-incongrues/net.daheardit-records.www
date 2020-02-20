@@ -24,6 +24,8 @@
   <div class="open_releases_content">
 
   <div class="grid_12">
+    <h2 class="open_releases_artist"><a href="<?php echo url_for(sprintf('@artist_show?slug=%s#artist', $release['Artist']['slug'])) ?>"><?php echo $release['Artist']['name'] ?></a> - <?php echo $release['title'] ?></h2>
+
     <ul class="open_releases_button">
 <?php if ($previousRelease): ?>
       <li class="open_releases_button_left"> <a class="previous" href="<?php echo url_for('@release_show?slug='.$previousRelease['slug'].'#release') ?>" data-pjax="#content_async"> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/hack.png" title="<?php echo sprintf('[%s] %s', $previousRelease['sku'], $previousRelease['title' ]) ?>" /> </a></li>
@@ -37,32 +39,15 @@
   <hr class="open_releases_button_hr" />
 
     <div class="grid_6 open_releases_artwork">
-      <span class="calque_artwork"> </span>
       <img id="carousel-current" height="460px" width="460px" src="<?php echo sprintf('//%s/thumbnail/_/500/500/crop/best%s', sfConfig::get('app_api_url_root'), $release['artworks'][0]) ?>" />
 <?php for ($i = 1; $i < count($release['artworks']); $i++): ?>
-      <img style="display:none;" height="460px" width="460px" src="<?php echo sprintf('//%s/thumbnail/_/500/500/crop/best%s', sfConfig::get('app_api_url_root'), $release['artworks'][$i]) ?>" />
-<?php endfor ?>
-      <ul class="open_releases_nav_artwork">
-            <li>
-              <a class="carousel-nav current" href="<?php echo sprintf('//%s/thumbnail/_/500/500/crop/best%s', sfConfig::get('app_api_url_root'), $release['artworks'][0]) ?>" title="<?php echo __("Survolez l'image pour mettre le carousel en pause") ?>">
-                <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/caroussel-release-hover.png" />
-              </a>
-            </li>
-<?php for ($i = 1; $i < count($release['artworks']); $i++): ?>
-            <li>
-              <a class="carousel-nav" href="<?php echo sprintf('//%s/thumbnail/_/500/500/crop/best%s', sfConfig::get('app_api_url_root'), $release['artworks'][$i]) ?>" title="<?php echo __("Survolez l'image pour mettre le carousel en pause") ?>">
-                <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/caroussel-release.png" />
-              </a>
-            </li>
+      <p></p>
+      <img height="460px" width="460px" src="<?php echo sprintf('//%s/thumbnail/_/500/500/crop/best%s', sfConfig::get('app_api_url_root'), $release['artworks'][$i]) ?>" />
 <?php endfor ?>
      </ul>
-     <?php if (isset($release['ArtworkArtist'])): ?>
-    <h2 class="open_releases_artwork_credit"><?php echo __('Illustration : ') ?><a href="<?php echo url_for(sprintf('@artwork_artist_show?slug=%s#artwork_artist', $release['ArtworkArtist']['slug'])) ?>" title="<?php echo $release['ArtworkArtist']['name'] ?>"><?php echo $release['ArtworkArtist']['name'] ?></a></h2>
-<?php else: ?>
-    <h2 class="open_releases_artwork_credit"><?php echo __('Illustration : ') ?><a href="<?php echo url_for(sprintf('@artist_show?slug=%s#artist', $release['Artist']['slug'])) ?>" title="<?php echo $release['Artist']['name'] ?>"><?php echo $release['Artist']['name'] ?></a></h2>
-<?php endif ?>
 
 <?php if (count($release['videos'])): ?>
+  <p></p>
   <?php foreach ($release['videos'] as $video): ?>
     <iframe width="100%" height="250" src="<?php echo $video ?>" frameborder="0" allowfullscreen></iframe>
   <?php endforeach ?>
@@ -70,42 +55,12 @@
    </div><!-- end of grid_6 -->
 
     <div class="grid_6 open_releases_infos">
-
-    <h1 class="open_releases_catalog"><?php echo $release['sku'] ?>
-<?php if ($release['released_at']): ?>
-     - <span class="open_releases_infos_date"><?php echo $release['released_at'] ?></span>
-<?php endif; ?>
-
-
-   </h1>
-    <h2 class="open_releases_artist"><a href="<?php echo url_for(sprintf('@artist_show?slug=%s#artist', $release['Artist']['slug'])) ?>"><?php echo $release['Artist']['name'] ?></a></h2>
-    <h3 class="open_releases_album"><?php echo $release['title'] ?> </h3>
-
 <div class="open_releases_press_text">
   <?php echo html_entity_decode($release['player_code']) ?>
 </div>
 
-<?php if (count($archives)): ?>
-    <span style="margin-top:-25px;"> </span>
-    <h2 class="open_releases_title"><?php echo __('Télécharger librement') ?> ou faire un <a href="https://www.helloasso.com/associations/constructions-incongrues/formulaires/1" class="donate">&hearts; <?php echo __('don') ?> &hearts;</a></h2>
-
-    <ul class="open_releases_download">
-  <?php foreach ($archives as $archive): ?>
-      <li><a class="release-download" data-dhr-release-slug="<?php echo $release['slug'] ?>" data-dhr-archive-format="<?php echo $archive['name'] ?>" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/releases/<?php echo $release['slug'] ?>/archives/<?php echo $archive['filename'] ?>"><?php echo strtoupper($archive['name']) ?></a></li>
-  <?php endforeach ?>
-    </ul>
-<?php endif ?>
-
-    <p class="open_releases_download_licence">
-<?php if ($release['license']): ?>
-    <?php echo html_entity_decode($release['license']) ?>
-<?php else: ?>
-        Cette œuvre est mise à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/deed.fr">Licence Creative Commons Attribution - Pas d’Utilisation Commerciale - Pas de Modification 4.0 France</a>.
-<?php endif ?>
-    </p>
-
 <?php if ($release['is_available']): ?>
-    <h3 class="open_releases_title"><?php echo __('Acheter une copie physique') ?></h3>
+    <h3 class="open_releases_title"></h3>
     <?php foreach ($release['prices'] as $price): ?>
     <p class="open_releases_buy">
     <?php if (is_numeric($price['price'])): ?>
@@ -120,29 +75,50 @@
     <?php endforeach; ?>
 <?php endif ?>
 
-<?php if (count($release['streaming'])): ?>
-  <span style="margin-top:-25px;"> </span>
-  <h3 class="open_releases_title"><?php echo __('Écouter en streaming') ?></h3>
-  <ul class="open_releases_download">
+<?php if (count($archives)): ?>
+    <span style="margin-top:-25px;"> </span>
+    <h2 class="open_releases_title"></h2>
+
+    <ul class="open_releases_download">
+  <?php foreach ($archives as $archive): ?>
+      <li><a class="release-download" data-dhr-release-slug="<?php echo $release['slug'] ?>" data-dhr-archive-format="<?php echo $archive['name'] ?>" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/releases/<?php echo $release['slug'] ?>/archives/<?php echo $archive['filename'] ?>"><?php echo strtoupper($archive['name']) ?></a></li>
+  <?php endforeach ?>
   <?php foreach ($release['streaming'] as $link): ?>
       <li><a class="release-download" href="<?php echo $link['url'] ?>"><?php echo basename($link['title']) ?></a></li>
   <?php endforeach ?>
-  </ul>
+    </ul>
 <?php endif ?>
-
-
 </ul>
-
-    <h1 class="open_releases_title">
-
-    <?php echo __('À propos de la sortie') ?></h1>
 
     <p class="open_releases_press_text">
 <?php echo nl2br(html_entity_decode($release['Translation'][$sf_user->getCulture()]['presentation'])) ?>
     </p>
+    <br>
+    <p class="open_releases_press_text">
+<?php echo nl2br(html_entity_decode($release['credits'])) ?>
+<br>
+Date de sortie : <?php echo $release['released_at'] ?>
+    </p>
+    <h2 style="margin-top:3em;" class="open_releases_title"></h2>
+    <p class="open_releases_download_licence">
+<?php if ($release['license']): ?>
+    <?php echo html_entity_decode($release['license']) ?>
+<?php else: ?>
+        Cette œuvre est mise à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/deed.fr">Licence Creative Commons Attribution - Pas d’Utilisation Commerciale - Pas de Modification 4.0 France</a>.
+<?php endif ?>
+    </p>
+
+<?php if (count($release['press'])): ?>
+    <h1 class="open_releases_title"><?php echo __('Ils en parlent') ?></h1>
+    <ul class="open_releases_reviews">
+  <?php foreach ($release['press'] as $link): ?>
+      <li><a href="<?php echo $link['url'] ?>"><?php echo basename($link['title']) ?></a></li>
+  <?php endforeach ?>
+    </ul>
+<?php endif ?>
 
 <?php if (count($release['presskits'])): ?>
-    <h1 class="open_releases_title">PDF</h1>
+    <h1 class="open_releases_title">Kits Presse</h1>
     <ul class="open_releases_reviews">
   <?php foreach ($release['presskits'] as $presskit): ?>
       <li><a href="<?php echo $presskit['url'] ?>"><?php echo $presskit['name'] ?></a></li>
@@ -158,14 +134,6 @@
     </ul>
 <?php endif ?>
 
-<?php if (count($release['press'])): ?>
-    <h1 class="open_releases_title"><?php echo __('Ils en parlent') ?></h1>
-    <ul class="open_releases_reviews">
-  <?php foreach ($release['press'] as $link): ?>
-      <li><a href="<?php echo $link['url'] ?>"><?php echo basename($link['title']) ?></a></li>
-  <?php endforeach ?>
-    </ul>
-<?php endif ?>
 
 
     </div><!-- end of grid_6 -->
