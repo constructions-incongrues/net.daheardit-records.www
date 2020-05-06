@@ -45,6 +45,11 @@ release_track_show:
   requirements:
     sf_culture: (?:fr|en)
 
+# radio
+radio:
+  url: /radio
+  param: { module: radio, action: index }
+
 # homepage
 homepage_localized:
   url:   /:sf_culture/
