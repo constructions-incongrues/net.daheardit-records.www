@@ -1864,3 +1864,6 @@ input.button:hover
 }
 
 input.button:focus {outline: none;}
+
+#radio 
+{background-color: #000;}

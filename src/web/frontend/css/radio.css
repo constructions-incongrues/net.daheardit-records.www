@@ -1,0 +1,8 @@
+body {
+	background-color: #000;
+	color:#FFF;
+}
+
+p a {
+	font-size:1em!important;
+	text-transform: lowercase;}
