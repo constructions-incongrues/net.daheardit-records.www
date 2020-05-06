@@ -3,6 +3,7 @@ body {
 	color:#FFF;
 }
 
+p {color:#b2b2b2;font-size:1em!important}
 p a {
 	font-size:1em!important;
 	text-transform: lowercase;}

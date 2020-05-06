@@ -42,12 +42,21 @@
 
         </div><!-- end of header_nav_3_content -->
 
-        <div class="category_content">
+<div class="category_content">
 
 <h2 class=""></a> </h2>
+
 <h2 class="">En écoute actuellement sur la radio : </h2>
 
+<p> 
+
 <audio controls src="http://stream.p-node.org/daheardit"></audio>
+
+
+
+<h2 class="">Discutons :)</h2>
+
+<p>Le streaming est géré par l'excellent radio <a href="https://p-node.org/">https://p-node.org/</a></p>
 
 <p>
     <?php include_component('content', 'show', array('block' => 'radio_onair')) ?>
@@ -56,11 +65,7 @@
 <p>
     <?php include_component('content', 'show', array('block' => 'radio_presentation')) ?>
 </p>
-
-<h2 class="">Chat : </h2>
-
-<p>Le streaming est géré par l'excellent radio <a href="https://p-node.org/">https://p-node.org/</a></p>
 </div>
 </div>
-</span>
+
 </body>
