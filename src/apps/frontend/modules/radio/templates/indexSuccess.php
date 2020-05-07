@@ -39,11 +39,11 @@
 
 
 <h2>.</h2>
-<h1> Online Release Party </h1>
+<h1> Online Release Party - Wankers United - Solo Romance <br />
+</h1>
 <p> 
-Wankers United - Solo Romance <br />
 Start at 6pm (gmt +2) <br />
-Digital & tape) <br /><a href="https://www.daheardit-records.net/fr/discography/dhr-46">https://www.daheardit-records.net/fr/discography/dhr-46</a>
+Listen album : <br /><a href="https://www.daheardit-records.net/fr/discography/dhr-46">https://www.daheardit-records.net/fr/discography/dhr-46</a>
 </p>
 
 <h2 class="">LISTEN via <a href="https://p-node.org/">P-NODE</a> <3 </h2>
