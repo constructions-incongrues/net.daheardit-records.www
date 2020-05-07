@@ -5,7 +5,7 @@
   <meta name="google-site-verification" content="GZLJrrM8tvBsh05BvBY8GHUsEFhojyg5inFZAfaHh-Y" />
   <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> -->
 
-  <title>Bienvenue | Da ! Heard It Records</title>
+  <title>Radio | Da ! Heard It Records</title>
 
   <meta name="viewport" content="width=device-width,initial-scale=1">
 
@@ -17,7 +17,7 @@
   <link rel="stylesheet" type="text/css" media="all" href="/frontend/css/lib/960.gs/fluid_grid.css?v=20190326.1" />
 
   <link rel="stylesheet" href="/frontend/css/main.css?v=1588796413">
-  <link rel="stylesheet" href="/frontend/css/radio.css?v=1588796413">
+  <link rel="stylesheet" href="/frontend/css/radio.css?v=1588796418">
 
 </head>
 <body>
@@ -68,7 +68,7 @@ IW¥N aka <a href="https://www.daheardit-records.net/en/artist/eat-rabbit#artist
 <a href="https://www.daheardit-records.net/en/artist/vicnet#artist">Vicnet</a> (Live / Paris - Saint-Mandé) <em>Funk / JV1080 / Midi </em>
 </li>
 <li>
-<a href="https://www.ouiedire.net/emission/ailleurs-227">Santa Barbera</a> (Dj-set / Vitre-Sur-Seine) <em>Hiphouse / Electro / Funkin<em>
+<a href="https://www.ouiedire.net/emission/ailleurs-227">Santa Barbera</a> (Dj-set / Vitre-Sur-Seine) <em>Hiphouse / Electro / Funkin</em>
 </li>
 </ul>
 
