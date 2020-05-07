@@ -71,7 +71,7 @@
 
 
 
-<h2 class="">Stream with <a href="https://p-node.org/">P-NODE</a> <span style="color:#FF0099"><3 </span> </h2>
+<h2 class="">Stream with <a href="https://p-node.org/">https://p-node.org/</a> <span style="color:#FF0099"><3 </span> </h2>
 
 <audio controls src="http://stream.p-node.org/daheardit"></audio>
 <!-- <a href="http://stream.p-node.org/daheardit">http://stream.p-node.org/daheardit</a>
