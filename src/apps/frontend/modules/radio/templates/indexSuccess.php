@@ -27,11 +27,10 @@
           <ul id="menu-main" class="header_nav_3_content_list">
             <li class="header_nav_3_content_logo"><a href="<?php echo url_for('@homepage') ?>"> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/logo/logo-dhr.png" alt="logo" /></a></li>
             <li><a href="https://www.daheardit-records.net/fr/#discography"><?php echo __('Discographie') ?></a></li>
-            <li><a href="https://www.daheardit-records.net/fr/#artists"><?php echo __('Artistes') ?></a></li>
-            <li><a href="https://www.daheardit-records.net/fr/#artwork_artists"><?php echo __('Illustrations') ?></a></li>
-            <li><a href="https://www.daheardit-records.net/fr/#informations"><?php echo __('Informations') ?></a></li>
-     
+            <li><a href="https://www.daheardit-records.net/fr/#artists"><?php echo __('Artistes') ?></a></li>   
             <li class="header_nav_3_button_donate donate_infos"><a href="https://www.helloasso.com/associations/constructions-incongrues" class="donate"><?php echo __('Dons') ?></a>
+</li> 
+   <li class="header_nav_3_button_donate donate_infos"><a href="https://www.daheardit-records.net/" class="donate"><?php echo __('+') ?></a>
 </li>
           </ul>
 
