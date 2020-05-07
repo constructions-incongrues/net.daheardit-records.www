@@ -1,6 +1,9 @@
 body {
 	background-color: #000;
 	color:#FFF;
+	background-image: url ("../pics/radio/flyer_8_may.png");
+	background-position: right;
+	background-repeat: no-repeat;
 }
 
 p, li {color:#b2b2b2;font-size:1.5em!important}
@@ -9,3 +12,5 @@ p a {
 	}
 
 a {color:#0099FF!important;}
+
+background-image

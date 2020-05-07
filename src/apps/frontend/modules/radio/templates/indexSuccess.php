@@ -87,8 +87,8 @@
     <?php include_component('content', 'show', array('block' => 'radio_presentation')) ?>
 </p>
  
-<p>  
-<img src="/frontend/pics/radio/flyer_8_may.png" alt="flyer" /> </p>
+<!-- <p>  
+<img src="/frontend/pics/radio/flyer_8_may.png" alt="flyer" /> </p> -->
 </div>
 </div>
 
