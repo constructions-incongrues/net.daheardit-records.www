@@ -45,9 +45,9 @@
 <h2 style="color:#000;"> . </h2>
 <!-- <h1> Release Party : <a href="https://www.daheardit-records.net/fr/discography/dhr-46">Wankers United - Solo Romance </a><br />
 </h1> -->
+<h1>Release Party : Wankers United - Solo Romance</strong> <a href="https://www.daheardit-records.net/fr/discography/dhr-46">(Digital & K7)</a></h1>
 
 <ul class="lineup">
-<li><strong style="color:#FFF">Release Party : Wankers United - Solo Romance</strong> <a href="https://www.daheardit-records.net/fr/discography/dhr-46">Digital & K7</a></li>
 <li> 05.08.2020 - Start at 6pm (gmt +2)  </li>
 <li>
 06 PM : <strong><a href="http://www.glafouk.com">GLAFOUK</a> </strong> Dj-set <em>SID / Commodore / 64 </em>
@@ -71,13 +71,13 @@
 
 
 
-<h2 class="">STREAM WITH <a href="https://p-node.org/">P-NODE</a> <span style="color:#FF0099"><3 </span> </h2>
+<h2 class="">Stream with <a href="https://p-node.org/">P-NODE</a> <span style="color:#FF0099"><3 </span> </h2>
 
 <audio controls src="http://stream.p-node.org/daheardit"></audio>
 <!-- <a href="http://stream.p-node.org/daheardit">http://stream.p-node.org/daheardit</a>
  -->
 
-<h2 class="">IRC OR <a href="https://us02web.zoom.us/j/88216653714?pwd=Y3RZOVhjd1FoNms2VDVub1NjdWVIUT09">ZOOM</a> (ID : 882 1665 3714 / PWD : 745205)  </h2>
+<h2 class="">Irc or <a href="https://us02web.zoom.us/j/88216653714?pwd=Y3RZOVhjd1FoNms2VDVub1NjdWVIUT09">Zoom</a> (Id : 882 1665 3714 / Pwd : 745205)  </h2>
 
 <iframe src="https://kiwiirc.com/client/chat.freenode.net/?nick=clafete|?&theme=basic#daheardit-records" style="border:0; width:100%; max-width: 900px; height:450px;"></iframe>
 
