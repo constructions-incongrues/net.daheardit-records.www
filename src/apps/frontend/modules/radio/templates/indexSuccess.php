@@ -16,8 +16,8 @@
   <link rel="stylesheet" type="text/css" media="all" href="/frontend/css/lib/960.gs/text.css?v=20190326.1" />
   <link rel="stylesheet" type="text/css" media="all" href="/frontend/css/lib/960.gs/fluid_grid.css?v=20190326.1" />
 
-  <link rel="stylesheet" href="/frontend/css/main.css?v=1588796413">
-  <link rel="stylesheet" href="/frontend/css/radio.css?v=1588796420">
+  <link rel="stylesheet" href="/frontend/css/main.css">
+  <link rel="stylesheet" href="/frontend/css/radio.css">
 
 </head>
 <body>
@@ -39,8 +39,12 @@
 
 
 <h2>.</h2>
-<h1> RELEASE PARTY </h1>
-<p> Wankers United - Solo Romance (digital & tape)  <br /><a href="https://www.daheardit-records.net/fr/discography/dhr-46">https://www.daheardit-records.net/fr/discography/dhr-46</a>
+<h1> Online Release Party </h1>
+<p> 
+Wankers United - Solo Romance <br />
+Start at 6pm (gmt +2) <br />
+Digital & tape) <br /><a href="https://www.daheardit-records.net/fr/discography/dhr-46">https://www.daheardit-records.net/fr/discography/dhr-46</a>
+</p>
 
 <h2 class="">LISTEN via <a href="https://p-node.org/">P-NODE</a> <3 </h2>
 
