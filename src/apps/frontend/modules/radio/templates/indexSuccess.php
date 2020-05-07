@@ -17,7 +17,7 @@
   <link rel="stylesheet" type="text/css" media="all" href="/frontend/css/lib/960.gs/fluid_grid.css?v=20190326.1" />
 
   <link rel="stylesheet" href="/frontend/css/main.css?v=1588796444">
-  <link rel="stylesheet" href="/frontend/css/radio.css?v=TR808TB303TR909ACID">
+  <link rel="stylesheet" href="/frontend/css/radio.css?v=TR808TB303TR909ACIDBUG">
 
 </head>
 <body>
@@ -26,8 +26,8 @@
       <div class="header_nav_3" style="background-color: transparent;">
           <ul id="menu-main" class="header_nav_3_content_list" style="background-color: transparent;">
             <li class="header_nav_3_content_logo"><a href="<?php echo url_for('@homepage') ?>"> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/logo/logo-dhr.png" alt="logo" /></a></li>
-            <li><a href="https://www.daheardit-records.net/"><?php echo __('More Infos About Us') ?></a></li>
-            <li class="header_nav_3_button_donate donate_infos"><a href="https://www.helloasso.com/associations/constructions-incongrues" class="donate"><?php echo __('Dons') ?></a>
+            <li><a href="https://www.daheardit-records.net/"><?php echo __('More Infos About Da ! Heard It Records') ?></a></li>
+            <li class="header_nav_3_button_donate donate_infos"><a href="https://www.helloasso.com/associations/constructions-incongrues" class="donate"><?php echo __('Donate') ?></a>
 </li> 
    <li class="header_nav_3_button_donate donate_infos"><a href="https://www.daheardit-records.net/" class="donate"><?php echo __('+') ?></a>
 </li>
