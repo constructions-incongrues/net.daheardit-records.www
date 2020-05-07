@@ -1,7 +1,7 @@
 body {
 	background-color: #000;
 	color:#FFF;
-	background-image: url ("../pics/radio/flyer_8_may.png");
+	background-image:url(../pics/radio/flyer_8_may.png);
 	background-position: right;
 	background-repeat: no-repeat;
 }
