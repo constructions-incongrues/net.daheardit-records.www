@@ -42,9 +42,14 @@
 <h1> Online Release Party - Wankers United - Solo Romance <br />
 </h1>
 <p> 
+05.08.2020
 Start at 6pm (gmt +2) <br />
 Listen album : <br /><a href="https://www.daheardit-records.net/fr/discography/dhr-46">https://www.daheardit-records.net/fr/discography/dhr-46</a>
 </p>
+
+<h2 class="">IRC </h2>
+
+<iframe src="https://kiwiirc.com/client/chat.freenode.net/?nick=clafete|?&theme=basic#daheardit-records" style="border:0; width:40%; height:450px;"></iframe>
 
 <h2 class="">LISTEN WITH <a href="https://p-node.org/">P-NODE</a> <3 </h2>
 
@@ -57,28 +62,26 @@ Listen album : <br /><a href="https://www.daheardit-records.net/fr/discography/d
 <h2 class="">LINE UP </h2>
 
 <ul>
-<li><a href="https://www.daheardit-records.net/en/artist/bill-vortex#artist">Bill Vortex</a> (Live / Marseille) <em>Electro / Braindance / Aïoli</em>
+<li>
+6 PM : <a href="http://www.glafouk.com">Glafouk</a> (Dj-set / Paris) <em>SID / Commodore / 64 </em>
 </li>
 <li>
+7 PM : <a href="https://www.daheardit-records.net/en/artist/vicnet#artist">Vicnet</a> (Live / Paris - Saint-Mandé) <em>Funk / JV1080 / Midi </em>
+</li>
+<li> 8 PM : 
 <a href="https://www.daheardit-records.net/en/artist/eat-rabbit#artist">Eat Rabbit</a> (Live / Caluire Sur Cuire) <em>8bit / Micromusic / ParisHq </em>
 </li>
-<li>
-<a href="http://www.glafouk.com">Glafouk</a> (Dj-set / Paris) <em>SID / Commodore / 64 </em>
-</li>
-<li>
+<li> 9 PM : 
 <a href="https://www.daheardit-records.net/en/artist/wankers-united#artist">Wankers United</a>  (Live / Saint Ouen) <em>Funk / Synthétiseur / Kimchi </em>
 </li>
-<li>
-<a href="https://www.daheardit-records.net/en/artist/vicnet#artist">Vicnet</a> (Live / Paris - Saint-Mandé) <em>Funk / JV1080 / Midi </em>
+<li> 10 PM : <a href="https://www.daheardit-records.net/en/artist/bill-vortex#artist">Bill Vortex</a> (Live / Marseille) <em>Electro / Braindance / Aïoli</em>
 </li>
-<li>
+<li> 11 PM : 
 <a href="https://www.ouiedire.net/emission/ailleurs-227">Santa Barbera</a> (Dj-set / Vitre-Sur-Seine) <em>Hiphouse / Electro / Funkin</em>
 </li>
 </ul>
 
-<h2 class="">IRC </h2>
 
-<iframe src="https://kiwiirc.com/client/chat.freenode.net/?nick=clafete|?&theme=cli#daheardit-records" style="border:0; width:40%; height:450px;"></iframe>
 
 <h2 class="">Z00M </h2>
 <p>
