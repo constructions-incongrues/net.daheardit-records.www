@@ -58,10 +58,6 @@ Listen album : <br /><a href="https://www.daheardit-records.net/fr/discography/d
 <a href="http://stream.p-node.org/daheardit">http://stream.p-node.org/daheardit</a>
 </p>
 
-<h2 class="">IRC </h2>
-
-<iframe src="https://kiwiirc.com/client/chat.freenode.net/?nick=clafete|?&theme=basic#daheardit-records" style="border:0; width:40%; height:450px;"></iframe>
-
 <h2 class="">LINE UP </h2>
 
 <ul>
@@ -84,7 +80,9 @@ Listen album : <br /><a href="https://www.daheardit-records.net/fr/discography/d
 </li>
 </ul>
 
+<h2 class="">IRC </h2>
 
+<iframe src="https://kiwiirc.com/client/chat.freenode.net/?nick=clafete|?&theme=basic#daheardit-records" style="border:0; width:40%; height:450px;"></iframe>
 
 <h2 class="">Z00M </h2>
 <p>
