@@ -23,8 +23,8 @@
 <body>
 
 
-      <div class="header_nav_3">
-          <ul id="menu-main" class="header_nav_3_content_list">
+      <div class="header_nav_3" style="background-color: transparent;">
+          <ul id="menu-main" class="header_nav_3_content_list" style="background-color: transparent;">
             <li class="header_nav_3_content_logo"><a href="<?php echo url_for('@homepage') ?>"> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/logo/logo-dhr.png" alt="logo" /></a></li>
             <li><a href="https://www.daheardit-records.net/fr/#discography"><?php echo __('Discographie') ?></a></li>
             <li><a href="https://www.daheardit-records.net/fr/#artists"><?php echo __('Artistes') ?></a></li>   
