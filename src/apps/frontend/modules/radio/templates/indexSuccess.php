@@ -50,7 +50,7 @@
 <ul class="lineup">
 <li> 05.08.2020 - Start at 6pm (gmt +2)  </li>
 <li>
-06 PM : <strong><a href="http://www.glafouk.com">GLAFOUK</a> </strong> Dj-set <em>SID / Commodore / 64 </em>
+06 PM : <strong><a href="http://www.glafouk.com">GLAFOUK</a> </strong><span style="color: #FFF"> Dj-set </span><em>SID / Commodore / 64 </em>
 </li>
 <li>
 07 PM :  <strong><a href="https://www.daheardit-records.net/en/artist/vicnet#artist">VICNET</a> </strong> Live <em>Funk / JV1080 / Midi </em>
