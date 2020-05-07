@@ -35,7 +35,7 @@
           <ul id="menu-main" class="header_nav_3_content_list" style="background-color: transparent;">
             <li class="header_nav_3_content_logo"><a href="<?php echo url_for('@homepage') ?>"> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/logo/logo-dhr.png" alt="logo" /></a></li>
 <!--             <li><a href="https://www.daheardit-records.net/"><?php echo __('Da ! Heard It Records') ?></a></li>
- -->      <li>Release Party : <a href="https://www.daheardit-records.net/fr/discography/dhr-46">Wankers United - Solo Romance </a></li>
+ -->      <li>Release Party : Wankers United - Solo Romance </li>
           </ul>
 
         </div><!-- end of header_nav_3_content -->
