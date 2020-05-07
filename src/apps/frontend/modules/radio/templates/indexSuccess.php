@@ -17,7 +17,7 @@
   <link rel="stylesheet" type="text/css" media="all" href="/frontend/css/lib/960.gs/fluid_grid.css?v=20190326.1" />
 
   <link rel="stylesheet" href="/frontend/css/main.css?v=1588796444">
-  <link rel="stylesheet" href="/frontend/css/radio.css?v=TR808TB303TR9">
+  <link rel="stylesheet" href="/frontend/css/radio.css?v=TR808TB303TR90">
 
 </head>
 <body>
@@ -36,7 +36,6 @@
         </div><!-- end of header_nav_3_content -->
 
 
-<h2>.</h2>
 
 <h1> Online Release Party - <a href="https://www.daheardit-records.net/fr/discography/dhr-46">Wankers United - Solo Romance </a><br />
 </h1>
@@ -66,7 +65,7 @@
 
 
 
-<h2 class="">STREAM WITH <a href="https://p-node.org/">P-NODE</a>  </h2>
+<h2 class="">STREAM WITH <a href="https://p-node.org/">P-NODE</a> <span style="color: #0099FF"><3 </span> </h2>
 
 <audio controls src="http://stream.p-node.org/daheardit"></audio>
 <!-- <a href="http://stream.p-node.org/daheardit">http://stream.p-node.org/daheardit</a>
