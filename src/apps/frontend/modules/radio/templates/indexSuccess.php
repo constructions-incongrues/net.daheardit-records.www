@@ -34,8 +34,8 @@
       <div class="header_nav_3" style="background-color: transparent;">
           <ul id="menu-main" class="header_nav_3_content_list" style="background-color: transparent;">
             <li class="header_nav_3_content_logo"><a href="<?php echo url_for('@homepage') ?>"> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/logo/logo-dhr.png" alt="logo" /></a></li>
-            <li><a href="https://www.daheardit-records.net/"><?php echo __('About Label') ?></a></li>
-                
+<!--             <li><a href="https://www.daheardit-records.net/"><?php echo __('About Label') ?></a></li>
+ -->                
 
  </ul>
 
@@ -47,7 +47,7 @@
 </h1> -->
 
 <ul class="lineup">
-<li><strong style="color:#FFF">Release Party : Wankers United - Solo Romance</strong></li>
+<li><strong style="color:#FFF">Release Party : Wankers United - Solo Romance</strong> <a href="https://www.daheardit-records.net/fr/discography/dhr-46">Digital & K7</a></li>
 <li> 05.08.2020 - Start at 6pm (gmt +2)  </li>
 <li>
 06 PM : <strong><a href="http://www.glafouk.com">GLAFOUK</a> </strong> Dj-set <em>SID / Commodore / 64 </em>
