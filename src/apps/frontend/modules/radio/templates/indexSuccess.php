@@ -42,21 +42,17 @@
 <h1> Online Release Party - Wankers United - Solo Romance <br />
 </h1>
 <p> 
-05.08.2020
+05.08.2020 <br />
 Start at 6pm (gmt +2) <br />
 Listen album : <br /><a href="https://www.daheardit-records.net/fr/discography/dhr-46">https://www.daheardit-records.net/fr/discography/dhr-46</a>
 </p>
 
 
 
-<h2 class="">LISTEN WITH <a href="https://p-node.org/">P-NODE</a> <3 </h2>
+<h2 class="">LISTEN WITH <a href="https://p-node.org/">P-NODE</a> : <a href="http://stream.p-node.org/daheardit">http://stream.p-node.org/daheardit</a>
+ </h2>
 
 <audio controls src="http://stream.p-node.org/daheardit"></audio>
-
-<p>
-<br />
-<a href="http://stream.p-node.org/daheardit">http://stream.p-node.org/daheardit</a>
-</p>
 
 <h2 class="">LINE UP </h2>
 
