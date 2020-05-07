@@ -27,8 +27,7 @@
           <ul id="menu-main" class="header_nav_3_content_list" style="background-color: transparent;">
             <li class="header_nav_3_content_logo"><a href="<?php echo url_for('@homepage') ?>"> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/logo/logo-dhr.png" alt="logo" /></a></li>
             <li><a href="https://www.daheardit-records.net/"><?php echo __('Da ! Heard It Records') ?> - </a></li>
-            <li class="header_nav_3_button_donate donate_infos"><a href="https://www.helloasso.com/associations/constructions-incongrues" class="donate"><?php echo __(' Donate') ?></a>
-</li> 
+         
 
           </ul>
 
@@ -36,7 +35,7 @@
 
 
 <h2> . </h2>
-<h1> Online Release Party - <a href="https://www.daheardit-records.net/fr/discography/dhr-46">Wankers United - Solo Romance </a><br />
+<h1> Release Party : <a href="https://www.daheardit-records.net/fr/discography/dhr-46">Wankers United - Solo Romance </a><br />
 </h1>
 
 <ul>
