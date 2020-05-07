@@ -19,6 +19,14 @@
   <link rel="stylesheet" href="/frontend/css/main.css?v=1588796444">
   <link rel="stylesheet" href="/frontend/css/radio.css?v=TR808TB303TR909PARTY">
 
+<!-- Opengraph -->
+  <meta property="title" content="Radio D!HR" />
+  <meta property="og:title" content="Radio| Da ! Heard It Records" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.daheardit-records.net/radio" />
+  <meta property="og:image" content="https://www.daheardit-records.net/frontend/pics/logo.png" />
+  <meta property="og:description" content="Créé en 2006, Da ! Heard it Records est un net-label flirtant avec les musiques Toyz-Pop, Electro Trash, Chiptune, Breakcore, Techno Parodique, Electro Punk, Acid, et avec un goût prononcé pour le 8-bit et le pixel art." />
+
 </head>
 <body>
 
@@ -27,8 +35,7 @@
           <ul id="menu-main" class="header_nav_3_content_list" style="background-color: transparent;">
             <li class="header_nav_3_content_logo"><a href="<?php echo url_for('@homepage') ?>"> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/logo/logo-dhr.png" alt="logo" /></a></li>
             <li><a href="https://www.daheardit-records.net/"><?php echo __('Da ! Heard It Records') ?></a></li>
-         
-
+      
           </ul>
 
         </div><!-- end of header_nav_3_content -->
@@ -54,7 +61,7 @@
 </li>
 <li> 10 PM :  <strong><a href="https://www.daheardit-records.net/en/artist/bill-vortex#artist">BILL VORTEX</a> </strong> Live <em>Electro / Braindance / Aïoli</em>
 </li>
-<li> 11 PM :   <strong> <a href="https://www.ouiedire.net/emission/ailleurs-227">SANTA BARBERA</a>  </strong> Dj-set / Vitry-Sur-Seine <em>Hiphouse / Electro / Funkin</em>
+<li> 11 PM :   <strong> <a href="https://www.ouiedire.net/emission/ailleurs-227">SANTA BARBERA</a>  </strong> Dj-set <em>Hiphouse / Electro / Funkin</em>
 </li>
 </ul>
 
