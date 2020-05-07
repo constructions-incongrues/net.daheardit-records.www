@@ -3,7 +3,9 @@ body {
 	color:#FFF;
 }
 
-p {color:#b2b2b2;font-size:1em!important}
+p {color:#b2b2b2;font-size:1.5em!important}
 p a {
 	font-size:1em!important;
-	text-transform: lowercase;}
+	}
+
+a {color:#0099FF;}
