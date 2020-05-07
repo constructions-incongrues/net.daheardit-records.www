@@ -17,7 +17,7 @@
   <link rel="stylesheet" type="text/css" media="all" href="/frontend/css/lib/960.gs/fluid_grid.css?v=20190326.1" />
 
   <link rel="stylesheet" href="/frontend/css/main.css?v=1588796444">
-  <link rel="stylesheet" href="/frontend/css/radio.css?v=TR808TB303TR909PARTY">
+  <link rel="stylesheet" href="/frontend/css/radio.css?v=TR808TB303TR909PARTYTYME">
 
 <!-- Opengraph -->
   <meta property="title" content="Radio D!HR" />
@@ -35,7 +35,7 @@
           <ul id="menu-main" class="header_nav_3_content_list" style="background-color: transparent;">
             <li class="header_nav_3_content_logo"><a href="<?php echo url_for('@homepage') ?>"> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/logo/logo-dhr.png" alt="logo" /></a></li>
 <!--             <li><a href="https://www.daheardit-records.net/"><?php echo __('Da ! Heard It Records') ?></a></li>
- -->      <li style="margin-top: -10px">Release Party : Wankers United - Solo Romance </li>
+ -->      <li>Release Party : Wankers United - Solo Romance </li>
           </ul>
 
         </div><!-- end of header_nav_3_content -->
@@ -45,7 +45,7 @@
 <!-- <h1> Release Party : <a href="https://www.daheardit-records.net/fr/discography/dhr-46">Wankers United - Solo Romance </a><br />
 </h1> -->
 
-<ul>
+<ul class="lineup">
 <li> 05.08.2020 - Start at 6pm (gmt +2)  </li>
 <li>
 06 PM : <strong><a href="http://www.glafouk.com">GLAFOUK</a> </strong> Dj-set <em>SID / Commodore / 64 </em>
