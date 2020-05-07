@@ -79,24 +79,18 @@
 
 <iframe src="https://kiwiirc.com/client/chat.freenode.net/?nick=clafete|?&theme=basic#daheardit-records" style="border:0; width:100%; max-width: 900px; height:450px;"></iframe>
 
-<h2 class="">Z00M </h2>
-<p>
-ID de réunion : 882 1665 3714<br />
-Mot de passe : 745205<br />
-<a href="https://us02web.zoom.us/j/88216653714?pwd=Y3RZOVhjd1FoNms2VDVub1NjdWVIUT09">https://us02web.zoom.us/j/88216653714?pwd=Y3RZOVhjd1FoNms2VDVub1NjdWVIUT09</a><br />
 
-</p>
 
 <img src="/frontend/pics/radio/flyer_8_may.png" alt="flyer" />
 
-<!-- <p>
+ <p>
     <?php include_component('content', 'show', array('block' => 'radio_onair')) ?>
 </p>
 
 <p>
     <?php include_component('content', 'show', array('block' => 'radio_presentation')) ?>
 </p>
- -->
+ 
 
 </div>
 </div>
