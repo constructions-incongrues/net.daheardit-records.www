@@ -78,7 +78,7 @@ IW¥N aka <a href="https://www.daheardit-records.net/en/artist/eat-rabbit#artist
 
 <h2 class="">IRC </h2>
 
-<iframe src="https://kiwiirc.com/client/chat.freenode.net/?nick=clafete|?&theme=mini#daheardit-records" style="border:0; width:40%; height:450px;"></iframe>
+<iframe src="https://kiwiirc.com/client/chat.freenode.net/?nick=clafete|?&theme=cli#daheardit-records" style="border:0; width:40%; height:450px;"></iframe>
 
 <h2 class="">Z00M </h2>
 <p>
