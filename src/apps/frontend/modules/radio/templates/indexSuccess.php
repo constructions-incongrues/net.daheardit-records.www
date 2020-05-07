@@ -17,7 +17,7 @@
   <link rel="stylesheet" type="text/css" media="all" href="/frontend/css/lib/960.gs/fluid_grid.css?v=20190326.1" />
 
   <link rel="stylesheet" href="/frontend/css/main.css?v=1588796444">
-  <link rel="stylesheet" href="/frontend/css/radio.css?v=TR808TB303TR909ACIDBUGSMILING">
+  <link rel="stylesheet" href="/frontend/css/radio.css?v=TR808TB303TR909PARTY">
 
 </head>
 <body>
@@ -26,7 +26,7 @@
       <div class="header_nav_3" style="background-color: transparent;">
           <ul id="menu-main" class="header_nav_3_content_list" style="background-color: transparent;">
             <li class="header_nav_3_content_logo"><a href="<?php echo url_for('@homepage') ?>"> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/logo/logo-dhr.png" alt="logo" /></a></li>
-            <li><a href="https://www.daheardit-records.net/"><?php echo __('Da ! Heard It Records') ?> - </a></li>
+            <li><a href="https://www.daheardit-records.net/"><?php echo __('Da ! Heard It Records') ?></a></li>
          
 
           </ul>
@@ -41,21 +41,20 @@
 <ul>
 <li> 05.08.2020 - Start at 6pm (gmt +2)  </li>
 <li>
-06 PM : <a href="http://www.glafouk.com">Glafouk</a> (Dj-set / Paris) <em>SID / Commodore / 64 </em>
+06 PM : <strong><a href="http://www.glafouk.com">GLAFOUK</a> </strong> Dj-set / Paris <em>SID / Commodore / 64 </em>
 </li>
 <li>
-07 PM : <a href="https://www.daheardit-records.net/en/artist/vicnet#artist">Vicnet</a> (Live / Paris - Saint-Mandé) <em>Funk / JV1080 / Midi </em>
+07 PM :  <strong><a href="https://www.daheardit-records.net/en/artist/vicnet#artist">VICNET</a> </strong> Live / Paris - Saint-Mandé <em>Funk / JV1080 / Midi </em>
 </li>
 <li> 08 PM : 
-<a href="https://www.daheardit-records.net/en/artist/eat-rabbit#artist">Eat Rabbit</a> (Live / Caluire Sur Cuire) <em>8bit / Micromusic / ParisHq </em>
+ <strong><a href="https://www.daheardit-records.net/en/artist/eat-rabbit#artist">EAT RABBIT</a> </strong> Live / Caluire Sur Cuire <em>8bit / Micromusic / ParisHq </em>
 </li>
 <li> 09 PM : 
-<a href="https://www.daheardit-records.net/en/artist/wankers-united#artist">Wankers United</a>  (Live / Saint Ouen) <em>Funk / Synthétiseur / Kimchi </em>
+ <strong><a href="https://www.daheardit-records.net/en/artist/wankers-united#artist">Wankers United</a>  </strong>Live / Saint Ouen <em>Funk / Synthétiseur / Kimchi </em>
 </li>
-<li> 10 PM : <a href="https://www.daheardit-records.net/en/artist/bill-vortex#artist">Bill Vortex</a> (Live / Marseille) <em>Electro / Braindance / Aïoli</em>
+<li> 10 PM :  <strong><a href="https://www.daheardit-records.net/en/artist/bill-vortex#artist">Bill Vortex</a> </strong> Live / Marseille <em>Electro / Braindance / Aïoli</em>
 </li>
-<li> 11 PM : 
-<a href="https://www.ouiedire.net/emission/ailleurs-227">Santa Barbera</a> (Dj-set / Vitre-Sur-Seine) <em>Hiphouse / Electro / Funkin</em>
+<li> 11 PM :   <strong> <a href="https://www.ouiedire.net/emission/ailleurs-227">Santa Barbera</a>  </strong> Dj-set / Vitry-Sur-Seine <em>Hiphouse / Electro / Funkin</em>
 </li>
 </ul>
 
