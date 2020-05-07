@@ -47,9 +47,7 @@ Start at 6pm (gmt +2) <br />
 Listen album : <br /><a href="https://www.daheardit-records.net/fr/discography/dhr-46">https://www.daheardit-records.net/fr/discography/dhr-46</a>
 </p>
 
-<h2 class="">IRC </h2>
 
-<iframe src="https://kiwiirc.com/client/chat.freenode.net/?nick=clafete|?&theme=basic#daheardit-records" style="border:0; width:40%; height:450px;"></iframe>
 
 <h2 class="">LISTEN WITH <a href="https://p-node.org/">P-NODE</a> <3 </h2>
 
@@ -59,6 +57,11 @@ Listen album : <br /><a href="https://www.daheardit-records.net/fr/discography/d
 <br />
 <a href="http://stream.p-node.org/daheardit">http://stream.p-node.org/daheardit</a>
 </p>
+
+<h2 class="">IRC </h2>
+
+<iframe src="https://kiwiirc.com/client/chat.freenode.net/?nick=clafete|?&theme=basic#daheardit-records" style="border:0; width:40%; height:450px;"></iframe>
+
 <h2 class="">LINE UP </h2>
 
 <ul>
