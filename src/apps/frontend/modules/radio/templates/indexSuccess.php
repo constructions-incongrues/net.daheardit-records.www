@@ -17,7 +17,7 @@
   <link rel="stylesheet" type="text/css" media="all" href="/frontend/css/lib/960.gs/fluid_grid.css?v=20190326.1" />
 
   <link rel="stylesheet" href="/frontend/css/main.css?v=1588796413">
-  <link rel="stylesheet" href="/frontend/css/radio.css?v=1588796418">
+  <link rel="stylesheet" href="/frontend/css/radio.css?v=1588796420">
 
 </head>
 <body>
