@@ -41,20 +41,19 @@
 
 <h1> Online Release Party - <a href="https://www.daheardit-records.net/fr/discography/dhr-46">Wankers United - Solo Romance </a><br />
 </h1>
-<p> 
-05.08.2020 - Start at 6pm (gmt +2) <br />
 
 <ul>
+<li> 05.08.2020 - Start at 6pm (gmt +2)  </li>
 <li>
-6 PM : <a href="http://www.glafouk.com">Glafouk</a> (Dj-set / Paris) <em>SID / Commodore / 64 </em>
+06 PM : <a href="http://www.glafouk.com">Glafouk</a> (Dj-set / Paris) <em>SID / Commodore / 64 </em>
 </li>
 <li>
-7 PM : <a href="https://www.daheardit-records.net/en/artist/vicnet#artist">Vicnet</a> (Live / Paris - Saint-Mandé) <em>Funk / JV1080 / Midi </em>
+07 PM : <a href="https://www.daheardit-records.net/en/artist/vicnet#artist">Vicnet</a> (Live / Paris - Saint-Mandé) <em>Funk / JV1080 / Midi </em>
 </li>
-<li> 8 PM : 
+<li> 08 PM : 
 <a href="https://www.daheardit-records.net/en/artist/eat-rabbit#artist">Eat Rabbit</a> (Live / Caluire Sur Cuire) <em>8bit / Micromusic / ParisHq </em>
 </li>
-<li> 9 PM : 
+<li> 09 PM : 
 <a href="https://www.daheardit-records.net/en/artist/wankers-united#artist">Wankers United</a>  (Live / Saint Ouen) <em>Funk / Synthétiseur / Kimchi </em>
 </li>
 <li> 10 PM : <a href="https://www.daheardit-records.net/en/artist/bill-vortex#artist">Bill Vortex</a> (Live / Marseille) <em>Electro / Braindance / Aïoli</em>
