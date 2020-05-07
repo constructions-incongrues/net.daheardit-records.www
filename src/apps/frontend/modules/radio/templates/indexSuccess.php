@@ -77,7 +77,7 @@ Listen album : <a href="https://www.daheardit-records.net/fr/discography/dhr-46"
 
 <h2 class="">IRC </h2>
 
-<iframe src="https://kiwiirc.com/client/chat.freenode.net/?nick=clafete|?&theme=basic#daheardit-records" style="border:0; width:40%; height:450px;"></iframe>
+<iframe src="https://kiwiirc.com/client/chat.freenode.net/?nick=clafete|?&theme=basic#daheardit-records" style="border:0; width:100%; max-width: 500px; height:450px;"></iframe>
 
 <h2 class="">Z00M </h2>
 <p>
