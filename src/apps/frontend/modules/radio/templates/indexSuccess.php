@@ -46,7 +46,7 @@ Start at 6pm (gmt +2) <br />
 Listen album : <br /><a href="https://www.daheardit-records.net/fr/discography/dhr-46">https://www.daheardit-records.net/fr/discography/dhr-46</a>
 </p>
 
-<h2 class="">LISTEN via <a href="https://p-node.org/">P-NODE</a> <3 </h2>
+<h2 class="">LISTEN WITH <a href="https://p-node.org/">P-NODE</a> <3 </h2>
 
 <audio controls src="http://stream.p-node.org/daheardit"></audio>
 
@@ -60,7 +60,7 @@ Listen album : <br /><a href="https://www.daheardit-records.net/fr/discography/d
 <li><a href="https://www.daheardit-records.net/en/artist/bill-vortex#artist">Bill Vortex</a> (Live / Marseille) <em>Electro / Braindance / Aïoli</em>
 </li>
 <li>
-IW¥N aka <a href="https://www.daheardit-records.net/en/artist/eat-rabbit#artist">Eat Rabbit</a> (Live / Caluire Sur Cuire) <em>Noise / Ambiant / Techno </em>
+<a href="https://www.daheardit-records.net/en/artist/eat-rabbit#artist">Eat Rabbit</a> (Live / Caluire Sur Cuire) <em>8bit / Micromusic / ParisHq </em>
 </li>
 <li>
 <a href="http://www.glafouk.com">Glafouk</a> (Dj-set / Paris) <em>SID / Commodore / 64 </em>
