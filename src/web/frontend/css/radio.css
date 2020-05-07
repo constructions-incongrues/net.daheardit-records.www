@@ -2,7 +2,7 @@ body {
 	background-color: #000;
 	color:#FFF;
 	background-image:url(../pics/radio/flyer_8_may.png);
-	background-position: 65%;
+	background-position: 70%;
 	background-repeat: no-repeat;
 	background-size: contain;
 }
@@ -14,8 +14,7 @@ p a {
 
 a {color:#0099FF!important;}
 
-.header_nav_3 ul  {background-color: transparent!important}
-
+.header_nav_3 ul {background-color: transparent!important}
 
 /* Portrait tablets and small desktops */
 @media (min-width: 768px) and (max-width: 991px) {
