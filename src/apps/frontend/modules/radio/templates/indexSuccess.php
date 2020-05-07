@@ -42,7 +42,7 @@
 <h1> RELEASE PARTY </h1>
 <p> Wankers United - Solo Romance (digital & tape)  <br /><a href="https://www.daheardit-records.net/fr/discography/dhr-46">https://www.daheardit-records.net/fr/discography/dhr-46</a>
 
-<h2 class="">LISTEN <a href="https://p-node.org/">P-NODE</a> / <a href="http://stream.p-node.org/daheardit.m3u">M3U</a></p>
+<h2 class="">LISTEN <a href="https://p-node.org/">P-NODE</a> / <a href="http://stream.p-node.org/daheardit">http://stream.p-node.org/daheardit</a></p>
 </h2>
 
 <audio controls src="http://stream.p-node.org/daheardit"></audio>
