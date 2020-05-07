@@ -34,27 +34,27 @@
         </div><!-- end of header_nav_3_content -->
 
 
-<h2> . </h2>
+<h2 style="color:#000;"> . </h2>
 <h1> Release Party : <a href="https://www.daheardit-records.net/fr/discography/dhr-46">Wankers United - Solo Romance </a><br />
 </h1>
 
 <ul>
 <li> 05.08.2020 - Start at 6pm (gmt +2)  </li>
 <li>
-06 PM : <strong><a href="http://www.glafouk.com">GLAFOUK</a> </strong> Dj-set / Paris <em>SID / Commodore / 64 </em>
+06 PM : <strong><a href="http://www.glafouk.com">GLAFOUK</a> </strong> Dj-set <em>SID / Commodore / 64 </em>
 </li>
 <li>
-07 PM :  <strong><a href="https://www.daheardit-records.net/en/artist/vicnet#artist">VICNET</a> </strong> Live / Paris - Saint-Mandé <em>Funk / JV1080 / Midi </em>
+07 PM :  <strong><a href="https://www.daheardit-records.net/en/artist/vicnet#artist">VICNET</a> </strong> Live <em>Funk / JV1080 / Midi </em>
 </li>
 <li> 08 PM : 
- <strong><a href="https://www.daheardit-records.net/en/artist/eat-rabbit#artist">EAT RABBIT</a> </strong> Live / Caluire Sur Cuire <em>8bit / Micromusic / ParisHq </em>
+ <strong><a href="https://www.daheardit-records.net/en/artist/eat-rabbit#artist">EAT RABBIT</a> </strong> Live <em>8bit / Micromusic / ParisHq </em>
 </li>
 <li> 09 PM : 
- <strong><a href="https://www.daheardit-records.net/en/artist/wankers-united#artist">Wankers United</a>  </strong>Live / Saint Ouen <em>Funk / Synthétiseur / Kimchi </em>
+ <strong><a href="https://www.daheardit-records.net/en/artist/wankers-united#artist">WANKERS UNITED</a>  </strong>Live <em>Funk / Synthétiseur / Kimchi </em>
 </li>
-<li> 10 PM :  <strong><a href="https://www.daheardit-records.net/en/artist/bill-vortex#artist">Bill Vortex</a> </strong> Live / Marseille <em>Electro / Braindance / Aïoli</em>
+<li> 10 PM :  <strong><a href="https://www.daheardit-records.net/en/artist/bill-vortex#artist">BILL VORTEX</a> </strong> Live <em>Electro / Braindance / Aïoli</em>
 </li>
-<li> 11 PM :   <strong> <a href="https://www.ouiedire.net/emission/ailleurs-227">Santa Barbera</a>  </strong> Dj-set / Vitry-Sur-Seine <em>Hiphouse / Electro / Funkin</em>
+<li> 11 PM :   <strong> <a href="https://www.ouiedire.net/emission/ailleurs-227">SANTA BARBERA</a>  </strong> Dj-set / Vitry-Sur-Seine <em>Hiphouse / Electro / Funkin</em>
 </li>
 </ul>
 
