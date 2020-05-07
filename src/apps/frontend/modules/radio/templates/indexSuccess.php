@@ -53,17 +53,17 @@
 06 PM : <strong><a href="http://www.glafouk.com">GLAFOUK</a> </strong><span style="color: #FFF"> Dj-set </span><em>SID / Commodore / 64 </em>
 </li>
 <li>
-07 PM :  <strong><a href="https://www.daheardit-records.net/en/artist/vicnet#artist">VICNET</a> </strong> Live <em>Funk / JV1080 / Midi </em>
+07 PM :  <strong><a href="https://www.daheardit-records.net/en/artist/vicnet#artist">VICNET</a> </strong><span style="color: #FFF"> Live</span> <em>Funk / JV1080 / Midi </em>
 </li>
 <li> 08 PM : 
- <strong><a href="https://www.daheardit-records.net/en/artist/eat-rabbit#artist">EAT RABBIT</a> </strong> Live <em>8bit / Micromusic / ParisHq </em>
+ <strong><a href="https://www.daheardit-records.net/en/artist/eat-rabbit#artist">EAT RABBIT</a> </strong> <span style="color: #FFF">Live </span><em>8bit / Micromusic / ParisHq </em>
 </li>
 <li> 09 PM : 
- <strong><a href="https://www.daheardit-records.net/en/artist/wankers-united#artist">WANKERS UNITED</a>  </strong>Live <em>Funk / Synthétiseur / Kimchi </em>
+ <strong><a href="https://www.daheardit-records.net/en/artist/wankers-united#artist">WANKERS UNITED</a>  </strong><span style="color: #FFF">Live </span><em>Funk / Synthétiseur / Kimchi </em>
 </li>
-<li> 10 PM :  <strong><a href="https://www.daheardit-records.net/en/artist/bill-vortex#artist">BILL VORTEX</a> </strong> Live <em>Electro / Braindance / Aïoli</em>
+<li> 10 PM :  <strong><a href="https://www.daheardit-records.net/en/artist/bill-vortex#artist">BILL VORTEX</a> </strong> <span style="color: #FFF">Live</span> <em>Electro / Braindance / Aïoli</em>
 </li>
-<li> 11 PM :   <strong> <a href="https://www.ouiedire.net/emission/ailleurs-227">SANTA BARBERA</a>  </strong> Dj-set <em>Hiphouse / Electro / Funkin</em>
+<li> 11 PM :   <strong> <a href="https://www.ouiedire.net/emission/ailleurs-227">SANTA BARBERA</a>  </strong><span style="color: #FFF"> Dj-set </span><em>Hiphouse / Electro / Funkin</em>
 </li>
 </ul>
 
