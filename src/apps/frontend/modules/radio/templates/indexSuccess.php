@@ -39,29 +39,40 @@
 
 
 <h2>.</h2>
-<h1> Release Party </h1>
+<h1> RELEASE PARTY </h1>
 <p> Wankers United - Solo Romance (digital & tape)  <br /><a href="https://www.daheardit-records.net/fr/discography/dhr-46">https://www.daheardit-records.net/fr/discography/dhr-46</a>
 
-<h2 class="">Listen : <a href="https://p-node.org/">P-NODE</a> / <a href="http://stream.p-node.org/daheardit.m3u">M3U</a></p>
+<h2 class="">LISTEN <a href="https://p-node.org/">P-NODE</a> / <a href="http://stream.p-node.org/daheardit.m3u">M3U</a></p>
 </h2>
 
 <audio controls src="http://stream.p-node.org/daheardit"></audio>
 
 
-<h2 class="">Line Up </h2>
+<h2 class="">LINE UP </h2>
 
-<p>
-<a href="https://www.daheardit-records.net/en/artist/bill-vortex#artist">Bill Vortex</a> (Live / Marseille) <em>Electro / Braindance / Aïoli</em> <br />
-IW¥N aka <a href="https://www.daheardit-records.net/en/artist/eat-rabbit#artist">Eat Rabbit</a> (Live / Caluire Sur Cuire) <em>Noise / Ambiant / Techno </em><br />
-<a href="http://www.glafouk.com">Glafouk</a> (Dj-set / Paris) <em>SID / Commodore / 64 </em><br />
-<a href="https://www.daheardit-records.net/en/artist/wankers-united#artist">Wankers United</a>  (Live / Saint Ouen) <em>Funk / Synthétiseur / Kimchi </em><br />
-<a href="https://www.daheardit-records.net/en/artist/vicnet#artist">Vicnet</a> (Live / Paris - Saint-Mandé) <em>Funk / JV1080 / Midi </em><br />
-<a href="https://www.ouiedire.net/emission/ailleurs-227">Santa Barbera</a> (Dj-set / Vitre-Sur-Seine) <em>Hiphouse / Electro / Funkin<em><br />
-</p>
+<ul>
+<li><a href="https://www.daheardit-records.net/en/artist/bill-vortex#artist">Bill Vortex</a> (Live / Marseille) <em>Electro / Braindance / Aïoli</em>
+</li>
+<li>
+IW¥N aka <a href="https://www.daheardit-records.net/en/artist/eat-rabbit#artist">Eat Rabbit</a> (Live / Caluire Sur Cuire) <em>Noise / Ambiant / Techno </em>
+</li>
+<li>
+<a href="http://www.glafouk.com">Glafouk</a> (Dj-set / Paris) <em>SID / Commodore / 64 </em>
+</li>
+<li>
+<a href="https://www.daheardit-records.net/en/artist/wankers-united#artist">Wankers United</a>  (Live / Saint Ouen) <em>Funk / Synthétiseur / Kimchi </em>
+</li>
+<li>
+<a href="https://www.daheardit-records.net/en/artist/vicnet#artist">Vicnet</a> (Live / Paris - Saint-Mandé) <em>Funk / JV1080 / Midi </em>
+</li>
+<li>
+<a href="https://www.ouiedire.net/emission/ailleurs-227">Santa Barbera</a> (Dj-set / Vitre-Sur-Seine) <em>Hiphouse / Electro / Funkin<em>
+</li>
+</ul>
 
-<h2 class="">Talk :</h2>
+<h2 class="">IRC </h2>
 
-<h2 class="">Zoom  </h2>
+<h2 class="">Z00M </h2>
 <p>
 ID de réunion : 882 1665 3714<br />
 Mot de passe : 745205<br />
