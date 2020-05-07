@@ -75,7 +75,7 @@
 <!-- <a href="http://stream.p-node.org/daheardit">http://stream.p-node.org/daheardit</a>
  -->
 
-<h2 class="">IRC </h2>
+<h2 class="">IRC OR <a href="https://us02web.zoom.us/j/88216653714?pwd=Y3RZOVhjd1FoNms2VDVub1NjdWVIUT09">ZOOM</a> (ID : 882 1665 3714 / PWD : 745205)  </h2>
 
 <iframe src="https://kiwiirc.com/client/chat.freenode.net/?nick=clafete|?&theme=basic#daheardit-records" style="border:0; width:100%; max-width: 900px; height:450px;"></iframe>
 
