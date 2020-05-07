@@ -39,21 +39,11 @@
 
 
 <h2>.</h2>
-<h1> Online Release Party - Wankers United - Solo Romance <br />
+
+<h1> Online Release Party - <a href="https://www.daheardit-records.net/fr/discography/dhr-46">Wankers United - Solo Romance </a><br />
 </h1>
 <p> 
 05.08.2020 - Start at 6pm (gmt +2) <br />
-Listen album : <a href="https://www.daheardit-records.net/fr/discography/dhr-46">https://www.daheardit-records.net/fr/discography/dhr-46</a>
-</p>
-
-
-
-<h2 class="">STREAM WITH <a href="https://p-node.org/">P-NODE</a>  <a href="http://stream.p-node.org/daheardit">http://stream.p-node.org/daheardit</a>
- </h2>
-
-<audio controls src="http://stream.p-node.org/daheardit"></audio>
-
-<h2 class="">LINE UP </h2>
 
 <ul>
 <li>
@@ -75,9 +65,19 @@ Listen album : <a href="https://www.daheardit-records.net/fr/discography/dhr-46"
 </li>
 </ul>
 
+</p>
+
+
+
+<h2 class="">STREAM WITH <a href="https://p-node.org/">P-NODE</a>  </h2>
+
+<audio controls src="http://stream.p-node.org/daheardit"></audio>
+<!-- <a href="http://stream.p-node.org/daheardit">http://stream.p-node.org/daheardit</a>
+ -->
+
 <h2 class="">IRC </h2>
 
-<iframe src="https://kiwiirc.com/client/chat.freenode.net/?nick=clafete|?&theme=basic#daheardit-records" style="border:0; width:100%; max-width: 500px; height:450px;"></iframe>
+<iframe src="https://kiwiirc.com/client/chat.freenode.net/?nick=clafete|?&theme=basic#daheardit-records" style="border:0; width:100%; max-width: 900px; height:450px;"></iframe>
 
 <h2 class="">Z00M </h2>
 <p>
