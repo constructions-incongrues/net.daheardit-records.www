@@ -68,7 +68,7 @@
 </li>
 <li> 11 PM :   <strong> <a href="https://www.ouiedire.net/emission/ailleurs-227">SANTA BARBERA</a>  </strong><span style="color: #FFF"> Dj-set </span><em>Hiphouse / Electro / Funkin</em>
 </li>
-<li> 12 PM : <strong>Jean Christophe Azerty</strong><span style='color: #FFF'>Dj-set</span> <em>Future / Free / Funk</em>
+<li> 12 PM : <strong><a href="https://serendiplab.bandcamp.com/">Jean Christophe Azerty</a></strong> <span style='color: #FFF'>Dj-set</span> <em>Future / Free / Funk</em>
 </ul>
 
 </p>
