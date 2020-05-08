@@ -75,9 +75,8 @@
 
 
 
-<h2 class="">Stream with <a href="http://p-node.org/daheardit">https://p-node.org/</a> <span style="color:#FF0099"><3 </span> </h2>
+<h2 class="">Stream with <a href="http://stream.p-node.org/daheardit">http://stream.p-node.org/daheardit</a> <span style="color:#FF0099"><3 </span> </h2>
 
-<p><a href="http://p-node.org/daheardit">http://p-node.org/daheardit</a></p>
 <p>
 Remember to refresh the player between each concert.
 </p>
