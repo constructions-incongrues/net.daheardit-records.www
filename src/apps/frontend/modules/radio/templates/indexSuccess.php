@@ -49,7 +49,6 @@
 
 <ul class="lineup">
 <li> 05.08.2020 - Start at 5pm (gmt +2)  </li>
-<li>Remember to refresh the player between each artist.</li>
 <li> 05 PM : 
  <strong><a href="https://www.daheardit-records.net/en/artist/eat-rabbit#artist">EAT RABBIT</a> </strong> <span style="color: #FFF">Dj-set Atari</span><em>8bit / Micromusic / ParisHq </em>
 </li>
