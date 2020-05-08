@@ -121,11 +121,13 @@ Content:
       fields: [informations, credits, greetings]
     Timestampable: ~
   columns:
-    informations: string
-    greetings:    string
-    links1:       string
-    links2:       string
-    footer_video: string
+    informations:       string
+    greetings:          string
+    links1:             string
+    links2:             string
+    footer_video:       string
+    radio_presentation: string
+    radio_onair:        string
 
 Header:
   columns:
