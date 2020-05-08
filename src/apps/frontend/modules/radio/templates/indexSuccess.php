@@ -48,7 +48,11 @@
 <h1>Release Party : Wankers United - Solo Romance</strong> <a href="https://www.daheardit-records.net/fr/discography/dhr-46">(Digital & K7)</a></h1>
 
 <ul class="lineup">
-<li> 05.08.2020 - Start at 6pm (gmt +2)  </li>
+<li> 05.08.2020 - Start at 5pm (gmt +2)  </li>
+<li>Remember to refresh the player between each artist.</li>
+<li> 05 PM : 
+ <strong><a href="https://www.daheardit-records.net/en/artist/eat-rabbit#artist">EAT RABBIT</a> </strong> <span style="color: #FFF">Dj-set Atari</span><em>8bit / Micromusic / ParisHq </em>
+</li>
 <li>
 06 PM : <strong><a href="http://www.glafouk.com">GLAFOUK</a> </strong><span style="color: #FFF"> Dj-set </span><em>SID / Commodore / 64 </em>
 </li>
@@ -74,6 +78,9 @@
 <h2 class="">Stream with <a href="https://p-node.org/">https://p-node.org/</a> <span style="color:#FF0099"><3 </span> </h2>
 
 <audio controls src="http://stream.p-node.org/daheardit"></audio>
+<p>
+Remember to refresh the player between each concert.
+</p>
 <!-- <a href="http://stream.p-node.org/daheardit">http://stream.p-node.org/daheardit</a>
  -->
 
