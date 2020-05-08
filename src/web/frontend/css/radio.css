@@ -1,8 +1,45 @@
 body {
 	background-color: #000;
 	color:#FFF;
+	background-image:url(../pics/radio/flyer_8_may.png);
+	background-position: right;
+	background-repeat: no-repeat;
+	background-size: contain;
+	padding-left: 1%
 }
 
+p, .lineup li{color:#b2b2b2;font-size:1.5em!important}
 p a {
 	font-size:1em!important;
-	text-transform: lowercase;}
+	text-decoration: none;
+	}
+a {color:#0099FF!important;text-decoration: none;}
+
+.header_nav_3 ul {background-color: transparent!important}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+
+          body {
+        background-image: none;
+    }
+
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+
+          body {
+        background-image: none;
+    }
+
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+
+          body {
+        background-image: none;
+    }
+
+}
