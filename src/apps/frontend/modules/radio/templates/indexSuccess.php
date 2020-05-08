@@ -17,7 +17,7 @@
   <link rel="stylesheet" type="text/css" media="all" href="/frontend/css/lib/960.gs/fluid_grid.css?v=20190326.1" />
 
   <link rel="stylesheet" href="/frontend/css/main.css?v=1588796444">
-  <link rel="stylesheet" href="/frontend/css/radio.css?v=TR808TB303TR909PARTYTYME">
+  <link rel="stylesheet" href="/frontend/css/radio.css?v=TR808TB303TR909PARTYTYME666">
 
 <!-- Opengraph -->
   <meta property="title" content="Radio D!HR" />
