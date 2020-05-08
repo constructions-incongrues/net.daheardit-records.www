@@ -79,9 +79,9 @@
 
 <h2 class="">Irc or <a href="https://us02web.zoom.us/j/88216653714?pwd=Y3RZOVhjd1FoNms2VDVub1NjdWVIUT09">Zoom</a> (Id : 882 1665 3714 / Pwd : 745205)  </h2>
 
-<iframe src="https://kiwiirc.com/client/chat.freenode.net/?nick=clafete|?&theme=basic#daheardit-records" style="border:0; width:100%; max-width: 900px; height:450px;"></iframe>
-
-
+<!-- <iframe src="https://kiwiirc.com/client/chat.freenode.net/?nick=clafete|?&theme=basic#daheardit-records" style="border:0; width:100%; max-width: 900px; height:450px;"></iframe> -->
+<iframe src="https://kiwiirc.com/client/chat.freenode.net" style="border:0; width:100%; max-width: 900px; height:450px;"></iframe>
+https://www.daheardit-records.net/radio
 
  <p>
     <?php include_component('content', 'show', array('block' => 'radio_onair')) ?>
