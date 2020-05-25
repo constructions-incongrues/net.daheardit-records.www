@@ -68,7 +68,8 @@
 </li>
 <li> 11 PM :   <strong> <a href="https://www.ouiedire.net/emission/ailleurs-227">SANTA BARBERA</a>  </strong><span style="color: #FFF"> Dj-set </span><em>Hiphouse / Electro / Funkin</em>
 </li>
-<li> AFTER : <strong><a href="https://serendiplab.bandcamp.com/">Jean Christophe Azerty</a></strong> <span style='color: #FFF'>Dj-set</span> <em>Future / Free / Funk</em>
+<li> AFTER PARTY : <strong><a href="https://www.daheardit-records.net/en/artist/eat-rabbit#artist">DJ eat Ravbeat</a></strong> <span style="color: #FFF"> Dj-set</span> <em>Nez/ventre/queue</em></li>
+<!-- <li> AFTER PARTY : <strong><a href="https://serendiplab.bandcamp.com/">Jean Christophe Azerty</a></strong> <span style='color: #FFF'>Dj-set</span> <eNez/ventre/queue>Future / Free / Funk</em> -->
 </ul>
 
 </p>
