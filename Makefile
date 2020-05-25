@@ -19,6 +19,9 @@ build: ## Génération de l'image Docker
 clean: stop ## Suppression des containers de l'application
 	docker-compose rm -f
 
+cache-clean-symfony:
+	ssh daheardit-record@ftp.pastis-hosting.net ./httpdocs/src/symfony cc
+
 database-import: ## Récupération de la base de donnée de production
 	ssh daheardit-record@ftp.pastis-hosting.net mysqldump -h127.0.0.1 -udaheardit-record -pdaheardit-reco daheardit-record > ./src/data/fixtures/daheardit.sql
 
