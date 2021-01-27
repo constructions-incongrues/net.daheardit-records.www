@@ -170,10 +170,12 @@
          <div class="grid_1"><br /></div>
 
           <div class="grid_6 footer_contact">
-            <h1 id="contact"><?php echo __('Contact') ?></h1>
+            <h1 id="contact"><?php echo __('') ?></h1>
             <ul class="footer_nav_1">
 <?php include_partial('main/social') ?>
             </ul>
+
+            <h2><?php echo __('Contact') ?></h2>
 
             <p>
               <a href="mailto:johan@daheardit-records.net">johan@daheardit-records.net</a>
