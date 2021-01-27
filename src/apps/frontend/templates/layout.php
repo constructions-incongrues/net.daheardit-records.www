@@ -175,19 +175,9 @@
 <?php include_partial('main/social') ?>
             </ul>
 
-
-            <h2><?php echo __('Adresse') ?></h2>
-
             <p>
-              Da ! Heard It Records <br/>
-              34, Rue des gardes <br />
-              75018 PARIS FRANCE<br />
-              <a href="mailto:contact@daheardit-records.net">contact@daheardit-records.net</a>
+              <a href="mailto:johan@daheardit-records.net">johan@daheardit-records.net</a>
             </p>
-
-            <h2><?php echo __('Envoyer une demo') ?></h2>
-            <p><?php echo __('Merci d\'envoyer vos demos par la poste ou par e-mail à') ?>
-              <a href="mailto:demo@daheardit-records.net">demo@daheardit-records.net</a></p>
 
             <h2><?php echo __('Crédits') ?></h2>
 
