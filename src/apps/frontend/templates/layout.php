@@ -70,7 +70,7 @@
 
       <div class="grid_12 releases">
         <div class="category_content">
-          <h1 id="discography"><?php echo __('Discographie') ?></h1>
+          <h1 id="discography"><?php echo __('Releases') ?></h1>
             <span class="triangle"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/others/triangle-bord.png" class="triangle" /></span>
         </div><!-- end of category contents -->
       </div><!-- end of releases -->
@@ -83,7 +83,7 @@
         <div class="category_content">
                     <span class="artist_button_top"><a href="#top"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/top_black.png" alt="TOP"></a></span>
 
-          <h1 id="artists"><?php echo __('Artistes') ?></h1>
+          <h1 id="artists"><?php echo __('Artists') ?></h1>
     <span class="triangle"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/others/triangle-bord-blanc.png" class="triangle" /></span>
 
         </div><!-- end of artists_content -->
@@ -93,7 +93,7 @@
 
       <div class="grid_12 artwork_artists_listing_all">
         <div class="category_content">
-          <h1 id="artwork_artists"><?php echo __('Illustrations') ?></h1>
+          <h1 id="artwork_artists"><?php echo __('Illustrator') ?></h1>
             <span class="triangle"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/others/triangle-bord.png" class="triangle" /></span>
                  <span class="graphists_button_top"><a href="#top"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/top.png" alt="TOP"></a></span>
 
@@ -106,7 +106,7 @@
 
       <div class="grid_12 category_infos">
          <div class="category_content">
-          <h1 id="videos"><?php echo __('Vidéos') ?></h1>
+          <h1 id="videos"><?php echo __('Documentary') ?></h1>
           <span class="triangle"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/others/triangle-bord-blanc.png" class="triangle" /></span>
 
           <span class="infos_button_top"><a href="#top"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/top_black.png" alt="TOP"></a></span>
@@ -146,7 +146,7 @@
           </form>
         </div>
 
-          <h1 id="links"><?php echo __('Informations') ?></h1>
+          <h1 id="links"><?php echo __('About') ?></h1>
 
             <p>
             <?php include_component('content', 'show', array('block' => 'informations')) ?>
