@@ -151,17 +151,22 @@
             <p>
             <?php include_component('content', 'show', array('block' => 'informations')) ?>
             </p>
+                    <!-- <h1 id="links"><?php echo __('Links') ?></h1> -->
+                    <?php include_component('content', 'show', array('block' => 'links1')) ?>
+
+        
+<?php include_component('content', 'show', array('block' => 'links2')) ?>
 
            
            
 
             <p>
-            Contact :               <a href="mailto:johan@daheardit-records.net">johan@daheardit-records.net</a>
+            Contact :               <a href="mailto:johan@daheardit-records.net">johan@daheardit-records.net</a> <br />
 
-              Design :  <a href="http://www.thibaulthuertas.com/">Thibault Huertas</a> 
+              Design :  <a href="http://www.thibaulthuertas.com/">Thibault Huertas</a> br />
 
   
-              Code : <a href="http://www.constructions-incongrues.net">Constructions Incongrues</a>   
+              Code : <a href="http://www.constructions-incongrues.net">Constructions Incongrues</a>   br />
               Hosting : <a href="http://www.pastis-hosting.net">Pastis Hosting</a>
             </p>
 
@@ -170,11 +175,7 @@
 
     <div class="grid_12 footer_links_1">
 
-            <!-- <h1 id="links"><?php echo __('Links') ?></h1> -->
-            <?php include_component('content', 'show', array('block' => 'links1')) ?>
-
-        
-          <?php include_component('content', 'show', array('block' => 'links2')) ?>
+    
 
           </div><!-- end of links -->
           </div><!-- end of .infos_descr -->
@@ -184,9 +185,9 @@
 
           <div class="grid_6 footer_contact">
             <h1 id="contact"><?php echo __('') ?></h1>
-            <ul class="footer_nav_1">
+            <!-- <ul class="footer_nav_1">
 <?php include_partial('main/social') ?>
-            </ul>
+            </ul> -->
 
             <!-- <h2><?php echo __('Contact') ?></h2> -->
 
