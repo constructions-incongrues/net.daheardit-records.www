@@ -165,7 +165,10 @@
               Hosting : <a href="http://www.pastis-hosting.net">Pastis Hosting</a>
             </p>
 
-    <div class="grid_5 footer_links_1">
+            <p>            <?php include_component('content', 'show', array('block' => 'greetings')) ?>
+</p>
+
+    <div class="grid_12 footer_links_1">
 
             <!-- <h1 id="links"><?php echo __('Links') ?></h1> -->
             <?php include_component('content', 'show', array('block' => 'links1')) ?>
@@ -201,7 +204,7 @@
               Code : <a href="http://www.constructions-incongrues.net">Constructions Incongrues</a> 
               Hosting : <a href="http://www.pastis-hosting.net">Pastis Hosting</a>.
             </p>
-
+ 
             <h2><?php echo __('Greetings') ?></h2>
             <p>
             <?php include_component('content', 'show', array('block' => 'greetings')) ?>
