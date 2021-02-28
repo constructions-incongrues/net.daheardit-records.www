@@ -173,10 +173,7 @@
             <!-- <h1 id="links"><?php echo __('Links') ?></h1> -->
             <?php include_component('content', 'show', array('block' => 'links1')) ?>
 
-          </div><!-- end of links -->
-
-          <div class="grid_3 footer_links_2">
-
+        
           <?php include_component('content', 'show', array('block' => 'links2')) ?>
 
           </div><!-- end of links -->
@@ -198,13 +195,7 @@
 
             <h2><?php echo __('Crédits') ?></h2>
 
-            <p>
-              Contact :               <a href="mailto:johan@daheardit-records.net">johan@daheardit-records.net</a> <br />
-              Design :  <a href="http://www.thibaulthuertas.com/">Thibault Huertas</a>.  <br />
-              Code : <a href="http://www.constructions-incongrues.net">Constructions Incongrues</a> <br />
-              Hosting : <a href="http://www.pastis-hosting.net">Pastis Hosting</a>.
-            </p>
- 
+            
          
 
               <!--
