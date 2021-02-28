@@ -199,16 +199,13 @@
             <h2><?php echo __('Crédits') ?></h2>
 
             <p>
-              Contact :               <a href="mailto:johan@daheardit-records.net">johan@daheardit-records.net</a>
+              Contact :               <a href="mailto:johan@daheardit-records.net">johan@daheardit-records.net</a> <br />
               Design :  <a href="http://www.thibaulthuertas.com/">Thibault Huertas</a>.  <br />
-              Code : <a href="http://www.constructions-incongrues.net">Constructions Incongrues</a> 
+              Code : <a href="http://www.constructions-incongrues.net">Constructions Incongrues</a> <br />
               Hosting : <a href="http://www.pastis-hosting.net">Pastis Hosting</a>.
             </p>
  
-            <h2><?php echo __('Greetings') ?></h2>
-            <p>
-            <?php include_component('content', 'show', array('block' => 'greetings')) ?>
-            </p>
+         
 
               <!--
               <h2><?php echo __('Formulaire de contact') ?></h2>
