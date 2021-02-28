@@ -93,7 +93,7 @@
 
       <div class="grid_12 artwork_artists_listing_all">
         <div class="category_content">
-          <h1 id="artwork_artists"><?php echo __('Illustrator') ?></h1>
+          <h1 id="artwork_artists"><?php echo __('Illustrators') ?></h1>
             <span class="triangle"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/others/triangle-bord.png" class="triangle" /></span>
                  <span class="graphists_button_top"><a href="#top"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/top.png" alt="TOP"></a></span>
 
@@ -132,7 +132,7 @@
 
 
           <div id="informations" class="grid_5 infos_descr">
-
+<!-- 
           <!-- Begin MailChimp Signup Form -->
         <div id="mc_embed_signup" name="#newsletter">
           <form action="//daheardit-records.us15.list-manage.com/subscribe/post?u=a260251d9efb71cb8f1bffff4&amp;id=e77908b281" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
@@ -144,9 +144,9 @@
               </div>
             </div><!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
           </form>
-        </div>
+        </div> -->
 
-          <h1 id="links"><?php echo __('About') ?></h1>
+          <!-- <h1 id="links"><?php echo __('About') ?></h1> -->
 
             <p>
             <?php include_component('content', 'show', array('block' => 'informations')) ?>
@@ -154,7 +154,7 @@
 
     <div class="grid_5 footer_links_1">
 
-            <h1 id="links"><?php echo __('Links') ?></h1>
+            <!-- <h1 id="links"><?php echo __('Links') ?></h1> -->
             <?php include_component('content', 'show', array('block' => 'links1')) ?>
 
           </div><!-- end of links -->
