@@ -152,13 +152,16 @@
             <?php include_component('content', 'show', array('block' => 'informations')) ?>
             </p>
 
-            <p>
-              <a href="mailto:johan@daheardit-records.net">johan@daheardit-records.net</a>
-            </p>
+           
+           
 
             <p>
-              Design :  <a href="http://www.thibaulthuertas.com/">Thibault Huertas</a> / 
-              Code : <a href="http://www.constructions-incongrues.net">Constructions Incongrues</a>  / 
+            Contact :               <a href="mailto:johan@daheardit-records.net">johan@daheardit-records.net</a>
+
+              Design :  <a href="http://www.thibaulthuertas.com/">Thibault Huertas</a> 
+
+  
+              Code : <a href="http://www.constructions-incongrues.net">Constructions Incongrues</a>   
               Hosting : <a href="http://www.pastis-hosting.net">Pastis Hosting</a>
             </p>
 
@@ -188,12 +191,12 @@
             <!-- <h2><?php echo __('Contact') ?></h2> -->
 
             <p>
-              <a href="mailto:johan@daheardit-records.net">johan@daheardit-records.net</a>
             </p>
 
             <h2><?php echo __('Crédits') ?></h2>
 
             <p>
+              Contact :               <a href="mailto:johan@daheardit-records.net">johan@daheardit-records.net</a>
               Design :  <a href="http://www.thibaulthuertas.com/">Thibault Huertas</a>.  <br />
               Code : <a href="http://www.constructions-incongrues.net">Constructions Incongrues</a> 
               Hosting : <a href="http://www.pastis-hosting.net">Pastis Hosting</a>.
