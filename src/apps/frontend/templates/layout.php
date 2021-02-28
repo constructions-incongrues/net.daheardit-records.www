@@ -132,9 +132,9 @@
 
 
           <div id="informations" class="grid_5 infos_descr">
-<!-- 
+
           <!-- Begin MailChimp Signup Form -->
-        <div id="mc_embed_signup" name="#newsletter">
+        <!-- <div id="mc_embed_signup" name="#newsletter">
           <form action="//daheardit-records.us15.list-manage.com/subscribe/post?u=a260251d9efb71cb8f1bffff4&amp;id=e77908b281" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
             <div id="mc_embed_signup_scroll">
               <h1 name="newsletter"><?php echo __("S'inscrire à la liste d'informations") ?></h1>
@@ -144,13 +144,18 @@
               </div>
             </div><!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
           </form>
-        </div> -->
+        </div> 
 
           <!-- <h1 id="links"><?php echo __('About') ?></h1> -->
 
             <p>
             <?php include_component('content', 'show', array('block' => 'informations')) ?>
             </p>
+
+            <p>
+              <a href="mailto:johan@daheardit-records.net">johan@daheardit-records.net</a>
+            </p>
+
 
     <div class="grid_5 footer_links_1">
 
@@ -175,7 +180,7 @@
 <?php include_partial('main/social') ?>
             </ul>
 
-            <h2><?php echo __('Contact') ?></h2>
+            <!-- <h2><?php echo __('Contact') ?></h2> -->
 
             <p>
               <a href="mailto:johan@daheardit-records.net">johan@daheardit-records.net</a>
@@ -184,8 +189,9 @@
             <h2><?php echo __('Crédits') ?></h2>
 
             <p>
-              Le graphisme du site est réalisé par <a href="http://www.thibaulthuertas.com/">Thibault Huertas</a>.  <br />
-              Le projet <a href="http://www.daheardit-records.net">Da ! Heard It Records</a> est développé par <a href="http://www.constructions-incongrues.net">Constructions Incongrues</a> et hébergé par <a href="http://www.pastis-hosting.net">Pastis Hosting</a>.
+              Design :  <a href="http://www.thibaulthuertas.com/">Thibault Huertas</a>.  <br />
+              Code : <a href="http://www.constructions-incongrues.net">Constructions Incongrues</a> 
+              Hosting : <a href="http://www.pastis-hosting.net">Pastis Hosting</a>.
             </p>
 
             <h2><?php echo __('Greetings') ?></h2>
