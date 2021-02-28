@@ -156,6 +156,11 @@
               <a href="mailto:johan@daheardit-records.net">johan@daheardit-records.net</a>
             </p>
 
+            <p>
+              Design :  <a href="http://www.thibaulthuertas.com/">Thibault Huertas</a> / 
+              Code : <a href="http://www.constructions-incongrues.net">Constructions Incongrues</a>  / 
+              Hosting : <a href="http://www.pastis-hosting.net">Pastis Hosting</a>
+            </p>
 
     <div class="grid_5 footer_links_1">
 
