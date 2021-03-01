@@ -104,7 +104,7 @@
 <?php include_component('artwork_artist', 'list') ?>
 
 
-  <!--    <div class="grid_12 category_infos">
+      <div class="grid_12 category_infos">
          <div class="category_content">
           <h1 id="videos"><?php echo __('Documentary') ?></h1>
           <span class="triangle"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/others/triangle-bord-blanc.png" class="triangle" /></span>
@@ -119,7 +119,6 @@
           <iframe width="960" height="540" src="https://www.youtube.com/embed/e8UoUJha3zw?list=PLgpmTifGJBPQGp_JLT572YE7wV1gWTEpN" frameborder="0" allowfullscreen></iframe>
           </div><!-- end of .infos-->
       </div><!-- end of .infos content -->
-      -->
 
 
       <div class="grid_12 footer">
@@ -169,8 +168,7 @@
               <a href="http://www.constructions-incongrues.net">Constructions Incongrues (code)</a> <br />
             <a href="http://www.pastis-hosting.net">Pastis Hosting (hosting)</a> 
             </p>
-            <iframe width="960" height="540" src="https://www.youtube.com/embed/e8UoUJha3zw?list=PLgpmTifGJBPQGp_JLT572YE7wV1gWTEpN" frameborder="0" allowfullscreen></iframe>
-
+        
       
     <div class="grid_12 footer_links_1">
 
