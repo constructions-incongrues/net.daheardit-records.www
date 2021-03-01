@@ -153,7 +153,6 @@
             </p>
                     <!-- <h1 id="links"><?php echo __('Links') ?></h1> -->
                     <?php include_component('content', 'show', array('block' => 'links1')) ?>
-
         
 <?php include_component('content', 'show', array('block' => 'links2')) ?>
 
@@ -161,17 +160,17 @@
            
 
             <p>
-            Contact :               <a href="mailto:johan@daheardit-records.net">johan@daheardit-records.net</a> <br />
+            <a href="mailto:johan@daheardit-records.net">johan@daheardit-records.net</a> <br />
 
-              Design :  <a href="http://www.thibaulthuertas.com/">Thibault Huertas</a> br />
+              Design :  <a href="http://www.thibaulthuertas.com/">Thibault Huertas</a> <br />
 
   
               Code : <a href="http://www.constructions-incongrues.net">Constructions Incongrues</a>   br />
               Hosting : <a href="http://www.pastis-hosting.net">Pastis Hosting</a>
             </p>
 
-            <p>            <?php include_component('content', 'show', array('block' => 'greetings')) ?>
-</p>
+            <!-- <p>            <?php include_component('content', 'show', array('block' => 'greetings')) ?>
+</p> -->
 
     <div class="grid_12 footer_links_1">
 
