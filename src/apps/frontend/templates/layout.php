@@ -148,6 +148,7 @@
 
 
             <p>
+            <iframe width="960" height="540" src="https://www.youtube.com/embed/e8UoUJha3zw?list=PLgpmTifGJBPQGp_JLT572YE7wV1gWTEpN" frameborder="0" allowfullscreen></iframe>
 
             <?php include_component('content', 'show', array('block' => 'informations')) ?>
             <?php include_component('content', 'show', array('block' => 'links1')) ?>
