@@ -146,10 +146,8 @@
           </form>
         </div> 
 
-          <!-- <h1 id="links"><?php echo __('About') ?></h1> -->
 
             <p>
-            <a href="mailto:johan@daheardit-records.net">johan@daheardit-records.net</a> <br /> <br/>
 
             <?php include_component('content', 'show', array('block' => 'informations')) ?>
             </p>
@@ -157,17 +155,19 @@
                     <?php include_component('content', 'show', array('block' => 'links1')) ?>
         
 <?php include_component('content', 'show', array('block' => 'links2')) ?>
+          <!-- <h1 id="links"><?php echo __('About') ?></h1> -->
 
            
            
 
             <p>
+            contact : <a href="mailto:johan@daheardit-records.net">johan@daheardit-records.net</a> <br /> <br/>
 
-              design by <a href="http://www.thibaulthuertas.com/">Thibault Huertas</a> 
+              design : <a href="http://www.thibaulthuertas.com/">Thibault Huertas</a> 
 
   
-             code by <a href="http://www.constructions-incongrues.net">Constructions Incongrues</a> 
-             host by <a href="http://www.pastis-hosting.net">Pastis Hosting</a> 
+             code : <a href="http://www.constructions-incongrues.net">Constructions Incongrues</a> 
+             host : <a href="http://www.pastis-hosting.net">Pastis Hosting</a> 
             </p>
 
             <!-- <p>            <?php include_component('content', 'show', array('block' => 'greetings')) ?>
