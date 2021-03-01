@@ -149,6 +149,8 @@
           <!-- <h1 id="links"><?php echo __('About') ?></h1> -->
 
             <p>
+            <a href="mailto:johan@daheardit-records.net">johan@daheardit-records.net</a> <br /> <br/>
+
             <?php include_component('content', 'show', array('block' => 'informations')) ?>
             </p>
                     <!-- <h1 id="links"><?php echo __('Links') ?></h1> -->
@@ -160,13 +162,12 @@
            
 
             <p>
-            <a href="mailto:johan@daheardit-records.net">johan@daheardit-records.net</a> <br />
 
-              <a href="http://www.thibaulthuertas.com/">Thibault Huertas</a> (design)
+              design by <a href="http://www.thibaulthuertas.com/">Thibault Huertas</a> 
 
   
-             <a href="http://www.constructions-incongrues.net">Constructions Incongrues</a> (dev)  
-             <a href="http://www.pastis-hosting.net">Pastis Hosting</a> (hosting)
+             code by <a href="http://www.constructions-incongrues.net">Constructions Incongrues</a> 
+             host by <a href="http://www.pastis-hosting.net">Pastis Hosting</a> 
             </p>
 
             <!-- <p>            <?php include_component('content', 'show', array('block' => 'greetings')) ?>
