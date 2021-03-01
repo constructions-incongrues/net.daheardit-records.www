@@ -147,7 +147,6 @@
         </div> 
 
           <!-- <h1 id="links"><?php echo __('About') ?></h1> -->
-          <a href="mailto:johan@daheardit-records.net">johan@daheardit-records.net</a> <br />
 
             <p>
             <?php include_component('content', 'show', array('block' => 'informations')) ?>
@@ -161,6 +160,7 @@
            
 
             <p>
+            <a href="mailto:johan@daheardit-records.net">johan@daheardit-records.net</a> <br />
 
               <a href="http://www.thibaulthuertas.com/">Thibault Huertas</a> (design)
 
