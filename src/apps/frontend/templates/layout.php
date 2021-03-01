@@ -153,17 +153,13 @@
 
             <?php include_component('content', 'show', array('block' => 'informations')) ?>
             </p>
-                    <!-- <h1 id="links"><?php echo __('Links') ?></h1> -->
-                    <?php include_component('content', 'show', array('block' => 'links1')) ?>
-        
-<?php include_component('content', 'show', array('block' => 'links2')) ?>
-          <!-- <h1 id="links"><?php echo __('About') ?></h1> -->
+  
 
            
            
 
             <p>
-            contact : <a href="mailto:johan@daheardit-records.net">johan@daheardit-records.net</a>
+            contact : <a href="mailto:johan@daheardit-records.net">johan@daheardit-records.net</a> <br />
 
               design : <a href="http://www.thibaulthuertas.com/">Thibault Huertas</a> 
 
