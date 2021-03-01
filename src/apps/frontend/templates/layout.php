@@ -129,9 +129,7 @@
 
         <div class="footer_content">
 
-<p> <?php include_component('content', 'show', array('block' => 'links1')) ?>
-        
-        <?php include_component('content', 'show', array('block' => 'links2')) ?></p>
+
 
           <div id="informations" class="grid_5 infos_descr">
 
@@ -159,7 +157,7 @@
            
 
             <p>
-            contact : <a href="mailto:johan@daheardit-records.net">johan@daheardit-records.net</a> <br />
+           <a href="mailto:johan@daheardit-records.net">johan@daheardit-records.net</a> <br />
 
               design : <a href="http://www.thibaulthuertas.com/">Thibault Huertas</a> 
 
@@ -167,7 +165,9 @@
              code : <a href="http://www.constructions-incongrues.net">Constructions Incongrues</a> 
              host : <a href="http://www.pastis-hosting.net">Pastis Hosting</a> 
             </p>
-
+            <p> <?php include_component('content', 'show', array('block' => 'links1')) ?>
+        
+        <?php include_component('content', 'show', array('block' => 'links2')) ?></p>
             <!-- <p>            <?php include_component('content', 'show', array('block' => 'greetings')) ?>
 </p> -->
 
