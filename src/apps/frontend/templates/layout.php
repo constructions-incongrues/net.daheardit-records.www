@@ -150,14 +150,18 @@
             <p>
 
             <?php include_component('content', 'show', array('block' => 'informations')) ?>
+            <?php include_component('content', 'show', array('block' => 'links2')) ?></p>
+            <!-- <p>            <?php include_component('content', 'show', array('block' => 'greetings')) ?>
+</p> -->
+
             </p>
   
 
            
            
 
-            <p>
-           <a href="mailto:johan@daheardit-records.net">johan@daheardit-records.net</a> <br />
+            <p style="text-align:right;">
+           <a href="mailto:johan@daheardit-records.net">contact/a> <br />
 
             <a href="http://www.thibaulthuertas.com/">Thibault Huertas (design)</a>  <br />
               <a href="http://www.constructions-incongrues.net">Constructions Incongrues (code)</a> <br />
@@ -165,10 +169,7 @@
             </p>
             <p> <?php include_component('content', 'show', array('block' => 'links1')) ?>
         
-        <?php include_component('content', 'show', array('block' => 'links2')) ?></p>
-            <!-- <p>            <?php include_component('content', 'show', array('block' => 'greetings')) ?>
-</p> -->
-
+      
     <div class="grid_12 footer_links_1">
 
     
