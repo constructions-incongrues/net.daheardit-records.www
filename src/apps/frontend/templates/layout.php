@@ -162,11 +162,11 @@
             <p>
             <a href="mailto:johan@daheardit-records.net">johan@daheardit-records.net</a> <br />
 
-              Design :  <a href="http://www.thibaulthuertas.com/">Thibault Huertas</a> <br />
+              <a href="http://www.thibaulthuertas.com/">Thibault Huertas</a> (design)<br />
 
   
-              Code : <a href="http://www.constructions-incongrues.net">Constructions Incongrues</a>   br />
-              Hosting : <a href="http://www.pastis-hosting.net">Pastis Hosting</a>
+             <a href="http://www.constructions-incongrues.net">Constructions Incongrues</a> (dev)  <br />
+             <a href="http://www.pastis-hosting.net">Pastis Hosting</a> (hosting)
             </p>
 
             <!-- <p>            <?php include_component('content', 'show', array('block' => 'greetings')) ?>
