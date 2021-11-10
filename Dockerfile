@@ -3,8 +3,8 @@ FROM composer:1 as composer
 FROM php:5.6.40-cli-alpine
 
 # Build args
-ARG FIXUID_GID
-ARG FIXUID_UID
+ARG FIXUID_GID=1000
+ARG FIXUID_UID=1000
 
 # Set working directory
 WORKDIR /usr/local/src
