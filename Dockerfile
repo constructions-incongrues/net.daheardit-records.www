@@ -2,6 +2,10 @@
 FROM composer:1 as composer
 FROM php:5.6.40-cli-alpine
 
+# Build args
+ARG FIXUID_GID
+ARG FIXUID_UID
+
 # Set working directory
 WORKDIR /usr/local/src
 
@@ -14,8 +18,8 @@ COPY --from=composer /usr/bin/composer /usr/local/bin/composer
 
 # Installation et configuration de fixuid
 # https://github.com/boxboat/fixuid
-RUN addgroup --gid 1000 daheardit && \
-    adduser --uid 1000 --ingroup daheardit --home /home/daheardit --shell /bin/sh --disabled-password --gecos "" daheardit && \
+RUN addgroup --gid ${FIXUID_GID} daheardit && \
+    adduser --uid ${FIXUID_UID} --ingroup daheardit --home /home/daheardit --shell /bin/sh --disabled-password --gecos "" daheardit && \
     curl -SsL https://github.com/boxboat/fixuid/releases/download/v0.4/fixuid-0.4-linux-amd64.tar.gz | tar -C /usr/local/bin -xzf - && \
     chown root:root /usr/local/bin/fixuid && \
     chmod 4755 /usr/local/bin/fixuid && \

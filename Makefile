@@ -14,7 +14,7 @@ attach: ## Connexion au container hébergeant les sources
 
 build: ## Génération de l'image Docker
 	git submodule update --init --recursive
-	docker-compose build
+	docker-compose build --build-arg FIXUID_UID=$$(id -u) --build-arg FIXUID_GID=$$(id -g)
 
 clean: stop ## Suppression des containers de l'application
 	docker-compose rm -f
