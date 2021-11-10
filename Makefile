@@ -48,7 +48,7 @@ release-clean: ## Suppression des artefacts de la sortie
 	rm -rf ./src/web/assets/releases/$$RELEASE_SKU/archives/* ./src/web/assets/releases/$$RELEASE_SKU/tracks/* ./src/data/tmp/$$RELEASE_SKU/youtube/**
 
 release-videos-generate: ## Génération des vidéos de chaque track
-	rm -rf ./src/data/tmp/$$RELEASE_SKU/youtube
+	rm -rf ./src/data/tmp/$$RELEASE_SKU/youtube/*.mp4
 	docker-compose run --rm php ./symfony dhr:generate-videos --sourceExtension="$${SOURCE_EXTENSION:-flac}" ./data/tmp/$$RELEASE_SKU ./data/tmp/$$RELEASE_SKU/youtube $$RELEASE_SKU
 
 release-videos-upload: ## Upload des vidéos sur la chaîne Youtube du label

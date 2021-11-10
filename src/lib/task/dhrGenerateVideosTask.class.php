@@ -49,12 +49,12 @@ class dhrGenerateVideosTask extends sfBaseTask
         $this->logSection('generate-videos', sprintf('Generating videos for %s from %s', $arguments['slug'], $arguments['source-directory']));
 
         // Grab image files
-        $imageSource = sprintf('%s/youtube.png', $arguments['source-directory']);
+        $imageSource = sprintf('%s/youtube/youtube.png', $arguments['source-directory']);
         if (!file_exists($imageSource)) {
-            throw new RuntimeException('No youtube.png file found in directory');
+            throw new RuntimeException('No youtube/youtube.png file found in directory');
         }
 
-        $this->logSection('generate-videos', 'Found youtube.png file');
+        $this->logSection('generate-videos', 'Found youtube/youtube.png file');
 
         // Grab audio files
         $tracksSource = glob(sprintf('%s/*.%s', $arguments['source-directory'], $options['sourceExtension']));
@@ -85,7 +85,7 @@ class dhrGenerateVideosTask extends sfBaseTask
 
             // Generate videos
             $command = sprintf(
-                'ffmpeg -loop 1 -i "%s/youtube.png" -i "%s" -c:v libx264 -tune stillimage -c:a aac -b:a 320k -pix_fmt yuv444p -shortest "%s/%s.mp4"',
+                'ffmpeg -loop 1 -i "%s/youtube/youtube.png" -i "%s" -c:v libx264 -tune stillimage -c:a aac -b:a 320k -pix_fmt yuv444p -shortest "%s/%s.mp4"',
                 $arguments['source-directory'],
                 $trackFilePath,
                 $arguments['destination-directory'],

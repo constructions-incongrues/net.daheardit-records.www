@@ -18,6 +18,7 @@ Regrouper les fichiers sources de la sortie :
 - Créer un dossier de travail qui va contenir tous les fichiers devant faire partie des archives (fichiers audio, images et autres) : `rm -rf ./src/data/tmp/${RELEASE_SKU} && mkdir -p ./src/data/tmp/$RELEASE_SKU`
 - Dans ce dossier copier les fichiers audio qui doivent être nommés ainsi : `TRACK_NUMBER - TRACK_TITLE.EXTENSION` (par exemple : `01 - Waves of Piss.wav ou 10 - Deep Deep Deep.flac`)
 - Dans ce dossier copier tous les fichiers non-audio supplémentaires : images, textes, etc.
+- Dans ce dossier créer un dossier `youtube` et y placer un fichier `youtube.png` qui sera utilisé pour la génération des vidéos
 
 il faut ensuite invoquer la règle `release` qui va :
 
