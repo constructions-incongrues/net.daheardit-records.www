@@ -38,7 +38,20 @@
   </div>
   <hr class="open_releases_button_hr" />
 
-   
+    <div class="grid_6 open_releases_artwork">
+      <img id="carousel-current" height="460px" width="460px" src="<?php echo sprintf('//%s/thumbnail/_/500/500/crop/best%s', sfConfig::get('app_api_url_root'), $release['artworks'][0]) ?>" />
+<?php for ($i = 1; $i < count($release['artworks']); $i++): ?>
+      <p></p>
+      <img height="460px" width="460px" src="<?php echo sprintf('//%s/thumbnail/_/500/500/crop/best%s', sfConfig::get('app_api_url_root'), $release['artworks'][$i]) ?>" />
+<?php endfor ?>
+     </ul>
+
+<?php if (count($release['videos'])): ?>
+  <p></p>
+  <?php foreach ($release['videos'] as $video): ?>
+    <iframe width="100%" height="250" src="<?php echo $video ?>" frameborder="0" allowfullscreen></iframe>
+  <?php endforeach ?>
+<?php endif ?>
    </div><!-- end of grid_6 -->
 
     <div class="grid_6 open_releases_infos">
@@ -62,7 +75,7 @@
 <?php if (count($archives)): ?>
     <!-- <span style="font-weight: bold;">Télécharger :</span> -->
   <?php foreach ($archives as $archive): ?>
-      <a class="release-download" data-dhr-release-slug="<?php echo $release['slug'] ?>" data-dhr-archive-format="<?php echo $archive['name'] ?>" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/releases/<?php echo $release['slug'] ?>/archives/<?php echo $archive['filename'] ?>"><?php echo strtolower($archive['name']) ?></a> 
+      <a class="release-download" data-dhr-release-slug="<?php echo $release['slug'] ?>" data-dhr-archive-format="<?php echo $archive['name'] ?>" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/releases/<?php echo $release['slug'] ?>/archives/<?php echo $archive['filename'] ?>"><?php echo strtolower($archive['name']) ?></a> ▪
   <?php endforeach ?>
 <?php endif ?>
 
@@ -70,7 +83,7 @@
     <!-- <span style="font-weight: bold;">Écouter :</span> -->
 
   <?php foreach ($release['streaming'] as $link): ?>
-      <a class="release-download" href="<?php echo $link['url'] ?>"><?php echo strtolower(basename($link['title'])) ?></a> 
+      <a class="release-download" href="<?php echo $link['url'] ?>"><?php echo strtolower(basename($link['title'])) ?></a> ▪
   <?php endforeach ?>
   </p>
 <?php endif ?>
