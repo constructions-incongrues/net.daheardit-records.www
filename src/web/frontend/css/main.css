@@ -1882,7 +1882,7 @@ input.button:focus {outline: none;}
 }
 
 
-  .reviews  {
+  .reviews, .licence  {
     background-color: #FFF;
     color: #000;
     font-size: 2rem;
@@ -1893,4 +1893,4 @@ input.button:focus {outline: none;}
     margin-top: -20px;
 }
 
-.reviews a {color:#000; text-transform: uppercase;text-decoration: none;font-size: 1.7rem;}
+.reviews a, .licence a {color:#000; text-transform: uppercase;text-decoration: none;font-size: 1.7rem;}
