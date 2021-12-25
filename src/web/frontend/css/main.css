@@ -1519,12 +1519,12 @@ text-align:right;
 }
   .open_releases_buy
   {
-    color: #000;
+    color: #FFF;
     margin-left: 0px;
     background-color: #0099FF;
     min-height: 30px;
-    font-size: 12px;
-    font-size: 1.2rem;
+    font-size: 17px;
+    font-size: 1.7rem;
     font-family: 'Jockey One', sans-serif;
     text-transform: uppercase;
     font-weight: bold;
