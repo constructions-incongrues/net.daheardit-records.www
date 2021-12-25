@@ -79,7 +79,6 @@ margin-right: auto;
 .releases h1,
 .category_infos h1,
 .artwork_artists_listing_all h1 {
-  font-family: 'Jockey One', sans-serif;
   font-weight: lighter;
   background-repeat: repeat;
   display: inline;
@@ -1026,7 +1025,6 @@ display: none;
   background-color: #000;
   font-size: 20px;
   font-size: 2rem;
-  font-family: 'Jockey One', sans-serif;
   text-transform: lowercase;
   font-weight: lighter;
   letter-spacing: 1px;
@@ -1516,7 +1514,6 @@ text-align:right;
     min-height: 30px;
     font-size: 17px;
     font-size: 1.7rem;
-    font-family: 'Jockey One', sans-serif;
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 2px;
@@ -1552,7 +1549,7 @@ text-align:right;
     color: #0099FF;
     text-decoration: none;
     font-weight: lighter;
-    font-size: 2rem;
+    font-size: 1.7rem;
     color: #FFF;
 }
 
@@ -1837,7 +1834,6 @@ input.button {
   color: #FFF;
   font-weight: bold;  
   text-transform: uppercase;
-  font-family: 'Jockey One', sans-serif;
   font-size: 15px;
   font-size: 1.5rem;
 }
