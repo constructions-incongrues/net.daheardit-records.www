@@ -1253,7 +1253,7 @@ margin-top:20px;
 margin-left:10px;
 }
 
-.open_releases_download_licence
+/* .open_releases_download_licence
 {
   color: #000;
   text-decoration: none;
@@ -1264,7 +1264,7 @@ margin-left:10px;
   font-family: 'Jockey One', sans-serif;
   font-weight: normal;
 
-}
+} */
 
 .open_releases_download_licence a
 {
@@ -1861,7 +1861,7 @@ input.button:focus {outline: none;}
 #radio 
 {background-color: #000;}
 
-.writers {  
+.writers, .open_releases_download_licence {  
     text-align: right;
   font-size: 1.5rem;
   padding: 10px;
@@ -1893,16 +1893,5 @@ input.button:focus {outline: none;}
     margin-top: -20px;
 }
 
-.licence  {
-  background-color: #FFF;
-  color: #000;
-  font-size: 2rem;
-  padding: -4px;
-  margin: 20px;
-  display: unset;
-  margin-left: -0px;
-  margin-top: -20px;
-  padding:10px;
-}
+
 .reviews a{color:#000; text-transform: uppercase;text-decoration: none;font-size: 1.7rem;}
-.licence a {color:#000; text-transform: uppercase;text-decoration: none;font-size: 1.7rem;}
