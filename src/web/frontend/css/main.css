@@ -1870,7 +1870,7 @@ font-style: italic;}
 font-size: 1.5rem;
 }
 
-.open_releases_download_licence a
+.open_releases_download_licence a, .writers a
 {color:#000;text-decoration: none;}
 .sku, .date_release {      
 
