@@ -397,13 +397,7 @@ padding-top:0px;
 
 }
 
-.header_nav_3_content_list li:first-child
-{
-  margin-left:24px;
-top:-4px;
-position:absolute;
-display: none;
-}
+
 
 .header_nav_3_content_list li:nth-child(2)
 {
@@ -412,22 +406,22 @@ margin-left:100px;
 
 .header_nav_3 li
 {
-color:#FFF;
+color:#29abe2;
 list-style-type:none;
 display:inline;
 margin:5px 8px 5px 9px;
-font-family: 'Jockey One', sans-serif;
+/* font-family: 'Jockey One', sans-serif; */
 }
 
 
 
 .header_nav_3 a, .header_nav_3 li
 {
-  color: #fff;
+  color:#29abe2;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 37px;
-  font-size: 3.7 rem;
+  font-size: 25px;
+  font-size: 2.5rem;
   letter-spacing: 1px;
 }
 
