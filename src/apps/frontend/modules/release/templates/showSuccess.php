@@ -42,9 +42,9 @@
 
   <p class="open_releases_press_text press credits">
 
-
+<span class="presentation">
 <?php echo nl2br(html_entity_decode($release['Translation'][$sf_user->getCulture()]['presentation'])) ?>
-
+</span>
 <?php if (count($release['press'])): ?>
 
 <?php foreach ($release['press'] as $link): ?>
@@ -109,7 +109,6 @@
     <?php echo html_entity_decode($release['license']) ?>
 
 <?php else: ?>
-  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Ce(tte) œuvre est mise à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licence Creative Commons Attribution - Pas d’Utilisation Commerciale - Partage dans les Mêmes Conditions 4.0 International</a> <br /><br />
 Artwork by <a href="<?php echo url_for(sprintf('@artwork_artist_show?slug=%s#artwork_artist', $release['ArtworkArtist']['slug'])) ?>"><?php echo $release['ArtworkArtist']['name'] ?></a><br>
 <?php echo nl2br(html_entity_decode($release['credits'])) ?></p>
 
