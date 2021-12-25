@@ -1860,7 +1860,7 @@ input.button:focus {outline: none;}
 {background-color: #000;}
 
 .writers {text-align: right;font-size: 1rem;}
-.sku, .daterelease {    color: #FFF;
+.sku, .date_release {    color: #FFF;
   padding: 10px;
   font-size: 3rem;
   text-transform: lowercase;
