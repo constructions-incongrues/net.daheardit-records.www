@@ -429,6 +429,7 @@ text-transform:uppercase;
 font-size:40px;
 font-size:4 rem;
 letter-spacing: 1px;
+
 }
 
 .header_nav_3 a:hover
@@ -492,12 +493,11 @@ margin-bottom:0px;
 border-right:1px solid #28abe3;
 height:116px;
 margin-top:100px;
-display: none;gggii}
+display: none;}
 
 .header_news_2 a
 {
   color:#29ABE2;
-  font-style:;
   font-size:10px;
   font-size:1em;
   text-transform:none;
