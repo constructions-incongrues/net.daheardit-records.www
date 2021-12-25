@@ -24,7 +24,7 @@
   <div class="open_releases_content">
 
   <div class="grid_12">
-    <h2 class="open_releases_artist"><?php echo $release['sku'] ?> <a href="<?php echo url_for(sprintf('@artist_show?slug=%s#artist', $release['Artist']['slug'])) ?>"><?php echo $release['Artist']['name'] ?></a> - <?php echo $release['title'] ?> (<?php echo $release['released_at'] ?>)</h2>
+    <h2 class="open_releases_artist"><a href="<?php echo url_for(sprintf('@artist_show?slug=%s#artist', $release['Artist']['slug'])) ?>"><?php echo $release['Artist']['name'] ?></a> - <?php echo $release['title'] ?> (<?php echo $release['released_at'] ?>d</h2>
 
     <ul class="open_releases_button">
 <?php if ($previousRelease): ?>
@@ -51,8 +51,6 @@
       <p></p>
       <img height="460px" width="460px" src="<?php echo sprintf('//%s/thumbnail/_/500/500/crop/best%s', sfConfig::get('app_api_url_root'), $release['artworks'][$i]) ?>" />
 <?php endfor ?>
-Illustration : <a href="<?php echo url_for(sprintf('@artwork_artist_show?slug=%s#artwork_artist', $release['ArtworkArtist']['slug'])) ?>"><?php echo $release['ArtworkArtist']['name'] ?></a><br>
-
      </ul>
 
 <?php if (count($release['videos'])): ?>
@@ -115,6 +113,7 @@ Chroniques : <?php foreach ($release['press'] as $link): ?>
 <br>
 <?php echo nl2br(html_entity_decode($release['credits'])) ?>
 <?php if (isset($release['ArtworkArtist'])): ?>
+Illustration : <a href="<?php echo url_for(sprintf('@artwork_artist_show?slug=%s#artwork_artist', $release['ArtworkArtist']['slug'])) ?>"><?php echo $release['ArtworkArtist']['name'] ?></a><br>
 <?php endif ?>
 Date de sortie : 
 
