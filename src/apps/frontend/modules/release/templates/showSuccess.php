@@ -99,15 +99,17 @@
   <?php echo html_entity_decode($release['player_code']) ?>
 </div>
 
+<p class="open_releases_download_licence">
 <?php if ($release['license']): ?>
     <?php echo html_entity_decode($release['license']) ?>
 
 <?php else: ?>
-<span class="licence"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Ce(tte) œuvre est mise à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licence Creative Commons Attribution - Pas d’Utilisation Commerciale - Partage dans les Mêmes Conditions 4.0 International</a></span> <br />
- <br />Illustration : <a href="<?php echo url_for(sprintf('@artwork_artist_show?slug=%s#artwork_artist', $release['ArtworkArtist']['slug'])) ?>"><?php echo $release['ArtworkArtist']['name'] ?></a><br>
-<?php echo nl2br(html_entity_decode($release['credits'])) ?>
+<<p><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Ce(tte) œuvre est mise à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licence Creative Commons Attribution - Pas d’Utilisation Commerciale - Partage dans les Mêmes Conditions 4.0 International</a> </p>
+ <p>Illustration : <a href="<?php echo url_for(sprintf('@artwork_artist_show?slug=%s#artwork_artist', $release['ArtworkArtist']['slug'])) ?>"><?php echo $release['ArtworkArtist']['name'] ?></a><br>
+<?php echo nl2br(html_entity_decode($release['credits'])) ?></p>
 
 <?php endif ?>
+    </p>
 
     
 <?php if (count($release['press'])): ?>
