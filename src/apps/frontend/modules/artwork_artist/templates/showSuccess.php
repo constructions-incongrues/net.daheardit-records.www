@@ -28,14 +28,6 @@
     <div class="grid_12 open_artists_infos">
 
     
-<?php if ($artist['url']): ?>
-    <p class="open_artists_bio">
-      <a href="<?php echo $artist['url'] ?>"><?php echo $artist['url'] ?></a>
-    </p>
-<?php endif ?>
-
-
-
   </div>
 
     <div class="grid_6 open_artists_pictures">
@@ -45,8 +37,14 @@
     </div><!-- end of grid_6 -->
 
     
+    <?php if ($artist['url']): ?>
+    <p class="open_artists_bio">
+      <a href="<?php echo $artist['url'] ?>"><?php echo $artist['url'] ?></a>
+    </p>
+<?php endif ?>
 
-<div style="width:600px;">
+
+<div class="grid_6">
  <?php foreach ($artist['releases'] as $release): ?>
        <div class="open_artists_listing_releases ">
 
