@@ -383,7 +383,7 @@ width:100%!important;
 background-color:#000;
 height:50px;
 
-top:0px;
+top:10px;
 z-index:300;
 position:absolute;
 }
@@ -395,14 +395,13 @@ position:absolute;
 {
 background-color:#000;
 padding-top:6px;
-text-align: center;
 
 }
 
 .header_nav_3_content_list li:first-child
 {
-  margin-left:-0px;
-top:-4px;
+  margin-left:24px;
+top:-1px;
 position:absolute;
 }
 
@@ -427,8 +426,9 @@ font-family: 'Jockey One', sans-serif;
 color:#29ABE2;
 text-decoration:none;
 text-transform:uppercase;
-font-size:30px;
-font-size:3 rem;
+font-size:40px;
+font-size:4 rem;
+letter-spacing: 1px;
 }
 
 .header_nav_3 a:hover
