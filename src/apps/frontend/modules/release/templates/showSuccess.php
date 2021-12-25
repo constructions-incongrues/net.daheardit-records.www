@@ -100,8 +100,7 @@
 </ul>
 
 <?php if (count($release['press'])): ?>
-  <br />- <br />
-<br />
+
 <?php foreach ($release['press'] as $link): ?>
       <span class="reviews"> <a href="<?php echo $link['url'] ?>"><?php echo basename($link['title']) ?></a> </span>
   <?php endforeach ?>
