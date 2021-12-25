@@ -399,17 +399,14 @@ padding-top:0px;
 
 
 
-.header_nav_3_content_list li:nth-child(2)
-{
-margin-left:100px;
-}
+
 
 .header_nav_3 li
 {
 color:#29abe2;
 list-style-type:none;
 display:inline;
-margin:5px 8px 5px 9px;
+margin:5px 8px 5px 0px;
 /* font-family: 'Jockey One', sans-serif; */
 }
 
