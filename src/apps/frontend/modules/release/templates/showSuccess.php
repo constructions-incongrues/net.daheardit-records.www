@@ -25,7 +25,6 @@
 
   <div class="grid_12">
     <h2 class="open_releases_artist"><a href="<?php echo url_for(sprintf('@artist_show?slug=%s#artist', $release['Artist']['slug'])) ?>"><?php echo $release['Artist']['name'] ?></a> / <?php echo $release['title'] ?></h2>
-    <p><?php echo $release['sku'] ?> - <?php echo $release['released_at'] ?></p>
 
     <ul class="open_releases_button">
 <?php if ($previousRelease): ?>
@@ -43,6 +42,7 @@
   <p class="open_releases_press_text press credits">
 
 <?php echo nl2br(html_entity_decode($release['Translation'][$sf_user->getCulture()]['presentation'])) ?>
+<p><?php echo $release['sku'] ?> - <?php echo $release['released_at'] ?> </p>
 
   </div>
 
@@ -101,7 +101,10 @@ Illustration : <a href="<?php echo url_for(sprintf('@artwork_artist_show?slug=%s
 <p class="open_releases_download_licence">
 <?php if ($release['license']): ?>
     <?php echo html_entity_decode($release['license']) ?>
+    
 <?php else: ?>
+  <?php echo nl2br(html_entity_decode($release['credits'])) ?>
+
         Cette œuvre est mise à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/deed.fr">Licence Creative Commons Attribution - Pas d’Utilisation Commerciale - Pas de Modification 4.0 France</a>.
 <?php endif ?>
     </p>
@@ -115,7 +118,6 @@ Chroniques : <?php foreach ($release['press'] as $link): ?>
   <?php endforeach ?>
 <?php endif ?>
 <br>
-<?php echo nl2br(html_entity_decode($release['credits'])) ?>
 
 
 </p>
