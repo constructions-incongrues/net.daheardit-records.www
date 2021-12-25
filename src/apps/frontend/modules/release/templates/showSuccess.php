@@ -42,10 +42,10 @@
 
   <p class="open_releases_press_text press credits">
 
-<span class="presentation">
+<div class="presentation">
 <?php echo nl2br(html_entity_decode($release['Translation'][$sf_user->getCulture()]['presentation'])) ?>
-</span>
 <?php if (count($release['press'])): ?>
+  </div>
 
 <?php foreach ($release['press'] as $link): ?>
       <span class="reviews"> <a href="<?php echo $link['url'] ?>"><?php echo basename($link['title']) ?></a> </span>
