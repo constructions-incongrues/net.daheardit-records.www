@@ -23,7 +23,7 @@
 <div class="grid_12 open_releases">
   <div class="open_releases_content">
 
-  <div class="grid_12 infosrelease">
+  <div class="grid_12">
     <h2 class="open_releases_artist"> </span>
 <a href="<?php echo url_for(sprintf('@artist_show?slug=%s#artist', $release['Artist']['slug'])) ?>"><?php echo $release['Artist']['name'] ?></a> - <?php echo $release['title'] ?> <span class="date_release"><span class="sku"><?php echo $release['sku'] ?> / <?php echo $release['released_at'] ?> </span> </h2>
 
@@ -42,17 +42,17 @@
 
   <p class="open_releases_press_text press credits">
 
-<div class="presentation">
+
 <?php echo nl2br(html_entity_decode($release['Translation'][$sf_user->getCulture()]['presentation'])) ?>
+
 <?php if (count($release['press'])): ?>
- 
 
 <?php foreach ($release['press'] as $link): ?>
       <span class="reviews"> <a href="<?php echo $link['url'] ?>"><?php echo basename($link['title']) ?></a> </span>
   <?php endforeach ?>
 <?php endif ?>
   </div>
-  </div>
+
     <div class="grid_6 open_releases_artwork">
       <img id="carousel-current" height="460px" width="460px" src="<?php echo sprintf('//%s/thumbnail/_/500/500/crop/best%s', sfConfig::get('app_api_url_root'), $release['artworks'][0]) ?>" />
 <?php for ($i = 1; $i < count($release['artworks']); $i++): ?>
