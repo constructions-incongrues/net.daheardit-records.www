@@ -62,7 +62,7 @@
 <br>
 <?php if ($release['is_available']): ?>
   <p class="open_releases_buy">
-    <span style="font-weight: bold;">Acheter :</span>
+    <!-- <span style="font-weight: bold;">Acheter :</span> -->
     <?php foreach ($release['prices'] as $price): ?>
     <?php if (is_numeric($price['price'])): ?>
       <a href="" class="paypal" data-paypalid="<?php echo $price['paypal_id'] ?>"><?php echo $price['format'] ?>  <?php echo $price['price'] ?> €</a>
@@ -75,7 +75,7 @@
 
 <?php if (count($archives)): ?>
   <p class="open_releases_buy">
-    <span style="font-weight: bold;">Télécharger :</span>
+    <!-- <span style="font-weight: bold;">Télécharger :</span> -->
   <?php foreach ($archives as $archive): ?>
       <a class="release-download" data-dhr-release-slug="<?php echo $release['slug'] ?>" data-dhr-archive-format="<?php echo $archive['name'] ?>" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/releases/<?php echo $release['slug'] ?>/archives/<?php echo $archive['filename'] ?>"><?php echo strtolower($archive['name']) ?></a> ▪
   <?php endforeach ?>
@@ -84,7 +84,7 @@
 
 <?php if (count($archives)): ?>
   <p class="open_releases_buy">
-    <span style="font-weight: bold;">Écouter :</span>
+    <!-- <span style="font-weight: bold;">Écouter :</span> -->
 
   <?php foreach ($release['streaming'] as $link): ?>
       <a class="release-download" href="<?php echo $link['url'] ?>"><?php echo strtolower(basename($link['title'])) ?></a> ▪
