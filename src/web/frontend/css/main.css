@@ -1647,12 +1647,11 @@ hr.open_releases_button_hr, hr.open_artists_button_hr
 
 h1.open_artists_name
 {
-color:#000;
-font-size:25px;
-font-size:2.5em;
-/* margin-left: 10px; */
-margin-top:80px;
-margin-bottom:40px;
+  font-size: 60px;
+  font-size: 4rem;
+  color: #000;
+  margin-bottom: 40px;
+  margin-top: 20px;
 
 }
 
