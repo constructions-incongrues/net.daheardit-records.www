@@ -60,6 +60,8 @@
 </div>
 
 <br>
+<p class="open_releases_buy">
+
 <?php if ($release['is_available']): ?>
     <!-- <span style="font-weight: bold;">Acheter :</span> -->
     <?php foreach ($release['prices'] as $price): ?>
