@@ -394,14 +394,14 @@ position:absolute;
 .header_nav_3 ul
 {
 background-color:#000;
-padding-top:6px;
+padding-top:2px;
 
 }
 
 .header_nav_3_content_list li:first-child
 {
   margin-left:24px;
-top:-1px;
+top:-4px;
 position:absolute;
 }
 
@@ -426,8 +426,8 @@ font-family: 'Jockey One', sans-serif;
 color:#29ABE2;
 text-decoration:none;
 text-transform:uppercase;
-font-size:40px;
-font-size:4 rem;
+font-size:33px;
+font-size:3.3 rem;
 letter-spacing: 1px;
 
 }
