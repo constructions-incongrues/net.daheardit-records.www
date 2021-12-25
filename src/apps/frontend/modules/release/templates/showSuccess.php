@@ -99,7 +99,6 @@
   <?php echo html_entity_decode($release['player_code']) ?>
 </div>
 
-<p class="open_releases_download_licence">
 <?php if ($release['license']): ?>
     <?php echo html_entity_decode($release['license']) ?>
 
@@ -109,7 +108,6 @@
 <?php echo nl2br(html_entity_decode($release['credits'])) ?>
 
 <?php endif ?>
-    </p>
 
     
 <?php if (count($release['press'])): ?>
