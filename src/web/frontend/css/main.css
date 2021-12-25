@@ -1526,7 +1526,6 @@ text-align:right;
     min-height: 30px;
     font-size: 17px;
     font-size: 1.7rem;
-    font-family: 'Jockey One', sans-serif;
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 2px;
@@ -1848,7 +1847,6 @@ input.button {
   color: #FFF;
   font-weight: bold;  
   text-transform: uppercase;
-  font-family: 'Jockey One', sans-serif;
   font-size: 15px;
   font-size: 1.5rem;
 }
