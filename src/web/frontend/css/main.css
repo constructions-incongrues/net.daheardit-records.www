@@ -1893,9 +1893,8 @@ font-size: 1.5rem;
 
 
   .reviews {
-    background-color: #FFF;
     color: #000;
-    font-size: 1.5rem;
+    font-size: 1rem;
     padding: 10px;
     margin: 15px 5px 5px 0px;
     float: left;
@@ -1905,4 +1904,4 @@ font-size: 1.5rem;
 
 .reviews a, .open_artists_bio a{color:#000; text-transform: uppercase;text-decoration: none;font-size: 1.7rem;}
 
-.presentation {background-color: #F9F9F9; padding:30px 20px 90px 20px;width:95%;margin-top:100px}
+.presentation {background-color: #F9F9F9; padding:30px 20px 90px 20px;width:95%;margin-top:80px}
