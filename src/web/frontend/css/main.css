@@ -1891,9 +1891,8 @@ font-size: 1.5rem;
     background-color: #FFF;
     color: #000;
     font-size: 1.5rem;
-    padding: 5px;
-    margin: 5px;
-    /* margin-top: 0px; */
+    padding: 10px;
+    margin: 5px 5px 5px 0px;
     float: left;
     display: inline-flex;
   }
