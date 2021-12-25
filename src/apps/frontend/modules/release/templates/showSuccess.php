@@ -24,8 +24,8 @@
   <div class="open_releases_content">
 
   <div class="grid_12">
-    <h2 class="open_releases_artist"><a href="<?php echo url_for(sprintf('@artist_show?slug=%s#artist', $release['Artist']['slug'])) ?>"><?php echo $release['Artist']['name'] ?></a> / <?php echo $release['title'] ?><br /> <?php echo $release['sku'] ?> - <?php echo $release['released_at'] ?> 
-</h2>
+    <h2 class="open_releases_artist"><span class="sku">[<?php echo $release['sku'] ?>] </span>
+<a href="<?php echo url_for(sprintf('@artist_show?slug=%s#artist', $release['Artist']['slug'])) ?>"><?php echo $release['Artist']['name'] ?></a> - <?php echo $release['title'] ?><span class="date_release">(- <?php echo $release['released_at'] ?> )</span> </h2>
 
     <ul class="open_releases_button">
 <?php if ($previousRelease): ?>
