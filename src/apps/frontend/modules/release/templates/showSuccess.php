@@ -58,8 +58,7 @@
 <div class="open_releases_press_text">
   <?php echo html_entity_decode($release['player_code']) ?>
 </div>
-
-<br>
+<p class="open_releases_buy">
 
 <?php if ($release['is_available']): ?>
     <!-- <span style="font-weight: bold;">Acheter :</span> -->
@@ -97,7 +96,7 @@
   <br />- <br />
 <br />
 Chroniques : <?php foreach ($release['press'] as $link): ?>
-       <a href="<?php echo $link['url'] ?>"><?php echo basename($link['title']) ?></a> ▪
+       <a href="<?php echo $link['url'] ?>"><?php echo basename($link['title']) ?></a> 
   <?php endforeach ?>
 <?php endif ?>
 <br>
