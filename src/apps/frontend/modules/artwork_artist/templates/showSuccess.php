@@ -9,6 +9,8 @@
   <div class="open_artists_content">
 
   <div class="grid_12">
+
+<div class="presentation">
     <h1 class="open_artists_name"><?php echo $artist['name'] ?> </h1>
 
   <ul class="open_artists_button">
@@ -41,6 +43,7 @@
 
 <?php endforeach; ?>
 </div>
+    </div>
     <div class="grid_12 open_artists_infos">
 
     
