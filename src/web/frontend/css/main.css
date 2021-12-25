@@ -800,15 +800,14 @@ padding: 30px;
 .artwork_artist {
   background-color: #000;
   top:0px;
+  padding-bottom: 30px
+px
+;
 }
  .artwork_artists_listing_all {
-   background-color: transparent;
-   padding: 30px  ;  
+   background-color: #000;
  }
- .open_releases,.open_artists
 
- {top: 8px;background-color:#FFF;padding: 30px;margin-bottom: 30px;}
- 
 .artists_pictures
 {
  border-radius:200px;
@@ -1045,17 +1044,15 @@ display: none;
 
 .footer
 {
-background-image:url(../pics/pattern/pat-foot.png);
-background-repeat:repeat;
-background-color:#000;
-padding:70px 0px 60px 0px;
-top:-28px;
-font-size: 20px;
-font-size:2rem;
-font-family: 'Jockey One', sans-serif;
-text-transform: lowercase;
-font-weight: lighter;
-letter-spacing: 1px;;
+  background-image: url(../pics/pattern/pat-foot.png);
+  background-repeat: repeat;
+  background-color: #000;
+  font-size: 20px;
+  font-size: 2rem;
+  font-family: 'Jockey One', sans-serif;
+  text-transform: lowercase;
+  font-weight: lighter;
+  letter-spacing: 1px;
 }
 
 
