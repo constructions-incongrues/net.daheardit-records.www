@@ -98,15 +98,7 @@
   </p>
 <?php endif ?>
 </ul>
-Cette œuvre est mise à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/deed.fr">Licence Creative Commons Attribution - Pas d’Utilisation Commerciale - Pas de Modification 4.0 France</a>.
 
-<?php if (count($release['press'])): ?>
-  <br />- <br />
-<br />
-<?php foreach ($release['press'] as $link): ?>
-      <span class="reviews"> <a href="<?php echo $link['url'] ?>"><?php echo basename($link['title']) ?></a> </span>
-  <?php endforeach ?>
-<?php endif ?>
 <p class="open_releases_download_licence">
 <?php if ($release['license']): ?>
     <?php echo html_entity_decode($release['license']) ?>
@@ -116,11 +108,18 @@ Cette œuvre est mise à disposition selon les termes de la <a rel="license" hre
   Illustration : <a href="<?php echo url_for(sprintf('@artwork_artist_show?slug=%s#artwork_artist', $release['ArtworkArtist']['slug'])) ?>"><?php echo $release['ArtworkArtist']['name'] ?></a><br>
 
 <br />
+        Cette œuvre est mise à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/deed.fr">Licence Creative Commons Attribution - Pas d’Utilisation Commerciale - Pas de Modification 4.0 France</a>.
 <?php endif ?>
     </p>
 
     
-
+<?php if (count($release['press'])): ?>
+  <br />- <br />
+<br />
+<?php foreach ($release['press'] as $link): ?>
+      <span class="reviews"> <a href="<?php echo $link['url'] ?>"><?php echo basename($link['title']) ?></a> </span>
+  <?php endforeach ?>
+<?php endif ?>
 <br>
 
 
