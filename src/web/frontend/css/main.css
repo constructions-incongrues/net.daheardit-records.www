@@ -1860,8 +1860,13 @@ input.button:focus {outline: none;}
 {background-color: #000;}
 
 .writers {text-align: right;font-size: 1rem;}
-.sku, .date_release {    color: #FFF;
-  padding: 10px;
-  font-size: 3rem;
-  text-transform: lowercase;
+.sku, .date_release {       color: #0099FF;
+  padding: 0;
+  top: 35px;
+  bottom: 0;
+  left: 1px;
+  position: absolute;
+  width: 200px;
+  font-size: 2rem;
+  text-transform: uppercase;
   font-style: none;}
