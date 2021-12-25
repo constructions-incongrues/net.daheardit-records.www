@@ -1209,11 +1209,7 @@ border:none}
 background-color:#000;
 color:#FFF;
 }
-.open_releases_infos
-{
-margin-top:-13px;
-margin-left:-21px;
-}
+
 
 
 .open_releases_infos h2
@@ -1523,7 +1519,8 @@ text-align:right;
   .open_releases_buy
   {
     color: #000;
-    margin-top: -5px;
+    margin-top: -8px;
+    margin-left: 0px;
     background-color: #0099FF;
     min-height: 20px;
     font-size: 12px;
@@ -1533,10 +1530,9 @@ text-align:right;
     font-weight: bold;
     letter-spacing: 2px;
     text-align: center;
-    padding: 4.2px;
-    width: 442px;
+    padding: inherit;
+    width: 100%;
     padding: 0.1em 0em 0.1sem 0em;
-
   }
 
 .open_releases_buy a:hover
