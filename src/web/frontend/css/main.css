@@ -1301,6 +1301,7 @@ h2.open_releases_artist
   font-size: 4rem;
   color: #000;
   margin-bottom:40px; 
+  margin-top:20px;
 }
 
 h2.open_releases_artist a
@@ -1904,4 +1905,4 @@ font-size: 1.5rem;
 
 .reviews a, .open_artists_bio a{color:#000; text-transform: uppercase;text-decoration: none;font-size: 1.7rem;}
 
-.presentation {background-color: #F9F9F9; padding:30px 20px 90px 20px;width:95%}
+.presentation {background-color: #F9F9F9; padding:30px 20px 90px 20px;width:95%;margin-top:100px}
