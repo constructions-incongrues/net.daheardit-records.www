@@ -1049,7 +1049,6 @@ padding:70px 0px 60px 0px;
 top:-28px;
 font-size: 20px;
 font-size:2rem;
-font-family: 'Jockey One', sans-serif;
 
 }
 
@@ -1073,6 +1072,7 @@ font-size:20px;
 font-size:2rem;
 }
 
+.documentaryembed {float: left;}
 .footer_content h2
 {
 color:#FFF;
