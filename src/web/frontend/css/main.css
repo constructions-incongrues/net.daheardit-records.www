@@ -1903,4 +1903,4 @@ font-size: 1.5rem;
   }
 
 
-.reviews a{color:#000; text-transform: uppercase;text-decoration: none;font-size: 1.7rem;}
+.reviews a, .open_artists_bio a{color:#000; text-transform: uppercase;text-decoration: none;font-size: 1.7rem;}
