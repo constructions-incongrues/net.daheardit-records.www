@@ -392,7 +392,7 @@ font-size:0.9rem;
 
 .header_nav_3 ul
 {
-background-color:#000;
+background-color:#transparent;
 padding-top:0px;
 
 }
@@ -434,7 +434,7 @@ font-family: 'Jockey One', sans-serif;
 
 .header_nav_3 a:hover
 {
-color:#FFF;
+color:#000;
 }
 
 .header_nav_3_button_donate a
