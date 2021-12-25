@@ -456,7 +456,8 @@ color:#ea1D78;
 {
 font-family: 'Jockey One', sans-serif;
 text-align:right;
-margin-top:112px;}
+margin-top:112px;
+display:none;}
 
 .header_news_1_content a,.header_news_2_content a
 {
