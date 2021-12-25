@@ -1524,7 +1524,7 @@ text-align:right;
     color: #000;
     margin-left: 0px;
     background-color: #0099FF;
-    min-height: 20px;
+    min-height: 30px;
     font-size: 12px;
     font-size: 1.2rem;
     font-family: 'Jockey One', sans-serif;
@@ -1533,8 +1533,8 @@ text-align:right;
     letter-spacing: 2px;
     text-align: center;
     padding: inherit;
-    width: 100%;
-    padding: 0.1em 0em 0.1sem 0em;
+    padding: 4px;
+    margin-bottom: 0px;
   }
 
 .open_releases_buy a:hover
