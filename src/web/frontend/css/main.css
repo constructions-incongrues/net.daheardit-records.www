@@ -381,12 +381,13 @@ font-size:0.9rem;
 {
 width:100%!important;
 background-color:#000;
-height:50px;
+height:80px;
 
 top:680px;
 z-index:300;
 position:absolute;
 text-align: right;
+padding-top: 30px;
 }
 
 
@@ -428,8 +429,8 @@ font-family: 'Jockey One', sans-serif;
 color: #fff;;
 text-decoration:none;
 text-transform:uppercase;
-font-size:33px;
-font-size:3.3 rem;
+font: size 3.7em;px;
+font-size:3.7 rem;
 letter-spacing: 1px;
 
 }
@@ -608,7 +609,7 @@ line-height:15px;
 .releases
   {
    background-color:transparent;
-   margin-top:-41px!important;
+   margin-top:10px!important;
    padding-bottom:2px;
    padding-left:5px;
 
