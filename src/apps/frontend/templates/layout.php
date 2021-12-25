@@ -162,16 +162,14 @@
            
 
             <p>
-           <a href="mailto:johan@daheardit-records.net">Johan (curator)</a> <br />
+           <a href="mailto:johan@daheardit-records.net">Curated by Johan)</a> <br />
 
-            <a href="http://www.thibaulthuertas.com/">Thibault Huertas (design)</a>  <br />
-              <a href="http://www.constructions-incongrues.net">Constructions Incongrues (code)</a> <br />
-            <a href="http://www.pastis-hosting.net">Pastis Hosting (hosting)</a> 
+            <a href="http://www.thibaulthuertas.com/">Design by Thibault Huertas )</a>  <br />
+              <a href="http://www.constructions-incongrues.net">Coded by Constructions Incongrues</a> <br />
+            <a href="http://www.pastis-hosting.net">Hosted by Pastis Hosting </a> 
             </p>
 
-            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/e8UoUJha3zw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </p>
-     
+            <iframe width="860" height="615" src="https://www.youtube.com/embed/e8UoUJha3zw?controls=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     <div class="grid_12 footer_links_1">
 
     
