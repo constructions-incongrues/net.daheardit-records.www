@@ -169,9 +169,8 @@
             <a href="http://www.pastis-hosting.net">Hosting by Pastis Hosting </a> 
             </p>
             
-            <p> 
-We manufacture records and cassettes with love, since 2006. <br /> Our releases are distributed under free license, if you want to support us it is with joy!</p>
-<p class="donation"><a href="https://www.helloasso.com/associations/constructions-incongrues" >Make a donation</a></p>
+
+<p class="donation"><a href="https://www.helloasso.com/associations/constructions-incongrues" >Since 2006, we releases for free our music, if you like it, you can support us with a donation</a></p>
 
 <div class="documentaryembed">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/e8UoUJha3zw?controls=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
