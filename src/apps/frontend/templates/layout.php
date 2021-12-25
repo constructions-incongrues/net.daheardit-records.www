@@ -169,7 +169,7 @@
             <a href="http://www.pastis-hosting.net">Hosted by Pastis Hosting </a> 
             </p>
 <div class="documentaryembed">
-            <iframe width="860" height="615" src="https://www.youtube.com/embed/e8UoUJha3zw?controls=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="460" height="215" src="https://www.youtube.com/embed/e8UoUJha3zw?controls=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
               <div class="grid_12 footer_links_1">
 
