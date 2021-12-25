@@ -14,7 +14,7 @@ margin-right: auto;
 .header_nav_3_content_logo img
 {
   margin-top:-1px;
-}sku
+}
 
 body
 {
@@ -1223,7 +1223,6 @@ h1.open_releases_catalog , h2.open_releases_artist, h3.open_releases_album, h3.o
 {
 font-weight:normal;
 text-transform:uppercase;
-font-family: 'Jockey One', sans-serif;
 
 }
 
@@ -1298,11 +1297,11 @@ margin-top:10px;
 
 h2.open_releases_artist
 {
-  font-size: 40px;
-  font-size: 4rem;
+  font-size: 60px;
+  font-size: 6rem;
   color: #000;
   margin-top: 80px;
-  margin-bottom:80px; 
+  margin-bottom:40px; 
 }
 
 h2.open_releases_artist a
@@ -1662,7 +1661,7 @@ font-size:25px;
 font-size:2.5em;
 /* margin-left: 10px; */
 margin-top:80px;
-margin-bottom:80px;
+margin-bottom:40px;
 
 }
 
@@ -1889,6 +1888,7 @@ font-size: 1.5rem;
   font-size: 2rem;
   text-transform: uppercase;
   font-style: none;
+  display: none;
 }
 
 
@@ -1905,4 +1905,4 @@ font-size: 1.5rem;
 
 .reviews a, .open_artists_bio a{color:#000; text-transform: uppercase;text-decoration: none;font-size: 1.7rem;}
 
-.presentation {background-color: #F9F9F9; padding:20px 20px 80px 20px;}
+.presentation {background-color: #F9F9F9; padding:30px 20px 90px 20px;width:95%}
