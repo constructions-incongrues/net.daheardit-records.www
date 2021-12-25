@@ -16,7 +16,6 @@
             <!-- <li> <a href="http://www.daheardit-records.net/radio"><?php echo __('Radio') ?></a></li> -->
 
             <!--<li><a href="http://www.musiques-incongrues.net/forum/labels/daheardit-records/"><?php echo __('Forum') ?></a></li> -->
-            <li><a href="https://www.helloasso.com/associations/constructions-incongrues" class="donate"><?php echo __('Support') ?>
 </li>
 <li><a href="<?php echo url_for('@homepage_localized?sf_culture=fr') ?>">FR </a> / <a href="<?php echo url_for('@homepage_localized?sf_culture=en') ?>">EN</a></li>
 
