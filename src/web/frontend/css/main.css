@@ -1057,7 +1057,7 @@ font-family: 'Jockey One', sans-serif;
 text-transform: lowercase;
 }
 
-.footer_content p  {color:#FFF;}
+.footer_content p  {color:#FFF!important;}
 
 .footer_content h1, .footer_content h2
 {
