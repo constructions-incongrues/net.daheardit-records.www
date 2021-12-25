@@ -433,6 +433,8 @@ letter-spacing: 1px;
 
 }
 
+.donation {color:#ea1D78;text-transform: uppercase;font-weight: bold;}
+
 .header_nav_3 a:hover
 {
 color:#FFF;
