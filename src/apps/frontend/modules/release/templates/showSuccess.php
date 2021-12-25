@@ -39,35 +39,6 @@
   <hr class="open_releases_button_hr" />
 
     <div class="grid_6 open_releases_artwork">
-    <p class="open_releases_buy">
-
-<?php if ($release['is_available']): ?>
-    <!-- <span style="font-weight: bold;">Acheter :</span> -->
-    <?php foreach ($release['prices'] as $price): ?>
-    <?php if (is_numeric($price['price'])): ?>
-      <a href="" class="paypal" data-paypalid="<?php echo $price['paypal_id'] ?>"><?php echo $price['format'] ?>  <?php echo $price['price'] ?> €</a>
-    <?php else: ?>
-      <a href="" class="paypal" data-paypalid="<?php echo $price['paypal_id'] ?>"><?php echo $price['format'] ?>  <?php echo $price['price'] ?> / </a>
-    <?php endif ?> 
-    <?php endforeach; ?><?php endif ?>
-
-<?php if (count($archives)): ?>
-    <!-- <span style="font-weight: bold;">Télécharger :</span> -->
-  <?php foreach ($archives as $archive): ?>
-      <a class="release-download" data-dhr-release-slug="<?php echo $release['slug'] ?>" data-dhr-archive-format="<?php echo $archive['name'] ?>" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/releases/<?php echo $release['slug'] ?>/archives/<?php echo $archive['filename'] ?>"><?php echo strtolower($archive['name']) ?></a> ▪
-  <?php endforeach ?>
-<?php endif ?>
-
-<?php if (count($archives)): ?>
-    <!-- <span style="font-weight: bold;">Écouter :</span> -->
-
-  <?php foreach ($release['streaming'] as $link): ?>
-      <a class="release-download" href="<?php echo $link['url'] ?>"><?php echo strtolower(basename($link['title'])) ?></a> ▪
-  <?php endforeach ?>
-  </p>
-<?php endif ?>
-</ul>
-d
       <img id="carousel-current" height="460px" width="460px" src="<?php echo sprintf('//%s/thumbnail/_/500/500/crop/best%s', sfConfig::get('app_api_url_root'), $release['artworks'][0]) ?>" />
 <?php for ($i = 1; $i < count($release['artworks']); $i++): ?>
       <p></p>
@@ -90,6 +61,33 @@ d
 
 <br>
 
+<?php if ($release['is_available']): ?>
+    <!-- <span style="font-weight: bold;">Acheter :</span> -->
+    <?php foreach ($release['prices'] as $price): ?>
+    <?php if (is_numeric($price['price'])): ?>
+      <a href="" class="paypal" data-paypalid="<?php echo $price['paypal_id'] ?>"><?php echo $price['format'] ?>  <?php echo $price['price'] ?> €</a>
+    <?php else: ?>
+      <a href="" class="paypal" data-paypalid="<?php echo $price['paypal_id'] ?>"><?php echo $price['format'] ?>  <?php echo $price['price'] ?> / </a>
+    <?php endif ?> 
+    <?php endforeach; ?><?php endif ?>
+
+<?php if (count($archives)): ?>
+    <!-- <span style="font-weight: bold;">Télécharger :</span> -->
+  <?php foreach ($archives as $archive): ?>
+      <a class="release-download" data-dhr-release-slug="<?php echo $release['slug'] ?>" data-dhr-archive-format="<?php echo $archive['name'] ?>" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/releases/<?php echo $release['slug'] ?>/archives/<?php echo $archive['filename'] ?>"><?php echo strtolower($archive['name']) ?></a> 
+  <?php endforeach ?>
+<?php endif ?>
+
+<?php if (count($archives)): ?>
+    <!-- <span style="font-weight: bold;">Écouter :</span> -->
+
+  <?php foreach ($release['streaming'] as $link): ?>
+      <a class="release-download" href="<?php echo $link['url'] ?>"><?php echo strtolower(basename($link['title'])) ?></a> 
+  <?php endforeach ?>
+  </p>
+<?php endif ?>
+</ul>
+
 
 
     <p class="open_releases_press_text press credits">
@@ -99,7 +97,7 @@ d
   <br />- <br />
 <br />
 Chroniques : <?php foreach ($release['press'] as $link): ?>
-       <a href="<?php echo $link['url'] ?>"><?php echo basename($link['title']) ?></a> 
+       <a href="<?php echo $link['url'] ?>"><?php echo basename($link['title']) ?></a> ▪
   <?php endforeach ?>
 <?php endif ?>
 <br>
