@@ -395,6 +395,7 @@ position:absolute;
 {
 background-color:#000;
 padding-top:6px;
+text-align: center;
 
 }
 
@@ -426,8 +427,8 @@ font-family: 'Jockey One', sans-serif;
 color:#29ABE2;
 text-decoration:none;
 text-transform:uppercase;
-font-size:24px;
-font-size:2.4 rem;
+font-size:30px;
+font-size:3 rem;
 }
 
 .header_nav_3 a:hover
