@@ -9,7 +9,11 @@
   <div class="open_artists_content">
 
   <div class="grid_12">
-    <h1 class="open_artists_name"><?php echo $artist['name'] ?></h1>
+    <h1 class="open_artists_name"><?php echo $artist['name'] ?>   <?php if ($artist['url']): ?>
+    <p class="open_artists_bio">
+      <a href="<?php echo $artist['url'] ?>"><?php echo $artist['url'] ?></a>
+    </p>
+<?php endif ?></h1>
 
   <ul class="open_artists_button">
 <?php if ($previousArtist): ?>
@@ -50,11 +54,7 @@
     </div><!-- end of grid_6 -->
 
     
-    <?php if ($artist['url']): ?>
-    <p class="open_artists_bio">
-      <a href="<?php echo $artist['url'] ?>"><?php echo $artist['url'] ?></a>
-    </p>
-<?php endif ?>
+  
 
 
 <div class="grid_6">
