@@ -24,7 +24,7 @@
     <p class="open_artists_bio">
       <?php echo nl2br($artist['Translation'][$sf_user->getCulture()]['presentation']) ?>
       <?php if ($artist['url']): ?>
-        <span class="writers"> <a href="<?php echo $artist['url'] ?>"><?php echo $artist['url'] ?></a></span>
+        <span class="writers"> <a href="<?php echo $artist['url'] ?>"><?php echo $artist['url'] ?></a>
       <?php endif ?>
     </p>
 
@@ -41,12 +41,12 @@
         </span>
     </div>
 
-<?php endforeach; ?>d
+<?php endforeach; ?>
   </div>
 
   
-    <!-- <div class="grid_6 open_artists_pictures">
-      <img id="carousel-current" height="460px" width="460px" src="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/artists/<?php echo $artist['slug'] ?>/<?php echo $artist['slug'] ?>_300x300.jpg" alt="" />
+    <div class="grid_6 open_artists_pictures">
+      <!-- <img id="carousel-current" height="460px" width="460px" src="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/artists/<?php echo $artist['slug'] ?>/<?php echo $artist['slug'] ?>_300x300.jpg" alt="" /> -->
 <?php if (count($artist['links_carousel'])): ?>
   <?php for ($i = 0; $i < count($artist['links_carousel']); ++$i): ?>
         <li>
@@ -56,7 +56,7 @@
         </li>
   <?php endfor ?>
 <?php endif; ?>
-     </ul> -->
+     </ul>
 
     </div><!-- end of grid_6 -->
     
