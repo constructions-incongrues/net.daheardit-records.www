@@ -806,7 +806,8 @@ padding: 30px;
    padding: 30px  ;  
  }
  .open_releases,.open_artists
- {top: 77px;background-color:#FFF;padding: 30px;}
+
+ {top: 8px;background-color:#FFF;padding: 30px;margin-bottom: 30px;}
  
 .artists_pictures
 {
