@@ -1299,8 +1299,8 @@ margin-top:10px;
 
 h2.open_releases_artist
 {
-  font-size: 35px;
-  font-size: 3.5rem;
+  font-size: 40px;
+  font-size: 4rem;
   color: #000;
   margin-top: 80px;
 }
@@ -1427,10 +1427,11 @@ line-height:17px;
 {
   color: #000;
   padding-bottom: 0px;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   line-height: 28px;
   text-align: justify;
-  padding-top: 10px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .open_artists_bio
@@ -1861,7 +1862,12 @@ input.button:focus {outline: none;}
 #radio 
 {background-color: #000;}
 
-.writers {text-align: right;font-size: 1rem;}
+.writers {  
+    text-align: right;
+  font-size: 1.5rem;
+  padding: 10px;
+  float: right;
+  font-style: italic;}
 .sku, .date_release {      
 
   color: #0099FF;
@@ -1871,7 +1877,7 @@ input.button:focus {outline: none;}
   left: 0px;
   position: absolute;
   width: 200px;
-  font-size: 1.8rem;
+  font-size: 2rem;
   text-transform: uppercase;
   font-style: none;
 }
