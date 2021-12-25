@@ -15,7 +15,7 @@
 
 <div class="grid_12 releases">
         <div class="category_content">
-          <h1 id="release"><?php echo $release['sku'] ?> </h1>
+          <h1 id="release"></h1>
             <span class="triangle"><img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/others/triangle-bord.png" class="triangle" /></span>
         </div><!-- end of category contents -->
       </div><!-- end of releases -->
@@ -24,7 +24,8 @@
   <div class="open_releases_content">
 
   <div class="grid_12">
-    <h2 class="open_releases_artist"><a href="<?php echo url_for(sprintf('@artist_show?slug=%s#artist', $release['Artist']['slug'])) ?>"><?php echo $release['Artist']['name'] ?></a> - <?php echo $release['title'] ?> (<?php echo $release['released_at'] ?>d</h2>
+    <h2 class="open_releases_artist"><a href="<?php echo url_for(sprintf('@artist_show?slug=%s#artist', $release['Artist']['slug'])) ?>"><?php echo $release['Artist']['name'] ?></a> / <?php echo $release['title'] ?></h2>
+    <p><?php echo $release['sku'] ?> - <?php echo $release['released_at'] ?></p>
 
     <ul class="open_releases_button">
 <?php if ($previousRelease): ?>
@@ -52,6 +53,9 @@
       <img height="460px" width="460px" src="<?php echo sprintf('//%s/thumbnail/_/500/500/crop/best%s', sfConfig::get('app_api_url_root'), $release['artworks'][$i]) ?>" />
 <?php endfor ?>
      </ul>
+    <h2> <?php if (isset($release['ArtworkArtist'])): ?>
+Illustration : <a href="<?php echo url_for(sprintf('@artwork_artist_show?slug=%s#artwork_artist', $release['ArtworkArtist']['slug'])) ?>"><?php echo $release['ArtworkArtist']['name'] ?></a><br>
+<?php endif ?></h2>
 
 <?php if (count($release['videos'])): ?>
   <p></p>
@@ -102,7 +106,7 @@
 <?php endif ?>
     </p>
 
-
+    
 <?php if (count($release['press'])): ?>
   <br />- <br />
 <br />
@@ -112,10 +116,7 @@ Chroniques : <?php foreach ($release['press'] as $link): ?>
 <?php endif ?>
 <br>
 <?php echo nl2br(html_entity_decode($release['credits'])) ?>
-<?php if (isset($release['ArtworkArtist'])): ?>
-Illustration : <a href="<?php echo url_for(sprintf('@artwork_artist_show?slug=%s#artwork_artist', $release['ArtworkArtist']['slug'])) ?>"><?php echo $release['ArtworkArtist']['name'] ?></a><br>
-<?php endif ?>
-Date de sortie : 
+
 
 </p>
 
