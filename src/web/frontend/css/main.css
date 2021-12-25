@@ -1231,10 +1231,7 @@ margin-left:-21px;
 margin-left:10px;
 }
 
-.open_releases_infos_date
-{
 
-}
 .open_releases_content,.open_artists_content
 {
 padding-top:20px;
@@ -1401,7 +1398,7 @@ margin-right:30px;
 }
 
 
-.open_artists_listing_releases h2,
+.open_artists_listing_releases h2
 {
 margin-top:-25px!important;
 margin-left:-4px;
@@ -1706,7 +1703,7 @@ position: relative;
 }
 
 
-.open_artists_listing_releases img,
+.open_artists_listing_releases img
 {margin-top:-20px;}
 .open_artists_listing_releases h2
 {
