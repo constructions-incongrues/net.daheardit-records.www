@@ -162,10 +162,10 @@
            
 
             <p>
-           <a href="mailto:johan@daheardit-records.net">Johan (curator)</a>
+           <a href="mailto:johan@daheardit-records.net">Johan (curator)</a> <br />
 
-            <a href="http://www.thibaulthuertas.com/">Thibault Huertas (design)</a>  
-              <a href="http://www.constructions-incongrues.net">Constructions Incongrues (code)</a> 
+            <a href="http://www.thibaulthuertas.com/">Thibault Huertas (design)</a>  <br />
+              <a href="http://www.constructions-incongrues.net">Constructions Incongrues (code)</a> <br />
             <a href="http://www.pastis-hosting.net">Pastis Hosting (hosting)</a> 
             </p>
 
