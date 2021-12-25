@@ -1694,8 +1694,8 @@ position: relative;
 }
 
 
-.open_artists_listing_releases img
-{margin-top:-20px;}
+/* .open_artists_listing_releases img
+{margin-top:-20px;} */
 .open_artists_listing_releases h2
 {
 margin-top:-25px;
