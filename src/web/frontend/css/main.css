@@ -473,8 +473,8 @@ margin-bottom:-20px;
 {
 color:#000;
 font-weight:lighter;
-font-size:60px;
-font-size:6rem;
+font-size:35px;
+font-size:3.5rem;
 opacity:0.9;}
 
 .header_news_1_content h2 a
@@ -1425,7 +1425,7 @@ line-height:17px;
 {
   color: #000;
   padding-bottom: 0px;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   line-height: 28px;
   text-align: justify;
   padding-top: 10px;
@@ -1862,11 +1862,14 @@ input.button:focus {outline: none;}
 .writers {text-align: right;font-size: 1rem;}
 .sku, .date_release {       color: #0099FF;
   padding: 0;
-  top: 35px;
+  top: 32px;
   bottom: 0;
-  left: 3px;
+  left: 5px;
   position: absolute;
   width: 200px;
   font-size: 2rem;
   text-transform: uppercase;
   font-style: none;}
+
+
+  .review {background-color: #FFF;color:#000;font-size: 2rem;padding:5px;}

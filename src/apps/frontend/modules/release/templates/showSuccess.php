@@ -53,7 +53,7 @@
       <img id="carousel-current" height="460px" width="460px" src="<?php echo sprintf('//%s/thumbnail/_/500/500/crop/best%s', sfConfig::get('app_api_url_root'), $release['artworks'][0]) ?>" />
 <?php for ($i = 1; $i < count($release['artworks']); $i++): ?>
       <p></p>
-      <img height="460px" width="460px" src="<?php echo sprintf('//%s/thumbnail/_/500/500/crop/best%s', sfConfig::get('app_api_url_root'), $release['artworks'][$i]) ?>" />
+      <!-- <img height="460px" width="460px" src="<?php echo sprintf('//%s/thumbnail/_/500/500/crop/best%s', sfConfig::get('app_api_url_root'), $release['artworks'][$i]) ?>" /> -->
 <?php endfor ?>
      </ul>
     
@@ -116,8 +116,8 @@
 <?php if (count($release['press'])): ?>
   <br />- <br />
 <br />
-Chroniques : <?php foreach ($release['press'] as $link): ?>
-       <a href="<?php echo $link['url'] ?>"><?php echo basename($link['title']) ?></a> 
+<?php foreach ($release['press'] as $link): ?>
+      <span class="reviews"> <a href="<?php echo $link['url'] ?>"><?php echo basename($link['title']) ?></a> </span>
   <?php endforeach ?>
 <?php endif ?>
 <br>
