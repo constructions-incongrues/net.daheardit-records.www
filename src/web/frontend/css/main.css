@@ -413,7 +413,7 @@ margin-left:100px;
 
 .header_nav_3 li
 {
-color:#29ABE2;
+color:#FFF;
 list-style-type:none;
 display:inline;
 margin:5px 8px 5px 9px;
@@ -433,7 +433,7 @@ letter-spacing: 1px;
 
 }
 
-.donation, .donation a {color:#ea1D78!important;font-weight: bold!important;font-size: 3rem;}
+.donation, .donation a {color:#ea1D78!important;font-weight: bold!important;}
 
 .header_nav_3 a:hover
 {
