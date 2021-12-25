@@ -1430,7 +1430,6 @@ line-height:17px;
   line-height: 28px;
   text-align: justify;
   padding-top: 30px;
-  padding-bottom: 30px;
 }
 
 .open_artists_bio
@@ -1871,7 +1870,6 @@ font-style: italic;}
 
 .open_releases_download_licence {  
 font-size: 1.5rem;
-padding: 10px;
 }
 
 .open_releases_download_licence a
