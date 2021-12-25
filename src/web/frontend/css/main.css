@@ -1377,7 +1377,7 @@ color:#FFF!important;
 
 .open_releases_artwork
 {
-margin:0px 30px 0px 0px;
+margin:20px 30px 0px 0px;
 }
 
 
@@ -1429,6 +1429,7 @@ line-height:17px;
   font-size: 1.6rem;
   line-height: 28px;
   text-align: justify;
+  margin-top:20px;
 }
 
 .open_artists_bio
