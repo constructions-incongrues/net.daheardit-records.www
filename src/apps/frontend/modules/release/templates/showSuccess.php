@@ -42,7 +42,9 @@
   <p class="open_releases_press_text press credits">
 
 <?php echo nl2br(html_entity_decode($release['Translation'][$sf_user->getCulture()]['presentation'])) ?>
-<p><?php echo $release['sku'] ?> - <?php echo $release['released_at'] ?> </p>
+<?php echo $release['sku'] ?> - <?php echo $release['released_at'] ?> 
+
+
 
   </div>
 
@@ -104,7 +106,7 @@ Illustration : <a href="<?php echo url_for(sprintf('@artwork_artist_show?slug=%s
     
 <?php else: ?>
   <?php echo nl2br(html_entity_decode($release['credits'])) ?>
-
+<br />
         Cette œuvre est mise à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/deed.fr">Licence Creative Commons Attribution - Pas d’Utilisation Commerciale - Pas de Modification 4.0 France</a>.
 <?php endif ?>
     </p>
