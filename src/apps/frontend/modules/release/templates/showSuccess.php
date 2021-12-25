@@ -23,9 +23,10 @@
 <div class="grid_12 open_releases">
   <div class="open_releases_content">
 
-
   <div class="grid_12">
-  <ul class="open_releases_button">
+
+
+    <!-- <ul class="open_releases_button">
 <?php if ($previousRelease): ?>
       <li class="open_releases_button_left"> <a class="previous" href="<?php echo url_for('@release_show?slug='.$previousRelease['slug'].'#release') ?>" data-pjax="#content_async"> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/hack.png" title="<?php echo sprintf('[%s] %s', $previousRelease['sku'], $previousRelease['title' ]) ?>" /> </a></li>
 <?php endif; ?>
@@ -33,7 +34,11 @@
       <li class="open_releases_button_right"> <a class="next" href="<?php echo url_for('@release_show?slug='.$nextRelease['slug'].'#release') ?>" data-pjax="#content_async"> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/hack.png" title="<?php echo sprintf('[%s] %s', $nextRelease['sku'], $nextRelease['title' ]) ?>" />  </a></li>
 <?php endif; ?>
       <li class="open_releases_button_close"> <a class="close" href="<?php echo url_for('@homepage#discography') ?>" data-close="#content_async" title="<?php echo __('Retourner à la liste des sorties') ?>"> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/hack.png" alt="Close" /> </a></li>
-    </ul>
+    </ul> -->
+  </div>
+
+  <div class="grid_12">
+
   <p class="open_releases_press_text press credits">
 
 <div class="presentation">
