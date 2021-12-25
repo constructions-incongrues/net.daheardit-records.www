@@ -773,17 +773,25 @@ background-color:#29ABE2;
 
 .artists
 {
-background-color:#000;
-background-image:url(../pics/pattern/pat-bg.png);
-background-repeat:repeat;
-top:-14px;
+  background-color: #f2f2f2;
+  background-image: url(../pics/pattern/pat-bg.png);
+  background-repeat: repeat;
+  top: 0 px;
+  height: 80px;
+  text-align: right;
+}
 }
 
 .artists h1
 {
- background-color:#f2f2f2!important;
- color:#000!important;
- margin-left:0px;
+  background-color: #f2f2f2!important;
+  color: #000!important;
+  margin-left: 0px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 37px;
+  font-size: 3.7 rem;
+  letter-spacing: 1px;
 }
 
 .artists_listing_all {top:-14px;}
