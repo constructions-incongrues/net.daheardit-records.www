@@ -1860,16 +1860,27 @@ input.button:focus {outline: none;}
 {background-color: #000;}
 
 .writers {text-align: right;font-size: 1rem;}
-.sku, .date_release {       color: #0099FF;
+.sku, .date_release {      
+
+  color: #0099FF;
   padding: 0;
   top: 32px;
   bottom: 0;
-  left: 5px;
+  left: 0px;
   position: absolute;
   width: 200px;
-  font-size: 2rem;
+  font-size: 1.8rem;
   text-transform: uppercase;
-  font-style: none;}
+  font-style: none;
+}
 
 
-  .reviews {background-color: #FFF;color:#000;font-size: 2rem;padding:5px;}
+  .reviews  {
+    background-color: #FFF;
+    color: #000;
+    font-size: 2rem;
+    padding: 10px;
+    margin: 5px;
+}
+
+.reviews a {color:#000; text-transform: uppercase;text-decoration: none;font-size: 1.7rem;}
