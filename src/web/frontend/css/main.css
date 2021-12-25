@@ -78,27 +78,23 @@ margin-right: auto;
 .artists h1,
 .releases h1,
 .category_infos h1,
-.artwork_artists_listing_all h1
-{
-font-family: 'Jockey One', sans-serif;
-font-weight:lighter;
-background-repeat:repeat;
-display:inline;
-text-transform:uppercase;
-font-size:37px;
-font-size:3.7rem;
-height:80px;
-margin-left:-5px;
-background-image:url(../pics/pattern/pat-bg.png);
-background-repeat:repeat;
-background-color:#f2f2f2;
-color:#000;
-position: absolute;
-text-align: right;
-padding-top: 30
-px
-;
-}
+.artwork_artists_listing_all h1 {
+  font-family: 'Jockey One', sans-serif;
+  font-weight: lighter;
+  background-repeat: repeat;
+  display: inline;
+  text-transform: uppercase;
+  font-size: 0px;
+  font-size: 0rem;
+  height: 0 px;
+  margin-left: 0px;
+  background-image: url(../pics/pattern/pat-bg.png);
+  background-repeat: repeat;
+  background-color: #f2f2f2;
+  color: #000;
+  position: absolute;
+  text-align: right;
+  padding-top: 30 px;
 
 /* CALQUES
 ***************************************************************/
