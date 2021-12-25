@@ -39,29 +39,7 @@
   <hr class="open_releases_button_hr" />
 
     <div class="grid_6 open_releases_artwork">
-    <?php echo html_entity_decode($release['player_code']) ?>
-
-      <img id="carousel-current" height="460px" width="460px" src="<?php echo sprintf('//%s/thumbnail/_/500/500/crop/best%s', sfConfig::get('app_api_url_root'), $release['artworks'][0]) ?>" />
-<?php for ($i = 1; $i < count($release['artworks']); $i++): ?>
-      <p></p>
-      <img height="460px" width="460px" src="<?php echo sprintf('//%s/thumbnail/_/500/500/crop/best%s', sfConfig::get('app_api_url_root'), $release['artworks'][$i]) ?>" />
-<?php endfor ?>
-     </ul>
-
-<?php if (count($release['videos'])): ?>
-  <p></p>
-  <?php foreach ($release['videos'] as $video): ?>
-    <iframe width="100%" height="250" src="<?php echo $video ?>" frameborder="0" allowfullscreen></iframe>
-  <?php endforeach ?>
-<?php endif ?>
-   </div><!-- end of grid_6 -->
-
-    <div class="grid_6 open_releases_infos">
-<div class="open_releases_press_text">
-</div>
-
-<br>
-<p class="open_releases_buy">
+    <p class="open_releases_buy">
 
 <?php if ($release['is_available']): ?>
     <!-- <span style="font-weight: bold;">Acheter :</span> -->
@@ -89,6 +67,28 @@
   </p>
 <?php endif ?>
 </ul>
+
+      <img id="carousel-current" height="460px" width="460px" src="<?php echo sprintf('//%s/thumbnail/_/500/500/crop/best%s', sfConfig::get('app_api_url_root'), $release['artworks'][0]) ?>" />
+<?php for ($i = 1; $i < count($release['artworks']); $i++): ?>
+      <p></p>
+      <img height="460px" width="460px" src="<?php echo sprintf('//%s/thumbnail/_/500/500/crop/best%s', sfConfig::get('app_api_url_root'), $release['artworks'][$i]) ?>" />
+<?php endfor ?>
+     </ul>
+
+<?php if (count($release['videos'])): ?>
+  <p></p>
+  <?php foreach ($release['videos'] as $video): ?>
+    <iframe width="100%" height="250" src="<?php echo $video ?>" frameborder="0" allowfullscreen></iframe>
+  <?php endforeach ?>
+<?php endif ?>
+   </div><!-- end of grid_6 -->
+
+    <div class="grid_6 open_releases_infos">
+<div class="open_releases_press_text">
+  <?php echo html_entity_decode($release['player_code']) ?>
+</div>
+
+<br>
 
 
 
