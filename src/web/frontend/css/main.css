@@ -771,7 +771,7 @@ background-color:#29ABE2;
 .artists h1
 {
   background-color: #f2f2f2!important;
-  color: #000!important;
+  color: transparent;
   margin-left: 0px;
   text-decoration: none;
   text-transform: uppercase;
