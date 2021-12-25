@@ -38,6 +38,44 @@
   </div>
   <hr class="open_releases_button_hr" />
 
+  <div class="grid_12">
+
+  <p class="open_releases_press_text press credits">
+
+<?php echo nl2br(html_entity_decode($release['Translation'][$sf_user->getCulture()]['presentation'])) ?>
+<?php if (count($release['press'])): ?>
+  <br />- <br />
+<br />
+Chroniques : <?php foreach ($release['press'] as $link): ?>
+       <a href="<?php echo $link['url'] ?>"><?php echo basename($link['title']) ?></a> 
+  <?php endforeach ?>
+<?php endif ?>
+<br>
+<?php echo nl2br(html_entity_decode($release['credits'])) ?>
+<?php if (isset($release['ArtworkArtist'])): ?>
+Illustration : <a href="<?php echo url_for(sprintf('@artwork_artist_show?slug=%s#artwork_artist', $release['ArtworkArtist']['slug'])) ?>"><?php echo $release['ArtworkArtist']['name'] ?></a><br>
+<?php endif ?>
+Date de sortie : <?php echo $release['released_at'] ?>
+
+</p>
+
+    <p class="open_releases_download_licence">
+<?php if ($release['license']): ?>
+    <?php echo html_entity_decode($release['license']) ?>
+<?php else: ?>
+        Cette œuvre est mise à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/deed.fr">Licence Creative Commons Attribution - Pas d’Utilisation Commerciale - Pas de Modification 4.0 France</a>.
+<?php endif ?>
+    </p>
+
+<?php if (isset($release['press-releases']) && count($release['press-releases'])): ?>
+    <ul class="open_releases_reviews">
+  <?php foreach ($release['press-releases'] as $link): ?>
+      <li><a href="<?php echo $link['url'] ?>"><?php echo basename($link['title']) ?></a></li>
+  <?php endforeach ?>
+    </ul>
+<?php endif ?>
+  </div>
+
     <div class="grid_6 open_releases_artwork">
       <img id="carousel-current" height="460px" width="460px" src="<?php echo sprintf('//%s/thumbnail/_/500/500/crop/best%s', sfConfig::get('app_api_url_root'), $release['artworks'][0]) ?>" />
 <?php for ($i = 1; $i < count($release['artworks']); $i++): ?>
@@ -89,40 +127,6 @@
 
 
 
-    <p class="open_releases_press_text press credits">
-
-<?php echo nl2br(html_entity_decode($release['Translation'][$sf_user->getCulture()]['presentation'])) ?>
-<?php if (count($release['press'])): ?>
-  <br />- <br />
-<br />
-Chroniques : <?php foreach ($release['press'] as $link): ?>
-       <a href="<?php echo $link['url'] ?>"><?php echo basename($link['title']) ?></a> 
-  <?php endforeach ?>
-<?php endif ?>
-<br>
-<?php echo nl2br(html_entity_decode($release['credits'])) ?>
-<?php if (isset($release['ArtworkArtist'])): ?>
-Illustration : <a href="<?php echo url_for(sprintf('@artwork_artist_show?slug=%s#artwork_artist', $release['ArtworkArtist']['slug'])) ?>"><?php echo $release['ArtworkArtist']['name'] ?></a><br>
-<?php endif ?>
-Date de sortie : <?php echo $release['released_at'] ?>
-
-</p>
-
-    <p class="open_releases_download_licence">
-<?php if ($release['license']): ?>
-    <?php echo html_entity_decode($release['license']) ?>
-<?php else: ?>
-        Cette œuvre est mise à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/deed.fr">Licence Creative Commons Attribution - Pas d’Utilisation Commerciale - Pas de Modification 4.0 France</a>.
-<?php endif ?>
-    </p>
-
-<?php if (isset($release['press-releases']) && count($release['press-releases'])): ?>
-    <ul class="open_releases_reviews">
-  <?php foreach ($release['press-releases'] as $link): ?>
-      <li><a href="<?php echo $link['url'] ?>"><?php echo basename($link['title']) ?></a></li>
-  <?php endforeach ?>
-    </ul>
-<?php endif ?>
 
 
 
