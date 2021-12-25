@@ -56,6 +56,7 @@
     <div class="grid_6 open_releases_artwork">
       <img id="carousel-current" height="460px" width="460px" src="<?php echo sprintf('//%s/thumbnail/_/500/500/crop/best%s', sfConfig::get('app_api_url_root'), $release['artworks'][0]) ?>" />
 <?php for ($i = 1; $i < count($release['artworks']); $i++): ?>
+  <span class="writers"> Illustration : <a href="<?php echo url_for(sprintf('@artwork_artist_show?slug=%s#artwork_artist', $release['ArtworkArtist']['slug'])) ?>"><?php echo $release['ArtworkArtist']['name'] ?></a><br>
       <!-- <img height="460px" width="460px" src="<?php echo sprintf('//%s/thumbnail/_/500/500/crop/best%s', sfConfig::get('app_api_url_root'), $release['artworks'][$i]) ?>" /> -->
 <?php endfor ?>
      </ul>
@@ -110,7 +111,6 @@
 <?php else: ?>
   <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Ce(tte) œuvre est mise à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licence Creative Commons Attribution - Pas d’Utilisation Commerciale - Partage dans les Mêmes Conditions 4.0 International</a> <br /><br />
 <?php echo nl2br(html_entity_decode($release['credits'])) ?></span></p>
-<span class="writers"> Illustration  <a href="<?php echo url_for(sprintf('@artwork_artist_show?slug=%s#artwork_artist', $release['ArtworkArtist']['slug'])) ?>"><?php echo $release['ArtworkArtist']['name'] ?></a><br>
 
 <?php endif ?>
     </p>
