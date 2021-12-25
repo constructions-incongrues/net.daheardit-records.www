@@ -162,14 +162,14 @@
            
 
             <p>
-           <a href="mailto:johan@daheardit-records.net">Curated with love</a> <br />
+           <a href="mailto:johan@daheardit-records.net">johan@daheardit-records.net</a> <br />
 
             <a href="http://www.thibaulthuertas.com/">Design by Thibault Huertas </a>  <br />
               <a href="http://www.constructions-incongrues.net">Code by Constructions Incongrues</a> <br />
             <a href="http://www.pastis-hosting.net">Hosting by Pastis Hosting </a> 
             </p>
             
-            <p class="donation"><a href="https://www.helloasso.com/associations/constructions-incongrues" >Make a donation</a></p>
+            <p class="donation"><a href="https://www.helloasso.com/associations/constructions-incongrues" >Support <3</a></p>
 
 <div class="documentaryembed">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/e8UoUJha3zw?controls=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
