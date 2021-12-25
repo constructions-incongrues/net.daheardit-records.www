@@ -99,6 +99,14 @@
 <?php endif ?>
 </ul>
 
+<?php if (count($release['press'])): ?>
+  <br />- <br />
+<br />
+<?php foreach ($release['press'] as $link): ?>
+      <span class="reviews"> <a href="<?php echo $link['url'] ?>"><?php echo basename($link['title']) ?></a> </span>
+  <?php endforeach ?>
+<?php endif ?>
+
 <p class="open_releases_download_licence">
 <?php if ($release['license']): ?>
     <?php echo html_entity_decode($release['license']) ?>
@@ -113,13 +121,7 @@
     </p>
 
     
-<?php if (count($release['press'])): ?>
-  <br />- <br />
-<br />
-<?php foreach ($release['press'] as $link): ?>
-      <span class="reviews"> <a href="<?php echo $link['url'] ?>"><?php echo basename($link['title']) ?></a> </span>
-  <?php endforeach ?>
-<?php endif ?>
+
 <br>
 
 
