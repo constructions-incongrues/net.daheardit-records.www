@@ -43,7 +43,6 @@
   <p class="open_releases_press_text press credits">
 
 <?php echo nl2br(html_entity_decode($release['Translation'][$sf_user->getCulture()]['presentation'])) ?>
-<?php if (count($release['press'])): ?>
 
   </div>
 
