@@ -169,7 +169,7 @@
             <a href="http://www.pastis-hosting.net">Hosting by Pastis Hosting </a> 
             </p>
             
-            <p class="donation"><a href="https://www.helloasso.com/associations/constructions-incongrues" >Support <3</a></p>
+            <p class="donation"><a href="https://www.helloasso.com/associations/constructions-incongrues" >Netlabel depuis 2006, support us.</a></p>
 
 <div class="documentaryembed">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/e8UoUJha3zw?controls=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
