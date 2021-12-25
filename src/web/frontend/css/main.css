@@ -1434,11 +1434,12 @@ line-height:17px;
 
 .open_artists_bio
 {
-  color:#666;
-  margin-left:10px;
-  margin-top:14px;
-  padding-bottom:0px;
-  line-height:17px;
+  color: #000;
+  padding-bottom: 0px;
+  font-size: 1.6rem;
+  line-height: 28px;
+  text-align: justify;
+  padding-top: 30px;
 }
 
 .open_releases_press_text a /*.open_releases_artwork_credit a*/
