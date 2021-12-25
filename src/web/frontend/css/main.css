@@ -403,6 +403,7 @@ padding-top:2px;
   margin-left:24px;
 top:-4px;
 position:absolute;
+display: none;
 }
 
 .header_nav_3_content_list li:nth-child(2)
