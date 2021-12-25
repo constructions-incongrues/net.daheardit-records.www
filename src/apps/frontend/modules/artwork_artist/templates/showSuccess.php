@@ -10,8 +10,6 @@
 
   <div class="grid_12">
     <h1 class="open_artists_name"><?php echo $artist['name'] ?></h1>
-    <span class="calque_artists_pictures"> </span>
-      <img id="carousel-current" height="460px" width="460px" src="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/artwork_artists/<?php echo $artist['slug'] ?>/<?php echo $artist['slug'] ?>_300x300.jpg" alt="" />
 
   <ul class="open_artists_button">
 <?php if ($previousArtist): ?>
@@ -46,7 +44,9 @@
   </div>
 
     <div class="grid_6 open_artists_pictures">
-     
+      <span class="calque_artists_pictures"> </span>
+      <img id="carousel-current" height="460px" width="460px" src="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/artwork_artists/<?php echo $artist['slug'] ?>/<?php echo $artist['slug'] ?>_300x300.jpg" alt="" />
+
     </div><!-- end of grid_6 -->
 
     
