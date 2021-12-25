@@ -383,9 +383,10 @@ width:100%!important;
 background-color:#000;
 height:50px;
 
-top:0px;
+top:680px;
 z-index:300;
 position:absolute;
+text-align: right;
 }
 
 
