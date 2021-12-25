@@ -24,8 +24,7 @@
   <div class="open_releases_content">
 
   <div class="grid_12">
-    <h2 class="open_releases_artist"> </span>
-<a href="<?php echo url_for(sprintf('@artist_show?slug=%s#artist', $release['Artist']['slug'])) ?>"><?php echo $release['Artist']['name'] ?></a> - <?php echo $release['title'] ?> <span class="date_release"><span class="sku"><?php echo $release['sku'] ?> / <?php echo $release['released_at'] ?> </span> </h2>
+
 
     <ul class="open_releases_button">
 <?php if ($previousRelease): ?>
@@ -43,6 +42,8 @@
   <p class="open_releases_press_text press credits">
 
 <div class="presentation">
+<h2 class="open_releases_artist"> </span>
+<a href="<?php echo url_for(sprintf('@artist_show?slug=%s#artist', $release['Artist']['slug'])) ?>"><?php echo $release['Artist']['name'] ?></a> - <?php echo $release['title'] ?> <span class="date_release"><span class="sku"><?php echo $release['sku'] ?> / <?php echo $release['released_at'] ?> </span> </h2>
 <?php echo nl2br(html_entity_decode($release['Translation'][$sf_user->getCulture()]['presentation'])) ?>
 <?php if (count($release['press'])): ?>
  
