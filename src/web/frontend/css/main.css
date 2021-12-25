@@ -1858,3 +1858,5 @@ input.button:focus {outline: none;}
 
 #radio 
 {background-color: #000;}
+
+.writers {text-align: right;font-size: 1rem;}
