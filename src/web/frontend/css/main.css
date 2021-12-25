@@ -1524,13 +1524,19 @@ text-align:right;
 }
   .open_releases_buy
   {
-    background-color:transparent;
-    color:#000;
-    min-height:20px;
-    margin-bottom:0.1em;
-    font-size:12px;
-    font-size:1.2rem;
-    width:442px;
+    color: #000;
+    margin-top: -23px;
+    background-color: #0099FF;
+    min-height: 20px;
+    font-size: 12px;
+    font-size: 1.2rem;
+    font-family: 'Jockey One', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-align: center;
+    padding: 4.2px;
+    width: 442px;
     padding: 0.1em 0em 0.1sem 0em;
 
   }
@@ -1557,9 +1563,12 @@ text-align:right;
 
 .open_releases_buy a
 {
-  color:#0099FF;
-  text-decoration:none;
-  font-weight: bold;
+  color: #0099FF;
+  text-decoration: none;
+  font-weight: lighter;
+  font-size: 2rem;
+  color: #FFF;
+  padding: 5px;
 }
 
 
