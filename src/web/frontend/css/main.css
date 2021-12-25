@@ -804,24 +804,10 @@ padding: 30px;
  .artwork_artists_listing_all {
    background-color: transparent;
    padding: 30px  ;  
-
-.open_releases,.open_artists
-{
-    width: 100%!important;
-    background-color: #000;
-    height: 80
-px
-;
-    top: 635
-px
-;
-    z-index: 300;
-    position: absolute;
-    text-align: right;
-    padding-top: 30
-px
-;background-color:#FFF;}
-
+ }
+ .open_releases,.open_artists
+ {top: 77px;background-color:#FFF;padding: 30px;}
+ 
 .artists_pictures
 {
  border-radius:200px;
