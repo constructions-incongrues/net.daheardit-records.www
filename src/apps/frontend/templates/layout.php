@@ -170,7 +170,7 @@
             </p>
             
 
-<p class="donation"><a href="https://www.helloasso.com/associations/constructions-incongrues" >Since 2006, we releases for free our music, if you like it, you can support us with a donation</a></p>
+<p class="donation"><a href="https://www.helloasso.com/associations/constructions-incongrues" >we releases our music for free, since 2006, if you  want you can support us here <3 </a></p>
 
 <div class="documentaryembed">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/e8UoUJha3zw?controls=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
