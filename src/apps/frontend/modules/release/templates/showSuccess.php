@@ -46,7 +46,10 @@
 <?php echo nl2br(html_entity_decode($release['Translation'][$sf_user->getCulture()]['presentation'])) ?>
 
 
-
+<?php foreach ($release['press'] as $link): ?>
+      <span class="reviews"> <a href="<?php echo $link['url'] ?>"><?php echo basename($link['title']) ?></a> </span>
+  <?php endforeach ?>
+<?php endif ?>
   </div>
 
     <div class="grid_6 open_releases_artwork">
@@ -101,10 +104,7 @@
 
 <?php if (count($release['press'])): ?>
 
-<?php foreach ($release['press'] as $link): ?>
-      <span class="reviews"> <a href="<?php echo $link['url'] ?>"><?php echo basename($link['title']) ?></a> </span>
-  <?php endforeach ?>
-<?php endif ?>
+
 
 <p class="open_releases_download_licence">
 <?php if ($release['license']): ?>
