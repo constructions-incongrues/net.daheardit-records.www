@@ -6,9 +6,7 @@
         <div class="header_nav_3_content">
           <ul id="menu-main" class="header_nav_3_content_list">
             <li class="header_nav_3_content_logo"><a href="<?php echo url_for('@homepage') ?>"> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/logo/logo-dhr.png" alt="logo" /></a></li>
-            <!-- <li><a href="#discography"><?php echo __('Releases') ?></a></li> -->
-           <li><a href="http://www.daheardit-records.net"><?php echo __('Releases') ?></a></li> 
-
+            <li><a href="#discography"><?php echo __('Releases') ?></a></li>
             <li><a href="#artists"><?php echo __('Artists') ?></a></li>
             <li><a href="#artwork_artists"><?php echo __('Illustrators') ?></a></li>
             <li><a href="#informations"><?php echo __('About') ?></a></li>

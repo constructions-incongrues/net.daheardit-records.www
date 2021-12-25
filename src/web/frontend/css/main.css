@@ -20,6 +20,7 @@ body
 {
 padding:0px;
 font-family: 'Open Sans', sans-serif;
+backgrou
 }
 
 html
@@ -73,7 +74,7 @@ margin-right: auto;
 }
 
 
-.triangle img {position: absolute;top:-4.1px!important;}
+.triangle img {position: absolute;top:-4.1px!important;display : none}
 
 .artists h1,
 .releases h1,
@@ -608,10 +609,11 @@ line-height:15px;
 
 .releases
   {
-   background-color:transparent;
+   background-color:#000;
    margin-top:30px!important;
    padding-bottom:2px;
    padding-left:5px;
+   
 
  }
 
