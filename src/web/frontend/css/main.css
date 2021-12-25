@@ -442,7 +442,6 @@ color:#FFF;
 .header_nav_3_button_donate a
 {
 color:#ea1D78;
-opacity:0.9;
 }
 
 .header_nav_3_button_donate a:hover  {opacity:1;color:#FFF;}
@@ -1054,6 +1053,8 @@ font-size: 20px;
 font-size:2rem;
 font-family: 'Jockey One', sans-serif;
 text-transform: lowercase;
+font-weight: lighter;
+letter-spacing: 1px;;
 }
 
 .footer_content p  {color:#FFF!important;}
@@ -1082,7 +1083,6 @@ font-size:2rem;
 color:#FFF;
 font-size:15px;
 font-size:1.5rem;
-opacity:0.7;
 margin:10px 0px 10px 0px;
 }
 
