@@ -381,7 +381,7 @@ font-size:0.9rem;
 {
   width: 100%!important;
   background-color: transparent;
-  top: 696px;
+  top: 707px;
   z-index: 300;
   position: absolute;
   text-align: left;
@@ -392,7 +392,7 @@ font-size:0.9rem;
 
 .header_nav_3 ul
 {
-background-color:#transparent;
+background-color:transparent;
 padding-top:0px;
 
 }
@@ -1427,6 +1427,9 @@ line-height:17px;
   line-height: 28px;
   text-align: justify;
   padding-top: 30px;
+  background-color: #F9F9F9;
+   padding:30px 20px 90px 20px;
+   width:95%;
 }
 
 .open_releases_press_text a /*.open_releases_artwork_credit a*/
@@ -1892,4 +1895,4 @@ font-size: 1.5rem;
 
 .reviews a, .open_artists_bio a{color:#000; text-transform: uppercase;text-decoration: none;font-size: 1rem;}
 
-.presentation {background-color: #F9F9F9; padding:30px 20px 90px 20px;width:95%;margin-top:31px}
+.presentation {background-color: #F9F9F9; padding:30px 20px 90px 20px;width:95%;margin-top:360px}
