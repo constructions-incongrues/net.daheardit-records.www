@@ -10,12 +10,13 @@
 
   <div class="grid_12">
     <h1 class="open_artists_name"><?php echo $artist['name'] ?></h1>
-    <div class="grid_12 open_artists_infos">
-
     <p class="open_artists_bio">
       <?php echo auto_link_text(nl2br($artist['Translation'][$sf_user->getCulture()]['presentation'])) ?>
     </p>
 
+    <div class="grid_12 open_artists_infos">
+
+    
 <?php if ($artist['url']): ?>
     <p class="open_artists_bio">
       <a href="<?php echo $artist['url'] ?>"><?php echo $artist['url'] ?></a>
