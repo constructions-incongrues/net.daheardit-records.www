@@ -24,7 +24,7 @@
     <p class="open_artists_bio">
       <?php echo nl2br($artist['Translation'][$sf_user->getCulture()]['presentation']) ?>
       <?php if ($artist['url']): ?>
-          <br><br><a href="<?php echo $artist['url'] ?>"><?php echo $artist['url'] ?></a>
+        <span class="writers"> <a href="<?php echo $artist['url'] ?>"><?php echo $artist['url'] ?></a></span>
       <?php endif ?>
     </p>
 
@@ -64,9 +64,6 @@
 
    
 
-<div style="width:600px;">
-
-</div>
     </div><!-- end of grid_6 -->
   </div><!-- enf of release_content -->
   </div><!-- end of grid_12 release_open -->
