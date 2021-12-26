@@ -1413,7 +1413,6 @@ opacity: 1;
 
 ul.open_releases_button, ul.open_artists_button
 {
-margin-top: -120px;
 margin-bottom:0px;
 text-align:right;
 }
@@ -1857,4 +1856,4 @@ float:right
   .reviews a:hover, .credits a:hover {color:#000;}
 .reviews a, .credits a {color:#29ABE2; padding:10px 0px 10px 0px;  text-decoration: none;}
 .open_artists_bio a {float: right;}
-.presentation {background-color: #F9F9F9; padding:2%;width:95%;margin-top:56px;font-size:1.6rem;}
+.presentation {background-color: #F9F9F9; padding:2%;width:95%;font-size:1.6rem;}
