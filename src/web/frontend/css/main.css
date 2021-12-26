@@ -1283,18 +1283,16 @@ margin-top:10px;
 
 h2.open_releases_artist
 {
-  font-size: 60px;
-  font-size: 4rem;
+  font-size: 30px;
+  font-size: 3rem;
   color: #000;
-  margin-bottom:40px; 
-  margin-top:20px;
+
 }
 
 h2.open_releases_artist a
 {
   color:#29ABE2;
   text-decoration:none;
-text-decoration:none;
 }
 
 h2.open_releases_artist a:hover
