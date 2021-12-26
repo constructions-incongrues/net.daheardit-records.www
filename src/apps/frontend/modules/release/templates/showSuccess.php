@@ -52,7 +52,8 @@
 <?php if (count($release['press'])): ?>
  
 <?php foreach ($release['press'] as $link): ?>
-      <span class="reviews"> <a href="<?php echo $link['url'] ?>"><?php echo basename($link['title']) ?></a> </span>
+      <h2 class="open_releases_artist">Reviews</h2>
+        <span class="reviews"> <a href="<?php echo $link['url'] ?>"><?php echo basename($link['title']) ?></a> </span>
   <?php endforeach ?>
 <?php endif ?>
   </div>
