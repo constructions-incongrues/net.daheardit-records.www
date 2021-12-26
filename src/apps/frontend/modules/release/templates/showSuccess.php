@@ -35,7 +35,6 @@
  
 
 
-
 <div class="presentation">
       <h2 class="open_releases_artist">
       <span class="date_release"></span>
