@@ -9,7 +9,6 @@
   <div class="open_artists_content">
   
   <div class="grid_12">
-  <h1 class="open_artists_name"><?php echo $artist['name'] ?></h1>
 
     <ul class="open_artists_button">
 <?php if ($previousArtist): ?>
@@ -21,10 +20,13 @@
 <?php endif; ?>
       <li class="open_releases_button_close"> <a class="close" href="<?php echo url_for('@homepage#artists') ?>" data-close="#content_async" title="<?php echo __('Retourner à la liste des artistes') ?>"> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/hack.png" alt="Close" /> </a></li>
     </ul>
+    <h1 class="open_artists_name"><?php echo $artist['name'] ?></h1>
+
     <p class="open_artists_bio">
+      
       <?php echo nl2br($artist['Translation'][$sf_user->getCulture()]['presentation']) ?>
       <?php if ($artist['url']): ?>
-        <span class="writers"> <a href="<?php echo $artist['url'] ?>"><?php echo $artist['url'] ?></a>
+      <a href="<?php echo $artist['url'] ?>"><?php echo $artist['url'] ?>
       <?php endif ?>
     </p>
 
