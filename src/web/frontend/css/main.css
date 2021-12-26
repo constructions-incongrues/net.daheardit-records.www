@@ -64,12 +64,11 @@ src: url('../typo/pf_tempesta_seven.ttf');
 .open_artists_content {
 width:960px;
 margin-left: auto;
-  margin-right: auto;
+margin-right: auto;
+
 }
 
-.header_nav_3_content {margin-left: auto;
-  margin-right: auto;width :60px;
-  }
+
 
 
 .triangle img {position: absolute;top:-4.1px!important;display : none}
