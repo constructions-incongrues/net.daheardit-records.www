@@ -557,8 +557,8 @@ font-weight:lighter;
 margin-left:20px;
 text-transform:uppercase;
 margin-bottom:5px;
-font-size:17px;
-font-size:1.7rem;
+font-size:16px;
+font-size:1.6rem;
 text-align:left;
 }
 
@@ -1481,8 +1481,8 @@ text-align:right;
     margin-left: 0px;
     background-color: #0099FF;
     min-height: 30px;
-    font-size: 17px;
-    font-size: 1.7rem;
+    font-size: 16px;
+    font-size: 1.6rem;
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 2px;
@@ -1518,7 +1518,7 @@ text-align:right;
     color: #0099FF;
     text-decoration: none;
     font-weight: lighter;
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     color: #FFF;
 }
 
