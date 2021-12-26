@@ -1326,7 +1326,7 @@ color:#FFF!important;
 
 .open_releases_artwork
 {
-margin:20px 30px 0px 0px;
+margin:20px 38px 0px 0px;
 }
 
 
@@ -1852,4 +1852,4 @@ float:right
   .reviews a:hover, .credits a:hover {color:#000;}
 .reviews a, .credits a {color:#29ABE2; padding:10px 0px 10px 0px;  text-decoration: none;}
 .open_artists_bio a {float: right;}
-.presentation {background-color: #F9F9F9; padding:2%;width:95%;font-size:1.5rem;margin-top:40px;}
+.presentation {background-color: #F9F9F9; padding:2%;font-size:1.5rem;margin-top:40px;}
