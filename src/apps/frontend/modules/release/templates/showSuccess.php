@@ -44,23 +44,13 @@
 <div class="presentation">
       <h2 class="open_releases_artist">
       <span class="date_release"></span>
-      <span class="sku"><?php echo $release['sku'] ?> / <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a> / 
-<?php ($release['is_available']): ?>
-
-    <?php foreach ($release['prices'] as $price): ?>
-    <?php if (is_numeric($price['price'])): ?>
-      <a href="" class="paypal" data-paypalid="<?php echo $price['paypal_id'] ?>"><?php echo $price['format'] ?>  <?php echo $price['price'] ?> </a>
-    <?php else: ?>
-      <a href="" class="paypal" data-paypalid="<?php echo $price['paypal_id'] ?>"><?php echo $price['format'] ?>  <?php echo $price['price'] ?> -  </a>
-    <?php endif ?> 
-    <?php endforeach; ?><?php endif ?>
-
+      <span class="sku"><?php echo $release['sku'] ?> / <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a> /
 
       <?php echo $release['released_at'] ?> </span> 
 <a href="<?php echo url_for(sprintf('@artist_show?slug=%s#artist', $release['Artist']['slug'])) ?>"><br /><?php echo $release['Artist']['name'] ?></a>  <?php echo $release['title'] ?> </h2>
 <?php echo nl2br(html_entity_decode($release['Translation'][$sf_user->getCulture()]['presentation'])) ?>
 <?php if (count($release['press'])): ?>
-<span class="reviews">reviews :</span>
+<span>reviews :</span>
 <?php foreach ($release['press'] as $link): ?>
         <span class="reviews"> <a href="<?php echo $link['url'] ?>"><?php echo basename($link['title']) ?></a> / </span>
   <?php endforeach ?>
