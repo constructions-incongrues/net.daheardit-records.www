@@ -26,7 +26,7 @@
     <p class="open_artists_bio">
       <?php echo auto_link_text(nl2br($artist['Translation'][$sf_user->getCulture()]['presentation'])) ?>
       <?php if ($artist['url']): ?>
-        <span class="writers"> <a href="<?php echo $artist['url'] ?>"><?php echo $artist['url'] ?></a></span>
+        <span class="writers2"> <a href="<?php echo $artist['url'] ?>"><?php echo $artist['url'] ?></a></span>
 <?php endif ?>
     </p>
 
