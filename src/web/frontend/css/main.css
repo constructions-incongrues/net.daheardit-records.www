@@ -1670,7 +1670,7 @@ float:left!important;
 width:220px;
 background-color:#FFF;
 padding-bottom:0px;
-margin:40px 20px 40px 0px;
+margin:40px 20px 40px -20px;
 float:left;
 position: relative;
 }
@@ -1845,13 +1845,24 @@ input.button:focus {outline: none;}
 #radio 
 {background-color: #000;}
 
+.creditswriters {
+ text-align: right;
+font-size: 1.5rem;
+float: right;
+font-style: italic;
+margin-right: -19px;
+background-color: #F9F9F9;
+padding: 10px 10px 20px 10px;
+width: 101.9%;
+}
 .writers
 {  
   text-align: right;
 font-size: 1.5rem;
 padding: 10px;
 float: right;
-font-style: italic;}
+font-style: italic;
+}
 
 .open_releases_download_licence {  
 font-size: 1.5rem;
@@ -1886,5 +1897,5 @@ font-size: 1.5rem;
 
 
 .reviews a, .open_artists_bio a{color:#000; text-transform: uppercase;text-decoration: none;font-size: 1rem;}
-
+.open_artists_bio a {float: right;}
 .presentation {background-color: #F9F9F9; padding:2%;width:95%;margin-top:56px}
