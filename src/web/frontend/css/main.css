@@ -1435,35 +1435,35 @@ height: 0px;
 
 .open_releases_button_left
 {
-  background-image:url("../pics/button/release_retour.png");
+  background-image:url("../pics/button/release_retour-hover.png");
 
 }
 
 .open_releases_button_left:hover
 {
-  background-image:url("../pics/button/release_retour-hover.png");
+  background-image:url("../pics/button/release_retour.png");
 }
 
 .open_releases_button_right
 {
-  background-image:url("../pics/button/release_suivant.png");
+  background-image:url("../pics/button/release_suivant-hover.png");
 
 }
 
 .open_releases_button_right:hover
 {
-  background-image:url("../pics/button/release_suivant_hover.png");
+  background-image:url("../pics/button/release_suivant.png");
 }
 
 .open_releases_button_close
 {
-  background-image:url("../pics/button/release_close.png");
+  background-image:url("../pics/button/release_close-hover.png");
 
 }
 
 .open_releases_button_close:hover
 {
-  background-image:url("../pics/button/release_close-hover.png");
+  background-image:url("../pics/button/release_close.png");
 }
 
 .open_releases_button_left a,.open_releases_button_right a, .open_releases_button_close a
