@@ -26,7 +26,7 @@
   <div class="grid_12">
 
 
-    <!-- <ul class="open_releases_button">
+     <ul class="open_releases_button">
 <?php if ($previousRelease): ?>
       <li class="open_releases_button_left"> <a class="previous" href="<?php echo url_for('@release_show?slug='.$previousRelease['slug'].'#release') ?>" data-pjax="#content_async"> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/hack.png" title="<?php echo sprintf('[%s] %s', $previousRelease['sku'], $previousRelease['title' ]) ?>" /> </a></li>
 <?php endif; ?>
