@@ -46,7 +46,7 @@
       <span class="date_release"></span>
       <span class="sku"><?php echo $release['sku'] ?> / <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a> /
 
-      <?php echo $release['released_at'] ?> </span> <br />
+      <?php echo $release['released_at'] ?> </span> 
 <a href="<?php echo url_for(sprintf('@artist_show?slug=%s#artist', $release['Artist']['slug'])) ?>"><br /><?php echo $release['Artist']['name'] ?></a>  <?php echo $release['title'] ?> </h2>
 <?php echo nl2br(html_entity_decode($release['Translation'][$sf_user->getCulture()]['presentation'])) ?>
 <?php if (count($release['press'])): ?>
