@@ -132,7 +132,7 @@ Artwork by <a href="<?php echo url_for(sprintf('@artwork_artist_show?slug=%s#art
     <ul class="open_releases_reviews">
       <li> Press : </p>
   <?php foreach ($release['press-releases'] as $link): ?>
-      <li><a href="<?php echo $link['url'] ?>"><?php echo basename($link['title']) ?></a></li>
+      <li><a href="<?php echo $link['url'] ?>"><?php echo basename($link['title']) ?></a>d</li>
   <?php endforeach ?>
     </ul>
 <?php endif ?>
