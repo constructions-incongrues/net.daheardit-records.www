@@ -50,7 +50,6 @@
 <?php echo nl2br(html_entity_decode($release['Translation'][$sf_user->getCulture()]['presentation'])) ?>
 <?php if (count($release['press'])): ?>
  
-<span> They are talking : </span>
 <?php foreach ($release['press'] as $link): ?>
       <span class="reviews"> <a href="<?php echo $link['url'] ?>"><?php echo basename($link['title']) ?></a> </span>
   <?php endforeach ?>
