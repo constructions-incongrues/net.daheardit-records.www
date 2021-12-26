@@ -1405,8 +1405,9 @@ opacity: 1;
 
 ul.open_releases_button, ul.open_artists_button
 {
-margin-bottom:0px;
-text-align:right;
+float: right;
+z-index:500;
+position: relative;
 
 }
 
