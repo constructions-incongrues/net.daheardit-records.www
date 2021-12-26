@@ -34,7 +34,6 @@
     </ul>
  
 
-  <div class="grid_12">
 
 
 <div class="presentation">
@@ -51,7 +50,6 @@
         <span class="reviews"> <a href="<?php echo $link['url'] ?>"><?php echo basename($link['title']) ?></a> / </span>
   <?php endforeach ?>
 <?php endif ?>
-  </div>
  </div>
     <div class="grid_6 open_releases_artwork">
       <img id="carousel-current" height="460px" width="460px" src="<?php echo sprintf('//%s/thumbnail/_/500/500/crop/best%s', sfConfig::get('app_api_url_root'), $release['artworks'][0]) ?>" />
