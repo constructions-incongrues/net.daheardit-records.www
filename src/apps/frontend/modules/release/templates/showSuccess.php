@@ -50,7 +50,7 @@
 <a href="<?php echo url_for(sprintf('@artist_show?slug=%s#artist', $release['Artist']['slug'])) ?>"><br /><?php echo $release['Artist']['name'] ?></a>  <?php echo $release['title'] ?> </h2>
 <?php echo nl2br(html_entity_decode($release['Translation'][$sf_user->getCulture()]['presentation'])) ?>
 <?php if (count($release['press'])): ?>
-
+<span>reviews :</span>
 <?php foreach ($release['press'] as $link): ?>
         <span class="reviews"> <a href="<?php echo $link['url'] ?>"><?php echo basename($link['title']) ?></a> / </span>
   <?php endforeach ?>
@@ -128,7 +128,7 @@ Artwork by <a href="<?php echo url_for(sprintf('@artwork_artist_show?slug=%s#art
 </p>
 
 
-<?php if (isset($release['press-releases']) && count($release['press-releases'])): ?>reviews : 
+<?php if (isset($release['press-releases']) && count($release['press-releases'])): ?>
     <ul class="open_releases_reviews">
   <?php foreach ($release['press-releases'] as $link): ?>
       <li><a href="<?php echo $link['url'] ?>"><?php echo basename($link['title']) ?></a>d</li>
