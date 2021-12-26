@@ -1292,14 +1292,14 @@ h2.open_releases_artist
 
 h2.open_releases_artist a
 {
-color:#000;
-text-decoration:none;
+  color:#29ABE2;
+  text-decoration:none;
 text-decoration:none;
 }
 
 h2.open_releases_artist a:hover
 {
-color:#29ABE2;
+color:#000;
 }
 
 h3.open_releases_album
@@ -1862,7 +1862,7 @@ width: 101.9%;
   float: right;
   background-color: #F9F9F9;
   padding: inherit;
-  width:110%%;
+  width:110%;
 }
 .writers2 a {color:#000; text-transform: uppercase;text-decoration: none;}
 .open_releases_download_licence {  
@@ -1883,7 +1883,6 @@ font-size: 1.5rem;
   font-size: 2rem;
   text-transform: uppercase;
   font-style: none;
-  display: none;
 }
 
 
@@ -1897,6 +1896,6 @@ font-size: 1.5rem;
   }
 
 
-.reviews a, {color:#000; text-transform: uppercase;text-decoration: none;font-size: 1rem;}
+.reviews a {color:#000; text-transform:uppercase;text-decoration: none;font-size: 1rem;}
 .open_artists_bio a {float: right;}
 .presentation {background-color: #F9F9F9; padding:2%;width:95%;margin-top:56px}
