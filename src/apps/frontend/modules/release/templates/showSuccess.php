@@ -113,7 +113,6 @@
     <?php echo html_entity_decode($release['license']) ?>
 
 <?php else: ?>
-  <h2>Crédits</h2>
 
 Artwork by <a href="<?php echo url_for(sprintf('@artwork_artist_show?slug=%s#artwork_artist', $release['ArtworkArtist']['slug'])) ?>"><?php echo $release['ArtworkArtist']['name'] ?></a><br>
 <?php echo nl2br(html_entity_decode($release['credits'])) ?></p>
