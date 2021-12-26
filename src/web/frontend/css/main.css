@@ -57,6 +57,7 @@ src: url('../typo/pf_tempesta_seven.ttf');
 .header_news_2_closed,
 .header_news_2_closed_button,
 .open_releases_content,
+.header_nav_3_content,
 .infos_content,
 .footer_content,
 .release_content,
@@ -67,8 +68,6 @@ margin-left: auto;
 margin-right: auto;
 
 }
-
-
 
 
 .triangle img {position: absolute;top:-4.1px!important;display : none}
