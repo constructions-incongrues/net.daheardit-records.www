@@ -26,14 +26,7 @@
   <div class="grid_12">
 
 
-
-  </div>
-
-  <div class="grid_12">
-
-
-<div class="presentation">
-<ul class="open_releases_button">
+     <ul class="open_releases_button">
 <?php if ($previousRelease): ?>
       <li class="open_releases_button_left"> <a class="previous" href="<?php echo url_for('@release_show?slug='.$previousRelease['slug'].'#release') ?>" data-pjax="#content_async"> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/hack.png" title="<?php echo sprintf('[%s] %s', $previousRelease['sku'], $previousRelease['title' ]) ?>" /> </a></li>
 <?php endif; ?>
@@ -42,6 +35,13 @@
 <?php endif; ?>
       <li class="open_releases_button_close"> <a class="close" href="<?php echo url_for('@homepage#discography') ?>" data-close="#content_async" title="<?php echo __('Retourner à la liste des sorties') ?>"> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/hack.png" alt="Close" /> </a></li>
     </ul>
+  </div>
+
+  <div class="grid_12">
+
+  <p class="open_releases_press_text press credits">
+
+<div class="presentation">
       <h2 class="open_releases_artist">
       <span class="date_release"></span>
       <span class="sku"><?php echo $release['sku'] ?> / <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a> /
@@ -60,6 +60,7 @@
     <div class="grid_6 open_releases_artwork">
       <img id="carousel-current" height="460px" width="460px" src="<?php echo sprintf('//%s/thumbnail/_/500/500/crop/best%s', sfConfig::get('app_api_url_root'), $release['artworks'][0]) ?>" />
 <?php for ($i = 1; $i < count($release['artworks']); $i++): ?>
+      <p></p>
       <!-- <img height="460px" width="460px" src="<?php echo sprintf('//%s/thumbnail/_/500/500/crop/best%s', sfConfig::get('app_api_url_root'), $release['artworks'][$i]) ?>" /> -->
 <?php endfor ?>
      </ul>
