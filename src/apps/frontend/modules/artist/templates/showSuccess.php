@@ -7,8 +7,7 @@
 
 <div class="grid_12 open_artists"> 
   <div class="open_artists_content">
-  <div class="grid_12">
-
+  
    <ul class="open_artists_button">
 <?php if ($previousArtist): ?>
       <li class="open_releases_button_left"> <a class="previous" href="<?php echo url_for('@artist_show?slug='.$previousArtist['slug'].'#artist') ?>" data-pjax="#content_async"> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/hack.png" title="<?php echo $previousArtist['name'] ?>" /> </a></li>

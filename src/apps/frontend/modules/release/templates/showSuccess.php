@@ -21,6 +21,7 @@
       </div><!-- end of releases -->
 
 <div class="grid_12 open_releases">
+  <div class="open_releases_content">
 
      <ul class="open_releases_button">
 <?php if ($previousRelease): ?>
@@ -32,7 +33,6 @@
       <li class="open_releases_button_close"> <a class="close" href="<?php echo url_for('@homepage#discography') ?>" data-close="#content_async" title="<?php echo __('Retourner à la liste des sorties') ?>"> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/hack.png" alt="Close" /> </a></li>
     </ul>
  
-    <div class="open_releases_content">
 
 
 <div class="presentation">
