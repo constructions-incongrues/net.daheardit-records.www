@@ -45,7 +45,6 @@
       <h2 class="open_releases_artist">
       <span class="date_release"></span>
       <span class="sku"><?php echo $release['sku'] ?> / <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a> / 
-<?php if ($release['is_available']): ?>
 
     <?php foreach ($release['prices'] as $price): ?>
     <?php if (is_numeric($price['price'])): ?>
