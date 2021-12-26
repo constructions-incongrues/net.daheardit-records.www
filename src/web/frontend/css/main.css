@@ -1165,35 +1165,6 @@ border:none}
 ***************************************************************/
 
 
-.open_releases_reviews li
-{
-  display:inline;
-    margin:4px;
-
-}
-
-.open_releases_reviews li:first-child
-{
-  margin-left:10px;
-}
-.open_releases_reviews li a
-{
-  display:inline;
-  background-color:#E6E6E6;
-  color:#333333;
-  padding-bottom:5px;
-  padding-left:5px;
-  padding-right:5px;
-  padding-top:5px;
-  text-decoration:none;
-    margin-bottom:10px;
-}
-
-.open_releases_reviews li a:hover
-{
-background-color:#000;
-color:#FFF;
-}
 
 
 
@@ -1879,14 +1850,9 @@ float:right
 
   .reviews {
     color: #000;
-    font-size: 1rem;
-    padding: 10px;
-    margin: 15px 5px 5px 0px;
-    float: left;
-    display: inline-flex;
+    font-size: 1.5rem;
   }
 
-
-.reviews a {color:#000; text-transform:uppercase;text-decoration: none;font-size: 1rem;}
+.reviews a {color:#000; text-transform:uppercase;text-decoration: none;}
 .open_artists_bio a {float: right;}
 .presentation {background-color: #F9F9F9; padding:2%;width:95%;margin-top:56px}

@@ -129,6 +129,7 @@ Artwork by <a href="<?php echo url_for(sprintf('@artwork_artist_show?slug=%s#art
 
 
 <?php if (isset($release['press-releases']) && count($release['press-releases'])): ?>
+  <span class="presslink">Press</p>
     <ul class="open_releases_reviews">
   <?php foreach ($release['press-releases'] as $link): ?>
       <li><a href="<?php echo $link['url'] ?>"><?php echo basename($link['title']) ?></a></li>
