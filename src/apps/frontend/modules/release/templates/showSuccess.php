@@ -32,6 +32,10 @@
 <?php endif; ?>
       <li class="open_releases_button_close"> <a class="close" href="<?php echo url_for('@homepage#discography') ?>" data-close="#content_async" title="<?php echo __('Retourner à la liste des sorties') ?>"> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/hack.png" alt="Close" /> </a></li>
     </ul>
+ 
+
+  <div class="grid_12">
+
 
 <div class="presentation">
       <h2 class="open_releases_artist">
@@ -48,7 +52,6 @@
   <?php endforeach ?>
 <?php endif ?>
   </div>
-  
  </div>
     <div class="grid_6 open_releases_artwork">
       <img id="carousel-current" height="460px" width="460px" src="<?php echo sprintf('//%s/thumbnail/_/500/500/crop/best%s', sfConfig::get('app_api_url_root'), $release['artworks'][0]) ?>" />
