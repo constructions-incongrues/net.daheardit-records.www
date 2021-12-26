@@ -1848,10 +1848,11 @@ float:right
 }
 
 
-  .reviews {
+  .reviews, .credits {
      line-height: 28px;
      color:#666;
   }
+  .credits br {display: none;}
   .reviews a:hover {color:#000;}
 .reviews a {color:#29ABE2; padding:10px 0px 10px 0px; text-transform: lowercase; text-decoration: none;}
 .open_artists_bio a {float: right;}
