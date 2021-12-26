@@ -1850,6 +1850,7 @@ float:right
 
   .reviews {
      line-height: 28px;
+     color:#666;
   }
   .reviews a:hover {color:#000;}
 .reviews a {color:#29ABE2; padding:10px 0px 10px 0px; text-transform: lowercase; text-decoration: none;}
