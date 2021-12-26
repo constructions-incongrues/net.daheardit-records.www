@@ -557,8 +557,7 @@ font-weight:lighter;
 margin-left:20px;
 text-transform:uppercase;
 margin-bottom:5px;
-font-size:16px;
-font-size:1.6rem;
+font-size:1.5rem;
 text-align:left;
 }
 
@@ -1197,8 +1196,7 @@ h2.open_releases_artwork_credit a:hover {color:#000;}
 .open_artits_bio a:hover {color:#000;}
 h1.open_releases_title, h2.open_releases_title, h3.open_releases_title, h2.open_artists_title
 {
-font-size:16px;
-font-size:1.6rem;
+font-size:1.5rem;
 margin-left:10px;
 }
 
@@ -1254,8 +1252,7 @@ margin-top:10px;
 
 h2.open_releases_artist
 {
-  font-size: 30px;
-  font-size: 3rem;
+  font-size: 2.8rem;
   color: #000;
   padding:5px 0px 0px 0px;
 
@@ -1276,8 +1273,7 @@ h3.open_releases_album
 {
 
 color:#b2b2b2;
-font-size:33px;
-font-size:3.3rem;
+font-size:2.8rem;
 margin-top:-36px;
 margin-bottom: -0.5em;
 }
@@ -1381,7 +1377,7 @@ line-height:17px;
 {
   color: #000;
   padding-bottom: 0px;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   line-height: 28px;
   text-align: justify;
 }
@@ -1390,7 +1386,7 @@ line-height:17px;
 {
   color: #000;
   padding-bottom: 20px;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   line-height: 28px;
   text-align: justify;
   background-color: #F9F9F9;
@@ -1480,8 +1476,7 @@ text-align:right;
     margin-left: 0px;
     background-color: #0099FF;
     min-height: 30px;
-    font-size: 16px;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 2px;
@@ -1518,7 +1513,7 @@ text-align:right;
     color: #0099FF;
     text-decoration: none;
     font-weight: lighter;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     color: #FFF;
 }
 
@@ -1817,7 +1812,7 @@ input.button:focus {outline: none;}
 
 .writers {
  text-align: right;
-font-size: 1.6rem;
+font-size: 156rem;
 float: right;
 margin-right: -19px;
 background-color: #F9F9F9;
@@ -1857,4 +1852,4 @@ float:right
   .reviews a:hover, .credits a:hover {color:#000;}
 .reviews a, .credits a {color:#29ABE2; padding:10px 0px 10px 0px;  text-decoration: none;}
 .open_artists_bio a {float: right;}
-.presentation {background-color: #F9F9F9; padding:2%;width:95%;font-size:1.6rem;margin-top: -20px;}
+.presentation {background-color: #F9F9F9; padding:2%;width:95%;font-size:1.5rem;margin-top: -20px;}
