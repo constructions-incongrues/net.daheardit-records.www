@@ -52,7 +52,7 @@
  
 
 <?php foreach ($release['press'] as $link): ?>
-      <span class="reviews"> <a href="<?php echo $link['url'] ?>"><?php echo basename($link['title']) ?></a> </span>
+      <span class="reviews"> Press : <a href="<?php echo $link['url'] ?>"><?php echo basename($link['title']) ?></a> </span>
   <?php endforeach ?>
 <?php endif ?>
   </div>
@@ -130,7 +130,6 @@ Artwork by <a href="<?php echo url_for(sprintf('@artwork_artist_show?slug=%s#art
 
 <?php if (isset($release['press-releases']) && count($release['press-releases'])): ?>
     <ul class="open_releases_reviews">
-      <li> Press : </p>
   <?php foreach ($release['press-releases'] as $link): ?>
       <li><a href="<?php echo $link['url'] ?>"><?php echo basename($link['title']) ?></a>d</li>
   <?php endforeach ?>
