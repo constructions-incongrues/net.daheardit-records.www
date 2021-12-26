@@ -1874,15 +1874,7 @@ font-size: 1.5rem;
 .sku, .date_release {      
 
   color: #666;
-  padding: 0;
-  top: 32px;
-  bottom: 0;
-  left: 0px;
-  position: absolute;
-  width: 200px;
-  font-size: 2rem;
-  text-transform: uppercase;
-  font-style: none;
+
 }
 
 
