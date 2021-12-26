@@ -50,7 +50,7 @@
 <a href="<?php echo url_for(sprintf('@artist_show?slug=%s#artist', $release['Artist']['slug'])) ?>"><br /><?php echo $release['Artist']['name'] ?></a>  <?php echo $release['title'] ?> </h2>
 <?php echo nl2br(html_entity_decode($release['Translation'][$sf_user->getCulture()]['presentation'])) ?>
 <?php if (count($release['press'])): ?>
-<p>class="credits">Artwork par <a href="<?php echo url_for(sprintf('@artwork_artist_show?slug=%s#artwork_artist', $release['ArtworkArtist']['slug'])) ?>">  <?php echo $release['ArtworkArtist']['name'] ?></a>  <br>
+<p class="credits">Artwork par <a href="<?php echo url_for(sprintf('@artwork_artist_show?slug=%s#artwork_artist', $release['ArtworkArtist']['slug'])) ?>">  <?php echo $release['ArtworkArtist']['name'] ?></a>  <br>
 <?php echo nl2br(html_entity_decode($release['credits'])) ?> </p> 
 <span class="reviews">reviews :</span>
 <?php foreach ($release['press'] as $link): ?>
