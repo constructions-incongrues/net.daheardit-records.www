@@ -1850,9 +1850,10 @@ float:right
 
   .reviews {
     color: #000;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
+    margin-left: -10px;
   }
 
-.reviews a {color:#000; text-transform:uppercase;text-decoration: none;}
+.reviews a {color:#000; padding:10px; text-decoration: none;}
 .open_artists_bio a {float: right;}
 .presentation {background-color: #F9F9F9; padding:2%;width:95%;margin-top:56px}
