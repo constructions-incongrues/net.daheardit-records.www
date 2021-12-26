@@ -39,7 +39,6 @@
 
   <div class="grid_12">
 
-  <p class="open_releases_press_text press credits">
 
 <div class="presentation">
       <h2 class="open_releases_artist">
