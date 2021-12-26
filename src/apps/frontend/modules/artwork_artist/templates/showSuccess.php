@@ -9,10 +9,6 @@
   <div class="open_artists_content">
 
   <div class="grid_12">
-
-<div class="presentation">
-    <h1 class="open_artists_name"><?php echo $artist['name'] ?> </h1>
-
   <ul class="open_artists_button">
 <?php if ($previousArtist): ?>
       <li class="open_releases_button_left"> <a class="previous" href="<?php echo url_for('@artwork_artist_show?slug='.$previousArtist['slug'].'#artwork_artist') ?>" data-pjax="#content_async"> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/hack.png" title="<?php echo $previousArtist['name'] ?>" /> </a></li>
@@ -23,6 +19,14 @@
 <?php endif; ?>
       <li class="open_releases_button_close"> <a class="close" href="<?php echo url_for('@homepage#artwork_artists') ?>" data-close="#content_async" title="<?php echo __('Retourner à la liste des graphistes') ?>"> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/hack.png" alt="Close" /> </a></li>
     </ul>
+    </div>
+
+<div class="grid_12">
+
+<div class="presentation">
+    <h1 class="open_artists_name"><?php echo $artist['name'] ?> </h1>
+
+
     <p class="open_artists_bio">
       <?php echo auto_link_text(nl2br($artist['Translation'][$sf_user->getCulture()]['presentation'])) ?>
       <?php if ($artist['url']): ?>
