@@ -53,7 +53,6 @@
       </span>
     </p>
 
-      </div>
     <?php foreach ($artist['releases'] as $release): ?>
        <div class="open_artists_listing_releases ">
            <span>
@@ -67,5 +66,12 @@
         </span>
 
 <?php endforeach; ?>
- 
+  </div>
+    </div>
   
+
+    
+
+  </div><!-- enf of release_content -->
+  </div><!-- end of grid_12 release_open -->
+  </div>
