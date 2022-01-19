@@ -64,8 +64,8 @@
   <?php endforeach ?>
 <?php endif ?>
 
+<div class="grid_12">
     <div class="grid_6 open_releases_infos">
-<div class="open_releases_press_text">
   <?php echo html_entity_decode($release['player_code']) ?>
   </div>
   <div class="grid_6 open_releases_infos2">
@@ -110,6 +110,7 @@ Artwork by <a href="<?php echo url_for(sprintf('@artwork_artist_show?slug=%s#art
 
 <?php endif ?>
     </p>
+</div>
 </div>
 </div>
 
