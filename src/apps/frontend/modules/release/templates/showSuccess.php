@@ -42,7 +42,7 @@
 
       <?php echo $release['released_at'] ?> </span> 
 <a href="<?php echo url_for(sprintf('@artist_show?slug=%s#artist', $release['Artist']['slug'])) ?>"><br /><?php echo $release['Artist']['name'] ?></a>  <?php echo $release['title'] ?> </h2>
-<img id="carousel-current" height="30%" width="40%" style="float:left;padding:9px 20px 0px 0px" src="<?php echo sprintf('//%s/thumbnail/_/500/500/crop/best%s', sfConfig::get('app_api_url_root'), $release['artworks'][0]) ?>" />
+<img id="carousel-current" height="30%" width="30%" style="float:left;padding:9px 20px 0px 0px" src="<?php echo sprintf('//%s/thumbnail/_/500/500/crop/best%s', sfConfig::get('app_api_url_root'), $release['artworks'][0]) ?>" />
 <p class="text-bio"><?php echo nl2br(html_entity_decode($release['Translation'][$sf_user->getCulture()]['presentation'])) ?>
 </p>
  </div>
