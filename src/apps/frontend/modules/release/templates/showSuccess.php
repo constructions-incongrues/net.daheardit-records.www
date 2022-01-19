@@ -46,10 +46,7 @@
 <p class="text-bio"><?php echo nl2br(html_entity_decode($release['Translation'][$sf_user->getCulture()]['presentation'])) ?>
 <?php if (count($release['press'])): ?>
 <span>reviews :</span>
-<?php foreach ($release['press'] as $link): ?>
-        <span class="reviews"> <a href="<?php echo $link['url'] ?>"><?php echo basename($link['title']) ?></a> / </span>
-  <?php endforeach ?>
-<?php endif ?>
+
 </p>
  </div>
     <div class="grid_12 open_releases_artwork">
@@ -102,9 +99,13 @@
   <p class="open_releases_download_licence">
 <?php if ($release['license']): ?>
     <?php echo html_entity_decode($release['license']) ?>
-
+<?php endif ?>
 <?php else: ?>
 
+  <?php foreach ($release['press'] as $link): ?>
+        <span class="reviews"> <a href="<?php echo $link['url'] ?>"><?php echo basename($link['title']) ?></a> / </span>
+  <?php endforeach ?>
+<?php endif ?>
 Artwork by <a href="<?php echo url_for(sprintf('@artwork_artist_show?slug=%s#artwork_artist', $release['ArtworkArtist']['slug'])) ?>"><?php echo $release['ArtworkArtist']['name'] ?></a><br>
 <?php echo nl2br(html_entity_decode($release['credits'])) ?></p>
 
