@@ -26,7 +26,22 @@
 
     </div>
 
-  <div class="presentation">
+    <div class="grid_6 open_artists_pictures">
+      <img id="carousel-current" height="460px" width="460px" src="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/artists/<?php echo $artist['slug'] ?>/<?php echo $artist['slug'] ?>_300x300.jpg" alt="" /> 
+<?php if (count($artist['links_carousel'])): ?>
+  <?php for ($i = 0; $i < count($artist['links_carousel']); ++$i): ?>
+        <li>
+          <a class="carousel-nav" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/<?php echo $artist['links_carousel'][$i] ?>" title="<?php echo __("Survolez l'image pour mettre le carousel en pause") ?>">
+            <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/caroussel-release.png" />
+          </a>
+        </li>
+  <?php endfor ?>
+<?php endif; ?>
+     </ul>
+
+    </div><!-- end of grid_6 -->
+
+  <div class=" grid_6 presentation">
     <h1 class="open_artists_name"><?php echo $artist['name'] ?></h1>
 
     <p class="open_artists_bio">
@@ -53,20 +68,7 @@
   </div>
     </div>
   
-    <div class="grid_6 open_artists_pictures">
-      <img id="carousel-current" height="460px" width="460px" src="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/artists/<?php echo $artist['slug'] ?>/<?php echo $artist['slug'] ?>_300x300.jpg" alt="" /> 
-<?php if (count($artist['links_carousel'])): ?>
-  <?php for ($i = 0; $i < count($artist['links_carousel']); ++$i): ?>
-        <li>
-          <a class="carousel-nav" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/<?php echo $artist['links_carousel'][$i] ?>" title="<?php echo __("Survolez l'image pour mettre le carousel en pause") ?>">
-            <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/caroussel-release.png" />
-          </a>
-        </li>
-  <?php endfor ?>
-<?php endif; ?>
-     </ul>
 
-    </div><!-- end of grid_6 -->
     
 
   </div><!-- enf of release_content -->
