@@ -39,6 +39,7 @@
      </ul>
 
   <div class="presentation">
+  <div class="open_artists_listing_releases "> 
 
     <h1 class="open_artists_name"><?php echo $artist['name'] ?></h1>
 
@@ -59,7 +60,6 @@
 
 
 
-    <div class="open_artists_listing_releases "> 
     <div class="row">
 
     <?php foreach ($artist['releases'] as $release): ?>
