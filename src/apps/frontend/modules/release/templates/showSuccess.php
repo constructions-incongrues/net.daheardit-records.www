@@ -100,6 +100,9 @@
 </ul>
   </p>
   <?php echo html_entity_decode($release['player_code']) ?>
+
+  <div class="grid_6 open_releases_infos">
+
   <p class="open_releases_download_licence">
 <?php if ($release['license']): ?>
     <?php echo html_entity_decode($release['license']) ?>
@@ -111,7 +114,7 @@ Artwork by <a href="<?php echo url_for(sprintf('@artwork_artist_show?slug=%s#art
 
 <?php endif ?>
     </p>
-
+</div>
 </div>
 
 
