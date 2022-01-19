@@ -71,7 +71,7 @@
   </div>
     </div>
 
-
+    </div>
     <?php endforeach; ?></div>
 
   </div><!-- enf of release_content -->
