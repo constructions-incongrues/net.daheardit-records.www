@@ -1610,7 +1610,19 @@ h1.open_artists_name
 width:220px;
 background-color:#000;
 
-float:left!important;
+display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+.column {
+  flex: 50%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
 }
 .open_artists_listing_releases_container{width: 600px; height: 500px;}
 
