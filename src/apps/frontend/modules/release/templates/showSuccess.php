@@ -108,15 +108,16 @@
 <?php else: ?>
 
 Artwork by <a href="<?php echo url_for(sprintf('@artwork_artist_show?slug=%s#artwork_artist', $release['ArtworkArtist']['slug'])) ?>"><?php echo $release['ArtworkArtist']['name'] ?></a><br>
-<?php echo nl2br(html_entity_decode($release['credits'])) ?></p>
-
-<?php endif ?>
+<?php echo nl2br(html_entity_decode($release['credits'])) ?>
+</p>
 <?php if (count($release['press'])): ?>
 <span>reviews :</span>
 <?php foreach ($release['press'] as $link): ?>
         <span class="reviews"> <a href="<?php echo $link['url'] ?>"><?php echo basename($link['title']) ?></a> / </span>
   <?php endforeach ?>
 <?php endif ?>
+<?php endif ?>
+
     </p>
 </div>
 </div>
