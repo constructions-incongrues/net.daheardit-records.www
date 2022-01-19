@@ -1191,7 +1191,7 @@ font-weight: lighter;}
 h2.open_releases_artwork_credit a {color:#666;font-weight: lighter;}
 h2.open_releases_artwork_credit a:hover {color:#000;}
 
-.open_releases_artwork_credit a,  .open_artists_bio a {color:#29ABE2;font-weight:bold;text-decoration: none;}
+.open_releases_artwork_credit a,  .open_artists_bio a {padding: 2% 0% 0% 0%;color:#29ABE2;font-weight:bold;text-decoration: none;}
 .open_artits_bio a:hover {color:#000;}
 h1.open_releases_title, h2.open_releases_title, h3.open_releases_title, h2.open_artists_title
 {
@@ -1410,7 +1410,7 @@ ul.open_releases_button, ul.open_artists_button
 float: right;
 z-index:500;
 position: relative;
-top:-20px;
+top:-40px;
 height: 0px;
 }
 
