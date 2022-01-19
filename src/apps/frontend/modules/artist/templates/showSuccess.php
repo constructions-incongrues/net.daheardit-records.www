@@ -47,7 +47,9 @@
     <span class="text-bio">
       <?php echo nl2br($artist['Translation'][$sf_user->getCulture()]['presentation']) ?>
       <?php if ($artist['url']): ?>
-      <a href="<?php echo $artist['url'] ?>"><?php echo $artist['url'] ?>
+      <a href="<?php echo $artist['url'] ?>">
+        <?php echo $artist['url'] ?>
+      </a>
       <?php endif ?>
     
       </span>
