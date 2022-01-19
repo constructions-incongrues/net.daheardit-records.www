@@ -1512,7 +1512,7 @@ ul.open_releases_button, ul.open_artists_button
 
     text-decoration: none;
     font-weight: lighter;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: #29abe2;
 }
 
@@ -1828,7 +1828,7 @@ width: 101.9%;
     font-size: 1.5rem;
     background-color: #FFF;
     padding: 4% 2% 4% 3%;
-    margin-top: -10px;
+    margin-top: -20px;
     margin-left: 0px;
     border-left: 1px solid #eee;
     border-bottom: 1px solid #eee;
@@ -1854,7 +1854,7 @@ float:right
 .reviews a, .credits a {color:#29ABE2; padding:10px 0px 10px 0px;  text-decoration: none;}
 .open_artists_bio a {float: right;}
 .text-bio {text-align: justify;}
-.presentation {background-color: #F9F9F9; padding:2%;font-size:1.5rem;margin-top:50px;min-height: 450px;}
+.presentation {background-color: #F9F9F9; padding:2%;font-size:1.5rem;margin-top:70px;min-height: 450px;}
 
 #nonartarea {
   border-left: 1px solid #eee!important;
