@@ -73,5 +73,4 @@
     
 
   </div><!-- enf of release_content -->
-  </div><!-- end of grid_12 release_open -->
-  </div>
+  
