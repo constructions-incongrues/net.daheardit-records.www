@@ -765,7 +765,7 @@ background-color:#29ABE2;
   letter-spacing: 1px;
 }
 
-.artists_listing_all,.open_releases,.open_artists
+.artists_listing_all,.open_releases,.open_artists, .open_releases_content
 {
 background-image:url(../pics/pattern/pat-bg.png);
 background-repeat:repeat;
