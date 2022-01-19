@@ -1820,9 +1820,8 @@ width: 101.9%;
     background-color: #FFF;
     padding: 2%;
     margin-left: 0px;
-    border-left: 1px solid #eee;
-    border-bottom: 1px solid #eee;
-    border-right: 1px solid #eee;
+    border: 1px solid #eee;
+ 
 }
 
 .open_releases_download_licence a, .writers a, .writers2 a
@@ -1844,7 +1843,8 @@ float:right
 .reviews a, .credits a {color:#29ABE2; padding:10px 0px 10px 0px;  text-decoration: none;}
 .open_artists_bio a {float: right;}
 .text-bio {text-align: justify;}
-.presentation {background-color: #F9F9F9; padding:2%;font-size:1.5rem;margin-top:70px;min-height: 550px;}
+.presentation {background-color: #F9F9F9; padding:2%;font-size:1.5rem;margin-top:70px;min-height: 550px;    border: 1px solid #eee;
+}
 
 #nonartarea {
   border-left: 1px solid #eee!important;
