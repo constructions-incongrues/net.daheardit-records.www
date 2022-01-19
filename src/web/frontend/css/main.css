@@ -770,7 +770,7 @@ background-color:#29ABE2;
 background-image:url(../pics/pattern/pat-bg.png);
 background-repeat:repeat;
 background-color:#f2f2f2;
-padding : 30PX 0PX 30PX 0PX;
+padding : 20PX 0PX 20PX 0PX;
 }
 .artwork_artist {
   background-color: #000;
@@ -1407,11 +1407,10 @@ opacity: 1;
 
 ul.open_releases_button, ul.open_artists_button
 {
-float: right;
-z-index:500;
-position: relative;
-top:-50px;
-height: 0px;
+  float: right;
+  z-index: 500;
+  position: relative;
+  margin-top: -20px;
 }
 
 .open_releases_button li, .open_artists_button li
@@ -1514,7 +1513,7 @@ height: 0px;
 
     text-decoration: none;
     font-weight: lighter;
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: #29abe2;
 }
 
