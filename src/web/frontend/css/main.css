@@ -1863,7 +1863,7 @@ float:right
   .reviews a:hover, .credits a:hover {color:#000;}
 .reviews a, .credits a {color:#29ABE2; padding:10px 0px 10px 0px;  text-decoration: none;}
 .open_artists_bio a {float: right;}
-.text-bio {width: 70%;}
+.text-bio {text-align: justify;}
 .presentation {background-color: #F9F9F9; padding:2%;font-size:1.5rem;margin-top:50px;}
 
 #nonartarea {
