@@ -64,8 +64,7 @@
   <?php endforeach ?>
 <?php endif ?>
 
-<div class="grid_12">
-    <div class="grid_6 open_releases_infos">
+    <div class="grid_12 open_releases_infos">
   <?php echo html_entity_decode($release['player_code']) ?>
   </div>
   <div class="grid_6 open_releases_infos2">
