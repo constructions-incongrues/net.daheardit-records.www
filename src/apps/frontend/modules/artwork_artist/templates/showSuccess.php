@@ -21,7 +21,6 @@
     </ul>
     </div>
 
-<div class="grid_12">
 
 <div class="presentation">
     <h1 class="open_artists_name"><?php echo $artist['name'] ?> </h1>
