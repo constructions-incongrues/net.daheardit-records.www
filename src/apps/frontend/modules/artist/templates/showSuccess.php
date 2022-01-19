@@ -58,14 +58,9 @@
 
     <?php foreach ($artist['releases'] as $release): ?>
        <div class="open_artists_listing_releases "> 
-       <div class="column">
-                <a data-pjax="#content_async" href="<?php echo url_for(sprintf('@release_show?slug=%s#release', $release['slug'])) ?>">
-
-                    <img width="220px" height="220px" src="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/releases/<?php echo $release['slug'] ?>/<?php echo $release['slug'] ?>_300x300.png" alt=""/>
-       
-           
-                  </div>
-  </div>
+                <div><a data-pjax="#content_async" href="<?php echo url_for(sprintf('@release_show?slug=%s#release', $release['slug'])) ?>">
+                 <img width="220px" height="220px" src="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/releases/<?php echo $release['slug'] ?>/<?php echo $release['slug'] ?>_300x300.png" alt=""/>
+    </div>
     </div>
   
 <?php endforeach; ?>
