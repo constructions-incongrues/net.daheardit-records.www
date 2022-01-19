@@ -24,7 +24,7 @@
 <div class="presentation">
     <h1 class="open_artists_name"><?php echo $artist['name'] ?> </h1>
 
-    <img id="carousel-current" height="30%" width="40%" style="float:left;padding:9px 20px 0px 0px"  src="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/artwork_artists/<?php echo $artist['slug'] ?>/<?php echo $artist['slug'] ?>_300x300.jpg" alt="" /> 
+    <img id="carousel-current" height="30%" width="30%" style="float:left;padding:9px 20px 0px 0px"  src="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/artwork_artists/<?php echo $artist['slug'] ?>/<?php echo $artist['slug'] ?>_300x300.jpg" alt="" /> 
      
     <p class="open_artists_bio">
       <?php echo auto_link_text(nl2br($artist['Translation'][$sf_user->getCulture()]['presentation'])) ?>
