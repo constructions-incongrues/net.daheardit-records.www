@@ -1501,11 +1501,13 @@ ul.open_releases_button, ul.open_artists_button
 
 .open_releases_buy a
 {
-
+    margin-top: 20px;
     text-decoration: none;
     font-weight: lighter;
     font-size: 1.5rem;
-    color: #29abe2;
+    background-color: #29abe2;
+    color: #FFF;
+    padding:2%;
 }
 
 
@@ -1801,7 +1803,6 @@ font-size: 1.5rem;
 float: right;
 margin-right: -19px;
 background-color: #F9F9F9;
-padding: 10px 10px 20px 10px;
 width: 101.9%;
 }
 .writers2
