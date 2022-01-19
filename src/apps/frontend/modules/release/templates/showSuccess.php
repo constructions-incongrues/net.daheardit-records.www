@@ -70,7 +70,22 @@
 
     <div class="grid_12 open_releases_infos">
 <div class="open_releases_press_text">
-<p class="open_releases_buy">
+<span class="grid_8">
+  <?php echo html_entity_decode($release['player_code']) ?>
+  <p class="open_releases_download_licence">
+<?php if ($release['license']): ?>
+    <?php echo html_entity_decode($release['license']) ?>
+
+<?php else: ?>
+
+Artwork by <a href="<?php echo url_for(sprintf('@artwork_artist_show?slug=%s#artwork_artist', $release['ArtworkArtist']['slug'])) ?>"><?php echo $release['ArtworkArtist']['name'] ?></a><br>
+<?php echo nl2br(html_entity_decode($release['credits'])) ?></p>
+
+<?php endif ?>
+    </p>
+</span>
+</div>
+<p class=" grid_4 open_releases_buy">
 
 <?php if ($release['is_available']): ?>
     <!-- <span style="font-weight: bold;">Acheter :</span> -->
@@ -99,20 +114,7 @@
 <?php endif ?>
 </ul>
   </p>
-  <?php echo html_entity_decode($release['player_code']) ?>
-  <p class="open_releases_download_licence">
-<?php if ($release['license']): ?>
-    <?php echo html_entity_decode($release['license']) ?>
 
-<?php else: ?>
-
-Artwork by <a href="<?php echo url_for(sprintf('@artwork_artist_show?slug=%s#artwork_artist', $release['ArtworkArtist']['slug'])) ?>"><?php echo $release['ArtworkArtist']['name'] ?></a><br>
-<?php echo nl2br(html_entity_decode($release['credits'])) ?></p>
-
-<?php endif ?>
-    </p>
-
-</div>
 
 
     
