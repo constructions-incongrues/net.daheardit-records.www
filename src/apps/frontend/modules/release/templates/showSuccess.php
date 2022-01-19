@@ -38,7 +38,7 @@
 <div class="presentation">
       <h2 class="open_releases_artist">
       <span class="date_release"></span>
-      <span class="sku"><?php echo $release['sku'] ?> / <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a> /
+      <span class="sku"><?php echo $release['sku'] ?> / <?php echo $release['licence'] ?>  /
 
       <?php echo $release['released_at'] ?> </span> 
 <a href="<?php echo url_for(sprintf('@artist_show?slug=%s#artist', $release['Artist']['slug'])) ?>"><br /><?php echo $release['Artist']['name'] ?></a>  <?php echo $release['title'] ?> </h2>
