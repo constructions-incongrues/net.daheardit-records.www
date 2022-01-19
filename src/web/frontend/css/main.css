@@ -1102,7 +1102,6 @@ body {
 
   .row {
     display: flex;
-    align-items: right;
   }
   
   .column {
