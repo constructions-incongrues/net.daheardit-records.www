@@ -1410,7 +1410,7 @@ ul.open_releases_button, ul.open_artists_button
 float: right;
 z-index:500;
 position: relative;
-top:-60px;
+top:-20px;
 height: 0px;
 }
 
