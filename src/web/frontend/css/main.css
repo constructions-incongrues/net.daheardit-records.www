@@ -1472,7 +1472,7 @@ ul.open_releases_button, ul.open_artists_button
     font-weight: bold;
     letter-spacing: 2px;
     padding: inherit;
-    padding: 2%;
+    padding: 4% 2%;
     border-left: 1px solid #eee!important;
   border-top: 1px solid #eeee!important;
   border-right: 1px solid #eee!important;
@@ -1507,7 +1507,7 @@ ul.open_releases_button, ul.open_artists_button
     font-size: 1.5rem;
     background-color: #29abe2;
     color: #FFF;
-    padding:4% 2%;
+    padding: 2%;
 }
 
 
