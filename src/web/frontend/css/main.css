@@ -1099,11 +1099,12 @@ body {
   margin-top : 20px;
   }
   .open_artists_artwork_listing_releases, .open_artists_listing_releases {
-  width : 220px;
-  display : flex;
-  flex-wrap : wrap;
-  padding : 0 4px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
   }
+
+  /*
   .column {
   flex : 50%;
   padding : 0 4px;
@@ -1112,7 +1113,7 @@ body {
   margin-top : 8px;
   vertical-align : middle;
   }
-
+*/
 
   .open_artists_listing_releases h2 {
   margin-top : -25px;
