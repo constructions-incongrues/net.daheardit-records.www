@@ -53,6 +53,7 @@
       </span>
     </p>
 
+      </div>
     <?php foreach ($artist['releases'] as $release): ?>
        <div class="open_artists_listing_releases ">
            <span>
