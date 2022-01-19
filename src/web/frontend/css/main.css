@@ -1117,12 +1117,7 @@ body {
   width : 600px;
   height : 500px;
   }
-  .open_artists_listing_releases {
-  width : 220px;
-  background-color : #FFF;
-  float : left;
-  position : relative;
-  }
+
   .open_artists_listing_releases h2 {
   margin-top : -25px;
   }
