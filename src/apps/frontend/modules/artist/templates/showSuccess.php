@@ -5,6 +5,11 @@
         </div><!-- end of category contents --> 
       </div><!-- end of releases -->
 
+      <div class="grid_12 open_artists">
+  <div class="open_artists_content">
+
+  <div class="grid_12">
+      
 <div class="grid_12 open_artists"> 
   <div class="open_artists_content">
   
@@ -21,8 +26,6 @@
 
     </div>
 
-  <div class="grid_12">
-  <div class="grid_12">
   <div class="presentation">
     <h1 class="open_artists_name"><?php echo $artist['name'] ?></h1>
 
@@ -45,14 +48,13 @@
                     <h2 style="margin-bottom:0px;"><a data-pjax="#content_async" title="<?php echo sprintf('%s - %s', $artist['name'], $release['title']) ?>" href="<?php echo url_for(sprintf('@release_show?slug=%s#release', $release['slug'])) ?>"><?php echo truncate_text(sprintf('%s', $artist['name'], $release['title']), 35) ?></a></h2>
                 </a>
         </span>
-    </div>
 
 <?php endforeach; ?>
   </div>
     </div>
   
     <div class="grid_6 open_artists_pictures">
-      <!-- <img id="carousel-current" height="460px" width="460px" src="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/artists/<?php echo $artist['slug'] ?>/<?php echo $artist['slug'] ?>_300x300.jpg" alt="" /> -->
+      <img id="carousel-current" height="460px" width="460px" src="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/artists/<?php echo $artist['slug'] ?>/<?php echo $artist['slug'] ?>_300x300.jpg" alt="" /> 
 <?php if (count($artist['links_carousel'])): ?>
   <?php for ($i = 0; $i < count($artist['links_carousel']); ++$i): ?>
         <li>
@@ -66,10 +68,7 @@
 
     </div><!-- end of grid_6 -->
     
-    <div class="grid_6 open_artists_infos">
 
-   
-
-    </div><!-- end of grid_6 -->
   </div><!-- enf of release_content -->
   </div><!-- end of grid_12 release_open -->
+  </div>
