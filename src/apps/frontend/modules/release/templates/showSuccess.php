@@ -99,6 +99,14 @@
 <?php endif ?>
 </ul>
   </p>
+
+  <?php if (isset($release['press-releases']) && count($release['press-releases'])): ?>
+    <ul class="open_releases_reviews">
+  <?php foreach ($release['press-releases'] as $link): ?>
+      <li><a href="<?php echo $link['url'] ?>"><?php echo basename($link['title']) ?></a>d</li>
+  <?php endforeach ?>
+    </ul>
+<?php endif ?>
   <p class="open_releases_download_licence">
 <?php if ($release['license']): ?>
     <?php echo html_entity_decode($release['license']) ?>
@@ -117,13 +125,7 @@ Artwork by <a href="<?php echo url_for(sprintf('@artwork_artist_show?slug=%s#art
 </p>
 
 
-<?php if (isset($release['press-releases']) && count($release['press-releases'])): ?>
-    <ul class="open_releases_reviews">
-  <?php foreach ($release['press-releases'] as $link): ?>
-      <li><a href="<?php echo $link['url'] ?>"><?php echo basename($link['title']) ?></a>d</li>
-  <?php endforeach ?>
-    </ul>
-<?php endif ?>
+
 
 
 

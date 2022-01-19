@@ -1483,7 +1483,7 @@ height: 0px;
     letter-spacing: 2px;
     padding: inherit;
     margin-bottom: 0px;
-    padding: 2Px;
+    padding: 2%;
     border-left: 1px solid #eee!important;
   border-top: 1px solid #eeee!important;
   border-right: 1px solid #eee!important;
@@ -1592,7 +1592,7 @@ margin-top:10px;}
 }
 
 .open_releases_infos {float:left}
-.open_releases_infos2 {float: right;}
+.open_releases_infos2 {float: right;margin:-10px;}
 /* OPEN ARTISTS
 ***************************************************************/
 
