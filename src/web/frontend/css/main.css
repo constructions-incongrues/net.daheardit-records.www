@@ -1100,7 +1100,6 @@ body {
   }
   .open_artists_artwork_listing_releases, .open_artists_listing_releases {
   width : 220px;
-  background-color : #000;
   display : flex;
   flex-wrap : wrap;
   padding : 0 4px;
@@ -1113,10 +1112,7 @@ body {
   margin-top : 8px;
   vertical-align : middle;
   }
-  .open_artists_listing_releases_container {
-  width : 600px;
-  height : 500px;
-  }
+
 
   .open_artists_listing_releases h2 {
   margin-top : -25px;
