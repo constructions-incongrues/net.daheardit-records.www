@@ -132,7 +132,7 @@
 
 
 
-          <div id="informations" class="grid_5 infos_descr">
+          <div id="informations" class=" infos_descr">
 
           <div class="documentaryembed">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/e8UoUJha3zw?controls=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
