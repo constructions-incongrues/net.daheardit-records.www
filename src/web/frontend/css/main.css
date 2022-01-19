@@ -1410,7 +1410,7 @@ ul.open_releases_button, ul.open_artists_button
 float: right;
 z-index:500;
 position: relative;
-top:-10px;
+top:-60px;
 height: 0px;
 }
 
@@ -1476,14 +1476,13 @@ height: 0px;
     color: #FFF;
     margin-left: 0px;
     background-color: #0099FF;
-    min-height: 30px;
+    height: 30px;
     font-size: 1.5rem;
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 2px;
     text-align: center;
     padding: inherit;
-    padding: 4px;
     margin-bottom: 0px;
     margin-top: 20px;
   }
