@@ -67,9 +67,9 @@
 </a>
   </div>
     </div>
+    </div><?php endforeach; ?>
+
     </div>
-    </div>
-<?php endforeach; ?>
 
   </div><!-- enf of release_content -->
   </div><!-- end of grid_12 release_open -->
