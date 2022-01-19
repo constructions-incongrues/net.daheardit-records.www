@@ -26,8 +26,7 @@
 
     </div>
 
-    <!-- <div class=" open_artists_pictures">
-      <img id="carousel-current" height="460px" width="460px" src="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/artists/<?php echo $artist['slug'] ?>/<?php echo $artist['slug'] ?>_300x300.jpg" alt="" /> 
+    <div class=" open_artists_pictures">
 <?php if (count($artist['links_carousel'])): ?>
   <?php for ($i = 0; $i < count($artist['links_carousel']); ++$i): ?>
         <li>
@@ -37,12 +36,11 @@
         </li>
   <?php endfor ?>
 <?php endif; ?>
-     </ul> -->
+     </ul>
 
   <div class="presentation">
 
     <h1 class="open_artists_name"><?php echo $artist['name'] ?></h1>
-      <img id="carousel-current" height="460px" width="460px" src="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/artists/<?php echo $artist['slug'] ?>/<?php echo $artist['slug'] ?>_300x300.jpg" alt="" /> 
 
     <p class="open_artists_bio">
       
@@ -50,6 +48,9 @@
       <?php if ($artist['url']): ?>
       <a href="<?php echo $artist['url'] ?>"><?php echo $artist['url'] ?>
       <?php endif ?>
+
+      <img height="30%" width="30%" src="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/artists/<?php echo $artist['slug'] ?>/<?php echo $artist['slug'] ?>_300x300.jpg" alt="" /> 
+
     </p>
 
     <?php foreach ($artist['releases'] as $release): ?>
