@@ -52,11 +52,6 @@
       <!-- <img height="460px" width="460px" src="<?php echo sprintf('//%s/thumbnail/_/500/500/crop/best%s', sfConfig::get('app_api_url_root'), $release['artworks'][$i]) ?>" /> -->
 <?php endfor ?>
 
-<?php if (count($release['videos'])): ?>
-  <?php foreach ($release['videos'] as $video): ?>
-    <iframe width="100%" height="250" src="<?php echo $video ?>" frameborder="0" allowfullscreen></iframe>
-  <?php endforeach ?>
-<?php endif ?>
 
     <div class="grid_12 open_releases_infos">
       <div class="grid_6">  <?php echo html_entity_decode($release['player_code']) ?>
@@ -116,6 +111,13 @@ Artwork by <a href="<?php echo url_for(sprintf('@artwork_artist_show?slug=%s#art
   <?php endforeach ?>
 <?php endif ?>
 </p>
+
+<?php if (count($release['videos'])): ?>
+  <?php foreach ($release['videos'] as $video): ?>
+    <iframe width="100%" height="250" src="<?php echo $video ?>" frameborder="0" allowfullscreen></iframe>
+  <?php endforeach ?>
+<?php endif ?>
+
 
 <?php endif ?>
 
