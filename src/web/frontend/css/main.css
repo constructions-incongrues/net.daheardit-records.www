@@ -1098,16 +1098,15 @@ body {
   color : #000;
   margin-top : 20px;
   }
-  .open_artists_artwork_listing_releases, .open_artists_listing_releases {
+  .open_artists_artwork_listing_releases, .open_artists_listing_releases {}
 
-      display: grid; 
-      grid-auto-columns: 1fr 1fr; 
-      grid-template-columns: auto auto auto; 
-      grid-template-rows: 1fr; 
-      gap: 0px 0px; 
-      grid-template-areas: 
-        ". . ."; 
-    
+  .row {
+    display: flex;
+  }
+  
+  .column {
+    flex: 33.33%;
+    padding: 5px;
   }
 
   /*
