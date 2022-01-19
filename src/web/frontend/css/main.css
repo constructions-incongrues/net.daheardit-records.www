@@ -1389,7 +1389,6 @@ line-height:17px;
   line-height: 28px;
   text-align: justify;
   background-color: #F9F9F9;
-   width:95%;
 }
 
 .open_releases_press_text a /*.open_releases_artwork_credit a*/
@@ -1619,11 +1618,9 @@ h1.open_artists_name
 {
 width:220px;
 background-color:#000;
-padding-bottom:0px;
-margin:10px 10px 10px 10px;
+
 float:left!important;
 }
-.open_artists_listing_releases_container{width: 600px; height: 500px;}
 
 .open_artists_listing_releases
 {
