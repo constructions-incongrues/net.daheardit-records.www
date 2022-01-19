@@ -12,8 +12,8 @@
             <span class="releases_discography_last_release"><?php echo __('Nouveau') ?></span>  
   <?php endif; ?>
           <img height="220px" width="220px" src="<?php echo $release['image'] ?>" />
-            <h1><a data-pjax="#content_async" href="<?php echo url_for(sprintf('@release_show?slug=%s#release', $release['slug'])) ?>"><?php echo $release['sku'] ?></a></h1>
-            <h2><a data-pjax="#content_async" title="<?php echo sprintf('%s - %s', $release['Artist']['name'], $release['title']) ?>" href="<?php echo url_for(sprintf('@release_show?slug=%s#release', $release['slug'])) ?>"><?php echo truncate_text(sprintf('%s - %s', $release['Artist']['name'], $release['title']), 35) ?></a></h2>
+            <h1><a data-pjax="#content_async" href="<?php echo url_for(sprintf('@release_show?slug=%s#release', $release['slug'])) ?>"><?php echo $release['sku'] ?> <?php echo $release['Artist']['name'] ?></a></h1>
+            <h2><a data-pjax="#content_async" title="<?php echo $release['title'] ?>" href="<?php echo url_for(sprintf('@release_show?slug=%s#release', $release['slug'])) ?>"><?php echo truncate_text(sprintf('%s - %s', $release['Artist']['name'], $release['title']), 35) ?></a></h2>
           </div><!-- end of grid_3 releases_discography_number  -->
 <?php endfor; ?>
 <?php $j = count($releases) + 4 ?>
