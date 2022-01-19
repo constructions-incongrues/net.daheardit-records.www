@@ -113,7 +113,7 @@ cursor: pointer;
 position:absolute;
 height:220px;
 width:220px;
-background-image:url("../pics/releases/img-release.png");
+/* background-image:url("../pics/releases/img-release.png"); */
 }
 
 .calque_releases
@@ -125,14 +125,14 @@ top:0px;
 position:absolute;
 height:460px;
 width:460px;
-background-image:url("../pics/releases/img-release.png");
+/* background-image:url("../pics/releases/img-release.png"); */
 }
 .calque_artists_pictures
 {
 position:absolute;
 height:460px;
 width:460px;
-background-image:url("../pics/releases/img-release.png");
+/* background-image:url("../pics/releases/img-release.png"); */
 }
 
 .calque_releases:hover, .calque_releases_2:hover
@@ -146,7 +146,7 @@ position:absolute;
 height:233px;
 width:220px;
 top:7px;
-background-image:url("../pics/artists/img-artist.png");
+/* background-image:url("../pics/artists/img-artist.png"); */
 }
 
 .calque_artists:hover
@@ -1047,7 +1047,7 @@ font-size:20px;
 font-size:2rem;
 }
 
-.documentaryembed {    margin: -43% 0%;   float: right;}
+.documentaryembed {  float: right;}
 .footer_content h2
 {
 color:#FFF;

@@ -45,9 +45,9 @@
   <div class="container_12" id="top">
 
     <div class="grid_12 header">
-
+<span> <a href="http://www.daheardit-records.net">
       <span class="header_calque"></span>
-
+</span>
 <?php include_partial('main/menu') ?>
 
         <div class="grid_12 header_news_1">
@@ -134,6 +134,10 @@
 
           <div id="informations" class="grid_5 infos_descr">
 
+          <div class="documentaryembed">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/e8UoUJha3zw?controls=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            
           <!-- Begin MailChimp Signup Form -->
         <!-- <div id="mc_embed_signup" name="#newsletter">
           <form action="//daheardit-records.us15.list-manage.com/subscribe/post?u=a260251d9efb71cb8f1bffff4&amp;id=e77908b281" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
@@ -173,9 +177,7 @@
 
 <p class="donation">we releases our music for free since 2006, <br /><a href="https://www.helloasso.com/associations/constructions-incongrues" >support us if you like it ! </a> </p>
 
-<div class="documentaryembed">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/e8UoUJha3zw?controls=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
+
               <div class="grid_12 footer_links_1">
 
     
