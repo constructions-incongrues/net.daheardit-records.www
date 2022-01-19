@@ -66,7 +66,7 @@
     <?php foreach ($release['prices'] as $price): ?>
     <?php if (is_numeric($price['price'])): ?>
       <a href="" class="paypal" data-paypalid="<?php echo $price['paypal_id'] ?>"><?php echo $price['format'] ?>  <?php echo $price['price'] ?> </a>
-    <?php else: ?>
+    <?php else: ?> <br />
       <a href="" class="paypal" data-paypalid="<?php echo $price['paypal_id'] ?>"><?php echo $price['format'] ?>  <?php echo $price['price'] ?> -  </a>
     <?php endif ?> 
     <?php endforeach; ?><?php endif ?>
@@ -74,7 +74,7 @@
 <?php if (count($archives)): ?>
     <!-- <span style="font-weight: bold;">Télécharger :</span> -->
   <?php foreach ($archives as $archive): ?>
-      <a class="release-download" data-dhr-release-slug="<?php echo $release['slug'] ?>" data-dhr-archive-format="<?php echo $archive['name'] ?>" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/releases/<?php echo $release['slug'] ?>/archives/<?php echo $archive['filename'] ?>"><?php echo strtolower($archive['name']) ?></a> -
+     <br /> <a class="release-download" data-dhr-release-slug="<?php echo $release['slug'] ?>" data-dhr-archive-format="<?php echo $archive['name'] ?>" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/releases/<?php echo $release['slug'] ?>/archives/<?php echo $archive['filename'] ?>"><?php echo strtolower($archive['name']) ?></a> -
   <?php endforeach ?>
 <?php endif ?>
 

@@ -1591,7 +1591,7 @@ margin-top:10px;}
 }
 
 .open_releases_infos {float:left}
-.open_releases_infos2 {float: right;margin:-10px;}
+.open_releases_infos2 {float: right;margin:-10px 0px;}
 /* OPEN ARTISTS
 ***************************************************************/
 
@@ -1827,7 +1827,7 @@ width: 101.9%;
 }
 .writers2 a {color:#000; text-transform: uppercase;text-decoration: none;}
 .open_releases_download_licence {  
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     background-color: #FFF;
     padding: 4% 2% 4% 3%;
     margin-top: -10px;
