@@ -110,9 +110,9 @@
 Artwork by <a href="<?php echo url_for(sprintf('@artwork_artist_show?slug=%s#artwork_artist', $release['ArtworkArtist']['slug'])) ?>"><?php echo $release['ArtworkArtist']['name'] ?></a><br>
 <?php echo nl2br(html_entity_decode($release['credits'])) ?>
 <?php if (count($release['press'])): ?>
-<span>reviews :</span>
+<span>reviews :</span><br />
 <?php foreach ($release['press'] as $link): ?>
-        <span class="reviews"> <a href="<?php echo $link['url'] ?>"><?php echo basename($link['title']) ?></a> / </span>
+        <span class="reviews"> <a href="<?php echo $link['url'] ?>"><?php echo basename($link['title']) ?></a> <br /> </span>
   <?php endforeach ?>
 <?php endif ?>
 </p>
