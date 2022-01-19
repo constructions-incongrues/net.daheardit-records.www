@@ -440,7 +440,6 @@ color:#ea1D78;
 
 .header_news_1_content,.header_news_2_content
 {
-font-family: 'Jockey One', sans-serif;
 text-align:right;
 margin-top:112px;
 display:none;}
@@ -550,7 +549,6 @@ font-family: 'Tempesta', sans-serif;
 
 .header_news_2_title
 {
-font-family: 'Jockey One', sans-serif;
 color:#FFF;
 font-weight:lighter;
 margin-left:20px;
@@ -821,7 +819,6 @@ left:-3px;
 {
 position: absolute;
 font-weight:lighter;
-font-family: 'Jockey One', sans-serif;
 top:113px;
 font-size:18px;
 font-size:1.8rem;
@@ -904,7 +901,6 @@ display: none;
 .infos_descr h4
 {
 color:#000;
-font-family: 'Jockey One', sans-serif;
 font-weight:normal;
 text-transform:uppercase;
 }
