@@ -57,8 +57,11 @@
 
 
 
+
+
+    <div class="open_artists_listing_releases "> 
+
     <?php foreach ($artist['releases'] as $release): ?>
-      <div class="open_artists_listing_releases "> 
       <div class="row">
   <div class="column">
 
@@ -69,7 +72,7 @@
     </div>
 
     </div>
-    </div><?php endforeach; ?>
+    <?php endforeach; ?></div>
 
   </div><!-- enf of release_content -->
   </div><!-- end of grid_12 release_open -->
