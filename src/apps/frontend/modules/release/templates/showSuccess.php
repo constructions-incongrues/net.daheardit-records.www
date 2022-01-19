@@ -70,7 +70,11 @@
 
     <div class="grid_6 open_releases_infos">
 <div class="open_releases_press_text">
-<p class="open_releases_buy">
+  <?php echo html_entity_decode($release['player_code']) ?>
+
+  <div class="grid_6 open_releases_infos2">
+
+  <p class="open_releases_buy">
 
 <?php if ($release['is_available']): ?>
     <!-- <span style="font-weight: bold;">Acheter :</span> -->
@@ -99,10 +103,6 @@
 <?php endif ?>
 </ul>
   </p>
-  <?php echo html_entity_decode($release['player_code']) ?>
-
-  <div class="grid_6 open_releases_infos2">
-
   <p class="open_releases_download_licence">
 <?php if ($release['license']): ?>
     <?php echo html_entity_decode($release['license']) ?>
