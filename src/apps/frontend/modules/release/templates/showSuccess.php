@@ -70,7 +70,7 @@
 
     <div class="grid_12 open_releases_infos">
 <div class="open_releases_press_text">
-<span class="grid_8">
+<span class="grid_8 playerbandcamp">
   <?php echo html_entity_decode($release['player_code']) ?>
   <p class="open_releases_download_licence">
 <?php if ($release['license']): ?>
