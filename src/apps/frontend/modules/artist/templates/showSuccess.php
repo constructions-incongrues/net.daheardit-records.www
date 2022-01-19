@@ -69,9 +69,9 @@
 <img width="220px" hight="220px" src="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/releases/<?php echo $release['slug'] ?>/<?php echo $release['slug'] ?>_300x300.png"  alt=""/>
 </a>
   </div>
-    </div>
+   
 
-    <?php endforeach; ?></div>    </div>
+    <?php endforeach; ?></div>    </div> </div>
 
 
   </div><!-- enf of release_content -->
