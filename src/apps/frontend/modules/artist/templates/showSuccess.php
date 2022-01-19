@@ -44,12 +44,12 @@
 
     <p class="open_artists_bio">
     <img height="30%" width="30%" style="float:right" src="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/artists/<?php echo $artist['slug'] ?>/<?php echo $artist['slug'] ?>_300x300.jpg" alt="" /> 
- 
+    <p class="text-bio">
       <?php echo nl2br($artist['Translation'][$sf_user->getCulture()]['presentation']) ?>
       <?php if ($artist['url']): ?>
       <a href="<?php echo $artist['url'] ?>"><?php echo $artist['url'] ?>
       <?php endif ?>
-
+    </p>
 
     </p>
 
