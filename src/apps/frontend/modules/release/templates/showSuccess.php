@@ -65,8 +65,7 @@
 <?php endif ?>
 
     <div class="grid_12 open_releases_infos">
-      <div class="grid_6">  <?php echo html_entity_decode($release['player_code']) ?>
-
+      <div class="grid_6">
   </div>
   <div class="grid_6 open_releases_infos2">
 
