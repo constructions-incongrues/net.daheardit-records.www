@@ -68,7 +68,7 @@
                 </a>
         </span>
         </div>
-        </div>
+  </div>
     </div>
   
 <?php endforeach; ?>
