@@ -36,6 +36,7 @@ abstract class BaseReleaseForm extends BaseFormDoctrine
       'links_videos'      => new sfWidgetFormInputText(),
       'player_code'       => new sfWidgetFormInputText(),
       'credits'           => new sfWidgetFormInputText(),
+      'licence'           => new sfWidgetFormInputText(),
       'created_at'        => new sfWidgetFormDateTime(),
       'updated_at'        => new sfWidgetFormDateTime(),
     ));
@@ -62,6 +63,7 @@ abstract class BaseReleaseForm extends BaseFormDoctrine
       'links_videos'      => new sfValidatorPass(array('required' => false)),
       'player_code'       => new sfValidatorPass(array('required' => false)),
       'credits'           => new sfValidatorPass(array('required' => false)),
+      'licence'           => new sfValidatorPass(array('required' => false)),
       'created_at'        => new sfValidatorDateTime(),
       'updated_at'        => new sfValidatorDateTime(),
     ));

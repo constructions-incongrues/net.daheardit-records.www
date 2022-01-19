@@ -26,6 +26,7 @@
  * @property text $links_videos
  * @property text $player_code
  * @property text $credits
+ * @property text $licence
  * @property Artist $Artist
  * @property ArtworkArtist $ArtworkArtist
  * @property Doctrine_Collection $Track
@@ -51,6 +52,7 @@
  * @method text                getLinksVideos()       Returns the current record's "links_videos" value
  * @method text                getPlayerCode()        Returns the current record's "player_code" value
  * @method text                getCredits()           Returns the current record's "credits" value
+ * @method text                getLicence()           Returns the current record's "licence" value
  * @method Artist              getArtist()            Returns the current record's "Artist" value
  * @method ArtworkArtist       getArtworkArtist()     Returns the current record's "ArtworkArtist" value
  * @method Doctrine_Collection getTrack()             Returns the current record's "Track" collection
@@ -75,6 +77,7 @@
  * @method Release             setLinksVideos()       Sets the current record's "links_videos" value
  * @method Release             setPlayerCode()        Sets the current record's "player_code" value
  * @method Release             setCredits()           Sets the current record's "credits" value
+ * @method Release             setLicence()           Sets the current record's "licence" value
  * @method Release             setArtist()            Sets the current record's "Artist" value
  * @method Release             setArtworkArtist()     Sets the current record's "ArtworkArtist" value
  * @method Release             setTrack()             Sets the current record's "Track" collection
@@ -160,6 +163,9 @@ abstract class BaseRelease extends sfDoctrineRecord
              'type' => 'text',
              ));
         $this->hasColumn('credits', 'text', null, array(
+             'type' => 'text',
+             ));
+        $this->hasColumn('licence', 'text', null, array(
              'type' => 'text',
              ));
     }

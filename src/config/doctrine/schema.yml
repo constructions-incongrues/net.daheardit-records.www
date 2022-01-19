@@ -86,6 +86,7 @@ Release:
     links_videos: text
     player_code: text
     credits: text
+    licence: text
 
 Track:
   actAs:
