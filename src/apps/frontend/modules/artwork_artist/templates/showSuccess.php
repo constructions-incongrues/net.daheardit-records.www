@@ -19,8 +19,7 @@
 <?php endif; ?>
       <li class="open_releases_button_close"> <a class="close" href="<?php echo url_for('@homepage#artwork_artists') ?>" data-close="#content_async" title="<?php echo __('Retourner à la liste des graphistes') ?>"> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/hack.png" alt="Close" /> </a></li>
     </ul>
-    </div>
-
+ 
 
 <div class="presentation">
     <h1 class="open_artists_name"><?php echo $artist['name'] ?> </h1>
