@@ -1500,13 +1500,13 @@ ul.open_releases_button, ul.open_artists_button
     margin-top: 20px;
     text-decoration: none;
     font-weight: lighter;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     background-color: #29abe2;
     color: #FFF;
     padding: 2%;
 }
 
-
+.open_releases_buy a:hover {background-color: #000; color:#FFF!important;}
 ul.open_releases_download
 {
   margin:-1em 0px 2em 0.7em;
@@ -1815,7 +1815,6 @@ background-color: #F9F9F9;
     background-color: #FFF;
     padding: 2%;
     margin-left: 0px;
-    border: 1px solid #eee;
  
 }
 
