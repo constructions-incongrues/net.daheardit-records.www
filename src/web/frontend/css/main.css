@@ -1622,6 +1622,7 @@ width:220px;
 background-color:#000;
 padding-bottom:0px;
 margin:10px 10px 10px 10px;
+float:left!important;
 }
 .open_artists_listing_releases_container{width: 600px; height: 500px;}
 
@@ -1631,7 +1632,6 @@ width:220px;
 background-color:#FFF;
 padding-bottom:0px;
 margin:40px 40px 40px 0px;
-float:left;
 position: relative;
 }
 
