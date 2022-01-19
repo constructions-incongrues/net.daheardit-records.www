@@ -71,7 +71,7 @@
     <div class="grid_6 open_releases_infos">
 <div class="open_releases_press_text">
   <?php echo html_entity_decode($release['player_code']) ?>
-
+  </div>
   <div class="grid_6 open_releases_infos2">
 
   <p class="open_releases_buy">
