@@ -1485,9 +1485,9 @@ height: 0px;
     padding: inherit;
     margin-bottom: 0px;
     margin-top: 20px;
-    border-left: 1px solid #d2d2d2!important;
-  border-top: 1px solid #d2d2d2!important;
-  border-right: 1px solid #d2d2d2!important;
+    border-left: 1px solid #eee!important;
+  border-top: 1px solid #eeee!important;
+  border-right: 1px solid #eee!important;
   border-bottom: 0px transparent !important;
   }
 
@@ -1840,9 +1840,9 @@ width: 101.9%;
     margin-top: -10px;
     width: 98.%;
     margin-left: 0px;
-    border-left: 1px solid #d2d2d2;
-    border-bottom: 1px solid #d2d2d2;
-    border-right: 1px solid #d2d2d2;
+    border-left: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    border-right: 1px solid #eee;
 }
 
 .open_releases_download_licence a, .writers a, .writers2 a
@@ -1867,8 +1867,8 @@ float:right
 .presentation {background-color: #F9F9F9; padding:2%;font-size:1.5rem;margin-top:50px;}
 
 #nonartarea {
-  border-left: 1px solid #d2d2d2!important;
-  border-bottom: 1px solid #d2d2d2!important;
-  border-right: 1px solid #d2d2d2!important;
+  border-left: 1px solid #eee!important;
+  border-bottom: 1px solid #eee!important;
+  border-right: 1px solid #eee!important;
   border-top: 0px transparent !important;
 }
