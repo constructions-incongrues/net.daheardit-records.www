@@ -45,7 +45,8 @@
     </div>
 
 <?php endforeach; ?>
-
+</div>
+    </div>
  
     <!-- <div class="grid_6 open_artists_pictures"> -->
       <!-- <span class="calque_artists_pictures"> </span> -->
