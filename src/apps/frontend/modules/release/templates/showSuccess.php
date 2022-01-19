@@ -45,11 +45,7 @@
 <img id="carousel-current" height="30%" width="40%" style="float:left;padding:9px 20px 0px 0px" src="<?php echo sprintf('//%s/thumbnail/_/500/500/crop/best%s', sfConfig::get('app_api_url_root'), $release['artworks'][0]) ?>" />
 <p class="text-bio"><?php echo nl2br(html_entity_decode($release['Translation'][$sf_user->getCulture()]['presentation'])) ?>
 <?php if (count($release['press'])): ?>
-<span>reviews :</span>
-<?php foreach ($release['press'] as $link): ?>
-        <span class="reviews"> <a href="<?php echo $link['url'] ?>"><?php echo basename($link['title']) ?></a> / </span>
-  <?php endforeach ?>
-<?php endif ?>
+
 </p>
  </div>
     <div class="grid_12 open_releases_artwork">
