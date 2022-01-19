@@ -10,7 +10,6 @@ class ProjectConfiguration extends sfProjectConfiguration
         // Enable plugins
 		$this->enablePlugins(
 			'sfDoctrinePlugin',
-			'sfTwitterBootstrapPlugin',
 			'sfFeed2Plugin',
 			'sfImageTransformPlugin'
 		);
