@@ -54,9 +54,7 @@
     </p>
 
   
-  </div>
-    </div>
-  
+
 
     <?php foreach ($artist['releases'] as $release): ?>
        <div class="open_artists_listing_releases ">
@@ -70,7 +68,9 @@
                 </a>
         </span>
         </div>
-
+        </div>
+    </div>
+  
 <?php endforeach; ?>
 
   </div><!-- enf of release_content -->
