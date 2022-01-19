@@ -66,11 +66,5 @@
         </span>
 
 <?php endforeach; ?>
-  </div>
-    </div>
-  
-
-    
-
-  </div><!-- enf of release_content -->
+ 
   
