@@ -1098,10 +1098,11 @@ body {
   color : #000;
   margin-top : 20px;
   }
-  .open_artists_artwork_listing_releases, .open_artists_listing_releases {}
+  .open_artists_artwork_listing_releases, .open_artists_listing_releases {display: flex;}
 
   .row {
     display: flex;
+    align-items: right;
   }
   
   .column {
