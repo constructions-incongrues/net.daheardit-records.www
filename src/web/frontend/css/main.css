@@ -1474,16 +1474,16 @@ height: 0px;
 
   .open_releases_buy
   {
-    color: #FFF;
     margin-left: 0px;
     background-color: #FFF;
     height: 30px;
-    font-size: 1.5rem;
+    font-size: 2rem;
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 2px;
     padding: inherit;
     margin-bottom: 0px;
+    padding: 2Px;
     border-left: 1px solid #eee!important;
   border-top: 1px solid #eeee!important;
   border-right: 1px solid #eee!important;
