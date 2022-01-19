@@ -8,7 +8,7 @@
 <div class="grid_12 open_artists">
   <div class="open_artists_content">
 
-  <div class="grid_12">
+  <div class="grid_12 grid_12 open_illustrator">
   <ul class="open_artists_button">
 <?php if ($previousArtist): ?>
       <li class="open_releases_button_left"> <a class="previous" href="<?php echo url_for('@artwork_artist_show?slug='.$previousArtist['slug'].'#artwork_artist') ?>" data-pjax="#content_async"> <img src="<?php echo $sf_request->getRelativeUrlRoot() ?>/frontend/pics/button/hack.png" title="<?php echo $previousArtist['name'] ?>" /> </a></li>
