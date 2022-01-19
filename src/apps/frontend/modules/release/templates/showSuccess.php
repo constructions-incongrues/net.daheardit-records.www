@@ -123,9 +123,6 @@ Artwork by <a href="<?php echo url_for(sprintf('@artwork_artist_show?slug=%s#art
     </p>
 </div>
 </div>
-</div>
-
-</p>
 
 
 
