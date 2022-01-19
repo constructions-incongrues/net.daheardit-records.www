@@ -60,19 +60,19 @@
 
 
     <div class="open_artists_listing_releases "> 
+    <div class="row">
 
     <?php foreach ($artist['releases'] as $release): ?>
-      <div class="row">
   <div class="column">
 
   <a data-pjax="#content_async" href="<?php echo url_for(sprintf('@release_show?slug=%s#release', $release['slug'])) ?>">
-<img width="220px" hight="220px" src="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/releases/<?php echo $release['slug'] ?>/<?php echo $release['slug'] ?>_300x300.png" style="width:100%" alt=""/>
+<img width="220px" hight="220px" src="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/releases/<?php echo $release['slug'] ?>/<?php echo $release['slug'] ?>_300x300.png"  alt=""/>
 </a>
   </div>
     </div>
 
-    </div>
-    <?php endforeach; ?></div>
+    <?php endforeach; ?></div>    </div>
+
 
   </div><!-- enf of release_content -->
   </div><!-- end of grid_12 release_open -->
