@@ -52,7 +52,7 @@
 <?php endif ?>
 </p>
  </div>
-    <div class="grid_6 open_releases_artwork">
+    <div class="grid_12 open_releases_artwork">
       <!-- <img id="carousel-current" height="460px" width="460px" src="<?php echo sprintf('//%s/thumbnail/_/500/500/crop/best%s', sfConfig::get('app_api_url_root'), $release['artworks'][0]) ?>" /> -->
 <?php for ($i = 1; $i < count($release['artworks']); $i++): ?>
       <!-- <img height="460px" width="460px" src="<?php echo sprintf('//%s/thumbnail/_/500/500/crop/best%s', sfConfig::get('app_api_url_root'), $release['artworks'][$i]) ?>" /> -->
@@ -68,7 +68,7 @@
 <?php endif ?>
    </div><!-- end of grid_6 -->
 
-    <div class="grid_6 open_releases_infos">
+    <div class="grid_12 open_releases_infos">
 <div class="open_releases_press_text">
 <p class="open_releases_buy">
 
