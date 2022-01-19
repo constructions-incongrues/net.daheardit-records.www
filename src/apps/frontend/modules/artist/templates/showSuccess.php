@@ -43,7 +43,7 @@
     <h1 class="open_artists_name"><?php echo $artist['name'] ?></h1>
 
     <p class="open_artists_bio">
-    <img height="30%" width="30%" style="float:right;margin-top:50px;" src="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/artists/<?php echo $artist['slug'] ?>/<?php echo $artist['slug'] ?>_300x300.jpg" alt="" /> 
+    <img height="25%" width="25%" style="float:right;margin-top:-50px;" src="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/artists/<?php echo $artist['slug'] ?>/<?php echo $artist['slug'] ?>_300x300.jpg" alt="" /> 
     <p class="text-bio">
       <?php echo nl2br($artist['Translation'][$sf_user->getCulture()]['presentation']) ?>
       <?php if ($artist['url']): ?>
