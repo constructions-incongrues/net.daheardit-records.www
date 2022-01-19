@@ -64,9 +64,10 @@
                     <h2 style="margin-bottom:0px;"><a data-pjax="#content_async" title="<?php echo sprintf('%s - %s', $artist['name'], $release['title']) ?>" href="<?php echo url_for(sprintf('@release_show?slug=%s#release', $release['slug'])) ?>"><?php echo truncate_text(sprintf('%s', $artist['name'], $release['title']), 35) ?></a></h2>
                 </a>
         </span>
+        <?php endforeach; ?>
         </div>
 
-<?php endforeach; ?>
+
   
     </div>
   
