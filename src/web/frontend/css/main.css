@@ -70,7 +70,7 @@ margin-right: auto;
 }
 
 
-.releases_discography_listing_all {margin-bottom: 30px;;}
+.releases_discography_listing_all {margin-bottom: 30px;padding:2%;}
 .triangle img {position: absolute;top:-4.1px!important;display : none}
 
 .artists h1,
@@ -1822,7 +1822,7 @@ width: 101.9%;
 .open_releases_download_licence {  
     font-size: 1.5rem;
     background-color: #FFF;
-    padding: 4% 2% 4% 3%;
+    padding: 2%;
     margin-top: -20px;
     margin-left: 0px;
     border-left: 1px solid #eee;
