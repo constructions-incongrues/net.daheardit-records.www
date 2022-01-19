@@ -101,7 +101,7 @@
   </p>
   <?php echo html_entity_decode($release['player_code']) ?>
 
-  <div class="grid_6 open_releases_infos">
+  <div class="grid_6 open_releases_infos2">
 
   <p class="open_releases_download_licence">
 <?php if ($release['license']): ?>
