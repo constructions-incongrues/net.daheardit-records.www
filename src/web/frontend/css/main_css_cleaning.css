@@ -1,1344 +1,1862 @@
 
-/* HTML & BODY 
- ***************************************************************/
+/* debug */
 
- body
- {
-   padding:0px;
-   font-family: "Arial", Helvetica, sans-serif;
- }
- 
- html 
- {
-   font-size:62.5%;
- }
- 
- /* TYPO 
-  ***************************************************************/
- 
- @font-face 
- {
-   font-family: 'Blanch Caps';
-   src: url('../typo/blanch_caps.ttf');
- }
- 
- @font-face 
- {
-   font-family: 'Jockey One';
-   src: url('../typo/JockeyOne-Regular.ttf');
- }
- 
- @font-face 
- {
-   font-family: 'Tempesta';
-   src: url('../typo/pf_tempesta_seven.ttf');
- }
- 
- /* TEMPLATE CONTENT 
-  ***************************************************************/
- 
- 
- .category_content,
- .releases_discography_listing_all,
- .artists_content,.header_content,
- .header_news_1_content,
- .header_news_2_content,
- .header_news_2_closed,
- .header_news_2_closed_button,
- .open_releases_content,
- .header_nav_3_content,
- .infos_content,
- .footer_content,
- .release_content,
- .open_release, 
- .open_artists_content { 
-   width:960px;
-   margin-left: auto;
-   margin-right: auto;
- } 
- 
- 
- /* CALQUES 
-  ***************************************************************/
- 
- .header_calque
- {
-   background-image:url("../pics/pattern/pat-header.png");
-   background-repeat: repeat;
-   width: 100%;
-   height:680px;
-   position:absolute;
- }
- 
- 
- .calque_releases, .calque_releases_2
- {
-   position:absolute;
-   height:220px;
-   width:220px;
-   background-image:url("../pics/releases/img-release.png");
- }
- 
- .calque_releases,.calque_releases_2
- {
-   top:0px;
- }
- 
- .calque_artwork
- {
-   position:absolute;
-   height:460px;
-   width:460px;
-   background-image:url("../pics/releases/img-release.png");
- }
- .calque_artists_pictures
- {
-   position:absolute;
-   height:460px;
-   width:460px;
-   background-image:url("../pics/releases/img-release.png");
- }
- 
- .calque_releases:hover, .calque_releases_2:hover
- {
-   background-image:url("../pics/releases/img-release-hover.png");
- }
- 
- .calque_artists 
- {
-   position:absolute;
-   height:233px;
-   width:220px;
-   top:-3px;
-   background-image:url("../pics/artists/img-artist.png");
- }
- 
- .calque_artists:hover
- {
-   background-image:url("../pics/artists/img-artist-hover.png");
- }
- 
- 
- /* HEADER 
-  ***************************************************************/
- 
- .header 
- {
-   background-image:url("../pics/bg_header/01.gif");
-   background-position: center center;
-   background-repeat: repeat;
-   width: 100%;
-   height:680px;
- }
- 
- 
- 
- /** NAV-1
- *****************************/
- 
- .header_title_dhr a 
- {
-   color:#FFF;
-   text-decoration:none;
-   margin-bottom:-10px;
-   font-family: 'Blanch Caps', sans-serif;
-   margin-left:-10px;
- }
- 
- 
- /** NAV-2
- *****************************/
- 
- 
- .header_nav_2
- {
-   top:12px;
- }
- 
- .header_nav_2_icon li 
- {
-   display:inline;
-   opacity:0.7;
- }
- 
- .header_nav_2_icon li:hover 
- {
-   opacity:1;
- }
- 
- .header_nav_2_button_lang 
- {
-  background-color:#000;
- }
- 
- .header_nav_2_button_lang_active a 
- {
-  color:#FFF;
-  text-decoration:none;
-  padding:2px;
-  font-family: 'Tempesta', sans-serif;
-  font-size:8px;
-  font-size:0.8rem;
-  background-color:#000;
-  opacity:1;
- 
- }
- 
- .header_nav_2_button_lang a 
- {
-   background-color:#000;
-  opacity:1;
-  color: #29ABE2;
-  text-decoration:none;
-  padding:2px;
-  font-family: 'Tempesta', sans-serif;
-  font-size:8px;
-  font-size:0.8rem;
- }
- 
- 
- /** NAV-3
- *****************************/
- 
- 
- .header_nav_3 
- {
-  width:100%!important;
-  background-color:#000;
-  height:50px;
- top:40px;
- z-index:300;
- position:absolute;
- }
- 
- 
- .header_nav_3 ul 
- {
-   background-color:#000;
-   margin-left:-20px;}
- }
- 
- .header_nav_3 li
- {
-   color:#29ABE2;
-   list-style-type:none;
-   display:inline;
-   margin:5px 5px 5px 5px;
-   font-family: 'Jockey One', sans-serif;
- }
- 
- .header_nav_3 a 
- {
-   color:#29ABE2;
-   text-decoration:none;
-   text-transform:uppercase;
-   font-size:28px;
-   font-size:2.8rem;
- }
- 
- .header_nav_3 a:hover 
- {
-   color:#FFF;
- }
- 
- .header_nav_3_button_donate a
- {
-   color:#ea1D78;
-   opacity:0.9;
- }
- 
- .header_nav_3_button_donate a:hover  {opacity:1;color:#FFF;}
- 
- 
- /** NEWS-CONTENT
- *****************************/
- 
- .header_news_1_content,.header_news_2_content 
- {
-  font-family: 'Jockey One', sans-serif;
-  text-align:right;
- margin-top:112px;}
- 
-  .header_news_1_content a,.header_news_2_content a  
-  {
-    text-decoration:none;
-  }
- 
-  .header_news_1_content h1 
-  {
-   margin-bottom:-20px;
-   margin-right:13px;
- }
- 
- .header_news_1_content h1 a 
- {
-  color:#FFF;
-  font-weight:lighter;
-  font-size:60px;
-  font-size:6rem;
- }
- 
- .header_news_1_content h2 a 
- {
-  color:#fced20;
-  font-weight:lighter;
-  font-size:48px;
-  font-size:4.8rem
- }
- 
- 
- .header_news_2
- {
-  background-color:#000;
-  opacity:0.95;
-  padding:5px 0px 0px 0px;
-  margin-bottom:0px;
-  border-right:1px solid #28abe3; 
- height:116px;}  
- 
-  .header_news_2_nav
-  {
-   padding-bottom:5px;
-   float:right;
-   margin-top:-19px;
-   font-family: 'Tempesta', sans-serif;
- }
- 
- .header_news_2_closed
- {
-    position:absolute;
-    top:400px;
-    border-left:1px solid #28ABE3;
-    height:116px;
- 
- }
- .header_news_2_closed_button
- {
-    background-color: rgb(41, 171, 226); /* alternative solide */
-     background-color: rgba(41, 171, 226, 0.3);
-      width:25px;
-  height:25px;
-  position:absolute;
-  margin-bottom:0px;
-  margin-top:10px;
- 
- }
- 
- .header_news_2_closed_button:hover
- {
-      background-color: rgb(41, 171, 226); 
- }
- .header_news_2_closed_button img
- {
- float:left;
- }
- .header_news_2_nav img 
- {  opacity:0.5;}
- .header_news_2_nav img:hover 
- {
-   opacity:1;
- }
- 
- .header_news_2_nav a 
- {
-   padding:0px 2px 0px 2px;
-   font-family: 'Tempesta', sans-serif;
- 
- }
- 
- .header_news_2_title 
- {    
-   font-family: 'Jockey One', sans-serif;
-   color:#FFF;
-   font-weight:lighter;
-   margin-left:20px;
-   text-transform:uppercase;
-   margin-bottom:5px;
-   font-size:17px;
-   font-size:1.7rem;
-   text-align:left;
- }
- 
- .header_news_2_title a
- {
-   color:#FFF;
- }
- 
- .header_news_2_pictures
- {
-   padding-bottom:0px;
-   top:-4px;
- }
- 
- .header_news_2_pictures img 
- {
-   margin:10px;
- }
- 
- .header_news_2_descr p
- {
-   color:#FFF;
-   margin:0px 10px 0px 10px;
-   padding:0px 10px 0px 10px;
-   font-size:12px;
-   font-size:1.2rem;
-   text-align:left;
-   font-family: arial, verdana, sans-serif; 
-   line-height:15px;
- 
- }
- 
-  /* DISCOGS
-  ***************************************************************/
- 
- 
- .releases_discography
- {
-  background-image:url(../pics/pattern/pat-bg.png);
-  background-repeat:repeat;
-  background-color:#000;
-  padding:30px 0px 40px 0px;
- top:-14px;
- }
- 
- 
- .releases_discography_number_default 
- {
-   background-image:url(../pics/releases/img-release-default.png);
-   height:290px;
-   width:220px;
-   margin-left:15px;
-   margin-top:15px;
- }
- 
- .releases_discography_number
- {
-   background-color:#FFF;
-   margin-left:15px;
-   margin-top:15px;
-   width:220px!important;
- }
- 
- .releases_discography_number p 
- {
-   top:-20px;
- }
- 
- .releases_discography_number_first,.artists_show_first
- {
-   margin-left:0px!important;
-   margin-right:10px;
- }
- .releases_discography_number h1 
- {
-   padding:0px;
-   margin:0px 0px -6px -4px;
- }
- 
- .releases_discography_last_release 
- {
-   background-repeat:no-repeat;
-   height:16px;
-   width:68px;
-   position: absolute;
-   top:20px;
-   background-image:url(../pics/icon/nouveau.png);
-   font-family: 'Tempesta', sans-serif;
-   font-size:8px;
-   font-size:0.8rem;
-   color:#FFF;
-   text-transform:uppercase;
-   font-weight:lighter;
-   padding-left:8px;
- 
- }
- 
- .releases_discography_last_release a 
- {
-   margin-top:1px;
- }
- 
- 
- .open_artists_listing_releases h1, 
- .releases_discography_number h1
- { 
-  padding:0px 0px 0px 10px;
-  font-size:14px;
-  font-size:1.4rem;
- }
- 
- .releases_discography_number h2,.open_artists_listing_releases h2 
- {
-  padding:0px 0px 0px 10px;  
-  font-size:14px;
-  font-size:1.4rem;
-  margin-left:-4px;
- }
- 
- .open_artists_listing_releases h2, 
- {
-   margin-top:-25px!important;
-   margin-left:-4px;
- 
- }
- .releases_discography_number h1 a,.open_artists_listing_releases h1 a
- {
-   color:#29ABE2!important;
-   background-color: #FFF!important;
-   text-decoration:none;
-   text-transform:uppercase;
-   font-weight:normal;
-   font-family: 'Jockey One', sans-serif;
- }
- 
- .releases_discography_number h2 a,.open_artists_listing_releases h2 a
- {
-   color:#000!important;
-   text-decoration:none;
-   text-transform:uppercase;
-   margin-top:-5px;
-   font-weight:normal;
-   font-family: 'Jockey One', sans-serif;
-   background-color: #FFF!important;
- }
- 
- 
- 
- ul.releases_discography_button 
- {
-   margin-top:-20px;
-   margin-left:3px;
-   padding-bottom:0px;
-   margin-bottom:7px;
- }
- 
- .releases_discography_button  li
- {
-  display:inline;
-  padding:2px;
-  margin:0px;
+/*.container_12
+{
+width:960px;
+margin-left: auto;
+margin-right: auto;
+}
+*/  
+/* HTML & BODY
+***************************************************************/
+
+
+
+body
+{
+padding:0px;
+font-family: 'Open Sans', sans-serif;
+}
+
+html
+{
+font-size:62.5%;
+}
+
+/* TYPO
+***************************************************************/
+
+@font-face
+{
+font-family: 'Blanch Caps';
+src: url('../typo/blanch_caps.ttf');
+}
+
+@font-face
+{
+font-family: 'Jockey One';
+src: url('../typo/JockeyOne-Regular.ttf');
+}
+
+@font-face
+{
+font-family: 'Tempesta';
+src: url('../typo/pf_tempesta_seven.ttf');
+}
+
+/* TEMPLATE CONTENT
+***************************************************************/
+
+
+.category_content,
+.releases_discography_listing_all,
+.artists_content,.header_content,
+.header_news_1_content,
+.header_news_2_content,
+.header_news_2_closed,
+.header_news_2_closed_button,
+.open_releases_content,
+.header_nav_3_content,
+.infos_content,
+.footer_content,
+.release_content,
+.open_release,
+.open_artists_content {
+width:80%;
+margin-left: auto;
+margin-right: auto;
+
+}
+
+
+.releases_discography_listing_all {margin-bottom: 30px;padding:2%;}
+.triangle img {position: absolute;top:-4.1px!important;display : none}
+
+.artists h1,
+.releases h1,
+.category_infos h1,
+.artwork_artists_listing_all h1 {
+  font-weight: lighter;
+  background-repeat: repeat;
+  display: inline;
+  text-transform: uppercase;
+  font-size: 0px;
+  font-size: 0rem;
+  height: 0 px;
+  margin-left: 0px;
+  background-image: url(../pics/pattern/pat-bg.png);
+  background-repeat: repeat;
+  background-color: #f2f2f2;
+  color: #000;
+  position: absolute;
+  text-align: right;
+  padding-top: 30 px;
+}
+
+.artwork_artists_listing_all h1  {color: #FFF!important;}
+/* CALQUES
+***************************************************************/
+
+.header_calque
+{
+background-image:url("../pics/pattern/pat-header.png");
+background-repeat: repeat;
+width: 100%;
+height:680px;
+position:absolute;
+cursor: pointer;
+
+}
+
+
+.calque_releases, .calque_releases_2
+{
+position:absolute;
+height:220px;
+width:220px;
+/* background-image:url("../pics/releases/img-release.png"); */
+}
+
+.calque_releases
+{
+top:0px;
+}
+.calque_artwork
+{
+position:absolute;
+height:460px;
+width:460px;
+/* background-image:url("../pics/releases/img-release.png"); */
+}
+.calque_artists_pictures
+{
+position:absolute;
+height:460px;
+width:460px;
+/* background-image:url("../pics/releases/img-release.png"); */
+}
+
+.calque_releases:hover, .calque_releases_2:hover
+{
+background-image:url("../pics/releases/img-release-hover.png");
+}
+
+.calque_artists
+{
+position:absolute;
+height:233px;
+width:220px;
+top:7px;
+/* background-image:url("../pics/artists/img-artist.png"); */
+}
+
+.calque_artists:hover
+{
+background-image:url("../pics/artists/img-artist-hover.png");
+}
+
+
+.calque_artists_pictures
+{
+position:absolute;
+height:460px;
+width:460px;
+background-image:url("../pics/releases/img-release.png");
+}
+
+.calque_releases:hover, .calque_releases_2:hover
+{
+background-image:url("../pics/releases/img-release-hover.png");
+}
+
+/*
+.artists_show_artwork_first img, .artists_show_artwork img
+{
+/*position:absolute;
+
+top:7px;
+background-image:url("../pics/artists/hexagone-trame.png");
+
+height:254px;
+width:220px;
+-webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+clip-path: url("#clipPolygon");
+}
+*/
+
+.hexagon {
+  position: relative;
+  width: 220px;
+  height: 127.02px;
+  margin: 63.51px 0;
+  background-size: auto 254.0341px;
+  background-position: center;
+margin-left:9px;
+margin-right:9px;
+margin-top:90px;  }
+
+.hexTop,
+.hexBottom {
+  position: absolute;
+  z-index: 1;
+  width: 155.56px;
+  height: 155.56px;
+  overflow: hidden;
+  -webkit-transform: scaleY(0.5774) rotate(-45deg);
+  -ms-transform: scaleY(0.5774) rotate(-45deg);
+  transform: scaleY(0.5774) rotate(-45deg);
+  background: inherit;
+  left: 32.22px;
+}
+
+/*counter transform the bg image on the caps*/
+.hexTop:after,
+.hexBottom:after {
+  content: "";
+  position: absolute;
+  width: 220.0000px;
+  height: 127.01705922171767px;
+  -webkit-transform:  rotate(45deg) scaleY(1.7321) translateY(-63.5085px);
+  -ms-transform:      rotate(45deg) scaleY(1.7321) translateY(-63.5085px);
+  transform:          rotate(45deg) scaleY(1.7321) translateY(-63.5085px);
+  -webkit-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
+  background: inherit;
+}
+
+.hexTop {
+  top: -77.7817px;
+}
+
+.hexTop:after {
+  background-position: center top;
+}
+
+.hexBottom {
+  bottom: -77.7817px;
+}
+
+.hexBottom:after {
+  background-position: center bottom;
+}
+
+.hexagon:after {
+  content: "";
+  position: absolute;
+  top: 0.0000px;
+  left: 0;
+  width: 220.0000px;
+  height: 127.0171px;
+  z-index: 2;
+  background: inherit;
+}
+.artists_show_artwork_first , .artists_show_artwork
+{margin: 0px 9px 0px 9px;}
+
+.calque_artists_artwork
+{
+  background-image:url("../pics/artists/hexagone-trame.png");
+
+position:absolute;
+height:255px;
+width:220px;
+top:-64px;
+z-index: 3000;
+}
+.calque_artists_artwork_no
+{
+  background-image:url("../pics/artists/forme-noselect.png");
+
+position:absolute;
+height:254px;
+width:158px;
+top:-64px;
+margin-left: 31px;
+
+z-index: 3000;
+}
+
+
+.calque_artists_artwork:hover
+{
+background-image:url("../pics/artists/forme-over.png");
+height:254px;
+width:158px;
+top:-64px;
+margin-left: 31px;
+z-index:4000;
+}
+
+
+/* HEADER
+***************************************************************/
+
+.header
+{
+background-position: center center;
+background-repeat: repeat;
+width: 100%;
+height:680px;
+}
+
+
+
+/** NAV-1
+*****************************/
+
+.header_title_dhr a
+{
+color:#FFF;
+text-decoration:none;
+margin-bottom:-10px;
+font-family: 'Blanch Caps', sans-serif;
+margin-left:-0px;
+font-weight: lighter;
+}
+
+
+/** NAV-2
+*****************************/
+
+
+.header_nav_2
+{
+top:12px;
+text-align:right;
+margin-right:0px;
+margin-left:30px;
+}
+
+.header_nav_2_icon li
+{
+display:inline;
+opacity:0.7;
+ padding:0px;
+margin:0px;
+}
+
+.header_nav_2_icon li:hover
+{
+opacity:1;
+}
+
+.header_nav_2_button_lang
+{
+background-color:#000;
+}
+
+.header_nav_2_button_lang_active a
+{
+color:#29ABE2;
+text-decoration:none;
+padding:2px;
+font-family: 'Tempesta', sans-serif;
+font-size:9px;
+font-size:0.9rem;
+background-color:#000;
+
+}
+
+.header_nav_2_button_lang a
+{
+background-color:#000;
+color: #FFF;
+text-decoration:none;
+padding:2px;
+font-family: 'Tempesta', sans-serif;
+font-size:9px;
+font-size:0.9rem;
+}
+
+
+/** NAV-3
+*****************************/
+
+.header_nav_3
+{
+  width: 100%!important;
+  background-color: transparent;
+  top: 690px;
+  z-index: 300;
+  position: absolute;
+  text-align: left;
+  margin: 27px 0px 20px 0px;;
+}
+
+
+
+
+.header_nav_3 ul
+{
+background-color:transparent;
+padding-top:0px;
+
+}
+
+
+
+
+
+.header_nav_3 li
+{
+color:#29abe2;
+list-style-type:none;
+display:inline;
+margin:5px 8px 5px 0px;
+/* font-family: 'Jockey One', sans-serif; */
+}
+
+
+
+.header_nav_3 a, .header_nav_3 li
+{
+  color:#29abe2;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 30px;
+  font-size: 3rem;
+  letter-spacing: 1px;
+}
+
+
+.header_nav_3 a:hover
+{
+color:#000;
+}
+
+.header_nav_3_button_donate a
+{
+color:#ea1D78;
+}
+
+.header_nav_3_button_donate a:hover  {opacity:1;color:#FFF;}
+
+
+/** NEWS-CONTENT
+*****************************/
+
+
+.header_news_1_content,.header_news_2_content
+{
+text-align:right;
+margin-top:112px;
+display:none;}
+
+.header_news_1_content a,.header_news_2_content a
+{
+ text-decoration:none;
+}
+
+.header_news_1_content h1
+{
+margin-bottom:-20px;
+}
+
+
+.header_news_1_content h1 a
+{
+color:#000;
+font-weight:lighter;
+font-size:35px;
+font-size:3.5rem;
+opacity:0.9;}
+
+.header_news_1_content h2 a
+{
+color:#FFF;
+font-weight:lighter;
+font-size:45px;
+font-size:4.5rem;
+opacity:0.9;}
+
+
+.header_news_2
+{
+background-color:#000;
+opacity:0.95;
+padding:5px 0px 0px 0px;
+margin-bottom:0px;
+border-right:1px solid #28abe3;
+height:116px;
+margin-top:100px;
+display: none;}
+
+.header_news_2 a
+{
+  color:#29ABE2;
   font-size:10px;
-  font-size:1rem;
+  font-size:1em;
+  text-transform:none;
+  opacity:0.7;
+}
+
+.header_news_2 a:hover
+{
+  color:#29ABE2;
+  opacity:1;
+}
+.header_news_2_nav
+{
+padding-bottom:5px;
+float:right;
+margin-top:-19px;
+font-family: 'Tempesta', sans-serif;
+}
+
+.header_news_2_closed
+{
+ position:absolute;
+ top:400px;
+ border-left:1px solid #28ABE3;
+ height:116px;
+
+}
+.header_news_2_closed_button
+{
+ background-color: rgb(41, 171, 226); /* alternative solide */
+  background-color: rgba(41, 171, 226, 0.3);
+   width:25px;
+height:25px;
+position:absolute;
+margin-bottom:0px;
+margin-top:10px;
+
+}
+
+.header_news_2_closed_button:hover
+{
+   background-color: rgb(41, 171, 226);
+}
+.header_news_2_closed_button img
+{
+float:left;
+}
+.header_news_2_nav img
+{  opacity:0.5;}
+.header_news_2_nav img:hover
+{
+opacity:1;
+}
+
+.header_news_2_nav a
+{
+padding:0px 2px 0px 2px;
+font-family: 'Tempesta', sans-serif;
+
+}
+
+.header_news_2_title
+{
+color:#FFF;
+font-weight:lighter;
+margin-left:20px;
+text-transform:uppercase;
+margin-bottom:5px;
+font-size:1.5rem;
+text-align:left;
+}
+
+.header_news_2_title a
+{
+color:#FFF;
+}
+
+.header_news_2_pictures
+{
+padding-bottom:0px;
+top:-4px;
+}
+
+.header_news_2_pictures img
+{
+margin:10px;
+}
+
+.header_news_2_descr p
+{
+color:#FFF;
+margin:0px 10px 0px 10px;
+padding:0px ds10px 0px 10px;
+font-size:12px;
+font-size:1.2rem;
+text-align:left;
+line-height:15px;
+
+}
+
+/* DISCOGS
+***************************************************************/
+
+
+.releases_discography_number h2 {margin-bottom: 0px}
+
+.releases_discography_number,.artists_show
+{
+font-weight:none;
+margin:10px;
+}
+
+.releases_discography
+{
+background-image:url(../pics/pattern/pat-bg.png);
+background-repeat:repeat;
+background-color:#000;
+padding:60px 0PX 60PX 0PX;
+}
+
+
+.releases_discography_number_default
+{
+background-image:url(../pics/releases/img-release-default.png);
+height:256px;
+top:11px;
+width:220px!important;
+margin:0px 10px 0px 10px;
+}
+
+.releases_discography_number
+{
+background-color:transparent;
+width:220px!important;
+}
+
+
+.releases_discography_number p
+{
+margin:0px;padding:0px;
+}
+
+.releases_discography_number_first,.artists_show_first
+{
+margin-left:10px!important;
+margin-right:10px;
+}
+.releases_discography_number h1
+{
+padding:0px;
+margin:0px 0px -6px -4px;
+}
+
+
+.releases_discography_last_release
+{
+background-repeat:no-repeat;
+height:16px;
+width:68px;
+position: absolute;
+top:20px;
+background-image:url(../pics/icon/nouveau.png);
+font-family: 'Tempesta', sans-serif;
+font-size:8px;
+font-size:0.8rem;
+color:#FFF;
+text-transform:uppercase;
+font-weight:lighter;
+text-align: center;
+padding-top:1px;
+}
+
+.releases_discography_last_release a
+{
+margin-top:px;
+}
+
+
+.open_artists_listing_releases h1,
+.releases_discography_number h1
+{
+padding:5px 10px 10px 5px;
+font-size:13px;
+font-size:1.3rem;
+color : #FFF;
+}
+
+.releases_discography_number h2,.open_artists_listing_releases h2
+{
+padding:0px 10px 10px 0px;
+font-size:13px;
+font-size:1.3rem;
+}
+
+
+
+.releases_discography_number h1 a,.open_artists_listing_releases h1 a
+{
+color:#FFF!important;
+background-color:transparent;
+text-decoration:none;
+font-weight:normal;
+}
+
+.releases_discography_number h1 a,.open_artists_listing_releases h1 a:hover {color:#29abe2;}
+
+.releases_discography_number h2 a,.open_artists_listing_releases h2 a
+{
+color:#FFF!important;
+text-decoration:none;
+margin-top:-5px;
+font-weight:normal;
+background-color: transparent;
+}
+
+
+.releases_discography_number h2 a:hover,.open_artists_listing_releases h2 a:hover {color:#29ABE2!important;}
+
+ul.releases_discography_button
+{
+margin-top:-20px;
+margin-left:4px;
+padding-bottom:0px;
+margin-bottom:7px;
+}
+
+.releases_discography_button  li
+{
+display:inline;
+padding:0px;
+margin:0px;
+font-size:10px;
+font-size:1rem;
+
+}
+
+.releases_discography_button li a
+{
+background-color:#000;
+color:#29ABE2;
+text-decoration:none;
+font-weight:normal;
+text-transform:uppercase;
+padding:5px;
+}
+
+.releases_discography_button li a:hover
+{
+color:#000;
+background-color:#29ABE2;
+}
+
+/* ARTISTS
+***************************************************************/
+
+.artists
+{
+  background-color: #f2f2f2;
+  background-image: url(../pics/pattern/pat-bg.png);
+  background-repeat: repeat;
+  top: 0 px;
+
+}
+
+.artists h1
+{
+  background-color: #f2f2f2!important;
+  color: transparent;
+  margin-left: 0px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 37px;
+  font-size: 3.7 rem;
+  letter-spacing: 1px;
+}
+
+.artists_listing_all,.open_releases,.open_artists, .open_releases_content, .open_illustrator
+{
+background-image:url(../pics/pattern/pat-bg.png);
+background-repeat:repeat;
+background-color:#f2f2f2;
+padding : 20PX 0PX 20PX 0PX;
+}
+.artwork_artist {
+  background-color: #000;
+  top:0px;
+  padding-bottom: 30px;
+}
+ .artwork_artists_listing_all {
+   background-color: #000;
  }
- 
- .releases_discography_button li a 
- {
-   background-color:#000;
-   color:#29ABE2;
-   text-decoration:none;
-   padding:5px;
-   font-weight:normal;
+
+.artists_pictures
+{
+ border-radius:200px;
+}
+
+img.artists_pictures
+{
+height:220px;
+width:220px;
+}
+
+.artists_title a, .artists_artwork_title a
+{
+color:#29ABE2;
+text-decoration:none;
+
+}
+
+.artists_artwork_title a {background-color:#000;
+font-weight:lighter;
+font-size:19px;
+font-size:1.9rem;
+padding:3px 9px 3px 9px;
+}
+.artists_artwork_title {
+ position:absolute;
+margin:0;
+ padding:0;
+ width:100%;
+font-weight:lighter;
+top:43px;
+font-size:19px;
+font-size:1.9rem;
+padding:3px 9px 3px 3px;
+display: block;
+z-index:2000;
+z-index:5000;
+left:-3px;
+}
+.artists_title
+{
+position: absolute;
+font-weight:lighter;
+top:113px;
+font-size:18px;
+font-size:1.8rem;
+background-color:#000;
+padding:4px 9px 3px 3px;
+display: block;
+z-index:2000;
+left:10px
+}
+
+
+
+.tags h1{
+line-height:24px;
+position:relative;
+}
+
+.tags h1{
+background-color:#FFF;
+color:#000;
+text-decoration:none;
+
+}
+.tags h1:after{
+content:"";
+float:left;
+position:absolute;
+top:0;
+width:0;
+height:0;
+border-color: transparent transparent  transparent #FFF ;
+margin-left:5px;
+border-style:solid;
+border-width: 40px 40px 0px 40px ;
+}
+
+
+/* TO CLEAN
+***************************************************************/
+
+
+.artists_show_default
+{
+background-image:url(../pics/artists/img-artist-default.png);
+height:240px;
+width:220px!important;
+margin-left:9px;
+margin-right:9px;
+margin-top:5px;
+opacity:0.49;
+}
+
+.artists_show_artwork_default
+{
+background-image:url(../pics/artists/hexagone-trame.png);
+height:255px;
+width:220px!important;
+margin-left:9px;
+margin-right:9px;
+margin-top:20px;
+}
+
+/* INFOS
+***************************************************************/
+
+.infos
+{
+background-image:url(../pics/pattern/pat-bg.png);
+background-repeat:repeat;
+background-color:#f2f2f2;
+padding:70px 0px 60px 0px;
+top:-22px;
+display: none;
+}
+
+
+.infos_descr h1,
+.infos_descr h2,
+.infos_descr h3,
+.infos_descr h4
+{
+color:#000;
+font-weight:normal;
+text-transform:uppercase;
+}
+
+.infos_descr h3 {margin:30px 0px 5px 0px;}
+.infos_descr
+{
+
+color:#000;
+text-align:left;
+}
+
+
+.infos_descr li
+{
+list-style-type:none;
+margin-left:0px;
+}
+
+.infos_descr a
+{
+color:#000;
+text-decoration:none;
+}
+.infos_descr a:hover
+{opacity:1;color:#000;text-decoration: underline;}
+.infos_vids
+{
+margin-left:20px;
+width:276px;
+}
+
+
+/*#informations {margin-top:120px!important;}
+*//* BUTTON TOP - ANCRE
+***************************************************************/
+
+.artist_button_top
+{
+background-image:url(../pics/pattern/pat-bg.png);
+background-repeat:repeat;
+background-color:#F2F2F2;
+position:relative;
+float:right;
+padding:2px 3px 2px 2px ;
+margin-top:20px;
+}
+
+.artwork_artist_button_top
+{
+background-image:url(../pics/pattern/pat-bg.png);
+background-repeat:repeat;
+background-color:#F2F2F2;
+position:relative;
+float:right;
+padding:2px 3px 2px 2px ;
+margin-top:20px;
+}
+
+.graphists_button_top
+{
+background-image:url(../pics/pattern/pat-bg.png);
+background-repeat:repeat;
+background-color:#000;
+position:relative;
+float:right;
+padding:2px 3px 2px 2px ;
+margin-top:23px;
+margin-right:5px;
+}
+
+.infos_button_top
+{
+
+background-image:url(../pics/pattern/pat-bg.png);
+background-repeat:repeat;
+background-color:#f2f2f2;
+position:relative;
+float:right;
+padding:2px 3px 2px 2px ;
+margin-top:25px;
+margin-right:5px;
+}
+
+
+
+.footer_button_top
+{
+position:relative;
+float:right;
+padding:2px 3px 2px 2px ;
+margin-top:-93px;
+margin-right:5px;
+
+background-image:url(../pics/pattern/pat-foot.png);
+background-repeat:repeat;
+background-color:#f2f2f2;
+display: none;
+}
+
+
+/* FOOTER
+***************************************************************/
+
+.footer
+{
+  background-image: url(../pics/pattern/pat-foot.png);
+  background-repeat: repeat;
+  background-color: #000;
+  font-size: 20px;
+  font-size: 2rem;
+  text-transform: lowercase;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  padding: 80px 0px 80px 0px;
+}
+
+
+.footer_content h1, .footer_content h2
+{
+font-weight:normal;
+text-transform:uppercase;
+}
+
+.footer_content h1
+{
+color:#FFF;
+background-image:url(../pics/pattern/pat-bg.png);
+background-repeat:repeat;
+display:inline;
+padding:2px 4px 2px 4px;
+margin-left:-2px;
+font-size:20px;
+font-size:2rem;
+}
+
+.documentaryembed {  float: right;}
+.footer_content h2
+{
+color:#FFF;
+font-size:15px;
+font-size:1.5rem;
+margin:10px 0px 10px 0px;
+}
+
+.footer_links_1 ul, li, .footer_links_2 ul, li
+{
+list-style-type:none;
+}
+
+.footer_links_1 li, .footer_links_2 li
+{
+margin:5px 0px 5px -10px;
+padding-left:10px;
+
+}
+.footer_links_1 li a, .footer_links_2 li a
+{
+color:#29ABE2;
+padding:2px 2px 0px 2px;
+text-decoration:none;
+opacity:0.7;
+}
+
+.footer_links_1 li a:hover, .footer_links_2 li a:hover
+{color:#29ABE2;opacity:1;}
+.footer p
+{
+color:#FFF;
+font-size: 2.2rem;
+font-weight: bold;
+}
+
+.footer_content p a
+{
+color:#29ABE2;
+text-decoration:none;
+font-weight: normal;
+}
+
+.footer_content p a:hover
+{
+opacity:1;
+color: #FFF;
+}
+.footer_links_2
+{
+margin-top:30px;
+}
+.footer_nav_1 li
+{
+display:inline;
+padding:0px;
+margin:0px;
+
+}
+
+.footer_nav_1 li:hover {opacity:1;}
+
+ul.footer_nav_1
+{
+margin:8px 0px 20px 20px;
+opacity:0.6;
+padding:2px;
+float:right;
+margin-right:-20px;
+}
+
+
+.footer_content textarea
+{
+margin-top:-10px;
+width:460px;}
+
+.footer_content input,.footer_content textarea
+{
+border:0px;
+
+ background-color: rgb(41, 171, 226); /* alternative solide */
+  background-color: rgba(41, 171, 226, 0.3); }
+
+
+.footer_content input.valid
+{
+background-color:#000;
    text-transform:uppercase;
- }
- 
- .releases_discography_button li a:hover 
- {
-  color:#000;
-  background-color:#29ABE2;
- }
- 
-  /* ARTISTS
-  ***************************************************************/
- 
- .artists
- {
-   background-color:#000;
-   background-image:url(../pics/pattern/pat-bg.png);
-   background-repeat:repeat;
- }  
- 
- .artists_listing_all,.open_releases,.open_artists
- {
-  background-image:url(../pics/pattern/pat-bg.png);
-  background-repeat:repeat;
-  background-color:#f2f2f2;
-  padding:30px 0px 100px 0px;
- }
- 
- 
- .open_releases,.open_artists
- {
-   top:-14px;
-   border-top:10px solid #000;
-   background-color:#FFF;}
- 
-   .artists_pictures
-   {
-    border-radius:200px;
-    top:-10px;
-  }
- 
-  img.artists_pictures
-  {
-   height:220px;
-   width:220px;
- }
- 
- .artists_title a
- {
-   color:#29ABE2; 
-   text-transform:uppercase;
-   text-decoration:none; 
- }
- 
- .artists_title 
- {
-   position: absolute;
-   font-weight:lighter;
-   font-family: 'Jockey One', sans-serif;
-   top:103px;
-   font-size:19px;
-   font-size:1.9rem;
-   background-color:#000;
-   padding:3px 9px 3px 3px;  
-   display: block;
-   z-index:2000;
-   left:10px
- }
- 
- 
-   .artists h1
-   {
-    background-color:#f2f2f2;
-    color:#000;
-  }
- 
- 
- 
-  .tags h1{
-   line-height:24px;
-   position:relative;
- 
- } 
- 
- .tags h1{
-  background-color:#FFF;
+color:#28ABE3;
+background-image:none;
+background-repeat:repeat;
+float:right;
+margin-top:-10px;
+font-size:10px;
+font-size:1rem;
+padding: 6px 5px 5px 5px;
+}
+
+.footer_content input.valid:hover
+{
+background-color:#29ABE2!important;
+opacity:1;
+color:#000;
+cursor:pointer!important;
+}
+.footer_content input:focus,.footer_content textarea:focus
+{
+background-color:#29ABE2;
+opacity:1;
+border:none}
+/* OPEN RELEASES
+***************************************************************/
+
+
+
+
+
+.open_releases_infos h2
+{
+margin-left:10px;
+}
+
+
+
+
+h1.open_releases_catalog , h2.open_releases_artist, h3.open_releases_album, h3.open_releases_title , h1.open_releases_title, h2.open_releases_title, h1.open_artists_name, h2.open_artists_title, .open_releases_share_button
+{
+font-weight:normal;
+text-transform:uppercase;
+
+}
+
+h2.open_releases_artwork_credit {
+color:#666;
+font-size:13px;
+font-size:1.3rem;
+margin-top:-40px;
+text-align: right;
+font-weight: lighter;}
+h2.open_releases_artwork_credit a {color:#666;font-weight: lighter;}
+h2.open_releases_artwork_credit a:hover {color:#000;}
+
+.open_releases_artwork_credit a,  .open_artists_bio a {padding: 2% 0% 0% 0%;color:#29ABE2;font-weight:bold;text-decoration: none;}
+.open_artits_bio a:hover {color:#000;}
+h1.open_releases_title, h2.open_releases_title, h3.open_releases_title, h2.open_artists_title
+{
+font-size:1.5rem;
+margin-left:10px;
+}
+
+h1.open_releases_title
+{
+margin-top:20px;
+margin-left:10px;
+}
+
+/* .open_releases_download_licence
+{
+  color: #000;
+  text-decoration: none;
+  margin-top: 0px;
+  margin-bottom: 25px;
+  font-size: 13px;
+  font-size: 1.9rem;
+  font-family: 'Jockey One', sans-serif;
+  font-weight: normal;
+
+} */
+
+.open_releases_download_licence a
+{
   color:#000;
   text-decoration:none;
-  
- } 
- .tags h1:after{
-   content:"";
-   float:left;
-   position:absolute;
-   top:0;
-   width:0;
-   height:0;
-   border-color: transparent transparent  transparent #FFF ;
-   margin-left:5px;
-   border-style:solid;
-   border-width: 40px 40px 0px 40px ;    
- } 
- 
- 
-  /* TO CLEAN
-  ***************************************************************/
- 
- 
- .artists_show_default 
- {
-   background-image:url(../pics/artists/img-artist-default.png);
-   height:240px;
-   width:250px;
-   margin-left:10px;
-   margin-top:5px;
- }
- 
- 
- /* INFOS */
- 
- .infos
- {
-  background-image:url(../pics/pattern/pat-bg.png);
-  background-repeat:repeat;
-  background-color:#000;
-  padding:30px 0px 50px 0px;
-  margin-top:-15px;
- }
- 
- .artist_button_top 
- {
-  background-image:url(../pics/pattern/pat-bg.png);
-  background-repeat:repeat;
-  background-color:#F2F2F2; 
- position:relative;
- float:right;
- padding:2px 3px 2px 2px ;
- margin-top:20px;
- }
- 
- .infos_button_top 
- {
- 
-  background-image:url(../pics/pattern/pat-bg.png);
-  background-repeat:repeat;
-  background-color:#000; 
- position:relative;
- float:right;
- padding:2px 3px 2px 2px ;
- margin-top:20px;
- }
- 
- 
- .footer_button_top
- {
- position:relative;
- float:right;
- padding:2px 3px 2px 2px ;
- margin-top:-48px;
-  background-image:url(../pics/pattern/pat-foot.png);
-  background-repeat:repeat;
-  background-color:#000;
- }
- 
- .infos_descr h1,
- .infos_descr h2,
- .infos_descr h3,
- .infos_descr h4
- {
-   color:#FFF;
-   font-family: 'Jockey One', sans-serif;
-   font-weight:normal;
-   text-transform:uppercase;
- }
- 
- .infos_descr 
- {
- 
-   color:#b2b2b2;
-   text-align:left;
- }
- 
- .infos_descr li 
- {
-   list-style-type:none;
-   margin-left:0px;
- }
- 
- .infos_descr a
- {
-   color:#29ABE2;
-   text-decoration:none;
-   opacity:0.7;
- }
- .infos_descr a:hover 
- {opacity:1;color:#29ABE2;}
- .infos_vids
- {
-  margin-left:20px;
-  width:276px;
- }
- 
- 
- /* FOOTER */
- 
- .footer
- {
-  background-image:url(../pics/pattern/pat-foot.png);
-  background-repeat:repeat;
-  background-color:#000;
-  padding:30px 0px 100px 0px;
- }
- 
- .footer_content p  {color:#FFF;}
- 
- .footer_content h1, .footer_content h2 
- {
-   font-weight:normal;
-   text-transform:uppercase;
-   font-family: 'Jockey One', sans-serif;
- } 
- 
- .footer_content h1 
- {
-  color:#FFF;
-  background-image:url(../pics/pattern/pat-bg.png);
-  background-repeat:repeat;
-  display:inline;
-  padding:2px 4px 2px 4px;
-  margin-left:-2px;
-  font-size:20px;
-  font-size:2rem;
- }
- 
- .footer_content h2
- {
-   color:#FFF;
-   font-size:15px;
-   font-size:1.5rem;
-   opacity:0.7;
-   margin:10px 0px 10px 0px;
- } 
- 
- .footer_links_1 ul, li, .footer_links_2 ul, li 
- {
-   list-style-type:none;
- }
- 
- .footer_links_1 li, .footer_links_2 li 
- {
-   margin:5px 0px 5px -10px;
-   padding-left:10px;
- 
- }
- .footer_links_1 li a, .footer_links_2 li a 
- {
-   color:#29ABE2;
-   padding:2px 2px 0px 2px;
-   text-decoration:none;
-   opacity:0.7;
- }
- 
- .footer_links_1 li a:hover, .footer_links_2 li a:hover
- {color:#29ABE2;opacity:1;}
- .footer p 
- {
-   color:#b2b2b2;
- }
- 
- .footer_content p a 
- {
-   color:#29ABE2;
-   text-decoration:none;
-   opacity:0.7;
- }
- 
- .footer_content p a:hover 
- {
-   opacity:1;
- }
- .footer_links_2
- {
-   margin-top:30px;
- }
- .footer_nav_1 li 
- {
-   display:inline;
-   padding:0px;
-   margin:0px;
- 
- }
- 
- .footer_nav_1 li:hover {opacity:1;}
- 
- ul.footer_nav_1 
- {
-   margin:8px 0px 20px 0px;
-   opacity:0.6;
-   padding:2px;
-   float:right;
- }
- 
- 
- .footer_content textarea  
- {
-   margin-top:-10px;
-   width:460px;}
- 
- .footer_content input,.footer_content textarea  
- {
-   border:0px;
- 
-    background-color: rgb(41, 171, 226); /* alternative solide */
-     background-color: rgba(41, 171, 226, 0.3); }
- 
- 
- .footer_content input.valid 
- {
-   background-color:#000;
-      text-transform:uppercase;
-   color:#28ABE3;
-   background-image:none;
-   background-repeat:repeat;
-   float:right;
-   margin-top:-10px;
-   font-size:10px;
-   font-size:1rem;
-   padding: 6px 5px 5px 5px;
- }
- 
- .footer_content input.valid:hover
- {
-   background-color:#29ABE2!important;
-  opacity:1;
+}
+
+h2.open_releases_title
+{
+margin-top:20px;
+margin-bottom: 30px;
+}
+
+h2.open_releases_title a {color: #ea1D78;text-decoration: none;}
+
+h3.open_releases_title
+{
+margin-top:20px;
+}
+h1.open_releases_catalog,h2.open_releases_artwork_credit, h3.open_releases_album, h3.open_releases_title,.open_releases_buy,   ul.open_releases_download, .open_releases_share_button
+{
+  margin-left:10px;
+
+}
+h1.open_releases_catalog
+{
+color: #29abe2;
+font-size:14px;
+font-size:1.4rem;
+margin-top:10px;
+}
+
+h2.open_releases_artist
+{
+  font-size: 2.8rem;
+  color: #000;
+  padding:5px 0px 0px 0px;
+
+}
+
+h2.open_releases_artist a
+{
+  color:#29ABE2;
+  text-decoration:none;
+}
+
+h2.open_releases_artist a:hover
+{
+color:#000;
+}
+
+h3.open_releases_album
+{
+
+color:#b2b2b2;
+font-size:2.8rem;
+margin-top:-36px;
+margin-bottom: -0.5em;
+}
+.open_releases_videos {
+  margin-left: 17px;
+}
+
+.open_releases_playlist li.bonus a, .open_releases_videos li.bonus a
+{
+  font-style: italic;
+}
+
+.open_releases_playlist li a, .open_releases_videos li a
+{
+background-color: #e6e6e6;
+width:450px;
+display: block;
+margin:3px 0px 0px -30px;
+padding:2px 2px 2px 5px;
+
+
+}
+
+.open_releases_playlist a:hover, .open_releases_videos a:hover
+{
+color:#FFF;
+text-decoration:none;
+background-color:#1a1a1a;
+}
+
+ a.jp-playlist-current {
+color:#FFF!important;
+text-decoration:none;
+background-color:#1A1A1A!important;}
+
+
+
+span .open_releases_playlist_icon_play, span .open_releases_playlist_icon_play
+{
+margin-right:5px;
+color:#535353!important;
+}
+
+
+span .open_releases_playlist_icon_play:hover, span .open_releases_playlist_icon_play:hover
+{
+margin-right:5px;
+color:#FFF!important;
+}
+
+
+
+.open_releases_artwork
+{
+margin:20px 38px 0px 0px;
+}
+
+
+.open_artists_listing_releases h2
+{
+margin-top:-25px!important;
+margin-left:-4px;
+}
+
+
+
+ul.open_releases_playlist, ul.open_releases_playlist
+{
+
+margin: 0px 0.75em 0.75em 0;
+padding: 0 1em;
+list-style: none;
+}
+
+
+.open_releases li a
+{
+text-decoration:none;
+color:#000;
+}
+
+.open_releases_playlist_button, .open_releases_videos_button
+{
+border-color: transparent #111;
+border-style: solid;
+border-width: 0.35em 0 0.35em 0.45em;
+display: block;
+height: 0;
+width: 0;
+left: -1em;
+}
+
+/*.open_releases_artwork_credit {
   color:#000;
-  cursor:pointer!important;
- }
- .footer_content input:focus,.footer_content textarea:focus
- {
-   background-color:#29ABE2;
-  opacity:1;
- border:none}
- /* OPEN RELEASE */
- 
- .open_releases_infos
- {
-   margin-top:-13px;
-   margin-left:-21px;
- }
- 
- .open_releases_infos hr
- {
-   margin-left:10px;
-   width:481px;
- }
- .open_releases_infos h2
- {
-   margin-left:10px;
- }
- .open_releases_content,.open_artists_content 
- {
-   padding-top:20px;
- }
- 
- h1.open_releases_catalog , h2.open_releases_artist, h3.open_releases_album, h3.open_releases_title , h1.open_releases_title, h2.open_releases_title, h1.open_artists_name, h2.open_artists_title, .open_releases_share_button
- {
-  font-weight:normal;
-  text-transform:uppercase;
-  font-family: 'Jockey One', sans-serif;
- 
- }
- 
- 
- h1.open_releases_title, h2.open_releases_title, h3.open_releases_title, h2.open_artists_title
- {
-   font-size:16px;
-   font-size:1.6rem;
-   margin-left:10px;
- }
- 
- h1.open_releases_title
- {
-   margin-top:10px;
-   margin-left:10px;
- }
- h2.open_releases_title
- {
-   margin-top:10px;
- }
- 
- h3.open_releases_title 
- {
-   margin-top:28px;
- }
- h1.open_releases_catalog, h3.open_releases_album, h3.open_releases_title,.open_releases_buy,   ul.open_releases_download, .open_releases_share_button
- {
-     margin-left:10px;
- 
- }
- h1.open_releases_catalog
- {
-   color: #29abe2;
-   font-size:14px;
-   font-size:1.4rem;
-   margin-top:10px;
- }
- 
- h2.open_releases_artist
- {
-   font-size:33px;
-   font-size:3.3rem;
-   color:#b2b2b2;
-   margin-top:-30px;
- }
- 
- h2.open_releases_artist a
- {
-   color:#000;
-   text-decoration:none;
-   text-decoration:none;
- }
- 
- h2.open_releases_artist a:hover 
- {
-   color:#29ABE2;
- }
- 
- h3.open_releases_album
- {
- 
-  color:#b2b2b2;
-  font-size:33px;
-  font-size:3.3rem;
-  margin-top:-36px;
- }
- 
- 
- .open_releases_playlist li a
- {
-   background-color: #e6e6e6;
-   width:450px;
-   display: block;
-   margin:3px 0px 0px -30px;
-   padding:2px 2px 2px 5px;
- }
- 
- .open_releases_playlist a:hover 
- {
-   color:#FFF;
-   text-decoration:none;
-   background-color:#1a1a1a;
- }
- 
- .open_releases_playlist_icon_play 
- {
-   margin-top:-3px;
-   margin-right:5px;
- }
- 
- .open_releases_playlist_icon_play:hover 
- {
-   background-image:url("../pics/icon/play-hover.png");
- }
- 
- .open_releases_artwork
- {
-   margin-right:30px;
- }
- 
- 
- .open_releases_playlist a:hover 
- 
- 
- ul.open_releases_playlist
- {
-   margin: 0.75em 0;
-   padding: 0 1em;
-   list-style: none;
- }
- 
- 
- .open_releases li a 
- {
-   text-decoration:none;
-   color:#000;
- }
- 
- .open_releases_playlist_button
- {
-   border-color: transparent #111;
-   border-style: solid;
-   border-width: 0.35em 0 0.35em 0.45em;
-   display: block;
-   height: 0;
-   width: 0;
-   left: -1em;
- }
- 
- .open_releases_press_text,.open_artists_bio
- {
-   color:#666;
-     margin-left:10px;
- 
-   margin-top:-10px; 
-   padding-bottom:0px;
-   line-height:17px;
- }
- 
- ul.open_releases_button, ul.open_artists_button
- {
-   margin-top:-40px;
-   margin-bottom:0px;
-   text-align:right;}
- 
-   .open_releases_button li, .open_artists_button li 
-   {
- 
-     background-color:transparent;
-     list-style-type:none;
-     display:inline;
-     padding:0px;
-     margin: 0px 2px 0px 2px;
- 
-   }
- 
-   .open_releases_button_left, .open_releases_button_right , .open_releases_button_close
-   {
-     background-repeat:no-repeat;
-     max-width:35px;
-     max-height:35px;
-     color:transparent;
-     font-size:40px;
-   }
- 
-   .open_releases_button_left 
-   {
-     background-image:url("../pics/button/release_retour.png");
- 
-   }
- 
-   .open_releases_button_left:hover
-   {
-     background-image:url("../pics/button/release_retour-hover.png");
-   }
- 
-   .open_releases_button_right
-   {
-     background-image:url("../pics/button/release_suivant.png");
- 
-   }
- 
-   .open_releases_button_right:hover
-   {
-     background-image:url("../pics/button/release_suivant_hover.png");
-   }
- 
-   .open_releases_button_close
-   {
-     background-image:url("../pics/button/release_close.png");
- 
-   }
- 
-   .open_releases_button_close:hover
-   {
-     background-image:url("../pics/button/release_close-hover.png");
-   }
- 
-   .open_releases_button_left a,.open_releases_button_right a, .open_releases_button_close a
-   {
-     color:transparent!important;
-   }
-   .open_releases_buy 
-   {
-     background-color:#1a1a1a;
-     color:#FFF;
-     font-weight:bold;
-     padding:5px;
-     min-height:20px;
-     margin-top:-12px;
-     font-size:12px;
-     font-size:1.2rem;
-     width:471px;
-   }
- 
-   .open_releases_buy:hover
-   {
-     background-color: #29ABE2;
-   }
-   .open_releases_buy img 
-   {
-     padding:0px 2px 0px 2px;
-   }
- 
-   .open_releases_price 
-   {
-     float:left;
-     margin-top:1px;
-   }
-   .open_releases_market 
-   {
-     float:right;
-   }
- 
-   .open_releases_buy a 
-   {
-     color:#FFF;
-     text-decoration:none; 
-   }
- 
- 
-   ul.open_releases_download
-   {
-     margin:-10px 0px 10px 0px;
-   }
- 
-   .open_releases_download li 
-   {
-     display:inline;
-     padding:5px;
-     font-size:10px;
-     font-size:1em;
-     font-family: arial, verdana, sans-serif; 
-     margin:2px; }
- 
-     .open_releases_download a 
-     {
-       background-color:#e6e6e6;
-       padding:5px;
- 
- 
-     }
-     .open_releases_download a:hover 
-     {
-       background-color:#000;
-       color:#FFF; 
-       padding:5px;
-     }
- 
- 
- 
-     ul.open_releases_share_button
-     {
-       margin-bottom:-20px;
-     }
-     .open_releases_share_button li 
-     {
-       display: inline;
-       margin:2px 2px 2px 2px;
-       font-size:14px;
-       font-size:1.4rem;
-       color:#000;
-       font-weight:bold;
-       text-transform:uppercase;
-       font-family: 'Jockey One', sans-serif;
- 
-     }
- 
-     .open_releases_share_button img 
-     {
-       margin-top:-6px;
-       opacity:0.6;
-     }
- 
-     .open_releases_share_button img:hover 
-     {
-       opacity:1;
-     }
-     /* A TRIER */
- 
-     .releases,.category_infos  
-     {
-      background-color:transparent;
-      margin-top:-40px!important;
-      padding-bottom:12px;
-    }
- 
- 
- /* .artists h1,
-  .releases h1,
-  .category_infos h1
+  margin-left:10px;
+margin-top:-10px;
+padding-bottom:0px;
+line-height:17px;
+}*/
+.open_releases_press_text, .presentation
+{
+  color: #000;
+  padding-bottom: 0px;
+  font-size: 1.5rem;
+  line-height: 28px;
+  text-align: justify;
+}
+
+.open_artists_bio
+{
+  color: #000;
+  padding-bottom: 20px;
+  font-size: 1.5rem;
+  line-height: 28px;
+  text-align: justify;
+  background-color: #F9F9F9;
+}
+
+.open_releases_press_text a /*.open_releases_artwork_credit a*/
+{
+color: #000;
+opacity: 0.9;
+  text-decoration: none;
+}
+
+.open_releases_press_text a:hover
+{
+color: #000;
+opacity: 1;
+}
+
+ul.open_releases_button, ul.open_artists_button
+{
+  float: right;
+  z-index: 500;
+  position: relative;
+}
+
+.open_releases_button li, .open_artists_button li
+{
+
+  background-color:transparent;
+  list-style-type:none;
+  display:inline;
+  padding:0px;
+  margin: 0px 2px 0px 2px;
+
+}
+
+.open_releases_button_left, .open_releases_button_right , .open_releases_button_close
+{
+  background-repeat:no-repeat;
+  max-width:35px;
+  max-height:35px;
+  color:transparent;
+  font-size:40px;
+}
+
+.open_releases_button_left
+{
+  background-image:url("../pics/button/release_retour-hover.png");
+
+}
+
+.open_releases_button_left:hover
+{
+  background-image:url("../pics/button/release_retour.png");
+}
+
+.open_releases_button_right
+{
+  background-image:url("../pics/button/release_suivant_hover.png");
+
+}
+
+.open_releases_button_right:hover
+{
+  background-image:url("../pics/button/release_suivant.png");
+}
+
+.open_releases_button_close
+{
+  background-image:url("../pics/button/release_close-hover.png");
+
+}
+
+.open_releases_button_close:hover
+{
+  background-image:url("../pics/button/release_close.png");
+}
+
+.open_releases_button_left a,.open_releases_button_right a, .open_releases_button_close a
+{
+  color:transparent!important;
+}
+
+  .open_releases_buy
   {
-    font-family: 'Jockey One', sans-serif;
-    font-weight:lighter;
-    background-image:url(../pics/pattern/pat-bg.png);
-    background-repeat:repeat;
-    display:inline;
-    padding:5px;
-    margin:0px 0px 0px 0px;
-    text-transform:uppercase;
-    font-size:27px;
-    font-size:2.7rem
-    }*/
- 
-   .releases h1,
-   .category_infos h1
-   {
+    margin: 12px 0px 0px 0px;
+    background-color: #FFF;
+    height: 30px;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    padding: inherit;
+    padding: 4% 2%;
+      }
+
+.open_releases_buy a:hover
+{
+  color:#000;
+
+}
+.open_releases_buy img
+{
+  padding:0px 2px 0px 2px;
+}
+
+.open_releases_price
+{
+  float:left;
+  margin-top:1px;
+}
+.open_releases_market
+{
+  float:right;
+}
+
+.open_releases_buy a
+{
+    margin-top: 20px;
+    text-decoration: none;
+    font-weight: lighter;
+    font-size: 2.5rem;
+    background-color: #29abe2;
+    color: #FFF;
+    padding: 2%;
+}
+
+.open_releases_buy a:hover {background-color: #000; color:#FFF!important;}
+ul.open_releases_download
+{
+  margin:-1em 0px 2em 0.7em;
+}
+
+.open_releases_download li
+{
+  display:inline;
+  font-size:10px;
+  font-size:1em;
+  font-family: 'Open Sans', sans-serif;
+  margin:2px; }
+
+  .open_releases_download a
+  {
+    /* background-color:#e6e6e6; */
+    /* font-weight: bold; */
+    padding:7px;
+
+
+  }
+  .open_releases_download a:hover
+  {
     background-color:#000;
     color:#FFF;
+    font-weight: bold;
   }
- 
-  .releases_discography_number,.artists_show
+
+
+
+
+  ul.open_releases_share_button
   {
-   font-weight:none;
-   margin:10px;}
- 
-   .artists_show
-   {
-    min-height:230px;
+    margin-bottom:-20px;
   }
- 
- 
- 
- /**** 
- OPEN ARTITS 
- */
- 
- .open_artists_infos
- {
-   margin-left:-20px;
- }
- 
- h1.open_artists_name
- {
-   color:#000;
-   font-size:25px;
-   font-size:2.5em;
-   margin-left:10px;
- }
- 
- .open_artists_pictures
- {
-   margin-right:30px;
- 
- }
- 
- .open_artists_pictures img
- {
-   height:460px;
-    width:460px;
- 
- }
- 
- 
- .open_artists_listing_releases
- {
-   width:220px;
-   background-color:#FFF;
-   padding-bottom:0px;
- margin:10px 10px 10px 10px;  
- float:left!important;
- }
- 
- .open_artists_listing_releases img 
- {margin-top:-20px;}
- .open_artists_listing_releases h2 
- {
-   margin-top:-25px;
- }
- .open_artists_linked ul
- {
-   margin:-10px 0px 10px 0px;
-   padding-bottom:5px;
- }
- .open_artists_linked li 
- {
-   margin:10px;
- 
- }
- .open_artists_linked ul a 
- {
-  background-color:#e6e6e6;
-  padding:5px;
-  color:#333;
-  text-decoration:none;}
- 
-  .open_artists_linked ul a:hover
+  .open_releases_share_button li
   {
-   background-color:#000;
-   color:#FFF;
- }
- 
- 
- ul.open_releases_nav_artwork
- {
-   text-align:center;}
- 
-   .open_releases_nav_artwork li
-   {
-     display:inline;
-     margin:2px;
-     padding:0px;
-   }
- 
-   .triangle img {position: absolute;top:-4.4px;}
- 
- .artists h1,
- .releases h1,
- .category_infos h1
- {
-  font-family: 'Jockey One', sans-serif;
-  font-weight:lighter;
-  background-repeat:repeat;
+    display: inline;
+    margin:2px 2px 2px 2px;
+    font-size:12px;
+    font-size:1.2rem;
+    color:#666;
+    font-weight:bold;
+    text-transform:capitalize;
+font-family: 'Open Sans', sans-serif;
+
+  }
+
+  .open_releases_share_button img
+  {
+    margin-top:-6px;
+    opacity:0.6;
+  }
+
+  .open_releases_share_button img:hover
+  {
+    opacity:1;
+  }
+
+ul.open_releases_nav_artwork
+{
+text-align:center;
+margin-top:10px;}
+
+.open_releases_nav_artwork li
+{
   display:inline;
-  text-transform:uppercase;
-  font-size:27px;
-  font-size:2.7rem;
-  height:30px;
-  padding:5px 0px 10px 13px;
-  margin-top:10px;
-  margin-left:-5px;
-  background-image:url(../pics/pattern/pat-bg.png);
-  background-repeat:repeat;
-  background-color:#000;
-  color:#FFF;
+  margin:2px;
+  padding:0px;
+}
+
+.open_releases_infos {float:left}
+.open_releases_infos2 {float: right;margin:-10px 0px;}
+/* OPEN ARTISTS
+***************************************************************/
+
+.open_artists_infos hr, .open_releases_infos hr
+{
+  width:480px;
+  margin-left:10px;
+  border-bottom:1px solid #FBFBFB;
+}
+hr.open_releases_button_hr, hr.open_artists_button_hr
+{
+    width:960px;
+}
+
+
+h1.open_artists_name
+{
+  font-size: 60px;
+  font-size: 4rem;
+  color: #000;
+  margin-top: 20px;
+
+}
+
+
+.open_artists_artwork_listing_releases
+{
+width:220px;
+background-color:#000;
+
+display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+.column {
+  flex: 50%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+.open_artists_listing_releases_container{width: 600px; height: 500px;}
+
+.open_artists_listing_releases
+{
+width:220px;
+background-color:#FFF;
+
+float:left;
+position: relative;
+}
+
+
+/* .open_artists_listing_releases img
+{margin-top:-20px;} */
+.open_artists_listing_releases h2
+{
+margin-top:-25px;
+}
+.open_artists_linked ul
+{
+margin:-10px 0px 10px 0px;
+padding-bottom:5px;
+}
+.open_artists_linked li
+{
+margin:10px;
+
+}
+.open_artists_linked ul a
+{
+background-color:#e6e6e6;
+padding:5px;
+color:#333;
+text-decoration:none;}
+
+.open_artists_linked ul a:hover
+{
+background-color:#000;
+color:#FFF;
+}
+  /* A TRIER */
+
+
+ .category_infos
+  {
+   background-color:transparent;
+   margin-top:-70px!important;
+   padding-bottom:12px;
+   margin-left:5px;
+   display: none;
  }
+
+
+.releases h1,
+.category_artwork_artist h1,
+.artwork_artists_listing_all h1
+{
+ background-color:#000;
+ color:#FFF;
+}
+
+
+
+.artists_show
+{
+ min-height:230px;
+ padding:0px;
+ margin:0px 9px 0px 9px;
+}
+
+.artists_show_first
+{
+  margin-left:0px;
+}
+
+a.carousel-nav {
+  text-decoration: none;
+}
+
+/* INFO BULLE */
+/*
+
+ .donate_infos a span {
+position:absolute;
+padding:15px;
+margin-top:45px;
+margin-left:-280px;
+width:250px;
+background:rgba(0,0,0,.9);
+
+opacity:0;
+color:#FFF;
+font-size:12px;
+font-size:1.2rem;
+text-transform:none;
+font-family: 'Arial', sans-serif;
+float:left;
+;
+
+     -o-transform:scale(0) rotate(-12deg);
+        transform:scale(0) rotateZ(-12deg);
+
+        transition:all .105s;
+
+
+        box-shadow:0 0 2px rgba(0,0,0,.5);
+}
+.donate_infos a:hover span, .donate_infos a:focus span{
+opacity:1;
+        transform:scale(1) rotateZ(0);
+}
+
+*/
+
+/* linkl temp*/
+
+.artists_show_artwork.default .hexagon {
+    opacity: 0.1;
+}
+
+/* mailing list */
+
+#mc_embed_signup {background-color: transparent;}
+
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: rgba(41, 171, 226, 0.7);}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color: rgba(41, 171, 226, 0.7);
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+color: rgba(41, 171, 226, 0.7);
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+color: rgba(41, 171, 226, 0.7);
+}
+
+
+#mc_embed_signup .mce_inline_error {background-color: transparent!important;}
+input#mce-EMAIL
+{
+  height: 44px; 
+  width: 354px;
+  border:0px;
+  margin: 20px 0px 20px 0px;
+  background-color: rgba(41, 171, 226, 0.15);
+  color: rgba(41, 171, 226, 0.15);
+  padding-left: 10px;
+}
+input#mce-EMAIL:focus
+{
+ 
+  background-color: rgba(41, 171, 226, 0.15);
+  color: rgba(41, 171, 226, 1);
+  outline: none;
+}
+input.button {
+  height: 44px; 
+  width:54px;
+  border:0px;
+  position: absolute;
+  top:50px;
+  margin:0px 0px  0px -4px;
+  background-color: rgba(41, 171, 226, 1);
+  color: #FFF;
+  font-weight: bold;  
+  text-transform: uppercase;
+  font-size: 15px;
+  font-size: 1.5rem;
+}
+input.button:hover 
+{
+  background-color: rgba(41, 171, 226, 0.90);
+}
+
+input.button:focus {outline: none;}
+
+#radio 
+{background-color: #000;}
+
+.writers {
+ text-align: right;
+font-size: 1.5rem;
+float: right;
+margin-right: -19px;
+background-color: #F9F9F9;
+}
+.writers2
+{  
+  text-align: right;
+  font-size: 1.5rem;
+  float: right;
+  background-color: transparent;
+  padding: inherit;
+  width:100%;
+}
+.writers2 a {color:#000; text-transform: uppercase;text-decoration: none;}
+.open_releases_download_licence {  
+    font-size: 1.5rem;
+    background-color: #FFF;
+    padding: 2%;
+    margin-left: 0px;
+ 
+}
+
+.open_releases_download_licence a, .writers a, .writers2 a
+{color:#29ABE2;text-decoration: none;}
+.sku, .date_release {      
+
+  color: #666;
+font-size:1.5rem;
+float:right
+}
+
+
+  .reviews, .credits {
+     color:#666;
+     text-transform: lowercase;
+  
+  }
+  .reviews a:hover, .credits a:hover {color:#000;}
+.reviews a, .credits a {color:#29ABE2; padding:10px 0px 10px 0px;  text-decoration: none;}
+.open_artists_bio a {float: right;}
+.text-bio {text-align: justify;}
+.presentation {background-color: #F9F9F9; padding:2%;font-size:1.5rem;margin-top:70px;min-height: 520px;    border: 1px solid #eee;
+}
+
+#nonartarea {
+  border-left: 1px solid #eee!important;
+  border-bottom: 1px solid #eee!important;
+  border-right: 1px solid #eee!important;
+  border-top: 0px transparent !important;
+}
+
+.container_12 .grid_3 {width: auto!important;}
