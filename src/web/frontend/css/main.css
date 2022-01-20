@@ -1098,7 +1098,7 @@ body {
   color : #000;
   margin-top : 20px;
   }
-  .open_artists_artwork_listing_releases, .open_artists_listing_releases {d}
+  .open_artists_artwork_listing_releases, .open_artists_listing_releases {text-align: right;}
 
   .row {
     display: flex;
