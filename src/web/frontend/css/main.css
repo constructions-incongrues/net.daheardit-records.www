@@ -938,7 +938,7 @@ body {
   }
   .open_artists_bio {
   color : #000;
-  padding-bottom : 20px;
+  padding: 2% 2% 2% 0%;
   font-size : 1.5rem;
   line-height : 28px;
   text-align : justify;
@@ -1101,7 +1101,7 @@ body {
   .open_artists_artwork_listing_releases, .open_artists_listing_releases {text-align: right;}
 
   .row {
-    display: flex;
+    display: flow-root;
     width: 100%;
     padding: 20px 10px 20px  0Px;
   }
