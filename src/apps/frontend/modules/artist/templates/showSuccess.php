@@ -54,10 +54,10 @@
     
       </span>
     </p>
+      </div>
 
 
-
-    <div class="grid_3open_artists_listing_releases "> 
+    <div class="grid_3 open_artists_listing_releases "> 
 
 
     <div class="row">
