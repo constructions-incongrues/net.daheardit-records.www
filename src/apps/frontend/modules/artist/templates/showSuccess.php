@@ -42,7 +42,7 @@
 
     <h1 class="open_artists_name"><?php echo $artist['name'] ?></h1>
 
-    <p class="grid_10 open_artists_bio">
+    <p class="grid_9 open_artists_bio">
     <img height="30%" width="30%" style="float:left;padding:10px 20px 0px 0px" src="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/artists/<?php echo $artist['slug'] ?>/<?php echo $artist['slug'] ?>_300x300.jpg" alt="" /> 
     <span class="text-bio">
       <?php echo nl2br($artist['Translation'][$sf_user->getCulture()]['presentation']) ?>
@@ -55,7 +55,7 @@
       </span>
     </p>
 
-    <div class="grid_2 open_artists_listing_releases "> 
+    <div class="grid_3 open_artists_listing_releases "> 
 
 
 <div class="row">
@@ -64,7 +64,7 @@
 <div class="column">
 
 <a data-pjax="#content_async" href="<?php echo url_for(sprintf('@release_show?slug=%s#release', $release['slug'])) ?>">
-<img width="100%" hight="100%" src="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/releases/<?php echo $release['slug'] ?>/<?php echo $release['slug'] ?>_300x300.png"  alt=""/>
+<img width="30%" hight="30%" src="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/releases/<?php echo $release['slug'] ?>/<?php echo $release['slug'] ?>_300x300.png"  alt=""/>
 </a>
 </div>
 
