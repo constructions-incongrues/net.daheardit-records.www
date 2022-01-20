@@ -11,7 +11,7 @@
   <div class="grid_12">
       
 <div class="grid_12 open_artists"> 
-  <div class="open_artists_content">
+  <div class="grid_9 open_artists_content">
   
    <ul class="open_artists_button">
 <?php if ($previousArtist): ?>
@@ -57,7 +57,7 @@
 
 
 
-    <div class="open_artists_listing_releases "> 
+    <div class="grid_3open_artists_listing_releases "> 
 
 
     <div class="row">
