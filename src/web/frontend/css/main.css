@@ -1103,6 +1103,7 @@ body {
   .row {
     display: flow-root;
     padding: 20px 10px 20px  0Px;
+    width:none;
   }
   
   .column {
@@ -1110,6 +1111,7 @@ body {
     padding: 5px;
   }
 
+  .column img {height: auto; width: auto;}
   /*
   .column {
   flex : 50%;
