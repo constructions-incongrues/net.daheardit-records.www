@@ -57,7 +57,7 @@
       <div class="grid_6">  <?php echo html_entity_decode($release['player_code']) ?>
 
   </div>
-  <div class="grid_3 open_releases_infos2">
+  <div class="grid_6 open_releases_infos2">
 
   <p class="open_releases_buy">
 
@@ -90,8 +90,6 @@
 <?php endif ?>
 </ul>
   </p>
-  </div>
-  <div class="grid_3 open_releases_infos2">
 
   <?php if (isset($release['press-releases']) && count($release['press-releases'])): ?>
     <ul class="open_releases_reviews">
