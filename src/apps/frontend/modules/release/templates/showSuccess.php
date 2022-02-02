@@ -65,13 +65,13 @@
     <!-- <span style="font-weight: bold;">Acheter :</span> -->
     <?php foreach ($release['prices'] as $price): ?>
     <?php if (is_numeric($price['price'])): ?>
-      <a href="" class="paypal" data-paypalid="<?php echo $price['paypal_id'] ?>"><?php echo $price['format'] ?></a> <br/>
+      <a href="" class="paypal" data-paypalid="<?php echo $price['paypal_id'] ?>"><?php echo $price['format'] ?></a> 
       <?php else: ?>
-      <a href="" class="paypal" data-paypalid="<?php echo $price['paypal_id'] ?>"><?php echo $price['format'] ?></a> <br />
+      <a href="" class="paypal" data-paypalid="<?php echo $price['paypal_id'] ?>"><?php echo $price['format'] ?></a>
     <?php endif ?> 
     <?php endforeach; ?><?php endif ?>
 
-    <a href="https://www.paypal.com/donate/?hosted_button_id=7ZZHRV9ZZQ3V2&fbclid=IwAR2j92BkFJGiS62DSTPD9oy_Sz_kkpT40CjJrNMIwr4CtXi4BKJ2Fo_d4wQ">Donate</a> <br/>
+    <a href="https://www.paypal.com/donate/?hosted_button_id=7ZZHRV9ZZQ3V2&fbclid=IwAR2j92BkFJGiS62DSTPD9oy_Sz_kkpT40CjJrNMIwr4CtXi4BKJ2Fo_d4wQ">Donate</a>
 
 <?php if (count($archives)): ?>
     <!-- <span style="font-weight: bold;">Télécharger :</span> -->
