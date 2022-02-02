@@ -1246,6 +1246,7 @@ body {
   font-size : 1.5rem;
   background-color : #FFF;
   padding : 2%;
+  margin-top: 20px;
   margin-left : 0;
   }
   .open_releases_download_licence a, .writers a, .writers2 a {
