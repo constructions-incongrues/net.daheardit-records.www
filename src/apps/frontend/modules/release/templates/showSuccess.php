@@ -67,7 +67,7 @@
     <?php if (is_numeric($price['price'])): ?>
       <a href="" class="paypal" data-paypalid="<?php echo $price['paypal_id'] ?>"><?php echo $price['format'] ?><?php echo $price['price'] ?></a>
       <?php else: ?>
-     <!-- <a href="" class="paypal" data-paypalid="<?php echo $price['paypal_id'] ?>"><?php echo $price['format'] ?><?php echo $price['price'] ?></a> -->
+      <a href="" class="paypal" data-paypalid="<?php echo $price['paypal_id'] ?>"><?php echo $price['format'] ?><?php echo $price['price'] ?></a> 
     <?php endif ?> 
     <?php endforeach; ?><?php endif ?>
 
