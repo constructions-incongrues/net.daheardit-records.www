@@ -64,7 +64,7 @@
 <?php if ($release['is_available']): ?>
     <!-- <span style="font-weight: bold;">Acheter :</span> -->
     <?php foreach ($release['prices'] as $price): ?>
-    <?php if (is_numeric($price['price'])): ?>
+    <?php if (is_numeric($price['price'])):?>
       <a href="" class="paypal" data-paypalid="<?php echo $price['paypal_id'] ?>"><?php echo $price['format'] ?><?php echo $price['price'] ?></a>
       <?php else: ?>
       <a href="" class="paypal" data-paypalid="<?php echo $price['paypal_id'] ?>"><?php echo $price['format'] ?><?php echo $price['price'] ?></a> 
