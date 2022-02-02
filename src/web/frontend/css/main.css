@@ -995,7 +995,7 @@ body {
   color : transparent !important ;
   }
   .open_releases_buy {
-  margin : 12px 0 0 0;
+  margin : 0 0 0 0;
   background-color : transparent;
   font-size : 2rem;
   text-transform : uppercase;
@@ -1018,7 +1018,7 @@ body {
   float : right;
   }
   .open_releases_buy a {
-  margin-top : 20px;
+  margin-top : 5px;
   text-decoration : none;
   font-weight : lighter;
   font-size : 2rem;
