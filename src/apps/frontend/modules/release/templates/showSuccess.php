@@ -38,7 +38,7 @@
 <div class="presentation">
       <h2 class="open_releases_artist">
       <span class="date_release"></span>
-      <span class="sku"><?php echo $release['sku'] ?> / 
+      <span class="sku"><?php echo $release['sku'] ?> 
     
 <?php if ($release['is_available']): ?>
     <!-- <span style="font-weight: bold;">Acheter :</span> -->
@@ -55,6 +55,9 @@
   <?php foreach ($archives as $archive): ?>
       <a class="release-download" data-dhr-release-slug="<?php echo $release['slug'] ?>" data-dhr-archive-format="<?php echo $archive['name'] ?>" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/releases/<?php echo $release['slug'] ?>/archives/<?php echo $archive['filename'] ?>"><?php echo strtolower($archive['name']) ?></a> /
   <?php endforeach ?>
+  / <?php echo html_entity_decode($release['licence']) ?>  /
+
+      <?php echo $release['released_at'] ?> / 
 <?php endif ?>
 
 <?php if (count($archives)): ?>
@@ -62,10 +65,7 @@
 
   <?php foreach ($release['streaming'] as $link): ?>
       <a class="release-download" href="<?php echo $link['url'] ?>"><?php echo strtolower(basename($link['title'])) ?></a> -
-  <?php endforeach ?> /
-  <?php echo html_entity_decode($release['licence']) ?>  /
-
-      <?php echo $release['released_at'] ?> / 
+  <?php endforeach ?>
   </p>
 <?php endif ?></span> 
 <a href="<?php echo url_for(sprintf('@artist_show?slug=%s#artist', $release['Artist']['slug'])) ?>"><br /><?php echo $release['Artist']['name'] ?></a>  <?php echo $release['title'] ?> </h2>
