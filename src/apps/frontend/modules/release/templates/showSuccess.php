@@ -71,6 +71,8 @@
     <?php endif ?> 
     <?php endforeach; ?><?php endif ?>
 
+    <a href="https://www.paypal.com/donate/?hosted_button_id=7ZZHRV9ZZQ3V2&fbclid=IwAR2j92BkFJGiS62DSTPD9oy_Sz_kkpT40CjJrNMIwr4CtXi4BKJ2Fo_d4wQ"> Donate </a>
+
 <?php if (count($archives)): ?>
     <!-- <span style="font-weight: bold;">Télécharger :</span> -->
   <?php foreach ($archives as $archive): ?>
