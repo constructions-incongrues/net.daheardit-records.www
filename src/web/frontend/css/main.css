@@ -1290,6 +1290,6 @@ body {
   border-top : 0 transparent !important ;
   }
   .container_12 .grid_3 {
-  width : auto !important ;
-  }
+  width : auto;
+}
   
