@@ -38,9 +38,9 @@
 <div class="presentation">
       <h2 class="open_releases_artist">
       <span class="date_release"></span>
-      <span class="sku"><?php echo $release['sku'] ?> / <?php echo html_entity_decode($release['licence']) ?>  /
+        <span class="sku"><?php echo $release['sku'] ?> / <?php echo html_entity_decode($release['licence']) ?>  /
 
-      <?php echo $release['released_at'] ?> / 
+        <?php echo $release['released_at'] ?> / 
     
 <?php if ($release['is_available']): ?>
     <!-- <span style="font-weight: bold;">Acheter :</span> -->

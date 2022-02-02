@@ -1026,6 +1026,7 @@ body {
   color : #FFF;
   padding : 1%;
   margin-right: 10px;
+  display: block;
   }
   .open_releases_buy a:hover {
   background-color : #000;
@@ -1246,8 +1247,9 @@ body {
   font-size : 1.5rem;
   background-color : #FFF;
   padding : 2%;
-  margin-top: 20px;
+  margin-top: 15px;
   margin-left : 0;
+  display: inline-block;
   }
   .open_releases_download_licence a, .writers a, .writers2 a {
   color : #29ABE2;
@@ -1275,6 +1277,7 @@ body {
   }
   .text-bio {
   text-align : justify;
+  padding-top: 10px;
   }
   .presentation {
   background-color : #F9F9F9;
