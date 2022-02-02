@@ -441,8 +441,8 @@ body {
   background-color : transparent;
   text-decoration : none;
   font-weight : normal;
-  }
-.open_artists_listing_releases h1 a:hover {
+  }  
+  .releases_discography_number h1 a:hover {
   color : #29abe2!important;
   }
   .releases_discography_number h2 a, .open_artists_listing_releases h2 a {
