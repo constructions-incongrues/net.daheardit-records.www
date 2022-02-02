@@ -38,7 +38,9 @@
 <div class="presentation">
       <h2 class="open_releases_artist">
       <span class="date_release"></span>
-      <span class="sku"><?php echo $release['sku'] ?> 
+      <span class="sku"><?php echo $release['sku'] ?> / <?php echo html_entity_decode($release['licence']) ?>  /
+
+      <?php echo $release['released_at'] ?> / 
     
 <?php if ($release['is_available']): ?>
     <!-- <span style="font-weight: bold;">Acheter :</span> -->
@@ -55,9 +57,6 @@
   <?php foreach ($archives as $archive): ?>
       <a class="release-download" data-dhr-release-slug="<?php echo $release['slug'] ?>" data-dhr-archive-format="<?php echo $archive['name'] ?>" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/releases/<?php echo $release['slug'] ?>/archives/<?php echo $archive['filename'] ?>"><?php echo strtolower($archive['name']) ?></a> /
   <?php endforeach ?>
-  / <?php echo html_entity_decode($release['licence']) ?>  /
-
-      <?php echo $release['released_at'] ?> / 
 <?php endif ?>
 
 <?php if (count($archives)): ?>
