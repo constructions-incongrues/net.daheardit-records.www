@@ -71,8 +71,6 @@
 <img id="carousel-current" height="30%" width="30%" style="float:left;padding:9px 20px 0px 0px" src="<?php echo sprintf('//%s/thumbnail/_/500/500/crop/best%s', sfConfig::get('app_api_url_root'), $release['artworks'][0]) ?>" />
 <p class="text-bio"><?php echo nl2br(html_entity_decode($release['Translation'][$sf_user->getCulture()]['presentation'])) ?>
 </p>
-<p><a href="<?php echo url_for(sprintf('@artwork_artist_show?slug=%s#artwork_artist', $release['ArtworkArtist']['slug'])) ?>"><?php echo $release['ArtworkArtist']['name'] ?></a> (artwork)<br>
-  </p>
  </div>
     <div class="grid_12 open_releases_artwork">
       <!-- <img id="carousel-current" height="460px" width="460px" src="<?php echo sprintf('//%s/thumbnail/_/500/500/crop/best%s', sfConfig::get('app_api_url_root'), $release['artworks'][0]) ?>" /> -->
@@ -131,6 +129,7 @@
 
 <?php else: ?>
 
+Artwork by <a href="<?php echo url_for(sprintf('@artwork_artist_show?slug=%s#artwork_artist', $release['ArtworkArtist']['slug'])) ?>"><?php echo $release['ArtworkArtist']['name'] ?></a><br>
 <?php echo nl2br(html_entity_decode($release['credits'])) ?> 
 <?php if (count($release['press'])): ?> <br />
 <?php foreach ($release['press'] as $link): ?>
