@@ -996,14 +996,14 @@ body {
   }
   .open_releases_buy {
   margin : 12px 0 0 0;
-  background-color : #FFF;
+  background-color : transparent;
   height : 30px;
   font-size : 2rem;
   text-transform : uppercase;
   font-weight : bold;
   letter-spacing : 2px;
   padding : inherit;
-  padding : 4% 2%;
+  padding : 2% 0% 2%;
   }
   .open_releases_buy a:hover {
   color : #000;
