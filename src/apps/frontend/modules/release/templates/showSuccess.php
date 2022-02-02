@@ -45,6 +45,42 @@
 <img id="carousel-current" height="30%" width="30%" style="float:left;padding:9px 20px 0px 0px" src="<?php echo sprintf('//%s/thumbnail/_/500/500/crop/best%s', sfConfig::get('app_api_url_root'), $release['artworks'][0]) ?>" />
 <p class="text-bio"><?php echo nl2br(html_entity_decode($release['Translation'][$sf_user->getCulture()]['presentation'])) ?>
 </p>
+<div class="grid_6">  <?php echo html_entity_decode($release['player_code']) ?>
+
+</div>
+<div class="grid_6 open_releases_infos2">
+
+<p class="open_releases_buy">
+
+<?php if ($release['is_available']): ?>
+  <!-- <span style="font-weight: bold;">Acheter :</span> -->
+  <?php foreach ($release['prices'] as $price): ?>
+  <?php if (is_numeric($price['price'])):?>
+    <a href="" class="paypal" data-paypalid="<?php echo $price['paypal_id'] ?>"><?php echo $price['format'] ?><?php echo $price['price'] ?></a>
+    <?php else: ?>
+    <a href="" class="paypal" data-paypalid="<?php echo $price['paypal_id'] ?>"><?php echo $price['format'] ?><?php echo $price['price'] ?></a> 
+  <?php endif ?> 
+  <?php endforeach; ?><?php endif ?>
+
+  <a href="https://www.paypal.com/donate/?hosted_button_id=7ZZHRV9ZZQ3V2&fbclid=IwAR2j92BkFJGiS62DSTPD9oy_Sz_kkpT40CjJrNMIwr4CtXi4BKJ2Fo_d4wQ">Donate</a>
+
+<?php if (count($archives)): ?>
+  <!-- <span style="font-weight: bold;">Télécharger :</span> -->
+<?php foreach ($archives as $archive): ?>
+    <a class="release-download" data-dhr-release-slug="<?php echo $release['slug'] ?>" data-dhr-archive-format="<?php echo $archive['name'] ?>" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/releases/<?php echo $release['slug'] ?>/archives/<?php echo $archive['filename'] ?>"><?php echo strtolower($archive['name']) ?></a> -
+<?php endforeach ?>
+<?php endif ?>
+
+<?php if (count($archives)): ?>
+  <!-- <span style="font-weight: bold;">Écouter :</span> -->
+
+<?php foreach ($release['streaming'] as $link): ?>
+    <a class="release-download" href="<?php echo $link['url'] ?>"><?php echo strtolower(basename($link['title'])) ?></a> -
+<?php endforeach ?>
+</p>
+<?php endif ?>
+
+</p>
  </div>
     <div class="grid_12 open_releases_artwork">
       <!-- <img id="carousel-current" height="460px" width="460px" src="<?php echo sprintf('//%s/thumbnail/_/500/500/crop/best%s', sfConfig::get('app_api_url_root'), $release['artworks'][0]) ?>" /> -->
@@ -54,42 +90,7 @@
 
 
     <div class="grid_12 open_releases_infos">
-      <div class="grid_6">  <?php echo html_entity_decode($release['player_code']) ?>
 
-  </div>
-  <div class="grid_6 open_releases_infos2">
-
-  <p class="open_releases_buy">
-
-<?php if ($release['is_available']): ?>
-    <!-- <span style="font-weight: bold;">Acheter :</span> -->
-    <?php foreach ($release['prices'] as $price): ?>
-    <?php if (is_numeric($price['price'])):?>
-      <a href="" class="paypal" data-paypalid="<?php echo $price['paypal_id'] ?>"><?php echo $price['format'] ?><?php echo $price['price'] ?></a>
-      <?php else: ?>
-      <a href="" class="paypal" data-paypalid="<?php echo $price['paypal_id'] ?>"><?php echo $price['format'] ?><?php echo $price['price'] ?></a> 
-    <?php endif ?> 
-    <?php endforeach; ?><?php endif ?>
-
-    <a href="https://www.paypal.com/donate/?hosted_button_id=7ZZHRV9ZZQ3V2&fbclid=IwAR2j92BkFJGiS62DSTPD9oy_Sz_kkpT40CjJrNMIwr4CtXi4BKJ2Fo_d4wQ">Donate</a>
-
-<?php if (count($archives)): ?>
-    <!-- <span style="font-weight: bold;">Télécharger :</span> -->
-  <?php foreach ($archives as $archive): ?>
-      <a class="release-download" data-dhr-release-slug="<?php echo $release['slug'] ?>" data-dhr-archive-format="<?php echo $archive['name'] ?>" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/releases/<?php echo $release['slug'] ?>/archives/<?php echo $archive['filename'] ?>"><?php echo strtolower($archive['name']) ?></a> -
-  <?php endforeach ?>
-<?php endif ?>
-
-<?php if (count($archives)): ?>
-    <!-- <span style="font-weight: bold;">Écouter :</span> -->
-
-  <?php foreach ($release['streaming'] as $link): ?>
-      <a class="release-download" href="<?php echo $link['url'] ?>"><?php echo strtolower(basename($link['title'])) ?></a> -
-  <?php endforeach ?>
-  </p>
-<?php endif ?>
-</ul>
-  </p>
 
   <?php if (isset($release['press-releases']) && count($release['press-releases'])): ?>
     <ul class="open_releases_reviews">
