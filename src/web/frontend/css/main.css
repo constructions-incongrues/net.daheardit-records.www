@@ -938,6 +938,8 @@ body {
   line-height : 28px;
   text-align : justify;
   }
+
+  .open_artists{height: 3000px!important;}
   .open_artists_bio {
   color : #000;
   padding: 2% 2% 2% 0%;
