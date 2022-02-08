@@ -6,6 +6,7 @@
     position: fixed;
     top: 0px;
   }
+  .header_nav_3 li {font-size: 1rem;}
 }
 @media (min-width: 767px) {
 .header {
