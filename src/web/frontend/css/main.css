@@ -18,7 +18,7 @@
     margin-left: auto!important;
     margin-right: auto!important;
 }
-.text-bio .writers { font-size: 1.2rem!important; background-color: transparent!important; text-align: left!important;}
+.text-bio .writers { font-size: 1.2rem!important; background-color: transparent!important; text-align: left!important;float:left!important}
 }
 @media (min-width: 767px) {
 .header {
