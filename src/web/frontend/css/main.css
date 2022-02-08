@@ -5,6 +5,7 @@
   .header_nav_3 ul  {
     position: fixed;
     top: 0px;
+    height: 200px;;
   }
   .header_nav_3 a, .header_nav_3 li {font-size: 2rem!important;}
   .header_nav_3 li {display: block!important;}
