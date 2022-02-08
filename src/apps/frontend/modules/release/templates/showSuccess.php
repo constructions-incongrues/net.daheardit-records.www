@@ -38,6 +38,7 @@
 <div class="presentation">
 
       <h2 class="open_releases_artist">
+        <span class="hidden-mobile">
       <span class="date_release"></span>
         <span class="sku"><?php echo $release['sku'] ?> / <?php echo html_entity_decode($release['licence']) ?>  /
 
@@ -68,7 +69,7 @@
   <?php endforeach ?>
   </p>
 <?php endif ?></span> 
-
+  </span>
 <a href="<?php echo url_for(sprintf('@artist_show?slug=%s#artist', $release['Artist']['slug'])) ?>"><br /><?php echo $release['Artist']['name'] ?></a>  <?php echo $release['title'] ?> </h2>
 <div class="grid_12 open_releases_infos show-mobile">
       <?php echo html_entity_decode($release['player_code']) ?>
