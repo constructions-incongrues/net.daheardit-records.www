@@ -46,9 +46,9 @@
     <img height="30%" width="30%" style="float:left;padding:10px 20px 0px 0px" src="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/artists/<?php echo $artist['slug'] ?>/<?php echo $artist['slug'] ?>_300x300.jpg" alt="" /> 
     <span class="text-bio">
       <?php echo nl2br($artist['Translation'][$sf_user->getCulture()]['presentation']) ?>
-      <?php if ($artist['url']): ?>
+      <!-- <?php if ($artist['url']): ?>
       <a href="<?php echo $artist['url'] ?>">(web)
-      </a>
+      </a> -->
       <?php endif ?>
     
       </span>
