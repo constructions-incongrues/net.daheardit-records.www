@@ -114,7 +114,7 @@
   <?php foreach ($release['streaming'] as $link): ?>
       <a class="release-download" href="<?php echo $link['url'] ?>"><?php echo strtolower(basename($link['title'])) ?></a>
   <?php endforeach ?>
-  </p>
+  <!-- </p> -->
 <?php endif ?>
   </p>
 

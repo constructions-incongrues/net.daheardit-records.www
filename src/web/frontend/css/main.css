@@ -1018,7 +1018,7 @@ body {
   float : right;
   }
   .open_releases_buy a {
-  margin-top : 5px;
+  margin : 5px 10px 0px 0px;
   text-decoration : none;
   font-weight : lighter;
   font-size : 2rem;
