@@ -22,31 +22,38 @@
  
 
 <div class="presentation">
-    <h1 class="open_artists_name"><?php echo $artist['name'] ?> <a href="<?php echo $artist['url'] ?>">(http://)</a></h1>
+    <h1 class="open_artists_name">
+      <?php echo $artist['name'] ?> <a href="<?php echo $artist['url'] ?>">(http://)</a>
+    </h1>
 
+    <p class="grid_8 open_artists_bio">
     <img id="carousel-current" height="30%" width="30%" style="float:left;padding:9px 20px 0px 0px"  src="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/artwork_artists/<?php echo $artist['slug'] ?>/<?php echo $artist['slug'] ?>_300x300.jpg" alt="" /> 
-     
-    <p class="open_artists_bio">
+    <span class="text-bio">
       <?php echo auto_link_text(nl2br($artist['Translation'][$sf_user->getCulture()]['presentation'])) ?>
       <?php if ($artist['url']): ?>
         <span class="writers2"> </span>
 <?php endif ?>
     </p>
+    
+    <div class="grid_4 open_artists_listing_releases "> 
+
+    <p class="grid_8 open_artists_bio">
 
     <?php foreach ($artist['releases'] as $release): ?>
-       <div class="open_artists_listing_releases ">
 
-<span><a data-pjax="#content_async" href="<?php echo url_for(sprintf('@release_show?slug=%s#release', $release['slug'])) ?>">
-   <span class="calque_releases"></span>
-   <img width="220px" height="220px" src="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/releases/<?php echo $release['slug'] ?>/<?php echo $release['slug'] ?>_300x300.png" alt=""/>
-            <h1 style="margin-left:-5px;"><a data-pjax="#content_async" href="<?php echo url_for(sprintf('@release_show?slug=%s#release', $release['slug'])) ?>"><?php echo $release['sku'] ?></a></h1>
-            <h2 style="margin-bottom:0px;"><a data-pjax="#content_async" title="<?php echo sprintf('%s - %s', $artist['name'], $release['title']) ?>" href="<?php echo url_for(sprintf('@release_show?slug=%s#release', $release['slug'])) ?>"><?php echo truncate_text(sprintf('%s', $release['title']), 36) ?></a></h2>
-    </a></span>
-    </div>
+      <div class="row">
 
-<?php endforeach; ?>
+<?php foreach ($artist['releases'] as $release): ?>
+<div class="column">
+
+<a data-pjax="#content_async" href="<?php echo url_for(sprintf('@release_show?slug=%s#release', $release['slug'])) ?>">
+<img width="50%" height="50%"src="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/releases/<?php echo $release['slug'] ?>/<?php echo $release['slug'] ?>_300x300.png"  alt=""/>
+</a>
 </div>
-    </div>
+
+
+<?php endforeach; ?></div> 
+      </div>
  
     <!-- <div class="grid_6 open_artists_pictures"> -->
       <!-- <span class="calque_artists_pictures"> </span> -->
