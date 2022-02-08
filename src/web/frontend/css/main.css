@@ -1,3 +1,8 @@
+@media (max-width: 767px) {
+  .hidden-mobile {
+    display: none;
+  }
+}
 body {
   padding : 0;
   font-family : 'Open Sans', sans-serif;
