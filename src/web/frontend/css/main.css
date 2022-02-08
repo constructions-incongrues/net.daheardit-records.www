@@ -20,6 +20,7 @@
     margin-right: auto!important;
 }
 .text-bio .writers { font-size: 1rem!important; background-color: transparent!important; text-align: left!important;float:left!important}
+.grid_3 {width: 100%!important;}
 }
 @media (min-width: 767px) {
 .header {
