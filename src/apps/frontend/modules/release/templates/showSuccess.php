@@ -74,7 +74,7 @@
 <div class="grid_12 open_releases_infos show-mobile">
       <?php echo html_entity_decode($release['player_code']) ?>
 
-  </div><img id="carousel-current" height="30%" width="30%" style="float:left;padding:9px 20px 0px 0px" src="<?php echo sprintf('//%s/thumbnail/_/500/500/crop/best%s', sfConfig::get('app_api_url_root'), $release['artworks'][0]) ?>" />
+  </div><img class="hidden-mobile"id="carousel-current" height="30%" width="30%" style="float:left;padding:9px 20px 0px 0px" src="<?php echo sprintf('//%s/thumbnail/_/500/500/crop/best%s', sfConfig::get('app_api_url_root'), $release['artworks'][0]) ?>" />
 <p class="text-bio"><?php echo nl2br(html_entity_decode($release['Translation'][$sf_user->getCulture()]['presentation'])) ?>
 <?php echo nl2br(html_entity_decode($release['writers'])) ?> 
 

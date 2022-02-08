@@ -7,7 +7,7 @@
     height: 50px!important;
     background-color: #000!important;
   }
-  .header_nav_3 a, .header_nav_3 li {font-size: 1.5rem!important;}
+  .header_nav_3 a, .header_nav_3 li {font-size: 2rem!important;}
   .artists_listing_all, .open_releases, .open_artists, .open_releases_content, .open_illustrator 
   {width: 100%!important;padding: 0px!important;}
   ul.open_releases_button, ul.open_artists_button {display: none!important;}
