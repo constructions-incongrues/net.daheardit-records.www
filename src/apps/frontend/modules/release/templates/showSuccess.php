@@ -36,7 +36,7 @@
 
 
 <div class="presentation">
-<div class="grid_12 open_releases_infos">
+<div class="grid_12 open_releases_infos show-mobile">
       <?php echo html_entity_decode($release['player_code']) ?>
 
   </div>
