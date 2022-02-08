@@ -177,24 +177,13 @@ body {
   margin-left : 31px;
   z-index : 4000;
   }
-
-  @media (min-width: 640px) {
-    * {
+  
   .header {
   background-position : center center;
   background-repeat : repeat;
   width : 100%!important;
   height : 680px;
   }
-}
-
-@media (max-width: 640px) {
-  * {
-.header {
-display: none;
-}
-}
-
   .header_title_dhr a {
   color : #FFF;
   text-decoration : none;
