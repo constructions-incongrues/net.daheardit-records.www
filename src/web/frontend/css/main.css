@@ -1100,7 +1100,7 @@ body {
   font-size : 4rem;
   color : #000;
   }
-  .open_artists_artwork_listing_releases, .open_artists_listing_releases {text-align: right;}
+  .open_artists_artwork_listing_releases, .open_artists_listing_releases {text-align: center;}
 
   .row {
     display: flow-root;
