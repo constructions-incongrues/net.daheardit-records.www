@@ -5,10 +5,11 @@
   .header_nav_3 ul  {
     position: fixed;
     top: 0px;
-    height: 30px!important;
+    height: 50px!important;
     background-color: #000!important;
   }
-  .header_nav_3 a, .header_nav_3 li {font-size: 1.5rem!important;}
+  .header_nav_3 a, .header_nav_3 li {font-size: 2rem!important;}
+  .releases_discography_number img {display: none;}
 }
 @media (min-width: 767px) {
 .header {
