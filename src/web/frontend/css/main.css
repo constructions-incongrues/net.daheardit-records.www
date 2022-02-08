@@ -2,6 +2,10 @@
   .hidden-mobile {
     display: none;
   }
+
+  .header {
+    background-image: none;
+  }
 }
 body {
   padding : 0;
