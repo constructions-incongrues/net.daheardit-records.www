@@ -7,8 +7,7 @@
     top: 0px;
     height: 200px;
   }
-  .header_nav_3 a, .header_nav_3 li {font-size: 2rem!important;}
-  .header_nav_3 li {display: block!important;}
+  .header_nav_3 a, .header_nav_3 li {font-size: 1rem!important;}
   .release_discography {margin-top: 200px%!important;}
 }
 @media (min-width: 767px) {
