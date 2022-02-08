@@ -2,10 +2,19 @@
   .hidden-mobile {
     display: none;
   }
-
-  .header {
-    background-image: none;
+}
+@media (min-width: 767px) {
+.header {
+  background-position : center center;
+  background-repeat : repeat;
+  width : 100%!important;
+  height : 680px;
   }
+
+.header_nav_3  {
+  position: fixed;
+  margin: 0px;
+}
 }
 body {
   padding : 0;
@@ -187,12 +196,7 @@ body {
   z-index : 4000;
   }
   
-  .header {
-  background-position : center center;
-  background-repeat : repeat;
-  width : 100%!important;
-  height : 680px;
-  }
+
   .header_title_dhr a {
   color : #FFF;
   text-decoration : none;
