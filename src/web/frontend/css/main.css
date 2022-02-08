@@ -1099,6 +1099,7 @@ body {
   font-size : 60px;
   font-size : 4rem;
   color : #000;
+  margin: 20px 0px 0px 0px;
   }
   .open_artists_artwork_listing_releases, .open_artists_listing_releases {text-align: center;}
 
