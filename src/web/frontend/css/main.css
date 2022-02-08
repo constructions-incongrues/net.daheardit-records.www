@@ -6,7 +6,7 @@
     position: fixed;
     top: 0px;
     height: 200px;
-    background-color: #000;
+    background-color: #000!important;
   }
   .header_nav_3 a, .header_nav_3 li {font-size: 1.5rem!important;}
 }
