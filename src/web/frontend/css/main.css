@@ -180,7 +180,7 @@ body {
   .header {
   background-position : center center;
   background-repeat : repeat;
-  width : 100%;
+  width : 100%!important;
   height : 680px;
   }
   .header_title_dhr a {
