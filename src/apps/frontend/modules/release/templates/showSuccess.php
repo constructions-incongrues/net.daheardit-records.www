@@ -36,7 +36,9 @@
 
 
 <div class="presentation">
-      <h2 class="open_releases_artist">
+  <div class="grid_12 show-mobile">    <?php echo html_entity_decode($release['player_code']) ?></div>
+
+      <h2 class="open_releases_artist hidden-mobile">
       <span class="date_release"></span>
         <span class="sku"><?php echo $release['sku'] ?> / <?php echo html_entity_decode($release['licence']) ?>  /
 

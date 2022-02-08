@@ -2,6 +2,9 @@
   .hidden-mobile {
     display: none;
   }
+  .show-mobile {
+    display:block;
+  }
   .header_nav_3 ul  {
     position: fixed;
     top: 0px;
@@ -19,6 +22,10 @@
   }
 
 
+}
+
+.show-mobile {
+display: none;
 }
 body {
   padding : 0;
