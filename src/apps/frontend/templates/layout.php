@@ -44,7 +44,7 @@
 
   <div class="container_12" id="top">
 
-    <div class="grid_12 header hidden-mobile">
+    <div class="grid_12 header">
 <span> <a href="http://www.daheardit-records.net">
       <span class="header_calque"></span>
 </span>
