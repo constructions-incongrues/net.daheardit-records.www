@@ -9,7 +9,7 @@
   }
   .header_nav_3 a, .header_nav_3 li {font-size: 2rem!important;}
   .header_nav_3 li {display: block!important;}
-  .release_discography {margin-top: 50%!important;}
+  .release_discography {margin-top: 200px%!important;}
 }
 @media (min-width: 767px) {
 .header {
