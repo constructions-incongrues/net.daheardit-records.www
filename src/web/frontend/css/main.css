@@ -3,7 +3,7 @@
     display: none;
   }
   .show-mobile {
-    display:block;
+    display:inline;
   }
   .header_nav_3 ul  {
     position: fixed;
