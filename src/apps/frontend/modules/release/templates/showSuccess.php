@@ -104,7 +104,7 @@
 <?php if (count($archives)): ?>
     <!-- <span style="font-weight: bold;">Télécharger :</span> -->
   <?php foreach ($archives as $archive): ?>
-      <a class="release-download" data-dhr-release-slug="<?php echo $release['slug'] ?>" data-dhr-archive-format="<?php echo $archive['name'] ?>" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/releases/<?php echo $release['slug'] ?>/archives/<?php echo $archive['filename'] ?>"><?php echo strtolower($archive['name']) ?></a> <br />
+      <a class="release-download" data-dhr-release-slug="<?php echo $release['slug'] ?>" data-dhr-archive-format="<?php echo $archive['name'] ?>" href="<?php echo $sf_request->getRelativeUrlRoot() ?>/assets/releases/<?php echo $release['slug'] ?>/archives/<?php echo $archive['filename'] ?>"><?php echo strtolower($archive['name']) ?></a> 
   <?php endforeach ?>
 <?php endif ?>
 
@@ -112,7 +112,7 @@
     <!-- <span style="font-weight: bold;">Écouter :</span> -->
 
   <?php foreach ($release['streaming'] as $link): ?>
-      <a class="release-download" href="<?php echo $link['url'] ?>"><?php echo strtolower(basename($link['title'])) ?></a> -
+      <a class="release-download" href="<?php echo $link['url'] ?>"><?php echo strtolower(basename($link['title'])) ?></a>
   <?php endforeach ?>
   </p>
 <?php endif ?>
@@ -121,7 +121,7 @@
   <?php if (isset($release['press-releases']) && count($release['press-releases'])): ?>
     <ul class="open_releases_reviews">
   <?php foreach ($release['press-releases'] as $link): ?>
-      <li><a href="<?php echo $link['url'] ?>"><?php echo basename($link['title']) ?></a>d</li>
+      <li><a href="<?php echo $link['url'] ?>"><?php echo basename($link['title']) ?></a></li>
   <?php endforeach ?>
     </ul>
 <?php endif ?>

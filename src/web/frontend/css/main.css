@@ -1025,7 +1025,7 @@ body {
   background-color : #29abe2;
   color : #FFF;
   padding : 1%;
-  display: block;
+  display: inline-block;
   text-align: center;
   }
   .open_releases_buy a:hover {
