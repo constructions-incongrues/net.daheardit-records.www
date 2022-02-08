@@ -11,6 +11,9 @@ visibility: visible!important; display: block!important; }
     background-color: #000!important;
   }
   .header_nav_3 a, .header_nav_3 li {font-size: 1rem!important;}
+  .category_content, .releases_discography_listing_all, .artists_content, .header_content, .header_news_1_content, .header_news_2_content, .header_news_2_closed, .header_news_2_closed_button, .open_releases_content, .header_nav_3_content, .infos_content, .footer_content, .release_content, .open_release, .open_artists_content {
+    width : 100%!important;
+  }
 }
 @media (min-width: 767px) {
 .header {
