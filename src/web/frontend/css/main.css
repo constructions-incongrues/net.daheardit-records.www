@@ -3,7 +3,7 @@
     display: none;
   }
   .show-mobile {
-visibility: visible;  }
+visibility: visible; display: block; }
   .header_nav_3 ul  {
     position: fixed;
     top: 0px;
@@ -24,7 +24,8 @@ visibility: visible;  }
 }
 
 .show-mobile {
-visibility: hidden;}
+visibility: hidden;
+display: none;}
 body {
   padding : 0;
   font-family : 'Open Sans', sans-serif;
