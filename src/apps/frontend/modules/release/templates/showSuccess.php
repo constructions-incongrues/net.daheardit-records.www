@@ -34,10 +34,12 @@
     </ul>
  
 
-    <div class="grid_12 show-mobile">    <?php echo html_entity_decode($release['player_code']) ?></div>
 
 <div class="presentation">
+<div class="grid_12 open_releases_infos">
+      <?php echo html_entity_decode($release['player_code']) ?>
 
+  </div>
       <h2 class="open_releases_artist">
       <span class="date_release"></span>
         <span class="sku"><?php echo $release['sku'] ?> / <?php echo html_entity_decode($release['licence']) ?>  /
