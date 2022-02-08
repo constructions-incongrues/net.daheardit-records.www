@@ -1286,7 +1286,7 @@ body {
   border : #eee solid 1px;
   }
   .presentation h1 a{color: #29ABE2;
-    text-decoration: none;}
+    text-decoration: none;font-size: 2.5rem;text-transform: lowercase;}
   #nonartarea {
   border-left : 1px solid #eee !important ;
   border-bottom : 1px solid #eee !important ;
