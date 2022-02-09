@@ -26,6 +26,7 @@
 .artists_show {
   min-height: 0px!important;
   padding: 0!important;
+  padding-bottom: 20px;;
 }
 .artists_title {background-color: transparent!important;display: contents!important;}
 }
