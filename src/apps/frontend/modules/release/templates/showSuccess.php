@@ -74,7 +74,7 @@
 <div class="grid_12 open_releases_infos show-mobile">
 <img class="show-mobile"id="carousel-current" height="100%" width="100%" src="<?php echo sprintf('//%s/thumbnail/_/500/500/crop/best%s', sfConfig::get('app_api_url_root'), $release['artworks'][0]) ?>" />
 
-      <?php echo html_entity_decode($release['player_code']) ?>
+     <br /> <?php echo html_entity_decode($release['player_code']) ?>
 
   </div>
 
