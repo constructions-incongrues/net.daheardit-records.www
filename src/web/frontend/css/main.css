@@ -25,7 +25,7 @@
     margin-left: auto!important;
     margin-right: auto!important;
 }
-.text-bio .writers { font-size: 1rem!important; background-color: transparent!important; text-align: left!important;float:left!important}
+.text-bio .writers { font-size: 0.9rem!important; background-color: transparent!important; text-align: left!important;float:left!important}
 .grid_1,.grid_2,.grid_3,.grid_4,.grid_5,.grid_6,.grid_7, .grid_8,.grid_9,.grid_10,.grid_11,.grid_12 {width: 100%!important;text-align: center!important;}
 .container_12 .grid_3 {width: 100%!important;}
 .artists_show_default, img.artists_pictures, .calque_artists_artwork, .hexTop, .hexBottom, .calque_artists_artwork_no {display: none;}
