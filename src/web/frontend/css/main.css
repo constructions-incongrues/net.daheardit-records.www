@@ -11,6 +11,9 @@
     padding-top: 40px!important;
     margin-left: -210px!important;
   }
+  .releases_discography_listing_all {
+    margin-top: 40px!important;
+}
   .header_calque{display: none;}
   .header_nav_3 a, .header_nav_3 li {font-size: 1rem!important;}
   .artists_listing_all, .open_releases, .open_artists, .open_releases_content, .open_illustrator 
