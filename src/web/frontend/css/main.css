@@ -22,6 +22,11 @@
 .text-bio .writers { font-size: 1rem!important; background-color: transparent!important; text-align: left!important;float:left!important}
 .grid_3 {width: 100%!important;text-align: center!important;}
 .artists_show_default, img.artists_pictures {display: none;}
+.artists_show {
+  min-height: 0px!important;
+  padding: 0!important;
+}
+.artists_title {background-color: transparent!important;}
 }
 @media (min-width: 767px) {
 .header {
