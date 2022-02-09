@@ -5,7 +5,7 @@
       <div class="grid_12 header_nav_3">
         <div class="header_nav_3_content">
           <ul id="menu-main" class="header_nav_3_content_list">
-          <li class="show-mobile"><a href="http://www.daheardit-records.net">Da ! Heard It Records</a></li>
+          <li ><a href="http://www.daheardit-records.net">Da ! Heard It Records</a></li>
 
             <li><a href="#discography"><?php echo __('Releases') ?></a></li>
             <li><a href="#artists"><?php echo __('Artists') ?></a></li>
