@@ -70,7 +70,7 @@
   </p>
 <?php endif ?></span> 
   </span>
-<a href="<?php echo url_for(sprintf('@artist_show?slug=%s#artist', $release['Artist']['slug'])) ?>"><br /><?php echo $release['Artist']['name'] ?></a>  <?php echo $release['title'] ?> </h2>
+<a href="<?php echo url_for(sprintf('@artist_show?slug=%s#artist', $release['Artist']['slug'])) ?>"><br /><?php echo $release['Artist']['name'] ?></a> <span class="show-mobile"><br/></span> <?php echo $release['title'] ?> </h2>
 <div class="grid_12 open_releases_infos show-mobile">
 <img class="show-mobile"id="carousel-current" height="100%" width="100%" src="<?php echo sprintf('//%s/thumbnail/_/500/500/crop/best%s', sfConfig::get('app_api_url_root'), $release['artworks'][0]) ?>" />
 
