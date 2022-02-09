@@ -12,7 +12,7 @@
             <span class="releases_discography_last_release"><?php echo __('Nouveau') ?></span>  
   <?php endif; ?>
           <img height="220px" width="220px" src="<?php echo $release['image'] class="hidden-mobile"?>" />
-          <img height="100%" width="100%" src="<?php echo $release['image']  class="show-mobile"?>" />
+          <img height="80%" width="80%" src="<?php echo $release['image']  class="show-mobile"?>" />
 
             <h1><a data-pjax="#content_async" href="<?php echo url_for(sprintf('@release_show?slug=%s#release', $release['slug'])) ?>"> <?php echo $release['Artist']['name'] ?></a> <br /> <a data-pjax="#content_async" title="<?php echo $release['title'] ?>" href="<?php echo url_for(sprintf('@release_show?slug=%s#release', $release['slug'])) ?>"><?php echo truncate_text($release['title'], 30) ?></a></h1>
    </div><!-- end of grid_3 releases_discography_number  -->
