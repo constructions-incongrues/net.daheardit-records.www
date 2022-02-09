@@ -12,7 +12,6 @@
             <span class="releases_discography_last_release"><?php echo __('Nouveau') ?></span>  
   <?php endif; ?>
           <img height="220px" width="220px" src="<?php echo $release['image'] class="hidden-mobile"?>" />
-          
             <h1><a data-pjax="#content_async" href="<?php echo url_for(sprintf('@release_show?slug=%s#release', $release['slug'])) ?>"> <?php echo $release['Artist']['name'] ?></a> <br /> <a data-pjax="#content_async" title="<?php echo $release['title'] ?>" href="<?php echo url_for(sprintf('@release_show?slug=%s#release', $release['slug'])) ?>"><?php echo truncate_text($release['title'], 30) ?></a></h1>
    </div><!-- end of grid_3 releases_discography_number  -->
 <?php endfor; ?>
