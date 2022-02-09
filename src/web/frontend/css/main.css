@@ -27,7 +27,7 @@
   min-height: 0px!important;
   padding: 0!important;
 }
-.artists_title {background-color: transparent!important;}
+.artists_title {background-color: transparent!important;display: contents!important;}
 }
 @media (min-width: 767px) {
 .header {
