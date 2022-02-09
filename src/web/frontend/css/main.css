@@ -1,6 +1,6 @@
 @media (max-width: 767px) {
   .hidden-mobile {    display: none;  }
-  .show-mobile {visibility: visible!important; display: block!important; }
+  .show-mobile { display: block!important; }
   .header_nav_3 ul  {
     position: fixed!important;
     top: 0px!important;
