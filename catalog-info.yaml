@@ -9,9 +9,6 @@ spec:
   lifecycle: production
   owner: constructions
   system: daheardit
-  dependsOn:
-    - daheardit-db
-    - daheardit-storage
   
 ---
 apiVersion: backstage.io/v1alpha1
@@ -30,17 +27,19 @@ spec:
   type: blockstorage
   owner: constructions
   system: daheardit
-
+  dependencyOf:
+    - daheardit-symfony
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Resource
 metadata:
-  name: daheardit-db
 spec:
   type: database
   owner: constructions
   system: daheardit
-
+  dependencyOf:
+    - daheardit-symfony
+    
 ---
 apiVersion: backstage.io/v1alpha1
 kind: API
