@@ -37,3 +37,23 @@ spec:
   type: database
   owner: constructions
   system: daheardit
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: daheardit-api
+spec:
+  type: openapi
+  lifecycle: production
+  owner: constructions
+  system: daheardit
+  apiProvidedBy:
+    - component:ivresse-directus
+  definition: |
+    openapi: "3.0.0"
+    info:
+      version: 1.0.0
+      title: daheardit API
+    servers:
+      - url: https://data.constructions-incongrues.net/daheardit/
