@@ -9,6 +9,9 @@ spec:
   lifecycle: production
   owner: constructions
   system: daheardit
+  dependsOn:
+    - daheardit-db
+    - daheardit-storage
   
 ---
 apiVersion: backstage.io/v1alpha1
