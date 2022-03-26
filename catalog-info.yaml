@@ -28,7 +28,8 @@ spec:
   owner: constructions
   system: daheardit
   dependencyOf:
-    - daheardit-symfony
+    - component:daheardit-symfony
+    
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Resource
@@ -39,7 +40,7 @@ spec:
   owner: constructions
   system: daheardit
   dependencyOf:
-    - daheardit-symfony
+    - component:daheardit-symfony
     
 ---
 apiVersion: backstage.io/v1alpha1
