@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: dhr-symfony
+  annotations:
+    github.com/project-slug: constructions-incongrues/net.daheardit-records.www
+spec:
+  type: other
+  lifecycle: unknown
+  owner: constructions
