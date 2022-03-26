@@ -1,10 +1,39 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: dhr-symfony
+  name: daheardit-symfony
   annotations:
     github.com/project-slug: constructions-incongrues/net.daheardit-records.www
 spec:
-  type: other
-  lifecycle: unknown
+  type: website
+  lifecycle: production
   owner: constructions
+  system: daheardit
+  
+---
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: daheardit
+spec:
+  owner: constructions
+  
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: daheardit-storage
+spec:
+  type: blockstorage
+  owner: constructions
+  system: daheardit
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: daheardit-db
+spec:
+  type: database
+  owner: constructions
+  system: daheardit
