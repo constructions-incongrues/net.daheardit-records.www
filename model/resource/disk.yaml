@@ -13,4 +13,4 @@ spec:
   dependencyOf:
     - component:dhr/symfony
   dependsOn:
-    - component:plesk/server
+    - component:plesk
