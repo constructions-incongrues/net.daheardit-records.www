@@ -3,10 +3,11 @@ kind: Resource
 metadata:
   name: disk
   namespace: dhr
-spec:
-  type: storage
   tags:
     - block
+spec:
+  type: storage
+
   system: dhr/web
   owner: default/constructions-incongrues.net
   dependencyOf:
