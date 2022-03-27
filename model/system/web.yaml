@@ -1,7 +1,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: System
 metadata:
-  name: default
+  name: web
   namespace: dhr
 spec:
   owner: default/ci

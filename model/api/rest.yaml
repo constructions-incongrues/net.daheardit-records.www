@@ -7,7 +7,7 @@ spec:
   type: openapi
   lifecycle: production
   owner: default/ci
-  system: dhr/webapp
+  system: dhr/web
   apiProvidedBy:
     - component:ivresse/directus
   definition: |

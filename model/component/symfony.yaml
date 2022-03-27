@@ -9,4 +9,4 @@ spec:
   type: website
   lifecycle: production
   owner: default/ci
-  system: dhr/default
+  system: dhr/web
