@@ -8,6 +8,7 @@ metadata:
 spec:
   type: website
   system: dhr
+  lifecycle: ant
   owner: default/constructions-incongrues-net
   dependsOn:
     - component:plesk/storage
