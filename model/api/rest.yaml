@@ -17,5 +17,3 @@ spec:
       title: D!HR API
     servers:
       - url: https://data.constructions-incongrues.net/daheardit/
-  apiProvidedBy:
-    - component:ivresse/directus
