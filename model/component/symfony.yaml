@@ -11,5 +11,4 @@ spec:
   system: dhr/web
   owner: default/constructions-incongrues-net
   dependsOn:
-    - resource:plesk/disk
-    - resource:plesk/db
+    - resource:plesk/server
