@@ -9,4 +9,4 @@ spec:
     - ./model/component/symfony.yaml
     - ./model/resource/database.yaml
     - ./model/resource/storage.yaml
-    - ./model/system/webapp.yaml
+    - ./model/system/default.yaml
