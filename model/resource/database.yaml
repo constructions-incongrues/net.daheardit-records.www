@@ -5,7 +5,7 @@ metadata:
   namespace: dhr
 spec:
   type: database
-  owner: ci
+  owner: default/ci
   system: dhr/webapp
   dependencyOf:
     - component:dhr/symfony

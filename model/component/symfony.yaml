@@ -1,4 +1,4 @@
-apiVersion: backstage.io/v1alpha1
+owner: default/ciowner: default/ciapiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: symfony
