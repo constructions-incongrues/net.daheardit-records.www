@@ -7,6 +7,6 @@ spec:
   targets:
     - ./model/api/rest.yaml
     - ./model/component/symfony.yaml
-    - ./model/resource/database.yaml
-    - ./model/resource/storage.yaml
-    - ./model/system/default.yaml
+    - ./model/resource/mysql.yaml
+    - ./model/resource/block.yaml
+    - ./model/system/web.yaml
