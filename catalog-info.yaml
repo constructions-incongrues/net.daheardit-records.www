@@ -8,5 +8,5 @@ spec:
   targets:
     - model/api/rest.yaml
     - model/component/symfony.yaml
-    - model/system/web.yaml
+    - model/system/dhr.yaml
   
