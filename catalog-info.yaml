@@ -7,57 +7,57 @@ metadata:
 spec:
   type: website
   lifecycle: production
-  owner: constructions
-  system: daheardit
+  owner: ci
+  system: dhr
   
 ---
 apiVersion: backstage.io/v1alpha1
 kind: System
 metadata:
-  name: daheardit
+  name: dhr
 spec:
-  owner: constructions
+  owner: ci
   
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Resource
 metadata:
-  name: daheardit-storage
+  name: dhr-storage
 spec:
-  type: blockstorage
+  type: block
   owner: constructions
-  system: daheardit
+  system: dhr
   dependencyOf:
-    - component:daheardit-symfony
+    - component:dhr-symfony
     
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Resource
 metadata:
-    name: daheardit-db
+    name: dhr-database
 spec:
   type: database
-  owner: constructions
-  system: daheardit
+  owner: ci
+  system: dhr
   dependencyOf:
-    - component:daheardit-symfony
+    - component:dhr-symfony
     
 ---
 apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
-  name: daheardit-api
+  name: dhr-api
 spec:
   type: openapi
   lifecycle: production
-  owner: constructions
-  system: daheardit
+  owner: ci
+  system: dhr
   apiProvidedBy:
-    - component:default/ivresse-directus
+    - component:ivresse-directus
   definition: |
     openapi: "3.0.0"
     info:
       version: 1.0.0
-      title: daheardit API
+      title: D!HR API
     servers:
       - url: https://data.constructions-incongrues.net/daheardit/
