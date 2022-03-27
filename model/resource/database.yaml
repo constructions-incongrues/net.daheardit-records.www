@@ -11,3 +11,5 @@ spec:
   owner: default/constructions-incongrues.net
   dependencyOf:
     - component:dhr/symfony
+  dependsOn:
+    - component:plesk/server
