@@ -7,7 +7,7 @@ spec:
   type: openapi
   lifecycle: production
   owner: default/constructions-incongrues.net
-  system: dhr/web
+  system: dhr
   apiProvidedBy:
     - component:ivresse/directus
   definition: |
