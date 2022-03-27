@@ -5,7 +5,6 @@ metadata:
   namespace: dhr
 spec:
   type: openapi
-  lifecycle: production
   owner: default/constructions-incongrues.net
   system: dhr
   apiProvidedBy:

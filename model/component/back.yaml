@@ -1,0 +1,14 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: back
+  namespace: dhr
+  annotations:
+    github.com/project-slug: constructions-incongrues/net.daheardit-records.www
+spec:
+  type: website
+  system: dhr
+  owner: default/constructions-incongrues-net
+  dependsOn:
+    - component:plesk/storage
+    - component:plesk/database

@@ -1,14 +1,14 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: symfony
+  name: front
   namespace: dhr
   annotations:
     github.com/project-slug: constructions-incongrues/net.daheardit-records.www
 spec:
   type: website
-  lifecycle: production
   system: dhr
   owner: default/constructions-incongrues-net
   dependsOn:
-    - component:plesk/server
+    - component:plesk/storage
+    - component:plesk/database
