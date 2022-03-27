@@ -9,4 +9,4 @@ spec:
   type: website
   lifecycle: production
   owner: ci
-  system: dhr/dhr
+  system: dhr/webapp

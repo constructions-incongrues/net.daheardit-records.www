@@ -6,6 +6,6 @@ metadata:
 spec:
   type: database
   owner: ci
-  system: dhr
+  system: dhr/webapp
   dependencyOf:
     - component:dhr/symfony

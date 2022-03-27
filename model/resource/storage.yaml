@@ -1,10 +1,10 @@
-apiVersion: backstage.io/v1alpha1
+system: dhr/webappsystem: dhr/webappapiVersion: backstage.io/v1alpha1
 kind: Resource
 metadata:
   name: storage
 spec:
   type: block
   owner: constructions
-  system: dhr/dhr
+  system: dhr/webapp
   dependencyOf:
     - component:dhr/symfony
