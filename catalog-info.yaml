@@ -1,63 +1,9 @@
 apiVersion: backstage.io/v1alpha1
-kind: Component
+kind: Location
 metadata:
-  name: daheardit-symfony
-  annotations:
-    github.com/project-slug: constructions-incongrues/net.daheardit-records.www
+  name: model
+  namespace: dhr
 spec:
-  type: website
-  lifecycle: production
-  owner: ci
-  system: dhr
-  
----
-apiVersion: backstage.io/v1alpha1
-kind: System
-metadata:
-  name: dhr
-spec:
-  owner: ci
-  
----
-apiVersion: backstage.io/v1alpha1
-kind: Resource
-metadata:
-  name: dhr-storage
-spec:
-  type: block
-  owner: constructions
-  system: dhr
-  dependencyOf:
-    - component:dhr-symfony
-    
----
-apiVersion: backstage.io/v1alpha1
-kind: Resource
-metadata:
-    name: dhr-database
-spec:
-  type: database
-  owner: ci
-  system: dhr
-  dependencyOf:
-    - component:dhr-symfony
-    
----
-apiVersion: backstage.io/v1alpha1
-kind: API
-metadata:
-  name: dhr-api
-spec:
-  type: openapi
-  lifecycle: production
-  owner: ci
-  system: dhr
-  apiProvidedBy:
-    - component:ivresse-directus
-  definition: |
-    openapi: "3.0.0"
-    info:
-      version: 1.0.0
-      title: D!HR API
-    servers:
-      - url: https://data.constructions-incongrues.net/daheardit/
+  type: file
+  targets:
+    - ./model/*/*.yaml

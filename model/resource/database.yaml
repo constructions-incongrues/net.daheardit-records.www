@@ -1,0 +1,11 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: database
+  namespace: dhr
+spec:
+  type: database
+  owner: ci
+  system: dhr
+  dependencyOf:
+    - component:dhr/symfony

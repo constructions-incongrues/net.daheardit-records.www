@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: symfony
+  namespace: dhr
+  annotations:
+    github.com/project-slug: constructions-incongrues/net.daheardit-records.www
+spec:
+  type: website
+  lifecycle: production
+  owner: ci
+  system: dhr

@@ -1,0 +1,19 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: rest
+  namespace: dhr
+spec:
+  type: openapi
+  lifecycle: production
+  owner: ci
+  system: dhr
+  apiProvidedBy:
+    - component:ivresse/directus
+  definition: |
+    openapi: "3.0.0"
+    info:
+      version: 1.0.0
+      title: D!HR API
+    servers:
+      - url: https://data.constructions-incongrues.net/daheardit/
