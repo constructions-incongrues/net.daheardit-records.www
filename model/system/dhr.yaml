@@ -3,5 +3,6 @@ apiVersion: backstage.io/v1alpha1
 kind: System
 metadata:
   name: dhr
+  namespace: dhr
 spec:
   owner: ci

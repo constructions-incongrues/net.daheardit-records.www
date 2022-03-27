@@ -5,6 +5,6 @@ metadata:
 spec:
   type: block
   owner: constructions
-  system: dhr
+  system: dhr/dhr
   dependencyOf:
     - component:dhr/symfony

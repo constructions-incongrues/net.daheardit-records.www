@@ -6,4 +6,8 @@ metadata:
 spec:
   type: file
   targets:
-    - ./model/*/*.yaml
+    - ./model/api/rest.yaml
+    - ./model/component/symfony.yaml
+    - ./model/resource/database.yaml
+    - ./model/resource/storage.yaml
+    - ./model/system/dhr.yaml
