@@ -6,3 +6,4 @@ metadata:
   namespace: dhr
 spec:
   owner: ci
+  domain: music
