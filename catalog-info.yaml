@@ -10,4 +10,4 @@ spec:
     - ./model/resource/mysql.yaml
     - ./model/resource/block.yaml
     - ./model/system/web.yaml
-  owner: default/constructions-incongrues.net
+  owner: default/constructions-incongrues-net
