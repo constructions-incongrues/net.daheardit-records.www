@@ -7,7 +7,6 @@ metadata:
     github.com/project-slug: constructions-incongrues/net.daheardit-records.www
 spec:
   type: website
-  system: dhr
   lifecycle: ant
   owner: default/constructions-incongrues-net
   dependsOn:

@@ -6,7 +6,6 @@ metadata:
 spec:
   type: openapi
   owner: default/constructions-incongrues.net
-  system: dhr
   lifecycle: experimental
   apiProvidedBy:
     - component:ivresse/directus
