@@ -9,4 +9,4 @@ spec:
   type: website
   lifecycle: production
   system: dhr/web
-  owner: default/constructions-incongrues.net
+  owner: default/constructions-incongrues-net
