@@ -8,6 +8,5 @@ metadata:
 spec:
   type: website
   lifecycle: production
-  owner: default/ci
   system: dhr/web
   owner: default/constructions-incongrues.net
