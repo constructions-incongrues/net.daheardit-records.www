@@ -1,10 +1,10 @@
 apiVersion: backstage.io/v1alpha1
 kind: Resource
 metadata:
-  name: block
+  name: disk
   namespace: dhr
 spec:
-  type: storage
+  type: storage-block
   system: dhr/web
   owner: default/constructions-incongrues.net
   dependencyOf:
