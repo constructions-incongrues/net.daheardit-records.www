@@ -1,9 +1,10 @@
-system: dhr/webappsystem: dhr/webappapiVersion: backstage.io/v1alpha1
+apiVersion: backstage.io/v1alpha1
 kind: Resource
 metadata:
-  name: storage
+  name: plesk
+  namespace: dhr
 spec:
-  type: block
+  type: storage
   owner: constructions
   system: dhr/webapp
   dependencyOf:
