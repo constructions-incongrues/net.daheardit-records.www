@@ -1,13 +1,50 @@
 apiVersion: backstage.io/v1alpha1
-kind: Location
+kind: API
 metadata:
-  name: model
+  name: rest
   namespace: dhr
 spec:
+  type: openapi
+  owner: default/constructions-incongrues.net
+  lifecycle: experimental
+  apiProvidedBy:
+    - component:ivresse/directus
+  definition: |
+    openapi: "3.0.0"
+    info:
+      version: 1.0.0
+      title: D!HR API
+    servers:
+      - url: https://data.constructions-incongrues.net/daheardit/
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: back
+  namespace: dhr
+  annotations:
+    github.com/project-slug: constructions-incongrues/net.daheardit-records.www
+spec:
+  type: website
+  lifecycle: ant
   owner: default/constructions-incongrues-net
-  targets:
-    - model/api/rest.yaml
-    - model/component/front.yaml
-    - model/component/back.yaml
-    - model/system/dhr.yaml
-  
+  dependsOn:
+    - component:plesk/storage
+    - component:plesk/databases
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: front
+  namespace: dhr
+  annotations:
+    github.com/project-slug: constructions-incongrues/net.daheardit-records.www
+spec:
+  type: website
+  lifecycle: ant
+  owner: default/constructions-incongrues-net
+  dependsOn:
+    - component:plesk/storage
+    - component:plesk/databases
