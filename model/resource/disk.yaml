@@ -4,7 +4,7 @@ metadata:
   name: disk
   namespace: dhr
 spec:
-  type: block
+  type: storage:block
   system: dhr/web
   owner: default/constructions-incongrues.net
   dependencyOf:
