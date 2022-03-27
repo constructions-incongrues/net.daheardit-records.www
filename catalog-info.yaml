@@ -7,7 +7,7 @@ spec:
   targets:
     - ./model/api/rest.yaml
     - ./model/component/symfony.yaml
-    - ./model/resource/mysql.yaml
-    - ./model/resource/files.yaml
+    - ./model/resource/database.yaml
+    - ./model/resource/disk.yaml
     - ./model/system/web.yaml
   owner: default/constructions-incongrues-net

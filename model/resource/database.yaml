@@ -4,7 +4,7 @@ metadata:
   name: mysql
   namespace: dhr
 spec:
-  type: database
+  type: database:mysql
   system: dhr/web
   owner: default/constructions-incongrues.net
   dependencyOf:
