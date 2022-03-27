@@ -4,7 +4,6 @@ metadata:
   name: model
   namespace: dhr
 spec:
-  type: file
   targets:
     - ./model/api/rest.yaml
     - ./model/component/symfony.yaml
