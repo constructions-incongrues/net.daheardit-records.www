@@ -7,6 +7,7 @@ spec:
   owner: default/constructions-incongrues-net
   targets:
     - model/api/rest.yaml
-    - model/component/symfony.yaml
+    - model/component/front.yaml
+    - model/component/back.yaml
     - model/system/dhr.yaml
   
