@@ -4,5 +4,5 @@ metadata:
   name: web
   namespace: dhr
 spec:
-  owner: default/ci
+  owner: default/constructions-incongrues.net
   domain: default/music

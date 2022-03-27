@@ -7,5 +7,6 @@ spec:
   type: database
   owner: default/ci
   system: dhr/web
+  owner: default/constructions-incongrues.net
   dependencyOf:
     - component:dhr/symfony

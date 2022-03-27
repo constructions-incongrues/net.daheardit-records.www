@@ -6,7 +6,7 @@ metadata:
 spec:
   type: openapi
   lifecycle: production
-  owner: default/ci
+  owner: default/constructions-incongrues.net
   system: dhr/web
   apiProvidedBy:
     - component:ivresse/directus
