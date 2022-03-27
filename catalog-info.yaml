@@ -8,6 +8,6 @@ spec:
     - ./model/api/rest.yaml
     - ./model/component/symfony.yaml
     - ./model/resource/mysql.yaml
-    - ./model/resource/block.yaml
+    - ./model/resource/files.yaml
     - ./model/system/web.yaml
   owner: default/constructions-incongrues-net
