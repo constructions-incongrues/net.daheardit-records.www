@@ -1,4 +1,4 @@
-owner: default/ciowner: default/ciapiVersion: backstage.io/v1alpha1
+apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: symfony
@@ -8,5 +8,5 @@ metadata:
 spec:
   type: website
   lifecycle: production
-  owner: ci
-  system: dhr/webapp
+  owner: default/ci
+  system: dhr/default

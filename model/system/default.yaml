@@ -1,9 +1,8 @@
-owner: default/ciowner: default/ci---
 apiVersion: backstage.io/v1alpha1
 kind: System
 metadata:
-  name: webapp
+  name: default
   namespace: dhr
 spec:
-  owner: ci
-  domain: music
+  owner: default/ci
+  domain: default/music

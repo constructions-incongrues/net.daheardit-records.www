@@ -1,4 +1,4 @@
-owner: default/ciowner: default/ciapiVersion: backstage.io/v1alpha1
+apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
   name: rest
@@ -6,7 +6,7 @@ metadata:
 spec:
   type: openapi
   lifecycle: production
-  owner: ci
+  owner: default/ci
   system: dhr/webapp
   apiProvidedBy:
     - component:ivresse/directus

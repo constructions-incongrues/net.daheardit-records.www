@@ -1,11 +1,11 @@
 apiVersion: backstage.io/v1alpha1
 kind: Resource
 metadata:
-  name: plesk
+  name: block
   namespace: dhr
 spec:
   type: storage
-  owner: constructions
-  system: dhr/webapp
+  owner: default/ci
+  system: dhr/default
   dependencyOf:
     - component:dhr/symfony
