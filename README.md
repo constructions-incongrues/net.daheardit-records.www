@@ -115,6 +115,6 @@ make directus-export
 make cache-clean-symfony
 ```
 
-- **` https://dash.cloudflare.com/login/
-- **` https://dash.cloudflare.com/bb7602930482a97a4a403a52a17cb524/daheardit-records.net (actions rapides > vider le cache)
+- https://dash.cloudflare.com/login/
+- https://dash.cloudflare.com/bb7602930482a97a4a403a52a17cb524/daheardit-records.net (actions rapides > vider le cache)
 
