@@ -11,6 +11,7 @@
             <li><a href="#artists"><?php echo __('Artists') ?></a></li>
             <li><a href="#artwork_artists"><?php echo __('Illustrators') ?></a></li>
             <li><a href="#informations"><?php echo __('About') ?></a></li>
+            <li><a href="https://vip.jeancloude.club/s/dhr-demo">Submit a demo</a></li>
 
             <!-- <li><a href="https://dahearditrecords.bandcamp.com/"><?php echo __('Bandcamp') ?></a></li> -->
 
