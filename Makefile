@@ -59,3 +59,8 @@ start: build ## Démarrage de l'application
 
 stop: ## Arrêt de l'application
 	docker-compose stop
+
+archives:
+	@if [ -z "$$RELEASE_SKU" ]; then echo "La variable RELEASE_SKU doit être définie"; exit 255; fi
+	@if [ ! -d "$${PWD}/httpdocs/src/web/master/$$RELEASE_SKU" ]; then echo "Le dossier \"$${PWD}/src/web/master/$$RELEASE_SKU\" n'existe pas"; exit 255; fi
+	./htpdocs/src/symfony dhr:release --includeExtensions=jpg,png,pdf,txt,gif --archives --db --streamables --sourceExtension="$${SOURCE_EXTENSION:-flac}" "httpdocs/src/web/master/$$RELEASE_SKU" "$$RELEASE_SKU"
