@@ -11,12 +11,12 @@ class dhrGenerateReleaseTask extends sfBaseTask
         $this->conversionProfiles = array(
             'mp3_320' => array(
                 'name' => 'mp3_320',
-                'commandConvert' => 'avconv -loglevel warning -analyzeduration 100000000 -i %s -q:a 0 -metadata title=%s -metadata artist=%s -metadata album=%s -metadata track=%s -metadata year=%s %s',
+                'commandConvert' => '%s -loglevel warning -analyzeduration 100000000 -i %s -q:a 0 -metadata title=%s -metadata artist=%s -metadata album=%s -metadata track=%s -metadata year=%s %s',
                 'extension' => 'mp3'
             ),
             'flac' => array(
                 'name' => 'flac',
-                'commandConvert' => 'avconv -loglevel warning -analyzeduration 100000000 -i %s -metadata title=%s -metadata artist=%s -metadata album=%s -metadata track=%s -metadata year=%s %s',
+                'commandConvert' => '%s -loglevel warning -analyzeduration 100000000 -i %s -metadata title=%s -metadata artist=%s -metadata album=%s -metadata track=%s -metadata year=%s %s',
                 'extension' => 'flac'
             )
         );
@@ -40,6 +40,7 @@ class dhrGenerateReleaseTask extends sfBaseTask
             new sfCommandOption('streamables', null, sfCommandOption::PARAMETER_NONE, 'Generate streamable MP3s ?'),
             new sfCommandOption('includeExtensions', null, sfCommandOption::PARAMETER_OPTIONAL, 'Non-audio extensions in source directory to be included in archives', 'jpg,png,txt'),
             new sfCommandOption('workspace', null, sfCommandOption::PARAMETER_OPTIONAL, 'Path to workspace directory', sys_get_temp_dir()),
+            new sfCommandOption('encoder', null, sfCommandOption::PARAMETER_OPTIONAL, 'Encoder executable', 'avconv'),
         ));
     }
 
@@ -129,7 +130,8 @@ class dhrGenerateReleaseTask extends sfBaseTask
             if ($options['streamables']) {
                 // TODO : track naming is not consistent
                 $command = sprintf(
-                    'avconv -loglevel warning -analyzeduration 100000000 -y -i %s -ab 128k \'%s/assets/releases/%s/tracks/%s_%s.mp3\'',
+                    '%s -loglevel warning -analyzeduration 100000000 -y -i %s -ab 128k \'%s/assets/releases/%s/tracks/%s_%s.mp3\'',
+                    $options['encoder'],
                     escapeshellarg($track['path']),
                     sfConfig::get('sf_web_dir'),
                     $release->slug,
@@ -162,6 +164,7 @@ class dhrGenerateReleaseTask extends sfBaseTask
                     // Transform
                     $command = sprintf(
                         $profile['commandConvert'],
+                        $options['encoder'],
                         escapeshellarg($track['path']),
                         escapeshellarg($track['title']),
                         escapeshellarg($release->getArtist()->getName()),
