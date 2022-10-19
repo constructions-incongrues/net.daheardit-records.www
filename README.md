@@ -4,7 +4,7 @@
 
 ## Édition du contenu
 
-L'interface de gestion du contenu du site est disponible à l'adresse <https://ivresse.constructions-incongrues.net>.
+L'interface de gestion du contenu du site est disponible à l'adresse <https://data.constructions-incongrues.net/admin/#/daheardit-records/>.
 
 ## Génération des archives et vidéos d'une sortie (avec Jean-Cloude)
 
