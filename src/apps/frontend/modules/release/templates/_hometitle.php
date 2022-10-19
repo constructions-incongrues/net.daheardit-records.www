@@ -16,6 +16,7 @@
         $(document).ready(function() {
             $('.header').click(function() {
                 window.location = '<?php echo $release['url_header'] ?>';
+                return false;
             });
         });
     </script>
