@@ -64,3 +64,8 @@ archives:
 	@if [ -z "$$RELEASE_SKU" ]; then echo "La variable RELEASE_SKU doit être définie"; exit 255; fi
 	@if [ ! -d "$${PWD}/src/web/master/$$RELEASE_SKU" ]; then echo "Le dossier \"$${PWD}/src/web/master/$$RELEASE_SKU\" n'existe pas"; exit 255; fi
 	/opt/plesk/php/5.6.40/bin/php -d "date.timezone=Europe/Paris" ./src/symfony dhr:release --includeExtensions=jpg,png,pdf,txt,gif --archives --db --streamables --encoder=ffmpeg --sourceExtension="$${SOURCE_EXTENSION:-flac}" "$${PWD}/src/web/master/$$RELEASE_SKU" "$$RELEASE_SKU"
+
+videos: ## Génération des vidéos de chaque track
+	@if [ -z "$$RELEASE_SKU" ]; then echo "La variable RELEASE_SKU doit être définie"; exit 255; fi
+	@if [ ! -d "$${PWD}/src/web/master/$$RELEASE_SKU/youtube" ]; then echo "Le dossier \"$${PWD}/src/web/master/$$RELEASE_SKU/youtube\" n'existe pas"; exit 255; fi
+	/opt/plesk/php/5.6.40/bin/php -d "date.timezone=Europe/Paris" ./src/symfony dhr:generate-videos --encoder=ffmpeg --sourceExtension="$${SOURCE_EXTENSION:-flac}" "$${PWD}/src/web/master/$$RELEASE_SKU" "$${PWD}/src/web/master/$$RELEASE_SKU/youtube" $$RELEASE_SKU

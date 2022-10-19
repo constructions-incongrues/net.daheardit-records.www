@@ -19,6 +19,7 @@ class dhrGenerateVideosTask extends sfBaseTask
         $this->addOptions(array(
             new sfCommandOption('sourceExtension', null, sfCommandOption::PARAMETER_OPTIONAL, 'Extension of source files', 'flac'),
             new sfCommandOption('workspace', null, sfCommandOption::PARAMETER_OPTIONAL, 'Path to workspace directory', sys_get_temp_dir()),
+            new sfCommandOption('encoder', null, sfCommandOption::PARAMETER_OPTIONAL, 'Path encoder binary', 'avconv'),
         ));
     }
 
@@ -85,7 +86,8 @@ class dhrGenerateVideosTask extends sfBaseTask
 
             // Generate videos
             $command = sprintf(
-                'ffmpeg -loop 1 -i "%s/youtube/youtube.png" -i "%s" -c:v libx264 -tune stillimage -c:a aac -b:a 320k -pix_fmt yuv444p -shortest "%s/%s.mp4"',
+                '%s -loop 1 -i "%s/youtube/youtube.png" -i "%s" -c:v libx264 -tune stillimage -c:a aac -b:a 320k -pix_fmt yuv444p -shortest "%s/%s.mp4"',
+                $options['encoder'],
                 $arguments['source-directory'],
                 $trackFilePath,
                 $arguments['destination-directory'],
