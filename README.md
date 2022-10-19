@@ -6,6 +6,15 @@
 
 L'interface de gestion du contenu du site est disponible à l'adresse <https://ivresse.constructions-incongrues.net>.
 
+## Génération des archives d'une sortie (avec Jean-Cloude)
+
+- Dans le dossier https://vip.jeancloude.club/f/1228551 créer un dossier `dhr-SKU` (remplacer `dhr-SKU` par le numéro de catalogue de la sortie. Par exemple : `dhr-59`)
+- Copier les fichiers audio qui doivent être nommés ainsi : `TRACK_NUMBER - TRACK_TITLE.EXTENSION` (par exemple : `01 - Waves of Piss.wav ou 10 - Deep Deep Deep.flac`)
+- Copier tous les autres fichiers devant faire partie des archives (images et autres)
+- Modifier puis copier la commande `cd httpdocs ; RELEASE_SKU=dhr-SKU SOURCE_EXTENSION=EXTENSION make archives` (remplacer `dhr-SKU` par le numéro de catalogue de la sortie - par exemple : `dhr-59` - et `EXTENSION` par l'extension des fichiers du master - par exemple : `aif`)
+- Ouvrir un terminal en cliquant sur le lien suivant : https://plesk.pastis-hosting.net:8443/modules/ssh-terminal/?dom_id=63&site_id=63
+- Coller la commande dans le terminal
+
 ## Génération des artefacts d'une nouvelle sortie
 
 Paramètres :
