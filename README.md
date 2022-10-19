@@ -19,7 +19,7 @@ L'interface de gestion du contenu du site est disponible à l'adresse <https://i
 
 ### Vidéos
 
-- Toujours dans le même dossier, créer un dossier `youtube` et y placer un fichier `youtube.png` de dimensions 1280px x 760px
+- Dans le dossier `dhr-SKU` précdemment créé, créer un dossier `youtube` et y placer un fichier `youtube.png` de dimensions 1280px x 760px
 - Modifier puis copier la commande `cd httpdocs ; RELEASE_SKU=dhr-SKU SOURCE_EXTENSION=EXTENSION make videos` (remplacer `dhr-SKU` par le numéro de catalogue de la sortie - par exemple : `dhr-59` - et `EXTENSION` par l'extension des fichiers du master - par exemple : `aif`)
 - Ouvrir un terminal en cliquant sur le lien suivant : https://plesk.pastis-hosting.net:8443/modules/ssh-terminal/?dom_id=63&site_id=63
 - Coller la commande dans le terminal
